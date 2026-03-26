@@ -1,0 +1,6635 @@
+{
+  "chapter": 1,
+  "title": {
+    "sanskrit": "",
+    "transliteration": "",
+    "ru": {
+      "text": "Осмотр Армий",
+      "approved": true
+    },
+    "en": {
+      "text": "Observing the Armies",
+      "approved": true
+    },
+    "de": {
+      "text": "ERSTES KAPITEL Sainya-Darśana Blick über die armeen",
+      "approved": true
+    },
+    "es": {
+      "text": "Sainya-darshan. Los dos ejércitos",
+      "approved": true
+    }
+  },
+  "meta": {
+    "totalSlokas": 37,
+    "lastUpdated": "2026-03-26T05:31:42Z",
+    "version": "1.0",
+    "source": "SM/SCSM/ШМ/ШЧСМ"
+  },
+  "slokas": [
+    {
+      "number": "1.1",
+      "order": 1,
+      "sanskrit": "धृतराष्ट्र उवाच ।\nधर्मक्षेत्रे कुरुक्षेत्रे समवेता युयुत्सवः ।\nमामकाः पाण्डवाश्चैव किमकुर्वत सञ्जय ॥१॥",
+      "transliteration": "дхр̣тара̄ш̣т̣ра ува̄ча\nдхарма-кш̣етре куру-кш̣етре, самавета̄ йуйутсавах̣\nма̄мака̄х̣ па̄н̣д̣ава̄ш́ чаива, ким акурвата сан̃джайа",
+      "translations": {
+        "ru": {
+          "text": "Дхритараштра сказал:\nСанджая! Что произошло, когда мои сыновья и сыновья Панду сошлись для битвы на священной земле Курукшетры?",
+          "approved": true
+        },
+        "en": {
+          "text": "Dhṛtarāṣṭra said: O Sañjaya, what happened when my sons and the sons of Pāṇḍu assembled for battle at the holy place of Kurukṣetra?",
+          "approved": true
+        },
+        "de": {
+          "text": "1  Dhṛtarāṣṭra sagte: „O Sañjaya, was geschah, als meine Söhne  und die Söhne Pāṇḍus sich an dem heiligen Ort Kurukṣetra zur  Schlacht versammelten?“",
+          "approved": true
+        },
+        "es": {
+          "text": "Dhṛtarāṣṭra dijo: ¡Oh Sañjaya!, ¿qué ocurrió cuando mis hijos y los hijos de Pāṇḍu se reunieron para pelear en el lugar sagrado de Kurukṣetra?",
+          "approved": true
+        }
+      },
+      "audio": {
+        "recitation": "/Files/76f01c2e659c424aa116a22f54800028.mp3",
+        "sanskrit": "/Files/3b9b7603ba184a65836fd841bee30f8e.mp3"
+      },
+      "vocabulary": [
+        {
+          "word": "дхр̣тара̄ш̣т̣рах̣ ува̄ча",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "Дхр̣тара̄ш̣т̣ра сказал",
+              "approved": true
+            }
+          },
+          "order": 1
+        },
+        {
+          "word": "дхарма-кш̣етре куру-кш̣етре",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "на священной земле Курукш̣етры",
+              "approved": true
+            }
+          },
+          "order": 2
+        },
+        {
+          "word": "самавета̄х̣",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "сошлись",
+              "approved": true
+            }
+          },
+          "order": 3
+        },
+        {
+          "word": "йуйутсавах̣",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "желая сразиться",
+              "approved": true
+            }
+          },
+          "order": 4
+        },
+        {
+          "word": "ма̄ма-ка̄х̣",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "мои сыновья",
+              "approved": true
+            }
+          },
+          "order": 5
+        },
+        {
+          "word": "па̄н̣д̣ава̄х̣ ча",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "и сыновья Па̄н̣д̣у",
+              "approved": true
+            }
+          },
+          "order": 6
+        },
+        {
+          "word": "эва",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "затем",
+              "approved": true
+            }
+          },
+          "order": 7
+        },
+        {
+          "word": "ким",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "что",
+              "approved": true
+            }
+          },
+          "order": 8
+        },
+        {
+          "word": "акурвата",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "сделали",
+              "approved": true
+            }
+          },
+          "order": 9
+        },
+        {
+          "word": "сан̃джайа",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "Сан̃джайа",
+              "approved": true
+            }
+          },
+          "order": 10
+        }
+      ]
+    },
+    {
+      "number": "1.2",
+      "order": 2,
+      "sanskrit": "सञ्जय उवाच ।\nदृष्ट्वा तु पाण्डवानीकं व्यूढं दुर्योधनस्तदा ।\nआचार्यमुपसङ्गम्य राजा वचनमब्रवीत्  ॥२॥",
+      "transliteration": "сан̃джайа ува̄ча\nдр̣ш̣т̣ва̄ ту па̄н̣д̣ава̄нӣкам̇, вйӯд̣хам̇ дурйодханас тада̄\nа̄ча̄рйам упасан̇гамйа, ра̄джа̄ вачанам абравӣт",
+      "translations": {
+        "ru": {
+          "text": "Санджая ответил:\nОкинув взором воинов армии Пандавов, выстроенных в боевом порядке, царь Дурьодхана приблизился к своему учителю Дроначарье и обратился к нему со следующими словами.",
+          "approved": true
+        },
+        "en": {
+          "text": "Sañjaya said: Seeing the Pāṇḍavas’ soldiers and armies arrayed for battle, King Duryodhan approached Droṇāchārya and said:",
+          "approved": true
+        },
+        "de": {
+          "text": "2  Sañjaya sagte: „Als König Duryodhana die Soldaten und Ar-meen der Pāṇḍavas zur Schlacht aufgestellt sah, begab er sich  zu Droṇācharya und sprach:",
+          "approved": true
+        },
+        "es": {
+          "text": "Sañjaya dijo: Viendo a los soldados y las armadas de los Pāṇḍavas dispuestos para la batalla, el rey Duryodhana se acercó a Droṇāchārya y dijo:",
+          "approved": true
+        }
+      },
+      "audio": {
+        "recitation": "/Files/6c42b399a46b40c1a7f830e523cb5a54.mp3",
+        "sanskrit": "/Files/b1c350d8b2ae4cf8b864170f9286db77.mp3"
+      },
+      "vocabulary": [
+        {
+          "word": "сан̃джайа ува̄ча",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "Сан̃джайа сказал",
+              "approved": true
+            }
+          },
+          "order": 1
+        },
+        {
+          "word": "др̣ш̣т̣ва̄",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "увидев",
+              "approved": true
+            }
+          },
+          "order": 2
+        },
+        {
+          "word": "ту",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "итак",
+              "approved": true
+            }
+          },
+          "order": 3
+        },
+        {
+          "word": "па̄н̣д̣ава-анӣкам",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "войска Па̄н̣д̣авов",
+              "approved": true
+            }
+          },
+          "order": 4
+        },
+        {
+          "word": "вйӯд̣хам̇",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "построенных",
+              "approved": true
+            }
+          },
+          "order": 5
+        },
+        {
+          "word": "дурйодханах̣",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "Дурйодхана",
+              "approved": true
+            }
+          },
+          "order": 6
+        },
+        {
+          "word": "тада̄",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "тогда",
+              "approved": true
+            }
+          },
+          "order": 7
+        },
+        {
+          "word": "а̄ча̄рйам",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "к учителю",
+              "approved": true
+            }
+          },
+          "order": 8
+        },
+        {
+          "word": "упасан̇гамйа",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "приблизившись",
+              "approved": true
+            }
+          },
+          "order": 9
+        },
+        {
+          "word": "ра̄джа̄",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "царь",
+              "approved": true
+            }
+          },
+          "order": 10
+        },
+        {
+          "word": "вачанам",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "такие слова",
+              "approved": true
+            }
+          },
+          "order": 11
+        },
+        {
+          "word": "абравӣт",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "произнес",
+              "approved": true
+            }
+          },
+          "order": 12
+        }
+      ]
+    },
+    {
+      "number": "1.3",
+      "order": 3,
+      "sanskrit": "पश्यैतां पाण्डुपुत्राणामाचार्य महतीं चमूम् ।\nव्यूढां द्रुपदपुत्रेण तव शिष्येण धीमता ॥३॥",
+      "transliteration": "паш́йаита̄м̇ па̄н̣д̣у-путра̄н̣а̄м, а̄ча̄рйа махатӣм̇ чамӯм\nвйӯд̣ха̄м̇ друпада-путрен̣а, тава ш́иш̣йен̣а дхӣмата̄",
+      "translations": {
+        "ru": {
+          "text": "Учитель! Посмотри на великое войско Пандавов, выстроенное в боевом порядке твоим выдающимся учеником Дхриштадьюмной, сыном Друпады.",
+          "approved": true
+        },
+        "en": {
+          "text": "O my teacher, please observe the great armies of the Pāṇḍavas, arranged in military formation by your brilliant disciple, Dhṛṣṭadyumna.",
+          "approved": true
+        },
+        "de": {
+          "text": "3  ‚O mein Lehrer, bitte schaut Euch die großartigen Armeen der  Pāṇḍavas an, wie sie von Eurem brillianten Schüler Dhṛṣṭadyumna  in militärischer Formation aufgestellt wurden.",
+          "approved": true
+        },
+        "es": {
+          "text": "¡Oh maestro mío!, por favor observa este gran ejército de los Pāṇḍavas, dispuesto en formación militar por tu brillante discípulo, Dhṛṣṭadyumna.",
+          "approved": true
+        }
+      },
+      "audio": {
+        "recitation": "/Files/3a37e8e94922476bba8e8e9fcdbbd251.MP3",
+        "sanskrit": "/Files/88e8c8da70574aeaacc4e36251b068b5.mp3"
+      },
+      "vocabulary": [
+        {
+          "word": "паш́йа",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "взгляни",
+              "approved": true
+            }
+          },
+          "order": 1
+        },
+        {
+          "word": "эта̄м",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "на эту",
+              "approved": true
+            }
+          },
+          "order": 2
+        },
+        {
+          "word": "па̄н̣д̣у-путра̄н̣а̄м",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "сыновей Па̄н̣д̣у",
+              "approved": true
+            }
+          },
+          "order": 3
+        },
+        {
+          "word": "а̄ча̄рйа",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "достопочтенный учитель",
+              "approved": true
+            }
+          },
+          "order": 4
+        },
+        {
+          "word": "махатӣм",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "великую",
+              "approved": true
+            }
+          },
+          "order": 5
+        },
+        {
+          "word": "чамӯм",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "армию",
+              "approved": true
+            }
+          },
+          "order": 6
+        },
+        {
+          "word": "вйӯд̣ха̄м",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "выстроенную",
+              "approved": true
+            }
+          },
+          "order": 7
+        },
+        {
+          "word": "друпада-путрен̣а",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "Дхр̣ш̣т̣адйумной, сыном Друпады",
+              "approved": true
+            }
+          },
+          "order": 8
+        },
+        {
+          "word": "тава",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "твоим",
+              "approved": true
+            }
+          },
+          "order": 9
+        },
+        {
+          "word": "ш́иш̣йен̣а",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "учеником",
+              "approved": true
+            }
+          },
+          "order": 10
+        },
+        {
+          "word": "дхӣ-ма̄та̄",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "разумным",
+              "approved": true
+            }
+          },
+          "order": 11
+        }
+      ]
+    },
+    {
+      "number": "1.4-6",
+      "order": 4,
+      "sanskrit": "अत्र शूरा महेष्वासा भीमार्जुनसमा युधि ।\nयुयुधानो विराटश्च द्रुपदश्च महारथः ॥४॥\nधृष्टकेतुश्चेकितानः काशिराजश्च वीर्यवान् ।\nपुरुजित्कुन्तिभोजश्च शैब्यश्च नरपुङ्गवः ॥५॥\nयुधामन्युश्च विक्रान्त उत्तमौजाश्च वीर्यवान् ।\nसौभद्रो द्रौपदेयाश्च सर्व एव महारथाः  ॥६॥",
+      "transliteration": "атра ш́ӯра̄ махеш̣ва̄cа̄, бхӣма̄рджуна-сама̄ йудхи\nйуйудха̄но вира̄т̣аш́ ча, друпадаш́ ча маха̄-ратхах̣\nдхр̣ш̣т̣акетуш́ чекита̄нах̣, ка̄ш́ира̄джаш́ ча вӣрйава̄н\nпуруджит кунтибходжаш́ ча, ш́аибйаш́ ча нара-пун̇гавах̣\nйудха̄манйуш́ ча викра̄нта, уттамауджа̄ш́ ча вӣрйава̄н\nсаубхадро драупадейа̄ш́ ча, сарва эва маха̄-ратха̄х̣",
+      "translations": {
+        "ru": {
+          "text": "В этой армии великие лучники Бхима и Арджуна, а также другие, столь же искусные в бою: Сатьяки, царь Вирата, могущественный воин Друпада, Дхриштакету, Чекитана, доблестный царь Каши, Пуруджит, Кунтибходжа, благородный царь Шайбья, отважный Юдхаманью, великий герой Уттамауджа, Абхиманью и сыновья Драупади. Несомненно, все они — великие воины.",
+          "approved": true
+        },
+        "de": {
+          "text": "4-6 Unter diesen Soldaten befinden sich die ausgezeichneten Bogenschützen Bhīma, Arjuna und andere ebenso Kampferfah-rene, wie Sātyaki, König Virāṭa, der große Kämpfer Drupada, Dhṛṣṭaketu, Chekitāna, der mächtige Held Kāśirāja, Purujit, Kun-tibhoja, der ehrwürdige König Śaibya, der tapfere Yudhāmanyu, der heldenhafte Uttamaujā, Abhimanyu und die Söhne Draupadīs. Sie alle sind in der Tat großartige Krieger.",
+          "approved": true
+        }
+      },
+      "audio": {
+        "recitation": "/Files/a7f2ce9075ae43d382c5ae9123618047.MP3",
+        "sanskrit": "/Files/357377bd702549858b296a76bdb90975.mp3"
+      },
+      "vocabulary": [
+        {
+          "word": "атра",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "здесь",
+              "approved": true
+            }
+          },
+          "order": 1
+        },
+        {
+          "word": "ш́ӯра̄х̣",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "герои",
+              "approved": true
+            }
+          },
+          "order": 2
+        },
+        {
+          "word": "маха̄-иш̣в-а̄cа̄х̣",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "великие лучники",
+              "approved": true
+            }
+          },
+          "order": 3
+        },
+        {
+          "word": "бхӣма-арджуна-сама̄х̣",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "равные Бхӣме и Арджуне",
+              "approved": true
+            }
+          },
+          "order": 4
+        },
+        {
+          "word": "йудхи",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "в битве",
+              "approved": true
+            }
+          },
+          "order": 5
+        },
+        {
+          "word": "йуйудха̄нах̣",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "Са̄тйаки",
+              "approved": true
+            }
+          },
+          "order": 6
+        },
+        {
+          "word": "вира̄т̣ах̣",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "царь Вира̄т̣а",
+              "approved": true
+            }
+          },
+          "order": 7
+        },
+        {
+          "word": "ча",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "и",
+              "approved": true
+            }
+          },
+          "order": 8
+        },
+        {
+          "word": "друпадах̣ ча маха̄-ратхах̣",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "и великий воин Друпада",
+              "approved": true
+            }
+          },
+          "order": 9
+        },
+        {
+          "word": "дхр̣ш̣т̣акетух̣",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "Дхр̣ш̣т̣акету",
+              "approved": true
+            }
+          },
+          "order": 10
+        },
+        {
+          "word": "чекита̄нах̣",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "царь Чекита̄на",
+              "approved": true
+            }
+          },
+          "order": 11
+        },
+        {
+          "word": "ка̄ш́и-ра̄джах̣ ча вӣрйава̄н",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "и царь Ка̄ш́и, могучий герой",
+              "approved": true
+            }
+          },
+          "order": 12
+        },
+        {
+          "word": "пуруджит",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "Пуруджит",
+              "approved": true
+            }
+          },
+          "order": 13
+        },
+        {
+          "word": "кунтибходжах̣ ча",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "и Кунтибходжа",
+              "approved": true
+            }
+          },
+          "order": 14
+        },
+        {
+          "word": "ш́аибйах̣ ча нара-пун̇гавах̣",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "и царь Ш́аибйа, благороднейший из людей",
+              "approved": true
+            }
+          },
+          "order": 15
+        },
+        {
+          "word": "йудха̄манйух̣ ча викра̄нтах̣",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "и доблестный Йудха̄манйу",
+              "approved": true
+            }
+          },
+          "order": 16
+        },
+        {
+          "word": "уттамауджа̄х̣ ча вӣрйава̄н",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "и могущественный Уттамауджа̄",
+              "approved": true
+            }
+          },
+          "order": 17
+        },
+        {
+          "word": "саубхадрах̣",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "Абхиманйу, сын Субхадры",
+              "approved": true
+            }
+          },
+          "order": 18
+        },
+        {
+          "word": "драупадейа̄х̣ ча",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "и сыновья Драупадӣ",
+              "approved": true
+            }
+          },
+          "order": 19
+        },
+        {
+          "word": "сарва",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "все они",
+              "approved": true
+            }
+          },
+          "order": 20
+        },
+        {
+          "word": "эва",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "несомненно",
+              "approved": true
+            }
+          },
+          "order": 21
+        },
+        {
+          "word": "маха̄-ратха̄х̣",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "великие воины",
+              "approved": true
+            }
+          },
+          "order": 22
+        }
+      ]
+    },
+    {
+      "number": "1.7",
+      "order": 5,
+      "sanskrit": "अस्माकं तु विशिष्टा ये तान्निबोध द्विजोत्तम ।\nनायका मम सैन्यस्य संज्ञार्थं तान्ब् ब्रवीमि ते ॥७॥",
+      "transliteration": "асма̄кам̇ ту виш́иш̣т̣а̄ йе, та̄н нибодха двиджоттама\nна̄йака̄ мама саинйасйа, сам̇джн̃а̄ртхам̇ та̄м бравӣми те",
+      "translations": {
+        "ru": {
+          "text": "Лучший из дваждырожденных, услышь также о самых выдающихся предводителях моих армий. Сейчас я назову тебе их имена!",
+          "approved": true
+        },
+        "en": {
+          "text": "O best of the twice-born, please consider, too, the foremost amongst us, the commanders of my armies. I submit their names before you:",
+          "approved": true
+        },
+        "de": {
+          "text": "7  O Bester der Brāhmaṇen, bitte bedenkt auch die Vorrangigs-ten unter uns, die Befehlshaber meiner Armeen. Ich gebe Euch deren Namen zu bedenken:",
+          "approved": true
+        },
+        "es": {
+          "text": "¡Oh el mejor de los dos veces nacidos!, por favor considera los principales entre nosotros, los comandantes de mi ejército. Presentaré sus nombres ante ti:",
+          "approved": true
+        }
+      },
+      "audio": {
+        "recitation": "/Files/5d5be6f0936f4093b7e9398e4b115e71.MP3",
+        "sanskrit": "/Files/dbca7864c0744bbdbf22b9f7d042eac1.mp3"
+      },
+      "vocabulary": [
+        {
+          "word": "асма̄кам",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "наши",
+              "approved": true
+            }
+          },
+          "order": 1
+        },
+        {
+          "word": "ту",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "также",
+              "approved": true
+            }
+          },
+          "order": 2
+        },
+        {
+          "word": "виш́иш̣т̣а̄х̣",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "выдающиеся",
+              "approved": true
+            }
+          },
+          "order": 3
+        },
+        {
+          "word": "йе",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "которые",
+              "approved": true
+            }
+          },
+          "order": 4
+        },
+        {
+          "word": "та̄н",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "о тех",
+              "approved": true
+            }
+          },
+          "order": 5
+        },
+        {
+          "word": "нибодха",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "узнай",
+              "approved": true
+            }
+          },
+          "order": 6
+        },
+        {
+          "word": "двиджа-уттама",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "о лучший из дваждырожденных",
+              "approved": true
+            }
+          },
+          "order": 7
+        },
+        {
+          "word": "на̄йака̄х̣",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "полководцах",
+              "approved": true
+            }
+          },
+          "order": 8
+        },
+        {
+          "word": "мама",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "моей",
+              "approved": true
+            }
+          },
+          "order": 9
+        },
+        {
+          "word": "саинйасйа",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "армии",
+              "approved": true
+            }
+          },
+          "order": 10
+        },
+        {
+          "word": "сам̇джн̃а̄-артхам",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "ради ясного понимания",
+              "approved": true
+            }
+          },
+          "order": 11
+        },
+        {
+          "word": "та̄н",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "их имена",
+              "approved": true
+            }
+          },
+          "order": 12
+        },
+        {
+          "word": "бравӣми",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "я назову",
+              "approved": true
+            }
+          },
+          "order": 13
+        },
+        {
+          "word": "те",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "тебе",
+              "approved": true
+            }
+          },
+          "order": 14
+        }
+      ]
+    },
+    {
+      "number": "1.8-9",
+      "order": 6,
+      "sanskrit": "भवान् भीष्मश्च कर्णश्च कृपश्च समितिंजयः ।\nअश्वत्थामा विकर्णश्च सौमदत्तिर्जयद्रथः ॥ ८ ॥\nअन्ये च बहवः शूरा मदर्थे त्यक्तजीविताः ।\nनानाशस्त्रप्रहरणाः सर्वे युद्धविशारदाः  ॥९॥",
+      "transliteration": "бхава̄н бхӣш̣маш́ ча карн̣аш́ ча, кр̣паш́ ча самитин̃джайах̣\nаш́ваттха̄ма̄ викарн̣аш́ ча, саумадаттир джайадратхах̣\nанйе ча бахавах̣ ш́ӯра̄, мад-артхе тйакта-джӣвита̄х̣\nна̄на̄-ш́астра-прахаран̣а̄х̣, сарве йуддха-виш́а̄рада̄х̣",
+      "translations": {
+        "ru": {
+          "text": "Кроме тебя, о почтенный, это Бхишма и Карна, не знающий поражения в бою Крипачарья, Ашваттхама, Викарна, Бхуришрава и Джаядратха, а также многие другие воины, сведущие в военном искусстве. Все они прекрасно владеют различным оружием и полны решимости отдать за меня свои жизни.",
+          "approved": true
+        },
+        "de": {
+          "text": "8,9  Zuerst ist da Euer Ehren selbst, dann Bhīṣma, Karṇa, der stets siegreiche Kṛpāchārya, Aśvatthāmā, Vikarṇa, Bhūrīśravā, Jayadratha und viele andere in der Kriegsführung erfahrene Helden, alle mit den verschiedensten Waffen gerüstet und bereit, für mich ihr Leben zu lassen.",
+          "approved": true
+        },
+        "es": {
+          "text": "Primeramente se encuentra tu respetado ser, luego Bhīṣma, Karṅa, el siempre victorioso Kṛpāchārya, Aśvatthāmā, Vikarna, Bhūriśravā, Jayadratha y muchos otros héroes hábiles en el arte de la guerra, todos armados con varias armas y preparados a dejar sus propias vidas por mí.",
+          "approved": true
+        }
+      },
+      "audio": {
+        "recitation": "/Files/27b2448aeea44ae5ae586dd6fddaec1e.MP3",
+        "sanskrit": "/Files/2b3eed8775be4b2db45370c9bd32955d.mp3"
+      },
+      "vocabulary": [
+        {
+          "word": "бхава̄н",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "о почтенный",
+              "approved": true
+            }
+          },
+          "order": 1
+        },
+        {
+          "word": "бхӣш̣мах̣ ча",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "также Бхӣш̣ма",
+              "approved": true
+            }
+          },
+          "order": 2
+        },
+        {
+          "word": "карн̣ах̣ ча",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "и Карн̣а",
+              "approved": true
+            }
+          },
+          "order": 3
+        },
+        {
+          "word": "кр̣пах̣ ча самитин̃джайах̣",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "и непобедимый Кр̣па",
+              "approved": true
+            }
+          },
+          "order": 4
+        },
+        {
+          "word": "аш́ваттха̄ма̄",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "Аш́ваттха̄ма̄",
+              "approved": true
+            }
+          },
+          "order": 5
+        },
+        {
+          "word": "викарн̣ах̣ ча",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "и Викарн̣а",
+              "approved": true
+            }
+          },
+          "order": 6
+        },
+        {
+          "word": "саумадаттих̣",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "Бхӯриш́рава̄",
+              "approved": true
+            }
+          },
+          "order": 7
+        },
+        {
+          "word": "джайадратхах̣",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "Джайадратха",
+              "approved": true
+            }
+          },
+          "order": 8
+        },
+        {
+          "word": "анйе",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "другие",
+              "approved": true
+            }
+          },
+          "order": 9
+        },
+        {
+          "word": "ча",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "также",
+              "approved": true
+            }
+          },
+          "order": 10
+        },
+        {
+          "word": "бахавах̣",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "многие",
+              "approved": true
+            }
+          },
+          "order": 11
+        },
+        {
+          "word": "ш́ӯра̄",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "воины",
+              "approved": true
+            }
+          },
+          "order": 12
+        },
+        {
+          "word": "мад-артхе",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "ради меня",
+              "approved": true
+            }
+          },
+          "order": 13
+        },
+        {
+          "word": "тйакта-джӣвита̄х̣",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "готовые пожертвовать жизнью",
+              "approved": true
+            }
+          },
+          "order": 14
+        },
+        {
+          "word": "на̄на̄-ш́астра",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "различным оружием",
+              "approved": true
+            }
+          },
+          "order": 15
+        },
+        {
+          "word": "прахаран̣а̄х̣",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "вооруженные",
+              "approved": true
+            }
+          },
+          "order": 16
+        },
+        {
+          "word": "сарве",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "все они",
+              "approved": true
+            }
+          },
+          "order": 17
+        },
+        {
+          "word": "йуддха",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "в бою",
+              "approved": true
+            }
+          },
+          "order": 18
+        },
+        {
+          "word": "виш́а̄рада̄х̣",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "искусные",
+              "approved": true
+            }
+          },
+          "order": 19
+        }
+      ]
+    },
+    {
+      "number": "1.10",
+      "order": 7,
+      "sanskrit": "अपर्याप्तं तदस्माकं बलं भीष्माभिरक्षितम् ।\nपर्याप्तं त्विदमेतेषां बलं भीमाभिरक्षितम्  ॥१०॥",
+      "transliteration": "апарйа̄птам̇ тад асма̄кам̇, балам̇ бхӣш̣ма̄бхиракш̣итам\nпарйа̄птам̇ тв идам этеш̣а̄м̇, балам̇ бхӣма̄бхиракш̣итам",
+      "translations": {
+        "ru": {
+          "text": "Сила нашего войска безгранична благодаря надежной защите Бхишмы, тогда как сила войска Пандавов, которое защищает Бхима, ограничена.",
+          "approved": true
+        },
+        "en": {
+          "text": "The strength of our army, headed by Bhīṣma, seems inestimable, yet the strength of the Pāṇḍavas’ army, protected by Bhīma, is estimable.",
+          "approved": true
+        },
+        "de": {
+          "text": "10  Die Stärke unserer von Bhīṣma angeführten Armee scheint unschätzbar, während die Stärke der Armee der Pāṇḍavas, die von Bhīma beschützt wird, abschätzbar ist.",
+          "approved": true
+        },
+        "es": {
+          "text": "La fuerza de nuestro ejército, encabezado por Bhīṣma, parece inestimable, pero la fuerza del ejército de los Pāṇḍavas, protegida por Bhīma, es estimable.",
+          "approved": true
+        }
+      },
+      "audio": {
+        "recitation": "/Files/062a515cd5ac4949b5394a11efef0274.MP3",
+        "sanskrit": "/Files/11de5ba9213342139c8ccc7fec3c3255.mp3"
+      },
+      "vocabulary": [
+        {
+          "word": "апарйа̄птам",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "безграничны",
+              "approved": true
+            }
+          },
+          "order": 1
+        },
+        {
+          "word": "тат",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "эти",
+              "approved": true
+            }
+          },
+          "order": 2
+        },
+        {
+          "word": "асма̄кам",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "наши",
+              "approved": true
+            }
+          },
+          "order": 3
+        },
+        {
+          "word": "балам",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "силы",
+              "approved": true
+            }
+          },
+          "order": 4
+        },
+        {
+          "word": "бхӣш̣ма-абхиракш̣итам",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "благодаря защите опытного Бхӣш̣мы (а также потому, что Кр̣ш̣н̣а отдал Свою армию Кауравам)",
+              "approved": true
+            }
+          },
+          "order": 5
+        },
+        {
+          "word": "парйа̄птам",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "ограничены",
+              "approved": true
+            }
+          },
+          "order": 6
+        },
+        {
+          "word": "ту",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "но",
+              "approved": true
+            }
+          },
+          "order": 7
+        },
+        {
+          "word": "идам",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "все эти",
+              "approved": true
+            }
+          },
+          "order": 8
+        },
+        {
+          "word": "этеш̣aм",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "этих Па̄н̣д̣авов",
+              "approved": true
+            }
+          },
+          "order": 9
+        },
+        {
+          "word": "балам",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "силы",
+              "approved": true
+            }
+          },
+          "order": 10
+        },
+        {
+          "word": "бхӣма-абхи-ракш̣итам",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "защищаемые менее опытным Бхӣмой",
+              "approved": true
+            }
+          },
+          "order": 11
+        }
+      ]
+    },
+    {
+      "number": "1.11",
+      "order": 8,
+      "sanskrit": "अयनेषु च सर्वेषु यथाभागमवस्थिताः ।\nभीष्ममेवाभिरक्षन्तु भवन्तः सर्व एव हि  ॥११॥",
+      "transliteration": "айанеш̣у ча сарвеш̣у, йатха̄-бха̄гам авастхита̄х̣\nбхӣш̣мам эва̄бхиракш̣анту, бхавантах̣ сарва эва хи",
+      "translations": {
+        "ru": {
+          "text": "Поэтому все мы, находясь на своих позициях, должны во время битвы всячески оберегать Бхишму.",
+          "approved": true
+        },
+        "en": {
+          "text": "Now take up your posts at the strategic points of the formation in support of Bhīṣma.",
+          "approved": true
+        },
+        "de": {
+          "text": "11  Nehmt jetzt eure Stellungen an den strategischen Punkten der Formation zur Unterstützung Bhīṣmas ein.‘",
+          "approved": true
+        },
+        "es": {
+          "text": "Ahora toma tu puesto en los puntos estratégicos de la formación para apoyar a Bhīṣma.",
+          "approved": true
+        }
+      },
+      "audio": {
+        "recitation": "/Files/a61715f515d6423e882ed2002f26aef5.MP3",
+        "sanskrit": "/Files/d858b39a54ab407ea5f94747ebbe0777.mp3"
+      },
+      "vocabulary": [
+        {
+          "word": "айанеш̣у ча сарвеш̣у",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "во всех стратегических местах боевого построения",
+              "approved": true
+            }
+          },
+          "order": 1
+        },
+        {
+          "word": "йатха̄-бха̄гам",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "каждый на своей позиции",
+              "approved": true
+            }
+          },
+          "order": 2
+        },
+        {
+          "word": "ава-стхита̄х̣",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "находясь",
+              "approved": true
+            }
+          },
+          "order": 3
+        },
+        {
+          "word": "бхӣш̣мам",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "Бхӣш̣му",
+              "approved": true
+            }
+          },
+          "order": 4
+        },
+        {
+          "word": "эва",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "прежде всего",
+              "approved": true
+            }
+          },
+          "order": 5
+        },
+        {
+          "word": "абхи-ракш̣анту",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "должны защищать",
+              "approved": true
+            }
+          },
+          "order": 6
+        },
+        {
+          "word": "бхавантах̣",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "быть",
+              "approved": true
+            }
+          },
+          "order": 7
+        },
+        {
+          "word": "сарве",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "все сообща",
+              "approved": true
+            }
+          },
+          "order": 8
+        },
+        {
+          "word": "эва хи",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "непременно",
+              "approved": true
+            }
+          },
+          "order": 9
+        }
+      ]
+    },
+    {
+      "number": "1.12",
+      "order": 9,
+      "sanskrit": "तस्य सञ्जनयन् हर्षं कुरुवृद्धः पितामहः ।\nसिंहनादं विनद्योच्चैः शङ्खं दध्मौ प्रतापवान्  ॥१२॥",
+      "transliteration": "тасйа сан̃джанайан харш̣ам̇, куру-вр̣ддхах̣ пита̄махах̣\nсим̇ха-на̄дам̇ винадйоччаих̣, ш́ан̇кхам̇ дадхмау прата̄пава̄н",
+      "translations": {
+        "ru": {
+          "text": "Желая воодушевить Дурьодхану, Бхишма, старейшина династии Куру, громко затрубил в свою раковину, звук которой был подобен львиному рыку.",
+          "approved": true
+        },
+        "en": {
+          "text": "Then, with a war-cry like the roar of a lion, the venerable elder, Bhīṣma, loudly blew his conchshell to encourage Duryodhan.",
+          "approved": true
+        },
+        "de": {
+          "text": "12  Dann, mit einem Schlachtruf, der dem Brüllen eines Löwen glich, blies der ehrwürdige Älteste Bhīṣma laut sein Muschelhorn, um Duryodhana zu ermutigen.",
+          "approved": true
+        },
+        "es": {
+          "text": "Entonces, con un grito de batalla como el rugido de un león, el venerable anciano, Bhīṣma, sonó su caracola para animar a Duryodhana.",
+          "approved": true
+        }
+      },
+      "audio": {
+        "recitation": "/Files/3eb3428cbee74c5ca9436b25baa5ca10.MP3",
+        "sanskrit": "/Files/9c9be66747124de295f1cd64f2cdd140.mp3"
+      },
+      "vocabulary": [
+        {
+          "word": "тасйа",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "его",
+              "approved": true
+            }
+          },
+          "order": 1
+        },
+        {
+          "word": "сан̃джанайан",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "вызывая",
+              "approved": true
+            }
+          },
+          "order": 2
+        },
+        {
+          "word": "харш̣ам",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "радость",
+              "approved": true
+            }
+          },
+          "order": 3
+        },
+        {
+          "word": "куру-вр̣ддхах",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "старейшина династии Куру",
+              "approved": true
+            }
+          },
+          "order": 4
+        },
+        {
+          "word": "пита̄махах̣",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "прадед Бхӣш̣ма",
+              "approved": true
+            }
+          },
+          "order": 5
+        },
+        {
+          "word": "сим̇ха-на̄дам",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "подобный львиному рыку",
+              "approved": true
+            }
+          },
+          "order": 6
+        },
+        {
+          "word": "винадйа",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "издавая звук",
+              "approved": true
+            }
+          },
+          "order": 7
+        },
+        {
+          "word": "уччаих̣",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "невероятно громкий",
+              "approved": true
+            }
+          },
+          "order": 8
+        },
+        {
+          "word": "ш́ан̇кхам",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "в раковину",
+              "approved": true
+            }
+          },
+          "order": 9
+        },
+        {
+          "word": "дадхмау",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "подул",
+              "approved": true
+            }
+          },
+          "order": 10
+        },
+        {
+          "word": "прата̄па-ва̄н",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "могущественный",
+              "approved": true
+            }
+          },
+          "order": 11
+        }
+      ]
+    },
+    {
+      "number": "1.13",
+      "order": 10,
+      "sanskrit": "ततः शङ्खाश्च भेर्यश्च पणवानकगोमुखाः ।\nसहसैवाभ्यहन्यन्त स शब्दस्तुमुलोऽभवत्  ॥१३॥",
+      "transliteration": "татах̣ ш́ан̇кха̄ш́ ча бхерйаш́ ча, пан̣ава̄нака-гомукха̄х̣\nсахасаива̄бхйаханйанта, са ш́абдас тумуло ’бхават",
+      "translations": {
+        "ru": {
+          "text": "В тот же миг разом зазвучали раковины, литавры, барабаны, рога и другие инструменты, создавая оглушительный шум.",
+          "approved": true
+        },
+        "en": {
+          "text": "At once there arose a tumultuous vibration of conchshells, kettledrums, hand-drums, bugles, and the resounding of many instruments.",
+          "approved": true
+        },
+        "de": {
+          "text": "13  Sofort wallte dort eine stürmische Klangschwingung von Muschelhörnern, Kesseltrommeln, Handtrommeln, Signalhörnern und dem Erklingen von vielen Instrumenten auf.",
+          "approved": true
+        },
+        "es": {
+          "text": "Al mismo tiempo sonó la tumultuosa vibración de las caracolas, los tambores, los clarines, las trompetas, los cuernos y el tumulto de muchos instrumentos.",
+          "approved": true
+        }
+      },
+      "audio": {
+        "recitation": "/Files/e1d91f9d5c014058a61bbaf76a12ede6.MP3",
+        "sanskrit": "/Files/2a0e5a7cf4af4e04926d4abaf3776aec.mp3"
+      },
+      "vocabulary": [
+        {
+          "word": "татах̣",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "затем",
+              "approved": true
+            }
+          },
+          "order": 1
+        },
+        {
+          "word": "ш́анкха̄х̣",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "раковины",
+              "approved": true
+            }
+          },
+          "order": 2
+        },
+        {
+          "word": "ча",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "и",
+              "approved": true
+            }
+          },
+          "order": 3
+        },
+        {
+          "word": "бхерйах̣",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "большие барабаны",
+              "approved": true
+            }
+          },
+          "order": 4
+        },
+        {
+          "word": "ча",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "также",
+              "approved": true
+            }
+          },
+          "order": 5
+        },
+        {
+          "word": "пан̣ава-а̄нака го-мукха̄х̣",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "рожки, маленькие барабаны, литавры и другие инструменты",
+              "approved": true
+            }
+          },
+          "order": 6
+        },
+        {
+          "word": "сахаса̄",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "одновременно",
+              "approved": true
+            }
+          },
+          "order": 7
+        },
+        {
+          "word": "эва",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "как раз",
+              "approved": true
+            }
+          },
+          "order": 8
+        },
+        {
+          "word": "абхйаханйанта",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "зазвучали",
+              "approved": true
+            }
+          },
+          "order": 9
+        },
+        {
+          "word": "сах̣ ш́абдах̣",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "тот звук",
+              "approved": true
+            }
+          },
+          "order": 10
+        },
+        {
+          "word": "тумулах̣",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "громоподобным",
+              "approved": true
+            }
+          },
+          "order": 11
+        },
+        {
+          "word": "абхават",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "стал",
+              "approved": true
+            }
+          },
+          "order": 12
+        }
+      ]
+    },
+    {
+      "number": "1.14",
+      "order": 11,
+      "sanskrit": "ततः श्वेतैर्हयैर्युक्ते महति स्यन्दने स्थितौ ।\nमाधवः पाण्डवश्चैव दिव्यौ शङ्खौ प्रदध्मतुः  ॥१४॥",
+      "transliteration": "татах̣ ш́ветаир хайаир йукте, махати сйандане стхитау\nма̄дхавах̣ па̄н̣д̣аваш́ чаива, дивйау ш́ан̇кхау прададхматух̣",
+      "translations": {
+        "ru": {
+          "text": "Тогда Господь Шри Кришна и Арджуна, возвышаясь в величественной колеснице, запряженной белыми лошадьми, затрубили в свои божественные раковины.",
+          "approved": true
+        },
+        "en": {
+          "text": "Then Lord Śrī Kṛṣṇa and Arjuna, in a magnificent chariot drawn by white horses, blew their divine conchshells.",
+          "approved": true
+        },
+        "de": {
+          "text": "14  Dann ließen Śrī Kṛṣṇa und Arjuna in ihrem von weißen Pferden gezogenen, prachtvollen Streitwagen ihre göttlichen Muschelhörner erklingen.",
+          "approved": true
+        },
+        "es": {
+          "text": "Entonces el Señor Śrī Kṛṣṇa y Arjuna, en una magnífica cuadriga tirada por caballos blancos, hicieron sonar sus caracolas divinas.",
+          "approved": true
+        }
+      },
+      "audio": {
+        "recitation": "/Files/4e0a0412413247f0acb1e7dc08d837cc.MP3",
+        "sanskrit": "/Files/5f2d8602b98e4d0f996a0d9a4e158ad3.mp3"
+      },
+      "vocabulary": [
+        {
+          "word": "татах̣",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "затем",
+              "approved": true
+            }
+          },
+          "order": 1
+        },
+        {
+          "word": "ш́ветаих̣",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "белыми",
+              "approved": true
+            }
+          },
+          "order": 2
+        },
+        {
+          "word": "хайаих̣",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "лошадьми",
+              "approved": true
+            }
+          },
+          "order": 3
+        },
+        {
+          "word": "йукте",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "запряженной",
+              "approved": true
+            }
+          },
+          "order": 4
+        },
+        {
+          "word": "махати сйандане",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "в величественной колеснице",
+              "approved": true
+            }
+          },
+          "order": 5
+        },
+        {
+          "word": "стхитау",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "находясь",
+              "approved": true
+            }
+          },
+          "order": 6
+        },
+        {
+          "word": "ма̄дхавах̣ па̄н̣д̣авах̣ ча эва",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "Ш́рӣ Кр̣ш̣н̣а и Арджуна",
+              "approved": true
+            }
+          },
+          "order": 7
+        },
+        {
+          "word": "дивйау",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "в божественные",
+              "approved": true
+            }
+          },
+          "order": 8
+        },
+        {
+          "word": "ш́анкхау",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "раковины",
+              "approved": true
+            }
+          },
+          "order": 9
+        },
+        {
+          "word": "прададхматух̣",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "подули",
+              "approved": true
+            }
+          },
+          "order": 10
+        }
+      ]
+    },
+    {
+      "number": "1.15",
+      "order": 12,
+      "sanskrit": "पाञ्चजन्यं हृषीकेशो देवदत्तं धनञ्जयः ।\nपौण्ड्रं दध्मौ महाशङ्खं भीमकर्मा वृकोदरः  ॥१५॥",
+      "transliteration": "па̄н̃чаджанйам̇ хр̣ш̣ӣкеш́о, девадаттам̇ дханан̃джайах̣\nпаун̣д̣рам̇ дадхмау маха̄-ш́ан̇кхам̇, бхӣма-карма̄ вр̣кодарах̣",
+      "translations": {
+        "ru": {
+          "text": "Хришикеша (Шри Кришна) затрубил в Свою раковину Панчаджанью, Дхананджая (Арджуна) — в раковину Девадатту. А Бхимасена, ненасытный едок, известный своими славными подвигами, затрубил в огромную раковину Паундру.",
+          "approved": true
+        },
+        "en": {
+          "text": "Hṛṣīkeś blew His conchshell Pāñchajanya; Dhanañjaya sounded his, the Devadatta; and Bhīmasen, the performer of mighty tasks, blew the conchshell Pauṇḍra.",
+          "approved": true
+        },
+        "de": {
+          "text": "15  Hṛṣīkeśa blies Sein Muschelhorn Pāñchajanya, Dhanañjaya ließ sein Devadatta ertönen und Bhīmasena, der Bewältiger von großen Aufgaben, blies das Muschelhorn Pauṇḍra.",
+          "approved": true
+        },
+        "es": {
+          "text": "Hṛṣīkeśa hizo sonar Su caracola Pānchajanya; Dananjaya sonó la suya, la Devadatta; y Bīmasena, quien realiza actos heroicos, sonó la caracola Pauṇḍra.",
+          "approved": true
+        }
+      },
+      "audio": {
+        "recitation": "/Files/c60597839f7d4fe180174f868d47fb34.MP3",
+        "sanskrit": "/Files/99962cfa4fa24f219d770574c7beb3ba.mp3"
+      },
+      "vocabulary": [
+        {
+          "word": "па̄н̃чаджанйам",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "Па̄н̃чаджанйу",
+              "approved": true
+            }
+          },
+          "order": 1
+        },
+        {
+          "word": "хр̣ш̣ӣкеш́ах̣",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "Владыка всех чувств, Ш́рӣ Кр̣ш̣н̣а",
+              "approved": true
+            }
+          },
+          "order": 2
+        },
+        {
+          "word": "девадаттам",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "Девадатту",
+              "approved": true
+            }
+          },
+          "order": 3
+        },
+        {
+          "word": "дханан̃джайах̣",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "Завоеватель богатств, Арджуна",
+              "approved": true
+            }
+          },
+          "order": 4
+        },
+        {
+          "word": "паун̣д̣рам",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "Паун̣д̣ру",
+              "approved": true
+            }
+          },
+          "order": 5
+        },
+        {
+          "word": "дадхмау",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "подул",
+              "approved": true
+            }
+          },
+          "order": 6
+        },
+        {
+          "word": "маха̄-ш́ан̇кхам",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "в огромную раковину",
+              "approved": true
+            }
+          },
+          "order": 7
+        },
+        {
+          "word": "бхӣма-карма̄",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "Бхӣмасена, вершитель подвигов",
+              "approved": true
+            }
+          },
+          "order": 8
+        },
+        {
+          "word": "вр̣ка-ударах̣",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "ненасытный едок (дословно «волчий живот»)",
+              "approved": true
+            }
+          },
+          "order": 9
+        }
+      ]
+    },
+    {
+      "number": "1.16",
+      "order": 13,
+      "sanskrit": "अनन्तविजयं राजा कुन्तीपुत्रो युधिष्ठिरः ।\nनकुलः सहदेवश्च सुघोषमणिपुष्पकौ  ॥१६॥",
+      "transliteration": "анантавиджайам̇ ра̄джа̄, кунтӣ-путро йудхиш̣т̣хирах̣\nнакулах̣ сахадеваш́ ча, сугхош̣а-ман̣ипуш̣пакау",
+      "translations": {
+        "ru": {
+          "text": "Царь Юдхиштхира, сын Кунти, затрубил в раковину Анантавиджаю. Накула затрубил в Сугхошу, а Сахадева — в Манипушпаку.",
+          "approved": true
+        },
+        "en": {
+          "text": "King Yudhiṣṭhir, the son of Kuntī, blew the Anantavijay, while Nakul and Sahadev blew the conchshells Sughoṣa and Maṇipuṣpaka.",
+          "approved": true
+        },
+        "de": {
+          "text": "16 König Yudhiṣṭira, der Sohn Kuntīs, blies das Anantavijaya, während Nakula und Sahadeva ihre Muschelhörner Sughoṣa und Maṇipuṣpaka erschallen ließen.",
+          "approved": true
+        },
+        "es": {
+          "text": "El rey Yudhiṣḍhira, el hijo de Kuntḍī, sonó la Anantavijaya, mientras Nakula y Sahadeva sonaron las caracolas Sughoṣa y Maṇipuṣpaka.",
+          "approved": true
+        }
+      },
+      "audio": {
+        "recitation": "/Files/837d8a208e81447e8818e35040242b21.MP3",
+        "sanskrit": "/Files/7dbc0264f71d448e85fbcf8a74e58ec7.mp3"
+      },
+      "vocabulary": [
+        {
+          "word": "анантавиджайам",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "в Анантавиджайу",
+              "approved": true
+            }
+          },
+          "order": 1
+        },
+        {
+          "word": "ра̄джа̄",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "царь",
+              "approved": true
+            }
+          },
+          "order": 2
+        },
+        {
+          "word": "кунтӣ-путрах̣",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "сын Кунтӣ",
+              "approved": true
+            }
+          },
+          "order": 3
+        },
+        {
+          "word": "йудхиш̣т̣хирах̣",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "Йудхиш̣т̣хира",
+              "approved": true
+            }
+          },
+          "order": 4
+        },
+        {
+          "word": "накулах̣ сахадевах̣ ча",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "Накула и Сахадева",
+              "approved": true
+            }
+          },
+          "order": 5
+        },
+        {
+          "word": "сугхош̣а-ман̣ипуш̣пакау",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "в Сугхош̣у и Ман̣ипуш̣паку",
+              "approved": true
+            }
+          },
+          "order": 6
+        }
+      ]
+    },
+    {
+      "number": "1.17-18",
+      "order": 14,
+      "sanskrit": "काश्यश्च परमेष्वासः शिखण्डी च महारथः ।\nधृष्टद्युम्नो विराटश्च सात्यकिश्चापराजितः  ॥१७॥\nद्रुपदो द्रौपदेयाश्च सर्वशः पृथिवीपते ।\nसौभद्रश्च महाबाहुः शङ्खान् दध्मुः पृथक् पृथक्  ॥१८॥",
+      "transliteration": "ка̄ш́йаш́ ча парамеш̣в-а̄сах̣, ш́икхан̣д̣ӣ ча маха̄-ратхах̣\nдхр̣ш̣т̣адйумно вира̄т̣аш́ ча, са̄тйакиш́ ча̄пара̄джитах̣\nдрупадо драупадейа̄ш́ ча, сарваш́ах̣ пр̣тхивӣ-пате\nсаубхадраш́ ча маха̄-ба̄хух̣, ш́ан̇кха̄н дадхмух̣ пр̣тхак пр̣тхак",
+      "translations": {
+        "ru": {
+          "text": "О повелитель Земли! Искусный лучник Кашираджа, великий воин Шикханди, Дхриштадьюмна, царь Вирата, непобедимый Сатьяки, царь Друпада, сыновья Драупади и могучий Абхиманью, сын Субхадры, также подули в свои раковины.",
+          "approved": true
+        },
+        "de": {
+          "text": "17, 18  O Beherrscher der Erde, der erfahrene Bogenschütze Kāśirāja, der große Krieger Śikhaṇḍī, Dhṛśṭadyumna, König Virāṭa, der unbesiegbare Sātyakī, König Drupada, die Söhne Draupadīs und der mächtige Sohn Subhadrās, Abhimanyu, alle bliesen in ihre Muschelhörner.",
+          "approved": true
+        },
+        "es": {
+          "text": "¡Oh señor de la tierra!, el gran arquero Kāsirāja, el gran guerrero Śikhaṇḍḍ, Dṛṣṭadyumna, el rey Virāṭa, el inconquistable Satyaki, el rey Drupada, los hijos de Draupadī, el poderoso hijo de Subhadrā y Abhimanyu, hicieron sonar sus caracolas.",
+          "approved": true
+        }
+      },
+      "audio": {
+        "recitation": "/Files/c3ba406526244126bac5a4119767dec6.MP3",
+        "sanskrit": "/Files/d3561f0c42774e54b67c865c1131f8c4.mp3"
+      },
+      "vocabulary": [
+        {
+          "word": "ка̄ш́йах̣ ча",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "царь Ка̄ш́ӣ",
+              "approved": true
+            }
+          },
+          "order": 1
+        },
+        {
+          "word": "парама-иш̣у-а̄сах̣",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "искусный в стрельбе из лука",
+              "approved": true
+            }
+          },
+          "order": 2
+        },
+        {
+          "word": "ш́икхан̣д̣ӣ ча маха̄-ратхах̣",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "и великий воин Ш́икхан̣д̣ӣ",
+              "approved": true
+            }
+          },
+          "order": 3
+        },
+        {
+          "word": "дхр̣ш̣т̣адйумнах̣",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "Дхр̣ш̣т̣адйумна",
+              "approved": true
+            }
+          },
+          "order": 4
+        },
+        {
+          "word": "вира̄т̣ах̣ ча",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "и царь Вира̄т̣а",
+              "approved": true
+            }
+          },
+          "order": 5
+        },
+        {
+          "word": "са̄тйаких̣ ча",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "и Са̄тйаки",
+              "approved": true
+            }
+          },
+          "order": 6
+        },
+        {
+          "word": "а-пара̄-джитах̣",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "непобедимый",
+              "approved": true
+            }
+          },
+          "order": 7
+        },
+        {
+          "word": "друпадах̣",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "царь Друпада",
+              "approved": true
+            }
+          },
+          "order": 8
+        },
+        {
+          "word": "драупадейа̄х̣ ча",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "и сыновья Драупадӣ",
+              "approved": true
+            }
+          },
+          "order": 9
+        },
+        {
+          "word": "сарваш́ах̣",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "все вместе",
+              "approved": true
+            }
+          },
+          "order": 10
+        },
+        {
+          "word": "пр̣тхивӣ-пате",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "о повелитель Земли",
+              "approved": true
+            }
+          },
+          "order": 11
+        },
+        {
+          "word": "саубхадрах̣ ча",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "и Абхиманйу, сын Субхадры",
+              "approved": true
+            }
+          },
+          "order": 12
+        },
+        {
+          "word": "маха̄-ба̄хух̣",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "сильнорукий",
+              "approved": true
+            }
+          },
+          "order": 13
+        },
+        {
+          "word": "ш́ан̇кха̄н",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "в раковины",
+              "approved": true
+            }
+          },
+          "order": 14
+        },
+        {
+          "word": "дадхмух̣",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "протрубили",
+              "approved": true
+            }
+          },
+          "order": 15
+        },
+        {
+          "word": "пр̣тхак пр̣тхак",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "каждый в свою",
+              "approved": true
+            }
+          },
+          "order": 16
+        }
+      ]
+    },
+    {
+      "number": "1.19",
+      "order": 15,
+      "sanskrit": "स घोषो धार्तराष्ट्राणां हृदयानि व्यदारयत् ।\nनभश्च पृथिवीं चैव तुमुलोऽभ्यनुनादयन् ॥१९॥",
+      "transliteration": "са гхош̣о дха̄ртара̄ш̣т̣ра̄н̣а̄м̇, хр̣дайа̄ни вйада̄райат\nнабхаш́ ча пр̣тхивӣм̇ чаива, тумуло ’бхйануна̄дайан",
+      "translations": {
+        "ru": {
+          "text": "Громоподобный звук этих раковин, раскатившись эхом по земле и небу, заставил содрогнуться сердца сыновей Дхритараштры.",
+          "approved": true
+        },
+        "en": {
+          "text": "Resounding throughout the land and heavens, the tremendous vibration of those conchshells pierced the hearts of the sons of Dhṛtarāṣṭra.",
+          "approved": true
+        },
+        "de": {
+          "text": "19  Durch Land und Himmel widerhallend, durchbohrte die furcht-bare Klangschwingung dieser Muschelhörner die Herzen der Söhne Dhṛtarāṣṭras.",
+          "approved": true
+        },
+        "es": {
+          "text": "Resonando a través de la tierra y los cielos, la tremenda vibración de estas caracolas atravesó los corazones de los hijos de Dhṛtarāṣṭra.",
+          "approved": true
+        }
+      },
+      "audio": {
+        "recitation": "/Files/63b7904a853a45079d00388e05af2889.MP3",
+        "sanskrit": "/Files/eac3587dd4074560963d26f47814acbf.mp3"
+      },
+      "vocabulary": [
+        {
+          "word": "сах̣ гхош̣ах̣",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "тот звук",
+              "approved": true
+            }
+          },
+          "order": 1
+        },
+        {
+          "word": "дха̄ртара̄ш̣т̣ра̄н̣а̄м",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "сыновей Дхр̣тара̄ш̣т̣ры",
+              "approved": true
+            }
+          },
+          "order": 2
+        },
+        {
+          "word": "хр̣дайа̄ни",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "сердца",
+              "approved": true
+            }
+          },
+          "order": 3
+        },
+        {
+          "word": "вйада̄райат",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "заставил содрогнуться",
+              "approved": true
+            }
+          },
+          "order": 4
+        },
+        {
+          "word": "набхах̣",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "небу",
+              "approved": true
+            }
+          },
+          "order": 5
+        },
+        {
+          "word": "ча пр̣тхивӣм",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "и по всей земле",
+              "approved": true
+            }
+          },
+          "order": 6
+        },
+        {
+          "word": "ча эва",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "и также",
+              "approved": true
+            }
+          },
+          "order": 7
+        },
+        {
+          "word": "тумулах̣",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "подобный грому",
+              "approved": true
+            }
+          },
+          "order": 8
+        },
+        {
+          "word": "абхи-ану-на̄дайан",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "разносясь",
+              "approved": true
+            }
+          },
+          "order": 9
+        }
+      ]
+    },
+    {
+      "number": "1.20",
+      "order": 16,
+      "sanskrit": "अथ व्यवस्थितान् दृष्ट्वा धार्तराष्ट्रान् कपिध्वजः ।\nप्रवृत्ते शस्त्रसम्पाते धनुरुद्यम्य पाण्डवः ।\nहृषीकेशं तदा वाक्यमिदमाह महीपते ॥२०॥",
+      "transliteration": "атха вйавастхита̄н др̣ш̣т̣ва̄, дха̄ртара̄ш̣т̣ра̄н капи-дхваджах̣\nправр̣тте ш́астра-сампа̄те, дханур удйамйа па̄н̣д̣авах̣\nхр̣ш̣ӣкеш́ам̇ тада̄ ва̄кйам, идам а̄ха махӣ-пате",
+      "translations": {
+        "ru": {
+          "text": "О царь! Когда пришло время начать сражение, Арджуна, стоя в колеснице, украшенной знаменем с изображением Ханумана, вскинул свой лук и приготовился к стрельбе. Но, взглянув на твоих сыновей, стоящих строем и готовых к бою, он обратился к Господу Кришне с такими словами.",
+          "approved": true
+        },
+        "en": {
+          "text": "O King, as the battle was about to commence, Arjuna, whose chariot was adorned with the flag of Hanumān, seeing Duryodhan and his army poised for battle, took up his bow and said to Śrī Kṛṣṇa:",
+          "approved": true
+        },
+        "de": {
+          "text": "20  O König, als die Schlacht gerade zu beginnen im Begriff war, nahm Arjuna, dessen Streitwagen mit der Hanumānfahne geschmückt war, beim Anblick Duryodhanas und dessen kampf-bereiten Armee, seinen Bogen zur Hand und sprach zu Śrī Kṛṣṇa:",
+          "approved": true
+        },
+        "es": {
+          "text": "¡Oh Rey!, al estar por comenzar la batalla, Arjuna, cuya cuadriga estaba adornada con la bandera de Hanumān, viendo a Duryodhana y su ejército dispuesto para la batalla, tomó su arco y le dijo a Śrī Kṛṣṇa:",
+          "approved": true
+        }
+      },
+      "audio": {
+        "recitation": "/Files/e2a7375d033c460d91c9eae7886e8658.MP3",
+        "sanskrit": "/Files/2a909d20428f4204913e80f0152a8c5d.mp3"
+      },
+      "vocabulary": [
+        {
+          "word": "атха",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "затем",
+              "approved": true
+            }
+          },
+          "order": 1
+        },
+        {
+          "word": "вйавастхита̄н",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "расположенных в боевом порядке",
+              "approved": true
+            }
+          },
+          "order": 2
+        },
+        {
+          "word": "др̣ш̣т̣ва̄",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "увидев",
+              "approved": true
+            }
+          },
+          "order": 3
+        },
+        {
+          "word": "дха̄ртара̄ш̣т̣ра̄н",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "сыновей Дхр̣тара̄ш̣т̣ры",
+              "approved": true
+            }
+          },
+          "order": 4
+        },
+        {
+          "word": "капи-дхваджах̣",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "чье знамя украшено изображением Ханума̄на",
+              "approved": true
+            }
+          },
+          "order": 5
+        },
+        {
+          "word": "правр̣тте",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "когда пришло время",
+              "approved": true
+            }
+          },
+          "order": 6
+        },
+        {
+          "word": "ш́астра-сампа̄те",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "пускать стрелы",
+              "approved": true
+            }
+          },
+          "order": 7
+        },
+        {
+          "word": "дханух̣",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "свой лук",
+              "approved": true
+            }
+          },
+          "order": 8
+        },
+        {
+          "word": "удйамйа",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "подняв",
+              "approved": true
+            }
+          },
+          "order": 9
+        },
+        {
+          "word": "па̄н̣д̣авах̣",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "Арджуна",
+              "approved": true
+            }
+          },
+          "order": 10
+        },
+        {
+          "word": "хр̣ш̣ӣкеш́ам",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "Ш́рӣ Кр̣ш̣н̣е",
+              "approved": true
+            }
+          },
+          "order": 11
+        },
+        {
+          "word": "тада̄",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "тогда",
+              "approved": true
+            }
+          },
+          "order": 12
+        },
+        {
+          "word": "ва̄кйам",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "слова",
+              "approved": true
+            }
+          },
+          "order": 13
+        },
+        {
+          "word": "идам",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "такие",
+              "approved": true
+            }
+          },
+          "order": 14
+        },
+        {
+          "word": "аха",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "сказал",
+              "approved": true
+            }
+          },
+          "order": 15
+        },
+        {
+          "word": "махӣ-пате",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "о царь!",
+              "approved": true
+            }
+          },
+          "order": 16
+        }
+      ]
+    },
+    {
+      "number": "1.21-23",
+      "order": 17,
+      "sanskrit": "अर्जुन उवाच ।\nसेनयोरुभयोर्मध्ये रथं स्थापय मेऽच्युत ॥२१॥\nयावदेतान्निरीक्षेऽहं योद्धुकामानवस्थितान् ।\nकैर्मया सह योद्धव्यमस्मिन् रणसमुद्यमे ॥ २२ ॥\nयोत्स्यमानानवेक्षेऽहं य एतेऽत्र समागताः ।\nधार्तराष्ट्रस्य दुर्बुद्धेर्युद्धे प्रियचिकीर्षवः  ॥२३॥",
+      "transliteration": "арджуна ува̄ча\nсенайор убхайор мадхйе, ратхам̇ стха̄пайа ме ’чйута\nйа̄вад эта̄н нирӣкш̣е ’хам̇, йоддху-ка̄ма̄н авастхита̄н\nкаир майа̄ саха йоддхавйам, асмин ран̣а-самудйаме\nйотсйама̄на̄н авекш̣е ’хам̇, йа эте ’тра сама̄гата̄х̣\nдха̄ртара̄ш̣т̣расйа дурбуддхер, йуддхе прийа-чикӣрш̣авах̣",
+      "translations": {
+        "ru": {
+          "text": "Арджуна сказал:\nО Непогрешимый! Выведи мою колесницу на середину поля и поставь между двумя армиями, чтобы я смог увидеть воинов, желающих сразиться с нами. Я хочу посмотреть на тех, кто пришел биться со мной, приняв сторону злонамеренного Дурьодханы.",
+          "approved": true
+        },
+        "de": {
+          "text": "21-23  ‚O Kṛṣṇa, bitte fahre meinen Streitwagen zwischen die bei-den Armeen, sodass ich die Krieger betrachten kann, mit denen ich hier auf diesem Schlachtfeld streiten muss und die gekommen sind, um für die Zufriedenheit des gottlosen Duryodhana zu kämpfen.‘",
+          "approved": true
+        },
+        "es": {
+          "text": "¡Oh Kṛṣṇa!, por favor coloca mi cuadriga entre los dos ejércitos, para que yo pueda observar a los guerreros con los que debo pelear en este campo de batalla, y quienes han venido a luchar para la satisfacción del malvado Duryodhana.",
+          "approved": true
+        }
+      },
+      "audio": {
+        "recitation": "/Files/b7c78307b29d441d84a03c45bc3c77c8.MP3",
+        "sanskrit": "/Files/5ce284ecac1a4e24a08a9a0a3edcc351.mp3"
+      },
+      "vocabulary": [
+        {
+          "word": "арджунах̣ ува̄ча",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "Арджуна сказал",
+              "approved": true
+            }
+          },
+          "order": 1
+        },
+        {
+          "word": "сенайох̣",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "армий",
+              "approved": true
+            }
+          },
+          "order": 2
+        },
+        {
+          "word": "убхайох̣",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "обеих",
+              "approved": true
+            }
+          },
+          "order": 3
+        },
+        {
+          "word": "мадхйе",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "между",
+              "approved": true
+            }
+          },
+          "order": 4
+        },
+        {
+          "word": "ратхам",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "колесницу",
+              "approved": true
+            }
+          },
+          "order": 5
+        },
+        {
+          "word": "стха̄пайа",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "помести",
+              "approved": true
+            }
+          },
+          "order": 6
+        },
+        {
+          "word": "ме",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "мою",
+              "approved": true
+            }
+          },
+          "order": 7
+        },
+        {
+          "word": "ачйута",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "о Непогрешимый",
+              "approved": true
+            }
+          },
+          "order": 8
+        },
+        {
+          "word": "йа̄ват",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "так, чтобы",
+              "approved": true
+            }
+          },
+          "order": 9
+        },
+        {
+          "word": "эта̄н",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "этих воинов",
+              "approved": true
+            }
+          },
+          "order": 10
+        },
+        {
+          "word": "нирӣкш̣е",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "смог рассмотреть",
+              "approved": true
+            }
+          },
+          "order": 11
+        },
+        {
+          "word": "ахам",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "я",
+              "approved": true
+            }
+          },
+          "order": 12
+        },
+        {
+          "word": "йоддху-ка̄ма̄н",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "сражаться желающих",
+              "approved": true
+            }
+          },
+          "order": 13
+        },
+        {
+          "word": "авастхита̄н",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "расположенных в боевом порядке",
+              "approved": true
+            }
+          },
+          "order": 14
+        },
+        {
+          "word": "каих̣ майа̄ саха",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "с которыми мне",
+              "approved": true
+            }
+          },
+          "order": 15
+        },
+        {
+          "word": "йоддхавйам",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "предстоит биться",
+              "approved": true
+            }
+          },
+          "order": 16
+        },
+        {
+          "word": "асмин",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "на этом",
+              "approved": true
+            }
+          },
+          "order": 17
+        },
+        {
+          "word": "ран̣а-самудйаме",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "ратном поле",
+              "approved": true
+            }
+          },
+          "order": 18
+        },
+        {
+          "word": "йотсйама̄на̄н",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "чтобы воинов",
+              "approved": true
+            }
+          },
+          "order": 19
+        },
+        {
+          "word": "авекш̣е",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "смог увидеть",
+              "approved": true
+            }
+          },
+          "order": 20
+        },
+        {
+          "word": "ахам",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "я",
+              "approved": true
+            }
+          },
+          "order": 21
+        },
+        {
+          "word": "йе эте",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "этих, которые",
+              "approved": true
+            }
+          },
+          "order": 22
+        },
+        {
+          "word": "атра",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "здесь",
+              "approved": true
+            }
+          },
+          "order": 23
+        },
+        {
+          "word": "сама̄гата̄х̣",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "собрались",
+              "approved": true
+            }
+          },
+          "order": 24
+        },
+        {
+          "word": "дха̄ртара̄ш̣т̣расйа",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "Дурйодханы, сына Дхр̣тара̄ш̣т̣ры",
+              "approved": true
+            }
+          },
+          "order": 25
+        },
+        {
+          "word": "дур-буддхех̣",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "злонамеренного",
+              "approved": true
+            }
+          },
+          "order": 26
+        },
+        {
+          "word": "йуддхе",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "для битвы",
+              "approved": true
+            }
+          },
+          "order": 27
+        },
+        {
+          "word": "прийа-чикӣрш̣авах̣",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "желая угодить",
+              "approved": true
+            }
+          },
+          "order": 28
+        }
+      ]
+    },
+    {
+      "number": "1.24",
+      "order": 18,
+      "sanskrit": "सञ्जय उवाच ।\nएवमुक्तो हृषीकेशो गुडाकेशेन भारत ।\nसेनयोरुभयोर्मध्ये स्थापयित्वा रथोत्तमम्   ॥२४॥",
+      "transliteration": "сан̃джайа ува̄ча\nэвам укто хр̣ш̣ӣкеш́о, гуд̣а̄кеш́ена бха̄рата\nсенайор убхайор мадхйе, стха̄пайитва̄ ратхоттамам",
+      "translations": {
+        "ru": {
+          "text": "Санджая сказал:\nО потомок Бхараты, Кришна по просьбе Арджуны расположил лучшую из колесниц между двумя армиями.",
+          "approved": true
+        },
+        "en": {
+          "text": "Sañjaya said: O descendant of Bharat, after the vigilant Arjuna spoke these words, Śrī Kṛṣṇa, the Lord of the perceptions of all living beings, drew the grand chariot between both armies...",
+          "approved": true
+        },
+        "de": {
+          "text": "24 Sañjaya sagte: O Nachkomme Bharatas, nachdem der um-sichtige Arjuna diese Worte gesprochen hatte, lenkte Śrī Kṛṣṇa, der Herr der Sinneswahrnehmungen aller Lebewesen, den groß-artigen Streitwagen vor Bhīṣma, Droṇa und all den Häuptlingen der Erde zwischen die beiden Armeen.",
+          "approved": true
+        },
+        "es": {
+          "text": "Sañjaya dijo: ¡Oh descendiente de Bharata!, después de que el vigilante Arjuna habló estas palabras, Śrī Kṛṣṇa, el Señor de las percepciones de todas las entidades vivientes, llevó la gran cuadriga entre ambos ejércitos, ante Bhīṣma, Droṇa y todos los caudillos de la Tierra. ",
+          "approved": true
+        }
+      },
+      "audio": {
+        "recitation": "/Files/ed81687ba2554b94a1f9b7d702287f83.MP3",
+        "sanskrit": "/Files/2810abea357b4b91909d139fea5284ec.mp3"
+      },
+      "vocabulary": [
+        {
+          "word": "сан̃джайах̣ ува̄ча",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "Сан̃джайа сказал",
+              "approved": true
+            }
+          },
+          "order": 1
+        },
+        {
+          "word": "эвам",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "таким образом",
+              "approved": true
+            }
+          },
+          "order": 2
+        },
+        {
+          "word": "уктах̣",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "в ответ на просьбу",
+              "approved": true
+            }
+          },
+          "order": 3
+        },
+        {
+          "word": "хр̣ш̣ӣкеш́ах̣",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "Ш́рӣ Кр̣ш̣н̣а",
+              "approved": true
+            }
+          },
+          "order": 4
+        },
+        {
+          "word": "гуд̣а̄кеш́ена",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "Арджуны",
+              "approved": true
+            }
+          },
+          "order": 5
+        },
+        {
+          "word": "бха̄рата",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "о Дхр̣тара̄ш̣т̣ра, потомок Бха̄раты",
+              "approved": true
+            }
+          },
+          "order": 6
+        },
+        {
+          "word": "сенайох̣",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "армий",
+              "approved": true
+            }
+          },
+          "order": 7
+        },
+        {
+          "word": "убхайох̣",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "обеих",
+              "approved": true
+            }
+          },
+          "order": 8
+        },
+        {
+          "word": "мадхйе",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "между",
+              "approved": true
+            }
+          },
+          "order": 9
+        },
+        {
+          "word": "стха̄пайитва̄",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "поместив",
+              "approved": true
+            }
+          },
+          "order": 10
+        },
+        {
+          "word": "ратха-уттамам",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "лучшую из колесниц",
+              "approved": true
+            }
+          },
+          "order": 11
+        }
+      ]
+    },
+    {
+      "number": "1.25",
+      "order": 19,
+      "sanskrit": "भीष्मद्रोणप्रमुखतः सर्वेषां च महीक्षिताम् ।\nउवाच पार्थ पश्यैतान् समवेतान् कुरूनिति ॥२५॥",
+      "transliteration": "бхӣш̣ма-дрон̣а-прамукхатах̣, сарвеш̣а̄м̇ ча махӣкш̣ита̄м\nува̄ча па̄ртха паш́йаита̄н, самавета̄н курӯн ити",
+      "translations": {
+        "ru": {
+          "text": "Стоя перед Бхишмой, Дроной и другими великими правителями, Господь сказал Арджуне: «Взгляни же, Партха, на всех собравшихся здесь Куру».",
+          "approved": true
+        },
+        "en": {
+          "text": "...before Bhīṣma, Droṇa, and all the chieftains of the earth. The Lord then said: O Pārtha, behold the Kauravas assembled here for battle!",
+          "approved": true
+        },
+        "de": {
+          "text": "25  Der Herr sagte daraufhin: ‚O Pārtha, sieh die hier zur Schlacht versammelten Kauravas!‘",
+          "approved": true
+        },
+        "es": {
+          "text": "El Señor entonces dijo: ¡Oh Pārtha, mira a los Kauravas reunidos aquí para la batalla!",
+          "approved": true
+        }
+      },
+      "audio": {
+        "recitation": "/Files/d6da8006f64e4f618b0ae4b6c9ca708c.MP3",
+        "sanskrit": "/Files/967299b0834e4e0fa9e9beb65834f583.mp3"
+      },
+      "vocabulary": [
+        {
+          "word": "бхӣш̣ма-дрон̣а-прамукхатах̣",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "перед Бхӣш̣мой, Дрон̣ой",
+              "approved": true
+            }
+          },
+          "order": 1
+        },
+        {
+          "word": "сарвеш̣а̄м ча",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "и всеми",
+              "approved": true
+            }
+          },
+          "order": 2
+        },
+        {
+          "word": "махӣкш̣ита̄м",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "правителями",
+              "approved": true
+            }
+          },
+          "order": 3
+        },
+        {
+          "word": "ува̄ча",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "сказал",
+              "approved": true
+            }
+          },
+          "order": 4
+        },
+        {
+          "word": "па̄ртха",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "Арджуне, сыну Пр̣тхи",
+              "approved": true
+            }
+          },
+          "order": 5
+        },
+        {
+          "word": "паш́йа",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "взгляни",
+              "approved": true
+            }
+          },
+          "order": 6
+        },
+        {
+          "word": "эта̄н",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "на этих",
+              "approved": true
+            }
+          },
+          "order": 7
+        },
+        {
+          "word": "самавета̄н",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "собравшихся",
+              "approved": true
+            }
+          },
+          "order": 8
+        },
+        {
+          "word": "курӯн",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "Кауравов",
+              "approved": true
+            }
+          },
+          "order": 9
+        },
+        {
+          "word": "ити",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "так",
+              "approved": true
+            }
+          },
+          "order": 10
+        }
+      ]
+    },
+    {
+      "number": "1.26",
+      "order": 20,
+      "sanskrit": "तत्रापश्यत् स्थितान् पितॄनथ पितामहान् ।\nआचार्यान् मातुलान् भ्रातॄन् पुत्रान् पौत्रान् सखींस्तथा ।\nश्वशुरान् सुहृदश्चैव सेनयोरुभयोरपि ॥ २६ ॥",
+      "transliteration": "татра̄паш́йат стхита̄н па̄ртхах̣, питр̣̄н атха пита̄маха̄н\nа̄ча̄рйа̄н ма̄тула̄н бхра̄тр̣̄н, путра̄н паутра̄н сакхӣм̇с татха̄\nш́ваш́ура̄н сухр̣даш́ чаива, сенайор убхайор апи",
+      "translations": {
+        "ru": {
+          "text": "Тогда в обеих армиях Арджуна увидел старейшин родов по отцу и матери, своих дедов, наставников, братьев, сыновей, своих внуков и тестей, друзей и благожелателей.",
+          "approved": true
+        },
+        "en": {
+          "text": "There, within both armies, Arjuna saw paternal and maternal elders, grandfathers, teachers, brothers, sons, grandsons, fathers-in-law, friends, and other well-wishers.",
+          "approved": true
+        },
+        "de": {
+          "text": "26  Dort, in den beiden Armeen, erblickte Arjuna Ältere väter-licher- und mütterlicherseits, Großväter, Lehrer, Brüder, Söhne, Enkel, Schwiegerväter, Freunde und andere Gönner.",
+          "approved": true
+        },
+        "es": {
+          "text": "Allí, entre los dos ejércitos, Arjuna vio a sus parientes paternos y maternos, abuelos, maestros, hermanos, hijos, nietos, cuñados, amigos y otros bienquerientes.",
+          "approved": true
+        }
+      },
+      "audio": {
+        "recitation": "/Files/ae5741c16d2e4c8aa38e5ae88c721b28.MP3",
+        "sanskrit": "/Files/972f74f5426b4388858f4cf46a8bb921.mp3"
+      },
+      "vocabulary": [
+        {
+          "word": "татра",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "там",
+              "approved": true
+            }
+          },
+          "order": 1
+        },
+        {
+          "word": "апаш́йат",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "смог увидеть",
+              "approved": true
+            }
+          },
+          "order": 2
+        },
+        {
+          "word": "стхита̄н",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "находящихся",
+              "approved": true
+            }
+          },
+          "order": 3
+        },
+        {
+          "word": "па̄ртхах̣",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "Арджуна, сын Пр̣тхи",
+              "approved": true
+            }
+          },
+          "order": 4
+        },
+        {
+          "word": "питр̣̄н",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "старейшин в линии отца",
+              "approved": true
+            }
+          },
+          "order": 5
+        },
+        {
+          "word": "атха",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "затем",
+              "approved": true
+            }
+          },
+          "order": 6
+        },
+        {
+          "word": "пита̄маха̄н",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "дедов",
+              "approved": true
+            }
+          },
+          "order": 7
+        },
+        {
+          "word": "а̄ча̄рйа̄н",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "учителей",
+              "approved": true
+            }
+          },
+          "order": 8
+        },
+        {
+          "word": "ма̄тула̄н",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "дядей по матери",
+              "approved": true
+            }
+          },
+          "order": 9
+        },
+        {
+          "word": "бхра̄тр̣̄н",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "братьев",
+              "approved": true
+            }
+          },
+          "order": 10
+        },
+        {
+          "word": "путра̄н",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "сыновей",
+              "approved": true
+            }
+          },
+          "order": 11
+        },
+        {
+          "word": "паутра̄н",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "внуков",
+              "approved": true
+            }
+          },
+          "order": 12
+        },
+        {
+          "word": "сакхӣн",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "друзей",
+              "approved": true
+            }
+          },
+          "order": 13
+        },
+        {
+          "word": "татха̄",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "а также",
+              "approved": true
+            }
+          },
+          "order": 14
+        },
+        {
+          "word": "ш́ваш́ура̄н",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "тестей",
+              "approved": true
+            }
+          },
+          "order": 15
+        },
+        {
+          "word": "сухр̣дах̣ ча",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "и доброжелателей",
+              "approved": true
+            }
+          },
+          "order": 16
+        },
+        {
+          "word": "эва",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "несомненно",
+              "approved": true
+            }
+          },
+          "order": 17
+        },
+        {
+          "word": "сенайох̣",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "в армиях",
+              "approved": true
+            }
+          },
+          "order": 18
+        },
+        {
+          "word": "убхайох̣",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "обеих",
+              "approved": true
+            }
+          },
+          "order": 19
+        },
+        {
+          "word": "апи",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "включительно",
+              "approved": true
+            }
+          },
+          "order": 20
+        }
+      ]
+    },
+    {
+      "number": "1.27",
+      "order": 21,
+      "sanskrit": "तान् समीक्ष्य स कौन्तेयः सर्वान् बन्धूनवस्थितान् ।\nकृपया परयाविष्टो विषीदन्निदमब्रवीत् ॥ २७ ॥",
+      "transliteration": "та̄н самӣкш̣йа са каунтейах̣, сарва̄н бандхӯн авастхита̄н\nкр̣пайа̄ парайа̄виш̣т̣о, виш̣ӣданн идам абравӣт",
+      "translations": {
+        "ru": {
+          "text": "Увидев родных и близких на поле сражения, Арджуна, преисполненный сострадания и пораженный горем, сказал следующее.",
+          "approved": true
+        },
+        "en": {
+          "text": "Seeing his kinsmen present on the battlefield, Arjuna, the son of Kuntī, was grief-stricken and overcome with pity. He said:",
+          "approved": true
+        },
+        "de": {
+          "text": "27  Beim Anblick seiner Verwandten dort auf dem Schlachtfeld war Arjuna, der Sohn Kuntīs, vom Kummer erfüllt und von Be-dauern übermannt, wandte er sich an Śrī Kṛṣṇa.",
+          "approved": true
+        },
+        "es": {
+          "text": "Viendo a sus parientes presentes en el campo de bata- lla, Arjuna, el hijo de Kuntī, se encontraba golpeado por la pena y lleno de compasión, él dijo:",
+          "approved": true
+        }
+      },
+      "audio": {
+        "recitation": "/Files/3109ed41a666478882caffed2ad16198.MP3",
+        "sanskrit": "/Files/31d3aafd623b4f8baccdb12b3e178219.mp3"
+      },
+      "vocabulary": [
+        {
+          "word": "та̄н",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "их",
+              "approved": true
+            }
+          },
+          "order": 1
+        },
+        {
+          "word": "самӣкш̣йа",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "увидев",
+              "approved": true
+            }
+          },
+          "order": 2
+        },
+        {
+          "word": "сах̣",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "он",
+              "approved": true
+            }
+          },
+          "order": 3
+        },
+        {
+          "word": "каунтейах̣",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "сын Кунтӣ",
+              "approved": true
+            }
+          },
+          "order": 4
+        },
+        {
+          "word": "сарва̄н",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "всех",
+              "approved": true
+            }
+          },
+          "order": 5
+        },
+        {
+          "word": "бандхӯн",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "своих родственников",
+              "approved": true
+            }
+          },
+          "order": 6
+        },
+        {
+          "word": "ава-стхита̄н",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "присутствующих",
+              "approved": true
+            }
+          },
+          "order": 7
+        },
+        {
+          "word": "кр̣пайа̄",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "сострадания",
+              "approved": true
+            }
+          },
+          "order": 8
+        },
+        {
+          "word": "парайа̄",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "великого",
+              "approved": true
+            }
+          },
+          "order": 9
+        },
+        {
+          "word": "а̄виш̣т̣ах̣",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "преисполненный",
+              "approved": true
+            }
+          },
+          "order": 10
+        },
+        {
+          "word": "виш̣ӣдан",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "и убитый горем",
+              "approved": true
+            }
+          },
+          "order": 11
+        },
+        {
+          "word": "идам",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "это",
+              "approved": true
+            }
+          },
+          "order": 12
+        },
+        {
+          "word": "абравӣт",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "произнес",
+              "approved": true
+            }
+          },
+          "order": 13
+        }
+      ]
+    },
+    {
+      "number": "1.28",
+      "order": 22,
+      "sanskrit": "अर्जुन उवाच ।\nदृष्ट्वेमान् स्वजनान् कृष्ण युयुत्सून् समवस्थितान् ।\nसीदन्ति मम गात्राणि मुखं च परिशुष्यति ॥ २८ ॥",
+      "transliteration": "арджуна ува̄ча\nдр̣ш̣т̣вема̄н сваджана̄н кр̣ш̣н̣а, йуйутсӯн самавастхита̄н\nсӣданти мама га̄тра̄н̣и, мукхам̇ ча париш́уш̣йати",
+      "translations": {
+        "ru": {
+          "text": "Арджуна сказал:\nО Кришна! При виде родственников и друзей, собравшихся здесь и жаждущих битвы, я чувствую, как силы оставляют меня и пересыхает во рту.",
+          "approved": true
+        },
+        "en": {
+          "text": "O Kṛṣṇa, seeing all these relatives and friends assembled and eager for battle, the strength is draining from my limbs and my mouth feels parched.",
+          "approved": true
+        },
+        "de": {
+          "text": "28  Arjuna sagte: ‚O Kṛṣṇa, beim Anblick all dieser Verwandten und Freunde, die hier kampflustig versammelt sind, versiegt die Kraft in meinen Gliedern und mein Mund ist trocken.",
+          "approved": true
+        },
+        "es": {
+          "text": "¡Oh Kṛṣṇa!, viendo a todos estos parientes y amigos reunidos y ansiosos de pelear, las fuerzas se escapan de mis miembros y mi boca se siente seca.",
+          "approved": true
+        }
+      },
+      "audio": {
+        "recitation": "/Files/29b717f823d1488589e756bc53546990.MP3",
+        "sanskrit": "/Files/4b6b5900cddb48118433d9f7b677b296.mp3"
+      },
+      "vocabulary": [
+        {
+          "word": "арджунах̣ ува̄ча",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "Арджуна сказал",
+              "approved": true
+            }
+          },
+          "order": 1
+        },
+        {
+          "word": "дрӣш̣т̣ва̄",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "смотря на",
+              "approved": true
+            }
+          },
+          "order": 2
+        },
+        {
+          "word": "има̄н",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "этих",
+              "approved": true
+            }
+          },
+          "order": 3
+        },
+        {
+          "word": "сва-джана̄н",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "родных и близких",
+              "approved": true
+            }
+          },
+          "order": 4
+        },
+        {
+          "word": "кр̣ш̣н̣а",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "о Кр̣ш̣н̣а",
+              "approved": true
+            }
+          },
+          "order": 5
+        },
+        {
+          "word": "йуйутсӯн",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "жаждущих боя",
+              "approved": true
+            }
+          },
+          "order": 6
+        },
+        {
+          "word": "самавастхита̄н",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "собравшихся здесь",
+              "approved": true
+            }
+          },
+          "order": 7
+        },
+        {
+          "word": "сӣданти",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "слабеет",
+              "approved": true
+            }
+          },
+          "order": 8
+        },
+        {
+          "word": "мама",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "мое",
+              "approved": true
+            }
+          },
+          "order": 9
+        },
+        {
+          "word": "га̄тра̄н̣и",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "тело",
+              "approved": true
+            }
+          },
+          "order": 10
+        },
+        {
+          "word": "мукхам ча",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "и во рту",
+              "approved": true
+            }
+          },
+          "order": 11
+        },
+        {
+          "word": "париш́уш̣йати",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "пересыхает",
+              "approved": true
+            }
+          },
+          "order": 12
+        }
+      ]
+    },
+    {
+      "number": "1.29",
+      "order": 23,
+      "sanskrit": "वेपथुश्च शरीरे मे रोमहर्षश्च जायते ।\nगाण्डीवं स्रंसते हस्तात्त्वक्चैव परिदह्यते ॥२९॥",
+      "transliteration": "вепатхуш́ ча ш́арӣре ме, рома-харш̣аш́ ча джа̄йате\nга̄н̣д̣ӣвам̇ срам̇сате хаста̄т, твак чаива паридахйате",
+      "translations": {
+        "ru": {
+          "text": "Мое тело охватывает дрожь, и волосы на нем вздымаются. Кожа моя пылает, словно в огне, а лук Гандива выскальзывает из рук.",
+          "approved": true
+        },
+        "en": {
+          "text": "I am trembling and the hairs on my body are standing on end, my skin is burning, and I am losing grip of my Gāṇḍīva bow.",
+          "approved": true
+        },
+        "de": {
+          "text": "29  Ich zittere und die Körperhaare stehen mir zu Berge. Meine Haut brennt und mein Bogen Gāṇḍīva entgleitet meiner Hand.",
+          "approved": true
+        },
+        "es": {
+          "text": "Yo estoy temblando y los vellos de mi cuerpo están erizados, mi piel arde y mi arco Gāṇḍīva se me está resbalando de las manos.",
+          "approved": true
+        }
+      },
+      "audio": {
+        "recitation": "/Files/852adf79e3e141bcbe5d307dcb015dd6.MP3",
+        "sanskrit": "/Files/8147174b353046ab9edb771713d8bd4d.mp3"
+      },
+      "vocabulary": [
+        {
+          "word": "вепатхух̣",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "дрожь",
+              "approved": true
+            }
+          },
+          "order": 1
+        },
+        {
+          "word": "ча",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "также",
+              "approved": true
+            }
+          },
+          "order": 2
+        },
+        {
+          "word": "ш́арӣре",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "в теле",
+              "approved": true
+            }
+          },
+          "order": 3
+        },
+        {
+          "word": "ме",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "моем",
+              "approved": true
+            }
+          },
+          "order": 4
+        },
+        {
+          "word": "рома-харш̣ах̣ ча",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "и волосы на теле встают дыбом",
+              "approved": true
+            }
+          },
+          "order": 5
+        },
+        {
+          "word": "джа̄йате",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "также происходит",
+              "approved": true
+            }
+          },
+          "order": 6
+        },
+        {
+          "word": "га̄н̣д̣ӣвам",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "лук Га̄н̣д̣ӣва",
+              "approved": true
+            }
+          },
+          "order": 7
+        },
+        {
+          "word": "срам̇сате",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "выскальзывает",
+              "approved": true
+            }
+          },
+          "order": 8
+        },
+        {
+          "word": "хаста̄т",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "из рук",
+              "approved": true
+            }
+          },
+          "order": 9
+        },
+        {
+          "word": "твак ча",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "и кожа",
+              "approved": true
+            }
+          },
+          "order": 10
+        },
+        {
+          "word": "эва",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "также",
+              "approved": true
+            }
+          },
+          "order": 11
+        },
+        {
+          "word": "пари-дахйате",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "пылает",
+              "approved": true
+            }
+          },
+          "order": 12
+        }
+      ]
+    },
+    {
+      "number": "1.30",
+      "order": 24,
+      "sanskrit": "न च शक्नोम्यवस्थातुं भ्रमतीव च मे मनः ।\nनिमित्तानि च पश्यामि विपरीतानि केशव ॥३०॥",
+      "transliteration": "на ча ш́акномй авастха̄тум̇, бхраматӣва ча ме манах̣\nнимитта̄ни ча паш́йа̄ми, випарӣта̄ни кеш́ава",
+      "translations": {
+        "ru": {
+          "text": "О Кешава! Ноги мои подкашиваются, мой ум в смятении, и повсюду я вижу лишь дурные предзнаменования.",
+          "approved": true
+        },
+        "en": {
+          "text": "O Keśava, I cannot maintain my composure any longer. My mind is disturbed, and I see bad omens.",
+          "approved": true
+        },
+        "de": {
+          "text": "30  O Keśava, ich kann meine Fassung nicht länger bewahren. Mein Geist ist gestört und ich sehe böse Omen.",
+          "approved": true
+        },
+        "es": {
+          "text": "¡Oh Keśava!, no puedo mantener mi compostura por más tiempo. Mi mente está perturbada y veo malos augurios.",
+          "approved": true
+        }
+      },
+      "audio": {
+        "recitation": "/Files/05ee36dc246642f19830bfed3bd39e99.MP3",
+        "sanskrit": "/Files/a8a536b3334046e29a4cfa182d445f20.mp3"
+      },
+      "vocabulary": [
+        {
+          "word": "на ча ш́акноми",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "также я не могу",
+              "approved": true
+            }
+          },
+          "order": 1
+        },
+        {
+          "word": "авастха̄тум",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "стоять",
+              "approved": true
+            }
+          },
+          "order": 2
+        },
+        {
+          "word": "бхрамати",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "в смятении",
+              "approved": true
+            }
+          },
+          "order": 3
+        },
+        {
+          "word": "ива",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "тогда как",
+              "approved": true
+            }
+          },
+          "order": 4
+        },
+        {
+          "word": "ча",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "также",
+              "approved": true
+            }
+          },
+          "order": 5
+        },
+        {
+          "word": "ме",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "мой",
+              "approved": true
+            }
+          },
+          "order": 6
+        },
+        {
+          "word": "манах̣",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "ум",
+              "approved": true
+            }
+          },
+          "order": 7
+        },
+        {
+          "word": "нимитта̄ни ча",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "и предзнаменования",
+              "approved": true
+            }
+          },
+          "order": 8
+        },
+        {
+          "word": "паш́йа̄ми",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "я вижу",
+              "approved": true
+            }
+          },
+          "order": 9
+        },
+        {
+          "word": "випарӣта̄ни",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "зловещие",
+              "approved": true
+            }
+          },
+          "order": 10
+        },
+        {
+          "word": "кеш́ава",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "о Кеш́ава!",
+              "approved": true
+            }
+          },
+          "order": 11
+        }
+      ]
+    },
+    {
+      "number": "1.31",
+      "order": 25,
+      "sanskrit": "न च श्रेयोऽनुपश्यामि हत्वा स्वजनमाहवे  ।\nन काङ्क्षे विजयं कृष्ण न च राज्यं सुखानि च ॥३१॥",
+      "transliteration": "на ча ш́рейо ’нупаш́йа̄ми, хатва̄ сваджанам а̄хаве\nна ка̄н̇кш̣е виджайам̇ кр̣ш̣н̣а, на ча ра̄джйам̇ сукха̄ни ча",
+      "translations": {
+        "ru": {
+          "text": "О Кришна! Я не понимаю, какое благо мы обретем, убив родственников в этой битве? Я не желаю ни победы, ни наслаждения царствованием!",
+          "approved": true
+        },
+        "en": {
+          "text": "I do not see any good in killing my kinsmen in this battle. O Kṛṣṇa, I have no wish for victory or to enjoy a kingdom.",
+          "approved": true
+        },
+        "de": {
+          "text": "31  O Kṛṣṇa, ich sehe weder irgendetwas Gutes in dem Töten meiner Verwandten in dieser Schlacht noch habe ich den Wunsch nach Sieg oder danach, ein Königreich zu genießen.",
+          "approved": true
+        },
+        "es": {
+          "text": "Yo no veo ningún bien en matar a mis parientes en esta batalla. ¡Oh Kṛṣṇa!, yo no tengo deseos de victoria ni de disfrutar del reino.",
+          "approved": true
+        }
+      },
+      "audio": {
+        "recitation": "/Files/48f0606e786b49cea04020b4b04bcfb5.MP3",
+        "sanskrit": "/Files/86c5f80111a44c48910596a39d421845.mp3"
+      },
+      "vocabulary": [
+        {
+          "word": "на",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "не",
+              "approved": true
+            }
+          },
+          "order": 1
+        },
+        {
+          "word": "ча",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "также",
+              "approved": true
+            }
+          },
+          "order": 2
+        },
+        {
+          "word": "ш́рейах̣",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "блага",
+              "approved": true
+            }
+          },
+          "order": 3
+        },
+        {
+          "word": "анупаш́йа̄ми",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "я не вижу",
+              "approved": true
+            }
+          },
+          "order": 4
+        },
+        {
+          "word": "хатва̄",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "в убийстве",
+              "approved": true
+            }
+          },
+          "order": 5
+        },
+        {
+          "word": "сва-джанам",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "родственников",
+              "approved": true
+            }
+          },
+          "order": 6
+        },
+        {
+          "word": "а̄хаве",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "в битве",
+              "approved": true
+            }
+          },
+          "order": 7
+        },
+        {
+          "word": "на ка̄н̇кш̣е",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "я не желаю",
+              "approved": true
+            }
+          },
+          "order": 8
+        },
+        {
+          "word": "виджайам",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "победы",
+              "approved": true
+            }
+          },
+          "order": 9
+        },
+        {
+          "word": "кр̣ш̣н̣а",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "о Кр̣ш̣н̣а",
+              "approved": true
+            }
+          },
+          "order": 10
+        },
+        {
+          "word": "на",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "не",
+              "approved": true
+            }
+          },
+          "order": 11
+        },
+        {
+          "word": "ча",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "также",
+              "approved": true
+            }
+          },
+          "order": 12
+        },
+        {
+          "word": "ра̄джйам",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "царства",
+              "approved": true
+            }
+          },
+          "order": 13
+        },
+        {
+          "word": "сукха̄ни",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "счастья",
+              "approved": true
+            }
+          },
+          "order": 14
+        }
+      ]
+    },
+    {
+      "number": "1.32-34",
+      "order": 26,
+      "sanskrit": "किं नो राज्येन गोविन्द किं भोगैर्जीवितेन वा ।\nयेषामर्थे काङ्क्षितं नो राज्यं भोगाः सुखानि च ॥३२॥\nत इमेऽवस्थिता युद्धे प्राणांस्त्यक्त्वा धनानि च ।\nआचार्याः पितरः पुत्रास्तथैव च पितामहाः ॥३३॥\nमातुलाः श्वशुराः पौत्राः श्यालाः सम्बन्धिनस्तथा ।\nएतान्न हन्तुमिच्छामि घ्नतोऽपि मधुसूदन ॥३४॥",
+      "transliteration": "ким̇ но ра̄джйена говинда, ким̇ бхогаир джӣвитена ва̄\nйеш̣а̄м артхе ка̄н̇кш̣итам̇ но, ра̄джйам̇ бхога̄х̣ сукха̄ни ча\nта име ’вастхита̄ йуддхе, пра̄н̣а̄м̇с тйактва̄ дхана̄ни ча\nа̄ча̄рйа̄х̣ питарах̣ путра̄с, татхаива ча пита̄маха̄х̣\nма̄тула̄х̣ ш́ваш́ура̄х̣ паутра̄х̣, ш́йа̄ла̄х̣ самбандхинас татха̄\nэта̄н на хантум иччха̄ми, гхнато ’пи мадхусӯдана",
+      "translations": {
+        "ru": {
+          "text": "О Говинда! Есть ли смысл в обретении царства и в мирских радостях, ценна ли наша жизнь, если те, ради кого мы стремимся к этому, — наставники, старейшины рода отца, сыновья, деды, дядья по матери, тести, внуки, шурины и другие родственники, — противостоят нам на поле боя, готовые расстаться с жизнью и богатством? Поэтому, Мадхусудана, даже если они желают моей смерти, я не хочу убивать их!",
+          "approved": true
+        },
+        "de": {
+          "text": "32-34  O Govinda, wenn diejenigen, für die wir all dies wünschen, Lehrer, Ältere väterlicher- und mütterlicherseits, Söhne, Groß-väter, Schwiegerväter, Enkel, Schwäger und andere Verwand-te im Begriffe sind, ihr Vermögen und ihr Leben im Kampf zu riskieren, welchen Wert hat dann unser Königreich mit seinen königlichen Annehmlichkeiten oder sogar das Leben selbst? O Madhusūdana, ich wünsche nicht sie zu töten, auch wenn ich selbst getötet werden mag.",
+          "approved": true
+        },
+        "es": {
+          "text": "¡Oh Govinda!, si aquellos por quienes deseamos todo esto –maestros, parientes paternos y maternos, hijos, abuelos, suegros, nietos, cuñados y otros familiares– están a punto de arriesgar sus fortunas y vidas en la batalla, ¿de qué valor es nuestro reino y sus placeres reales, o incluso la vida misma? ¡Oh Madhusūdana!, yo no deseo matarlos a ellos aunque yo pueda ser muerto.",
+          "approved": true
+        }
+      },
+      "audio": {
+        "recitation": "/Files/17664a8c6ecb483cac33935768d46f89.MP3",
+        "sanskrit": "/Files/6c29438c014441aab49411d0e29521fd.mp3"
+      },
+      "vocabulary": [
+        {
+          "word": "ким",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "какой смысл",
+              "approved": true
+            }
+          },
+          "order": 1
+        },
+        {
+          "word": "нах̣",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "для нас",
+              "approved": true
+            }
+          },
+          "order": 2
+        },
+        {
+          "word": "ра̄джйена",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "в царствовании",
+              "approved": true
+            }
+          },
+          "order": 3
+        },
+        {
+          "word": "говинда",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "о Говинда, Ш́рӣ Кр̣ш̣н̣а",
+              "approved": true
+            }
+          },
+          "order": 4
+        },
+        {
+          "word": "ким",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "какой смысл",
+              "approved": true
+            }
+          },
+          "order": 5
+        },
+        {
+          "word": "бхогаих̣",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "в мирских радостях",
+              "approved": true
+            }
+          },
+          "order": 6
+        },
+        {
+          "word": "джӣвитена ва̄",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "или в самой жизни",
+              "approved": true
+            }
+          },
+          "order": 7
+        },
+        {
+          "word": "йеш̣а̄м",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "те, кто",
+              "approved": true
+            }
+          },
+          "order": 8
+        },
+        {
+          "word": "артхе",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "ради",
+              "approved": true
+            }
+          },
+          "order": 9
+        },
+        {
+          "word": "ка̄н̇кш̣итам",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "желаем",
+              "approved": true
+            }
+          },
+          "order": 10
+        },
+        {
+          "word": "нах̣",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "наше",
+              "approved": true
+            }
+          },
+          "order": 11
+        },
+        {
+          "word": "ра̄джйам",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "царство",
+              "approved": true
+            }
+          },
+          "order": 12
+        },
+        {
+          "word": "бхога̄х̣",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "наслаждение",
+              "approved": true
+            }
+          },
+          "order": 13
+        },
+        {
+          "word": "сукха̄ни ча",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "и счастье",
+              "approved": true
+            }
+          },
+          "order": 14
+        },
+        {
+          "word": "те име",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "все они",
+              "approved": true
+            }
+          },
+          "order": 15
+        },
+        {
+          "word": "авастхита̄х̣",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "присутствуют",
+              "approved": true
+            }
+          },
+          "order": 16
+        },
+        {
+          "word": "йуддхе",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "на ратном поле",
+              "approved": true
+            }
+          },
+          "order": 17
+        },
+        {
+          "word": "пра̄н̣а̄н",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "жизнь",
+              "approved": true
+            }
+          },
+          "order": 18
+        },
+        {
+          "word": "тйактва̄",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "готовые отдать",
+              "approved": true
+            }
+          },
+          "order": 19
+        },
+        {
+          "word": "дхана̄ни ча",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "и богатство",
+              "approved": true
+            }
+          },
+          "order": 20
+        },
+        {
+          "word": "а̄ча̄рйа̄х",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "учителя",
+              "approved": true
+            }
+          },
+          "order": 21
+        },
+        {
+          "word": "питарах̣",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "старейшины по отцу",
+              "approved": true
+            }
+          },
+          "order": 22
+        },
+        {
+          "word": "путра̄х̣",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "сыновья",
+              "approved": true
+            }
+          },
+          "order": 23
+        },
+        {
+          "word": "татха̄ эва ча",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "а также",
+              "approved": true
+            }
+          },
+          "order": 24
+        },
+        {
+          "word": "пита̄маха̄х̣",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "деды",
+              "approved": true
+            }
+          },
+          "order": 25
+        },
+        {
+          "word": "ма̄тула̄х̣",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "дяди по матери",
+              "approved": true
+            }
+          },
+          "order": 26
+        },
+        {
+          "word": "ш́ваш́ура̄х̣",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "тести",
+              "approved": true
+            }
+          },
+          "order": 27
+        },
+        {
+          "word": "паутра̄х̣",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "внуки",
+              "approved": true
+            }
+          },
+          "order": 28
+        },
+        {
+          "word": "ш́йа̄ла̄х̣",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "сводные братья",
+              "approved": true
+            }
+          },
+          "order": 29
+        },
+        {
+          "word": "самбандхинах̣",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "домочадцы",
+              "approved": true
+            }
+          },
+          "order": 30
+        },
+        {
+          "word": "татха̄",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "также",
+              "approved": true
+            }
+          },
+          "order": 31
+        },
+        {
+          "word": "эта̄н",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "их",
+              "approved": true
+            }
+          },
+          "order": 32
+        },
+        {
+          "word": "на",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "не",
+              "approved": true
+            }
+          },
+          "order": 33
+        },
+        {
+          "word": "хантум",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "убивать",
+              "approved": true
+            }
+          },
+          "order": 34
+        },
+        {
+          "word": "иччха̄ми",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "желаю",
+              "approved": true
+            }
+          },
+          "order": 35
+        },
+        {
+          "word": "гхнатах̣",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "убитый",
+              "approved": true
+            }
+          },
+          "order": 36
+        },
+        {
+          "word": "апи",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "даже если",
+              "approved": true
+            }
+          },
+          "order": 37
+        },
+        {
+          "word": "мадхусӯдана",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "о Мадхусӯдана",
+              "approved": true
+            }
+          },
+          "order": 38
+        }
+      ]
+    },
+    {
+      "number": "1.35",
+      "order": 27,
+      "sanskrit": "अपि त्रैलोक्यराज्यस्य हेतोः किं नु महीकृते ।\nनिहत्य धार्तराष्ट्रान्नः का प्रीतिः स्याज्जनार्दन ॥३५॥",
+      "transliteration": "апи траилокйа-ра̄джйасйа, хетох̣ ким̇ ну махӣ-кр̣те\nнихатйа дха̄ртара̄ш̣т̣ра̄н нах̣, ка̄ прӣтих̣ сйа̄дж джана̄рдана",
+      "translations": {
+        "ru": {
+          "text": "О Джанардана, разве сможем мы быть счастливы, убив сыновей Дхритараштры, пусть даже обретем власть над тремя мирами, — что уж говорить о владычестве над Землей?",
+          "approved": true
+        },
+        "en": {
+          "text": "O Janārdan, even if we gain sovereignty over the three worlds, not to speak of ruling the earth, how can we be happy if we kill the sons of Dhṛtarāṣṭra?",
+          "approved": true
+        },
+        "de": {
+          "text": "35  O Janārdana, welches Glück kann in dem Töten der Söhne Dhṛtarāṣṭras liegen, selbst wenn wir dadurch die Herrschaft über die drei Welten gewinnen – ganz zu schweigen von der Regierung der Erde.",
+          "approved": true
+        },
+        "es": {
+          "text": "¡Oh Janārdana!,incluso si ganamos soberanía sobre los tres mundos, ni que hablar de dominar la tierra, ¿cómo podemos ser felices si matamos a los hijos de Dhṛtarāṣṭra?",
+          "approved": true
+        }
+      },
+      "audio": {
+        "recitation": "/Files/76fac3e136bb48de828bd88b4377597e.MP3",
+        "sanskrit": "/Files/1c6b53a1b98b4b70a5d86d2bd9312617.mp3"
+      },
+      "vocabulary": [
+        {
+          "word": "апи",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "даже",
+              "approved": true
+            }
+          },
+          "order": 1
+        },
+        {
+          "word": "траилокйа",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "над тремя мирами",
+              "approved": true
+            }
+          },
+          "order": 2
+        },
+        {
+          "word": "ра̄джйасйа",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "царствования",
+              "approved": true
+            }
+          },
+          "order": 3
+        },
+        {
+          "word": "хетох̣",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "ради",
+              "approved": true
+            }
+          },
+          "order": 4
+        },
+        {
+          "word": "ким ну",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "не говоря уже о",
+              "approved": true
+            }
+          },
+          "order": 5
+        },
+        {
+          "word": "махӣ-кр̣те",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "правлении Землей",
+              "approved": true
+            }
+          },
+          "order": 6
+        },
+        {
+          "word": "нихатйа",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "убивая",
+              "approved": true
+            }
+          },
+          "order": 7
+        },
+        {
+          "word": "дха̄ртара̄ш̣т̣ра̄н",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "сыновей Дхр̣тара̄ш̣т̣ры",
+              "approved": true
+            }
+          },
+          "order": 8
+        },
+        {
+          "word": "нах̣",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "мы",
+              "approved": true
+            }
+          },
+          "order": 9
+        },
+        {
+          "word": "ка̄ прӣтих̣ сйа̄т",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "какую радость обретем",
+              "approved": true
+            }
+          },
+          "order": 10
+        },
+        {
+          "word": "джана̄рдана",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "о Джана̄рдана, Ш́рӣ Кр̣ш̣н̣а",
+              "approved": true
+            }
+          },
+          "order": 11
+        }
+      ]
+    },
+    {
+      "number": "1.36",
+      "order": 28,
+      "sanskrit": "पापमेवाश्रयेदस्मान् हत्वैतानाततायिनः ।\nतस्मान्नार्हा वयं हन्तुं धार्तराष्ट्रान् स्वबान्धवान् ।\nस्वजनं हि कथं हत्वा सुखिनः स्याम माधव ॥ ३६ ॥",
+      "transliteration": "па̄пам эва̄ш́райед асма̄н, хатваита̄н а̄тата̄йинах̣\nтасма̄н на̄рха̄ вайам̇ хантум̇, дха̄ртара̄ш̣т̣ра̄н сваба̄ндхава̄н\nсваджанам̇ хи катхам̇ хатва̄, сукхинах̣ сйа̄ма ма̄дхава",
+      "translations": {
+        "ru": {
+          "text": "Если мы убьем наших наставников и покровителей, то пожнем лишь грех, несмотря на то что это они развязали войну. Мы не должны уничтожать наших родственников, сыновей Дхритараштры. О Мадхава, можем ли мы быть счастливы ценой жизни наших близких?",
+          "approved": true
+        },
+        "en": {
+          "text": "Only sin will befall us if we slay our teachers and guardians, though they be our adversaries. We cannot take the lives of our own relatives, the sons of Dhṛtarāṣṭra. O Mādhava, how can we be happy by killing our kinsmen?",
+          "approved": true
+        },
+        "de": {
+          "text": "36  Wir werden nur in Sünde fallen, wenn wir unsere Lehrer und Behüter erschlagen, selbst wenn diese unsere Widersacher sein mögen. Wir dürfen nicht die Leben unserer eigenen Verwandten, der Söhne Dhṛtarāṣṭras, nehmen. O Mādhava, wie können wir durch das Töten unserer Verwandten glücklich werden?",
+          "approved": true
+        },
+        "es": {
+          "text": "Sólo el pecado caerá sobre nosotros si matamos a nuestros maestros y guardianes, aunque ellos sean nuestros adversarios. No podemos quitarle la vida a nuestros propios parientes, los hijos de Dhṛtarāṣṭra. ¡Oh Mādhava!, ¿cómo podemos ser felices si matamos a nuestros propios familiares?",
+          "approved": true
+        }
+      },
+      "audio": {
+        "recitation": "/Files/1508e4d388904ccc8a813f607a7e2bf2.MP3",
+        "sanskrit": "/Files/f4fa2de152964466ae41fe7054a2af24.mp3"
+      },
+      "vocabulary": [
+        {
+          "word": "па̄пам",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "грех",
+              "approved": true
+            }
+          },
+          "order": 1
+        },
+        {
+          "word": "эва",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "лишь",
+              "approved": true
+            }
+          },
+          "order": 2
+        },
+        {
+          "word": "а̄ш́райет",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "войдет",
+              "approved": true
+            }
+          },
+          "order": 3
+        },
+        {
+          "word": "асма̄н",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "в нас",
+              "approved": true
+            }
+          },
+          "order": 4
+        },
+        {
+          "word": "хатва̄",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "после убийства",
+              "approved": true
+            }
+          },
+          "order": 5
+        },
+        {
+          "word": "эта̄н",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "этих",
+              "approved": true
+            }
+          },
+          "order": 6
+        },
+        {
+          "word": "а̄тата̄йинах̣",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "агрессоров",
+              "approved": true
+            }
+          },
+          "order": 7
+        },
+        {
+          "word": "тасма̄т",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "поэтому",
+              "approved": true
+            }
+          },
+          "order": 8
+        },
+        {
+          "word": "на артха̄х̣",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "не можем",
+              "approved": true
+            }
+          },
+          "order": 9
+        },
+        {
+          "word": "вайам",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "мы",
+              "approved": true
+            }
+          },
+          "order": 10
+        },
+        {
+          "word": "хантум",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "убить",
+              "approved": true
+            }
+          },
+          "order": 11
+        },
+        {
+          "word": "дха̄ртара̄ш̣т̣ра̄н",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "сыновей Дхр̣тара̄ш̣т̣ры",
+              "approved": true
+            }
+          },
+          "order": 12
+        },
+        {
+          "word": "сва-ба̄ндхава̄н",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "наших кровных родственников",
+              "approved": true
+            }
+          },
+          "order": 13
+        },
+        {
+          "word": "сва-джанам",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "своих близких",
+              "approved": true
+            }
+          },
+          "order": 14
+        },
+        {
+          "word": "хи",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "ведь",
+              "approved": true
+            }
+          },
+          "order": 15
+        },
+        {
+          "word": "катхам",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "как",
+              "approved": true
+            }
+          },
+          "order": 16
+        },
+        {
+          "word": "хатва̄",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "убив",
+              "approved": true
+            }
+          },
+          "order": 17
+        },
+        {
+          "word": "сукхинах̣",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "счастливы",
+              "approved": true
+            }
+          },
+          "order": 18
+        },
+        {
+          "word": "сйа̄ма",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "мы станем",
+              "approved": true
+            }
+          },
+          "order": 19
+        },
+        {
+          "word": "ма̄дхава",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "о Ма̄дхава",
+              "approved": true
+            }
+          },
+          "order": 20
+        }
+      ]
+    },
+    {
+      "number": "1.37-38",
+      "order": 29,
+      "sanskrit": "यद्यप्येते न पश्यन्ति लोभोपहतचेतसः ।\nकुलक्षयकृतं दोषं मित्रद्रोहे च पातकम्  ॥३७॥\nकथं न ज्ञेयमस्माभिः पापादस्मान्निवर्तितुम् ।\nकुलक्षयकृतं दोषं प्रपश्यद्भिर्जनार्दन  ॥३८॥",
+      "transliteration": "йадйапй эте на паш́йанти, лобхопахата-четасах̣\nкула-кш̣айа-кр̣там̇ дош̣ам̇, митра-дрохе ча па̄такам\nкатхам̇ на джн̃ейам асма̄бхих̣, па̄па̄д асма̄н нивартитум\nкула-кш̣айа кр̣там̇ дош̣ам̇, прапаш́йадбхир джана̄рдана",
+      "translations": {
+        "ru": {
+          "text": "О Джанардана! Пусть эти люди, ослепленные алчностью, не видят греха в измене друзьям и разрушении династии. Но почему мы, осознавая зло братоубийственной войны, не можем воздержаться от этого преступления?",
+          "approved": true
+        },
+        "de": {
+          "text": "37, 38  Auch wenn sie, von Gier überwältigt, die Sünde seine Freunde zu verraten und die Dynastie zu zerstören nicht sehen können, wie können wir, o Janārdana, in vollem Wissen von den Konsequenzen, nicht von dieser abscheulichen Tat absehen?",
+          "approved": true
+        },
+        "es": {
+          "text": "Aunque ellos, confundidos por la codicia, no pueden ver el pecado de traicionar a sus amigos y destruir la dinastía, ¡oh Janārdana!, ¿cómo no podemos nosotros detener este abominable acto, conociendo completamente sus consecuencias?",
+          "approved": true
+        }
+      },
+      "audio": {
+        "recitation": "/Files/4049d60988fb4e94b8f4352a60da1c85.MP3",
+        "sanskrit": "/Files/06ceff21a2c84fb38454c40932025b8a.mp3"
+      },
+      "vocabulary": [
+        {
+          "word": "йади",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "если",
+              "approved": true
+            }
+          },
+          "order": 1
+        },
+        {
+          "word": "апи",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "даже",
+              "approved": true
+            }
+          },
+          "order": 2
+        },
+        {
+          "word": "эте",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "эти люди",
+              "approved": true
+            }
+          },
+          "order": 3
+        },
+        {
+          "word": "на паш́йанти",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "не видят",
+              "approved": true
+            }
+          },
+          "order": 4
+        },
+        {
+          "word": "лабха-упахата-четасах̣",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "чьи сердца преисполнились алчности",
+              "approved": true
+            }
+          },
+          "order": 5
+        },
+        {
+          "word": "кула-кш̣айа-кр̣там",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "в разрушении династии",
+              "approved": true
+            }
+          },
+          "order": 6
+        },
+        {
+          "word": "дош̣ам",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "греха",
+              "approved": true
+            }
+          },
+          "order": 7
+        },
+        {
+          "word": "митра-дрохе ча",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "и в измене друзьям",
+              "approved": true
+            }
+          },
+          "order": 8
+        },
+        {
+          "word": "па̄такам",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "дурных последствий",
+              "approved": true
+            }
+          },
+          "order": 9
+        },
+        {
+          "word": "катхам",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "как",
+              "approved": true
+            }
+          },
+          "order": 10
+        },
+        {
+          "word": "на",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "не",
+              "approved": true
+            }
+          },
+          "order": 11
+        },
+        {
+          "word": "джн̃ейам",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "ясно, что нужно",
+              "approved": true
+            }
+          },
+          "order": 12
+        },
+        {
+          "word": "асма̄бхих̣",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "нам",
+              "approved": true
+            }
+          },
+          "order": 13
+        },
+        {
+          "word": "па̄па̄т",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "от греховного поступка",
+              "approved": true
+            }
+          },
+          "order": 14
+        },
+        {
+          "word": "асмат",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "этого",
+              "approved": true
+            }
+          },
+          "order": 15
+        },
+        {
+          "word": "нивартитум",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "воздержаться",
+              "approved": true
+            }
+          },
+          "order": 16
+        },
+        {
+          "word": "кула-кш̣айа-кр̣там дош̣ам",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "каким вопиющим преступлением является убийство собственных сородичей",
+              "approved": true
+            }
+          },
+          "order": 17
+        },
+        {
+          "word": "прапаш́йадббхих̣",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "прекрасно понимая",
+              "approved": true
+            }
+          },
+          "order": 18
+        },
+        {
+          "word": "джана̄рдана",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "о Джана̄рдана, Ш́рӣ Кр̣ш̣н̣а",
+              "approved": true
+            }
+          },
+          "order": 19
+        }
+      ]
+    },
+    {
+      "number": "1.39",
+      "order": 30,
+      "sanskrit": "कुलक्षये प्रणश्यन्ति कुलधर्माः सनातनाः ।\nधर्मे नष्टे कुलं कृत्स्नमधर्मोऽभिभवत्युत  ॥३९॥",
+      "transliteration": "кула-кш̣айе пран̣аш́йанти, кула-дхарма̄х̣ сана̄тана̄х̣\nдхарме наш̣т̣е кулам̇ кр̣тснам, адхармо ’бхибхаватй ута",
+      "translations": {
+        "ru": {
+          "text": "С падением рода приходят в упадок его незыблемые духовные традиции. А когда традиции нарушаются, оставшимися представителями рода завладевает безбожие.",
+          "approved": true
+        },
+        "en": {
+          "text": "With the decline of the dynasty, its religious traditions are lost. When religious practices are lost, irreligion overcomes the entire dynasty.",
+          "approved": true
+        },
+        "de": {
+          "text": "39  Mit dem Verfall der Dynastie gehen ihre religiösen Überlie-ferungen verloren. Wenn die religiösen Praktiken verloren sind, überkommt Gottlosigkeit die gesamte Dynastie.",
+          "approved": true
+        },
+        "es": {
+          "text": "Con el declive de la dinastía, las tradiciones religiosas se pierden. Cuando las prácticas religiosas se pierden, la irreligión domina a toda la dinastía.",
+          "approved": true
+        }
+      },
+      "audio": {
+        "recitation": "/Files/4c48e6ff08c2494e99cd658e221cda8d.MP3",
+        "sanskrit": "/Files/f70fde8e7ca64246b8729f22716ca41c.mp3"
+      },
+      "vocabulary": [
+        {
+          "word": "кула-кш̣айе",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "с падением династии",
+              "approved": true
+            }
+          },
+          "order": 1
+        },
+        {
+          "word": "пран̣аш́йанти",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "будут уничтожены",
+              "approved": true
+            }
+          },
+          "order": 2
+        },
+        {
+          "word": "кула-дхарма̄х̣",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "духовные традиции рода",
+              "approved": true
+            }
+          },
+          "order": 3
+        },
+        {
+          "word": "сана̄тана̄х̣",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "незыблемые",
+              "approved": true
+            }
+          },
+          "order": 4
+        },
+        {
+          "word": "дхарме наш̣т̣е",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "когда религиозные принципы разрушатся",
+              "approved": true
+            }
+          },
+          "order": 5
+        },
+        {
+          "word": "кулам",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "род",
+              "approved": true
+            }
+          },
+          "order": 6
+        },
+        {
+          "word": "кр̣тснам",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "весь",
+              "approved": true
+            }
+          },
+          "order": 7
+        },
+        {
+          "word": "адхармах̣",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "безбожие",
+              "approved": true
+            }
+          },
+          "order": 8
+        },
+        {
+          "word": "абхибхавати",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "охватывает",
+              "approved": true
+            }
+          },
+          "order": 9
+        },
+        {
+          "word": "ута",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "также",
+              "approved": true
+            }
+          },
+          "order": 10
+        }
+      ]
+    },
+    {
+      "number": "1.40",
+      "order": 31,
+      "sanskrit": "अधर्माभिभवात्कृष्ण प्रदुष्यन्ति कुलस्त्रियः ।\nस्त्रीषु दुष्टासु वार्ष्णेय जायते वर्णसङ्करः ॥४०॥",
+      "transliteration": "адхарма̄бхибхава̄т кр̣ш̣н̣а, прадуш̣йанти кула-стрийах̣\nстрӣш̣у душ̣т̣асу ва̄рш̣н̣ейа, джа̄йате варн̣а-сан̇карах̣",
+      "translations": {
+        "ru": {
+          "text": "Когда в семье воцаряется безбожие, о Кришна, женщины этой семьи развращаются. А деградация женщин, о потомок Вришни, приводит к появлению неблагочестивого потомства.",
+          "approved": true
+        },
+        "en": {
+          "text": "O Kṛṣṇa, descendant of the Vṛṣṇi dynasty, when the dynasty is thus overcome by irreligion, the women of the family become corrupt and adulterated progeny is the result.",
+          "approved": true
+        },
+        "de": {
+          "text": "40  O Kṛṣṇa, Nachkomme der Vṛṣṇi-Dynastie, wenn die Dynastie so von Gottlosigkeit überkommen ist, werden die Frauen der Familie ehrlos und die Folge ist unehelicher Nachwuchs.",
+          "approved": true
+        },
+        "es": {
+          "text": "¡Oh Kṛṣṇa¡, descendiente de la dinastía Vṛṣṇi, es así que dominadas por la irreligión, las mujeres de la familia se contaminan y el resultado es la progenie degradada.",
+          "approved": true
+        }
+      },
+      "audio": {
+        "recitation": "/Files/073bb2cc9f964583ab37e9faaeea7e99.MP3",
+        "sanskrit": "/Files/d10e5c338bb746d0a17453af5cb67012.mp3"
+      },
+      "vocabulary": [
+        {
+          "word": "адхарма",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "когда безбожие",
+              "approved": true
+            }
+          },
+          "order": 1
+        },
+        {
+          "word": "абхибхава̄т",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "воцаряется",
+              "approved": true
+            }
+          },
+          "order": 2
+        },
+        {
+          "word": "кр̣ш̣н̣а",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "о Кр̣ш̣н̣а",
+              "approved": true
+            }
+          },
+          "order": 3
+        },
+        {
+          "word": "прадуш̣йанти",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "развращаются",
+              "approved": true
+            }
+          },
+          "order": 4
+        },
+        {
+          "word": "кула-стрийах̣",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "женщины рода",
+              "approved": true
+            }
+          },
+          "order": 5
+        },
+        {
+          "word": "стрӣш̣у душ̣т̣а̄су",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "а когда женщины становятся порочны",
+              "approved": true
+            }
+          },
+          "order": 6
+        },
+        {
+          "word": "ва̄рш̣н̣ейа",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "о потомок династии Вр̣ш̣н̣и",
+              "approved": true
+            }
+          },
+          "order": 7
+        },
+        {
+          "word": "джа̄йате",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "рождается",
+              "approved": true
+            }
+          },
+          "order": 8
+        },
+        {
+          "word": "варн̣а-сан̇карах̣",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "неблагочестивое потомство",
+              "approved": true
+            }
+          },
+          "order": 9
+        }
+      ]
+    },
+    {
+      "number": "1.41",
+      "order": 32,
+      "sanskrit": "सङ्करो नरकायैव कुलघ्नानां कुलस्य च ।\nपतन्ति पितरो ह्येषां लुप्तपिण्डोदकक्रियाः  ॥४१॥",
+      "transliteration": "сан̇каро нарака̄йаива, кула-гхна̄на̄м̇ куласйа ча\nпатанти питаро хй эш̣а̄м̇, лупта-пин̣д̣одака-крийа̄х̣",
+      "translations": {
+        "ru": {
+          "text": "Неправедное потомство ввергает в ад как представителей самого рода, так и его разрушителей. Та же участь ждет и предков рода, поскольку подношения им воды и пищи прекращаются.",
+          "approved": true
+        },
+        "en": {
+          "text": "Adulterated progeny forces both the family and its aggressors into a hellish existence. The same fate befalls their ancestors, because regular offerings of food and water to them cease.",
+          "approved": true
+        },
+        "de": {
+          "text": "41  Unehelicher Nachwuchs zwingt sowohl die Familie als auch ihre Angreifer in ein höllisches Dasein. Dasselbe Schicksal befällt ihre Vorfahren, weil regelmäßige Opferdarbringungen von Essen und Wasser für sie aufhören.",
+          "approved": true
+        },
+        "es": {
+          "text": "La progenie degradada fuerza tanto a la familia como a sus agresores a una existencia infernal. El mismo destino cae sobre sus ancestros, porque las ofrendas regulares de comida y agua a ellos cesan.",
+          "approved": true
+        }
+      },
+      "audio": {
+        "recitation": "/Files/223fdb9ef7654d828d473f31042a1b37.MP3",
+        "sanskrit": "/Files/bfbc03f991f5452983b2d8fe8c6e55cf.mp3"
+      },
+      "vocabulary": [
+        {
+          "word": "сан̇карах̣",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "неправедное потомство",
+              "approved": true
+            }
+          },
+          "order": 1
+        },
+        {
+          "word": "нарака̄йа эва",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "ввергает в ад",
+              "approved": true
+            }
+          },
+          "order": 2
+        },
+        {
+          "word": "кула-гхна̄на̄м",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "разрушителей рода",
+              "approved": true
+            }
+          },
+          "order": 3
+        },
+        {
+          "word": "куласйа",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "род",
+              "approved": true
+            }
+          },
+          "order": 4
+        },
+        {
+          "word": "ча",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "также",
+              "approved": true
+            }
+          },
+          "order": 5
+        },
+        {
+          "word": "патанти",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "падают",
+              "approved": true
+            }
+          },
+          "order": 6
+        },
+        {
+          "word": "питарах̣",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "предки",
+              "approved": true
+            }
+          },
+          "order": 7
+        },
+        {
+          "word": "хи",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "несомненно",
+              "approved": true
+            }
+          },
+          "order": 8
+        },
+        {
+          "word": "эш̣а̄м",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "их",
+              "approved": true
+            }
+          },
+          "order": 9
+        },
+        {
+          "word": "лупта",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "поскольку прекращаются",
+              "approved": true
+            }
+          },
+          "order": 10
+        },
+        {
+          "word": "пин̣д̣а-удака-крийа̄х̣",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "обряды подношения освященной воды и пищи",
+              "approved": true
+            }
+          },
+          "order": 11
+        }
+      ]
+    },
+    {
+      "number": "1.42",
+      "order": 33,
+      "sanskrit": "दोषैरेतैः कुलघ्नानां वर्णसङ्करकारकैः ।\nउत्साद्यन्ते जातिधर्माः कुलधर्माश्च शाश्वताः ॥४२॥",
+      "transliteration": "дош̣аир этаих̣ кула-гхна̄на̄м̇, варн̣а-сан̇кара-ка̄ракаих̣\nутса̄дйанте джа̄ти-дхарма̄х̣, кула-дхарма̄ш́ ча ш́а̄ш́вата̄х̣",
+      "translations": {
+        "ru": {
+          "text": "Так злодеяния разрушителей династии приводят к рождению неправедного потомства. Из-за этого вековые устои семьи и общества рушатся.",
+          "approved": true
+        },
+        "en": {
+          "text": "Such heinous acts by the destroyers of the dynasty are the cause of adulterated progeny, ruining the culture of a civilized society and noble lineage.",
+          "approved": true
+        },
+        "de": {
+          "text": "42  Solche abscheulichen Taten der Vernichter der Dynastie sind die Ursache von unehelichem Nachwuchs, der die Kultur einer zivilisierten Gesellschaft und die edle Abstammung ruiniert.",
+          "approved": true
+        },
+        "es": {
+          "text": "Tales actos abominables de aquellos que destruyen la dinastía son la causa de la progenie degradada, arruinando así la cultura de una sociedad civilizada y un linaje noble.",
+          "approved": true
+        }
+      },
+      "audio": {
+        "recitation": "/Files/4e66d28ad3aa4de28a38d38685f65c26.MP3",
+        "sanskrit": "/Files/461501ac7ebf4cd7977c7f4cb9cfceb1.mp3"
+      },
+      "vocabulary": [
+        {
+          "word": "дош̣аих̣",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "из-за грехов",
+              "approved": true
+            }
+          },
+          "order": 1
+        },
+        {
+          "word": "этаих̣",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "этих",
+              "approved": true
+            }
+          },
+          "order": 2
+        },
+        {
+          "word": "кула-гхна̄на̄м",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "разрушителей династии",
+              "approved": true
+            }
+          },
+          "order": 3
+        },
+        {
+          "word": "варн̣а-сан̇кара",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "безбожное неблагочестивое потомство",
+              "approved": true
+            }
+          },
+          "order": 4
+        },
+        {
+          "word": "ка̄ракаих̣",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "происходит",
+              "approved": true
+            }
+          },
+          "order": 5
+        },
+        {
+          "word": "утса̄дйанте",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "предаются забвению",
+              "approved": true
+            }
+          },
+          "order": 6
+        },
+        {
+          "word": "джа̄ти-дхарма̄х̣",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "традиции сословия",
+              "approved": true
+            }
+          },
+          "order": 7
+        },
+        {
+          "word": "кула-дхарма̄х̣ ча",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "и семейные устои",
+              "approved": true
+            }
+          },
+          "order": 8
+        },
+        {
+          "word": "ш́а̄ш́вата̄х̣",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "передаваемые из поколения в поколение",
+              "approved": true
+            }
+          },
+          "order": 9
+        }
+      ]
+    },
+    {
+      "number": "1.43",
+      "order": 34,
+      "sanskrit": "उत्सन्नकुलधर्माणां मनुष्याणां जनार्दन ।\nनरके नियतं वासो भवतीत्यनुशुश्रुम  ॥४३॥",
+      "transliteration": "утсанна-кула-дхарма̄н̣а̄м̇, мануш̣йа̄н̣а̄м̇ джана̄рдана\nнараке нийатам̇ ва̄со, бхаватӣтй ануш́уш́рума",
+      "translations": {
+        "ru": {
+          "text": "О Джанардана! Мы слышали, что те, кто разрушает духовные и семейные традиции, непременно отправятся в ад.",
+          "approved": true
+        },
+        "en": {
+          "text": "O Janārdan, we have heard that persons whose familial, social and religious traditions are disrupted dwell always in hell.",
+          "approved": true
+        },
+        "de": {
+          "text": "43  O Janārdana, wir haben gehört, dass Menschen, deren fami-liäre, soziale und religiöse Traditionen abgebrochen sind, immer in der Hölle weilen.",
+          "approved": true
+        },
+        "es": {
+          "text": "¡Oh Janārdana!, hemos oído que las personas cuyas tradiciones familiares, sociales y religiosas son destruidas, moran siempre en el infierno.",
+          "approved": true
+        }
+      },
+      "audio": {
+        "recitation": "/Files/821d2c7c71a84773859eb174f4893f4a.MP3",
+        "sanskrit": "/Files/ab4fcb800a834f2a9dbbf6f0850a4158.mp3"
+      },
+      "vocabulary": [
+        {
+          "word": "утсанна",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "разрушенные",
+              "approved": true
+            }
+          },
+          "order": 1
+        },
+        {
+          "word": "кула-дхарма̄н̣а̄м",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "чьи религиозные семейные традиции",
+              "approved": true
+            }
+          },
+          "order": 2
+        },
+        {
+          "word": "мануш̣йа̄н̣а̄м",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "таким людям",
+              "approved": true
+            }
+          },
+          "order": 3
+        },
+        {
+          "word": "джана̄рдана",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "о Джана̄рдана",
+              "approved": true
+            }
+          },
+          "order": 4
+        },
+        {
+          "word": "нараке",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "в аду",
+              "approved": true
+            }
+          },
+          "order": 5
+        },
+        {
+          "word": "нийатам",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "несомненно",
+              "approved": true
+            }
+          },
+          "order": 6
+        },
+        {
+          "word": "ва̄сах̣",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "местопребывание",
+              "approved": true
+            }
+          },
+          "order": 7
+        },
+        {
+          "word": "бхавати",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "уготовано",
+              "approved": true
+            }
+          },
+          "order": 8
+        },
+        {
+          "word": "ити",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "так",
+              "approved": true
+            }
+          },
+          "order": 9
+        },
+        {
+          "word": "ануш́уш́рума",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "мы слышали",
+              "approved": true
+            }
+          },
+          "order": 10
+        }
+      ]
+    },
+    {
+      "number": "1.44",
+      "order": 35,
+      "sanskrit": "अहो बत महत्पापं कर्तुं व्यवसिता वयम् ।\nयद्राज्यसुखलोभेन हन्तुं स्वजनमुद्यताः  ॥४४॥",
+      "transliteration": "ахо бата махат-па̄пам̇, картум̇ вйавасита̄ вайам\nйад ра̄джйа-сукха-лобхена, хантум̇ сваджанам удйата̄х̣",
+      "translations": {
+        "ru": {
+          "text": "О горе! Что за ужасный грех мы готовы совершить! Желая наслаждаться царствованием, мы собираемся лишить жизни своих родственников!",
+          "approved": true
+        },
+        "en": {
+          "text": "Alas, what a grave sin we have resolved to commit! Driven by greed for trifling royal happiness, we are about to slay our own kinsmen.",
+          "approved": true
+        },
+        "de": {
+          "text": "44  Ach, was für eine große Sünde haben wir beschlossen zu be-gehen! Getrieben von der Gier nach unbedeutendem königlichen Glück, sind wir im Begriff, unsere eigenen Verwandten zu töten.",
+          "approved": true
+        },
+        "es": {
+          "text": "¡Ay de mí, que grave pecado nos hemos resuelto a cometer! Llevados por la codicia de disfrutar la felicidad real, estamos a punto de matar a nuestros propios parientes.",
+          "approved": true
+        }
+      },
+      "audio": {
+        "recitation": "/Files/222d8c7282404d6a86480222c2ec33d5.MP3",
+        "sanskrit": "/Files/8807f03be7754ff59f96a57d5eaef48b.mp3"
+      },
+      "vocabulary": [
+        {
+          "word": "ахо",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "увы",
+              "approved": true
+            }
+          },
+          "order": 1
+        },
+        {
+          "word": "бата",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "как странно",
+              "approved": true
+            }
+          },
+          "order": 2
+        },
+        {
+          "word": "махат",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "великий",
+              "approved": true
+            }
+          },
+          "order": 3
+        },
+        {
+          "word": "па̄пам",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "грех",
+              "approved": true
+            }
+          },
+          "order": 4
+        },
+        {
+          "word": "картум",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "совершить",
+              "approved": true
+            }
+          },
+          "order": 5
+        },
+        {
+          "word": "вйавасита̄х̣",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "решили",
+              "approved": true
+            }
+          },
+          "order": 6
+        },
+        {
+          "word": "вайам",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "мы",
+              "approved": true
+            }
+          },
+          "order": 7
+        },
+        {
+          "word": "йат",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "то есть",
+              "approved": true
+            }
+          },
+          "order": 8
+        },
+        {
+          "word": "ра̄джйа-сукха",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "царское счастье",
+              "approved": true
+            }
+          },
+          "order": 9
+        },
+        {
+          "word": "лобхена",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "страстно желая",
+              "approved": true
+            }
+          },
+          "order": 10
+        },
+        {
+          "word": "хантум",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "убить",
+              "approved": true
+            }
+          },
+          "order": 11
+        },
+        {
+          "word": "сва-джанам",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "своих родственников",
+              "approved": true
+            }
+          },
+          "order": 12
+        },
+        {
+          "word": "удйата̄х̣",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "готовы",
+              "approved": true
+            }
+          },
+          "order": 13
+        }
+      ]
+    },
+    {
+      "number": "1.45",
+      "order": 36,
+      "sanskrit": "यदि मामप्रतीकारमशस्त्रं शस्त्रपाणयः ।\nधार्तराष्ट्रा रणे हन्युस्तन्मे क्षेमतरं भवेत्  ॥४५॥",
+      "transliteration": "йади ма̄м апратӣка̄рам, аш́астрам̇ ш́астра-па̄н̣айах̣\nдха̄ртара̄ш̣т̣ра̄ ран̣е ханйус, тан ме кш̣ематарам̇ бхавет",
+      "translations": {
+        "ru": {
+          "text": "Пусть лучше меня, безоружного и не оказывающего сопротивления, убьют на этом поле боя сыновья Дхритараштры!",
+          "approved": true
+        },
+        "en": {
+          "text": "If, unarmed and unresisting, I am killed on this battlefield by the armed sons of Dhṛtarāṣṭra, that will be more auspicious for me.",
+          "approved": true
+        },
+        "de": {
+          "text": "45  Es wäre glücklicher für mich, wenn ich unbewaffnet und widerstandslos auf diesem Schlachtfeld von den bewaffneten Söhnen Dhṛtarāṣṭras getötet würde.‘",
+          "approved": true
+        },
+        "es": {
+          "text": "Si desarmado y sin resistencia, soy muerto en este campo de batalla por los hijos armados de Dhṛtarāṣṭra, eso será más auspicioso para mí.",
+          "approved": true
+        }
+      },
+      "audio": {
+        "recitation": "/Files/f79f8a6423e14ac7bbc158bcd0bf5244.MP3",
+        "sanskrit": "/Files/e8698a198f2a4076a3589332f173b119.mp3"
+      },
+      "vocabulary": [
+        {
+          "word": "йади",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "если",
+              "approved": true
+            }
+          },
+          "order": 1
+        },
+        {
+          "word": "ма̄м",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "меня",
+              "approved": true
+            }
+          },
+          "order": 2
+        },
+        {
+          "word": "а-пратӣ-ка̄рам",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "несопротивляющегося",
+              "approved": true
+            }
+          },
+          "order": 3
+        },
+        {
+          "word": "а-ш́астрам",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "безоружного",
+              "approved": true
+            }
+          },
+          "order": 4
+        },
+        {
+          "word": "ш́астра-па̄н̣айах̣",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "вооруженные",
+              "approved": true
+            }
+          },
+          "order": 5
+        },
+        {
+          "word": "дха̄ртара̄ш̣т̣ра̄х̣",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "сыновья Дхр̣тара̄ш̣т̣ры",
+              "approved": true
+            }
+          },
+          "order": 6
+        },
+        {
+          "word": "ран̣е",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "на этом поле боя",
+              "approved": true
+            }
+          },
+          "order": 7
+        },
+        {
+          "word": "ханйух̣",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "убьют",
+              "approved": true
+            }
+          },
+          "order": 8
+        },
+        {
+          "word": "тат",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "это",
+              "approved": true
+            }
+          },
+          "order": 9
+        },
+        {
+          "word": "ме",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "для меня",
+              "approved": true
+            }
+          },
+          "order": 10
+        },
+        {
+          "word": "кш̣ема-тарам",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "более благоприятным",
+              "approved": true
+            }
+          },
+          "order": 11
+        },
+        {
+          "word": "бхавет",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "будет",
+              "approved": true
+            }
+          },
+          "order": 12
+        }
+      ]
+    },
+    {
+      "number": "1.46",
+      "order": 37,
+      "sanskrit": "सञ्जय उवाच ।\nएवमुक्त्वार्जुनः संख्ये रथोपस्थ उपाविशत् ।\nविसृज्य सशरं चापं शोकसंविग्नमानसः  ॥४६॥",
+      "transliteration": "сан̃джайа ува̄ча\nэвам уктва̄рджунах̣ сан̇кхйе, ратхопастха упа̄виш́ат\nвиср̣джйа са-ш́арам̇ ча̄пам̇, ш́ока-сам̇вигна-ма̄насах̣",
+      "translations": {
+        "ru": {
+          "text": "Санджая сказал:\nПромолвив эти слова на поле сражения, Арджуна, отложив в сторону лук и стрелы, сел в колеснице, удрученный горем.",
+          "approved": true
+        },
+        "en": {
+          "text": "Sañjaya said: There, on the battlefield, speaking these words, Arjuna cast aside his bow and arrows and sat down on the chariot, his heart filled with sadness.",
+          "approved": true
+        },
+        "de": {
+          "text": "46  Sañjaya sagte: Nachdem Arjuna dort auf dem Schlachtfeld diese Worte gesprochen hatte, legte er seinen Bogen und Köcher beiseite und setzte sich, sein Herz erfüllt von Traurigkeit, im Wagen nieder.“\n\niti śrī-mahābhārate śata-sāhasryāṁ saṁhitāyāṁ vaiyāsikyāṁ\nbhīṣma-parvaṇi śrīmad-bhagavad-gītāsūpaniṣatsu\nbrahmavidyāyāṁ yoga-śāstre śrī-kṛṣṇārjuna-saṁvāde\nsainyadarśanaṁ nāma prathamo ’dhyāyaḥ [1]\n\nSomit endet das erste Kapitel\n\"Blick über die Armeen\"\nvon dem Gespräch\nzwischen Śrī Kṛṣṇa und Arjuna\nin der Śrīmad Bhagavad-Gītā Upaniṣad,\nder Yogaschrift von überweltlichem Wissen\nim Bhīṣma-Parva des Śrī Mahābhārata, der Heiligen Schrift,\ndie von Śrīla Vyāsadeva in einhunderttausend Versen offenbart wurde.",
+          "approved": true
+        },
+        "es": {
+          "text": "Sañjaya dijo: habiendo hablado estas palabras, en el campo de batalla, Arjuna tiró a un lado su arco y flechas y se sentó en la cuadriga, con su corazón preso de dolor.",
+          "approved": true
+        }
+      },
+      "audio": {
+        "recitation": "/Files/121f54282e474c208fc49dd091e237bc.MP3",
+        "sanskrit": "/Files/16b398b600054029873b35752d214735.mp3"
+      },
+      "vocabulary": [
+        {
+          "word": "сан̃джайа ува̄ча",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "Сан̃джайа сказал",
+              "approved": true
+            }
+          },
+          "order": 1
+        },
+        {
+          "word": "эвам",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "это",
+              "approved": true
+            }
+          },
+          "order": 2
+        },
+        {
+          "word": "уктва̄",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "произнеся",
+              "approved": true
+            }
+          },
+          "order": 3
+        },
+        {
+          "word": "арджунах̣",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "Арджуна",
+              "approved": true
+            }
+          },
+          "order": 4
+        },
+        {
+          "word": "сан̇кхйе",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "на поле боя",
+              "approved": true
+            }
+          },
+          "order": 5
+        },
+        {
+          "word": "ратха-упастхах̣",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "в колеснице",
+              "approved": true
+            }
+          },
+          "order": 6
+        },
+        {
+          "word": "упа̄-виш́ат",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "сел",
+              "approved": true
+            }
+          },
+          "order": 7
+        },
+        {
+          "word": "ви-ср̣джйа",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "отложив",
+              "approved": true
+            }
+          },
+          "order": 8
+        },
+        {
+          "word": "са-ш́арам",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "со стрелами",
+              "approved": true
+            }
+          },
+          "order": 9
+        },
+        {
+          "word": "ча̄пам",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "лук",
+              "approved": true
+            }
+          },
+          "order": 10
+        },
+        {
+          "word": "ш́ока-сам̇вигна",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "с охваченным скорбью",
+              "approved": true
+            }
+          },
+          "order": 11
+        },
+        {
+          "word": "ма̄насах̣",
+          "transliteration": "",
+          "meaning": {
+            "ru": {
+              "text": "сердцем",
+              "approved": true
+            }
+          },
+          "order": 12
+        }
+      ]
+    }
+  ]
+}
