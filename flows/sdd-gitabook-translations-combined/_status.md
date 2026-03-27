@@ -2,19 +2,19 @@
 
 ## Current Phase
 
-IMPLEMENTATION
+IMPLEMENTATION - Phase 5 (Pending)
 
 ## Phase Status
 
-COMPLETE - Ready for Phase 4: Validation & Cleanup
+Plan updated with Phase 5 - needs re-approval before execution
 
 ## Last Updated
 
-2026-03-27 by Qwen
+2026-03-27 by Claude
 
 ## Blockers
 
-- None
+- None (Plan v2.0 approved)
 
 ## Progress
 
@@ -24,24 +24,25 @@ COMPLETE - Ready for Phase 4: Validation & Cleanup
 - [x] Specifications drafted
 - [x] Specifications approved
 - [x] Plan drafted
-- [x] Plan approved
+- [x] Plan approved (v1.0)
 - [x] Phase 0: Backup & Preparation
 - [x] Phase 1: Restructure Folders
-- [x] Phase 2: Asian Translations COMPLETE ✓
-- [x] Phase 3: Other Translations COMPLETE ✓
-  - [x] Chapter 7: COMPLETE ✓
-  - [x] Chapter 8: COMPLETE ✓
-  - [x] Chapter 9: COMPLETE ✓
-  - [x] Chapter 10: COMPLETE ✓
-  - [x] Chapter 11: COMPLETE ✓
-  - [x] Chapter 12: COMPLETE ✓
-  - [x] Chapter 13: COMPLETE ✓
-  - [x] Chapter 14: COMPLETE ✓
-  - [x] Chapter 15: COMPLETE ✓
-  - [x] Chapter 16: COMPLETE ✓
-  - [x] Chapter 17: COMPLETE ✓
-  - [x] Chapter 18: COMPLETE ✓
+- [x] Phase 2: Asian Translations (ch-07 to ch-18) COMPLETE
+- [x] Phase 3: Other Translations (ch-07 to ch-18) COMPLETE
+- [ ] **Phase 5: Missing Ch 1-6 Translations** (NEW)
+  - [ ] Task 5.1: vocabulary-asian.json for ch-01 to ch-06
+  - [ ] Task 5.2: chapter-other.json for ch-01 to ch-06
+  - [ ] Task 5.3: vocabulary-other.json for ch-01 to ch-06
 - [ ] Phase 4: Validation & Cleanup
+
+## Data Gaps Identified (2026-03-27)
+
+| File Type | ch-01 - ch-06 | ch-07 - ch-18 |
+|-----------|---------------|---------------|
+| chapter-asian.json | 6 files | 12 files |
+| chapter-other.json | **MISSING** | 12 files |
+| vocabulary-asian.json | **MISSING** | 12 files |
+| vocabulary-other.json | **MISSING** | 12 files |
 
 ## Context Notes
 
@@ -64,27 +65,15 @@ COMPLETE - Ready for Phase 4: Validation & Cleanup
 /translate.sanscrit <input> <output> --languages=<langs>
 ```
 
-### New Folder Structure
-
-```
-data/chapters/
-├── ch-01/
-│   ├── chapter-source.json      # RU/EN/DE/ES slokas + comments
-│   ├── vocabulary-source.json   # RU/EN vocabulary
-│   ├── chapter-asian.json       # th, zh-TW, ja, ko
-│   ├── chapter-other.json       # he, ar, tr, sw
-│   ├── vocabulary-asian.json    # th, zh-TW, ja, ko
-│   └── vocabulary-other.json    # he, ar, tr, sw
-└── ...
-```
-
 ### Sequential Processing Rule
 
 **IMPORTANT**: Process translations SEQUENTIALLY only - one chapter at a time, wait for save before next. No parallelization.
 
 ## Next Actions
 
-1. ✓ Phase 0-1: Complete (backups + restructuring done)
-2. → Phase 2: Run /translate.sanscrit for Asian languages (ch-07 to ch-18)
-3. Phase 3: Run /translate.sanscrit for Other languages
-4. Phase 4: Validate and cleanup
+1. Get approval for Plan v2.0 with Phase 5
+2. Execute Phase 5:
+   - Task 5.1: 6 vocabulary-asian translations
+   - Task 5.2: 6 chapter-other translations
+   - Task 5.3: 6 vocabulary-other translations
+3. Phase 4: Validate and cleanup
