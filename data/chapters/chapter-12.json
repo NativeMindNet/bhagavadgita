@@ -18,6 +18,22 @@
     "es": {
       "text": "Bhakti-yoga. El sendero de la devoción",
       "approved": true
+    },
+    "ko": {
+      "text": "헌신의 길",
+      "approved": false
+    },
+    "th": {
+      "text": "เส้นทางแห่งความภักดี",
+      "approved": false
+    },
+    "zh-CN": {
+      "text": "奉献之道",
+      "approved": false
+    },
+    "zh-TW": {
+      "text": "奉獻之道",
+      "approved": false
     }
   },
   "meta": {

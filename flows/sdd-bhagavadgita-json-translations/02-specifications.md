@@ -407,12 +407,26 @@ def convert():
 2. Validate all 18 JSON files
 3. Commit to repository
 
-### Phase 2: Translation (per chapter)
-1. Load chapter JSON
-2. Generate translation prompts
-3. Execute translations in Claude dialog
-4. Update JSON with new translations (approved: false)
-5. Commit updated JSON
+### Phase 2: Translation (Automated)
+1. Command: `/translate.sanscrit [output_file]`
+2. Agent extracts chapter data (slokas + vocabulary)
+3. Agent translates to ko, th, zh-CN, zh-TW, ja
+4. Agent adds transliteration (th, zh, ko, ja scripts)
+5. Agent saves result immediately
+6. Continue to next chapter after successful save
+
+---
+
+## Automated Translation Command
+
+**Command**: `/translate.sanscrit [output_file_path]`
+
+See: `.qwen/commands/translate.sanscrit.md` for full documentation.
+
+**Sequential Execution**:
+- Chapter N+1 waits for Chapter N to complete
+- Results saved before next agent starts
+- No manual intervention required
 
 ---
 
@@ -420,4 +434,4 @@ def convert():
 
 - [x] Reviewed by: User
 - [x] Approved on: 2026-03-26
-- [x] Notes: Только книги SM/SCSM/ШМ/ШЧСМ (BookId: 1, 2, 11, 14)
+- [x] Notes: Только книги SM/SCSM/ШМ/ШЧСМ (BookId: 1, 2, 11, 14). Automated translation via /translate.sanscrit command.

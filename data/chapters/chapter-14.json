@@ -18,6 +18,22 @@
     "es": {
       "text": "Gunatraya-vibhaga-yoga. La Materia y sus tres estados",
       "approved": true
+    },
+    "ko": {
+      "text": "물질 자연의 세 가지 양태",
+      "approved": false
+    },
+    "th": {
+      "text": "สามคุณแห่งธรรมชาติวัตถุ",
+      "approved": false
+    },
+    "zh-CN": {
+      "text": "物质自然的三种属性",
+      "approved": false
+    },
+    "zh-TW": {
+      "text": "物質自然的三種屬性",
+      "approved": false
     }
   },
   "meta": {

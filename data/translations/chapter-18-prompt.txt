@@ -1,0 +1,151 @@
+═══════════════════════════════════════════════════════════════
+CHAPTER 18 TRANSLATION BATCH
+═══════════════════════════════════════════════════════════════
+
+TARGET LANGUAGES: Korean (ko), Thai (th), Chinese Simplified (zh-CN), 
+                  Chinese Traditional (zh-TW), Japanese (ja)
+
+═══════════════════════════════════════════════════════════════
+PART 1: CHAPTER TITLE
+═══════════════════════════════════════════════════════════════
+
+[RU] Йога освобождения
+[EN] The Path of Liberation
+[DE] ACHTZEHNTES KAPITEL Mokṣa-Yoga Der Pfad der Erlösung
+[ES] Moksha–yoga. La libertad Absoluta
+
+Translate title to: ko, th, zh-CN, zh-TW, ja
+
+═══════════════════════════════════════════════════════════════
+PART 2: SLOKAS (75 slokas)
+═══════════════════════════════════════════════════════════════
+
+For each sloka, translate the text to ko, th, zh-CN, zh-TW, ja.
+Use RU/EN as primary sources. DE/ES for additional context.
+
+
+---
+Sloka 18.1:
+[RU] Арджуна сказал: О сильнорукий герой, победитель демона Кеши! О Владыка чувств, я хочу понять, в чем различие между отречением (санньясой) и отрешенностью (тьягой).
+[EN] Arjuna said: O almighty Lord, slayer of the demon Keśi, I wish to understand the subject of renunciation (sannyās) and detachment (tyāga), separately.
+
+---
+Sloka 18.2:
+[RU] Всевышний ответил: По мнению мудрецов, отказ от материалистичной деятельности, основанной на удовлетворении вожделения, известен как отречение. Свободу же от привязанности к плодам любой деятельности 
+[EN] The Supreme Lord said: Learned, enlightened persons know the giving up of fruitive action as renunciation, and the giving up of the fruits of all action as detachment.
+
+---
+Sloka 18.3:
+[RU] Одни мыслители полагают, что следует отвергнуть любую деятельность, видя в ней источник греха, тогда как другие настаивают, что никогда не следует отказываться от совершения жертвоприношений, благотво
+[EN] Some philosophers hold that action should be renounced as imperfect. Others hold that action of the nature of sacrifice, charity, and austerity should never be given up.
+
+---
+Sloka 18.4:
+[RU] Лучший из Бхарат, выслушай же Мое суждение относительно отрешенности. О тигр среди людей! Писания провозглашают, что отрешенность бывает трех видов.
+[EN] O best of the Bhāratas, hear My perfect conclusion concerning detachment, the quality of renunciation, since, O best of men, it has been clearly established that the quality of renunciation is of thre
+
+---
+Sloka 18.5:
+[RU] Никогда не следует отказываться от обязанностей, связанных с жертвоприношениями, благотворительностью и подвижничеством. Необходимо выполнять их, поскольку они очищают даже мудрецов.
+[EN] Actions of the nature of sacrifice, charity, and austerity should never be abandoned. They must be performed for they are the purifiers of the wise.
+
+... (70 more slokas)
+
+═══════════════════════════════════════════════════════════════
+PART 3: VOCABULARY (840 words)
+═══════════════════════════════════════════════════════════════
+
+For each vocabulary word:
+1. Translate meaning to ko, th, zh-CN, zh-TW, ja
+2. Add transliteration in target scripts:
+   - Thai: Thai script transliteration
+   - Chinese: Pinyin
+   - Korean: Hangul transliteration
+   - Japanese: Romaji + Kana
+
+Sample vocabulary:
+
+Word: (he) bharata-sattama
+[RU] 
+[EN] O best of the Bhāratas
+
+Word: (he) bharatarṣabha
+[RU] 
+[EN] O best of the Bhāratas
+
+Word: (he) hṛṣīkeśa
+[RU] 
+[EN] O Lord of all senses
+
+Word: (he) kaunteya
+[RU] 
+[EN] O son of Kuntī
+
+Word: (he) keśinisūdana
+[RU] 
+[EN] O slayer of the Keśi demon
+
+Word: (he) parantapa
+[RU] 
+[EN] O vanquisher of the enemy
+
+Word: (he) puruṣa-vyāghra
+[RU] 
+[EN] O best of men
+
+Word: (he) pārtha
+[RU] 
+[EN] O son of Kuntī
+
+Word: (manuṣyādiṣu)
+[RU] 
+[EN] amongst the humans, etc
+
+Word: abhidhāsyati
+[RU] 
+[EN] sings the glories of
+
+... (830 more words)
+
+═══════════════════════════════════════════════════════════════
+OUTPUT FORMAT:
+
+Return JSON in this format:
+{
+  "chapterTitle": {
+    "ko": "...",
+    "th": "...",
+    "zh-CN": "...",
+    "zh-TW": "...",
+    "ja": "..."
+  },
+  "slokas": {
+    "1.1": {
+      "ko": "...",
+      "th": "...",
+      "zh-CN": "...",
+      "zh-TW": "...",
+      "ja": "..."
+    },
+    ...
+  },
+  "vocabulary": {
+    "1": {
+      "meaning": {
+        "ko": "...",
+        "th": "...",
+        "zh-CN": "...",
+        "zh-TW": "...",
+        "ja": "..."
+      },
+      "transliteration": {
+        "th": "...",
+        "zh-CN": "...",
+        "ko": "...",
+        "ja": "..."
+      }
+    },
+    ...
+  }
+}
+═══════════════════════════════════════════════════════════════

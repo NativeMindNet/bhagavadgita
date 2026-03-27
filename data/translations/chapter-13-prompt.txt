@@ -1,0 +1,151 @@
+═══════════════════════════════════════════════════════════════
+CHAPTER 13 TRANSLATION BATCH
+═══════════════════════════════════════════════════════════════
+
+TARGET LANGUAGES: Korean (ko), Thai (th), Chinese Simplified (zh-CN), 
+                  Chinese Traditional (zh-TW), Japanese (ja)
+
+═══════════════════════════════════════════════════════════════
+PART 1: CHAPTER TITLE
+═══════════════════════════════════════════════════════════════
+
+[RU] Подчиненное и господствующее начала
+[EN] Distinction Between Matter and Spirit
+[DE] DREIZEHNTES KAPITEL Prakṛti-Puruṣa-Viveka-Yoga Der Pfad des Unterscheidens zwischen Spirituellem und Materiellem
+[ES] Pakriti–purusha–viveka–yoga. La Conciencia y la Materia: El Predominante y el Predominado
+
+Translate title to: ko, th, zh-CN, zh-TW, ja
+
+═══════════════════════════════════════════════════════════════
+PART 2: SLOKAS (31 slokas)
+═══════════════════════════════════════════════════════════════
+
+For each sloka, translate the text to ko, th, zh-CN, zh-TW, ja.
+Use RU/EN as primary sources. DE/ES for additional context.
+
+
+---
+Sloka 13.1:
+[RU] Арджуна сказал: О Кешава! Я желаю знать о материальной энергии и о Том, Кто повелевает ей. Хочу постичь поле деятельности и знающего это поле, услышать от Тебя о подлинном знании и объекте познания.
+[EN] Arjuna said: O Keśava, I would like to know about material nature, the person, the field, the knower of the field, knowledge, and the object of knowledge.
+
+---
+Sloka 13.2:
+[RU] Всевышний сказал: Арджуна, это тело известно как поле деятельности. Душу, пребывающую в нем, мудрецы описывают как сознающего это поле.
+[EN] The Supreme Lord said: O Arjuna, this body is known as the field. One who knows this field is described by the learned as the knower of the field.
+
+---
+Sloka 13.3:
+[RU] Бхарата! Я Тот, Кто осознает все поля деятельности, пребывая в каждом из них. Знание о поле деятельности и знающем его Я провозглашаю подлинным знанием.
+[EN] O Bhārat, you should also know Me as the knower of all fields. This knowledge, of the field and of the knower of the field, is true knowledge, in My opinion.
+
+---
+Sloka 13.4:
+[RU] Сейчас Я кратко объясню тебе, что представляет собой это поле. Я расскажу о причинах его возникновения и происходящих с ним изменениях, а также о том, кто есть сознающий поле и каково его влияние.
+[EN] Now hear from Me briefly what this field is, its constitution, transformations, causes and effects; and who the knower of the field is, and of his potency.
+
+---
+Sloka 13.5:
+[RU] Это знание уже многократно было раскрыто мудрецами разными способами в различных ведических писаниях, а наиболее последовательно, с разъяснением причин и следствий, — в изречениях «Веданта-сутры».
+[EN] This has been taught in many ways by various sages, the different Vedas, and the aphorisms of thewith its conclusive logic.
+
+... (26 more slokas)
+
+═══════════════════════════════════════════════════════════════
+PART 3: VOCABULARY (411 words)
+═══════════════════════════════════════════════════════════════
+
+For each vocabulary word:
+1. Translate meaning to ko, th, zh-CN, zh-TW, ja
+2. Add transliteration in target scripts:
+   - Thai: Thai script transliteration
+   - Chinese: Pinyin
+   - Korean: Hangul transliteration
+   - Japanese: Romaji + Kana
+
+Sample vocabulary:
+
+Word: (bhūtānām) vistāram
+[RU] 
+[EN] the projection of all beings
+
+Word: (he) bharatarṣabha
+[RU] 
+[EN] O best of the Bharat dynasty
+
+Word: (he) bhārata
+[RU] 
+[EN] O descendant of the Bharat dynasty
+
+Word: (he) kaunteya
+[RU] 
+[EN] O son of Kuntī
+
+Word: (tat)
+[RU] 
+[EN] That knowledge of kṣetra and kṣetrajña
+
+Word: (ṛṣibhiḥ)
+[RU] 
+[EN] by the sages
+
+Word: akṣi-śiraḥ-mukham
+[RU] 
+[EN] eyes, heads, and mouths
+
+Word: amānitvam
+[RU] 
+[EN] the quality of desirelessness for honour
+
+Word: amṛtam
+[RU] 
+[EN] the nectar of life
+
+Word: anabhiṣu-aṅgaḥ
+[RU] 
+[EN] not to dote on
+
+... (401 more words)
+
+═══════════════════════════════════════════════════════════════
+OUTPUT FORMAT:
+
+Return JSON in this format:
+{
+  "chapterTitle": {
+    "ko": "...",
+    "th": "...",
+    "zh-CN": "...",
+    "zh-TW": "...",
+    "ja": "..."
+  },
+  "slokas": {
+    "1.1": {
+      "ko": "...",
+      "th": "...",
+      "zh-CN": "...",
+      "zh-TW": "...",
+      "ja": "..."
+    },
+    ...
+  },
+  "vocabulary": {
+    "1": {
+      "meaning": {
+        "ko": "...",
+        "th": "...",
+        "zh-CN": "...",
+        "zh-TW": "...",
+        "ja": "..."
+      },
+      "transliteration": {
+        "th": "...",
+        "zh-CN": "...",
+        "ko": "...",
+        "ja": "..."
+      }
+    },
+    ...
+  }
+}
+═══════════════════════════════════════════════════════════════

@@ -18,6 +18,22 @@
     "es": {
       "text": "Purushottama–yoga. La Suprema Persona",
       "approved": true
+    },
+    "ko": {
+      "text": "지고의 인격신",
+      "approved": false
+    },
+    "th": {
+      "text": "บุคคลสูงสุด",
+      "approved": false
+    },
+    "zh-CN": {
+      "text": "至尊人格",
+      "approved": false
+    },
+    "zh-TW": {
+      "text": "至尊人格",
+      "approved": false
     }
   },
   "meta": {

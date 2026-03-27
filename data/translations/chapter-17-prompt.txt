@@ -1,0 +1,151 @@
+═══════════════════════════════════════════════════════════════
+CHAPTER 17 TRANSLATION BATCH
+═══════════════════════════════════════════════════════════════
+
+TARGET LANGUAGES: Korean (ko), Thai (th), Chinese Simplified (zh-CN), 
+                  Chinese Traditional (zh-TW), Japanese (ja)
+
+═══════════════════════════════════════════════════════════════
+PART 1: CHAPTER TITLE
+═══════════════════════════════════════════════════════════════
+
+[RU] Три вида веры
+[EN] The Three Types of Faith
+[DE] SIEBZEHNTES KAPITEL Śraddhātraya-Vibhāga-Yoga Die drei Arten von Glauben
+[ES] Shraddhatraya–vibhaga–yoga. Los tres tipos de Fé
+
+Translate title to: ko, th, zh-CN, zh-TW, ja
+
+═══════════════════════════════════════════════════════════════
+PART 2: SLOKAS (27 slokas)
+═══════════════════════════════════════════════════════════════
+
+For each sloka, translate the text to ko, th, zh-CN, zh-TW, ja.
+Use RU/EN as primary sources. DE/ES for additional context.
+
+
+---
+Sloka 17.1:
+[RU] Арджуна спросил: О Кришна! Каково положение тех, кто поклоняется с верой, но пренебрегает наставлениями писаний? Пребывают ли они в благости, в страсти или в невежестве?
+[EN] Arjuna inquired: O Kṛṣṇa, what is the position of those who worship with faith, but ignore the injunctions of the scriptures? Is their faith in the mode of goodness, passion, or ignorance?
+
+---
+Sloka 17.2:
+[RU] Всевышний ответил: Вера может быть трех видов в зависимости от склонностей воплощенной в теле души — благостной, страстной или невежественной. Услышь же об этом!
+[EN] The Supreme Lord said: Faith is of three types, born of the embodied soul’s acquired nature, whether good, passionate, or ignorant. Now hear of this:
+
+---
+Sloka 17.3:
+[RU] Бхарата! Глубина постижения истины человеком определяет его тип веры. Вера — основа бытия каждого, какова вера — таков и человек.
+[EN] O Bhārata, the faith of all living beings is governed by their consciousness. The living being possesses faith by constitution. He is that which his faith is.
+
+---
+Sloka 17.4:
+[RU] Люди благостной природы поклоняются богам. Пребывающие в страсти служат нечисти и демонам. Те же, чья вера невежественна, почитают духов и привидений.
+[EN] Persons with faith of the nature of goodness worship the demigods, persons with faith of a passionate nature worship the Yakṣa demigods and Rākṣasa demons, while those with faith of the nature of igno
+
+---
+Sloka 17.5-6:
+[RU] Кто совершает суровые аскезы, не упомянутые в писаниях; кто творит это, побуждаемый гордостью и эгоизмом, ведомый вожделением, мирскими привязанностями и жаждой власти; кто, не обладая разумом, истяза
+[EN] 
+
+... (22 more slokas)
+
+═══════════════════════════════════════════════════════════════
+PART 3: VOCABULARY (335 words)
+═══════════════════════════════════════════════════════════════
+
+For each vocabulary word:
+1. Translate meaning to ko, th, zh-CN, zh-TW, ja
+2. Add transliteration in target scripts:
+   - Thai: Thai script transliteration
+   - Chinese: Pinyin
+   - Korean: Hangul transliteration
+   - Japanese: Romaji + Kana
+
+Sample vocabulary:
+
+Word: (guṇa bhedāt)
+[RU] 
+[EN] According to the three modes of material nature
+
+Word: (he) bhārata
+[RU] 
+[EN] O descendant of Bharata
+
+Word: (he) pārtha
+[RU] 
+[EN] O son of Kuntī
+
+Word: (karśayantaḥ) mām cha eva
+[RU] 
+[EN] and also torment Me, in the form of My particle, the spirit soul, the jīvātman
+
+Word: adakṣiṇam
+[RU] 
+[EN] without appropriate offerings to the priests
+
+Word: adeśa-kāle
+[RU] 
+[EN] at an improper place and time
+
+Word: amedhyam cha
+[RU] 
+[EN] and impure foods unofferable in sacrifice (meat, wine, and onions, etc.)
+
+Word: antaḥ śarīra-stham
+[RU] 
+[EN] in the body
+
+Word: anupakāriṇe iti
+[RU] 
+[EN] without expectation of return
+
+Word: aphala-ākāṅkṣibhiḥ
+[RU] 
+[EN] by one who does not hanker for its fruit
+
+... (325 more words)
+
+═══════════════════════════════════════════════════════════════
+OUTPUT FORMAT:
+
+Return JSON in this format:
+{
+  "chapterTitle": {
+    "ko": "...",
+    "th": "...",
+    "zh-CN": "...",
+    "zh-TW": "...",
+    "ja": "..."
+  },
+  "slokas": {
+    "1.1": {
+      "ko": "...",
+      "th": "...",
+      "zh-CN": "...",
+      "zh-TW": "...",
+      "ja": "..."
+    },
+    ...
+  },
+  "vocabulary": {
+    "1": {
+      "meaning": {
+        "ko": "...",
+        "th": "...",
+        "zh-CN": "...",
+        "zh-TW": "...",
+        "ja": "..."
+      },
+      "transliteration": {
+        "th": "...",
+        "zh-CN": "...",
+        "ko": "...",
+        "ja": "..."
+      }
+    },
+    ...
+  }
+}
+═══════════════════════════════════════════════════════════════

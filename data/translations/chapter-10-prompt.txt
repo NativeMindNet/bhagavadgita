@@ -1,0 +1,151 @@
+═══════════════════════════════════════════════════════════════
+CHAPTER 10 TRANSLATION BATCH
+═══════════════════════════════════════════════════════════════
+
+TARGET LANGUAGES: Korean (ko), Thai (th), Chinese Simplified (zh-CN), 
+                  Chinese Traditional (zh-TW), Japanese (ja)
+
+═══════════════════════════════════════════════════════════════
+PART 1: CHAPTER TITLE
+═══════════════════════════════════════════════════════════════
+
+[RU] Величие и красота Господа
+[EN] The Divine Glories of the Lord
+[DE] ZEHNTES KAPITEL Vibhūti-Yoga Die göttliche Glorie des Herrn
+[ES] Vibhuti–yoga. El gran tesoro
+
+Translate title to: ko, th, zh-CN, zh-TW, ja
+
+═══════════════════════════════════════════════════════════════
+PART 2: SLOKAS (40 slokas)
+═══════════════════════════════════════════════════════════════
+
+For each sloka, translate the text to ko, th, zh-CN, zh-TW, ja.
+Use RU/EN as primary sources. DE/ES for additional context.
+
+
+---
+Sloka 10.1:
+[RU] Всевышний сказал: Сильнорукий Арджуна! Слушай же далее сокровенные истины обо Мне. Я раскрываю их, потому что ты очень дорог Мне, и Я желаю тебе блага.
+[EN] The Supreme Lord said: O heroic Arjuna, listen to My supreme word once again. Desiring your welfare, I shall speak to you, who are very dear to Me.
+
+---
+Sloka 10.2:
+[RU] Ни сонмы богов, ни великие мудрецы не в силах постичь тайну Моего происхождения и деяний, поскольку Я — источник всех богов и мудрецов.
+[EN] Neither the demigods nor the great sages can understand My transcendental appearance in this world, as I alone am the origin of those celestial beings and sages.
+
+---
+Sloka 10.3:
+[RU] Кто знает Меня как нерожденного, изначального Владыку всех миров, тот не подвержен иллюзии, подобно простым смертным, и свободен от всех грехов.
+[EN] One who knows Me, the son of Devakī, as the birthless, beginningless, Supreme Lord of all beings, is undeluded among men and completely liberated from sin.
+
+---
+Sloka 10.4-5:
+[RU] Проницательность, способность к духовному самоосознанию, свобода от иллюзии, самообладание, правдивость, контроль чувств и мыслей, счастье и горе, рождение и смерть, страх и бесстрашие, ненасилие, нев
+[EN] 
+
+---
+Sloka 10.6:
+[RU] Из Своего ума Я сотворил Господа Брахму (творца вселенной) со всей вселенской иерархией, включая четырнадцать Ману (прародителей человечества), четырех вечно юных мудрецов-брахманов Кумаров, а также с
+[EN] The seven great sages headed by Marīchi, and preceding them, the four brāhmaṇ sages headed by Sanaka, and also the fourteen Manus or progenitors headed by Svayambhuva—all are empowered by Me and are b
+
+... (35 more slokas)
+
+═══════════════════════════════════════════════════════════════
+PART 3: VOCABULARY (454 words)
+═══════════════════════════════════════════════════════════════
+
+For each vocabulary word:
+1. Translate meaning to ko, th, zh-CN, zh-TW, ja
+2. Add transliteration in target scripts:
+   - Thai: Thai script transliteration
+   - Chinese: Pinyin
+   - Korean: Hangul transliteration
+   - Japanese: Romaji + Kana
+
+Sample vocabulary:
+
+Word: (he) bhūta-īśa
+[RU] 
+[EN] O Lord of all beings
+
+Word: (he) deva-deva
+[RU] 
+[EN] O God of the gods
+
+Word: (he) jagat-pate
+[RU] 
+[EN] O Jagannāth, Lord of the universe
+
+Word: (he) parantapa
+[RU] 
+[EN] O chastiser of the enemy
+
+Word: (he) yogin
+[RU] 
+[EN] O Lord of yogamāyā, Lord of divine potency
+
+Word: (sraṣṭṛām cha)
+[RU] 
+[EN] and of creators
+
+Word: aham asmi viṣṇuḥ
+[RU] 
+[EN] I am the Āditya known as Viṣṇu
+
+Word: aham eva akṣayaḥ kālaḥ
+[RU] 
+[EN] I alone am the eternal time flow
+
+Word: aham eva ādiḥ
+[RU] 
+[EN] I am the beginning
+
+Word: aham gāyatrī
+[RU] 
+[EN] I am the gāyatrī mantra
+
+... (444 more words)
+
+═══════════════════════════════════════════════════════════════
+OUTPUT FORMAT:
+
+Return JSON in this format:
+{
+  "chapterTitle": {
+    "ko": "...",
+    "th": "...",
+    "zh-CN": "...",
+    "zh-TW": "...",
+    "ja": "..."
+  },
+  "slokas": {
+    "1.1": {
+      "ko": "...",
+      "th": "...",
+      "zh-CN": "...",
+      "zh-TW": "...",
+      "ja": "..."
+    },
+    ...
+  },
+  "vocabulary": {
+    "1": {
+      "meaning": {
+        "ko": "...",
+        "th": "...",
+        "zh-CN": "...",
+        "zh-TW": "...",
+        "ja": "..."
+      },
+      "transliteration": {
+        "th": "...",
+        "zh-CN": "...",
+        "ko": "...",
+        "ja": "..."
+      }
+    },
+    ...
+  }
+}
+═══════════════════════════════════════════════════════════════
