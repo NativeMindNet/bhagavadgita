@@ -2,7 +2,9 @@
 
 ## Overview
 
-This specification defines the technical design for generating Bhagavat-gita books in Chinese, Thai, and Hebrew from existing JSON source data.
+This specification defines the technical design for generating Bhagavat-gita books in Traditional Chinese (zh-TW) and Thai from existing JSON source data.
+
+> **Note**: Hebrew generation is deferred until Phase 3 of `sdd-gitabook-translations-combined` is complete.
 
 ## Data Sources
 
@@ -10,45 +12,53 @@ This specification defines the technical design for generating Bhagavat-gita boo
 
 | Source | Path Pattern | Content |
 |--------|--------------|---------|
-| Original Chapters | `/data/chapters/original/chapter-{01-18}.json` | Sanskrit slokas, transliteration, translations (ru, en, de, es, ko, th, zh-CN, zh-TW) |
-| Asian Translations | `/data/chapters/asian/chapter-{01-18}-asian-translations.json` | Consolidated Asian translations (ko, th, zh-CN, zh-TW) |
+| Chapter Source | `/data/chapters/ch-{01-18}/chapter-source.json` | Sanskrit slokas, transliteration, translations (ru, en, de, es) |
+| Asian Translations | `/data/chapters/ch-{01-18}/chapter-asian.json` | Asian translations (th, zh-TW, ko, ja) |
 | Vocabulary | `/data/chapters/ch-{01-18}/vocabulary-source.json` | Word-by-word meanings (en approved, others pending) |
-| Chapter Meta | `/data/chapters/ch-{01-18}/chapter-source.json` | Chapter titles, metadata, sloka details |
 
 ### Data Structure
 
-**Chapter JSON** (`original/chapter-XX.json`):
+**Chapter Asian JSON** (`ch-XX/chapter-asian.json`):
 ```json
 {
   "chapter": 1,
   "title": {
-    "sanskrit": "",
-    "transliteration": "",
-    "ru": {"text": "...", "approved": true},
-    "en": {"text": "...", "approved": true},
-    "zh-CN": {"text": "...", "approved": false},
-    "th": {"text": "...", "approved": false}
+    "th": "การสังเกตกองทัพ",
+    "zh-TW": "觀軍",
+    "ko": "군대 관망",
+    "ja": "..."
   },
-  "meta": {
-    "totalSlokas": 37,
-    "version": "1.1"
-  },
-  "slokas": [...]
+  "slokas": {
+    "1.1": {
+      "th": {"text": "...", "approved": false},
+      "zh-TW": {"text": "...", "approved": false}
+    }
+  }
 }
 ```
 
-**Sloka Structure**:
+**Chapter Source JSON** (`ch-XX/chapter-source.json`):
 ```json
 {
-  "number": "1.1",
-  "order": 1,
-  "sanskrit": "धृतराष्ट्र उवाच ।...",
-  "transliteration": "дхр̣тара̄ш̣т̣ра ува̄ча...",
-  "translations": {
-    "zh-CN": {"text": "...", "approved": false},
-    "th": {"text": "...", "approved": false}
+  "chapter": 1,
+  "title": {
+    "sanskrit": "...",
+    "transliteration": "...",
+    "ru": {"text": "...", "approved": true},
+    "en": {"text": "...", "approved": true}
   },
-  "vocabulary": [...]
+  "slokas": [
+    {
+      "number": "1.1",
+      "sanskrit": "धृतराष्ट्र उवाच...",
+      "transliteration": "...",
+      "translations": {
+        "ru": {"text": "...", "approved": true},
+        "en": {"text": "...", "approved": true}
+      },
+      "vocabulary": [...]
+    }
+  ]
 }
 ```
 
@@ -57,106 +67,94 @@ This specification defines the technical design for generating Bhagavat-gita boo
 ### Directory Structure
 
 ```
-/data/chapters/generated/
-├── chinese/
-│   ├── README.md           # Book cover & table of contents
-│   ├── chapter-01.md       # Chapter 1: 观军
+/generated/
+├── th/
+│   ├── README.md           # ภควัทคีตา - สารบัญ
+│   ├── chapter-01.md       # บทที่ 1: การสังเกตกองทัพ
 │   ├── chapter-02.md
 │   │   ...
 │   ├── chapter-18.md
-│   ├── glossary.md         # 词汇表
-│   └── comments.md         # 注释 - 待翻译内容
-├── thai/
-│   ├── README.md
-│   ├── chapter-01.md       # บทที่ 1: การสังเกตกองทัพ
-│   │   ...
 │   ├── glossary.md         # ศัพท์บัญญัติ
-│   └── comments.md         # หมายเหตุ - เนื้อหาที่รอการแปล
-└── hebrew/
-    ├── README.md           # ספר ברהמא וידה
-    ├── chapter-01.md       # פרק 1: ⚠️ awaiting translation
+│   └── comments.md         # หมายเหตุ
+└── zh-TW/
+    ├── README.md           # 《博伽梵歌》- 目錄
+    ├── chapter-01.md       # 第一章：觀軍
+    ├── chapter-02.md
     │   ...
-    ├── glossary.md         # ⚠️ awaiting translation
-    └── comments.md         # הערות - תרגום חסר
+    ├── chapter-18.md
+    ├── glossary.md         # 詞彙表
+    └── comments.md         # 註釋
 ```
 
 ### Markdown Template
 
 **Chapter File Template**:
 ```markdown
-# Глава {N}: {Title in Target Language}
+# {Chapter Title in Target Language}
 
-{Meta: total slokas, version}
+> {Total slokas} verses
 
 ---
 
-## Стих {sloka-number}
+## {Sloka Number}
 
-### Санскрит
-```sanskrit
+### Sanskrit
 {sanskrit text}
-```
 
-### Перевод
+### Transliteration
+{transliteration}
+
+### Translation
 > {translation text}
-> 
-> ⚠️ **Ожидает перевода** (if not available)
 
-### Комментарий
-{commentary if available}
-
-### Словарь
-| Слово | Транслитерация | Значение |
-|-------|---------------|----------|
+### Vocabulary
+| Word | Transliteration | Meaning |
+|------|-----------------|---------|
 | ... | ... | ... |
 
 ---
 ```
 
-**Glossary Template**:
+**README Template**:
 ```markdown
-# Словарь / Glossary
+# {Book Title}
 
-## A
-| Term | Transliteration | Meaning (RU) | Meaning (EN) | Meaning (TARGET) |
-|------|-----------------|--------------|--------------|------------------|
-| ... | ... | ... | ... | ... |
+## Table of Contents
 
-### Notes
-- ⚠️ Marked entries await translation
+1. [{Chapter 1 Title}](chapter-01.md)
+2. [{Chapter 2 Title}](chapter-02.md)
+...
+18. [{Chapter 18 Title}](chapter-18.md)
+
+- [Glossary](glossary.md)
+- [Notes](comments.md)
 ```
 
 ## Language-Specific Details
 
-### Chinese (zh-CN)
-- **Title**: 《博伽梵歌》
-- **Chapter format**: 第 X 章：{title}
-- **Glossary**: 词汇表
-- **Comments**: 注释
-- **Font direction**: LTR
-
 ### Thai (th)
 - **Title**: ภควัทคีตา
-- **Chapter format**: บทที่ X: {title}
+- **Chapter format**: บทที่ {N}: {title}
+- **Verse format**: โศลก {number}
 - **Glossary**: ศัพท์บัญญัติ
 - **Comments**: หมายเหตุ
 - **Font direction**: LTR
 
-### Hebrew (he)
-- **Title**: בהגavad גיטה
-- **Chapter format**: פרק X: {title}
-- **Glossary**: אוצר מילים
-- **Comments**: הערות
-- **Font direction**: **RTL** (requires `<div dir="rtl">` or Markdown RTL support)
-- **Status**: ⚠️ **All content awaits translation**
+### Traditional Chinese (zh-TW)
+- **Title**: 《博伽梵歌》
+- **Chapter format**: 第{N}章：{title}
+- **Verse format**: 詩節 {number}
+- **Glossary**: 詞彙表
+- **Comments**: 註釋
+- **Font direction**: LTR
 
 ## Translation Status Matrix
 
-| Language | Chapter Titles | Slokas | Vocabulary | Status |
-|----------|---------------|--------|------------|--------|
-| zh-CN | ✅ Available | ✅ Available | ⚠️ Partial | Ready |
-| th | ✅ Available | ✅ Available | ⚠️ Partial | Ready |
-| he | ❌ Missing | ❌ Missing | ❌ Missing | Awaiting |
+| Language | Chapter Titles | Slokas | Status |
+|----------|---------------|--------|--------|
+| th | ✅ All 18 | ✅ All 18 | **Ready** |
+| zh-TW | ✅ All 18 | ✅ All 18 | **Ready** |
+| he | ❌ Missing | ❌ Missing | Deferred |
 
 ## Processing Rules
 
@@ -168,38 +166,26 @@ This specification defines the technical design for generating Bhagavat-gita boo
 ### Rule 2: Untranslated Content
 For any missing translation:
 ```markdown
-> ⚠️ **Ожидает перевода** / Await translation
-> 
+> ⚠️ **Awaiting translation**
+>
 > **English reference**: {english text}
 ```
 
-### Rule 3: Hebrew Special Handling
-Since Hebrew has no source data:
-- Generate complete structure
-- Include English reference for all content
-- Add prominent notice on each page
-- Create comprehensive "awaiting translation" list
-
-### Rule 4: Vocabulary Aggregation
-- Collect all unique vocabulary words across all chapters
-- Include Sanskrit original
-- Include transliteration
-- Include all available translations
-- Mark missing translations
+### Rule 3: Vocabulary
+- Include vocabulary table for each sloka
+- Use English meaning as fallback if target language unavailable
 
 ## Quality Checks
 
-- [ ] All 18 chapters present for each language
+- [x] All 18 chapters present for Thai
+- [x] All 18 chapters present for zh-TW
 - [ ] Chapter titles match source data
 - [ ] Sloka numbers sequential and complete
 - [ ] Sanskrit text preserved without modification
-- [ ] Untranslated content clearly marked
 - [ ] Glossary alphabetically organized
-- [ ] Comments section lists all missing translations
-- [ ] Hebrew files include RTL direction markers
 
 ---
 
-**Status**: Draft  
-**Created**: 2026-03-27  
-**Based on**: REQ-01
+**Status**: Approved
+**Updated**: 2026-03-27
+**Changes**: zh-CN → zh-TW, Hebrew deferred

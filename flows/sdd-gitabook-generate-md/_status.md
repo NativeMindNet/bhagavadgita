@@ -1,73 +1,66 @@
 # Flow Status: gitabook-generate-md
 
 ## Current Phase
-**COMPLETE** - All books generated
+**COMPLETE** - Books generated for Thai and Traditional Chinese
 
 ## Progress
 
 ### Documentation
 - [x] Requirements (01_req.md)
-- [x] Specification (02_spec.md)
+- [x] Specification (02_spec.md) - Updated: zh-CN → zh-TW
 - [x] Plan (03_plan.md)
 - [x] Implementation complete
 
 ### Implementation Tasks
+- [x] Unify chapter-asian.json format for chapters 1-6
 - [x] Create Python generation script
-- [x] Generate Chinese version (zhcn/)
 - [x] Generate Thai version (th/)
-- [x] Generate Hebrew version (he/)
+- [x] Generate Traditional Chinese version (zh-TW/)
 - [x] Verify output
 
 ## Results
 
 ### Generated Files
 
-| Language | Directory | Chapters | Glossary | Comments |
-|----------|-----------|----------|----------|----------|
-| Chinese (zh-CN) | `generated/zhcn/` | 18 | ✓ | ✓ |
-| Thai (th) | `generated/th/` | 18 | ✓ | ✓ |
-| Hebrew (he) | `generated/he/` | 18 | ✓ | ✓ |
+| Language | Directory | Chapters | Files |
+|----------|-----------|----------|-------|
+| Thai (th) | `generated/th/` | 18 | 21 (README + 18 chapters + glossary + comments) |
+| Traditional Chinese (zh-TW) | `generated/zh-TW/` | 18 | 21 |
 
-**Total:** 63 files (3 READMEs + 54 chapters + 3 glossaries + 3 comments)
+**Total:** 42 files
 
 ### Statistics
-- **Chapters processed:** 54
-- **Slokas processed:** 1989
-- **Missing translations noted:** 1457
-- **Vocabulary words:** 8367 (awaiting translation for most)
+- **Chapters processed:** 36 (18 x 2 languages)
+- **Total slokas:** 663 per language (1326 total)
 
-### Translation Status
+### What's Included
+- Sanskrit text
+- Transliteration (Cyrillic)
+- Translation in target language
+- Vocabulary table (Russian meanings as fallback)
 
-| Language | Status |
-|----------|--------|
-| Chinese | ✅ Available (unapproved) |
-| Thai | ✅ Available (unapproved) |
-| Hebrew | ⚠️ Awaiting translation (structure complete) |
+### What's Deferred
+- Hebrew (he) - awaiting Phase 3 of `sdd-gitabook-translations-combined`
+- Glossary content (placeholder)
+- Comments content (placeholder)
+
+## Scripts Created
+
+| Script | Purpose |
+|--------|---------|
+| `scripts/unify_asian_format.py` | Convert chapters 1-6 to unified format |
+| `scripts/generate_books.py` | Generate Markdown books |
 
 ## Notes
 
-### Data Availability
-- **Chinese (zh-CN)**: ✅ Available in source JSON files (marked as unapproved but complete)
-- **Thai (th)**: ✅ Available in source JSON files (marked as unapproved but complete)
-- **Hebrew (he)**: ❌ Not available - will generate structure with English references and "awaiting translation" markers
+### Data Unification
+Chapters 1-6 were converted from old format (`asian/chapter-XX-asian-translations.json`) to new format (`ch-XX/chapter-asian.json`).
 
-### Source Files
-- Original chapters: `/data/chapters/original/chapter-{01-18}.json`
-- Asian translations: `/data/chapters/asian/chapter-{01-06}-asian-translations.json` (partial, chapters 1-6 only)
-- Vocabulary: `/data/chapters/ch-{01-18}/vocabulary-source.json`
-
-### Key Decisions
-1. Use `original/chapter-XX.json` as primary source (has all 18 chapters)
-2. Supplement with `asian/asian-translations.json` where available
-3. For Hebrew: generate complete structure with English + Russian references
-4. Mark all non-approved translations with note
-
-## Next Steps
-1. User approval of requirements, spec, and plan
-2. Implement Python script
-3. Run generation
-4. Verify output
+### Specification Changes
+- Changed target from zh-CN to zh-TW (100% data available)
+- Deferred Hebrew until translation data is available
 
 ---
 **Created**: 2026-03-27
 **Last Updated**: 2026-03-27
+**Completed By**: Claude
