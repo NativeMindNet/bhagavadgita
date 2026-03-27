@@ -1,7 +1,7 @@
 # Implementation Plan: Gitabook Translations Combined
 
 > Version: 1.0
-> Status: DRAFT
+> Status: APPROVED
 > Last Updated: 2026-03-27
 > Specifications: [02-specifications.md](02-specifications.md)
 
@@ -9,17 +9,19 @@
 
 План реализации объединённого перевода глав и vocabulary на расширенный список языков.
 
+**Порядок перевода**: с последних глав к первым (ch-18 → ch-01)
+
 ## Phase Summary
 
 | Phase | Description | Tasks | Status |
 |-------|-------------|-------|--------|
 | 0 | Backup & Preparation | 2 | Pending |
 | 1 | Restructure Folders | 4 | Pending |
-| 2 | Asian Translations | 2 | Pending |
-| 3 | Other Translations | 2 | Pending |
+| 2 | Asian Translations (chapters + vocabulary) | 2 | Pending |
+| 3 | Other Translations (chapters + vocabulary) | 1 | Pending |
 | 4 | Validation & Cleanup | 3 | Pending |
 
-**Total Tasks**: 13
+**Total Tasks**: 12
 
 ## Phase 0: Backup & Preparation
 
@@ -70,11 +72,11 @@ done
 
 ```bash
 for i in $(seq -w 1 18); do
-  cp data/chapters/original/chapter-$i.json data/chapters/ch-$i/source.json
+  cp data/chapters/original/chapter-$i.json data/chapters/ch-$i/chapter-source.json
 done
 ```
 
-**Output**: 18 source.json files
+**Output**: 18 chapter-source.json files
 
 ---
 
@@ -84,22 +86,22 @@ done
 
 ```bash
 for i in $(seq -w 1 18); do
-  cp data/vocabulary/original/vocab_$i.json data/chapters/ch-$i/vocabulary.json
+  cp data/vocabulary/original/vocab_$i.json data/chapters/ch-$i/vocabulary-source.json
 done
 ```
 
-**Output**: 18 vocabulary.json files
+**Output**: 18 vocabulary-source.json files
 
 ---
 
 ### Task 1.4: Extract Existing Asian Translations (Ch 1-6)
 
-**Action**: For chapters 1-6, extract existing ko, th, zh-CN, zh-TW translations
+**Action**: For chapters 1-6, extract existing ko, th, zh-TW translations
 
 **Process**:
 1. Read current chapter-XX.json files
 2. Extract Asian language translations (if present)
-3. Create `translations-asian.json` for each chapter
+3. Create `chapter-asian.json` for each chapter
 
 **Note**: Chapters 1-6 already have some Asian translations from previous work
 
@@ -107,69 +109,61 @@ done
 
 ## Phase 2: Asian Translations
 
-### Task 2.1: Translate Chapters 7-18 (Asian)
+### Task 2.1: Translate Chapters + Vocabulary (Asian)
 
-**Action**: Use `/translate.sanscrit` for chapters 7-18
+**Action**: Use `/translate.sanscrit` for all 18 chapters
 
 **Target languages**: th, zh-TW, ja, ko
 
 **Process**:
 ```bash
-# For each chapter 7-18
-/translate.sanscrit data/chapters/ch-07 --target asian
-/translate.sanscrit data/chapters/ch-08 --target asian
-...
-/translate.sanscrit data/chapters/ch-18 --target asian
+# For each chapter 01-18
+for i in $(seq -w 1 18); do
+  # Translate chapter (slokas + comments)
+  /translate.sanscrit data/chapters/ch-$i/chapter-source.json \
+    data/chapters/ch-$i/chapter-asian.json --languages=th,zh-TW,ja,ko
+
+  # Translate vocabulary (meanings + transliterations)
+  /translate.sanscrit data/chapters/ch-$i/vocabulary-source.json \
+    data/chapters/ch-$i/vocabulary-asian.json --languages=th,zh-TW,ja,ko
+done
 ```
 
-**Output**: translations-asian.json for ch-07 through ch-18
+**Output**:
+- 18 x chapter-asian.json
+- 18 x vocabulary-asian.json
 
 ---
 
-### Task 2.2: Add Japanese (ja) to Chapters 1-6
+### Task 2.2: Merge Existing Translations (Ch 1-6)
 
-**Action**: Chapters 1-6 missing Japanese, add it
+**Action**: For chapters 1-6, merge existing ko, th, zh-TW into new files
 
-**Target**: ja only
-
-```bash
-# For each chapter 1-6
-/translate.sanscrit data/chapters/ch-01 --target ja
-...
-/translate.sanscrit data/chapters/ch-06 --target ja
-```
-
-**Output**: Updated translations-asian.json with ja added
+**Note**: Skip re-translation if already exists, only add missing ja
 
 ---
 
 ## Phase 3: Other Translations
 
-### Task 3.1: Translate All Chapters (Hebrew)
+### Task 3.1: Translate Chapters + Vocabulary (Other)
 
-**Action**: Translate all 18 chapters to Hebrew
+**Action**: Translate all 18 chapters to he, ar, tr, sw
 
 ```bash
-for ch in ch-{01..18}; do
-  /translate.sanscrit data/chapters/$ch --target he
+for i in $(seq -w 1 18); do
+  # Translate chapter (slokas + comments)
+  /translate.sanscrit data/chapters/ch-$i/chapter-source.json \
+    data/chapters/ch-$i/chapter-other.json --languages=he,ar,tr,sw
+
+  # Translate vocabulary (meanings + transliterations)
+  /translate.sanscrit data/chapters/ch-$i/vocabulary-source.json \
+    data/chapters/ch-$i/vocabulary-other.json --languages=he,ar,tr,sw
 done
 ```
 
-**Output**: translations-other.json with Hebrew
-
----
-
-### Task 3.2: Translate All Chapters (Arabic, Turkish)
-
-**Action**: Translate all 18 chapters to Arabic and Turkish
-
-```bash
-for ch in ch-{01..18}; do
-  /translate.sanscrit data/chapters/$ch --target ar,tr
-done
-```
-
-**Output**: Updated translations-other.json with ar, tr
+**Output**:
+- 18 x chapter-other.json
+- 18 x vocabulary-other.json
 
 ---
 
@@ -247,6 +241,6 @@ Phase 0 ──► Phase 1 ──► Phase 2 ──┬──► Phase 4
 
 ## Approval
 
-- [ ] Reviewed by: User
-- [ ] Approved on: [DATE]
-- [ ] Notes: [NOTES]
+- [x] Reviewed by: User
+- [x] Approved on: 2026-03-27
+- [x] Notes: Plan approved

@@ -2,11 +2,11 @@
 
 ## Current Phase
 
-REQUIREMENTS
+IMPLEMENTATION
 
 ## Phase Status
 
-DRAFT - Awaiting user review and approval
+READY TO START - All documents approved
 
 ## Last Updated
 
@@ -19,58 +19,57 @@ DRAFT - Awaiting user review and approval
 ## Progress
 
 - [x] Flow created
-- [x] Requirements drafted (merged from chapters + vocabulary flows)
-- [ ] Requirements approved
+- [x] Requirements drafted
+- [x] Requirements approved
 - [x] Specifications drafted
-- [ ] Specifications approved
+- [x] Specifications approved
 - [x] Plan drafted
-- [ ] Plan approved
-- [ ] Implementation started
+- [x] Plan approved
+- [ ] Phase 0: Backup & Preparation
+- [ ] Phase 1: Restructure Folders
+- [ ] Phase 2: Asian Translations
+- [ ] Phase 3: Other Translations
+- [ ] Phase 4: Validation & Cleanup
 
 ## Context Notes
 
-### What This Flow Does
+### Target Languages
 
-Объединённый SDD для перевода глав + vocabulary:
+**Asian**: th, zh-TW, ja, ko
+**Other**: he, ar, tr, sw
 
-1. **Оптимизация структуры папок**: Переход к per-chapter bundles
-2. **Расширенный список языков**:
-   - Asian: th, zh-TW, ja, ko
-   - Other: he, ar, tr
-3. **Совместный перевод**: Глава + vocabulary в одном контексте
+### What Gets Translated
 
-### Source Flows
-
-Merged from:
-- `sdd-gitabook-translation-chapters-json` (chapters)
-- `sdd-gitabook-translation-vocabulary-json` (vocabulary)
-
-### Key Changes from Original Flows
-
-1. **Removed zh-CN** - Focus on zh-TW (Traditional)
-2. **Added new languages**: he (Hebrew), ar (Arabic), tr (Turkish)
-3. **New folder structure**: Per-chapter bundles instead of separate directories
-4. **Combined translation**: Chapter + vocabulary translated together
-
-### Current Data State
-
-| Data | Location | Count |
-|------|----------|-------|
-| Chapters (original) | `data/chapters/original/` | 18 |
-| Vocabulary (original) | `data/vocabulary/original/` | 18 |
-| Asian translations | `data/chapters/asian/` | Empty |
-| Ch 1-6 (ko, th, zh-CN, zh-TW) | In original chapter files | Partial |
+- Chapter title
+- Sloka text
+- **Comment** (духовного учителя)
+- Vocabulary meaning
+- Vocabulary transliteration (на письме целевого языка)
 
 ### Translation Command
 
+```bash
+/translate.sanscrit <input> <output> --languages=<langs>
 ```
-/translate.sanscrit
+
+### New Folder Structure
+
+```
+data/chapters/
+├── ch-01/
+│   ├── chapter-source.json      # RU/EN/DE/ES slokas + comments
+│   ├── vocabulary-source.json   # RU/EN vocabulary
+│   ├── chapter-asian.json       # th, zh-TW, ja, ko
+│   ├── chapter-other.json       # he, ar, tr, sw
+│   ├── vocabulary-asian.json    # th, zh-TW, ja, ko
+│   └── vocabulary-other.json    # he, ar, tr, sw
+└── ...
 ```
 
 ## Next Actions
 
-1. Review requirements document
-2. Approve or request changes
-3. Proceed to specifications approval
-4. Proceed to plan approval
-5. Start implementation
+1. Phase 0: Backup original data
+2. Phase 1: Create new folder structure (ch-01 through ch-18)
+3. Phase 2: Run /translate.sanscrit for Asian languages
+4. Phase 3: Run /translate.sanscrit for Other languages
+5. Phase 4: Validate and cleanup

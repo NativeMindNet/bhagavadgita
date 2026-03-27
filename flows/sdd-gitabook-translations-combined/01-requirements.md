@@ -1,7 +1,7 @@
 # Requirements: Gitabook Translations Combined
 
 > Version: 1.0
-> Status: DRAFT
+> Status: APPROVED
 > Last Updated: 2026-03-27
 > Source: Merged from sdd-gitabook-translation-chapters-json + sdd-gitabook-translation-vocabulary-json
 
@@ -113,23 +113,23 @@ data/
 ├── meta/
 └── chapters/
     ├── ch-01/
-    │   ├── source.json           # Chapter slokas (RU/EN/DE/ES)
-    │   ├── vocabulary.json       # Vocabulary (RU/EN)
-    │   ├── translations-asian.json
-    │   └── translations-other.json
+    │   ├── chapter-source.json      # Slokas + comments (RU/EN/DE/ES)
+    │   ├── vocabulary-source.json   # Vocabulary (RU/EN)
+    │   ├── chapter-asian.json       # th, zh-TW, ja, ko
+    │   ├── chapter-other.json       # he, ar, tr, sw
+    │   ├── vocabulary-asian.json    # th, zh-TW, ja, ko
+    │   └── vocabulary-other.json    # he, ar, tr, sw
     ├── ch-02/
-    │   ├── source.json
-    │   ├── vocabulary.json
-    │   ├── translations-asian.json
-    │   └── translations-other.json
-    └── ...
+    │   └── ...
+    └── ch-18/
+        └── ...
 ```
 
 **Advantages:**
 - All chapter data in one place
-- Easy to pass chapter+vocabulary to translation agent
-- Clear separation of source vs translations
-- No need to cross-reference files
+- Clear separation: chapter vs vocabulary, source vs translations
+- Easy to pass to translation agent
+- 6 files per chapter = explicit structure
 
 ## Scope
 
@@ -190,9 +190,10 @@ For each chapter, the agent receives:
 
 ### Output Per Chapter
 
-1. `translations-asian.json` - ko, th, zh-TW, ja translations
-2. `translations-other.json` - he, ar, tr translations
-3. Updated vocabulary with translations
+1. `chapter-asian.json` - th, zh-TW, ja, ko slokas + comments
+2. `chapter-other.json` - he, ar, tr, sw slokas + comments
+3. `vocabulary-asian.json` - th, zh-TW, ja, ko meanings + transliterations
+4. `vocabulary-other.json` - he, ar, tr, sw meanings + transliterations
 
 ### Source Priority
 
@@ -274,6 +275,6 @@ For each chapter, the agent receives:
 
 ## Approval
 
-- [ ] Reviewed by: User
-- [ ] Approved on: [DATE]
-- [ ] Notes: [NOTES]
+- [x] Reviewed by: User
+- [x] Approved on: 2026-03-27
+- [x] Notes: Comments переводятся, транскрипции на письме целевого языка, добавлен Swahili

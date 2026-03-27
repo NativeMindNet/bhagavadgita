@@ -1,7 +1,7 @@
 # Specifications: Gitabook Translations Combined
 
 > Version: 1.0
-> Status: DRAFT
+> Status: APPROVED
 > Last Updated: 2026-03-27
 > Requirements: [01-requirements.md](01-requirements.md)
 
@@ -60,10 +60,12 @@ data/
 │   └── languages.json
 └── chapters/
     ├── ch-01/
-    │   ├── source.json              # RU/EN/DE/ES slokas
-    │   ├── vocabulary.json          # RU/EN vocabulary
-    │   ├── translations-asian.json  # th, zh-TW, ja, ko
-    │   └── translations-other.json  # he, ar, tr
+    │   ├── chapter-source.json      # RU/EN/DE/ES slokas + comments
+    │   ├── vocabulary-source.json   # RU/EN vocabulary
+    │   ├── chapter-asian.json       # th, zh-TW, ja, ko (slokas + comments)
+    │   ├── chapter-other.json       # he, ar, tr, sw (slokas + comments)
+    │   ├── vocabulary-asian.json    # th, zh-TW, ja, ko (meanings + transliterations)
+    │   └── vocabulary-other.json    # he, ar, tr, sw (meanings + transliterations)
     ├── ch-02/
     │   └── ...
     └── ch-18/
@@ -72,7 +74,7 @@ data/
 
 ### File Contents
 
-#### source.json (Read-only)
+#### chapter-source.json (Read-only)
 
 ```json
 {
@@ -108,7 +110,7 @@ data/
 }
 ```
 
-#### vocabulary.json (Per chapter)
+#### vocabulary-source.json (Per chapter)
 
 ```json
 {
@@ -138,7 +140,7 @@ data/
 }
 ```
 
-#### translations-asian.json
+#### chapter-asian.json
 
 ```json
 {
@@ -167,7 +169,17 @@ data/
         "ko": { "text": "...", "approved": false }
       }
     }
-  ],
+  ]
+}
+```
+
+#### vocabulary-asian.json
+
+```json
+{
+  "chapter": 1,
+  "generated": "2026-03-27T12:00:00Z",
+  "command": "/translate.sanscrit",
   "vocabulary": [
     {
       "slokaNumber": "1.1",
@@ -189,7 +201,7 @@ data/
 }
 ```
 
-#### translations-other.json
+#### chapter-other.json
 
 ```json
 {
@@ -212,13 +224,23 @@ data/
         "sw": { "text": "...", "approved": false }
       },
       "comment": {
-        "he": { "text": "Комментарий на иврите...", "approved": false },
-        "ar": { "text": "التعليق بالعربية...", "approved": false },
-        "tr": { "text": "Türkçe yorum...", "approved": false },
-        "sw": { "text": "Maoni kwa Kiswahili...", "approved": false }
+        "he": { "text": "...", "approved": false },
+        "ar": { "text": "...", "approved": false },
+        "tr": { "text": "...", "approved": false },
+        "sw": { "text": "...", "approved": false }
       }
     }
-  ],
+  ]
+}
+```
+
+#### vocabulary-other.json
+
+```json
+{
+  "chapter": 1,
+  "generated": "2026-03-27T12:00:00Z",
+  "command": "/translate.sanscrit",
   "vocabulary": [
     {
       "slokaNumber": "1.1",
@@ -247,10 +269,8 @@ data/
 │                     RESTRUCTURE PHASE                        │
 ├─────────────────────────────────────────────────────────────┤
 │                                                              │
-│  data/chapters/original/chapter-01.json ──┐                 │
-│                                           ├──► ch-01/source.json
-│  data/vocabulary/original/vocab_01.json ──┘                 │
-│                                           └──► ch-01/vocabulary.json
+│  data/chapters/original/chapter-01.json ──► ch-01/chapter-source.json
+│  data/vocabulary/original/vocab_01.json ──► ch-01/vocabulary-source.json
 │                                                              │
 └─────────────────────────────────────────────────────────────┘
                               │
@@ -259,17 +279,22 @@ data/
 │                     TRANSLATION PHASE                        │
 ├─────────────────────────────────────────────────────────────┤
 │                                                              │
-│  ch-01/source.json        ──┐                               │
-│  ch-01/vocabulary.json    ──┼──► /translate.sanscrit        │
-│                             │           │                    │
-│                             │           ▼                    │
-│                             │    ┌──────────────────┐        │
-│                             │    │ Claude Translator │       │
-│                             │    └────────┬─────────┘        │
-│                             │             │                  │
-│                             ▼             ▼                  │
-│               ch-01/translations-asian.json                  │
-│               ch-01/translations-other.json                  │
+│  ch-01/chapter-source.json    ──┐                           │
+│  ch-01/vocabulary-source.json ──┼──► /translate.sanscrit    │
+│                                 │           │                │
+│                                 │           ▼                │
+│                                 │    ┌──────────────┐        │
+│                                 │    │   Claude     │        │
+│                                 │    │  Translator  │        │
+│                                 │    └──────┬───────┘        │
+│                                 │           │                │
+│                                 ▼           ▼                │
+│                          ┌─────────────────────────┐         │
+│                          │ ch-01/chapter-asian.json│         │
+│                          │ ch-01/chapter-other.json│         │
+│                          │ ch-01/vocabulary-asian.json       │
+│                          │ ch-01/vocabulary-other.json       │
+│                          └─────────────────────────┘         │
 │                                                              │
 └─────────────────────────────────────────────────────────────┘
 ```
@@ -370,28 +395,42 @@ Sanskrit is ONLY for terminology accuracy, NOT for understanding meaning.
 mkdir -p data/chapters/ch-{01..18}
 
 # Copy source files
-cp data/chapters/original/chapter-01.json data/chapters/ch-01/source.json
-cp data/vocabulary/original/vocab_01.json data/chapters/ch-01/vocabulary.json
+cp data/chapters/original/chapter-01.json data/chapters/ch-01/chapter-source.json
+cp data/vocabulary/original/vocab_01.json data/chapters/ch-01/vocabulary-source.json
 # ... repeat for all chapters
 ```
 
 ### Step 2: Merge Existing Translations
 
 For chapters 1-6 that already have Asian translations:
-- Extract ko, th, zh-CN, zh-TW from current chapter files
-- Move to `translations-asian.json`
+- Extract ko, th, zh-TW from current chapter files
+- Move to `chapter-asian.json`
 
 ### Step 3: Run Translation
 
 ```bash
-# Asian languages (all chapters)
+# Asian languages - chapters (all chapters)
 for ch in ch-{01..18}; do
-  /translate.sanscrit data/chapters/$ch --target asian
+  /translate.sanscrit data/chapters/$ch/chapter-source.json \
+    data/chapters/$ch/chapter-asian.json --languages=th,zh-TW,ja,ko
 done
 
-# Other languages (all chapters)
+# Asian languages - vocabulary (all chapters)
 for ch in ch-{01..18}; do
-  /translate.sanscrit data/chapters/$ch --target other
+  /translate.sanscrit data/chapters/$ch/vocabulary-source.json \
+    data/chapters/$ch/vocabulary-asian.json --languages=th,zh-TW,ja,ko
+done
+
+# Other languages - chapters (all chapters)
+for ch in ch-{01..18}; do
+  /translate.sanscrit data/chapters/$ch/chapter-source.json \
+    data/chapters/$ch/chapter-other.json --languages=he,ar,tr,sw
+done
+
+# Other languages - vocabulary (all chapters)
+for ch in ch-{01..18}; do
+  /translate.sanscrit data/chapters/$ch/vocabulary-source.json \
+    data/chapters/$ch/vocabulary-other.json --languages=he,ar,tr,sw
 done
 ```
 
@@ -464,6 +503,6 @@ All output files validated against:
 
 ## Approval
 
-- [ ] Reviewed by: User
-- [ ] Approved on: [DATE]
-- [ ] Notes: [NOTES]
+- [x] Reviewed by: User
+- [x] Approved on: 2026-03-27
+- [x] Notes: Approved with comments translation and proper transliterations
