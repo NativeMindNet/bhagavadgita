@@ -33,14 +33,14 @@ IN PROGRESS - Phase 2: Asian Translations (Chapter 7)
   - [x] Chapter 8: COMPLETE ✓
   - [x] Chapter 9: COMPLETE ✓
   - [x] Chapter 10: COMPLETE ✓
-  - [ ] Chapter 11: IN PROGRESS
-  - [ ] Chapter 12: Pending
-  - [ ] Chapter 13: Pending
-  - [ ] Chapter 14: Pending
-  - [ ] Chapter 15: Pending
-  - [ ] Chapter 16: Pending
-  - [ ] Chapter 17: Pending
-  - [ ] Chapter 18: Pending
+  - [x] Chapter 11: COMPLETE ✓
+  - [x] Chapter 12: COMPLETE ✓
+  - [x] Chapter 13: COMPLETE ✓
+  - [x] Chapter 14: COMPLETE ✓
+  - [x] Chapter 15: COMPLETE ✓
+  - [x] Chapter 16: COMPLETE ✓
+  - [x] Chapter 17: COMPLETE ✓
+  - [ ] Chapter 18: IN PROGRESS
 - [ ] Phase 3: Other Translations
 - [ ] Phase 4: Validation & Cleanup
 
