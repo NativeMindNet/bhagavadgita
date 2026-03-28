@@ -3,6 +3,5 @@
     "allow": [
       "Bash(/translate.sanscrit *)"
     ]
-  },
-  "$version": 3
+  }
 }

@@ -1,706 +1,205 @@
 #!/usr/bin/env python3
-"""Generate vocabulary-other.json for Chapter 18 with HE/AR/TR/SW translations."""
+"""
+Generate vocabulary-other.json for chapters 1-6.
+Translates vocabulary meanings to he, ar, tr, sw.
+"""
 
 import json
+from pathlib import Path
 from datetime import datetime
 
-# Translation mappings for common terms
+BASE_DIR = Path(__file__).parent.parent
+
+# Translation mappings for common Bhagavad Gita terms
 TERM_TRANSLATIONS = {
-    "O best of the Bhāratas": {
-        "he": "הו הטוב שבבهارתות",
-        "ar": "يا أفضل البهاراتاس",
-        "tr": "Ey Bhāratas'ın en iyisi",
-        "sw": "Ewe bora wa Bhāratas"
-    },
-    "O Lord of all senses": {
-        "he": "הו אדון כל החושים",
-        "ar": "يا رب كل الحواس",
-        "tr": "Ey tüm duyuların efendisi",
-        "sw": "Ewe Bwana wa hisia zote"
-    },
-    "O son of Kuntī": {
-        "he": "הו בן קונטי",
-        "ar": "يا ابن كونتي",
-        "tr": "Ey Kunti oğlu",
-        "sw": "Ewe mwana wa Kunti"
-    },
-    "O slayer of the Keśi demon": {
-        "he": "הו הורג השד קשי",
-        "ar": "يا قاتل الشيطان كيشي",
-        "tr": "Ey Keşi iblisini öldüren",
-        "sw": "Ewe muuaji wa shetani Keśi"
-    },
-    "O vanquisher of the enemy": {
-        "he": "הו מנצח האויב",
-        "ar": "يا قاهر العدو",
-        "tr": "Ey düşmanı yenen",
-        "sw": "Ewe mshindi wa adui"
-    },
-    "O best of men": {
-        "he": "הו הטוב שבאנשים",
-        "ar": "يا أفضل الرجال",
-        "tr": "Ey erkeklerin en iyisi",
-        "sw": "Ewe bora wa wanaume"
-    },
-    "amongst the humans, etc": {
-        "he": "בקרב בני האדם וכדומה",
-        "ar": "بين البشر، إلخ",
-        "tr": "insanlar arasında, vb.",
-        "sw": "kati ya wanadamu, n.k."
-    },
-    "sings the glories of": {
-        "he": "משבח את תהילת",
-        "ar": "يسبح أمجاد",
-        "tr": "önünü över",
-        "sw": "huimba sifa za"
-    },
-    "it is said": {
-        "he": "נאמר",
-        "ar": "قيل",
-        "tr": "söylenir",
-        "sw": "imesemwa"
-    },
-    "(1) The basis, the body": {
-        "he": "(1) הבסיס, הגוף",
-        "ar": "(1) الأساس، الجسد",
-        "tr": "(1) Temel, beden",
-        "sw": "(1) Msingi, mwili"
-    },
-    "as fire is covered": {
-        "he": "כמו שאש מכוסה",
-        "ar": "كما النار مغطاة",
-        "tr": "ateşin örtülü olduğu gibi",
-        "sw": "kama moto umefunikwa"
-    },
-    "and in the beginning": {
-        "he": "ובהתחלה",
-        "ar": "وفي البداية",
-        "tr": "ve başlangıçta",
-        "sw": "na mwanzoni"
-    },
-    "in the beginning": {
-        "he": "בהתחלה",
-        "ar": "في البداية",
-        "tr": "başlangıçta",
-        "sw": "mwanzoni"
-    },
-    "out of pride": {
-        "he": "מתוך גאווה",
-        "ar": "من الغرور",
-        "tr": "gururdan",
-        "sw": "kwa kiburi"
-    },
-    "ignorance and delusion": {
-        "he": "בורות ואשליה",
-        "ar": "الجهل والوهم",
-        "tr": "cehalet ve yanılsama",
-        "sw": "ujinga na udanganyifu"
-    },
-    "due to impure intelligence": {
-        "he": "בגלל אינטליגנציה לא טהורה",
-        "ar": "بسبب الذكاء غير النقي",
-        "tr": "saf olmayan zeka nedeniyle",
-        "sw": "kwa sababu ya akili isiyo safi"
-    },
-    "and in the end": {
-        "he": "ובסוף",
-        "ar": "وفي النهاية",
-        "tr": "ve sonunda",
-        "sw": "na mwishoni"
-    },
-    "and others (generally the mīmāṁsakas)": {
-        "he": "ואחרים (בדרך כלל המימאמסאקים)",
-        "ar": "وآخرون (عموماً الميمامساكاس)",
-        "tr": "ve diğerleri (genellikle mīmāṁsakas)",
-        "sw": "na wengine (kwa kawaida mīmāṁsakas)"
-    },
-    "unbiased by likes and dislikes": {
-        "he": "ללא משוא פנים של חיבה ושנאה",
-        "ar": "دون تحيز من المحبة والكراهية",
-        "tr": "sevgi ve nefretten önyargısız",
-        "sw": "bila upendeleo wa upendo na chuki"
-    },
-    "One with the wisdom of detachment": {
-        "he": "אחד עם חכמת ההתנתקות",
-        "ar": "واحد مع حكمة عدم التعلق",
-        "tr": "detachment bilgeliği ile bir",
-        "sw": "mmoja na hekima ya kutokushikamana"
-    },
-    "to one devoid of self-sacrifice": {
-        "he": "למי שאין לו הקרבה עצמית",
-        "ar": "لمن يفتقر إلى التضحية الذاتية",
-        "tr": "özgeciliği olmayan birine",
-        "sw": "kwa asiye na kujitoa"
-    },
-    "not seeking the truth – without spiritual or scriptural conception": {
-        "he": "לא מחפש את האמת - ללא תפיסה רוחנית או כתבי קודש",
-        "ar": "لا يبحث عن الحقيقة - بدون تصور روحي أو كتابي",
-        "tr": "gerçeği aramayan - ruhani veya kutsal yazı kavramı olmadan",
-        "sw": "asiyetafuta ukweli - bila dhana ya kiroho au ya maandiko"
-    },
-    "and the fifth factor": {
-        "he": "והגורם החמישי",
-        "ar": "والعامل الخامس",
-        "tr": "ve beşinci faktör",
-        "sw": "na sababu ya tano"
-    },
-    "nor to one who is averse to My service": {
-        "he": "ולא למי שסולד מעבודתי",
-        "ar": "ولا لمن يكره خدمتي",
-        "tr": "hizmetimden tiksinen birine de",
-        "sw": "wala kwa anayechukia huduma yangu"
-    },
-    "and bondage and liberation": {
-        "he": "וכבילה ושחרור",
-        "ar": "والقيد والتحرر",
-        "tr": "ve bağlanma ve özgürlük",
-        "sw": "na kufungwa na ukombolewa"
-    },
-    "danger and safety": {
-        "he": "סכנה וביטחון",
-        "ar": "الخطر والأمان",
-        "tr": "tehlike ve güvenlik",
-        "sw": "hatari na usalama"
-    },
-    "in the world": {
-        "he": "בעולם",
-        "ar": "في العالم",
-        "tr": "dünyada",
-        "sw": "duniani"
-    },
-    "living beings (considering My superior potency to be in everything)": {
-        "he": "יצורים חיים (מחשיב את העליונות שלי כנמצאת בכל)",
-        "ar": "الكائنات الحية (اعتبار قوتي العليا في كل شيء)",
-        "tr": "canlı varlıklar (üstün gücümün her şeyde olduğunu düşünerek)",
-        "sw": "viumbe hai (kukua nguvu yangu ya juu iko katika kila kitu)"
-    },
-    "Brahma, the Absolute": {
-        "he": "ברהמה, המוחלט",
-        "ar": "براهما، المطلق",
-        "tr": "Brahma, Mutlak",
-        "sw": "Brahma, Uhalisi"
-    },
-    "duties of the brāhmaṇs": {
-        "he": "חובות הברהמינים",
-        "ar": "واجبات البراهمة",
-        "tr": "Brahmanaların görevleri",
-        "sw": "majukumu ya Brahmanas"
-    },
-    "renunciation": {
-        "he": "ויתור",
-        "ar": "التخلي",
-        "tr": "vazgeçiş",
-        "sw": "kuachilia"
-    },
-    "detachment": {
-        "he": "התנתקות",
-        "ar": "عدم التعلق",
-        "tr": "bağlılık olmama",
-        "sw": "kutokushikamana"
-    },
-    "action": {
-        "he": "פעולה",
-        "ar": "العمل",
-        "tr": "eylem",
-        "sw": "kitendo"
-    },
-    "knowledge": {
-        "he": "ידע",
-        "ar": "المعرفة",
-        "tr": "bilgi",
-        "sw": "elimu"
-    },
-    "the knower": {
-        "he": "היודע",
-        "ar": "العارف",
-        "tr": "bilen",
-        "sw": "mwenye kujua"
-    },
-    "the object of knowledge": {
-        "he": "מושא הידע",
-        "ar": "موضوع المعرفة",
-        "tr": "bilginin nesnesi",
-        "sw": "kitu cha elimu"
-    },
-    "the doer": {
-        "he": "הפועל",
-        "ar": "الفاعل",
-        "tr": "fail",
-        "sw": "mtenda"
-    },
-    "the instrument": {
-        "he": "הכלי",
-        "ar": "الأداة",
-        "tr": "araç",
-        "sw": "kifaa"
-    },
-    "the senses": {
-        "he": "החושים",
-        "ar": "الحواس",
-        "tr": "duyular",
-        "sw": "hisia"
-    },
-    "the body": {
-        "he": "הגוף",
-        "ar": "الجسد",
-        "tr": "beden",
-        "sw": "mwili"
-    },
-    "the soul": {
-        "he": "הנשמה",
-        "ar": "الروح",
-        "tr": "ruh",
-        "sw": "roho"
-    },
-    "the Supreme Soul": {
-        "he": "הנשמה העליונה",
-        "ar": "الروح الأعلى",
-        "tr": "Yüce Ruh",
-        "sw": "Roho Mkuu"
-    },
-    "goodness": {
-        "he": "טוב",
-        "ar": "الخيرية",
-        "tr": "iyilik",
-        "sw": "wema"
-    },
-    "passion": {
-        "he": "רגש/תשוקה",
-        "ar": "العاطفة",
-        "tr": "tutku",
-        "sw": "hisia"
-    },
-    "ignorance": {
-        "he": "בערות",
-        "ar": "الجهل",
-        "tr": "cehalet",
-        "sw": "ujinga"
-    },
-    "happiness": {
-        "he": "אושר",
-        "ar": "السعادة",
-        "tr": "mutluluk",
-        "sw": "furaha"
-    },
-    "duty": {
-        "he": "חובה",
-        "ar": "الواجب",
-        "tr": "görev",
-        "sw": "jukumu"
-    },
-    "nature": {
-        "he": "טבע",
-        "ar": "الطبيعة",
-        "tr": "doğa",
-        "sw": "asili"
-    },
-    "faith": {
-        "he": "אמונה",
-        "ar": "الإيمان",
-        "tr": "inanç",
-        "sw": "imani"
-    },
-    "sacrifice": {
-        "he": "קרבן",
-        "ar": "التضحية",
-        "tr": "kurban",
-        "sw": "sadaka"
-    },
-    "charity": {
-        "he": "צדקה",
-        "ar": "الصدقة",
-        "tr": "sadaka",
-        "sw": "hisani"
-    },
-    "austerity": {
-        "he": "סיגוף",
-        "ar": "الزهد",
-        "tr": "çile",
-        "sw": "ukalipu"
-    },
-    "peace": {
-        "he": "שלווה",
-        "ar": "السلام",
-        "tr": "huzur",
-        "sw": "amani"
-    },
-    "self-control": {
-        "he": "איפוק/שליטה עצמית",
-        "ar": "ضبط النفس",
-        "tr": "öz denetim",
-        "sw": "kujidhibiti"
-    },
-    "purity": {
-        "he": "טוהר",
-        "ar": "النقاء",
-        "tr": "saflık",
-        "sw": "usafi"
-    },
-    "patience": {
-        "he": "סבלנות",
-        "ar": "الصبر",
-        "tr": "sabır",
-        "sw": "uvumilivu"
-    },
-    "honesty": {
-        "he": "יושר",
-        "ar": "الاستقامة",
-        "tr": "dürüstlük",
-        "sw": "uadilifu"
-    },
-    "wisdom": {
-        "he": "חכמה",
-        "ar": "الحكمة",
-        "tr": "bilgelik",
-        "sw": "hekima"
-    },
-    "understanding": {
-        "he": "הבנה",
-        "ar": "الفهم",
-        "tr": "anlayış",
-        "sw": "uelewa"
-    },
-    "belief in God": {
-        "he": "אמונה באלוהים",
-        "ar": "الإيمان بالله",
-        "tr": "Tanrı'ya inanç",
-        "sw": "imani kwa Mungu"
-    },
-    "courage": {
-        "he": "גבורה",
-        "ar": "الشجاعة",
-        "tr": "cesaret",
-        "sw": "ushujaa"
-    },
-    "splendor": {
-        "he": "הדר",
-        "ar": "المجد",
-        "tr": "görkem",
-        "sw": "utukufu"
-    },
-    "determination": {
-        "he": "נחישות",
-        "ar": "العزيمة",
-        "tr": "kararlılık",
-        "sw": "azimio"
-    },
-    "resourcefulness": {
-        "he": "זריזות/תושייה",
-        "ar": "النشاط",
-        "tr": "çeviklik",
-        "sw": "chapukazi"
-    },
-    "not fleeing in battle": {
-        "he": "לא לברוח בקרב",
-        "ar": "عدم الهروب في المعركة",
-        "tr": "savaşta kaçmama",
-        "sw": "kutokukimbia vitani"
-    },
-    "generosity": {
-        "he": "נדיבות",
-        "ar": "الكرم",
-        "tr": "cömertlik",
-        "sw": "ukarimu"
-    },
-    "leadership ability": {
-        "he": "יכולת הנהגה",
-        "ar": "القدرة على القيادة",
-        "tr": "liderlik yeteneği",
-        "sw": "uwezo wa kuongoza"
-    },
-    "agriculture": {
-        "he": "חקלאות",
-        "ar": "الزراعة",
-        "tr": "tarım",
-        "sw": "kilimo"
-    },
-    "cow protection": {
-        "he": "הגנת בקר",
-        "ar": "حماية الماشية",
-        "tr": "sığır koruma",
-        "sw": "kulinda mifugo"
-    },
-    "trade": {
-        "he": "מסחר",
-        "ar": "التجارة",
-        "tr": "ticaret",
-        "sw": "biashara"
-    },
-    "service work": {
-        "he": "עבודת שירות",
-        "ar": "عمل الخدمة",
-        "tr": "hizmet işi",
-        "sw": "kazi ya huduma"
-    },
-    "perfection": {
-        "he": "שלמות",
-        "ar": "الكمال",
-        "tr": "mükemmellik",
-        "sw": "ukamilifu"
-    },
-    "God": {
-        "he": "אלוהים",
-        "ar": "الله",
-        "tr": "Tanrı",
-        "sw": "Mungu"
-    },
-    "devotion": {
-        "he": "מסירות",
-        "ar": "التفاني",
-        "tr": "adanmışlık",
-        "sw": "ibada"
-    },
-    "grace": {
-        "he": "חסד",
-        "ar": "النعمة",
-        "tr": "lütuf",
-        "sw": "neema"
-    },
-    "eternal": {
-        "he": "נצחי",
-        "ar": "الأبدي",
-        "tr": "ebedi",
-        "sw": "milele"
-    },
-    "meditation": {
-        "he": "מדיטציה",
-        "ar": "التأمل",
-        "tr": "meditasyon",
-        "sw": "meditetesheni"
-    },
-    "non-violence": {
-        "he": "אי-אלימות",
-        "ar": "عدم العنف",
-        "tr": "şiddetsizlik",
-        "sw": "kutokukwa na vurugu"
-    },
-    "anger": {
-        "he": "כעס",
-        "ar": "الغضب",
-        "tr": "öfke",
-        "sw": "hasira"
-    },
-    "desire": {
-        "he": "תשוקה",
-        "ar": "الرغبة",
-        "tr": "arzu",
-        "sw": "tamaa"
-    },
-    "greed": {
-        "he": "חמדנות",
-        "ar": "الجشع",
-        "tr": "açgözlülük",
-        "sw": "uchoyo"
-    },
-    "ego": {
-        "he": "אגו",
-        "ar": "الأنا",
-        "tr": "ego",
-        "sw": "ego"
-    },
-    "delusion": {
-        "he": "אשליה",
-        "ar": "الوهم",
-        "tr": "yanılsama",
-        "sw": "udanganyifu"
-    },
-    "sleep": {
-        "he": "שינה",
-        "ar": "النوم",
-        "tr": "uyku",
-        "sw": "usingizi"
-    },
-    "fear": {
-        "he": "פחד",
-        "ar": "الخوف",
-        "tr": "korku",
-        "sw": "woga"
-    },
-    "grief": {
-        "he": "אבל/צער",
-        "ar": "الحزن",
-        "tr": "keder",
-        "sw": "huzuni"
-    },
-    "despair": {
-        "he": "ייאוש",
-        "ar": "اليأس",
-        "tr": "umutsuzluk",
-        "sw": "kukata tamaa"
-    },
-    "arrogance": {
-        "he": "שחצנות",
-        "ar": "الغطرسة",
-        "tr": "kibir",
-        "sw": "kiburi"
-    },
-    "intelligence": {
-        "he": "שכל/אינטליגנציה",
-        "ar": "العقل",
-        "tr": "akıl",
-        "sw": "akili"
-    },
-    "righteous": {
-        "he": "צדיקים",
-        "ar": "الصالحين",
-        "tr": "salih",
-        "sw": "wanyofu"
-    },
-    "sin": {
-        "he": "חטא",
-        "ar": "الخطيئة",
-        "tr": "günah",
-        "sw": "dhambi"
-    },
-    "liberation": {
-        "he": "שחרור",
-        "ar": "التحرر",
-        "tr": "özgürlük",
-        "sw": "uhuru"
-    },
-    "Supreme Lord": {
-        "he": "האל העליון",
-        "ar": "الرب الأعلى",
-        "tr": "Yüce Rab",
-        "sw": "Bwana Mkuu"
-    },
-    "O son of Kunti": {
-        "he": "הו בן קונטי",
-        "ar": "يا ابن كونتي",
-        "tr": "Ey Kunti oğlu",
-        "sw": "Ewe mwana wa Kunti"
-    },
-    "O mighty-armed one": {
-        "he": "הו רב-עוצמה",
-        "ar": "يا قوي الذراع",
-        "tr": "Ey güçlü kollu",
-        "sw": "Ewe mwenye mikono yenye nguvu"
-    },
-    "O conqueror of wealth": {
-        "he": "הו כובש העושר",
-        "ar": "يا قاهر الثروة",
-        "tr": "Ey servetin fatihi",
-        "sw": "Ewe mshindi wa utajiri"
-    },
-    "O best of the Bhāratas": {
-        "he": "הו הטוב שבבهارתות",
-        "ar": "يا أفضل البهاراتاس",
-        "tr": "Ey Bhāratas'ın en iyisi",
-        "sw": "Ewe bora wa Bhāratas"
-    },
-    "O Arjuna": {
-        "he": "הו ארג'ונה",
-        "ar": "يا أرجونا",
-        "tr": "Ey Arjuna",
-        "sw": "Ewe Arjuna"
-    },
-    "Sanjaya said": {
-        "he": "סנג'איה אמר",
-        "ar": "قال سنجايا",
-        "tr": "Sanjaya dedi",
-        "sw": "Sanjaya alisema"
-    },
-    "Arjuna said": {
-        "he": "ארג'ונה אמר",
-        "ar": "قال أرجونا",
-        "tr": "Arjuna dedi",
-        "sw": "Arjuna alisema"
-    },
-    "The Supreme Lord said": {
-        "he": "האל העליון אמר",
-        "ar": "قال الرب الأعلى",
-        "tr": "Yüce Rab dedi",
-        "sw": "Bwana Mkuu alisema"
-    }
+    # Addresses
+    "O Arjuna, son of Kuntī": {"he": "הו ארג'ונה בני קונטי", "ar": "يا أرجونا ابن كونتي", "tr": "Ey Arjuna, Kuntī oğlu", "sw": "Ewe Arjuna, mwana wa Kuntī"},
+    "O Arjuna": {"he": "הו ארג'ונה", "ar": "يا أرجونا", "tr": "Ey Arjuna", "sw": "Ewe Arjuna"},
+    "O son of Kuntī": {"he": "הו בן קונטי", "ar": "يا ابن كونتي", "tr": "Ey Kuntī oğlu", "sw": "Ewe mwana wa Kuntī"},
+    "O descendant of the Kuru dynasty": {"he": "הו צאצא שושלת קורו", "ar": "يا سلالة أسرة كورو", "tr": "Ey Kuru hanedanının soyundan gelen", "sw": "Ewe mzao wa nasaba ya Kuru"},
+    "O Madhusūdan, slayer of the enemy": {"he": "הו מדהוסודן קוטל האויב", "ar": "يا مادوسودان قاتل العدو", "tr": "Ey Madhusūdan, düşman katili", "sw": "Ewe Madhusūdan, muuaji wa adui"},
+    "O subduer of the enemy": {"he": "הו כובש האויב", "ar": "يا قاهر العدو", "tr": "Ey düşmanı boyunduruk altına alan", "sw": "Ewe mshindi wa adui"},
+    "O noblest of men": {"he": "הו האציל שבאנשים", "ar": "يا noblest of الرجال", "tr": "Ey insanların en soylusu", "sw": "Ewe bora zaidi ya wanadamu"},
+    "O slayer of the enemy": {"he": "הו קוטל האויב", "ar": "يا قاتل العدو", "tr": "Ey düşman katili", "sw": "Ewe muuaji wa adui"},
+    
+    # Common phrases
+    "by worshipping the Supreme Lord": {"he": "על ידי סגידה לאדון העליון", "ar": "من خلال عبادة الرب الأعلى", "tr": "Yüce Rab'be tapınarak", "sw": "kwa kuabudu Bwana Mkuu"},
+    "nor is it that": {"he": "וגם לא זה", "ar": "ولا ذلك", "tr": "ne de bu", "sw": "wala sio kwamba"},
+    "It is not a fact that": {"he": "זו לא עובדה ש", "ar": "ليست حقيقة أن", "tr": "şu bir gerçek değil ki", "sw": "sio kweli kwamba"},
+    "actions of the senses": {"he": "פעולות החושים", "ar": "أعمال الحواس", "tr": "duyuların eylemleri", "sw": "matendo ya hisia"},
+    "engaging with material sense objects": {"he": "מעורבות עם אובייקטים חושיים חומריים", "ar": "الانخراط مع الأشياء الحسية المادية", "tr": "maddi duyusal nesnelerle meşgul olmak", "sw": "kushiriki na vitu vya hisia vya kimwili"},
+    "These come and go": {"he": "אלה באים והולכים", "ar": "هذه تأتي وتذهب", "tr": "bunlar gelir ve gider", "sw": "hizi huja na kuondoka"},
+    "of the various purposes fulfilled": {"he": "של המטרות השונות שהושלמו", "ar": "من الأغراض المختلفة المحققة", "tr": "çeşitli amaçların yerine getirilmesi", "sw": "ya madhumuni mbalimbali yaliyotimizwa"},
+    "I have revealed to you": {"he": "גיליתי לך", "ar": "لقد كشفت لك", "tr": "sana vahyettim", "sw": "nimekufunulia"},
+    "failure in the beginning": {"he": "כישלון בהתחלה", "ar": "الفشل في البداية", "tr": "başlangıçta başarısızlık", "sw": "ushindani mwanzoni"},
+    "it remains steady": {"he": "זה נשאר יציב", "ar": "يبقى ثابتاً", "tr": "sabit kalır", "sw": "inabaki thabiti"},
+    "its water never crossing the shore": {"he": "מימיו לעולם לא חוצים את החוף", "ar": "مياهه لا تعبر الشاطئ أبداً", "tr": "suyu asla kıyıyı geçmez", "sw": "maji yake hayavuki pwani kamwe"},
+    "or the living": {"he": "או החיים", "ar": "أو الأحياء", "tr": "veya yaşayanlar", "sw": "au walio hai"},
+    "non-performance of your prescribed duties": {"he": "אי-ביצוע חובותיך הקבועות", "ar": "عدم أداء واجباتك المفروضة", "tr": "belirlenen görevlerini yerine getirmeme", "sw": "kutofanya majukumu yako yaliyoamriwa"},
+    "and the cause of infamy": {"he": "והסיבה לקלון", "ar": "وسبب العار", "tr": "ve rezillik nedeni", "sw": "na chanzo cha aibu"},
+    "on the ocean": {"he": "על האוקיינוס", "ar": "على المحيط", "tr": "okyanusta", "sw": "kwenye bahari"},
+    "even at the time of death": {"he": "אפילו בזמן המוות", "ar": "حتى في وقت الموت", "tr": "ölüm anında bile", "sw": "hata wakati wa kifo"},
+    "subject to destruction": {"he": "כפוף להשמדה", "ar": "عرضة للتدمير", "tr": "yıkıma tabi", "sw": "kujerushiwa kwa uharibifu"},
+    "Such a conclusion": {"he": "מסקנה כזו", "ar": "مثل هذا الاستنتاج", "tr": "böyle bir sonuç", "sw": "hitimisho kama hilo"},
+    "One whose mind is undisturbed": {"he": "מי שדעתו לא מופרעת", "ar": "من لم ينزعج عقله", "tr": "zihni huzursuz olmayan", "sw": "Ambaye akili yake haisumbuki"},
+    "it is inappropriate to grieve": {"he": "לא מתאים להתאבל", "ar": "من غير المناسب الحزن", "tr": "yas tutmak uygun değil", "sw": "si vya kufaa kusikitika"},
+    "better course of action": {"he": "דרך פעולה טובה יותר", "ar": "مسار عمل أفضل", "tr": "daha iyi eylem yolu", "sw": "njia bora ya vitendo"},
+    "for the inevitable": {"he": "עבור הבלתי נמנע", "ar": "للحتمي", "tr": "kaçınılmaz olan için", "sw": "kwa ajili ya yasiyoepukika"},
+    "and immeasurable": {"he": "ובלתי ניתן למדידה", "ar": "ولا يمكن قياسه", "tr": "ve ölçülemez", "sw": "na hupimiki"},
+    "due to his extremely subtle nature": {"he": "בגלל טבעו העדין ביותר", "ar": "بسبب طبيعته الدقيقة للغاية", "tr": "son derece ince doğası nedeniyle", "sw": "kwa sababu ya asili yake nyembamba sana"},
+    "as an open door to heaven": {"he": "כדלת פתוחה לגן עדן", "ar": "كباب مفتوح للجنة", "tr": "cennete açılan açık bir kapı gibi", "sw": "kama mlango wazi wa mbingu"},
+    "wealth and coveted enjoyable objects": {"he": "עושר וחפצים מהנים נחשקים", "ar": "الثروة والأشياء الممتعة المرغوبة", "tr": "zenginlik ve arzulanan zevk nesneleri", "sw": "utajiri na vitu vinavyotamanika vya furaha"},
+    "it is an obstacle": {"he": "זהו מכשול", "ar": "إنه عائق", "tr": "bu bir engeldir", "sw": "ni kizuizi"},
+    "to the attainment of heaven": {"he": "להשגת גן עדן", "ar": "للحصول على الجنة", "tr": "cennete ulaşmaya", "sw": "kufikia mbingu"},
+    "of that person bereft of self-control": {"he": "של אותו אדם חסר שליטה עצמית", "ar": "ذلك الشخص المحروم من ضبط النفس", "tr": "öz kontrolünden yoksun kişinin", "sw": "wa yule mtu asiye na udhibiti wa nafsi"},
+    "and the situation after death": {"he": "והמצב אחרי המוות", "ar": "والوضع بعد الموت", "tr": "ve ölümden sonraki durum", "sw": "na hali baada ya kifo"},
+    "is again unknown": {"he": "שוב לא ידוע", "ar": "مجهول مرة أخرى", "tr": "tekrar bilinmiyor", "sw": "tena haijulikani"},
+    "imperceptible": {"he": "בלתי מורגש", "ar": "غير محسوس", "tr": "algılanamaz", "sw": "haisikiki"},
+    "the situation before birth": {"he": "המצב לפני הלידה", "ar": "الوضع قبل الولادة", "tr": "doğumdan önceki durum", "sw": "hali kabla ya kuzaliwa"},
+    "is unknown": {"he": "לא ידוע", "ar": "مجهول", "tr": "bilinmiyor", "sw": "haijulikani"},
+    "of the irresolute": {"he": "של חסרי ההחלטה", "ar": "للتردد", "tr": "kararsız olanların", "sw": "wa wasio na azimio"},
+    "those who nurture mundane desires": {"he": "אלה שמטפחים תשוקות חילוניות", "ar": "أولئك الذين يرعون الرغبات الدنيوية", "tr": "dünyevi arzuları besleyenler", "sw": "wale wanaolisha tamaa za kidunia"},
+    "The soul is indivisible": {"he": "הנשמה היא בלתי ניתנת לחלוקה", "ar": "الروح غير قابلة للتجزئة", "tr": "ruh bölünemez", "sw": "roho haigawanyiki"},
+    "This soul is birthless": {"he": "נשמה זו היא ללא לידה", "ar": "هذه الروح غير مولودة", "tr": "Bu ruh doğmamıştır", "sw": "roho hii haizaliwi"},
+    "It is everlasting": {"he": "היא נצחית", "ar": "هي أبدية", "tr": "O ebedidir", "sw": "ni ya milele"},
+    "It is said to be": {"he": "נאמר שהיא", "ar": "يقال أنها", "tr": "şöyle söylenir", "sw": "inasemekwa kuwa"},
+    "For such a person devoid of this intelligence": {"he": "עבור אדם כזה חסר אינטליגנציה זו", "ar": "لمثل هذا الشخص المحروم من هذه الذكاء", "tr": "Bu zekadan yoksun böyle bir kişi için", "sw": "kwa mtu kama huyo asiye na akili hii"},
+    "for those unworthy of grief": {"he": "עבור אלה שאינם ראויים לצער", "ar": "لأولئك الذين لا يستحقون الحزن", "tr": "yas için layık olmayanlar için", "sw": "kwa wale wasiostahili kusikitika"},
+    "his eyes brimming with tears": {"he": "עיניו מלאות דמעות", "ar": "عيناه مليئة بالدموع", "tr": "gözleri yaşlarla dolu", "sw": "macho yake yamejaa machozi"},
+    "showing his distress": {"he": "מראה את מצוקתו", "ar": "يُظهر ضيقه", "tr": "sıkıntısını göstererek", "sw": "kuonyesha taabu yake"},
+    "have been the object of great honour": {"he": "היו מושא לכבוד רב", "ar": "كانوا موضوع تكريم عظيم", "tr": "büyük onur konusu olmuş", "sw": "wamekuwa kitu cha heshima kubwa"},
+    "out of fear": {"he": "מתוך פחד", "ar": "خوفاً", "tr": "korkudan", "sw": "kwa sababu ya hofu"},
+    "and lead to enjoyment and opulence": {"he": "ומובילים להנאה ולעושר", "ar": "وتؤدي إلى المتعة والثراء", "tr": "ve zevk ve zenginliğe yol açar", "sw": "na kusababisha furaha na utajiri"},
+    "Of those persons attached to enjoyment and opulence": {"he": "של אותם אנשים המחוברים להנאה ולעושר", "ar": "أولئك الأشخاص المرتبطين بالمتعة والثراء", "tr": "Zevk ve zenginliğe bağlı olan kişilerin", "sw": "Wa watu walioambatana na furaha na utajiri"},
+    "meditation on the Lord": {"he": "מדיטציה על האדון", "ar": "التأمل في الرب", "tr": "Rab üzerine meditasyon", "sw": "kutafakari juu ya Bwana"},
+    "purity of thought": {"he": "טוהר המחשבה", "ar": "نقاء الفكر", "tr": "düşünce saflığı", "sw": "usafi wa mawazo"},
+    
+    # Common terms
+    "the soul": {"he": "הנשמה", "ar": "الروح", "tr": "ruh", "sw": "roho"},
+    "the Supreme Soul": {"he": "הנשמה העליונה", "ar": "الروح الأعلى", "tr": "Yüce Ruh", "sw": "Roho Mkuu"},
+    "material nature": {"he": "טבע חומרי", "ar": "الطبيعة المادية", "tr": "maddi doğa", "sw": "asili ya kimwili"},
+    "spiritual": {"he": "רוחני", "ar": "روحي", "tr": "ruhani", "sw": "ya kiroho"},
+    "material": {"he": "חומרי", "ar": "مادي", "tr": "maddi", "sw": "ya kimwili"},
+    "devotional service": {"he": "שירות מסור", "ar": "الخدمة التفاني", "tr": "bağlılık hizmeti", "sw": "utumishi wa uaminifu"},
+    "karma": {"he": "קרמה", "ar": "الكرمة", "tr": "karma", "sw": "karma"},
+    "dharma": {"he": "דהרמה", "ar": "الدارما", "tr": "dharma", "sw": "dharma"},
+    "yoga": {"he": "יוגה", "ar": "اليوغا", "tr": "yoga", "sw": "yoga"},
+    "meditation": {"he": "מדיטציה", "ar": "التأمل", "tr": "meditasyon", "sw": "kutafakari"},
+    "knowledge": {"he": "ידע", "ar": "المعرفة", "tr": "bilgi", "sw": "ujuzi"},
+    "wisdom": {"he": "חוכמה", "ar": "الحكمة", "tr": "bilgelik", "sw": "busara"},
+    "ignorance": {"he": "בורות", "ar": "الجهل", "tr": "cehalet", "sw": "ujinga"},
+    "liberation": {"he": "שחרור", "ar": "التحرر", "tr": "kurtuluş", "sw": "ukombozi"},
+    "bondage": {"he": "שיעבוד", "ar": "العبودية", "tr": "kölelik", "sw": "utumwa"},
+    "action": {"he": "פעולה", "ar": "العمل", "tr": "eylem", "sw": "kitendo"},
+    "inaction": {"he": "חוסר פעולה", "ar": "عدم العمل", "tr": "eylemsizlik", "sw": "kutotenda"},
+    "renunciation": {"he": "ויתור", "ar": "الزهد", "tr": "feragat", "sw": "kujitoa"},
+    "detachment": {"he": "ניתוק", "ar": "اللامبالاة", "tr": "bağlılık olmama", "sw": "kutokuwa na ambatanisho"},
+    "attachment": {"he": "היצמדות", "ar": "التعلق", "tr": "bağlılık", "sw": "ambatanisho"},
+    "desire": {"he": "תשוקה", "ar": "الرغبة", "tr": "arzu", "sw": "tamaa"},
+    "lust": {"he": "תאווה", "ar": "الشهوة", "tr": "şehvet", "sw": "shahawa"},
+    "anger": {"he": "כעס", "ar": "الغضب", "tr": "öfke", "sw": "hasira"},
+    "greed": {"he": "חמדנות", "ar": "الطمع", "tr": "açgözlülük", "sw": "kuzu"},
+    "peace": {"he": "שלום", "ar": "السلام", "tr": "huzur", "sw": "amani"},
+    "happiness": {"he": "אושר", "ar": "السعادة", "tr": "mutluluk", "sw": "furaha"},
+    "suffering": {"he": "סבל", "ar": "المعاناة", "tr": "acı", "sw": "mateso"},
+    "pleasure": {"he": "הנאה", "ar": "المتعة", "tr": "zevk", "sw": "furaha"},
+    "pain": {"he": "כאב", "ar": "الألم", "tr": "acı", "sw": "maumivu"},
 }
 
-def get_translation(meaning_en, lang):
-    """Get translation for a given English meaning."""
-    if not meaning_en or meaning_en.strip() == "":
-        return ""
-    
-    # Check exact match
-    if meaning_en in TERM_TRANSLATIONS:
-        return TERM_TRANSLATIONS[meaning_en].get(lang, meaning_en)
-    
-    # Check partial match (case-insensitive)
-    meaning_lower = meaning_en.lower()
-    for key, translations in TERM_TRANSLATIONS.items():
-        if key.lower() in meaning_lower or meaning_lower in key.lower():
-            return translations.get(lang, meaning_en)
-    
-    # Default: return English with note
-    return meaning_en
+def load_json(filepath):
+    with open(filepath, 'r', encoding='utf-8') as f:
+        return json.load(f)
 
-def get_transliteration(word, lang):
-    """Generate transliteration for a Sanskrit word based on language."""
-    if not word:
-        return ""
-    
-    # Clean the word
-    clean_word = word.replace("(he) ", "").replace("(manuṣyādiṣu)", "").strip()
-    
-    if lang == "he":
-        # Hebrew transliteration (simplified)
-        return clean_word  # Keep Latin script for Sanskrit terms
-    elif lang == "ar":
-        # Arabic transliteration (simplified)
-        return f"({clean_word})"
-    elif lang == "tr":
-        # Turkish uses Latin script
-        return f"({clean_word})"
-    elif lang == "sw":
-        # Swahili uses Latin script
-        return f"({clean_word})"
-    
-    return clean_word
+def save_json(filepath, data):
+    with open(filepath, 'w', encoding='utf-8') as f:
+        json.dump(data, f, ensure_ascii=False, indent=2)
 
-def main():
-    # Read source vocabulary
-    with open("/Users/anton/proj/gita/data/chapters/ch-18/vocabulary-source.json", "r", encoding="utf-8") as f:
-        source_data = json.load(f)
+def translate_meaning(text):
+    """Translate English text to he, ar, tr, sw."""
+    if not text or not text.strip():
+        return {"he": "", "ar": "", "tr": "", "sw": ""}
     
-    # Build output vocabulary
-    output_vocab = {}
+    # Check for exact match
+    if text in TERM_TRANSLATIONS:
+        return TERM_TRANSLATIONS[text]
     
-    for entry in source_data.get("vocabulary", []):
-        word_id = str(entry.get("id", ""))
-        if not word_id:
-            continue
-        
-        # Get English meaning
-        meaning_en = entry.get("meaning", {}).get("en", {}).get("text", "")
-        
-        # Generate translations
-        meaning_translations = {}
-        transliterations = {}
-        
-        for lang in ["he", "ar", "tr", "sw"]:
-            meaning_translations[lang] = get_translation(meaning_en, lang)
-            transliterations[lang] = get_transliteration(entry.get("word", ""), lang)
-        
-        output_vocab[word_id] = {
-            "meaning": meaning_translations,
-            "transliteration": transliterations
-        }
+    # Build translation from components
+    result = {"he": "", "ar": "", "tr": "", "sw": ""}
+    words = text.split()
+    translated = {"he": [], "ar": [], "tr": [], "sw": []}
     
-    # Build output structure
+    for word in words:
+        clean = word.strip('.,;:!?()"\'-')
+        found = False
+        
+        for term, trans in TERM_TRANSLATIONS.items():
+            if term.lower() == clean.lower():
+                for lang in ["he", "ar", "tr", "sw"]:
+                    translated[lang].append(trans[lang])
+                found = True
+                break
+        
+        if not found:
+            # Keep original for unknown words
+            for lang in ["he", "ar", "tr", "sw"]:
+                translated[lang].append(clean)
+    
+    for lang in ["he", "ar", "tr", "sw"]:
+        result[lang] = " ".join(translated[lang])
+    
+    return result
+
+def process_chapter(chapter_num):
+    """Process a single chapter."""
+    input_file = BASE_DIR / 'data' / 'chapters' / f'ch-{chapter_num:02d}' / 'vocabulary-source.json'
+    output_file = BASE_DIR / 'data' / 'chapters' / f'ch-{chapter_num:02d}' / 'vocabulary-other.json'
+    
+    if not input_file.exists():
+        print(f"  Skipping ch-{chapter_num:02d}: Input file not found")
+        return False
+    
+    print(f"  Processing ch-{chapter_num:02d}...")
+    source_data = load_json(input_file)
+    
     output_data = {
-        "chapter": 18,
+        "chapter": chapter_num,
         "meta": {
-            "source": "/Users/anton/proj/gita/data/chapters/ch-18/vocabulary-source.json",
+            "source": str(input_file),
             "generated": datetime.now().strftime("%Y-%m-%d"),
             "languages": ["he", "ar", "tr", "sw"],
             "approved": False
         },
-        "vocabulary": output_vocab
+        "vocabulary": {}
     }
     
-    # Write output
-    with open("/Users/anton/proj/gita/data/chapters/ch-18/vocabulary-other.json", "w", encoding="utf-8") as f:
-        json.dump(output_data, f, ensure_ascii=False, indent=2)
+    total_words = len(source_data['vocabulary'])
+    for i, vocab_item in enumerate(source_data['vocabulary']):
+        vocab_id = str(vocab_item['id'])
+        word = vocab_item['word']
+        
+        en_meaning = vocab_item['meaning'].get('en', {}).get('text', '')
+        
+        translated_meaning = translate_meaning(en_meaning)
+        
+        output_data['vocabulary'][vocab_id] = {
+            "meaning": translated_meaning
+        }
     
-    print(f"Generated vocabulary-other.json with {len(output_vocab)} entries")
+    save_json(output_file, output_data)
+    print(f"  Saved {total_words} words to vocabulary-other.json")
+    return True
 
-if __name__ == "__main__":
+def main():
+    print("="*60)
+    print("Generating vocabulary-other.json for chapters 1-6")
+    print("="*60)
+    
+    for chapter_num in range(1, 7):
+        process_chapter(chapter_num)
+    
+    print("\n" + "="*60)
+    print("Complete! Processed chapters 1-6")
+    print("="*60)
+
+if __name__ == '__main__':
     main()
