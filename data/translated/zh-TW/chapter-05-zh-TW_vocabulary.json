@@ -1,0 +1,1464 @@
+{
+  "vocabulary": {
+    "18497": {
+      "meaning": "哦 best of the valiant",
+      "transliteration": "哈埃) 瑪阿哈阿-巴阿哈奧"
+    },
+    "18629": {
+      "meaning": "such seers are to be known as",
+      "transliteration": "卡阿塔亞阿塔埃"
+    },
+    "18712": {
+      "meaning": "which enter the 心",
+      "transliteration": "瑪阿那阿哈 帕拉阿瓦伊夏塔阿那"
+    },
+    "18506": {
+      "meaning": "is able to attain to",
+      "transliteration": "阿達伊嘎阿恰恰哈阿塔伊"
+    },
+    "18601": {
+      "meaning": "by ignorance – by the Lord’s external potency avidyā-śakti to fulfill the living being’s 慾望 to enjoy the 物質 world",
+      "transliteration": "阿佳尼阿那埃那阿"
+    },
+    "18690": {
+      "meaning": "sees the illumination within",
+      "transliteration": "阿那塔阿哈-佳亞奧塔伊哈"
+    },
+    "18686": {
+      "meaning": "experiences the joy of the self within",
+      "transliteration": "阿那塔阿哈-薩烏卡阿哈"
+    },
+    "18687": {
+      "meaning": "who delights in the self within",
+      "transliteration": "阿那塔阿哈-阿拉阿瑪阿哈"
+    },
+    "18516": {
+      "meaning": "athough engaged in the functions of",
+      "transliteration": "阿帕伊"
+    },
+    "18560": {
+      "meaning": "and even by the senses",
+      "transliteration": "阿帕伊 伊那達拉伊亞艾哈"
+    },
+    "18652": {
+      "meaning": "The person with 心 detached",
+      "transliteration": "阿薩阿卡塔阿-阿塔瑪阿"
+    },
+    "18646": {
+      "meaning": "devoid of the delusion of considering one’s 身體 and its attachments as ‘me’ and ‘mine’",
+      "transliteration": "阿薩阿瑪瑪烏達阿哈"
+    },
+    "18733": {
+      "meaning": "as the maintainer or worshippable objective",
+      "transliteration": "巴奧卡塔阿拉阿瑪"
+    },
+    "18692": {
+      "meaning": "attaining the transcendental state",
+      "transliteration": "巴拉阿哈瑪阿-巴烏塔阿哈"
+    },
+    "18701": {
+      "meaning": "解脫 from the mundane plane",
+      "transliteration": "巴拉阿哈瑪阿-那伊拉瓦阿那阿瑪"
+    },
+    "18647": {
+      "meaning": "one in 知識 of Brahma",
+      "transliteration": "巴拉阿哈瑪阿-瓦伊塔"
+    },
+    "18659": {
+      "meaning": "absorbing himself in 冥想 on the Absolute",
+      "transliteration": "巴拉阿哈瑪阿-亞奧嘎阿-亞烏卡塔阿-阿塔瑪阿"
+    },
+    "18543": {
+      "meaning": "unto the Supreme Lord",
+      "transliteration": "巴拉阿哈瑪阿那伊"
+    },
+    "18559": {
+      "meaning": "by the intelligence",
+      "transliteration": "巴烏達達亞阿"
+    },
+    "18711": {
+      "meaning": "external sense objects of sound etc",
+      "transliteration": "巴阿哈亞阿那 薩帕阿拉夏阿那"
+    },
+    "18473": {
+      "meaning": "The childish the unwise",
+      "transliteration": "巴阿拉阿哈"
+    },
+    "18501": {
+      "meaning": "the cause of 悲傷",
+      "transliteration": "達烏哈卡阿瑪 阿帕塔烏瑪"
+    },
+    "18450": {
+      "meaning": "of the two",
+      "transliteration": "埃塔阿亞奧哈"
+    },
+    "18527": {
+      "meaning": "grasping objects in the hands",
+      "transliteration": "嘎利哈那阿那"
+    },
+    "18534": {
+      "meaning": "in relation to their respective sense objects of form etc",
+      "transliteration": "伊那達拉伊亞阿-阿拉塔埃夏烏"
+    },
+    "18511": {
+      "meaning": "who has mastery over the senses",
+      "transliteration": "佳伊塔阿-伊那達拉伊亞阿哈"
+    },
+    "18462": {
+      "meaning": "it is to be known that",
+      "transliteration": "佳尼埃亞阿哈"
+    },
+    "18564": {
+      "meaning": "the fruits of 行動",
+      "transliteration": "卡阿拉瑪阿-帕阿拉阿瑪"
+    },
+    "18460": {
+      "meaning": "to renunciation of 行動",
+      "transliteration": "卡阿拉瑪阿-薩阿那那亞阿薩阿塔"
+    },
+    "18458": {
+      "meaning": "the path of selfless 行動",
+      "transliteration": "卡阿拉瑪阿-亞奧嘎阿"
+    },
+    "18587": {
+      "meaning": "ego of considering themselves ‘the doer’",
+      "transliteration": "卡阿拉塔利塔瓦阿瑪"
+    },
+    "18677": {
+      "meaning": "the impulses of 慾望 and 憤怒",
+      "transliteration": "卡阿瑪阿-卡拉奧達阿-烏達巴阿瓦阿瑪 瓦埃嘎阿瑪"
+    },
+    "18705": {
+      "meaning": "and free from 慾望 and 憤怒",
+      "transliteration": "卡阿瑪阿-卡拉奧達阿-瓦伊瑪烏卡塔阿那阿瑪"
+    },
+    "18557": {
+      "meaning": "by the 身體",
+      "transliteration": "卡阿亞埃那阿"
+    },
+    "18558": {
+      "meaning": "by the 心",
+      "transliteration": "瑪阿那阿薩阿"
+    },
+    "18722": {
+      "meaning": "dedicated to 解脫",
+      "transliteration": "瑪奧卡夏阿-帕阿拉阿亞阿那阿哈"
+    },
+    "23804": {
+      "meaning": "are deluded thinking the 身體 to be the self",
+      "transliteration": "瑪烏哈亞阿那塔伊"
+    },
+    "18724": {
+      "meaning": "a contemplative seeker of the self",
+      "transliteration": "瑪烏那伊哈"
+    },
+    "18504": {
+      "meaning": "being a man of 知識",
+      "transliteration": "瑪烏那伊哈 (薩阿那"
+    },
+    "18589": {
+      "meaning": "nor their association with the fruits of actions",
+      "transliteration": "那阿 卡阿拉瑪阿-帕阿拉阿-薩阿ṁ亞奧嘎阿瑪"
+    },
+    "18583": {
+      "meaning": "nor causing work for others",
+      "transliteration": "那阿 卡阿拉阿亞阿那"
+    },
+    "18595": {
+      "meaning": "neither the sin",
+      "transliteration": "那阿 帕阿帕阿瑪"
+    },
+    "18581": {
+      "meaning": "in the city of nine gates",
+      "transliteration": "那阿瓦阿-達瓦阿拉埃 帕烏拉埃"
+    },
+    "18529": {
+      "meaning": "and closing the eyes or blinking",
+      "transliteration": "那伊瑪伊夏阿那"
+    },
+    "18640": {
+      "meaning": "and being faultless free from 執著 and hatred",
+      "transliteration": "那伊拉達奧夏阿瑪"
+    },
+    "18469": {
+      "meaning": "one who is free from duality",
+      "transliteration": "那伊拉達瓦阿那達瓦阿哈"
+    },
+    "18719": {
+      "meaning": "flowing through the nostrils",
+      "transliteration": "那阿薩阿-阿巴亞阿那塔阿拉阿-恰阿拉伊那奧"
+    },
+    "18572": {
+      "meaning": "to the fruits of 行動",
+      "transliteration": "帕阿拉埃"
+    },
+    "18718": {
+      "meaning": "inhalation and exhalation",
+      "transliteration": "帕拉阿那阿-阿帕阿那奧"
+    },
+    "18622": {
+      "meaning": "Those who see with equanimity who see Brahma transcendence",
+      "transliteration": "薩阿瑪阿-達阿拉夏伊那阿哈 埃瓦阿"
+    },
+    "18454": {
+      "meaning": "renunciation of 行動 and the path of selfless 行動",
+      "transliteration": "薩阿那那亞阿薩阿哈 卡阿拉瑪阿-亞奧嘎阿哈 恰阿"
+    },
+    "18635": {
+      "meaning": "the cycle of birth and death",
+      "transliteration": "薩阿拉嘎阿哈"
+    },
+    "18699": {
+      "meaning": "dedicated to the welfare of all",
+      "transliteration": "薩阿拉瓦阿-巴烏塔阿-哈伊塔埃-拉阿塔阿哈"
+    },
+    "18514": {
+      "meaning": "having reached the state in which his whole being is pervaded with affection and compassion for all beings",
+      "transliteration": "薩阿拉瓦阿-巴烏塔阿-阿塔瑪阿巴烏塔阿-阿塔瑪阿 (薩阿那"
+    },
+    "23805": {
+      "meaning": "the worshippable Supreme Lord of all planes Lord Nārāyaṇ",
+      "transliteration": "薩阿拉瓦阿-拉奧卡阿-瑪阿哈阿-伊夏瓦阿拉阿瑪"
+    },
+    "18691": {
+      "meaning": "such a niṣkām karma yogī follower of the 瑜伽 of selfless 行動",
+      "transliteration": "薩阿哈 亞奧嘎伊"
+    },
+    "18666": {
+      "meaning": "born of the senses contacting their objects",
+      "transliteration": "薩阿ṁ薩帕阿拉夏阿-佳阿哈"
+    },
+    "18553": {
+      "meaning": "執著 to the fruits of 行動",
+      "transliteration": "薩阿昂嘎阿瑪"
+    },
+    "18645": {
+      "meaning": "endowed with steady intelligence",
+      "transliteration": "薩塔伊拉阿-巴烏達達伊哈"
+    },
+    "23806": {
+      "meaning": "and the benefactor of all living beings by mercifully teaching pure 奉愛 to Me through My devotees since I am the adorable friend of the devotees Lord Kṛṣṇa",
+      "transliteration": "薩烏哈利達阿瑪 薩阿拉瓦阿-巴烏塔阿那阿瑪"
+    },
+    "18596": {
+      "meaning": "nor the peity",
+      "transliteration": "薩烏卡利塔阿瑪 恰阿 那阿 埃瓦阿"
+    },
+    "18475": {
+      "meaning": "the paths of renunciation and karma 瑜伽",
+      "transliteration": "薩阿昂卡亞阿-亞奧嘎奧"
+    },
+    "18494": {
+      "meaning": "both sannyās and karma-yoga",
+      "transliteration": "薩阿昂卡亞阿瑪 恰阿 亞奧嘎阿瑪 恰阿"
+    },
+    "18615": {
+      "meaning": "who think constantly of the Supreme Lord",
+      "transliteration": "塔阿塔-巴烏達達阿亞阿哈"
+    },
+    "18618": {
+      "meaning": "and who are devoted to hearing and singing His glories",
+      "transliteration": "塔阿塔-帕阿拉阿亞阿那阿哈"
+    },
+    "18667": {
+      "meaning": "are the origin of misery",
+      "transliteration": "塔埃 達烏哈卡阿-亞奧那阿亞阿哈 埃瓦阿"
+    },
+    "18704": {
+      "meaning": "who are knowers of the element tvam the 靈魂",
+      "transliteration": "瓦伊達伊塔阿-阿塔瑪阿那阿瑪"
+    },
+    "18623": {
+      "meaning": "in a learned and humble",
+      "transliteration": "瓦伊達亞阿-瓦伊那阿亞阿-薩阿瑪帕阿那那埃"
+    },
+    "18723": {
+      "meaning": "free from 慾望 恐懼 and 憤怒",
+      "transliteration": "瓦伊嘎阿塔阿-伊恰恰哈阿-巴阿亞阿-卡拉奧達阿哈"
+    },
+    "18734": {
+      "meaning": "of the karmīs’ sacrifices and the jñānīs’ austerities",
+      "transliteration": "亞阿佳尼阿-塔阿帕阿薩阿瑪"
+    },
+    "18657": {
+      "meaning": "which is experienced in self-realisation",
+      "transliteration": "亞阿塔 阿塔瑪阿那伊 (阿那烏巴烏亞阿瑪阿那埃"
+    },
+    "18703": {
+      "meaning": "who have controlled their thoughts conquered the subtle 身體",
+      "transliteration": "亞阿塔阿-恰埃塔阿薩阿瑪"
+    },
+    "18721": {
+      "meaning": "is a controller of the senses 心 and intelligence",
+      "transliteration": "亞阿塔阿-伊那達拉伊亞阿-瑪阿那阿哈-巴烏達達伊哈"
+    },
+    "18702": {
+      "meaning": "Of the sannyāsīs",
+      "transliteration": "亞阿塔伊那阿瑪"
+    },
+    "18605": {
+      "meaning": "of those for whom",
+      "transliteration": "亞埃夏阿瑪"
+    },
+    "18562": {
+      "meaning": "A niṣkām karma-yogī one engaged in the 瑜伽 of selfless 行動",
+      "transliteration": "亞烏卡塔阿哈"
+    },
+    "18669": {
+      "meaning": "they begin and end",
+      "transliteration": "阿達伊-阿那塔阿瓦阿那塔阿哈"
+    },
+    "18613": {
+      "meaning": "like the sun that dispels darkness",
+      "transliteration": "阿達伊塔亞阿瓦阿塔"
+    },
+    "18561": {
+      "meaning": "for purification of the heart self-purification",
+      "transliteration": "阿塔瑪阿-夏烏達達阿亞埃"
+    },
+    "18608": {
+      "meaning": "by self-knowledge by the Lord’s superior potency",
+      "transliteration": "阿塔瑪阿那阿哈 佳尼阿那埃那阿"
+    },
+    "18675": {
+      "meaning": "is able by the 瑜伽 of selfless 行動",
+      "transliteration": "夏阿卡那奧塔伊"
+    },
+    "18680": {
+      "meaning": "leaving the 身體",
+      "transliteration": "夏阿拉伊拉阿-瓦伊瑪奧卡夏阿那阿塔"
+    },
+    "18730": {
+      "meaning": "the joy of his original divine identity",
+      "transliteration": "夏阿那塔伊瑪"
+    },
+    "2811": {
+      "meaning": "невежеством",
+      "transliteration": "а-джн̃а̄нена"
+    },
+    "2690": {
+      "meaning": "не действуя бескорыстно",
+      "transliteration": "а-йогатах̣"
+    },
+    "2767": {
+      "meaning": "действующий ради выгоды",
+      "transliteration": "а-йуктах̣"
+    },
+    "2894": {
+      "meaning": "бесконечное",
+      "transliteration": "а-кш̣айам"
+    },
+    "2877": {
+      "meaning": "нежелательное",
+      "transliteration": "а-прийам"
+    },
+    "2884": {
+      "meaning": "непривязанная душа",
+      "transliteration": "а-сакта-а̄тма"
+    },
+    "2879": {
+      "meaning": "свободный от заблуждений",
+      "transliteration": "а-сам-м̇ӯд̣хах̣"
+    },
+    "2812": {
+      "meaning": "покрыто",
+      "transliteration": "а̄вр̣там"
+    },
+    "2803": {
+      "meaning": "ответственен",
+      "transliteration": "а̄датте"
+    },
+    "2903": {
+      "meaning": "имеют начало и конец",
+      "transliteration": "а̄ди-анта-вантах̣"
+    },
+    "2825": {
+      "meaning": "подобно восходящему солнцу",
+      "transliteration": "а̄дитйа-ват"
+    },
+    "2734": {
+      "meaning": "совершая",
+      "transliteration": "а̄дха̄йа"
+    },
+    "2765": {
+      "meaning": "обретает",
+      "transliteration": "а̄пноти"
+    },
+    "2689": {
+      "meaning": "приносит",
+      "transliteration": "а̄птум"
+    },
+    "2776": {
+      "meaning": "пребывает",
+      "transliteration": "а̄сте"
+    },
+    "2663": {
+      "meaning": "следующий",
+      "transliteration": "а̄стхитах̣"
+    },
+    "2758": {
+      "meaning": "сознания",
+      "transliteration": "а̄тма"
+    },
+    "2952": {
+      "meaning": "свою духовную природу",
+      "transliteration": "а̄тмана̄м"
+    },
+    "2823": {
+      "meaning": "живого существа",
+      "transliteration": "а̄тманах̣"
+    },
+    "2886": {
+      "meaning": "в осознании себя душой",
+      "transliteration": "а̄тмани"
+    },
+    "2948": {
+      "meaning": "в любом случае",
+      "transliteration": "абхитах̣"
+    },
+    "2820": {
+      "meaning": "невежество",
+      "transliteration": "аджн̃а̄нам"
+    },
+    "2695": {
+      "meaning": "достигает",
+      "transliteration": "адхи-гаччхати"
+    },
+    "2934": {
+      "meaning": "обретает",
+      "transliteration": "адхигаччхати"
+    },
+    "2746": {
+      "meaning": "водой",
+      "transliteration": "амбхаса̄"
+    },
+    "2959": {
+      "meaning": "между",
+      "transliteration": "антаре"
+    },
+    "2926": {
+      "meaning": "черпает блаженство в себе",
+      "transliteration": "антах̣-а̄ра̄мах̣"
+    },
+    "2928": {
+      "meaning": "просветлен изнутри",
+      "transliteration": "антах̣-джйотих̣"
+    },
+    "2925": {
+      "meaning": "внутренне счастлив",
+      "transliteration": "антах̣-сукхах̣"
+    },
+    "2752": {
+      "meaning": "также",
+      "transliteration": "апи"
+    },
+    "2835": {
+      "meaning": "освобождения от рождений и смертей",
+      "transliteration": "апунах̣-а̄вр̣ттим"
+    },
+    "2613": {
+      "meaning": "Арджуна",
+      "transliteration": "арджунах̣"
+    },
+    "2718": {
+      "meaning": "потребляет пищу",
+      "transliteration": "аш́нан"
+    },
+    "2895": {
+      "meaning": "вкушает",
+      "transliteration": "аш́нуте"
+    },
+    "2657": {
+      "meaning": "глупцы",
+      "transliteration": "ба̄ла̄х̣"
+    },
+    "2883": {
+      "meaning": "наслаждение внешним миром",
+      "transliteration": "ба̄хйа-спарш́еш̣у"
+    },
+    "2955": {
+      "meaning": "внешние",
+      "transliteration": "ба̄хйа̄н"
+    },
+    "2652": {
+      "meaning": "из материального рабства",
+      "transliteration": "бандха̄т"
+    },
+    "2842": {
+      "meaning": "в бра̄хман̣е",
+      "transliteration": "бра̄хман̣е"
+    },
+    "2890": {
+      "meaning": "с надмирной Истиной",
+      "transliteration": "брахма"
+    },
+    "2933": {
+      "meaning": "осознание себя душой",
+      "transliteration": "брахма-бхӯтах̣"
+    },
+    "2880": {
+      "meaning": "познавший надмирную истину",
+      "transliteration": "брахма-вит"
+    },
+    "2949": {
+      "meaning": "освобождение",
+      "transliteration": "брахма-нирва̄н̣ам"
+    },
+    "2881": {
+      "meaning": "в Брахмане",
+      "transliteration": "брахман̣и"
+    },
+    "2628": {
+      "meaning": "скажи",
+      "transliteration": "брӯхи"
+    },
+    "2969": {
+      "meaning": "разум",
+      "transliteration": "буддхих̣"
+    },
+    "2749": {
+      "meaning": "разумом",
+      "transliteration": "буддхйа̄"
+    },
+    "2908": {
+      "meaning": "истинно мудрый",
+      "transliteration": "будхах̣"
+    },
+    "2974": {
+      "meaning": "страха",
+      "transliteration": "бхайа"
+    },
+    "2899": {
+      "meaning": "наслаждения",
+      "transliteration": "бхога̄х̣"
+    },
+    "2981": {
+      "meaning": "наслаждающийся",
+      "transliteration": "бхокта̄рам"
+    },
+    "2960": {
+      "meaning": "бровями",
+      "transliteration": "бхрувох̣"
+    },
+    "2701": {
+      "meaning": "единый душой с ними",
+      "transliteration": "бхӯта-а̄тма"
+    },
+    "2988": {
+      "meaning": "живых существ",
+      "transliteration": "бхӯта̄на̄м"
+    },
+    "2730": {
+      "meaning": "взаимодействуют",
+      "transliteration": "вартанте"
+    },
+    "2950": {
+      "meaning": "происходит",
+      "transliteration": "вартате"
+    },
+    "2778": {
+      "meaning": "контролирующая чувства",
+      "transliteration": "ваш́ӣ"
+    },
+    "2918": {
+      "meaning": "побуждения",
+      "transliteration": "вегам"
+    },
+    "2810": {
+      "meaning": "всемогущий Господь",
+      "transliteration": "ви-бхух̣"
+    },
+    "2641": {
+      "meaning": "имеет неоспоримое превосходство",
+      "transliteration": "ви-ш́иш̣йате"
+    },
+    "2972": {
+      "meaning": "свободный от",
+      "transliteration": "вигата"
+    },
+    "2698": {
+      "meaning": "обуздавший ум",
+      "transliteration": "виджита-а̄тма̄"
+    },
+    "2951": {
+      "meaning": "осознавшие",
+      "transliteration": "видита"
+    },
+    "2839": {
+      "meaning": "знанием",
+      "transliteration": "видйа̄"
+    },
+    "2945": {
+      "meaning": "свободные",
+      "transliteration": "вимукта̄на̄м"
+    },
+    "2840": {
+      "meaning": "смирением",
+      "transliteration": "винайа"
+    },
+    "2666": {
+      "meaning": "достигает",
+      "transliteration": "виндате"
+    },
+    "2885": {
+      "meaning": "достигает",
+      "transliteration": "виндати"
+    },
+    "2723": {
+      "meaning": "опорожняет кишечник",
+      "transliteration": "виср̣джан"
+    },
+    "2697": {
+      "meaning": "чистый сердцем",
+      "transliteration": "виш́уддха-а̄тма̄"
+    },
+    "2843": {
+      "meaning": "в корове",
+      "transliteration": "гави"
+    },
+    "2675": {
+      "meaning": "достигается",
+      "transliteration": "гамйате"
+    },
+    "2719": {
+      "meaning": "двигается",
+      "transliteration": "гаччхан"
+    },
+    "2834": {
+      "meaning": "достигают",
+      "transliteration": "гаччханти"
+    },
+    "2724": {
+      "meaning": "берет",
+      "transliteration": "гр̣хн̣ан"
+    },
+    "2780": {
+      "meaning": "вратами",
+      "transliteration": "два̄ре"
+    },
+    "2782": {
+      "meaning": "воплощенная душа",
+      "transliteration": "дехӣ"
+    },
+    "2816": {
+      "meaning": "живых существ",
+      "transliteration": "джантавах̣"
+    },
+    "2717": {
+      "meaning": "обоняет",
+      "transliteration": "джигхран"
+    },
+    "2699": {
+      "meaning": "подчинивший чувства",
+      "transliteration": "джита-индрийах̣"
+    },
+    "2855": {
+      "meaning": "побежден",
+      "transliteration": "джитах̣"
+    },
+    "2836": {
+      "meaning": "благодаря духовному знанию",
+      "transliteration": "джн̃а̄на"
+    },
+    "2826": {
+      "meaning": "свет истины",
+      "transliteration": "джн̃а̄нам"
+    },
+    "2817": {
+      "meaning": "духовным знанием",
+      "transliteration": "джн̃а̄нена"
+    },
+    "2989": {
+      "meaning": "зная",
+      "transliteration": "джн̃а̄тва̄"
+    },
+    "2642": {
+      "meaning": "следует знать что",
+      "transliteration": "джн̃ейах̣"
+    },
+    "2900": {
+      "meaning": "источник страданий",
+      "transliteration": "дух̣кха-йонайах̣"
+    },
+    "2688": {
+      "meaning": "скорбь",
+      "transliteration": "дух̣кхам"
+    },
+    "2732": {
+      "meaning": "осознает",
+      "transliteration": "дха̄райан"
+    },
+    "2745": {
+      "meaning": "как",
+      "transliteration": "ива"
+    },
+    "2967": {
+      "meaning": "свои чувства",
+      "transliteration": "индрийа"
+    },
+    "2729": {
+      "meaning": "со своими объектами",
+      "transliteration": "индрийа-артхеш̣у"
+    },
+    "2728": {
+      "meaning": "чувства",
+      "transliteration": "индрийа̄н̣и"
+    },
+    "2751": {
+      "meaning": "чувствами",
+      "transliteration": "индрийаих̣"
+    },
+    "2731": {
+      "meaning": "так",
+      "transliteration": "ити"
+    },
+    "2852": {
+      "meaning": "в этой жизни",
+      "transliteration": "иха"
+    },
+    "2910": {
+      "meaning": "еще при жизни",
+      "transliteration": "иха эва"
+    },
+    "2973": {
+      "meaning": "желаний",
+      "transliteration": "иччха̄"
+    },
+    "2982": {
+      "meaning": "всеми жертвоприношениями",
+      "transliteration": "йаджн̃а"
+    },
+    "2887": {
+      "meaning": "тот кто",
+      "transliteration": "йат"
+    },
+    "2966": {
+      "meaning": "контролирующий",
+      "transliteration": "йата"
+    },
+    "2940": {
+      "meaning": "обуздавшие себя",
+      "transliteration": "йата-а̄тма̄нах̣"
+    },
+    "2947": {
+      "meaning": "обуздавшие ум",
+      "transliteration": "йата-четаса̄м"
+    },
+    "2946": {
+      "meaning": "отреченные личности",
+      "transliteration": "йатӣна̄м"
+    },
+    "2976": {
+      "meaning": "тот кто",
+      "transliteration": "йах̣"
+    },
+    "2896": {
+      "meaning": "которые",
+      "transliteration": "йе"
+    },
+    "2857": {
+      "meaning": "для тех кто",
+      "transliteration": "йеш̣а̄м"
+    },
+    "2891": {
+      "meaning": "связанный",
+      "transliteration": "йога"
+    },
+    "2696": {
+      "meaning": "занятый в йоге",
+      "transliteration": "йога-йуктах̣"
+    },
+    "2673": {
+      "meaning": "благодаря карма-йоге пути бескорыстных деяний",
+      "transliteration": "йогаих̣"
+    },
+    "2679": {
+      "meaning": "карма-йогу",
+      "transliteration": "йогам"
+    },
+    "2655": {
+      "meaning": "путь бескорыстных деяний",
+      "transliteration": "йогау"
+    },
+    "2753": {
+      "meaning": "йог",
+      "transliteration": "йогинах̣"
+    },
+    "2892": {
+      "meaning": "погрузившийся в созерцание",
+      "transliteration": "йукта-а̄тма̄"
+    },
+    "2920": {
+      "meaning": "практикуя йогу",
+      "transliteration": "йуктах̣"
+    },
+    "2747": {
+      "meaning": "телом",
+      "transliteration": "ка̄йена"
+    },
+    "2943": {
+      "meaning": "от мирских желаний",
+      "transliteration": "ка̄ма"
+    },
+    "2768": {
+      "meaning": "стремящийся исполнить мирские желания",
+      "transliteration": "ка̄ма-ка̄рен̣а"
+    },
+    "2787": {
+      "meaning": "побуждает к деятельности",
+      "transliteration": "ка̄райан"
+    },
+    "2838": {
+      "meaning": "всю материальную скверну",
+      "transliteration": "калмаш̣а̄х̣"
+    },
+    "2789": {
+      "meaning": "желание действовать",
+      "transliteration": "кар-тр̣-твам"
+    },
+    "2796": {
+      "meaning": "деятельности",
+      "transliteration": "карма"
+    },
+    "2640": {
+      "meaning": "путь бескорыстных деяний",
+      "transliteration": "карма-йогах̣"
+    },
+    "2639": {
+      "meaning": "нежели отречение от деятельности",
+      "transliteration": "карма-саннйа̄са̄т"
+    },
+    "2791": {
+      "meaning": "поступки",
+      "transliteration": "карма̄н̣и"
+    },
+    "2616": {
+      "meaning": "от деятельности",
+      "transliteration": "карман̣а̄м"
+    },
+    "2709": {
+      "meaning": "делаю",
+      "transliteration": "кароми"
+    },
+    "2738": {
+      "meaning": "действует",
+      "transliteration": "кароти"
+    },
+    "2804": {
+      "meaning": "кого-либо",
+      "transliteration": "касйачит"
+    },
+    "2904": {
+      "meaning": "Арджуна сын Кунтӣ",
+      "transliteration": "каунтейа"
+    },
+    "2750": {
+      "meaning": "исключительно",
+      "transliteration": "кевалаих̣"
+    },
+    "2708": {
+      "meaning": "что-либо",
+      "transliteration": "ким-чит"
+    },
+    "2963": {
+      "meaning": "приводя",
+      "transliteration": "кр̣тва̄"
+    },
+    "2954": {
+      "meaning": "изгоняет прочь",
+      "transliteration": "кр̣тва̄ бахих̣"
+    },
+    "2617": {
+      "meaning": "о Кр̣ш̣н̣а",
+      "transliteration": "кр̣ш̣н̣а"
+    },
+    "2944": {
+      "meaning": "гнева",
+      "transliteration": "кродха"
+    },
+    "2975": {
+      "meaning": "гнева",
+      "transliteration": "кродхах̣"
+    },
+    "2785": {
+      "meaning": "действует",
+      "transliteration": "курван"
+    },
+    "2755": {
+      "meaning": "совершая",
+      "transliteration": "курванти"
+    },
+    "2938": {
+      "meaning": "безгрешные",
+      "transliteration": "кш̣ӣн̣а-калмаш̣а̄х̣"
+    },
+    "2935": {
+      "meaning": "достигают",
+      "transliteration": "лабханте"
+    },
+    "2740": {
+      "meaning": "затрагивается",
+      "transliteration": "липйате"
+    },
+    "2792": {
+      "meaning": "людей",
+      "transliteration": "локасйа"
+    },
+    "2990": {
+      "meaning": "Меня",
+      "transliteration": "ма̄м"
+    },
+    "2774": {
+      "meaning": "умом",
+      "transliteration": "манаса̄"
+    },
+    "2968": {
+      "meaning": "ум",
+      "transliteration": "манах̣"
+    },
+    "2712": {
+      "meaning": "ощущает",
+      "transliteration": "манйета"
+    },
+    "2687": {
+      "meaning": "сильнорукий Арджуна",
+      "transliteration": "маха̄-ба̄хо"
+    },
+    "2985": {
+      "meaning": "верховный Владыка",
+      "transliteration": "маха̄-ӣш́варам"
+    },
+    "2627": {
+      "meaning": "мне",
+      "transliteration": "ме"
+    },
+    "2971": {
+      "meaning": "стремящийся к достижению освобождения",
+      "transliteration": "мокш̣а-пара̄йан̣ах̣"
+    },
+    "2978": {
+      "meaning": "свободен",
+      "transliteration": "мукта"
+    },
+    "2970": {
+      "meaning": "мудрец",
+      "transliteration": "муних̣"
+    },
+    "2815": {
+      "meaning": "введенных в заблуждение",
+      "transliteration": "мухйанти"
+    },
+    "2905": {
+      "meaning": "не",
+      "transliteration": "на"
+    },
+    "2646": {
+      "meaning": "не испытывает неприязни",
+      "transliteration": "на двеш̣т̣и"
+    },
+    "2647": {
+      "meaning": "не желает",
+      "transliteration": "на ка̄н̇кш̣ати"
+    },
+    "2694": {
+      "meaning": "незамедлительно",
+      "transliteration": "на чирен̣а"
+    },
+    "2964": {
+      "meaning": "в ноздрях",
+      "transliteration": "на̄са̄-абхйантара"
+    },
+    "2822": {
+      "meaning": "разрушено",
+      "transliteration": "на̄ш́итам"
+    },
+    "2779": {
+      "meaning": "с девятью",
+      "transliteration": "нава"
+    },
+    "2766": {
+      "meaning": "непрерывное",
+      "transliteration": "наиш̣т̣хикӣм"
+    },
+    "2923": {
+      "meaning": "этот человек",
+      "transliteration": "нарах̣"
+    },
+    "2771": {
+      "meaning": "связывается",
+      "transliteration": "нибадхйате"
+    },
+    "2726": {
+      "meaning": "закрывает глаза",
+      "transliteration": "нимиш̣ан"
+    },
+    "2861": {
+      "meaning": "не оскверняются",
+      "transliteration": "нир-дош̣ам"
+    },
+    "2837": {
+      "meaning": "устраняющему",
+      "transliteration": "нирдхӯта"
+    },
+    "2644": {
+      "meaning": "всегда воистину отрешен",
+      "transliteration": "нитйа-саннйа̄сӣ"
+    },
+    "2648": {
+      "meaning": "вне двойственности",
+      "transliteration": "них̣-двандвах̣"
+    },
+    "2635": {
+      "meaning": "даруют великое благо",
+      "transliteration": "них̣ш́рейаса-карау"
+    },
+    "2805": {
+      "meaning": "греховный поступок",
+      "transliteration": "па̄пам"
+    },
+    "2743": {
+      "meaning": "грехом",
+      "transliteration": "па̄пена"
+    },
+    "2744": {
+      "meaning": "цветок лотоса",
+      "transliteration": "падма-патрам"
+    },
+    "2850": {
+      "meaning": "мудрец",
+      "transliteration": "пан̣д̣ита̄х̣"
+    },
+    "2829": {
+      "meaning": "Высшую Реальность",
+      "transliteration": "парам"
+    },
+    "2714": {
+      "meaning": "видит",
+      "transliteration": "паш́йан"
+    },
+    "2684": {
+      "meaning": "видит истину",
+      "transliteration": "паш́йати"
+    },
+    "2656": {
+      "meaning": "различны",
+      "transliteration": "пр̣тхак"
+    },
+    "2670": {
+      "meaning": "достигается",
+      "transliteration": "пра-а̄пйате"
+    },
+    "2658": {
+      "meaning": "говорят",
+      "transliteration": "пра-ваданти"
+    },
+    "2801": {
+      "meaning": "приводит в действие",
+      "transliteration": "пра-вартате"
+    },
+    "2827": {
+      "meaning": "являет",
+      "transliteration": "пра-ка̄ш́айати"
+    },
+    "2653": {
+      "meaning": "освобождается",
+      "transliteration": "пра-мучйате"
+    },
+    "2870": {
+      "meaning": "ликует",
+      "transliteration": "пра-хр̣ш̣йет"
+    },
+    "2913": {
+      "meaning": "прежде",
+      "transliteration": "пра̄к"
+    },
+    "2961": {
+      "meaning": "вдыхая и выдыхая",
+      "transliteration": "пра̄н̣а-апа̄нау"
+    },
+    "2875": {
+      "meaning": "обретя",
+      "transliteration": "пра̄пйа"
+    },
+    "2794": {
+      "meaning": "Господь",
+      "transliteration": "прабхух̣"
+    },
+    "2722": {
+      "meaning": "говорит",
+      "transliteration": "пралапан"
+    },
+    "2871": {
+      "meaning": "желаемое",
+      "transliteration": "прийам"
+    },
+    "2618": {
+      "meaning": "затем снова",
+      "transliteration": "пунах̣"
+    },
+    "2781": {
+      "meaning": "в городе",
+      "transliteration": "пуре"
+    },
+    "2797": {
+      "meaning": "плоды",
+      "transliteration": "пхала"
+    },
+    "2762": {
+      "meaning": "от плодов",
+      "transliteration": "пхалам"
+    },
+    "2769": {
+      "meaning": "к плодам",
+      "transliteration": "пхале"
+    },
+    "2992": {
+      "meaning": "достигает",
+      "transliteration": "р̣ччхати"
+    },
+    "2937": {
+      "meaning": "провидцы истины",
+      "transliteration": "р̣ш̣айах̣"
+    },
+    "2907": {
+      "meaning": "наслаждается",
+      "transliteration": "рамате"
+    },
+    "2858": {
+      "meaning": "уравновешен",
+      "transliteration": "са̄мйе"
+    },
+    "2654": {
+      "meaning": "путь философского познания духа и материи",
+      "transliteration": "са̄н̇кхйа"
+    },
+    "2669": {
+      "meaning": "благодаря са̄н̇кхйа-йоге пути философского познания духа и материи",
+      "transliteration": "са̄н̇кхйаих̣"
+    },
+    "2677": {
+      "meaning": "са̄н̇кхйа-йогу",
+      "transliteration": "са̄н̇кхйам"
+    },
+    "2977": {
+      "meaning": "всегда",
+      "transliteration": "сада̄"
+    },
+    "2770": {
+      "meaning": "привязанностью",
+      "transliteration": "сактах̣"
+    },
+    "2775": {
+      "meaning": "полностью отрешенный",
+      "transliteration": "сам-нйа̄сйа"
+    },
+    "2798": {
+      "meaning": "связан",
+      "transliteration": "сам̇йогам"
+    },
+    "2898": {
+      "meaning": "рождены из взаимодействия чувств с их объектами",
+      "transliteration": "сам̇спарш́а-джа̄х̣"
+    },
+    "2851": {
+      "meaning": "видит единую духовную природу",
+      "transliteration": "сама-дарш́инах̣"
+    },
+    "2863": {
+      "meaning": "невозмутим",
+      "transliteration": "самам"
+    },
+    "2962": {
+      "meaning": "в равновесие",
+      "transliteration": "самау"
+    },
+    "2664": {
+      "meaning": "совершенным образом",
+      "transliteration": "самйак"
+    },
+    "2841": {
+      "meaning": "украшенный",
+      "transliteration": "сампанне"
+    },
+    "2756": {
+      "meaning": "привязанность",
+      "transliteration": "сан̇гам"
+    },
+    "2615": {
+      "meaning": "отречение",
+      "transliteration": "саннйа̄сам"
+    },
+    "2685": {
+      "meaning": "отречение",
+      "transliteration": "саннйа̄сах̣"
+    },
+    "2987": {
+      "meaning": "всех",
+      "transliteration": "сарва"
+    },
+    "2941": {
+      "meaning": "всех живых существ",
+      "transliteration": "сарва-бхӯта"
+    },
+    "2700": {
+      "meaning": "дорог всем живым существам",
+      "transliteration": "сарва-бхӯта-а̄тма"
+    },
+    "2984": {
+      "meaning": "всех миров с их обитателями",
+      "transliteration": "сарва-лока"
+    },
+    "2856": {
+      "meaning": "мир рождений и смертей",
+      "transliteration": "саргах̣"
+    },
+    "2980": {
+      "meaning": "он",
+      "transliteration": "сах̣"
+    },
+    "2931": {
+      "meaning": "пребывает в йоге",
+      "transliteration": "сах̣ йогӣ"
+    },
+    "2799": {
+      "meaning": "склонность самих душ",
+      "transliteration": "сва-бха̄вах̣"
+    },
+    "2848": {
+      "meaning": "собакоеде неприкасаемом",
+      "transliteration": "сва-па̄ке"
+    },
+    "2720": {
+      "meaning": "спит",
+      "transliteration": "свапан"
+    },
+    "2912": {
+      "meaning": "обуздывать",
+      "transliteration": "сод̣хум"
+    },
+    "2953": {
+      "meaning": "объекты чувств",
+      "transliteration": "спарш́а̄н"
+    },
+    "2716": {
+      "meaning": "осязает",
+      "transliteration": "спр̣ш́ан"
+    },
+    "2793": {
+      "meaning": "создает",
+      "transliteration": "ср̣джати"
+    },
+    "2671": {
+      "meaning": "состояние",
+      "transliteration": "стха̄нам"
+    },
+    "2878": {
+      "meaning": "наделенный непоколебимым разумом",
+      "transliteration": "стхира-буддхих̣"
+    },
+    "2868": {
+      "meaning": "пребывают",
+      "transliteration": "стхита̄х̣"
+    },
+    "2859": {
+      "meaning": "пребывает",
+      "transliteration": "стхитам"
+    },
+    "2882": {
+      "meaning": "пребывает",
+      "transliteration": "стхитах̣"
+    },
+    "2809": {
+      "meaning": "праведный поступок",
+      "transliteration": "сукр̣там"
+    },
+    "2893": {
+      "meaning": "блаженство",
+      "transliteration": "сукхам"
+    },
+    "2922": {
+      "meaning": "испытывает духовное блаженство",
+      "transliteration": "сукхӣ"
+    },
+    "2629": {
+      "meaning": "определенно",
+      "transliteration": "суниш́читам"
+    },
+    "2986": {
+      "meaning": "друг",
+      "transliteration": "сухр̣дам"
+    },
+    "2854": {
+      "meaning": "теми",
+      "transliteration": "таих̣"
+    },
+    "2637": {
+      "meaning": "из них",
+      "transliteration": "тайох̣"
+    },
+    "2983": {
+      "meaning": "и аскезами",
+      "transliteration": "тапаса̄м"
+    },
+    "2865": {
+      "meaning": "поэтому",
+      "transliteration": "тасма̄т"
+    },
+    "2828": {
+      "meaning": "то",
+      "transliteration": "тат"
+    },
+    "2831": {
+      "meaning": "обратившие к Господу ум",
+      "transliteration": "тат-а̄тма̄нах̣"
+    },
+    "2830": {
+      "meaning": "устремившие разум к Всевышнему",
+      "transliteration": "тат-буддхайах̣"
+    },
+    "2832": {
+      "meaning": "твердо убежденные в истинности пути служения Кришне",
+      "transliteration": "тат-ниш̣т̣ха̄х̣"
+    },
+    "2833": {
+      "meaning": "во всем уповающие на Бога",
+      "transliteration": "тат-пара̄йан̣а̄х̣"
+    },
+    "2713": {
+      "meaning": "познавший сущность бытия",
+      "transliteration": "таттва-вит"
+    },
+    "2927": {
+      "meaning": "и",
+      "transliteration": "татха̄"
+    },
+    "2902": {
+      "meaning": "они",
+      "transliteration": "те"
+    },
+    "2814": {
+      "meaning": "ибо",
+      "transliteration": "тена"
+    },
+    "2824": {
+      "meaning": "им",
+      "transliteration": "теш̣а̄м"
+    },
+    "2906": {
+      "meaning": "ими",
+      "transliteration": "теш̣у"
+    },
+    "2763": {
+      "meaning": "отрешаясь",
+      "transliteration": "тйактва̄"
+    },
+    "2818": {
+      "meaning": "но",
+      "transliteration": "ту"
+    },
+    "2665": {
+      "meaning": "обоих путей",
+      "transliteration": "убхайох̣"
+    },
+    "2636": {
+      "meaning": "оба",
+      "transliteration": "убхау"
+    },
+    "2631": {
+      "meaning": "сказал",
+      "transliteration": "ува̄ча"
+    },
+    "2874": {
+      "meaning": "скорбит",
+      "transliteration": "уд-виджет"
+    },
+    "2917": {
+      "meaning": "возникающие",
+      "transliteration": "удбхавам"
+    },
+    "2725": {
+      "meaning": "открывает",
+      "transliteration": "унмиш̣ан"
+    },
+    "2844": {
+      "meaning": "в слоне",
+      "transliteration": "хастини"
+    },
+    "2897": {
+      "meaning": "лишь",
+      "transliteration": "хи"
+    },
+    "2942": {
+      "meaning": "действующие ради блага",
+      "transliteration": "хите-рата̄х̣"
+    },
+    "2957": {
+      "meaning": "и",
+      "transliteration": "ча"
+    },
+    "2965": {
+      "meaning": "происходящее",
+      "transliteration": "ча̄рин̣ау"
+    },
+    "2956": {
+      "meaning": "взгляд",
+      "transliteration": "чакш̣ух̣"
+    },
+    "2939": {
+      "meaning": "свободные от двойственности",
+      "transliteration": "чхинна-дваидха̄х̣"
+    },
+    "2991": {
+      "meaning": "подлинное умиротворение",
+      "transliteration": "ш́а̄нтим"
+    },
+    "2909": {
+      "meaning": "способен",
+      "transliteration": "ш́акноти"
+    },
+    "2621": {
+      "meaning": "превозносишь",
+      "transliteration": "ш́ам̇саси"
+    },
+    "2914": {
+      "meaning": "оставления тела",
+      "transliteration": "ш́арӣра-вимокш̣ан̣а̄т"
+    },
+    "2721": {
+      "meaning": "дышит",
+      "transliteration": "ш́васан"
+    },
+    "2715": {
+      "meaning": "слышит",
+      "transliteration": "ш́р̣н̣ван"
+    },
+    "2623": {
+      "meaning": "наиболее благоприятен",
+      "transliteration": "ш́рейах̣"
+    },
+    "2630": {
+      "meaning": "Всевышний",
+      "transliteration": "ш́рӣ бхагава̄н"
+    },
+    "2759": {
+      "meaning": "ради очищения",
+      "transliteration": "ш́уддхайе"
+    },
+    "2845": {
+      "meaning": "в собаке",
+      "transliteration": "ш́уни"
+    },
+    "2979": {
+      "meaning": "воистину",
+      "transliteration": "эва"
+    },
+    "2676": {
+      "meaning": "как одно",
+      "transliteration": "экам"
+    },
+    "2624": {
+      "meaning": "из этих двух путей",
+      "transliteration": "этайох̣"
+    }
+  }
+}

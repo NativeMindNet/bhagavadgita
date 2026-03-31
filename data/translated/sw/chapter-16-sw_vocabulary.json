@@ -1,0 +1,856 @@
+{
+  "vocabulary": {
+    "22489": {
+      "meaning": "hizi ni sifa (najisi)",
+      "transliteration": "ete gunā bhavanti"
+    },
+    "22459": {
+      "meaning": "hizi ni sifa",
+      "transliteration": "ete gunā bhavanti"
+    },
+    "22643": {
+      "meaning": "ewe mwana wa Kuntī",
+      "transliteration": "he kaunteya"
+    },
+    "22488": {
+      "meaning": "ewe Pārtha",
+      "transliteration": "he pārtha"
+    },
+    "22503": {
+      "meaning": "ewe mwana wa Pāṇḍu",
+      "transliteration": "he pāṇḍava"
+    },
+    "22490": {
+      "meaning": "wa mtu aliyozaliwa kwa hatima",
+      "transliteration": "abhijātasya"
+    },
+    "22505": {
+      "meaning": "umezaliwa kwa hatima",
+      "transliteration": "abhijātaḥ asi"
+    },
+    "22632": {
+      "meaning": "na wanahusisha makosa kwa sifa nzuri za watu watakatifu",
+      "transliteration": "abhyasūyakāḥ"
+    },
+    "22594": {
+      "meaning": "mimi ni mwenye kunufaika",
+      "transliteration": "aham bhogī"
+    },
+    "22593": {
+      "meaning": "mimi ni bwana",
+      "transliteration": "aham īśvaraḥ"
+    },
+    "22478": {
+      "meaning": "kutokuwa na pupa",
+      "transliteration": "aloluptvam"
+    },
+    "22606": {
+      "meaning": "akili zao zimejaa mawazo mengi ya bure",
+      "transliteration": "aneka-chitta-vibhrāntāḥ"
+    },
+    "22535": {
+      "meaning": "na kila kitu kimezaliwa kutoka kwa muungano wa dume na jike",
+      "transliteration": "aparaspara-sambhūtam"
+    },
+    "22555": {
+      "meaning": "kwa tamaa ya starehe za kidunia",
+      "transliteration": "asat-grāhān gṛhītvā"
+    },
+    "22617": {
+      "meaning": "wakipuuza amri za maandiko matakatifu",
+      "transliteration": "avidhi-pūrvakam"
+    },
+    "22506": {
+      "meaning": "wa sifa za kimungu na za wema",
+      "transliteration": "daivīm sampadam"
+    },
+    "22553": {
+      "meaning": "wamejaa ubatili, kiburi na majivuno",
+      "transliteration": "dambha-māna-mada-anvitāḥ"
+    },
+    "22493": {
+      "meaning": "majivuno (kwa sababu ya maarifa, utajiri au nasaba)",
+      "transliteration": "darpaḥ"
+    },
+    "22615": {
+      "meaning": "wamelevwa na utajiri na kiburi",
+      "transliteration": "dhana-māna-mada-anvitāḥ"
+    },
+    "22509": {
+      "meaning": "hizi aina mbili za asili za viumbe",
+      "transliteration": "dvau eva bhūta-sargau"
+    },
+    "22690": {
+      "meaning": "katika ulimwengu huu wa vitendo",
+      "transliteration": "iha"
+    },
+    "22532": {
+      "meaning": "ulimwengu hauna ukweli",
+      "transliteration": "jagat asatyam"
+    },
+    "22548": {
+      "meaning": "wa ulimwengu",
+      "transliteration": "jagataḥ"
+    },
+    "22537": {
+      "meaning": "kuna nini zaidi ya hili?",
+      "transliteration": "kim anyat"
+    },
+    "22572": {
+      "meaning": "kwa ajili ya kutimiza tamaa zao",
+      "transliteration": "kāma-bhoga-artham"
+    },
+    "22460": {
+      "meaning": "kutokuwa na hofu",
+      "transliteration": "abhayam"
+    },
+    "22461": {
+      "meaning": "usafi wa moyo",
+      "transliteration": "sattva-saṁśuddhi"
+    },
+    "22462": {
+      "meaning": "maarifa ya kiroho",
+      "transliteration": "jñāna-yoga"
+    },
+    "22463": {
+      "meaning": "uthabiti na kuendelea",
+      "transliteration": "vyavasthiti"
+    },
+    "22464": {
+      "meaning": "ukarimu",
+      "transliteration": "dānam"
+    },
+    "22465": {
+      "meaning": "kujidhibiti",
+      "transliteration": "damaḥ"
+    },
+    "22466": {
+      "meaning": "sadaka",
+      "transliteration": "yajñaḥ"
+    },
+    "22467": {
+      "meaning": "kusoma maandiko matakatifu",
+      "transliteration": "svādhyāyaḥ"
+    },
+    "22468": {
+      "meaning": "kujikanya",
+      "transliteration": "tapaḥ"
+    },
+    "22469": {
+      "meaning": "uaminifu",
+      "transliteration": "ārjavam"
+    },
+    "22470": {
+      "meaning": "kutotumia nguvu",
+      "transliteration": "ahiṁsā"
+    },
+    "22471": {
+      "meaning": "ukweli",
+      "transliteration": "satyam"
+    },
+    "22472": {
+      "meaning": "kutokuwa na hasira",
+      "transliteration": "akrodhaḥ"
+    },
+    "22473": {
+      "meaning": "kujitoa",
+      "transliteration": "tyāgaḥ"
+    },
+    "22474": {
+      "meaning": "amani",
+      "transliteration": "śāntiḥ"
+    },
+    "22475": {
+      "meaning": "kutafuta makosa kwa wengine",
+      "transliteration": "apaiśunam"
+    },
+    "22476": {
+      "meaning": "huruma",
+      "transliteration": "dayā"
+    },
+    "22477": {
+      "meaning": "kwa viumbe vyote",
+      "transliteration": "bhūteṣu"
+    },
+    "22479": {
+      "meaning": "upole",
+      "transliteration": "mārdavam"
+    },
+    "22480": {
+      "meaning": "unyenyekevu",
+      "transliteration": "hrī"
+    },
+    "22481": {
+      "meaning": "uthabiti",
+      "transliteration": "acāpalam"
+    },
+    "22482": {
+      "meaning": "nguvu",
+      "transliteration": "tejaḥ"
+    },
+    "22483": {
+      "meaning": "kusamehe",
+      "transliteration": "kṣamā"
+    },
+    "22484": {
+      "meaning": "uvumilivu",
+      "transliteration": "dhṛtiḥ"
+    },
+    "22485": {
+      "meaning": "usafi",
+      "transliteration": "śaucam"
+    },
+    "22486": {
+      "meaning": "kutokuwa na chuki",
+      "transliteration": "adrohaḥ"
+    },
+    "22487": {
+      "meaning": "kutokuwa na majivuno",
+      "transliteration": "nātimānitā"
+    },
+    "22491": {
+      "meaning": "unafiki",
+      "transliteration": "dambhaḥ"
+    },
+    "22492": {
+      "meaning": "kiburi",
+      "transliteration": "darpaḥ"
+    },
+    "22494": {
+      "meaning": "majivuno ya nafsi",
+      "transliteration": "abhimānaḥ"
+    },
+    "22495": {
+      "meaning": "hasira",
+      "transliteration": "krodhaḥ"
+    },
+    "22496": {
+      "meaning": "ukatili",
+      "transliteration": "pāruṣyam"
+    },
+    "22497": {
+      "meaning": "ujinga",
+      "transliteration": "ajñānam"
+    },
+    "22498": {
+      "meaning": "ya kimungu",
+      "transliteration": "daivī"
+    },
+    "22499": {
+      "meaning": "asili",
+      "transliteration": "sampad"
+    },
+    "22500": {
+      "meaning": "kwa ukombozi",
+      "transliteration": "vimokṣāya"
+    },
+    "22501": {
+      "meaning": "kwa utumwa",
+      "transliteration": "nibandhāya"
+    },
+    "22502": {
+      "meaning": "ya kishetani",
+      "transliteration": "āsurī"
+    },
+    "22504": {
+      "meaning": "inachukuliwa",
+      "transliteration": "mātā"
+    },
+    "22507": {
+      "meaning": "usihuzunike",
+      "transliteration": "mā śucaḥ"
+    },
+    "22508": {
+      "meaning": "mbili",
+      "transliteration": "dvau"
+    },
+    "22510": {
+      "meaning": "katika ulimwengu",
+      "transliteration": "loke"
+    },
+    "22511": {
+      "meaning": "hii",
+      "transliteration": "asmin"
+    },
+    "22512": {
+      "meaning": "ya kimungu",
+      "transliteration": "daivaḥ"
+    },
+    "22513": {
+      "meaning": "ya kishetani",
+      "transliteration": "āsuraḥ"
+    },
+    "22514": {
+      "meaning": "kweli",
+      "transliteration": "eva"
+    },
+    "22515": {
+      "meaning": "na",
+      "transliteration": "ca"
+    },
+    "22516": {
+      "meaning": "ya kimungu",
+      "transliteration": "daivaḥ"
+    },
+    "22517": {
+      "meaning": "kwa undani",
+      "transliteration": "vistaraśaḥ"
+    },
+    "22518": {
+      "meaning": "imesemwa",
+      "transliteration": "proktaḥ"
+    },
+    "22519": {
+      "meaning": "ya kishetani",
+      "transliteration": "āsuram"
+    },
+    "22520": {
+      "meaning": "kutoka kwangu",
+      "transliteration": "me"
+    },
+    "22521": {
+      "meaning": "sikiliza",
+      "transliteration": "śṛṇu"
+    },
+    "22522": {
+      "meaning": "wenye asili ya kishetani",
+      "transliteration": "āsurīṁ yonim"
+    },
+    "22523": {
+      "meaning": "hawajui",
+      "transliteration": "na viduḥ"
+    },
+    "22524": {
+      "meaning": "kitendo",
+      "transliteration": "pravṛttiṁ"
+    },
+    "22525": {
+      "meaning": "wala pia",
+      "transliteration": "na ca"
+    },
+    "22526": {
+      "meaning": "kuepuka",
+      "transliteration": "nivṛttiṁ"
+    },
+    "22527": {
+      "meaning": "hakuna",
+      "transliteration": "na"
+    },
+    "22528": {
+      "meaning": "usafi",
+      "transliteration": "śaucam"
+    },
+    "22529": {
+      "meaning": "wala pia",
+      "transliteration": "na api"
+    },
+    "22530": {
+      "meaning": "tabia nzuri",
+      "transliteration": "ācāraḥ"
+    },
+    "22531": {
+      "meaning": "ukweli",
+      "transliteration": "satyam"
+    },
+    "22533": {
+      "meaning": "bila msingi",
+      "transliteration": "apratiṣṭham"
+    },
+    "22534": {
+      "meaning": "bila Mungu",
+      "transliteration": "anīśvaram"
+    },
+    "22536": {
+      "meaning": "kimezaliwa",
+      "transliteration": "paraspara"
+    },
+    "22538": {
+      "meaning": "kwa sababu gani?",
+      "transliteration": "kim hetuḥ"
+    },
+    "22539": {
+      "meaning": "nyingine",
+      "transliteration": "anyat"
+    },
+    "22540": {
+      "meaning": "wakiwa wameshikilia",
+      "transliteration": "etām"
+    },
+    "22541": {
+      "meaning": "mtazamo",
+      "transliteration": "dṛṣṭim"
+    },
+    "22542": {
+      "meaning": "wapotevu",
+      "transliteration": "naṣṭātmānaḥ"
+    },
+    "22543": {
+      "meaning": "wale wenye uelewa mdogo",
+      "transliteration": "alpa-buddhayaḥ"
+    },
+    "22544": {
+      "meaning": "matendo ya kikatili",
+      "transliteration": "ugra-karmāṇaḥ"
+    },
+    "22545": {
+      "meaning": "waharibifu wa ulimwengu",
+      "transliteration": "prabhavanti"
+    },
+    "22546": {
+      "meaning": "kwa uharibifu",
+      "transliteration": "jagataḥ hitāya"
+    },
+    "22547": {
+      "meaning": "wa ulimwengu",
+      "transliteration": "jagataḥ"
+    },
+    "22549": {
+      "meaning": "kwa ajili ya",
+      "transliteration": "artham"
+    },
+    "22550": {
+      "meaning": "tamaa",
+      "transliteration": "kāmam"
+    },
+    "22551": {
+      "meaning": "wakitegemea",
+      "transliteration": "āśritya"
+    },
+    "22552": {
+      "meaning": "isiyotosheka",
+      "transliteration": "duṣpūram"
+    },
+    "22554": {
+      "meaning": "kutoka kwa udanganyifu",
+      "transliteration": "mohād"
+    },
+    "22556": {
+      "meaning": "imani najisi",
+      "transliteration": "asat-grāhān"
+    },
+    "22557": {
+      "meaning": "wakiwa wameshikilia",
+      "transliteration": "gṛhītvā"
+    },
+    "22558": {
+      "meaning": "kwa ujinga",
+      "transliteration": "avidhi-pūrvakam"
+    },
+    "22559": {
+      "meaning": "wameazimia",
+      "transliteration": "pracarita"
+    },
+    "22560": {
+      "meaning": "hadi kifo",
+      "transliteration": "pralayāntām"
+    },
+    "22561": {
+      "meaning": "wasiwasi",
+      "transliteration": "cintām"
+    },
+    "22562": {
+      "meaning": "zisizo na kikomo",
+      "transliteration": "anekā"
+    },
+    "22563": {
+      "meaning": "hadi",
+      "transliteration": "eva"
+    },
+    "22564": {
+      "meaning": "hii ndiyo",
+      "transliteration": "etāvad"
+    },
+    "22565": {
+      "meaning": "wamehakikishwa",
+      "transliteration": "iti"
+    },
+    "22566": {
+      "meaning": "wamezama",
+      "transliteration": "āśritya"
+    },
+    "22567": {
+      "meaning": "tamaa",
+      "transliteration": "kāmam"
+    },
+    "22568": {
+      "meaning": "na hasira",
+      "transliteration": "krodhaḥ ca"
+    },
+    "22569": {
+      "meaning": "wanatafuta",
+      "transliteration": "iśnanti"
+    },
+    "22570": {
+      "meaning": "utajiri",
+      "transliteration": "arthān"
+    },
+    "22571": {
+      "meaning": "zisizo za haki",
+      "transliteration": "anyāyena"
+    },
+    "22573": {
+      "meaning": "hivyo",
+      "transliteration": "iti"
+    },
+    "22574": {
+      "meaning": "wanafikiria",
+      "transliteration": "kalpayante"
+    },
+    "22575": {
+      "meaning": "imeangamizwa",
+      "transliteration": "hataḥ"
+    },
+    "22576": {
+      "meaning": "adui",
+      "transliteration": "ari"
+    },
+    "22577": {
+      "meaning": "pia",
+      "transliteration": "ca"
+    },
+    "22578": {
+      "meaning": "wengine",
+      "transliteration": "anyān"
+    },
+    "22579": {
+      "meaning": "mimi",
+      "transliteration": "aham"
+    },
+    "22580": {
+      "meaning": "bwana",
+      "transliteration": "īśvaraḥ"
+    },
+    "22581": {
+      "meaning": "nanufaika",
+      "transliteration": "aham bhogī"
+    },
+    "22582": {
+      "meaning": "mkamilifu",
+      "transliteration": "siddhaḥ"
+    },
+    "22583": {
+      "meaning": "mwenye nguvu",
+      "transliteration": "balīvān"
+    },
+    "22584": {
+      "meaning": "mwenye furaha",
+      "transliteration": "sukhī"
+    },
+    "22585": {
+      "meaning": "tajiri",
+      "transliteration": "dhanī"
+    },
+    "22586": {
+      "meaning": "nimezaliwa mwenye hadhi",
+      "transliteration": "abhijānavān"
+    },
+    "22587": {
+      "meaning": "nani kama mimi?",
+      "transliteration": "kaḥ iyo samānaḥ"
+    },
+    "22588": {
+      "meaning": "nitatoa sadaka",
+      "transliteration": "yakṣyāmi"
+    },
+    "22589": {
+      "meaning": "nitanufaika",
+      "transliteration": "modiṣyāmi"
+    },
+    "22590": {
+      "meaning": "nitafurahi",
+      "transliteration": "ramiṣyāmi"
+    },
+    "22591": {
+      "meaning": "hivyo",
+      "transliteration": "iti"
+    },
+    "22592": {
+      "meaning": "wamechanganyikiwa",
+      "transliteration": "ajñāna-vimohitāḥ"
+    },
+    "22595": {
+      "meaning": "mingi",
+      "transliteration": "anekā"
+    },
+    "22596": {
+      "meaning": "wasiwasi",
+      "transliteration": "cintābhiḥ"
+    },
+    "22597": {
+      "meaning": "wamepigwa",
+      "transliteration": "vyāptāḥ"
+    },
+    "22598": {
+      "meaning": "wamezamia",
+      "transliteration": "magnāḥ"
+    },
+    "22599": {
+      "meaning": "katika starehe za hisia",
+      "transliteration": "kāma-sukheṣu"
+    },
+    "22600": {
+      "meaning": "huanguka",
+      "transliteration": "pravartante"
+    },
+    "22601": {
+      "meaning": "kuzimu najisi",
+      "transliteration": "narake aśucau"
+    },
+    "22602": {
+      "meaning": "wamejaa ubinafsi",
+      "transliteration": "ātma-sampaditam"
+    },
+    "22603": {
+      "meaning": "wamezidi",
+      "transliteration": "dambha-māna"
+    },
+    "22604": {
+      "meaning": "wamelevwa",
+      "transliteration": "mada-anvitam"
+    },
+    "22605": {
+      "meaning": "hutoa sadaka",
+      "transliteration": "yajante"
+    },
+    "22607": {
+      "meaning": "kwa ajili ya majivuno",
+      "transliteration": "nāma-yajñāḥ"
+    },
+    "22608": {
+      "meaning": "ubinafsi",
+      "transliteration": "ahaṅkāram"
+    },
+    "22609": {
+      "meaning": "nguvu",
+      "transliteration": "balam"
+    },
+    "22610": {
+      "meaning": "kiburi",
+      "transliteration": "darpam"
+    },
+    "22611": {
+      "meaning": "tamaa",
+      "transliteration": "kāmam"
+    },
+    "22612": {
+      "meaning": "na hasira",
+      "transliteration": "krodhaṁ ca"
+    },
+    "22613": {
+      "meaning": "wanavya",
+      "transliteration": "abhyasūyantaḥ"
+    },
+    "22614": {
+      "meaning": "aliyekaa mwilini",
+      "transliteration": "pratyadehiṣu"
+    },
+    "22616": {
+      "meaning": "wanachukia",
+      "transliteration": "dviṣantaḥ"
+    },
+    "22618": {
+      "meaning": "mimi",
+      "transliteration": "mām"
+    },
+    "22619": {
+      "meaning": "wakatili",
+      "transliteration": "tān"
+    },
+    "22620": {
+      "meaning": "wa chini kabisa",
+      "transliteration": "nirayān"
+    },
+    "22621": {
+      "meaning": "kati ya binadamu",
+      "transliteration": "āsurījānān"
+    },
+    "22622": {
+      "meaning": "huwatupa",
+      "transliteration": "kṣipāmi"
+    },
+    "22623": {
+      "meaning": "milele",
+      "transliteration": "ajasram"
+    },
+    "22624": {
+      "meaning": "katika mizunguko",
+      "transliteration": "yoniṣu"
+    },
+    "22625": {
+      "meaning": "ya kishetani",
+      "transliteration": "āsurīṣu"
+    },
+    "22626": {
+      "meaning": "huingia",
+      "transliteration": "prāpya"
+    },
+    "22627": {
+      "meaning": "tumbo",
+      "transliteration": "yonim"
+    },
+    "22628": {
+      "meaning": "ya kishetani",
+      "transliteration": "āsurīṣu"
+    },
+    "22629": {
+      "meaning": "hupotea",
+      "transliteration": "cāturvarnyeṣu"
+    },
+    "22630": {
+      "meaning": "katika kila kuzaliwa",
+      "transliteration": "garbhān"
+    },
+    "22631": {
+      "meaning": "hawafiki",
+      "transliteration": "yanti"
+    },
+    "22633": {
+      "meaning": "tatu",
+      "transliteration": "trividham"
+    },
+    "22634": {
+      "meaning": "mlango",
+      "transliteration": "narakaḥ"
+    },
+    "22635": {
+      "meaning": "wa kuzimu",
+      "transliteration": "narakaḥ"
+    },
+    "22636": {
+      "meaning": "inayopoteza",
+      "transliteration": "nāśanam"
+    },
+    "22637": {
+      "meaning": "wa roho",
+      "transliteration": "ātmanaḥ"
+    },
+    "22638": {
+      "meaning": "tamaa",
+      "transliteration": "kāmaḥ"
+    },
+    "22639": {
+      "meaning": "hasira",
+      "transliteration": "krodhaḥ"
+    },
+    "22640": {
+      "meaning": "pupa",
+      "transliteration": "tathā"
+    },
+    "22641": {
+      "meaning": "na",
+      "transliteration": "tathā"
+    },
+    "22642": {
+      "meaning": "kwa hiyo",
+      "transliteration": "tasmāt"
+    },
+    "22644": {
+      "meaning": "anayeokoka",
+      "transliteration": "vimuktaḥ"
+    },
+    "22645": {
+      "meaning": "mtu",
+      "transliteration": "naraḥ"
+    },
+    "22646": {
+      "meaning": "hizi",
+      "transliteration": "etairviḥ"
+    },
+    "22647": {
+      "meaning": "milango ya giza",
+      "transliteration": "tamairdvibhiḥ"
+    },
+    "22648": {
+      "meaning": "hufanya mema",
+      "transliteration": "ācaraty"
+    },
+    "22649": {
+      "meaning": "kwa roho yake",
+      "transliteration": "ātmanaḥ"
+    },
+    "22650": {
+      "meaning": "na hufikia",
+      "transliteration": "yāti"
+    },
+    "22651": {
+      "meaning": "lengo kuu",
+      "transliteration": "pārāṁ gatim"
+    },
+    "22652": {
+      "meaning": "anayeacha",
+      "transliteration": "yaḥ śāstra"
+    },
+    "22653": {
+      "meaning": "mafundisho ya maandiko",
+      "transliteration": "vidhim"
+    },
+    "22654": {
+      "meaning": "anayetenda",
+      "transliteration": "vartate"
+    },
+    "22655": {
+      "meaning": "kufuatana na tamaa zake",
+      "transliteration": "iṣṭa-pūrtim"
+    },
+    "22656": {
+      "meaning": "hafiki",
+      "transliteration": "na sa"
+    },
+    "22657": {
+      "meaning": "ukamilifu",
+      "transliteration": "siddhim"
+    },
+    "22658": {
+      "meaning": "wala furaha",
+      "transliteration": "na sukham"
+    },
+    "22659": {
+      "meaning": "wala lengo kuu",
+      "transliteration": "pārāṁ gatim api"
+    },
+    "22660": {
+      "meaning": "kwa hiyo",
+      "transliteration": "tasmāt"
+    },
+    "22661": {
+      "meaning": "maandiko matakatifu",
+      "transliteration": "śāstram"
+    },
+    "22662": {
+      "meaning": "iwe",
+      "transliteration": "te"
+    },
+    "22663": {
+      "meaning": "mamlaka yako",
+      "transliteration": "pramāṇam"
+    },
+    "22664": {
+      "meaning": "kubainisha",
+      "transliteration": "kārya"
+    },
+    "22665": {
+      "meaning": "kutotenda",
+      "transliteration": "akārya"
+    },
+    "22666": {
+      "meaning": "ukijua",
+      "transliteration": "jñātvā"
+    },
+    "22667": {
+      "meaning": "ambayo maandiko yamesema",
+      "transliteration": "śāstra-vidhāna"
+    },
+    "22668": {
+      "meaning": "kitendo",
+      "transliteration": "karma"
+    },
+    "22669": {
+      "meaning": "kufanya",
+      "transliteration": "kartum"
+    },
+    "22670": {
+      "meaning": "unapaswa",
+      "transliteration": "arhasi"
+    }
+  }
+}

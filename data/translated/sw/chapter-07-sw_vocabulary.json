@@ -1,0 +1,204 @@
+{
+  "vocabulary": {
+    "19378": {
+      "meaning": "Ewe zao kubwa la Bharata",
+      "transliteration": "(he) bharatarṣabha"
+    },
+    "19506": {
+      "meaning": "Ewe Arjuna, mwinguzaji wa adui",
+      "transliteration": "(he) bhārata (he) parantapa"
+    },
+    "19275": {
+      "meaning": "Ewe Dhanañjaya, mshindi wa utajiri",
+      "transliteration": "(he) dhanañjaya"
+    },
+    "19286": {
+      "meaning": "Ewe mwana wa Kuntī",
+      "transliteration": "(he) kaunteya"
+    },
+    "19384": {
+      "meaning": "Aina hizi nne za watu",
+      "transliteration": "(iti) chatuḥ-vidhāḥ janāḥ"
+    },
+    "19227": {
+      "meaning": "Kitu kinachopaswa kujulikana kwako",
+      "transliteration": "(tava) jñātavyam"
+    },
+    "19441": {
+      "meaning": "Mimi, kama Roho Mkuu anayekaa moyoni mwake",
+      "transliteration": "aham"
+    },
+    "19271": {
+      "meaning": "Mimi ni chanzo cha udhihirisho",
+      "transliteration": "aham prabhavaḥ"
+    },
+    "19518": {
+      "meaning": "zimeangamizwa (kwa bahati ya ushirika na muabudu wangu safi)",
+      "transliteration": "anta-gatam"
+    },
+    "19413": {
+      "meaning": "kama wa juu kabisa",
+      "transliteration": "anuttamām"
+    },
+    "19432": {
+      "meaning": "nafasi nyingine za kimungu - nusu miungu - mungu wa jua, n.k.",
+      "transliteration": "anya-devatāḥ"
+    },
+    "19375": {
+      "meaning": "(3) wale ambao ujuzi wao umefunikwa",
+      "transliteration": "apahṛta-jñānāḥ"
+    },
+    "19440": {
+      "meaning": "kuabudu kwa imani",
+      "transliteration": "architum śraddhayā"
+    },
+    "19480": {
+      "meaning": "kama Brahma asiye na umbo au asiye na umbo",
+      "transliteration": "avyaktam"
+    },
+    "19325": {
+      "meaning": "kwa ajili ya wenye nguvu",
+      "transliteration": "bala-vatām"
+    },
+    "19326": {
+      "meaning": "kama nguvu ya sifa ya sāttvika, au wema, inayomwezesha mtu kutekeleza majukumu yake ya kidini",
+      "transliteration": "balam"
+    },
+    "23813": {
+      "meaning": "wanaonibuudu Mimi (ingawa nia zao zinaweza kuchanganywa na kitendo au ujuzi)",
+      "transliteration": "bhajante mām"
+    },
+    "19330": {
+      "meaning": "katika viumbe hai",
+      "transliteration": "bhūteṣu"
+    },
+    "19501": {
+      "meaning": "viumbe vyenye kusonga na visivyosonga",
+      "transliteration": "bhūtāni"
+    },
+    "19320": {
+      "meaning": "wa wenye akili",
+      "transliteration": "buddhi-matām"
+    },
+    "19319": {
+      "meaning": "kama akili",
+      "transliteration": "buddhiḥ"
+    },
+    "19466": {
+      "meaning": "waabudu wa nusu miungu",
+      "transliteration": "deva-yajaḥ"
+    },
+    "19332": {
+      "meaning": "bila kuvuka kanuni za ulimwengu za dini, yaani",
+      "transliteration": "dharma-aviruddhaḥ"
+    },
+    "19266": {
+      "meaning": "huchukuliwa kwa ajili ya furaha kupitia matendo yenye matunda",
+      "transliteration": "dhāryate"
+    },
+    "19361": {
+      "meaning": "ni vigumu kuvuka",
+      "transliteration": "duratyayā"
+    },
+    "19370": {
+      "meaning": "Aina hizi nne za watenda vibaya au watu wasio na bahati",
+      "transliteration": "duṣkṛtinaḥ"
+    },
+    "19520": {
+      "meaning": "huru kutoka kwa udanganyifu wa uwili",
+      "transliteration": "dvandva-moha-nirmuktāḥ"
+    },
+    "19511": {
+      "meaning": "kwa udanganyifu wa uwili",
+      "transliteration": "dvandva-mohena"
+    },
+    "19521": {
+      "meaning": "na wameimarika katika ufahamu wangu",
+      "transliteration": "dṛḍha-vratāḥ"
+    },
+    "19349": {
+      "meaning": "kwa udhihirishaji huu wa njia tatu za asili ya kimwili",
+      "transliteration": "ebhiḥ bhāvaiḥ tribhiḥ guṇamayaiḥ"
+    },
+    "19353": {
+      "meaning": "ambaye Mimi ni wa juu ya njia hizi",
+      "transliteration": "ebhyaḥ param"
+    },
+    "19270": {
+      "meaning": "vinaonekana kutoka kwa aina hizi mbili za prakṛti kama kṣetra na kṣetrajña (tazama 13.12)",
+      "transliteration": "etat yonīni"
+    },
+    "19359": {
+      "meaning": "imeundwa na njia tatu za asili ya kimwili",
+      "transliteration": "guṇa-mayī"
+    },
+    "19427": {
+      "meaning": "watu ambao akili zao zimepoteshwa",
+      "transliteration": "hṛta-jñānāḥ"
+    },
+    "19512": {
+      "meaning": "zinazotokana na kupenda na kuchukia",
+      "transliteration": "ichchhā-dveṣa-samutthena"
+    },
+    "19221": {
+      "meaning": "ujuzi huu wa nguvu yangu kamili (aiśvaryamaya-jñān)",
+      "transliteration": "idam jñānam"
+    },
+    "19526": {
+      "meaning": "kwa ajili ya uhuru kutoka kwa ugonjwa na mauti",
+      "transliteration": "jarā-maraṇa-mokṣāya"
+    },
+    "19381": {
+      "meaning": "mtu anayetafuta ujuzi wa maandiko matakatifu au ujuzi wa roho",
+      "transliteration": "jijñāsuḥ"
+    },
+    "19418": {
+      "meaning": "mtu aliyeng'oka (kwa bahati ya sādhu-saṅga, ushirika wa kiibada)",
+      "transliteration": "jñānavān"
+    },
+    "19395": {
+      "meaning": "kwa roho hiyo iliyong'oka",
+      "transliteration": "jñāninaḥ"
+    },
+    "19383": {
+      "meaning": "mjuzi aliyetakaswa wa roho",
+      "transliteration": "jñānī"
+    },
+    "19215": {
+      "meaning": "utaweza kujua",
+      "transliteration": "jñāsyasi"
+    },
+    "19263": {
+      "meaning": "katika umbo la roho za kibinafsi",
+      "transliteration": "jīva-bhūtām"
+    },
+    "19308": {
+      "meaning": "kama muda wa maisha",
+      "transliteration": "jīvanam"
+    },
+    "19536": {
+      "meaning": "kitendo ambacho roho hufungwa na uwepo wa kidunia",
+      "transliteration": "karma"
+    },
+    "19298": {
+      "meaning": "katika etheri",
+      "transliteration": "khe"
+    },
+    "19327": {
+      "meaning": "bila ubinafsi na ambatanisho",
+      "transliteration": "kāma-rāga-vivarjitam"
+    },
+    "19331": {
+      "meaning": "kama tamaa ya uzazi",
+      "transliteration": "kāmaḥ"
+    },
+    "19273": {
+      "meaning": "wa vyote",
+      "transliteration": "kṛtsnasya"
+    },
+    "19230": {
+      "meaning": "kati ya maelfu ya watu",
+      "transliteration": "manuṣyāṇām sahasreṣu"
+    }
+  }
+}

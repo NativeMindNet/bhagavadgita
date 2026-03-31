@@ -1,0 +1,540 @@
+{
+  "vocabulary": {
+    "22075": {
+      "meaning": "Ey Bharat hanedanının en asili",
+      "transliteration": "bharatarṣabha"
+    },
+    "22020": {
+      "meaning": "Ey Kuntī'nin oğlu",
+      "transliteration": "kaunteya"
+    },
+    "22085": {
+      "meaning": "Ey Kuru soyundan gelen",
+      "transliteration": "kuru-nandana"
+    },
+    "22179": {
+      "meaning": "Ey Pāṇḍu'nun oğlu",
+      "transliteration": "pāṇḍava"
+    },
+    "22224": {
+      "meaning": "Ben temelim",
+      "transliteration": "ahaṁ pratiṣṭhā"
+    },
+    "22230": {
+      "meaning": "ve ilahi aşkın nihai coşkusu",
+      "transliteration": "aikāntikasya sukhasya ca"
+    },
+    "22032": {
+      "meaning": "karanlıktan doğan",
+      "transliteration": "ajñāna-jam"
+    },
+    "22134": {
+      "meaning": "ve bilgi eksikliği",
+      "transliteration": "ajñānam eva ca"
+    },
+    "22226": {
+      "meaning": "ve tükenmezin",
+      "transliteration": "avyayasya ca"
+    },
+    "22166": {
+      "meaning": "neşeyi bilir",
+      "transliteration": "aśnute"
+    },
+    "22213": {
+      "meaning": "adanma yogası ile",
+      "transliteration": "bhakti-yogena"
+    },
+    "22225": {
+      "meaning": "Mutlak Hakikat'in",
+      "transliteration": "brahmaṇaḥ"
+    },
+    "22163": {
+      "meaning": "bedende ortaya çıkan",
+      "transliteration": "deha-samudbhavān"
+    },
+    "22009": {
+      "meaning": "bedenin içinde",
+      "transliteration": "dehe"
+    },
+    "22008": {
+      "meaning": "bedenin sakini",
+      "transliteration": "dehinam"
+    },
+    "22147": {
+      "meaning": "canlı varlık, tanık",
+      "transliteration": "draṣṭā"
+    },
+    "22162": {
+      "meaning": "doğanın bu üç hali",
+      "transliteration": "etān trīn guṇān"
+    },
+    "22192": {
+      "meaning": "haller tarafından",
+      "transliteration": "guṇaiḥ"
+    },
+    "22211": {
+      "meaning": "maddi doğanın hallerinin ötesinde",
+      "transliteration": "guṇa-atītaḥ"
+    },
+    "22155": {
+      "meaning": "hallerine",
+      "transliteration": "guṇebhyaḥ"
+    },
+    "22143": {
+      "meaning": "daha düşük niteliklere eğilimli",
+      "transliteration": "jaghanya-guṇa-vṛtti-sthāḥ"
+    },
+    "22165": {
+      "meaning": "doğum, ölüm ve yaşlılığın acılarından",
+      "transliteration": "janma-mṛtyu-jarā-duḥkhaiḥ"
+    },
+    "21961": {
+      "meaning": "tüm bilgi alanlarının",
+      "transliteration": "jñānānām"
+    },
+    "22106": {
+      "meaning": "o doğar",
+      "transliteration": "jāyate"
+    },
+    "22107": {
+      "meaning": "eyleme bağlı bir insan olarak",
+      "transliteration": "karma-saṅgiṣu"
+    },
+    "22151": {
+      "meaning": "yapan olarak",
+      "transliteration": "kartāram"
+    },
+    "22141": {
+      "meaning": "ortada (insanlar olarak)",
+      "transliteration": "madhye"
+    },
+    "21983": {
+      "meaning": "Benim döllenme yerimdir",
+      "transliteration": "mama yoniḥ"
+    },
+    "22207": {
+      "meaning": "dost ve düşmana karşı",
+      "transliteration": "mitra-ari-pakṣayoḥ"
+    },
+    "22184": {
+      "meaning": "ve yanılsama (cehaletin etkisi)",
+      "transliteration": "moham eva ca"
+    },
+    "22216": {
+      "meaning": "Bana (Yüce Rab Śyāmasundar)",
+      "transliteration": "mām ca"
+    },
+    "22112": {
+      "meaning": "alt türlerde",
+      "transliteration": "mūḍha-yoniṣu"
+    },
+    "22186": {
+      "meaning": "ve onları özlemez",
+      "transliteration": "na kāṅkṣati"
+    },
+    "22012": {
+      "meaning": "saflık nedeniyle",
+      "transliteration": "nirmalatvāt"
+    },
+    "22122": {
+      "meaning": "ve meyve",
+      "transliteration": "phalam (ca)"
+    },
+    "22182": {
+      "meaning": "aydınlanma (iyiliğin etkisi)",
+      "transliteration": "prakāśaṁ ca"
+    },
+    "21980": {
+      "meaning": "kozmik yok oluşta",
+      "transliteration": "pralaye ca"
+    },
+    "22132": {
+      "meaning": "yanılsama ve şaşkınlık",
+      "transliteration": "pramāda-mohau"
+    },
+    "22038": {
+      "meaning": "yanılsama, tembellik ve uyku ile",
+      "transliteration": "pramāda-ālasya-nidrābhiḥ"
+    },
+    "22183": {
+      "meaning": "aktivasyon (tutkunun etkisi)",
+      "transliteration": "pravṛttim ca"
+    },
+    "22105": {
+      "meaning": "tutku halinin predominansı ile",
+      "transliteration": "rajasi (pravṛddhe)"
+    },
+    "22076": {
+      "meaning": "tutku halinin predominansı ile",
+      "transliteration": "rajasi vivṛddhe"
+    },
+    "22057": {
+      "meaning": "tutku hali",
+      "transliteration": "rajaḥ"
+    },
+    "22056": {
+      "meaning": "tutku ve cehalet halleri",
+      "transliteration": "rajaḥ tamaḥ ca"
+    },
+    "22023": {
+      "meaning": "arzunun somutlaşması",
+      "transliteration": "rāga-ātmakam"
+    },
+    "22099": {
+      "meaning": "aydınlatıldığında",
+      "transliteration": "yadā"
+    },
+    "22098": {
+      "meaning": "aydınlatılmadığında",
+      "transliteration": "yadā"
+    },
+    "22045": {
+      "meaning": "iyilik hali",
+      "transliteration": "sattva"
+    },
+    "22044": {
+      "meaning": "iyilik hali",
+      "transliteration": "sattva"
+    },
+    "22043": {
+      "meaning": "iyilik hali",
+      "transliteration": "sattva"
+    },
+    "22042": {
+      "meaning": "iyilik hali",
+      "transliteration": "sattva"
+    },
+    "22041": {
+      "meaning": "iyilik hali",
+      "transliteration": "sattva"
+    },
+    "22040": {
+      "meaning": "iyilik hali",
+      "transliteration": "sattva"
+    },
+    "22039": {
+      "meaning": "iyilik hali",
+      "transliteration": "sattva"
+    },
+    "22037": {
+      "meaning": "iyilik hali",
+      "transliteration": "sattva"
+    },
+    "22036": {
+      "meaning": "iyilik hali",
+      "transliteration": "sattva"
+    },
+    "22035": {
+      "meaning": "iyilik hali",
+      "transliteration": "sattva"
+    },
+    "22034": {
+      "meaning": "iyilik hali",
+      "transliteration": "sattva"
+    },
+    "22033": {
+      "meaning": "iyilik hali",
+      "transliteration": "sattva"
+    },
+    "22031": {
+      "meaning": "iyilik hali",
+      "transliteration": "sattva"
+    },
+    "22030": {
+      "meaning": "iyilik hali",
+      "transliteration": "sattva"
+    },
+    "22029": {
+      "meaning": "iyilik hali",
+      "transliteration": "sattva"
+    },
+    "22028": {
+      "meaning": "iyilik hali",
+      "transliteration": "sattva"
+    },
+    "22027": {
+      "meaning": "iyilik hali",
+      "transliteration": "sattva"
+    },
+    "22026": {
+      "meaning": "iyilik hali",
+      "transliteration": "sattva"
+    },
+    "22025": {
+      "meaning": "iyilik hali",
+      "transliteration": "sattva"
+    },
+    "22024": {
+      "meaning": "iyilik hali",
+      "transliteration": "sattva"
+    },
+    "22022": {
+      "meaning": "iyilik hali",
+      "transliteration": "sattva"
+    },
+    "22021": {
+      "meaning": "iyilik hali",
+      "transliteration": "sattva"
+    },
+    "22019": {
+      "meaning": "iyilik hali",
+      "transliteration": "sattva"
+    },
+    "22018": {
+      "meaning": "iyilik hali",
+      "transliteration": "sattva"
+    },
+    "22017": {
+      "meaning": "iyilik hali",
+      "transliteration": "sattva"
+    },
+    "22016": {
+      "meaning": "iyilik hali",
+      "transliteration": "sattva"
+    },
+    "22015": {
+      "meaning": "iyilik hali",
+      "transliteration": "sattva"
+    },
+    "22014": {
+      "meaning": "iyilik hali",
+      "transliteration": "sattva"
+    },
+    "22013": {
+      "meaning": "iyilik hali",
+      "transliteration": "sattva"
+    },
+    "22011": {
+      "meaning": "iyilik hali",
+      "transliteration": "sattva"
+    },
+    "22010": {
+      "meaning": "iyilik hali",
+      "transliteration": "sattva"
+    },
+    "22007": {
+      "meaning": "iyilik hali",
+      "transliteration": "sattva"
+    },
+    "22006": {
+      "meaning": "iyilik hali",
+      "transliteration": "sattva"
+    },
+    "22005": {
+      "meaning": "iyilik hali",
+      "transliteration": "sattva"
+    },
+    "22004": {
+      "meaning": "iyilik hali",
+      "transliteration": "sattva"
+    },
+    "22003": {
+      "meaning": "iyilik hali",
+      "transliteration": "sattva"
+    },
+    "22002": {
+      "meaning": "iyilik hali",
+      "transliteration": "sattva"
+    },
+    "22001": {
+      "meaning": "iyilik hali",
+      "transliteration": "sattva"
+    },
+    "22000": {
+      "meaning": "iyilik hali",
+      "transliteration": "sattva"
+    },
+    "21999": {
+      "meaning": "iyilik hali",
+      "transliteration": "sattva"
+    },
+    "21998": {
+      "meaning": "iyilik hali",
+      "transliteration": "sattva"
+    },
+    "21997": {
+      "meaning": "iyilik hali",
+      "transliteration": "sattva"
+    },
+    "21996": {
+      "meaning": "iyilik hali",
+      "transliteration": "sattva"
+    },
+    "21995": {
+      "meaning": "iyilik hali",
+      "transliteration": "sattva"
+    },
+    "21994": {
+      "meaning": "iyilik hali",
+      "transliteration": "sattva"
+    },
+    "21993": {
+      "meaning": "iyilik hali",
+      "transliteration": "sattva"
+    },
+    "21992": {
+      "meaning": "iyilik hali",
+      "transliteration": "sattva"
+    },
+    "21991": {
+      "meaning": "iyilik hali",
+      "transliteration": "sattva"
+    },
+    "21990": {
+      "meaning": "iyilik hali",
+      "transliteration": "sattva"
+    },
+    "21989": {
+      "meaning": "iyilik hali",
+      "transliteration": "sattva"
+    },
+    "21988": {
+      "meaning": "iyilik hali",
+      "transliteration": "sattva"
+    },
+    "21987": {
+      "meaning": "iyilik hali",
+      "transliteration": "sattva"
+    },
+    "21986": {
+      "meaning": "iyilik hali",
+      "transliteration": "sattva"
+    },
+    "21985": {
+      "meaning": "iyilik hali",
+      "transliteration": "sattva"
+    },
+    "21984": {
+      "meaning": "iyilik hali",
+      "transliteration": "sattva"
+    },
+    "21982": {
+      "meaning": "iyilik hali",
+      "transliteration": "sattva"
+    },
+    "21981": {
+      "meaning": "iyilik hali",
+      "transliteration": "sattva"
+    },
+    "21979": {
+      "meaning": "iyilik hali",
+      "transliteration": "sattva"
+    },
+    "21978": {
+      "meaning": "iyilik hali",
+      "transliteration": "sattva"
+    },
+    "21977": {
+      "meaning": "iyilik hali",
+      "transliteration": "sattva"
+    },
+    "21976": {
+      "meaning": "iyilik hali",
+      "transliteration": "sattva"
+    },
+    "21975": {
+      "meaning": "iyilik hali",
+      "transliteration": "sattva"
+    },
+    "21974": {
+      "meaning": "iyilik hali",
+      "transliteration": "sattva"
+    },
+    "21973": {
+      "meaning": "iyilik hali",
+      "transliteration": "sattva"
+    },
+    "21972": {
+      "meaning": "iyilik hali",
+      "transliteration": "sattva"
+    },
+    "21971": {
+      "meaning": "iyilik hali",
+      "transliteration": "sattva"
+    },
+    "21970": {
+      "meaning": "iyilik hali",
+      "transliteration": "sattva"
+    },
+    "21969": {
+      "meaning": "iyilik hali",
+      "transliteration": "sattva"
+    },
+    "21968": {
+      "meaning": "iyilik hali",
+      "transliteration": "sattva"
+    },
+    "21967": {
+      "meaning": "iyilik hali",
+      "transliteration": "sattva"
+    },
+    "21966": {
+      "meaning": "iyilik hali",
+      "transliteration": "sattva"
+    },
+    "21965": {
+      "meaning": "iyilik hali",
+      "transliteration": "sattva"
+    },
+    "21964": {
+      "meaning": "iyilik hali",
+      "transliteration": "sattva"
+    },
+    "21963": {
+      "meaning": "iyilik hali",
+      "transliteration": "sattva"
+    },
+    "21962": {
+      "meaning": "iyilik hali",
+      "transliteration": "sattva"
+    },
+    "21960": {
+      "meaning": "iyilik hali",
+      "transliteration": "sattva"
+    },
+    "21959": {
+      "meaning": "iyilik hali",
+      "transliteration": "sattva"
+    },
+    "21958": {
+      "meaning": "iyilik hali",
+      "transliteration": "sattva"
+    },
+    "21957": {
+      "meaning": "iyilik hali",
+      "transliteration": "sattva"
+    },
+    "21956": {
+      "meaning": "iyilik hali",
+      "transliteration": "sattva"
+    },
+    "21955": {
+      "meaning": "iyilik hali",
+      "transliteration": "sattva"
+    },
+    "21954": {
+      "meaning": "iyilik hali",
+      "transliteration": "sattva"
+    },
+    "21953": {
+      "meaning": "iyilik hali",
+      "transliteration": "sattva"
+    },
+    "21952": {
+      "meaning": "iyilik hali",
+      "transliteration": "sattva"
+    },
+    "21951": {
+      "meaning": "iyilik hali",
+      "transliteration": "sattva"
+    },
+    "21950": {
+      "meaning": "iyilik hali",
+      "transliteration": "sattva"
+    },
+    "21949": {
+      "meaning": "iyilik hali",
+      "transliteration": "sattva"
+    }
+  }
+}

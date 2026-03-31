@@ -1,0 +1,3364 @@
+{
+  "vocabulary": {
+    "22992": {
+      "meaning": "يا أفضل البهاراتاس",
+      "transliteration": "(bharata-sattama)"
+    },
+    "23309": {
+      "meaning": "يا أفضل البهاراتاس",
+      "transliteration": "(bharatarṣabha)"
+    },
+    "22964": {
+      "meaning": "يا رب كل الحواس",
+      "transliteration": "(hṛṣīkeśa)"
+    },
+    "23550": {
+      "meaning": "يا ابن كونتي",
+      "transliteration": "(kaunteya)"
+    },
+    "22965": {
+      "meaning": "يا قاتل الشيطان كيشي",
+      "transliteration": "(keśinisūdana)"
+    },
+    "23357": {
+      "meaning": "يا قاهر العدو",
+      "transliteration": "(parantapa)"
+    },
+    "22998": {
+      "meaning": "يا أفضل الرجال",
+      "transliteration": "(puruṣa-vyāghra)"
+    },
+    "23695": {
+      "meaning": "يا ابن كونتي",
+      "transliteration": "(pārtha)"
+    },
+    "23347": {
+      "meaning": "بين البشر، إلخ",
+      "transliteration": "()"
+    },
+    "23646": {
+      "meaning": "يسبح أمجاد",
+      "transliteration": "(abhidhāsyati)"
+    },
+    "23074": {
+      "meaning": "قيل",
+      "transliteration": "(abhidhīyate)"
+    },
+    "23101": {
+      "meaning": "(1) الأساس، الجسد",
+      "transliteration": "(adhiṣṭānam)"
+    },
+    "23440": {
+      "meaning": "كما النار مغطاة",
+      "transliteration": "(agniḥ iva)"
+    },
+    "23331": {
+      "meaning": "وفي البداية",
+      "transliteration": "(agre)"
+    },
+    "23340": {
+      "meaning": "في البداية",
+      "transliteration": "(agre cha)"
+    },
+    "23534": {
+      "meaning": "من الغرور",
+      "transliteration": "(ahaṅkārāt)"
+    },
+    "23859": {
+      "meaning": "الجهل والوهم",
+      "transliteration": "(ajñāna-sammohaḥ)"
+    },
+    "23127": {
+      "meaning": "بسبب الذكاء غير النقي",
+      "transliteration": "(akṛta-buddhitvāt)"
+    },
+    "23341": {
+      "meaning": "وفي النهاية",
+      "transliteration": "(anubandhe cha)"
+    },
+    "22988": {
+      "meaning": "وآخرون (عموماً الميمامساكاس)",
+      "transliteration": "(apare cha)"
+    },
+    "23195": {
+      "meaning": "دون تحيز من المحبة والكراهية",
+      "transliteration": "(arāga-dveṣataḥ)"
+    },
+    "23442": {
+      "meaning": "واحد مع حكمة عدم التعلق",
+      "transliteration": "(asakta-buddhiḥ)"
+    },
+    "23639": {
+      "meaning": "لمن يفتقر إلى التضحية الذاتية",
+      "transliteration": "(atapaskāya)"
+    },
+    "23187": {
+      "meaning": "لا يبحث عن الحقيقة - بدون تصور روحي أو كتابي",
+      "transliteration": "(atattva-arthavat)"
+    },
+    "23109": {
+      "meaning": "والعامل الخامس",
+      "transliteration": "(atra pañchamam)"
+    },
+    "23641": {
+      "meaning": "ولا لمن يكره خدمتي",
+      "transliteration": "(aśuśrūṣave na cha)"
+    },
+    "23262": {
+      "meaning": "والقيد والتحرر",
+      "transliteration": "(bandham mokṣam cha)"
+    },
+    "23261": {
+      "meaning": "الخطر والأمان",
+      "transliteration": "(bhaya-abhaye)"
+    },
+    "23669": {
+      "meaning": "في العالم",
+      "transliteration": "(bhuvi)"
+    },
+    "23490": {
+      "meaning": "الكائنات الحية (اعتبار قوتي العليا في كل شيء)",
+      "transliteration": "(bhūteṣu)"
+    },
+    "23453": {
+      "meaning": "براهما، المطلق",
+      "transliteration": "(brahma)"
+    },
+    "23367": {
+      "meaning": "واجبات البراهمة",
+      "transliteration": "(brahma-karma)"
+    },
+    "23359": {
+      "meaning": "of the brāhmaṇ, kṣatriya, and vaiśya",
+      "transliteration": "(brāhmaṇa-kṣatriya-viśām)"
+    },
+    "23524": {
+      "meaning": "العقل",
+      "transliteration": "(buddhi-yogam)"
+    },
+    "23108": {
+      "meaning": "endeavours or functions of the vital airs",
+      "transliteration": "(cheṣṭā)"
+    },
+    "23854": {
+      "meaning": "(5) is the Divine, the Supersoul",
+      "transliteration": "(daivam eva cha)"
+    },
+    "23350": {
+      "meaning": "الله",
+      "transliteration": "(deveṣu)"
+    },
+    "23763": {
+      "meaning": "Arjuna with bow in hand, the winner of wealth",
+      "transliteration": "(dhanuḥ-dharaḥ pārthaḥ)"
+    },
+    "23290": {
+      "meaning": "الرغبة",
+      "transliteration": "(dharma-kāma-arthān)"
+    },
+    "23473": {
+      "meaning": "التأمل",
+      "transliteration": "(dhyāna-yoga-paraḥ)"
+    },
+    "23463": {
+      "meaning": "الخيرية",
+      "transliteration": "(dhṛtyā)"
+    },
+    "23349": {
+      "meaning": "in the heavenly plane",
+      "transliteration": "(divi)"
+    },
+    "22987": {
+      "meaning": "as imperfect (due to violence, etc.)",
+      "transliteration": "(doṣavat iti)"
+    },
+    "23318": {
+      "meaning": "السعادة",
+      "transliteration": "(duḥkha-antam)"
+    },
+    "23184": {
+      "meaning": "الجسد",
+      "transliteration": "(ekasmin kārye)"
+    },
+    "22983": {
+      "meaning": "Some scholars (generally the sāṅkhyas)",
+      "transliteration": "(eke manīṣiṇaḥ)"
+    },
+    "23157": {
+      "meaning": "الطبيعة",
+      "transliteration": "(guṇa-bhedataḥ)"
+    },
+    "23151": {
+      "meaning": "In the sāṅkhya scripture",
+      "transliteration": "(guṇa-saṅkhyāne)"
+    },
+    "23362": {
+      "meaning": "الخيرية",
+      "transliteration": "(guṇaiḥ)"
+    },
+    "23253": {
+      "meaning": "الطبيعة",
+      "transliteration": "(guṇataḥ)"
+    },
+    "23751": {
+      "meaning": "of the Lord, Śrī Hari",
+      "transliteration": "(hareḥ)"
+    },
+    "23231": {
+      "meaning": "and always subject to joy and sorrow",
+      "transliteration": "(harṣa-śoka-anvitaḥ)"
+    },
+    "23213": {
+      "meaning": "harm to others",
+      "transliteration": "(hiṁsām)"
+    },
+    "23567": {
+      "meaning": "in region of the heart",
+      "transliteration": "(hṛd-deśe)"
+    },
+    "23757": {
+      "meaning": "and I thrill with ecstasy",
+      "transliteration": "(hṛṣyāmi)"
+    },
+    "23582": {
+      "meaning": "Up to this point",
+      "transliteration": "(iti)"
+    },
+    "23680": {
+      "meaning": "المعرفة",
+      "transliteration": "(jñāna-yajñena)"
+    },
+    "23148": {
+      "meaning": "الأداة",
+      "transliteration": "(karaṇam)"
+    },
+    "23105": {
+      "meaning": "الأداة",
+      "transliteration": "(karaṇam cha)"
+    },
+    "23142": {
+      "meaning": "العمل",
+      "transliteration": "(karma-chodanā)"
+    },
+    "23226": {
+      "meaning": "العمل",
+      "transliteration": "(karma-phala-prepsuḥ)"
+    },
+    "23147": {
+      "meaning": "العمل",
+      "transliteration": "(karma-saṅgrahaḥ)"
+    },
+    "23103": {
+      "meaning": "الأنا",
+      "transliteration": "(kartā)"
+    },
+    "23154": {
+      "meaning": "and the performer",
+      "transliteration": "(kartā cha)"
+    },
+    "23125": {
+      "meaning": "الفاعل",
+      "transliteration": "(kartāram)"
+    },
+    "23743": {
+      "meaning": "of Śrī Kṛṣṇa and Arjuna",
+      "transliteration": "(keśava-arjuna-yoḥ)"
+    },
+    "23201": {
+      "meaning": "by one desiring the result",
+      "transliteration": "(kāma-īpsunā)"
+    },
+    "23260": {
+      "meaning": "الواجب",
+      "transliteration": "(kārya-akārye)"
+    },
+    "23053": {
+      "meaning": "الواجب",
+      "transliteration": "(kāryam iti eva)"
+    },
+    "23042": {
+      "meaning": "الخوف",
+      "transliteration": "(kāya-kleśa-bhayāt)"
+    },
+    "23099": {
+      "meaning": "العمل",
+      "transliteration": "(kṛtānte)"
+    },
+    "23393": {
+      "meaning": "الزراعة",
+      "transliteration": "(kṛṣi-go-rakṣya-vāṇijyaṁ)"
+    },
+    "23380": {
+      "meaning": "duties of the kṣatriyas",
+      "transliteration": "(kṣātram karma)"
+    },
+    "23528": {
+      "meaning": "Giving your heart to Me",
+      "transliteration": "(mach-chittaḥ)"
+    },
+    "23726": {
+      "meaning": "الروح الأعلى",
+      "transliteration": "(mahā-ātmanaḥ vāsudevasya)"
+    },
+    "23285": {
+      "meaning": "the functions of the mind, life forces, and senses",
+      "transliteration": "(manaḥ-prāṇa-indriya-kriyāḥ)"
+    },
+    "23013": {
+      "meaning": "of the wise",
+      "transliteration": "(manīṣiṇām)"
+    },
+    "23612": {
+      "meaning": "devoted to Me",
+      "transliteration": "(mat-bhaktaḥ)"
+    },
+    "23493": {
+      "meaning": "التفاني",
+      "transliteration": "(mat-bhaktim)"
+    },
+    "23527": {
+      "meaning": "devoted to Me",
+      "transliteration": "(mat-chittaḥ)"
+    },
+    "23611": {
+      "meaning": "of mind dedicated to Me",
+      "transliteration": "(mat-manāḥ)"
+    },
+    "23522": {
+      "meaning": "keeping Me as the supreme objective",
+      "transliteration": "(mat-paraḥ)"
+    },
+    "23557": {
+      "meaning": "الوهم",
+      "transliteration": "(mohāt)"
+    },
+    "23640": {
+      "meaning": "nor to a non-devotee",
+      "transliteration": "(na abhaktāya)"
+    },
+    "23066": {
+      "meaning": "nor is attached to",
+      "transliteration": "(na anuṣajjate)"
+    },
+    "23351": {
+      "meaning": "there is no",
+      "transliteration": "(na asti)"
+    },
+    "23135": {
+      "meaning": "العمل",
+      "transliteration": "(na lipyate)"
+    },
+    "23140": {
+      "meaning": "العمل",
+      "transliteration": "(na nibadhyate)"
+    },
+    "23338": {
+      "meaning": "النوم",
+      "transliteration": "(nidrā-ālasya-pramāda-uttham)"
+    },
+    "23483": {
+      "meaning": "not thinking of anything as ‘mine’",
+      "transliteration": "(nirmamaḥ)"
+    },
+    "23221": {
+      "meaning": "who is unaffected",
+      "transliteration": "(nirvikāraḥ)"
+    },
+    "23447": {
+      "meaning": "the higher state, of transcending all duties",
+      "transliteration": "(paramām naiṣkarmya-siddhim)"
+    },
+    "23395": {
+      "meaning": "of service to the brāhmaṇs, kṣatriyas, and vaiśyas",
+      "transliteration": "(paricharyā-ātmakam)"
+    },
+    "23214": {
+      "meaning": "and one’s capability of performing it",
+      "transliteration": "(pauruṣam cha)"
+    },
+    "23295": {
+      "meaning": "desirous of their fruits",
+      "transliteration": "(phala-ākāṅkṣī)"
+    },
+    "23021": {
+      "meaning": "الرغبة",
+      "transliteration": "(phalāni cha)"
+    },
+    "23356": {
+      "meaning": "الطبيعة",
+      "transliteration": "(prakṛti-jaiḥ)"
+    },
+    "23293": {
+      "meaning": "by the contact of which",
+      "transliteration": "(prasaṅgena)"
+    },
+    "23758": {
+      "meaning": "again and again",
+      "transliteration": "(punaḥ punaḥ)"
+    },
+    "23694": {
+      "meaning": "by the performers of virtuous acts",
+      "transliteration": "(puṇya-karmaṇām)"
+    },
+    "23104": {
+      "meaning": "(3) the separate, various",
+      "transliteration": "(pṛthak-vidham)"
+    },
+    "23468": {
+      "meaning": "attachment and aversion – likes and dislikes",
+      "transliteration": "(rāga-dveṣau)"
+    },
+    "23337": {
+      "meaning": "العاطفة",
+      "transliteration": "(rājasam)"
+    },
+    "23233": {
+      "meaning": "العاطفة",
+      "transliteration": "(rājasaḥ)"
+    },
+    "23297": {
+      "meaning": "العاطفة",
+      "transliteration": "(rājasī)"
+    },
+    "23264": {
+      "meaning": "العاطفة",
+      "transliteration": "(rājasī buddhiḥ)"
+    },
+    "23434": {
+      "meaning": "الطبيعة",
+      "transliteration": "(saha-jam)"
+    },
+    "23488": {
+      "meaning": "Being of equal vision",
+      "transliteration": "(samaḥ)"
+    },
+    "23000": {
+      "meaning": "has been clearly described (in the scriptures)",
+      "transliteration": "(samprakīrtitaḥ)"
+    },
+    "23448": {
+      "meaning": "العمل",
+      "transliteration": "(sannyāsena)"
+    },
+    "23569": {
+      "meaning": "He causes all beings to revolve (through many existences)",
+      "transliteration": "(sarva-bhūtāni bhrāmayan)"
+    },
+    "23627": {
+      "meaning": "all kinds of religion",
+      "transliteration": "(sarva-dharmān)"
+    },
+    "23600": {
+      "meaning": "most profound of all",
+      "transliteration": "(sarva-guhyatamam)"
+    },
+    "22981": {
+      "meaning": "التخلي",
+      "transliteration": "(sarva-karma-phala-tyāgam)"
+    },
+    "23634": {
+      "meaning": "الخطيئة",
+      "transliteration": "(sarva-pāpebhyaḥ)"
+    },
+    "23113": {
+      "meaning": "with his body, speech, and mind",
+      "transliteration": "(sarīra-vāk-manobhiḥ)"
+    },
+    "23061": {
+      "meaning": "الخيرية",
+      "transliteration": "(sattva-samāviṣṭaḥ)"
+    },
+    "23057": {
+      "meaning": "التخلي",
+      "transliteration": "(saḥ tyāgaḥ sāttvikaḥ)"
+    },
+    "23096": {
+      "meaning": "of the accomplishment",
+      "transliteration": "(siddhaye)"
+    },
+    "23451": {
+      "meaning": "the person who has achieved the state of transcending all duties",
+      "transliteration": "(siddhim prāptaḥ)"
+    },
+    "23554": {
+      "meaning": "الطبيعة",
+      "transliteration": "(svabhāva-jena)"
+    },
+    "23428": {
+      "meaning": "الطبيعة",
+      "transliteration": "(svabhāva-niyatam)"
+    },
+    "23363": {
+      "meaning": "الطبيعة",
+      "transliteration": "(svabhāva-prabhavaiḥ)"
+    },
+    "23405": {
+      "meaning": "الواجب",
+      "transliteration": "(svakarma-nirataḥ)"
+    },
+    "23286": {
+      "meaning": "الخيرية",
+      "transliteration": "(sā dhṛtiḥ sāttvikī)"
+    },
+    "23265": {
+      "meaning": "is that by which",
+      "transliteration": "(sā yayā)"
+    },
+    "23275": {
+      "meaning": "is that which",
+      "transliteration": "(sā yā)"
+    },
+    "23327": {
+      "meaning": "الخيرية",
+      "transliteration": "(sāttvikam)"
+    },
+    "23224": {
+      "meaning": "الخيرية",
+      "transliteration": "(sāttvikaḥ)"
+    },
+    "23255": {
+      "meaning": "الخيرية",
+      "transliteration": "(sāttvikī buddhiḥ)"
+    },
+    "23100": {
+      "meaning": "in the Vedānta scripture",
+      "transliteration": "(sāṅkhye)"
+    },
+    "23575": {
+      "meaning": "unto Him, alone",
+      "transliteration": "(tam eva)"
+    },
+    "23274": {
+      "meaning": "الجهل",
+      "transliteration": "(tamasā)"
+    },
+    "23662": {
+      "meaning": "than he (the preacher of Bhagavad-gītā)",
+      "transliteration": "(tasmāt)"
+    },
+    "23505": {
+      "meaning": "التفاني",
+      "transliteration": "(tataḥ)"
+    },
+    "22996": {
+      "meaning": "التخلي",
+      "transliteration": "(tatra tyāge)"
+    },
+    "23679": {
+      "meaning": "by that (by him)",
+      "transliteration": "(tena)"
+    },
+    "23078": {
+      "meaning": "These three kinds of fruits",
+      "transliteration": "(tri-vidham phalam (iti))"
+    },
+    "23313": {
+      "meaning": "السعادة",
+      "transliteration": "(tri-vidham sukham)"
+    },
+    "23001": {
+      "meaning": "to be of three types",
+      "transliteration": "(tri-vidhaḥ)"
+    },
+    "23853": {
+      "meaning": "عدم التعلق",
+      "transliteration": "(tyāga-phalam)"
+    },
+    "22999": {
+      "meaning": "التخلي",
+      "transliteration": "(tyāgaḥ)"
+    },
+    "23855": {
+      "meaning": "المعرفة",
+      "transliteration": "(tāmasam)"
+    },
+    "23244": {
+      "meaning": "الجهل",
+      "transliteration": "(tāmasaḥ)"
+    },
+    "23308": {
+      "meaning": "الجهل",
+      "transliteration": "(tāmasī)"
+    },
+    "23272": {
+      "meaning": "الجهل",
+      "transliteration": "(tāmasī buddhiḥ)"
+    },
+    "23205": {
+      "meaning": "is said to be",
+      "transliteration": "(udāhṛtam)"
+    },
+    "23474": {
+      "meaning": "fully detached from the mundane",
+      "transliteration": "(vairāgyam samupāśritah)"
+    },
+    "23392": {
+      "meaning": "functions of the vaiśyas",
+      "transliteration": "(vaiśya-karma)"
+    },
+    "23169": {
+      "meaning": "within all the diverse living beings",
+      "transliteration": "(vibhakteṣu sarva-bhūteṣu)"
+    },
+    "23375": {
+      "meaning": "realisation of essential truth",
+      "transliteration": "(vijñānam)"
+    },
+    "23280": {
+      "meaning": "contrary to what they are",
+      "transliteration": "(viparītān iti)"
+    },
+    "23106": {
+      "meaning": "(4) the various",
+      "transliteration": "(vividhāḥ)"
+    },
+    "23469": {
+      "meaning": "remaining free from the association of materialistic persons",
+      "transliteration": "(vivikta-sevī)"
+    },
+    "23460": {
+      "meaning": "الخيرية",
+      "transliteration": "(viśuddhayā buddhyā)"
+    },
+    "23330": {
+      "meaning": "الحواس",
+      "transliteration": "(viṣaya-indriya-saṁyogāt)"
+    },
+    "23728": {
+      "meaning": "النعمة",
+      "transliteration": "(vyāsa-prasādāt)"
+    },
+    "23002": {
+      "meaning": "التضحية",
+      "transliteration": "(yajña-dāna-tapaḥ-karma)"
+    },
+    "23319": {
+      "meaning": "and that which",
+      "transliteration": "(yat tat)"
+    },
+    "23471": {
+      "meaning": "الجسد",
+      "transliteration": "(yata-vāk-kāya-mānasaḥ)"
+    },
+    "23670": {
+      "meaning": "And for he who",
+      "transliteration": "(yaḥ cha)"
+    },
+    "23500": {
+      "meaning": "and that which I am",
+      "transliteration": "(yaḥ cha (aham) asmi)"
+    },
+    "23642": {
+      "meaning": "ولا لمن يكره خدمتي",
+      "transliteration": "(yaḥ na cha)"
+    },
+    "23076": {
+      "meaning": "العمل",
+      "transliteration": "(yaḥ saḥ karma-phala-tyāgī)"
+    },
+    "23417": {
+      "meaning": "and by whom, individually and collectively",
+      "transliteration": "(yena)"
+    },
+    "23760": {
+      "meaning": "the Lord of yoga, the objective of yoga",
+      "transliteration": "(yoga-īśvaraḥ)"
+    },
+    "23734": {
+      "meaning": "العمل",
+      "transliteration": "(yogam)"
+    },
+    "23736": {
+      "meaning": "by the Lord of yoga",
+      "transliteration": "(yogeśvarāt)"
+    },
+    "23499": {
+      "meaning": "as far as being the Master of all opulences",
+      "transliteration": "(yāvān)"
+    },
+    "23376": {
+      "meaning": "الإيمان",
+      "transliteration": "(āstikyam)"
+    },
+    "23325": {
+      "meaning": "النقاء",
+      "transliteration": "(ātma-buddhi-prasāda-jam)"
+    },
+    "23565": {
+      "meaning": "الرب الأعلى",
+      "transliteration": "(īśvaraḥ)"
+    },
+    "23371": {
+      "meaning": "النقاء",
+      "transliteration": "(śaucham)"
+    },
+    "23397": {
+      "meaning": "for the śūdra section",
+      "transliteration": "(śūdrasya)"
+    },
+    "8543": {
+      "meaning": "",
+      "transliteration": "(а-куш́алам)"
+    },
+    "8723": {
+      "meaning": "",
+      "transliteration": "(а-пхала-пра-ӣпсуна̄)"
+    },
+    "8720": {
+      "meaning": "",
+      "transliteration": "(а-ра̄га)"
+    },
+    "9354": {
+      "meaning": "",
+      "transliteration": "(а̄вайох̣)"
+    },
+    "8833": {
+      "meaning": "",
+      "transliteration": "(а̄вр̣та̄)"
+    },
+    "9056": {
+      "meaning": "",
+      "transliteration": "(а̄вр̣та̄х̣)"
+    },
+    "8738": {
+      "meaning": "",
+      "transliteration": "(а̄йа̄сам)"
+    },
+    "9244": {
+      "meaning": "",
+      "transliteration": "(а̄кхйа̄там̇)"
+    },
+    "8931": {
+      "meaning": "",
+      "transliteration": "(а̄ласйа)"
+    },
+    "9074": {
+      "meaning": "",
+      "transliteration": "(а̄пноти)"
+    },
+    "8748": {
+      "meaning": "",
+      "transliteration": "(а̄рабхйате)"
+    },
+    "9050": {
+      "meaning": "",
+      "transliteration": "(а̄рамбха̄х̣)"
+    },
+    "8970": {
+      "meaning": "",
+      "transliteration": "(а̄рджавам)"
+    },
+    "9225": {
+      "meaning": "",
+      "transliteration": "(а̄рӯд̣ха̄ни)"
+    },
+    "8974": {
+      "meaning": "",
+      "transliteration": "(а̄стикйам)"
+    },
+    "8905": {
+      "meaning": "",
+      "transliteration": "(а̄тма)"
+    },
+    "9061": {
+      "meaning": "",
+      "transliteration": "(а̄тма̄)"
+    },
+    "9088": {
+      "meaning": "",
+      "transliteration": "(а̄тма̄нам)"
+    },
+    "8929": {
+      "meaning": "",
+      "transliteration": "(а̄тманах̣)"
+    },
+    "9188": {
+      "meaning": "",
+      "transliteration": "(а̄ш́ритйа)"
+    },
+    "9101": {
+      "meaning": "",
+      "transliteration": "(а̄ш́ӣ)"
+    },
+    "9417": {
+      "meaning": "",
+      "transliteration": "(абдхутам)"
+    },
+    "8807": {
+      "meaning": "",
+      "transliteration": "(абхайе)"
+    },
+    "9307": {
+      "meaning": "",
+      "transliteration": "(абхакта̄йа)"
+    },
+    "9027": {
+      "meaning": "",
+      "transliteration": "(абхи-арчйа)"
+    },
+    "9317": {
+      "meaning": "",
+      "transliteration": "(абхи-асӯйати)"
+    },
+    "8568": {
+      "meaning": "",
+      "transliteration": "(абхи-дхӣйате)"
+    },
+    "9134": {
+      "meaning": "",
+      "transliteration": "(абхиджа̄на̄ти)"
+    },
+    "9324": {
+      "meaning": "",
+      "transliteration": "(абхидха̄сйати)"
+    },
+    "9007": {
+      "meaning": "",
+      "transliteration": "(абхиратах̣)"
+    },
+    "8888": {
+      "meaning": "",
+      "transliteration": "(абхйа̄са̄т)"
+    },
+    "9155": {
+      "meaning": "",
+      "transliteration": "(ава̄пноти)"
+    },
+    "9212": {
+      "meaning": "",
+      "transliteration": "(аваш́ах̣)"
+    },
+    "8849": {
+      "meaning": "",
+      "transliteration": "(ави-абхича̄рин̣йа̄)"
+    },
+    "8687": {
+      "meaning": "",
+      "transliteration": "(авибхактах̣)"
+    },
+    "9158": {
+      "meaning": "",
+      "transliteration": "(авйайам)"
+    },
+    "9054": {
+      "meaning": "",
+      "transliteration": "(агних̣)"
+    },
+    "8914": {
+      "meaning": "",
+      "transliteration": "(агре)"
+    },
+    "8925": {
+      "meaning": "",
+      "transliteration": "(агре ча)"
+    },
+    "9436": {
+      "meaning": "",
+      "transliteration": "(адбхутам)"
+    },
+    "9385": {
+      "meaning": "",
+      "transliteration": "(аджн̃а̄на)"
+    },
+    "8828": {
+      "meaning": "",
+      "transliteration": "(адхармам)"
+    },
+    "8818": {
+      "meaning": "",
+      "transliteration": "(адхармам ча)"
+    },
+    "9068": {
+      "meaning": "",
+      "transliteration": "(адхигаччхати)"
+    },
+    "8594": {
+      "meaning": "",
+      "transliteration": "(адхиш̣т̣ха̄нам)"
+    },
+    "9348": {
+      "meaning": "",
+      "transliteration": "(адхйеш̣йате)"
+    },
+    "8822": {
+      "meaning": "",
+      "transliteration": "(айатха̄ват)"
+    },
+    "8778": {
+      "meaning": "",
+      "transliteration": "(айуктах̣)"
+    },
+    "8820": {
+      "meaning": "",
+      "transliteration": "(ака̄рйам)"
+    },
+    "8805": {
+      "meaning": "",
+      "transliteration": "(ака̄рйе)"
+    },
+    "8632": {
+      "meaning": "",
+      "transliteration": "(акр̣та-буддхитва̄т)"
+    },
+    "8783": {
+      "meaning": "",
+      "transliteration": "(аласах̣)"
+    },
+    "8713": {
+      "meaning": "",
+      "transliteration": "(алпам)"
+    },
+    "8915": {
+      "meaning": "",
+      "transliteration": "(амр̣та)"
+    },
+    "8745": {
+      "meaning": "",
+      "transliteration": "(анапекш̣йа ча)"
+    },
+    "9365": {
+      "meaning": "",
+      "transliteration": "(анасӯйах̣ ча)"
+    },
+    "8756": {
+      "meaning": "",
+      "transliteration": "(анахам-ва̄дӣ)"
+    },
+    "8774": {
+      "meaning": "",
+      "transliteration": "(анвитах̣)"
+    },
+    "8569": {
+      "meaning": "",
+      "transliteration": "(аниш̣т̣ам)"
+    },
+    "9345": {
+      "meaning": "",
+      "transliteration": "(анйах̣)"
+    },
+    "8892": {
+      "meaning": "",
+      "transliteration": "(антам)"
+    },
+    "8742": {
+      "meaning": "",
+      "transliteration": "(анубандхам)"
+    },
+    "8926": {
+      "meaning": "",
+      "transliteration": "(анубандхе ча)"
+    },
+    "8547": {
+      "meaning": "",
+      "transliteration": "(ануш̣аджджате)"
+    },
+    "8985": {
+      "meaning": "",
+      "transliteration": "(апала̄йанам)"
+    },
+    "8456": {
+      "meaning": "",
+      "transliteration": "(апаре)"
+    },
+    "9371": {
+      "meaning": "",
+      "transliteration": "(апи)"
+    },
+    "9390": {
+      "meaning": "",
+      "transliteration": "(арджуна)"
+    },
+    "8858": {
+      "meaning": "",
+      "transliteration": "(артхах̣)"
+    },
+    "9057": {
+      "meaning": "",
+      "transliteration": "(асакта)"
+    },
+    "9332": {
+      "meaning": "",
+      "transliteration": "(асам̇ш́айах̣)"
+    },
+    "9287": {
+      "meaning": "",
+      "transliteration": "(аси)"
+    },
+    "8761": {
+      "meaning": "",
+      "transliteration": "(асиддхйох̣)"
+    },
+    "9401": {
+      "meaning": "",
+      "transliteration": "(асми)"
+    },
+    "8939": {
+      "meaning": "",
+      "transliteration": "(асти)"
+    },
+    "9305": {
+      "meaning": "",
+      "transliteration": "(атапаска̄йа)"
+    },
+    "8712": {
+      "meaning": "",
+      "transliteration": "(ататтва-артха-ват)"
+    },
+    "9446": {
+      "meaning": "",
+      "transliteration": "(ати-адбхутам)"
+    },
+    "8576": {
+      "meaning": "",
+      "transliteration": "(атйа̄гина̄м)"
+    },
+    "8606": {
+      "meaning": "",
+      "transliteration": "(атра)"
+    },
+    "9179": {
+      "meaning": "",
+      "transliteration": "(атха)"
+    },
+    "8711": {
+      "meaning": "",
+      "transliteration": "(ахаитукам)"
+    },
+    "9424": {
+      "meaning": "",
+      "transliteration": "(ахам)"
+    },
+    "9182": {
+      "meaning": "",
+      "transliteration": "(ахан̇ка̄ра̄т)"
+    },
+    "9111": {
+      "meaning": "",
+      "transliteration": "(ахан̇ка̄рам)"
+    },
+    "9187": {
+      "meaning": "",
+      "transliteration": "(ахан̇ка̄рах̣)"
+    },
+    "8639": {
+      "meaning": "",
+      "transliteration": "(ахан̇кр̣тах̣)"
+    },
+    "9399": {
+      "meaning": "",
+      "transliteration": "(ачйута)"
+    },
+    "8559": {
+      "meaning": "",
+      "transliteration": "(аш́еш̣атах̣)"
+    },
+    "9250": {
+      "meaning": "",
+      "transliteration": "(аш́еш̣ен̣а)"
+    },
+    "9416": {
+      "meaning": "",
+      "transliteration": "(аш́рауш̣ам)"
+    },
+    "8771": {
+      "meaning": "",
+      "transliteration": "(аш́учих̣)"
+    },
+    "9311": {
+      "meaning": "",
+      "transliteration": "(аш́уш́рӯш̣аве)"
+    },
+    "9112": {
+      "meaning": "",
+      "transliteration": "(балам)"
+    },
+    "8808": {
+      "meaning": "",
+      "transliteration": "(бандхам)"
+    },
+    "8737": {
+      "meaning": "",
+      "transliteration": "(бахула)"
+    },
+    "8955": {
+      "meaning": "",
+      "transliteration": "(бра̄хман̣а)"
+    },
+    "9072": {
+      "meaning": "",
+      "transliteration": "(брахма)"
+    },
+    "9120": {
+      "meaning": "",
+      "transliteration": "(брахма-бхӯйа̄йа)"
+    },
+    "9122": {
+      "meaning": "",
+      "transliteration": "(брахма-бхӯтах̣)"
+    },
+    "8789": {
+      "meaning": "",
+      "transliteration": "(буддхех̣)"
+    },
+    "8906": {
+      "meaning": "",
+      "transliteration": "(буддхи)"
+    },
+    "9166": {
+      "meaning": "",
+      "transliteration": "(буддхи-йогам)"
+    },
+    "9058": {
+      "meaning": "",
+      "transliteration": "(буддхих̣)"
+    },
+    "9084": {
+      "meaning": "",
+      "transliteration": "(буддхйа̄)"
+    },
+    "8697": {
+      "meaning": "",
+      "transliteration": "(бха̄ва̄н)"
+    },
+    "8684": {
+      "meaning": "",
+      "transliteration": "(бха̄вам)"
+    },
+    "8640": {
+      "meaning": "",
+      "transliteration": "(бха̄вах̣)"
+    },
+    "9232": {
+      "meaning": "",
+      "transliteration": "(бха̄вена)"
+    },
+    "9233": {
+      "meaning": "",
+      "transliteration": "(бха̄рата)"
+    },
+    "9273": {
+      "meaning": "",
+      "transliteration": "(бхава)"
+    },
+    "8575": {
+      "meaning": "",
+      "transliteration": "(бхавати)"
+    },
+    "9341": {
+      "meaning": "",
+      "transliteration": "(бхавита̄ на)"
+    },
+    "8806": {
+      "meaning": "",
+      "transliteration": "(бхайа)"
+    },
+    "8515": {
+      "meaning": "",
+      "transliteration": "(бхайа̄т)"
+    },
+    "8870": {
+      "meaning": "",
+      "transliteration": "(бхайам)"
+    },
+    "9275": {
+      "meaning": "",
+      "transliteration": "(бхактах̣)"
+    },
+    "9323": {
+      "meaning": "",
+      "transliteration": "(бхактеш̣у)"
+    },
+    "9325": {
+      "meaning": "",
+      "transliteration": "(бхактим)"
+    },
+    "9132": {
+      "meaning": "",
+      "transliteration": "(бхактйа̄)"
+    },
+    "8462": {
+      "meaning": "",
+      "transliteration": "(бхарата)"
+    },
+    "8887": {
+      "meaning": "",
+      "transliteration": "(бхаратарш̣абха)"
+    },
+    "8790": {
+      "meaning": "",
+      "transliteration": "(бхедам)"
+    },
+    "9221": {
+      "meaning": "",
+      "transliteration": "(бхра̄майан)"
+    },
+    "9347": {
+      "meaning": "",
+      "transliteration": "(бхуви)"
+    },
+    "9257": {
+      "meaning": "",
+      "transliteration": "(бхӯйах̣)"
+    },
+    "9217": {
+      "meaning": "",
+      "transliteration": "(бхӯта̄на̄м)"
+    },
+    "9223": {
+      "meaning": "",
+      "transliteration": "(бхӯта̄ни)"
+    },
+    "9128": {
+      "meaning": "",
+      "transliteration": "(бхӯтеш̣у)"
+    },
+    "9464": {
+      "meaning": "",
+      "transliteration": "(бхӯтих̣)"
+    },
+    "8944": {
+      "meaning": "",
+      "transliteration": "(ва̄)"
+    },
+    "9103": {
+      "meaning": "",
+      "transliteration": "(ва̄к)"
+    },
+    "8994": {
+      "meaning": "",
+      "transliteration": "(ва̄н̣иджйам̇)"
+    },
+    "9411": {
+      "meaning": "",
+      "transliteration": "(ва̄судевасйа)"
+    },
+    "9312": {
+      "meaning": "",
+      "transliteration": "(ва̄чйам)"
+    },
+    "9109": {
+      "meaning": "",
+      "transliteration": "(ваира̄гйам)"
+    },
+    "8995": {
+      "meaning": "",
+      "transliteration": "(ваиш́йа)"
+    },
+    "9268": {
+      "meaning": "",
+      "transliteration": "(вакш̣йа̄ми)"
+    },
+    "9405": {
+      "meaning": "",
+      "transliteration": "(вачанам)"
+    },
+    "9261": {
+      "meaning": "",
+      "transliteration": "(вачах̣)"
+    },
+    "8420": {
+      "meaning": "",
+      "transliteration": "(ведитум)"
+    },
+    "8811": {
+      "meaning": "",
+      "transliteration": "(ветти)"
+    },
+    "8688": {
+      "meaning": "",
+      "transliteration": "(ви-бхактеш̣у)"
+    },
+    "8600": {
+      "meaning": "",
+      "transliteration": "(вивидха̄х̣)"
+    },
+    "9098": {
+      "meaning": "",
+      "transliteration": "(вивикта)"
+    },
+    "9062": {
+      "meaning": "",
+      "transliteration": "(вигата)"
+    },
+    "9033": {
+      "meaning": "",
+      "transliteration": "(вигунах̣)"
+    },
+    "8703": {
+      "meaning": "",
+      "transliteration": "(виддхи)"
+    },
+    "9463": {
+      "meaning": "",
+      "transliteration": "(виджайах̣)"
+    },
+    "8973": {
+      "meaning": "",
+      "transliteration": "(виджн̃а̄нам)"
+    },
+    "8433": {
+      "meaning": "",
+      "transliteration": "(видух̣)"
+    },
+    "9248": {
+      "meaning": "",
+      "transliteration": "(вимр̣ш́йа)"
+    },
+    "8876": {
+      "meaning": "",
+      "transliteration": "(вимун̃чати)"
+    },
+    "9117": {
+      "meaning": "",
+      "transliteration": "(вимучйа)"
+    },
+    "9185": {
+      "meaning": "",
+      "transliteration": "(винан̇кш̣йаси)"
+    },
+    "9029": {
+      "meaning": "",
+      "transliteration": "(виндати)"
+    },
+    "8835": {
+      "meaning": "",
+      "transliteration": "(випарӣта̄н)"
+    },
+    "8617": {
+      "meaning": "",
+      "transliteration": "(випарӣтам)"
+    },
+    "9448": {
+      "meaning": "",
+      "transliteration": "(висмайах̣)"
+    },
+    "9096": {
+      "meaning": "",
+      "transliteration": "(виудасйа)"
+    },
+    "8440": {
+      "meaning": "",
+      "transliteration": "(вичакш̣ан̣а̄х̣)"
+    },
+    "8957": {
+      "meaning": "",
+      "transliteration": "(виш́а̄м)"
+    },
+    "9144": {
+      "meaning": "",
+      "transliteration": "(виш́ате)"
+    },
+    "9085": {
+      "meaning": "",
+      "transliteration": "(виш́уддхайа̄)"
+    },
+    "8872": {
+      "meaning": "",
+      "transliteration": "(виш̣а̄дам)"
+    },
+    "8784": {
+      "meaning": "",
+      "transliteration": "(виш̣а̄дӣ)"
+    },
+    "8909": {
+      "meaning": "",
+      "transliteration": "(виш̣айа)"
+    },
+    "9092": {
+      "meaning": "",
+      "transliteration": "(виш̣айа̄н)"
+    },
+    "8918": {
+      "meaning": "",
+      "transliteration": "(виш̣ам)"
+    },
+    "8467": {
+      "meaning": "",
+      "transliteration": "(вйа̄гхра)"
+    },
+    "9419": {
+      "meaning": "",
+      "transliteration": "(вйа̄са)"
+    },
+    "9195": {
+      "meaning": "",
+      "transliteration": "(вйаваса̄йах̣)"
+    },
+    "9152": {
+      "meaning": "",
+      "transliteration": "(вйапа̄ш́райах̣)"
+    },
+    "9295": {
+      "meaning": "",
+      "transliteration": "(враджа)"
+    },
+    "9402": {
+      "meaning": "",
+      "transliteration": "(гата)"
+    },
+    "9230": {
+      "meaning": "",
+      "transliteration": "(гаччха)"
+    },
+    "8993": {
+      "meaning": "",
+      "transliteration": "(го-ракш̣йа)"
+    },
+    "8673": {
+      "meaning": "",
+      "transliteration": "(гун̣а-бхедатах̣)"
+    },
+    "8675": {
+      "meaning": "",
+      "transliteration": "(гун̣а-сан̇кхйа̄не)"
+    },
+    "8964": {
+      "meaning": "",
+      "transliteration": "(гун̣аих̣)"
+    },
+    "8793": {
+      "meaning": "",
+      "transliteration": "(гун̣атах̣)"
+    },
+    "9245": {
+      "meaning": "",
+      "transliteration": "(гухйа̄т)"
+    },
+    "9423": {
+      "meaning": "",
+      "transliteration": "(гухйам)"
+    },
+    "9256": {
+      "meaning": "",
+      "transliteration": "(гухйатамам)"
+    },
+    "9246": {
+      "meaning": "",
+      "transliteration": "(гухйатарам)"
+    },
+    "8982": {
+      "meaning": "",
+      "transliteration": "(да̄кш̣йам̇)"
+    },
+    "8471": {
+      "meaning": "",
+      "transliteration": "(да̄на)"
+    },
+    "8986": {
+      "meaning": "",
+      "transliteration": "(да̄нам)"
+    },
+    "8604": {
+      "meaning": "",
+      "transliteration": "(даивам)"
+    },
+    "8966": {
+      "meaning": "",
+      "transliteration": "(дамах̣)"
+    },
+    "9113": {
+      "meaning": "",
+      "transliteration": "(дарпам)"
+    },
+    "8721": {
+      "meaning": "",
+      "transliteration": "(двеш̣атах̣)"
+    },
+    "9095": {
+      "meaning": "",
+      "transliteration": "(двеш̣ау)"
+    },
+    "8542": {
+      "meaning": "",
+      "transliteration": "(двеш̣т̣и)"
+    },
+    "8943": {
+      "meaning": "",
+      "transliteration": "(девеш̣у)"
+    },
+    "8555": {
+      "meaning": "",
+      "transliteration": "(деха-бхр̣та̄)"
+    },
+    "8948": {
+      "meaning": "",
+      "transliteration": "(джаих̣)"
+    },
+    "9004": {
+      "meaning": "",
+      "transliteration": "(джам)"
+    },
+    "9201": {
+      "meaning": "",
+      "transliteration": "(джена)"
+    },
+    "9060": {
+      "meaning": "",
+      "transliteration": "(джита)"
+    },
+    "9355": {
+      "meaning": "",
+      "transliteration": "(джн̃а̄на)"
+    },
+    "9243": {
+      "meaning": "",
+      "transliteration": "(джн̃а̄нам)"
+    },
+    "9081": {
+      "meaning": "",
+      "transliteration": "(джн̃а̄насйа)"
+    },
+    "9143": {
+      "meaning": "",
+      "transliteration": "(джн̃а̄тва̄)"
+    },
+    "8655": {
+      "meaning": "",
+      "transliteration": "(джн̃ейа)"
+    },
+    "8942": {
+      "meaning": "",
+      "transliteration": "(диви)"
+    },
+    "8442": {
+      "meaning": "",
+      "transliteration": "(дош̣а-ват)"
+    },
+    "9052": {
+      "meaning": "",
+      "transliteration": "(дош̣ен̣а)"
+    },
+    "9265": {
+      "meaning": "",
+      "transliteration": "(др̣д̣хам)"
+    },
+    "9175": {
+      "meaning": "",
+      "transliteration": "(дурга̄н̣и)"
+    },
+    "8636": {
+      "meaning": "",
+      "transliteration": "(дурматих̣)"
+    },
+    "8877": {
+      "meaning": "",
+      "transliteration": "(дурмедха̄х̣)"
+    },
+    "8891": {
+      "meaning": "",
+      "transliteration": "(дух̣кха)"
+    },
+    "8508": {
+      "meaning": "",
+      "transliteration": "(дух̣кхам)"
+    },
+    "8860": {
+      "meaning": "",
+      "transliteration": "(дха̄райате)"
+    },
+    "9389": {
+      "meaning": "",
+      "transliteration": "(дханам-джайа)"
+    },
+    "9460": {
+      "meaning": "",
+      "transliteration": "(дханух̣-дхарах̣)"
+    },
+    "8856": {
+      "meaning": "",
+      "transliteration": "(дхарма)"
+    },
+    "9290": {
+      "meaning": "",
+      "transliteration": "(дхарма̄м)"
+    },
+    "8817": {
+      "meaning": "",
+      "transliteration": "(дхармам)"
+    },
+    "8829": {
+      "meaning": "",
+      "transliteration": "(дхармам ити)"
+    },
+    "9352": {
+      "meaning": "",
+      "transliteration": "(дхармйам)"
+    },
+    "9106": {
+      "meaning": "",
+      "transliteration": "(дхйа̄на-йога)"
+    },
+    "8791": {
+      "meaning": "",
+      "transliteration": "(дхр̣тех̣)"
+    },
+    "8757": {
+      "meaning": "",
+      "transliteration": "(дхр̣ти)"
+    },
+    "8981": {
+      "meaning": "",
+      "transliteration": "(дхр̣тих̣)"
+    },
+    "9087": {
+      "meaning": "",
+      "transliteration": "(дхр̣тйа̄)"
+    },
+    "9465": {
+      "meaning": "",
+      "transliteration": "(дхрува̄)"
+    },
+    "9053": {
+      "meaning": "",
+      "transliteration": "(дхӯмена)"
+    },
+    "8785": {
+      "meaning": "",
+      "transliteration": "(дӣргха-сӯтрӣ ча)"
+    },
+    "9055": {
+      "meaning": "",
+      "transliteration": "(ива)"
+    },
+    "9302": {
+      "meaning": "",
+      "transliteration": "(идам)"
+    },
+    "8648": {
+      "meaning": "",
+      "transliteration": "(има̄н)"
+    },
+    "9435": {
+      "meaning": "",
+      "transliteration": "(имам)"
+    },
+    "8910": {
+      "meaning": "",
+      "transliteration": "(индрийа)"
+    },
+    "9409": {
+      "meaning": "",
+      "transliteration": "(ити)"
+    },
+    "8419": {
+      "meaning": "",
+      "transliteration": "(иччха̄ми)"
+    },
+    "9252": {
+      "meaning": "",
+      "transliteration": "(иччхаси)"
+    },
+    "8570": {
+      "meaning": "",
+      "transliteration": "(иш̣т̣ам)"
+    },
+    "9359": {
+      "meaning": "",
+      "transliteration": "(иш̣т̣ах̣)"
+    },
+    "9082": {
+      "meaning": "",
+      "transliteration": "(йа̄)"
+    },
+    "9135": {
+      "meaning": "",
+      "transliteration": "(йа̄ва̄н)"
+    },
+    "9277": {
+      "meaning": "",
+      "transliteration": "(йа̄джӣ)"
+    },
+    "8470": {
+      "meaning": "",
+      "transliteration": "(йаджн̃а)"
+    },
+    "8478": {
+      "meaning": "",
+      "transliteration": "(йаджн̃ах̣)"
+    },
+    "9356": {
+      "meaning": "",
+      "transliteration": "(йаджн̃ена)"
+    },
+    "8868": {
+      "meaning": "",
+      "transliteration": "(йайа̄)"
+    },
+    "9224": {
+      "meaning": "",
+      "transliteration": "(йантра)"
+    },
+    "8642": {
+      "meaning": "",
+      "transliteration": "(йасйа)"
+    },
+    "9209": {
+      "meaning": "",
+      "transliteration": "(йат)"
+    },
+    "9102": {
+      "meaning": "",
+      "transliteration": "(йата)"
+    },
+    "9018": {
+      "meaning": "",
+      "transliteration": "(йатах̣)"
+    },
+    "9458": {
+      "meaning": "",
+      "transliteration": "(йатра)"
+    },
+    "9251": {
+      "meaning": "",
+      "transliteration": "(йатха̄)"
+    },
+    "8676": {
+      "meaning": "",
+      "transliteration": "(йатха̄-ват)"
+    },
+    "9368": {
+      "meaning": "",
+      "transliteration": "(йах̣)"
+    },
+    "9021": {
+      "meaning": "",
+      "transliteration": "(йена)"
+    },
+    "9426": {
+      "meaning": "",
+      "transliteration": "(йогам)"
+    },
+    "8848": {
+      "meaning": "",
+      "transliteration": "(йогена)"
+    },
+    "9427": {
+      "meaning": "",
+      "transliteration": "(йогеш́вара̄т)"
+    },
+    "9456": {
+      "meaning": "",
+      "transliteration": "(йогеш́варах̣)"
+    },
+    "9190": {
+      "meaning": "",
+      "transliteration": "(йотсйа)"
+    },
+    "8983": {
+      "meaning": "",
+      "transliteration": "(йуддхе)"
+    },
+    "9086": {
+      "meaning": "",
+      "transliteration": "(йуктах̣)"
+    },
+    "9104": {
+      "meaning": "",
+      "transliteration": "(ка̄йа)"
+    },
+    "8857": {
+      "meaning": "",
+      "transliteration": "(ка̄ма)"
+    },
+    "8731": {
+      "meaning": "",
+      "transliteration": "(ка̄ма-ӣпсуна̄)"
+    },
+    "9114": {
+      "meaning": "",
+      "transliteration": "(ка̄мам)"
+    },
+    "8428": {
+      "meaning": "",
+      "transliteration": "(ка̄мйа̄на̄м)"
+    },
+    "8585": {
+      "meaning": "",
+      "transliteration": "(ка̄ран̣а̄ни)"
+    },
+    "8804": {
+      "meaning": "",
+      "transliteration": "(ка̄рйа)"
+    },
+    "8819": {
+      "meaning": "",
+      "transliteration": "(ка̄рйам)"
+    },
+    "8709": {
+      "meaning": "",
+      "transliteration": "(ка̄рйе)"
+    },
+    "8432": {
+      "meaning": "",
+      "transliteration": "(кавайах̣)"
+    },
+    "9308": {
+      "meaning": "",
+      "transliteration": "(када̄чана)"
+    },
+    "9121": {
+      "meaning": "",
+      "transliteration": "(калпате)"
+    },
+    "8659": {
+      "meaning": "",
+      "transliteration": "(каран̣ам)"
+    },
+    "9211": {
+      "meaning": "",
+      "transliteration": "(кариш̣йаси)"
+    },
+    "9404": {
+      "meaning": "",
+      "transliteration": "(кариш̣йе)"
+    },
+    "9044": {
+      "meaning": "",
+      "transliteration": "(карма)"
+    },
+    "8767": {
+      "meaning": "",
+      "transliteration": "(карма-пхала)"
+    },
+    "8658": {
+      "meaning": "",
+      "transliteration": "(карма-чодана̄)"
+    },
+    "9161": {
+      "meaning": "",
+      "transliteration": "(карма̄н̣и)"
+    },
+    "9205": {
+      "meaning": "",
+      "transliteration": "(карман̣а̄)"
+    },
+    "8593": {
+      "meaning": "",
+      "transliteration": "(карман̣а̄м)"
+    },
+    "8573": {
+      "meaning": "",
+      "transliteration": "(карман̣ах̣)"
+    },
+    "9006": {
+      "meaning": "",
+      "transliteration": "(карман̣и)"
+    },
+    "8786": {
+      "meaning": "",
+      "transliteration": "(карта̄)"
+    },
+    "8626": {
+      "meaning": "",
+      "transliteration": "(карта̄рам)"
+    },
+    "8491": {
+      "meaning": "",
+      "transliteration": "(картавйа̄ни)"
+    },
+    "9206": {
+      "meaning": "",
+      "transliteration": "(картум)"
+    },
+    "9430": {
+      "meaning": "",
+      "transliteration": "(катхайатах̣)"
+    },
+    "9202": {
+      "meaning": "",
+      "transliteration": "(каунтейа)"
+    },
+    "9384": {
+      "meaning": "",
+      "transliteration": "(каччит)"
+    },
+    "9337": {
+      "meaning": "",
+      "transliteration": "(каш́чит)"
+    },
+    "8581": {
+      "meaning": "",
+      "transliteration": "(квачит)"
+    },
+    "8628": {
+      "meaning": "",
+      "transliteration": "(кевалам)"
+    },
+    "9437": {
+      "meaning": "",
+      "transliteration": "(кеш́ава-арджунайох̣)"
+    },
+    "8425": {
+      "meaning": "",
+      "transliteration": "(кеш́инисӯдана)"
+    },
+    "9042": {
+      "meaning": "",
+      "transliteration": "(килбиш̣ам)"
+    },
+    "8514": {
+      "meaning": "",
+      "transliteration": "(клеш́а)"
+    },
+    "8589": {
+      "meaning": "",
+      "transliteration": "(кр̣та-анте)"
+    },
+    "8722": {
+      "meaning": "",
+      "transliteration": "(кр̣там)"
+    },
+    "9328": {
+      "meaning": "",
+      "transliteration": "(кр̣тва̄)"
+    },
+    "8707": {
+      "meaning": "",
+      "transliteration": "(кр̣тсна-ват)"
+    },
+    "9340": {
+      "meaning": "",
+      "transliteration": "(кр̣ттамах̣)"
+    },
+    "8992": {
+      "meaning": "",
+      "transliteration": "(кр̣ш̣и)"
+    },
+    "9428": {
+      "meaning": "",
+      "transliteration": "(кр̣ш̣н̣а̄т)"
+    },
+    "9457": {
+      "meaning": "",
+      "transliteration": "(кр̣ш̣н̣ах̣)"
+    },
+    "8847": {
+      "meaning": "",
+      "transliteration": "(крийа̄х̣)"
+    },
+    "8736": {
+      "meaning": "",
+      "transliteration": "(крийате)"
+    },
+    "9115": {
+      "meaning": "",
+      "transliteration": "(кродхам)"
+    },
+    "9150": {
+      "meaning": "",
+      "transliteration": "(курва̄н̣ах̣)"
+    },
+    "9039": {
+      "meaning": "",
+      "transliteration": "(курван)"
+    },
+    "9254": {
+      "meaning": "",
+      "transliteration": "(куру)"
+    },
+    "8545": {
+      "meaning": "",
+      "transliteration": "(куш́але)"
+    },
+    "8988": {
+      "meaning": "",
+      "transliteration": "(кш̣а̄трам)"
+    },
+    "8743": {
+      "meaning": "",
+      "transliteration": "(кш̣айам)"
+    },
+    "8956": {
+      "meaning": "",
+      "transliteration": "(кш̣атрийа)"
+    },
+    "8969": {
+      "meaning": "",
+      "transliteration": "(кша̄нтих̣)"
+    },
+    "9395": {
+      "meaning": "",
+      "transliteration": "(лабдха̄)"
+    },
+    "9130": {
+      "meaning": "",
+      "transliteration": "(лабхате)"
+    },
+    "8523": {
+      "meaning": "",
+      "transliteration": "(лабхет)"
+    },
+    "9100": {
+      "meaning": "",
+      "transliteration": "(лагху)"
+    },
+    "8644": {
+      "meaning": "",
+      "transliteration": "(липйате)"
+    },
+    "9374": {
+      "meaning": "",
+      "transliteration": "(лока̄н)"
+    },
+    "8769": {
+      "meaning": "",
+      "transliteration": "(лубдхах̣)"
+    },
+    "9301": {
+      "meaning": "",
+      "transliteration": "(ма̄ ш́учах̣)"
+    },
+    "9226": {
+      "meaning": "",
+      "transliteration": "(ма̄йайа̄)"
+    },
+    "9329": {
+      "meaning": "",
+      "transliteration": "(ма̄м)"
+    },
+    "9030": {
+      "meaning": "",
+      "transliteration": "(ма̄навах̣)"
+    },
+    "9105": {
+      "meaning": "",
+      "transliteration": "(ма̄насах̣)"
+    },
+    "8873": {
+      "meaning": "",
+      "transliteration": "(мадам)"
+    },
+    "9398": {
+      "meaning": "",
+      "transliteration": "(майа̄)"
+    },
+    "9326": {
+      "meaning": "",
+      "transliteration": "(майи)"
+    },
+    "9468": {
+      "meaning": "",
+      "transliteration": "(мама)"
+    },
+    "9272": {
+      "meaning": "",
+      "transliteration": "(мана̄х̣)"
+    },
+    "8844": {
+      "meaning": "",
+      "transliteration": "(манах̣)"
+    },
+    "9192": {
+      "meaning": "",
+      "transliteration": "(манйасе)"
+    },
+    "8831": {
+      "meaning": "",
+      "transliteration": "(манйате)"
+    },
+    "8610": {
+      "meaning": "",
+      "transliteration": "(манобхих̣)"
+    },
+    "9336": {
+      "meaning": "",
+      "transliteration": "(мануш̣йеш̣у)"
+    },
+    "8483": {
+      "meaning": "",
+      "transliteration": "(манӣш̣ин̣а̄м)"
+    },
+    "8447": {
+      "meaning": "",
+      "transliteration": "(манӣш̣ин̣ах̣)"
+    },
+    "9322": {
+      "meaning": "",
+      "transliteration": "(мат)"
+    },
+    "9129": {
+      "meaning": "",
+      "transliteration": "(мат-бхактим)"
+    },
+    "8881": {
+      "meaning": "",
+      "transliteration": "(мата̄)"
+    },
+    "8496": {
+      "meaning": "",
+      "transliteration": "(матам)"
+    },
+    "8540": {
+      "meaning": "",
+      "transliteration": "(матах̣)"
+    },
+    "9467": {
+      "meaning": "",
+      "transliteration": "(матих̣)"
+    },
+    "9413": {
+      "meaning": "",
+      "transliteration": "(маха̄-а̄тманах̣)"
+    },
+    "8584": {
+      "meaning": "",
+      "transliteration": "(маха̄-ба̄хо)"
+    },
+    "9450": {
+      "meaning": "",
+      "transliteration": "(маха̄н)"
+    },
+    "9449": {
+      "meaning": "",
+      "transliteration": "(ме)"
+    },
+    "8551": {
+      "meaning": "",
+      "transliteration": "(медха̄вӣ)"
+    },
+    "9193": {
+      "meaning": "",
+      "transliteration": "(митхйа̄)"
+    },
+    "8571": {
+      "meaning": "",
+      "transliteration": "(миш́рам ча)"
+    },
+    "9300": {
+      "meaning": "",
+      "transliteration": "(мокш̣айиш̣йа̄ми)"
+    },
+    "8809": {
+      "meaning": "",
+      "transliteration": "(мокш̣ам ча)"
+    },
+    "9210": {
+      "meaning": "",
+      "transliteration": "(моха̄т)"
+    },
+    "8928": {
+      "meaning": "",
+      "transliteration": "(моханам)"
+    },
+    "9393": {
+      "meaning": "",
+      "transliteration": "(мохах̣)"
+    },
+    "8754": {
+      "meaning": "",
+      "transliteration": "(мукта)"
+    },
+    "8949": {
+      "meaning": "",
+      "transliteration": "(муктам)"
+    },
+    "9372": {
+      "meaning": "",
+      "transliteration": "(муктах̣)"
+    },
+    "9441": {
+      "meaning": "",
+      "transliteration": "(мухух̣ мухух̣)"
+    },
+    "9333": {
+      "meaning": "",
+      "transliteration": "(на)"
+    },
+    "9125": {
+      "meaning": "",
+      "transliteration": "(на ка̄н̇кш̣ати)"
+    },
+    "8474": {
+      "meaning": "",
+      "transliteration": "(на тйа̄джйам)"
+    },
+    "9048": {
+      "meaning": "",
+      "transliteration": "(на тйаджет)"
+    },
+    "8502": {
+      "meaning": "",
+      "transliteration": "(на упападйате)"
+    },
+    "8554": {
+      "meaning": "",
+      "transliteration": "(на хи)"
+    },
+    "9124": {
+      "meaning": "",
+      "transliteration": "(на ш́очати)"
+    },
+    "8521": {
+      "meaning": "",
+      "transliteration": "(на эва)"
+    },
+    "8696": {
+      "meaning": "",
+      "transliteration": "(на̄на̄)"
+    },
+    "9064": {
+      "meaning": "",
+      "transliteration": "(наиш̣кармйа)"
+    },
+    "8782": {
+      "meaning": "",
+      "transliteration": "(наиш̣кр̣тиках̣)"
+    },
+    "9279": {
+      "meaning": "",
+      "transliteration": "(намаскуру)"
+    },
+    "9369": {
+      "meaning": "",
+      "transliteration": "(нарах̣)"
+    },
+    "9392": {
+      "meaning": "",
+      "transliteration": "(наш̣т̣ах̣)"
+    },
+    "9203": {
+      "meaning": "",
+      "transliteration": "(нибаддхах̣)"
+    },
+    "8653": {
+      "meaning": "",
+      "transliteration": "(нибадхйате)"
+    },
+    "9075": {
+      "meaning": "",
+      "transliteration": "(нибодха)"
+    },
+    "8802": {
+      "meaning": "",
+      "transliteration": "(нивр̣ттим)"
+    },
+    "8930": {
+      "meaning": "",
+      "transliteration": "(нидра̄)"
+    },
+    "9089": {
+      "meaning": "",
+      "transliteration": "(нийамйа)"
+    },
+    "9037": {
+      "meaning": "",
+      "transliteration": "(нийатам)"
+    },
+    "8498": {
+      "meaning": "",
+      "transliteration": "(нийатасйа)"
+    },
+    "9199": {
+      "meaning": "",
+      "transliteration": "(нийокш̣йати)"
+    },
+    "9012": {
+      "meaning": "",
+      "transliteration": "(ниратах̣)"
+    },
+    "9108": {
+      "meaning": "",
+      "transliteration": "(нитйам)"
+    },
+    "8762": {
+      "meaning": "",
+      "transliteration": "(них̣-вика̄рах̣)"
+    },
+    "9118": {
+      "meaning": "",
+      "transliteration": "(них̣-мамах̣)"
+    },
+    "8457": {
+      "meaning": "",
+      "transliteration": "(ниш́чайам̇)"
+    },
+    "8495": {
+      "meaning": "",
+      "transliteration": "(ниш́читам)"
+    },
+    "9080": {
+      "meaning": "",
+      "transliteration": "(ниш̣т̣ха̄)"
+    },
+    "8615": {
+      "meaning": "",
+      "transliteration": "(нйа̄йам)"
+    },
+    "8430": {
+      "meaning": "",
+      "transliteration": "(нйа̄сам)"
+    },
+    "9466": {
+      "meaning": "",
+      "transliteration": "(нӣтих̣)"
+    },
+    "8482": {
+      "meaning": "",
+      "transliteration": "(па̄вана̄ни)"
+    },
+    "9299": {
+      "meaning": "",
+      "transliteration": "(па̄пебхйах̣)"
+    },
+    "9380": {
+      "meaning": "",
+      "transliteration": "(па̄ртха)"
+    },
+    "9412": {
+      "meaning": "",
+      "transliteration": "(па̄ртхасйа ча)"
+    },
+    "9459": {
+      "meaning": "",
+      "transliteration": "(па̄ртхах̣)"
+    },
+    "9157": {
+      "meaning": "",
+      "transliteration": "(падам)"
+    },
+    "8619": {
+      "meaning": "",
+      "transliteration": "(пан̃ча)"
+    },
+    "8607": {
+      "meaning": "",
+      "transliteration": "(пан̃чамам)"
+    },
+    "9034": {
+      "meaning": "",
+      "transliteration": "(пара-дхарма̄т)"
+    },
+    "9083": {
+      "meaning": "",
+      "transliteration": "(пара̄)"
+    },
+    "9327": {
+      "meaning": "",
+      "transliteration": "(пара̄м)"
+    },
+    "9425": {
+      "meaning": "",
+      "transliteration": "(парам)"
+    },
+    "9066": {
+      "meaning": "",
+      "transliteration": "(парама̄м)"
+    },
+    "9320": {
+      "meaning": "",
+      "transliteration": "(парамам)"
+    },
+    "8959": {
+      "meaning": "",
+      "transliteration": "(парамтапа)"
+    },
+    "9165": {
+      "meaning": "",
+      "transliteration": "(парах̣)"
+    },
+    "9116": {
+      "meaning": "",
+      "transliteration": "(париграхам)"
+    },
+    "8656": {
+      "meaning": "",
+      "transliteration": "(париджн̃а̄та̄)"
+    },
+    "8777": {
+      "meaning": "",
+      "transliteration": "(парикӣртитах̣)"
+    },
+    "8917": {
+      "meaning": "",
+      "transliteration": "(парин̣а̄ме)"
+    },
+    "8505": {
+      "meaning": "",
+      "transliteration": "(паритйа̄гах̣)"
+    },
+    "9291": {
+      "meaning": "",
+      "transliteration": "(паритйаджйа)"
+    },
+    "8999": {
+      "meaning": "",
+      "transliteration": "(паричарйа̄-а̄тмакам)"
+    },
+    "8746": {
+      "meaning": "",
+      "transliteration": "(пауруш̣ам)"
+    },
+    "8635": {
+      "meaning": "",
+      "transliteration": "(паш́йати)"
+    },
+    "8602": {
+      "meaning": "",
+      "transliteration": "(пр̣тхак)"
+    },
+    "8698": {
+      "meaning": "",
+      "transliteration": "(пр̣тхак-видха̄н)"
+    },
+    "8599": {
+      "meaning": "",
+      "transliteration": "(пр̣тхак-видхам)"
+    },
+    "8798": {
+      "meaning": "",
+      "transliteration": "(пр̣тхактвена)"
+    },
+    "8940": {
+      "meaning": "",
+      "transliteration": "(пр̣тхивйа̄м)"
+    },
+    "8613": {
+      "meaning": "",
+      "transliteration": "(пра-а̄-рабхате)"
+    },
+    "9375": {
+      "meaning": "",
+      "transliteration": "(пра-а̄пнуйа̄т)"
+    },
+    "9070": {
+      "meaning": "",
+      "transliteration": "(пра-а̄птах̣)"
+    },
+    "8446": {
+      "meaning": "",
+      "transliteration": "(пра-ахух̣)"
+    },
+    "8904": {
+      "meaning": "",
+      "transliteration": "(пра-уктам)"
+    },
+    "8779": {
+      "meaning": "",
+      "transliteration": "(пра̄кр̣тах̣)"
+    },
+    "8845": {
+      "meaning": "",
+      "transliteration": "(пра̄н̣а)"
+    },
+    "9239": {
+      "meaning": "",
+      "transliteration": "(пра̄псйаси)"
+    },
+    "8438": {
+      "meaning": "",
+      "transliteration": "(пра̄хух̣)"
+    },
+    "8963": {
+      "meaning": "",
+      "transliteration": "(прабхаваих̣)"
+    },
+    "8961": {
+      "meaning": "",
+      "transliteration": "(правибхакта̄ни)"
+    },
+    "8800": {
+      "meaning": "",
+      "transliteration": "(правр̣ттим)"
+    },
+    "9019": {
+      "meaning": "",
+      "transliteration": "(правр̣ттих̣)"
+    },
+    "8823": {
+      "meaning": "",
+      "transliteration": "(праджа̄на̄ти)"
+    },
+    "8947": {
+      "meaning": "",
+      "transliteration": "(пракр̣ти)"
+    },
+    "9197": {
+      "meaning": "",
+      "transliteration": "(пракр̣тих̣)"
+    },
+    "8932": {
+      "meaning": "",
+      "transliteration": "(прама̄да)"
+    },
+    "9387": {
+      "meaning": "",
+      "transliteration": "(пран̣аш̣т̣ах̣)"
+    },
+    "8907": {
+      "meaning": "",
+      "transliteration": "(праса̄да)"
+    },
+    "9420": {
+      "meaning": "",
+      "transliteration": "(праса̄да̄т)"
+    },
+    "8862": {
+      "meaning": "",
+      "transliteration": "(прасан̇гена)"
+    },
+    "9123": {
+      "meaning": "",
+      "transliteration": "(прасанна-а̄тма̄)"
+    },
+    "9285": {
+      "meaning": "",
+      "transliteration": "(пратиджа̄не)"
+    },
+    "8768": {
+      "meaning": "",
+      "transliteration": "(препсух̣)"
+    },
+    "8577": {
+      "meaning": "",
+      "transliteration": "(претйа)"
+    },
+    "9339": {
+      "meaning": "",
+      "transliteration": "(прийа)"
+    },
+    "9346": {
+      "meaning": "",
+      "transliteration": "(прийатарах̣)"
+    },
+    "9286": {
+      "meaning": "",
+      "transliteration": "(прийах̣)"
+    },
+    "8590": {
+      "meaning": "",
+      "transliteration": "(прокта̄ни)"
+    },
+    "8796": {
+      "meaning": "",
+      "transliteration": "(прочйама̄нам)"
+    },
+    "8674": {
+      "meaning": "",
+      "transliteration": "(прочйате)"
+    },
+    "9376": {
+      "meaning": "",
+      "transliteration": "(пун̣йа-карман̣а̄м)"
+    },
+    "9438": {
+      "meaning": "",
+      "transliteration": "(пун̣йам)"
+    },
+    "8945": {
+      "meaning": "",
+      "transliteration": "(пунах̣)"
+    },
+    "9454": {
+      "meaning": "",
+      "transliteration": "(пунах̣ пунах̣)"
+    },
+    "8466": {
+      "meaning": "",
+      "transliteration": "(пуруш̣а)"
+    },
+    "8563": {
+      "meaning": "",
+      "transliteration": "(пхала)"
+    },
+    "8863": {
+      "meaning": "",
+      "transliteration": "(пхала-а̄ка̄н̇кш̣ӣ)"
+    },
+    "8490": {
+      "meaning": "",
+      "transliteration": "(пхала̄ни ча)"
+    },
+    "8574": {
+      "meaning": "",
+      "transliteration": "(пхалам)"
+    },
+    "9094": {
+      "meaning": "",
+      "transliteration": "(ра̄га)"
+    },
+    "8766": {
+      "meaning": "",
+      "transliteration": "(ра̄гӣ)"
+    },
+    "9432": {
+      "meaning": "",
+      "transliteration": "(ра̄джан)"
+    },
+    "8922": {
+      "meaning": "",
+      "transliteration": "(ра̄джасам)"
+    },
+    "8776": {
+      "meaning": "",
+      "transliteration": "(ра̄джасах̣)"
+    },
+    "8867": {
+      "meaning": "",
+      "transliteration": "(ра̄джасӣ)"
+    },
+    "9451": {
+      "meaning": "",
+      "transliteration": "(ра̄джах̣)"
+    },
+    "8889": {
+      "meaning": "",
+      "transliteration": "(рамате)"
+    },
+    "9418": {
+      "meaning": "",
+      "transliteration": "(рома-харш̣ан̣ам)"
+    },
+    "9445": {
+      "meaning": "",
+      "transliteration": "(рӯпам)"
+    },
+    "8733": {
+      "meaning": "",
+      "transliteration": "(са-ахан̇ка̄рен̣а)"
+    },
+    "9046": {
+      "meaning": "",
+      "transliteration": "(са-дош̣ам)"
+    },
+    "8879": {
+      "meaning": "",
+      "transliteration": "(са̄)"
+    },
+    "8588": {
+      "meaning": "",
+      "transliteration": "(са̄н̇кхйе)"
+    },
+    "8903": {
+      "meaning": "",
+      "transliteration": "(са̄ттвикам)"
+    },
+    "8764": {
+      "meaning": "",
+      "transliteration": "(са̄ттвиках̣)"
+    },
+    "8853": {
+      "meaning": "",
+      "transliteration": "(са̄ттвикӣ)"
+    },
+    "9149": {
+      "meaning": "",
+      "transliteration": "(сада̄)"
+    },
+    "8710": {
+      "meaning": "",
+      "transliteration": "(сактам)"
+    },
+    "9429": {
+      "meaning": "",
+      "transliteration": "(сакш̣а̄т)"
+    },
+    "8550": {
+      "meaning": "",
+      "transliteration": "(сам-а̄-виш̣т̣ах̣)"
+    },
+    "8431": {
+      "meaning": "",
+      "transliteration": "(сам-нйа̄сам)"
+    },
+    "8580": {
+      "meaning": "",
+      "transliteration": "(сам-нйа̄сина̄м)"
+    },
+    "9434": {
+      "meaning": "",
+      "transliteration": "(сам̇ва̄дам)"
+    },
+    "8911": {
+      "meaning": "",
+      "transliteration": "(сам̇йога̄т)"
+    },
+    "9386": {
+      "meaning": "",
+      "transliteration": "(сам̇мохах̣)"
+    },
+    "9008": {
+      "meaning": "",
+      "transliteration": "(сам̇сиддхим)"
+    },
+    "9444": {
+      "meaning": "",
+      "transliteration": "(сам̇смр̣тйа сам̇смр̣тйа)"
+    },
+    "8553": {
+      "meaning": "",
+      "transliteration": "(сам̇ш́айах̣)"
+    },
+    "9077": {
+      "meaning": "",
+      "transliteration": "(сама̄сена)"
+    },
+    "8759": {
+      "meaning": "",
+      "transliteration": "(саманвитах̣)"
+    },
+    "9126": {
+      "meaning": "",
+      "transliteration": "(самах̣)"
+    },
+    "8469": {
+      "meaning": "",
+      "transliteration": "(сампракӣртитах̣)"
+    },
+    "9110": {
+      "meaning": "",
+      "transliteration": "(самупа̄ш́ритах̣)"
+    },
+    "9407": {
+      "meaning": "",
+      "transliteration": "(сан̃джайах̣)"
+    },
+    "8719": {
+      "meaning": "",
+      "transliteration": "(сан̇га-рахитам)"
+    },
+    "8532": {
+      "meaning": "",
+      "transliteration": "(сан̇гам)"
+    },
+    "8755": {
+      "meaning": "",
+      "transliteration": "(сан̇гах̣)"
+    },
+    "8665": {
+      "meaning": "",
+      "transliteration": "(сан̇грахах̣)"
+    },
+    "9403": {
+      "meaning": "",
+      "transliteration": "(сандехах̣)"
+    },
+    "8416": {
+      "meaning": "",
+      "transliteration": "(саннйа̄сасйа)"
+    },
+    "8500": {
+      "meaning": "",
+      "transliteration": "(саннйа̄сах̣)"
+    },
+    "9067": {
+      "meaning": "",
+      "transliteration": "(саннйа̄сена)"
+    },
+    "9163": {
+      "meaning": "",
+      "transliteration": "(саннйасйа)"
+    },
+    "9298": {
+      "meaning": "",
+      "transliteration": "(сарва)"
+    },
+    "8834": {
+      "meaning": "",
+      "transliteration": "(сарва-артха̄н)"
+    },
+    "9022": {
+      "meaning": "",
+      "transliteration": "(сарвам)"
+    },
+    "9059": {
+      "meaning": "",
+      "transliteration": "(сарватра)"
+    },
+    "9127": {
+      "meaning": "",
+      "transliteration": "(сарвеш̣у)"
+    },
+    "9170": {
+      "meaning": "",
+      "transliteration": "(сататам)"
+    },
+    "8625": {
+      "meaning": "",
+      "transliteration": "(сати)"
+    },
+    "9283": {
+      "meaning": "",
+      "transliteration": "(сатйам)"
+    },
+    "8463": {
+      "meaning": "",
+      "transliteration": "(саттама)"
+    },
+    "8549": {
+      "meaning": "",
+      "transliteration": "(саттва)"
+    },
+    "8946": {
+      "meaning": "",
+      "transliteration": "(саттвам)"
+    },
+    "9370": {
+      "meaning": "",
+      "transliteration": "(сах̣)"
+    },
+    "9043": {
+      "meaning": "",
+      "transliteration": "(саха-джам)"
+    },
+    "9200": {
+      "meaning": "",
+      "transliteration": "(сва-бха̄ва)"
+    },
+    "9032": {
+      "meaning": "",
+      "transliteration": "(сва-дхармах̣)"
+    },
+    "9011": {
+      "meaning": "",
+      "transliteration": "(сва-карма)"
+    },
+    "9025": {
+      "meaning": "",
+      "transliteration": "(сва-карман̣а̄)"
+    },
+    "9036": {
+      "meaning": "",
+      "transliteration": "(свабха̄ва)"
+    },
+    "9431": {
+      "meaning": "",
+      "transliteration": "(свайам)"
+    },
+    "8869": {
+      "meaning": "",
+      "transliteration": "(свапнам)"
+    },
+    "9005": {
+      "meaning": "",
+      "transliteration": "(све све)"
+    },
+    "9204": {
+      "meaning": "",
+      "transliteration": "(свена)"
+    },
+    "9099": {
+      "meaning": "",
+      "transliteration": "(севӣ)"
+    },
+    "8591": {
+      "meaning": "",
+      "transliteration": "(сиддхайе)"
+    },
+    "8760": {
+      "meaning": "",
+      "transliteration": "(сиддхи)"
+    },
+    "9069": {
+      "meaning": "",
+      "transliteration": "(сиддхим)"
+    },
+    "9360": {
+      "meaning": "",
+      "transliteration": "(сйа̄м)"
+    },
+    "8952": {
+      "meaning": "",
+      "transliteration": "(сйа̄т)"
+    },
+    "8923": {
+      "meaning": "",
+      "transliteration": "(смр̣там)"
+    },
+    "9394": {
+      "meaning": "",
+      "transliteration": "(смр̣тих̣)"
+    },
+    "9063": {
+      "meaning": "",
+      "transliteration": "(спр̣хах̣)"
+    },
+    "8780": {
+      "meaning": "",
+      "transliteration": "(стабдхах̣)"
+    },
+    "9238": {
+      "meaning": "",
+      "transliteration": "(стха̄нам)"
+    },
+    "9400": {
+      "meaning": "",
+      "transliteration": "(стхитах̣)"
+    },
+    "9035": {
+      "meaning": "",
+      "transliteration": "(су-ануш̣т̣хита̄т)"
+    },
+    "8927": {
+      "meaning": "",
+      "transliteration": "(сукхам)"
+    },
+    "8935": {
+      "meaning": "",
+      "transliteration": "(та̄масам)"
+    },
+    "8787": {
+      "meaning": "",
+      "transliteration": "(та̄масах̣)"
+    },
+    "8880": {
+      "meaning": "",
+      "transliteration": "(та̄масӣ)"
+    },
+    "8678": {
+      "meaning": "",
+      "transliteration": "(та̄ни)"
+    },
+    "9406": {
+      "meaning": "",
+      "transliteration": "(тава)"
+    },
+    "9227": {
+      "meaning": "",
+      "transliteration": "(там)"
+    },
+    "8832": {
+      "meaning": "",
+      "transliteration": "(тамаса̄)"
+    },
+    "8967": {
+      "meaning": "",
+      "transliteration": "(тапах̣)"
+    },
+    "8480": {
+      "meaning": "",
+      "transliteration": "(тапах̣ ча)"
+    },
+    "9178": {
+      "meaning": "",
+      "transliteration": "(тариш̣йаси)"
+    },
+    "8621": {
+      "meaning": "",
+      "transliteration": "(тасйа)"
+    },
+    "9344": {
+      "meaning": "",
+      "transliteration": "(тасма̄т)"
+    },
+    "9442": {
+      "meaning": "",
+      "transliteration": "(тат)"
+    },
+    "8689": {
+      "meaning": "",
+      "transliteration": "(тат джн̃а̄нам)"
+    },
+    "8702": {
+      "meaning": "",
+      "transliteration": "(тат джн̃а̄нам̇)"
+    },
+    "9145": {
+      "meaning": "",
+      "transliteration": "(тат-анантарам)"
+    },
+    "9024": {
+      "meaning": "",
+      "transliteration": "(татам)"
+    },
+    "9267": {
+      "meaning": "",
+      "transliteration": "(татах̣)"
+    },
+    "9461": {
+      "meaning": "",
+      "transliteration": "(татра)"
+    },
+    "8418": {
+      "meaning": "",
+      "transliteration": "(таттвам)"
+    },
+    "9142": {
+      "meaning": "",
+      "transliteration": "(таттватах̣)"
+    },
+    "9253": {
+      "meaning": "",
+      "transliteration": "(татха̄)"
+    },
+    "9297": {
+      "meaning": "",
+      "transliteration": "(тва̄м)"
+    },
+    "9381": {
+      "meaning": "",
+      "transliteration": "(твайа̄)"
+    },
+    "9181": {
+      "meaning": "",
+      "transliteration": "(твам)"
+    },
+    "9396": {
+      "meaning": "",
+      "transliteration": "(тват)"
+    },
+    "9388": {
+      "meaning": "",
+      "transliteration": "(те)"
+    },
+    "8980": {
+      "meaning": "",
+      "transliteration": "(теджах̣)"
+    },
+    "9357": {
+      "meaning": "",
+      "transliteration": "(тена)"
+    },
+    "9220": {
+      "meaning": "",
+      "transliteration": "(тиш̣т̣хати)"
+    },
+    "8522": {
+      "meaning": "",
+      "transliteration": "(тйа̄га-пхалам)"
+    },
+    "8520": {
+      "meaning": "",
+      "transliteration": "(тйа̄гам)"
+    },
+    "8421": {
+      "meaning": "",
+      "transliteration": "(тйа̄гасйа)"
+    },
+    "8538": {
+      "meaning": "",
+      "transliteration": "(тйа̄гах̣)"
+    },
+    "8461": {
+      "meaning": "",
+      "transliteration": "(тйа̄ге)"
+    },
+    "8566": {
+      "meaning": "",
+      "transliteration": "(тйа̄гӣ)"
+    },
+    "8453": {
+      "meaning": "",
+      "transliteration": "(тйа̄джйам)"
+    },
+    "8516": {
+      "meaning": "",
+      "transliteration": "(тйаджет)"
+    },
+    "9093": {
+      "meaning": "",
+      "transliteration": "(тйактва̄)"
+    },
+    "8557": {
+      "meaning": "",
+      "transliteration": "(тйактум)"
+    },
+    "8657": {
+      "meaning": "",
+      "transliteration": "(три-видха̄)"
+    },
+    "8884": {
+      "meaning": "",
+      "transliteration": "(три-видхам)"
+    },
+    "8663": {
+      "meaning": "",
+      "transliteration": "(три-видхах̣)"
+    },
+    "8671": {
+      "meaning": "",
+      "transliteration": "(три-дха̄)"
+    },
+    "8953": {
+      "meaning": "",
+      "transliteration": "(трибхих̣)"
+    },
+    "8855": {
+      "meaning": "",
+      "transliteration": "(ту)"
+    },
+    "8883": {
+      "meaning": "",
+      "transliteration": "(ту ида̄нӣм)"
+    },
+    "9408": {
+      "meaning": "",
+      "transliteration": "(ува̄ча)"
+    },
+    "8936": {
+      "meaning": "",
+      "transliteration": "(уда̄хр̣там)"
+    },
+    "9167": {
+      "meaning": "",
+      "transliteration": "(упа-а̄-ш́ритйа)"
+    },
+    "8916": {
+      "meaning": "",
+      "transliteration": "(упамам)"
+    },
+    "8758": {
+      "meaning": "",
+      "transliteration": "(утса̄ха)"
+    },
+    "8497": {
+      "meaning": "",
+      "transliteration": "(уттамам)"
+    },
+    "8933": {
+      "meaning": "",
+      "transliteration": "(уттхам)"
+    },
+    "8788": {
+      "meaning": "",
+      "transliteration": "(учйате)"
+    },
+    "8651": {
+      "meaning": "",
+      "transliteration": "(ханти)"
+    },
+    "9447": {
+      "meaning": "",
+      "transliteration": "(харех̣)"
+    },
+    "8772": {
+      "meaning": "",
+      "transliteration": "(харш̣а)"
+    },
+    "8645": {
+      "meaning": "",
+      "transliteration": "(хатва̄)"
+    },
+    "8622": {
+      "meaning": "",
+      "transliteration": "(хетавах̣)"
+    },
+    "9051": {
+      "meaning": "",
+      "transliteration": "(хи)"
+    },
+    "8770": {
+      "meaning": "",
+      "transliteration": "(хим̇са̄-а̄тмаках̣)"
+    },
+    "8744": {
+      "meaning": "",
+      "transliteration": "(хим̇са̄м)"
+    },
+    "9270": {
+      "meaning": "",
+      "transliteration": "(хитам)"
+    },
+    "9218": {
+      "meaning": "",
+      "transliteration": "(хр̣д-деш́е)"
+    },
+    "9452": {
+      "meaning": "",
+      "transliteration": "(хр̣ш̣йа̄ми)"
+    },
+    "8423": {
+      "meaning": "",
+      "transliteration": "(хр̣ш̣ӣкеш́а)"
+    },
+    "9453": {
+      "meaning": "",
+      "transliteration": "(ча)"
+    },
+    "8984": {
+      "meaning": "",
+      "transliteration": "(ча апи)"
+    },
+    "8792": {
+      "meaning": "",
+      "transliteration": "(ча эва)"
+    },
+    "9180": {
+      "meaning": "",
+      "transliteration": "(чет)"
+    },
+    "9383": {
+      "meaning": "",
+      "transliteration": "(четаса̄)"
+    },
+    "8603": {
+      "meaning": "",
+      "transliteration": "(чеш̣т̣а̄)"
+    },
+    "9173": {
+      "meaning": "",
+      "transliteration": "(читтах̣)"
+    },
+    "8552": {
+      "meaning": "",
+      "transliteration": "(чхинна)"
+    },
+    "9119": {
+      "meaning": "",
+      "transliteration": "(ш́а̄нтах̣)"
+    },
+    "9237": {
+      "meaning": "",
+      "transliteration": "(ш́а̄нтим)"
+    },
+    "9240": {
+      "meaning": "",
+      "transliteration": "(ш́а̄ш́ватам)"
+    },
+    "9156": {
+      "meaning": "",
+      "transliteration": "(ш́а̄ш́ватам̇)"
+    },
+    "9091": {
+      "meaning": "",
+      "transliteration": "(ш́абда-а̄дӣн)"
+    },
+    "8556": {
+      "meaning": "",
+      "transliteration": "(ш́акйам)"
+    },
+    "8965": {
+      "meaning": "",
+      "transliteration": "(ш́амах̣)"
+    },
+    "9294": {
+      "meaning": "",
+      "transliteration": "(ш́аран̣ам)"
+    },
+    "8608": {
+      "meaning": "",
+      "transliteration": "(ш́арӣра)"
+    },
+    "8781": {
+      "meaning": "",
+      "transliteration": "(ш́ат̣хах̣)"
+    },
+    "8979": {
+      "meaning": "",
+      "transliteration": "(ш́аурйам)"
+    },
+    "8968": {
+      "meaning": "",
+      "transliteration": "(ш́аучам)"
+    },
+    "8773": {
+      "meaning": "",
+      "transliteration": "(ш́ока)"
+    },
+    "8871": {
+      "meaning": "",
+      "transliteration": "(ш́окам)"
+    },
+    "9258": {
+      "meaning": "",
+      "transliteration": "(ш́р̣н̣у)"
+    },
+    "9366": {
+      "meaning": "",
+      "transliteration": "(ш́р̣н̣уйа̄т)"
+    },
+    "9364": {
+      "meaning": "",
+      "transliteration": "(ш́раддха̄ва̄н)"
+    },
+    "9031": {
+      "meaning": "",
+      "transliteration": "(ш́рейа̄н)"
+    },
+    "9184": {
+      "meaning": "",
+      "transliteration": "(ш́рош̣йаси)"
+    },
+    "9421": {
+      "meaning": "",
+      "transliteration": "(ш́рутава̄н)"
+    },
+    "9379": {
+      "meaning": "",
+      "transliteration": "(ш́рутам)"
+    },
+    "8426": {
+      "meaning": "",
+      "transliteration": "(ш́рӣ бхагава̄н)"
+    },
+    "9462": {
+      "meaning": "",
+      "transliteration": "(ш́рӣх̣)"
+    },
+    "9373": {
+      "meaning": "",
+      "transliteration": "(ш́убха̄н)"
+    },
+    "8958": {
+      "meaning": "",
+      "transliteration": "(ш́ӯдра̄н̣а̄м ча)"
+    },
+    "9001": {
+      "meaning": "",
+      "transliteration": "(ш́ӯдрасйа)"
+    },
+    "8951": {
+      "meaning": "",
+      "transliteration": "(эбхих̣)"
+    },
+    "9330": {
+      "meaning": "",
+      "transliteration": "(эва)"
+    },
+    "8971": {
+      "meaning": "",
+      "transliteration": "(эва ча)"
+    },
+    "8624": {
+      "meaning": "",
+      "transliteration": "(эвам)"
+    },
+    "9382": {
+      "meaning": "",
+      "transliteration": "(эка-агрен̣а)"
+    },
+    "9293": {
+      "meaning": "",
+      "transliteration": "(экам)"
+    },
+    "8708": {
+      "meaning": "",
+      "transliteration": "(экасмин)"
+    },
+    "8444": {
+      "meaning": "",
+      "transliteration": "(эке)"
+    },
+    "8583": {
+      "meaning": "",
+      "transliteration": "(эта̄ни)"
+    },
+    "9378": {
+      "meaning": "",
+      "transliteration": "(этат)"
+    },
+    "8620": {
+      "meaning": "",
+      "transliteration": "(эте)"
+    },
+    "9282": {
+      "meaning": "",
+      "transliteration": "(эш̣йаси)"
+    },
+    "9331": {
+      "meaning": "",
+      "transliteration": "(эш̣йати)"
+    },
+    "8686": {
+      "meaning": "",
+      "transliteration": "(ӣкш̣ате)"
+    },
+    "8987": {
+      "meaning": "",
+      "transliteration": "(ӣш́вара-бха̄вах̣ ча)"
+    },
+    "9215": {
+      "meaning": "",
+      "transliteration": "(ӣш́варах̣)"
+    }
+  }
+}

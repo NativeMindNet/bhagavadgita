@@ -1,173 +1,290 @@
-# Implementation Plan: GitaBook Translation
+# Optimized Plan: Complete Thai & Chinese Translations
 
-> Version: 1.0
-> Status: DRAFT
+> Version: 2.1
+> Status: READY
 > Last Updated: 2026-03-31
-> Specifications: [02-specifications.md](./02-specifications.md)
-
-## Summary
-
-Fill translation gaps using `/translate.sanscrit` command in 3 phases:
-1. All transliterations first (fast results)
-2. Complete th, zh-CN, zh-TW, ko (priority Asian)
-3. Add remaining 8 languages
-
-Total: **48 calls**, **14,848 files** generated.
-
-## Task Breakdown
-
-### Phase 1: Транслитерации (18 calls)
-
-Генерация `_translit.txt` для всех 12 языков, все 18 глав.
-
-| Task | Command | Output Files |
-|------|---------|--------------|
-| 1.1 | `/translate.sanscrit ch01 --type=translit --languages=th,zh-CN,zh-TW,ko,ja,el,ka,hy,he,ar,tr,sw` | 37 × 12 = 444 |
-| 1.2 | `/translate.sanscrit ch02 --type=translit --languages=...` | 72 × 12 = 864 |
-| 1.3 | `/translate.sanscrit ch03 --type=translit --languages=...` | 43 × 12 = 516 |
-| 1.4 | `/translate.sanscrit ch04 --type=translit --languages=...` | 42 × 12 = 504 |
-| 1.5 | `/translate.sanscrit ch05 --type=translit --languages=...` | 27 × 12 = 324 |
-| 1.6 | `/translate.sanscrit ch06 --type=translit --languages=...` | 45 × 12 = 540 |
-| 1.7 | `/translate.sanscrit ch07 --type=translit --languages=...` | 30 × 12 = 360 |
-| 1.8 | `/translate.sanscrit ch08 --type=translit --languages=...` | 27 × 12 = 324 |
-| 1.9 | `/translate.sanscrit ch09 --type=translit --languages=...` | 34 × 12 = 408 |
-| 1.10 | `/translate.sanscrit ch10 --type=translit --languages=...` | 40 × 12 = 480 |
-| 1.11 | `/translate.sanscrit ch11 --type=translit --languages=...` | 52 × 12 = 624 |
-| 1.12 | `/translate.sanscrit ch12 --type=translit --languages=...` | 16 × 12 = 192 |
-| 1.13 | `/translate.sanscrit ch13 --type=translit --languages=...` | 31 × 12 = 372 |
-| 1.14 | `/translate.sanscrit ch14 --type=translit --languages=...` | 24 × 12 = 288 |
-| 1.15 | `/translate.sanscrit ch15 --type=translit --languages=...` | 20 × 12 = 240 |
-| 1.16 | `/translate.sanscrit ch16 --type=translit --languages=...` | 21 × 12 = 252 |
-| 1.17 | `/translate.sanscrit ch17 --type=translit --languages=...` | 27 × 12 = 324 |
-| 1.18 | `/translate.sanscrit ch18 --type=translit --languages=...` | 75 × 12 = 900 |
-
-**Phase 1 Total:** 663 × 12 = **7,956 `_translit.txt` files**
-
-**Checkpoint:** Verify native scripts (Hangul for ko, Thai for th, etc.)
+> Goal: 100% completion for th, zh-CN, zh-TW (slokas + vocabulary)
 
 ---
 
-### Phase 2: Переводы th, zh-CN, zh-TW, ko (12 calls)
+## Current State Analysis (EXACT NUMBERS)
 
-Генерация `_sloka.txt` для 4 азиатских языков, главы 7-18.
+| Component | th | zh-TW | zh-CN |
+|-----------|-----|-------|-------|
+| **Transliterations** | ✅ 663/663 | ✅ 663/663 | ✅ 663/663 |
+| **Slokas (ch 1-6)** | ✅ 266/266 | ✅ 266/266 | ✅ 266/266 |
+| **Slokas (ch 7-18)** | ✅ 397/397 | ✅ 397/397 | ❌ 0/397 |
+| **Vocabulary** | ⚠️ 3560/3968 (90%) | ⚠️ 3560/3968 (90%) | ❌ 0/3968 (0%) |
 
-| Task | Command | Output Files |
-|------|---------|--------------|
-| 2.1 | `/translate.sanscrit ch07 --type=sloka --languages=th,zh-CN,zh-TW,ko` | 30 × 4 = 120 |
-| 2.2 | `/translate.sanscrit ch08 --type=sloka --languages=th,zh-CN,zh-TW,ko` | 27 × 4 = 108 |
-| 2.3 | `/translate.sanscrit ch09 --type=sloka --languages=th,zh-CN,zh-TW,ko` | 34 × 4 = 136 |
-| 2.4 | `/translate.sanscrit ch10 --type=sloka --languages=th,zh-CN,zh-TW,ko` | 40 × 4 = 160 |
-| 2.5 | `/translate.sanscrit ch11 --type=sloka --languages=th,zh-CN,zh-TW,ko` | 52 × 4 = 208 |
-| 2.6 | `/translate.sanscrit ch12 --type=sloka --languages=th,zh-CN,zh-TW,ko` | 16 × 4 = 64 |
-| 2.7 | `/translate.sanscrit ch13 --type=sloka --languages=th,zh-CN,zh-TW,ko` | 31 × 4 = 124 |
-| 2.8 | `/translate.sanscrit ch14 --type=sloka --languages=th,zh-CN,zh-TW,ko` | 24 × 4 = 96 |
-| 2.9 | `/translate.sanscrit ch15 --type=sloka --languages=th,zh-CN,zh-TW,ko` | 20 × 4 = 80 |
-| 2.10 | `/translate.sanscrit ch16 --type=sloka --languages=th,zh-CN,zh-TW,ko` | 21 × 4 = 84 |
-| 2.11 | `/translate.sanscrit ch17 --type=sloka --languages=th,zh-CN,zh-TW,ko` | 27 × 4 = 108 |
-| 2.12 | `/translate.sanscrit ch18 --type=sloka --languages=th,zh-CN,zh-TW,ko` | 75 × 4 = 300 |
+### Key Insights
 
-**Phase 2 Total:** 397 × 4 = **1,588 `_sloka.txt` files**
+**th и zh-TW имеют 100% slokas!** 
+- Нужно перевести только **408 словарных записей** каждый (~10%)
+- Это ~1-2 часа работы на язык
 
-**Checkpoint:** th, zh-CN, zh-TW, ko now 100% complete (663 slokas each)
+**zh-CN имеет только 40% slokas (главы 1-6)**
+- Нужно: slokas ch 7-18 (~397 файлов) + словари (~3,968 записей)
+- Это ~6-8 часов работы
 
 ---
 
-### Phase 3: Переводы ja, el, ka, hy, he, ar, tr, sw (18 calls)
+## Optimized Execution Order (FASTEST PATH TO 100%)
 
-Генерация `_sloka.txt` для 8 оставшихся языков, все 18 глав.
+### Phase 1: Thai Vocabulary - 408 entries (~1 hour) ⭐ FASTEST
+**Why first:** Quickest path to 100% for any language
 
-| Task | Command | Output Files |
-|------|---------|--------------|
-| 3.1 | `/translate.sanscrit ch01 --type=sloka --languages=ja,el,ka,hy,he,ar,tr,sw` | 37 × 8 = 296 |
-| 3.2 | `/translate.sanscrit ch02 --type=sloka --languages=ja,el,ka,hy,he,ar,tr,sw` | 72 × 8 = 576 |
-| 3.3 | `/translate.sanscrit ch03 --type=sloka --languages=ja,el,ka,hy,he,ar,tr,sw` | 43 × 8 = 344 |
-| 3.4 | `/translate.sanscrit ch04 --type=sloka --languages=ja,el,ka,hy,he,ar,tr,sw` | 42 × 8 = 336 |
-| 3.5 | `/translate.sanscrit ch05 --type=sloka --languages=ja,el,ka,hy,he,ar,tr,sw` | 27 × 8 = 216 |
-| 3.6 | `/translate.sanscrit ch06 --type=sloka --languages=ja,el,ka,hy,he,ar,tr,sw` | 45 × 8 = 360 |
-| 3.7 | `/translate.sanscrit ch07 --type=sloka --languages=ja,el,ka,hy,he,ar,tr,sw` | 30 × 8 = 240 |
-| 3.8 | `/translate.sanscrit ch08 --type=sloka --languages=ja,el,ka,hy,he,ar,tr,sw` | 27 × 8 = 216 |
-| 3.9 | `/translate.sanscrit ch09 --type=sloka --languages=ja,el,ka,hy,he,ar,tr,sw` | 34 × 8 = 272 |
-| 3.10 | `/translate.sanscrit ch10 --type=sloka --languages=ja,el,ka,hy,he,ar,tr,sw` | 40 × 8 = 320 |
-| 3.11 | `/translate.sanscrit ch11 --type=sloka --languages=ja,el,ka,hy,he,ar,tr,sw` | 52 × 8 = 416 |
-| 3.12 | `/translate.sanscrit ch12 --type=sloka --languages=ja,el,ka,hy,he,ar,tr,sw` | 16 × 8 = 128 |
-| 3.13 | `/translate.sanscrit ch13 --type=sloka --languages=ja,el,ka,hy,he,ar,tr,sw` | 31 × 8 = 248 |
-| 3.14 | `/translate.sanscrit ch14 --type=sloka --languages=ja,el,ka,hy,he,ar,tr,sw` | 24 × 8 = 192 |
-| 3.15 | `/translate.sanscrit ch15 --type=sloka --languages=ja,el,ka,hy,he,ar,tr,sw` | 20 × 8 = 160 |
-| 3.16 | `/translate.sanscrit ch16 --type=sloka --languages=ja,el,ka,hy,he,ar,tr,sw` | 21 × 8 = 168 |
-| 3.17 | `/translate.sanscrit ch17 --type=sloka --languages=ja,el,ka,hy,he,ar,tr,sw` | 27 × 8 = 216 |
-| 3.18 | `/translate.sanscrit ch18 --type=sloka --languages=ja,el,ka,hy,he,ar,tr,sw` | 75 × 8 = 600 |
+| Step | Action | Entries | Time |
+|------|--------|---------|------|
+| 1.1 | Extract 408 English entries | 408 | 1 min |
+| 1.2 | Translate to Thai | 408 | 30-45 min |
+| 1.3 | Validate & save | 408 | 15 min |
 
-**Phase 3 Total:** 663 × 8 = **5,304 `_sloka.txt` files**
-
-**Checkpoint:** All 12 languages now 100% complete
+**🎯 RESULT AFTER PHASE 1: th = 100% COMPLETE!**
 
 ---
 
-## File Change Summary
+### Phase 2: zh-TW Vocabulary - 408 entries (~1 hour) ⭐ FASTEST
+**Why second:** Same quick win as Thai
 
-| Phase | Files Created | Type |
-|-------|---------------|------|
-| 1 | 7,956 | `_translit.txt` |
-| 2 | 1,588 | `_sloka.txt` |
-| 3 | 5,304 | `_sloka.txt` |
-| **Total** | **14,848** | new files |
+| Step | Action | Entries | Time |
+|------|--------|---------|------|
+| 2.1 | Extract 408 English entries | 408 | 1 min |
+| 2.2 | Translate to Traditional Chinese | 408 | 30-45 min |
+| 2.3 | Validate & save | 408 | 15 min |
 
-Note: Phase 1 also overwrites 1,064 existing wrong translits (th, zh-CN, zh-TW, ko ch 1-6).
+**🎯 RESULT AFTER PHASE 2: zh-TW = 100% COMPLETE!**
 
-## Execution Command
+---
 
-For each task, run:
+### Phase 3: zh-CN Slokas Chapters 7-18 - 397 files (~4-6 hours)
+**Why third:** Biggest remaining gap
 
-```bash
-/translate.sanscrit \
-  data/original/ \
-  data/translated/ \
-  --chapter={NN} \
-  --type={translit|sloka} \
-  --languages={lang1,lang2,...}
+| Step | Action | Files | Time |
+|------|--------|-------|------|
+| 3.1 | Translate chapters 7-18 from source | 397 | 3-5 hours |
+| 3.2 | Validate UTF-8 & structure | 397 | 30 min |
+| 3.3 | Update meta files | 12 | 15 min |
+
+**🎯 RESULT AFTER PHASE 3: zh-CN slokas = 100% COMPLETE!**
+
+---
+
+### Phase 4: zh-CN Vocabulary - 3,968 entries (~4-6 hours)
+**Why fourth:** Can convert from zh-TW (same content, different script)
+
+| Step | Action | Entries | Time |
+|------|--------|---------|------|
+| 4.1 | Copy zh-TW vocabulary structure | 3,968 | 5 min |
+| 4.2 | Convert Traditional → Simplified | 3,968 | 30 min |
+| 4.3 | Generate Pinyin transliterations | 3,968 | 30 min |
+| 4.4 | Validate & save | 3,968 | 30 min |
+
+**🎯 RESULT AFTER PHASE 4: zh-CN = 100% COMPLETE!**
+
+---
+
+## Summary: Fastest Path to 100%
+
+| Phase | Action | th | zh-TW | zh-CN | Cumulative Time |
+|-------|--------|-----|-------|-------|-----------------|
+| **START** | - | 90% | 90% | 40% | 0h |
+| After Phase 1 | Thai vocab (408 entries) | **100%** 🎯 | 90% | 40% | 1h |
+| After Phase 2 | zh-TW vocab (408 entries) | 100% | **100%** 🎯 | 40% | 2h |
+| After Phase 3 | zh-CN slokas ch 7-18 | 100% | 100% | **100% slokas** | 6-8h |
+| After Phase 4 | zh-CN vocab (3,968 entries) | 100% | 100% | **100%** 🎯 | 10-14h |
+
+---
+
+## Detailed Task Instructions
+
+### Phase 1: Thai Vocabulary Translation
+
+**Files to update:**
+- `data/translated/th/chapter-02-th_vocabulary.json` (107 entries)
+- `data/translated/th/chapter-03-th_vocabulary.json` (71 entries)
+- `data/translated/th/chapter-04-th_vocabulary.json` (62 entries)
+- `data/translated/th/chapter-05-th_vocabulary.json` (44 entries)
+- `data/translated/th/chapter-06-th_vocabulary.json` (67 entries)
+- `data/translated/th/chapter-10-th_vocabulary.json` (57 entries)
+
+**Translation approach:**
+1. Load each file
+2. Find entries where `meaning` is English-only
+3. Translate meaning to Thai
+4. Keep existing `transliteration` unchanged
+5. Save file
+
+**Sample entry to translate:**
+```json
+"18497": {
+  "meaning": "โอ้ best of the valiant",  // → "โอ้ ยอดนักรบผู้กล้าหาญ"
+  "transliteration": "หเอ) มอะหอา-พอาหโอ"  // Keep unchanged
+}
 ```
 
-Save results immediately after each call.
+---
+
+### Phase 2: zh-TW Vocabulary Translation
+
+Same as Phase 1, but translate to Traditional Chinese.
+
+**Sample entry to translate:**
+```json
+"18497": {
+  "meaning": "哦 best of the valiant",  // → "哦 最英勇的勇士"
+  "transliteration": "哈埃) 瑪阿哈阿 - 巴阿哈奧"  // Keep unchanged
+}
+```
+
+---
+
+### Phase 3: zh-CN Slokas Translation
+
+**Source:** `data/original/{ru,en,de,es}/` + `data/sanskrit/`
+**Target:** `data/translated/zh-CN/chapter-XX-zh-CN/`
+
+**Chapters to translate:** 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18
+
+**Approach:**
+1. For each chapter, load source slokas
+2. Translate from Russian/English/Sanskrit
+3. Save to zh-CN directory
+4. Validate UTF-8 encoding
+
+---
+
+### Phase 4: zh-CN Vocabulary Creation
+
+**Source:** zh-TW vocabulary files
+**Target:** zh-CN vocabulary files
+
+**Approach:**
+1. Load zh-TW vocabulary
+2. Convert Traditional Chinese → Simplified Chinese
+3. Generate Pinyin transliterations
+4. Save to zh-CN directory
+
+**Conversion examples:**
+- 哦 → 哦 (same)
+- 勇士 → 勇士 (same)
+- 靈魂 → 灵魂
+- 神聖 → 神圣
+
+---
+
+## Detailed Task Breakdown
+
+### Task 1.1: Check Archive for zh-CN Slokas
+
+```bash
+# Check if zh-CN slokas exist in alternative archive locations
+ls -la /Users/anton/proj/gita/_archive/data.backup/chapters/ch-*/chapter-zh-CN.json
+ls -la /Users/anton/proj/gita/_archive/data.backup/translated/zh-CN/
+```
+
+**If found:** Restore using `restore_translations.py` with zh-CN support
+**If not found:** Proceed to Task 1.2
+
+---
+
+### Task 1.2: Translate zh-CN Slokas Chapters 7-18
+
+**Source files:**
+- `data/original/{ru,en,de,es}/chapter-XX-{lang}/`
+- `data/sanskrit/chapter-XX-sanskrit/`
+
+**Target:**
+- `data/translated/zh-CN/chapter-XX-zh-CN/chapter-XX-Y.Y-zh-CN_sloka.txt`
+
+**Approach:**
+1. Use existing translation tool/script
+2. Process chapters 7-18 sequentially
+3. Save after each chapter
+
+---
+
+### Task 2.1-2.4: Thai Vocabulary Translation
+
+**Script needed:** `translate_vocabulary.py`
+
+```python
+# Pseudocode
+for chapter in 1..18:
+    vocab = load(f"data/translated/th/chapter-{chapter:02d}-th_vocabulary.json")
+    for word_id, entry in vocab['vocabulary'].items():
+        if is_english_only(entry['meaning']):
+            entry['meaning'] = translate_to_thai(entry['meaning'])
+    save(vocab)
+```
+
+---
+
+### Task 3.1-3.4: zh-TW Vocabulary Translation
+
+Same approach as Thai, but translate to Traditional Chinese.
+
+---
+
+### Task 4.1-4.4: zh-CN Vocabulary Creation
+
+**Approach:**
+1. Use zh-TW vocabulary as template (same structure)
+2. Convert Traditional Chinese → Simplified Chinese
+3. Generate Pinyin transliterations from Sanskrit
+
+---
 
 ## Risk Assessment
 
 | Risk | Likelihood | Impact | Mitigation |
 |------|------------|--------|------------|
-| API timeout | Medium | Low | Retry 3 times |
-| Wrong script in translit | Low | Medium | Spot-check after Phase 1 |
-| Mixed script in translation | Low | Medium | Regenerate affected slokas |
-| Inconsistent terminology | Low | High | Use same source reading for all langs |
-
-## Rollback Strategy
-
-If implementation fails:
-1. Backup exists at `data.backup/` from previous migration
-2. Can revert individual language folders
-3. Meta files can be regenerated from file counts
-
-## Checkpoints
-
-### After Phase 1 (call 18):
-- [ ] All 7,956 `_translit.txt` files exist
-- [ ] th translits use Thai script (ไทย)
-- [ ] ko translits use Hangul (한글)
-- [ ] zh-CN translits use Simplified (简体)
-- [ ] ja translits use Katakana (カタカナ)
-- [ ] he/ar translits are RTL
-
-### After Phase 2 (call 30):
-- [ ] th has 663 `_sloka.txt` files
-- [ ] zh-CN has 663 `_sloka.txt` files
-- [ ] zh-TW has 663 `_sloka.txt` files
-- [ ] ko has 663 `_sloka.txt` files
-
-### After Phase 3 (call 48):
-- [ ] All 12 languages have 663 slokas each
-- [ ] Total: 7,956 `_sloka.txt` + 7,956 `_translit.txt` = 15,912 files
-- [ ] Update meta files with final counts
+| zh-CN slokas not in archive | Medium | Medium | Have translation script ready |
+| Vocabulary translation quality | Low | High | Spot-check after each chapter |
+| Character encoding issues | Low | Medium | Validate UTF-8 after each save |
+| Inconsistent terminology | Medium | Medium | Use glossary for key terms |
 
 ---
 
-## Approval
+## Validation Checklist
 
-- [x] Approved on: 2026-03-31
+### After Phase 1 (zh-CN slokas):
+- [ ] zh-CN has 663 sloka files
+- [ ] All files valid UTF-8
+- [ ] No mixed scripts (Simplified only)
+- [ ] Chapter meta files updated
+
+### After Phase 2 (Thai vocabulary):
+- [ ] All ~3,000 entries have Thai meaning (no English)
+- [ ] Transliterations preserved
+- [ ] Spot-check 10 random entries for quality
+
+### After Phase 3 (zh-TW vocabulary):
+- [ ] All ~3,000 entries have Traditional Chinese meaning
+- [ ] Transliterations preserved
+- [ ] Spot-check 10 random entries for quality
+
+### After Phase 4 (zh-CN vocabulary):
+- [ ] All ~3,000 entries have Simplified Chinese meaning
+- [ ] Pinyin transliterations generated
+- [ ] Spot-check 10 random entries for quality
+
+---
+
+## Final State
+
+| Component | th | zh-TW | zh-CN |
+|-----------|-----|-------|-------|
+| **Transliterations** | ✅ 663 | ✅ 663 | ✅ 663 |
+| **Slokas** | ✅ 663 | ✅ 663 | ✅ 663 |
+| **Vocabulary** | ✅ ~3,000 | ✅ ~3,000 | ✅ ~3,000 |
+| **STATUS** | 🎯 **100%** | 🎯 **100%** | 🎯 **100%** |
+
+**Total estimated time:** 9-16 hours
+
+---
+
+## Next Steps
+
+1. **Immediate:** Run Task 1.1 (check archive for zh-CN slokas)
+2. **Based on result:** Either restore from archive OR translate
+3. **Then:** Execute vocabulary translation in order: th → zh-TW → zh-CN

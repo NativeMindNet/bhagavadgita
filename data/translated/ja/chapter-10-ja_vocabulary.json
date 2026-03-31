@@ -1,0 +1,444 @@
+{
+  "vocabulary": {
+    "20385": {
+      "meaning": "全生命の主よ",
+      "transliteration": "(ヘー) ブータ・イーシャ"
+    },
+    "20386": {
+      "meaning": "神々の神よ",
+      "transliteration": "(ヘー) デーヴァ・デーヴァ"
+    },
+    "20387": {
+      "meaning": "宇宙の主ジャガンナートよ",
+      "transliteration": "(ヘー) ジャガット・パテー"
+    },
+    "20665": {
+      "meaning": "敵を調伏する者よ",
+      "transliteration": "(ヘー) パランタパ"
+    },
+    "20403": {
+      "meaning": "ヨーガマーヤーの主、神聖なる力の主よ",
+      "transliteration": "(ヘー) ヨーギン"
+    },
+    "20591": {
+      "meaning": "そして創造者たちの",
+      "transliteration": "(スラシュトリーム・チャ)"
+    },
+    "20450": {
+      "meaning": "我はヴィシュヌとして知られるアーディティヤなり",
+      "transliteration": "アハム・アスミ・ヴィシュヌフ"
+    },
+    "20590": {
+      "meaning": "我のみが永遠の時流れなり",
+      "transliteration": "アハム・エーヴァ・アクシャヤフ・カーラフ"
+    },
+    "20576": {
+      "meaning": "我は初めなり",
+      "transliteration": "アハム・エーヴァ・アーディフ"
+    },
+    "20614": {
+      "meaning": "我はガーヤトリー・マントラなり",
+      "transliteration": "アハム・ガーヤトリー"
+    },
+    "20616": {
+      "meaning": "我は収穫の月アグラーヤヤナなり",
+      "transliteration": "アハム・マルガ・シルシャフ"
+    },
+    "20313": {
+      "meaning": "我は至高の絶対真理、スヴァヤム・バガヴァーン、すなわち原初の至高主、原因なり",
+      "transliteration": "アハム・プラバヴァフ"
+    },
+    "20582": {
+      "meaning": "我は哲学なり",
+      "transliteration": "アハム・ヴァーダフ"
+    },
+    "20445": {
+      "meaning": "我は初めなり",
+      "transliteration": "アハム・アーディフ"
+    },
+    "20442": {
+      "meaning": "我は超魂なり",
+      "transliteration": "アハム・アートマー"
+    },
+    "20260": {
+      "meaning": "生れなきものとして",
+      "transliteration": "アジャム"
+    },
+    "20348": {
+      "meaning": "無明より生ずる",
+      "transliteration": "アジュニャーナ・ジャム"
+    },
+    "20519": {
+      "meaning": "不死の甘露をかき混ぜて生まれたる",
+      "transliteration": "アムリタ・ウドバヴァム"
+    },
+    "20341": {
+      "meaning": "慈悲によって",
+      "transliteration": "アヌカンパー・アルタム"
+    },
+    "20508": {
+      "meaning": "（我は）アシュヴァッタ樹なり",
+      "transliteration": "アシュヴァッタフ"
+    },
+    "20684": {
+      "meaning": "一部の化身として生まれた",
+      "transliteration": "アムシャ・サンバヴァム"
+    },
+    "20598": {
+      "meaning": "衆生の定められた六つの変容の",
+      "transliteration": "バヴィシュヤターム"
+    },
+    "20346": {
+      "meaning": "知識の輝ける灯りをもって",
+      "transliteration": "バースヴァター・ジュニャーナ・ディーペーナ"
+    },
+    "20321": {
+      "meaning": "奉仕、友情などの神聖なる関係において",
+      "transliteration": "バーヴァ・サマンヴィターフ"
+    },
+    "20471": {
+      "meaning": "すべての生きるものの",
+      "transliteration": "ブーターナーム"
+    },
+    "20327": {
+      "meaning": "enlightening one another with the nectar of their devotional realisations",
+      "transliteration": "bodhayantaḥ parasparam (santaḥ)"
+    },
+    "20370": {
+      "meaning": "我を",
+      "transliteration": "bravīṣi me"
+    },
+    "20273": {
+      "meaning": "我を",
+      "transliteration": "buddhiḥ"
+    },
+    "20320": {
+      "meaning": "persons of fine theistic intelligence",
+      "transliteration": "budhāḥ"
+    },
+    "20611": {
+      "meaning": "(I am) the mantra prayer to Lord Indra",
+      "transliteration": "bṛhat-sāma"
+    },
+    "20661": {
+      "meaning": "moving and stationary",
+      "transliteration": "chara-acharam"
+    },
+    "20296": {
+      "meaning": "the four sages Sanaka, Sanandana, Sanat Kumār, and Sanātan, all known as brahmarṣis",
+      "transliteration": "chatvārah"
+    },
+    "20550": {
+      "meaning": "Of the descendents of Diti",
+      "transliteration": "daityānām"
+    },
+    "20278": {
+      "meaning": "control of the external senses",
+      "transliteration": "damaḥ"
+    },
+    "20358": {
+      "meaning": "神々",
+      "transliteration": "deva-ṛṣiḥ nāradaḥ"
+    },
+    "20462": {
+      "meaning": "Of the demigods",
+      "transliteration": "devānām"
+    },
+    "20589": {
+      "meaning": "(I am) the dual compound word",
+      "transliteration": "dvandvaḥ"
+    },
+    "20431": {
+      "meaning": "O best of the Kurus",
+      "transliteration": "hanta kuru-śreṣṭha"
+    },
+    "20506": {
+      "meaning": "(I am) the Himālayas",
+      "transliteration": "himālayaḥ"
+    },
+    "20465": {
+      "meaning": "Of the senses",
+      "transliteration": "indriyāṇām"
+    },
+    "20503": {
+      "meaning": "我を",
+      "transliteration": "japa-yajñaḥ"
+    },
+    "20645": {
+      "meaning": "Of those desiring to conquer",
+      "transliteration": "jigīṣatām"
+    },
+    "20451": {
+      "meaning": "Of the luminaries",
+      "transliteration": "jyotiṣām"
+    },
+    "20652": {
+      "meaning": "of the learned",
+      "transliteration": "jñāna-vatām"
+    },
+    "20274": {
+      "meaning": "ability to discriminate between spirit and matter",
+      "transliteration": "jñānam"
+    },
+    "20573": {
+      "meaning": "(I am) the Jāhnavī, the Ganges",
+      "transliteration": "jāhnavī"
+    },
+    "20553": {
+      "meaning": "and of subduers",
+      "transliteration": "kalayatām cha"
+    },
+    "20515": {
+      "meaning": "(I am) the sage Kapila",
+      "transliteration": "kapilaḥ muniḥ"
+    },
+    "20640": {
+      "meaning": "of knowers of the scriptures",
+      "transliteration": "kavīnām"
+    },
+    "20609": {
+      "meaning": "forgiveness (or the seven wives of Dharma)",
+      "transliteration": "kṣamā"
+    },
+    "20262": {
+      "meaning": "我を",
+      "transliteration": "loka-mahā-īśvaram cha"
+    },
+    "20256": {
+      "meaning": "大聖者たち",
+      "transliteration": "mahā-ṛṣīṇām cha"
+    },
+    "20455": {
+      "meaning": "Of the Vāyu demigods",
+      "transliteration": "marutām"
+    },
+    "20456": {
+      "meaning": "(I am) the Vāyu known as Marīchi",
+      "transliteration": "marīchiḥ"
+    },
+    "20325": {
+      "meaning": "我を",
+      "transliteration": "mat-chittāḥ"
+    },
+    "20324": {
+      "meaning": "我を",
+      "transliteration": "mat-gata-prāṇāḥ"
+    },
+    "20637": {
+      "meaning": "of the sages",
+      "transliteration": "munīnām"
+    },
+    "20259": {
+      "meaning": "我を",
+      "transliteration": "mām"
+    },
+    "20294": {
+      "meaning": "are born of My mind, which is manifest as Hiraṇyagarbha, Lord Brahmā",
+      "transliteration": "mānasāḥ jātāḥ"
+    },
+    "20615": {
+      "meaning": "Of the months",
+      "transliteration": "māsānām"
+    },
+    "20666": {
+      "meaning": "there is no",
+      "transliteration": "na asti"
+    },
+    "20379": {
+      "meaning": "neither the demigods nor the demons",
+      "transliteration": "na devāḥ na dānavāḥ"
+    },
+    "20312": {
+      "meaning": "there is no doubt",
+      "transliteration": "na saṁśayaḥ (asti)"
+    },
+    "20457": {
+      "meaning": "and of the stars",
+      "transliteration": "nakṣatrāṇām"
+    },
+    "20524": {
+      "meaning": "(I am) the king",
+      "transliteration": "nara-adhipam"
+    },
+    "20538": {
+      "meaning": "Of the multi-headed non-poisonous serpents",
+      "transliteration": "nāgānām"
+    },
+    "20352": {
+      "meaning": "我を",
+      "transliteration": "param brahma"
+    },
+    "20353": {
+      "meaning": "我を",
+      "transliteration": "param dhāma"
+    },
+    "20562": {
+      "meaning": "Of sanctifiers or of the rapid",
+      "transliteration": "pavatām"
+    },
+    "20545": {
+      "meaning": "Of the deified ancestors",
+      "transliteration": "pitṝṇām"
+    },
+    "20635": {
+      "meaning": "of the Pāṇḍavas",
+      "transliteration": "pāṇḍavānām"
+    },
+    "20472": {
+      "meaning": "Of the eleven Rudras",
+      "transliteration": "rudrāṇām"
+    },
+    "20287": {
+      "meaning": "equanimity, seeing the happiness and unhappiness of all beings as one’s own",
+      "transliteration": "samatā"
+    },
+    "20575": {
+      "meaning": "of the manifest",
+      "transliteration": "sargāṇām"
+    },
+    "20443": {
+      "meaning": "situated within the heart of all beings",
+      "transliteration": "sarva-bhūta-āśaya-sthitaḥ"
+    },
+    "20596": {
+      "meaning": "the vanquisher of all",
+      "transliteration": "sarva-haraḥ"
+    },
+    "20267": {
+      "meaning": "すべての罪から",
+      "transliteration": "sarva-pāpaiḥ"
+    },
+    "20315": {
+      "meaning": "All activity in the universe of matter and spirit, and the Vedas and allied scriptures",
+      "transliteration": "sarvam"
+    },
+    "20314": {
+      "meaning": "of all causes, including Brahma, Paramātmā, and Bhagavān",
+      "transliteration": "sarvasya"
+    },
+    "20631": {
+      "meaning": "of the truthful",
+      "transliteration": "sattva-vatām"
+    },
+    "20630": {
+      "meaning": "the power of truth",
+      "transliteration": "sattvam"
+    },
+    "20505": {
+      "meaning": "of the immovable",
+      "transliteration": "sthāvarāṇām"
+    },
+    "20494": {
+      "meaning": "(I am) the ocean",
+      "transliteration": "sāgaraḥ"
+    },
+    "20610": {
+      "meaning": "Of all the mantras in the Sāma-veda",
+      "transliteration": "sāmnām"
+    },
+    "20289": {
+      "meaning": "austerity as directed in the Vedas",
+      "transliteration": "tapaḥ"
+    },
+    "20683": {
+      "meaning": "each of them",
+      "transliteration": "tat tat"
+    },
+    "20297": {
+      "meaning": "and the fourteen Manus headed by Svayambhuva",
+      "transliteration": "tathā manavaḥ"
+    },
+    "20361": {
+      "meaning": "and the great sage Vyās",
+      "transliteration": "tathā vyāsaḥ"
+    },
+    "20688": {
+      "meaning": "what is your need",
+      "transliteration": "tava kim"
+    },
+    "20243": {
+      "meaning": "我を",
+      "transliteration": "te prīyamāṇāya"
+    },
+    "20623": {
+      "meaning": "Of the splendid",
+      "transliteration": "tejasvinām"
+    },
+    "20599": {
+      "meaning": "(I am) the first, as birth",
+      "transliteration": "udbhavaḥ"
+    },
+    "20527": {
+      "meaning": "the thunderbolt, the weapon of Lord Indra",
+      "transliteration": "vajram"
+    },
+    "20479": {
+      "meaning": "Of the eight Vasus",
+      "transliteration": "vasūnām"
+    },
+    "20459": {
+      "meaning": "Of the Vedas",
+      "transliteration": "vedānām"
+    },
+    "20368": {
+      "meaning": "the all-pervading Lord, the fountain-head of all opulences",
+      "transliteration": "vibhum"
+    },
+    "20440": {
+      "meaning": "to the expanse of My glories",
+      "transliteration": "vistarasya me"
+    },
+    "20671": {
+      "meaning": "of the expanse",
+      "transliteration": "vistaraḥ"
+    },
+    "20537": {
+      "meaning": "(I am) Vāsuki, the king of snakes",
+      "transliteration": "vāsukiḥ"
+    },
+    "20632": {
+      "meaning": "Of the Yādavas",
+      "transliteration": "vṛṣṇīnām"
+    },
+    "20501": {
+      "meaning": "Of all types of sacrifices",
+      "transliteration": "yajñānām"
+    },
+    "20476": {
+      "meaning": "of the Yakṣas and Rākṣasas",
+      "transliteration": "yakṣa-rakṣasām"
+    },
+    "20675": {
+      "meaning": "Of each and every",
+      "transliteration": "yat yat eva"
+    },
+    "20310": {
+      "meaning": "knowledge of essential truth",
+      "transliteration": "yogena"
+    },
+    "20449": {
+      "meaning": "Of the twelve Ādityas",
+      "transliteration": "ādityānām"
+    },
+    "20422": {
+      "meaning": "the process of devotional union with You (bhakti-yoga)",
+      "transliteration": "ātmanaḥ yogam"
+    },
+    "20279": {
+      "meaning": "control of the internal senses",
+      "transliteration": "śamaḥ"
+    },
+    "20458": {
+      "meaning": "(I am) the moon",
+      "transliteration": "śaśī"
+    },
+    "20482": {
+      "meaning": "of the mountains",
+      "transliteration": "śikhariṇām"
+    },
+    "20618": {
+      "meaning": "of the seasons",
+      "transliteration": "ṛtūnām"
+    }
+  }
+}

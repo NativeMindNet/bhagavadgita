@@ -1,0 +1,1464 @@
+{
+  "meta": {
+    "source": "vocabulary-th",
+    "type": "vocabulary_meaning",
+    "target_languages": [
+      "th"
+    ],
+    "total_entries": 242
+  },
+  "entries": {
+    "ch2_17434": {
+      "chapter": 2,
+      "word_id": "17434",
+      "english": "From loss of intelligence",
+      "transliteration": "พอุทธอิ-นอาศอาต"
+    },
+    "ch2_17098": {
+      "chapter": 2,
+      "word_id": "17098",
+      "english": "in the bodies",
+      "transliteration": "ทเอหเอ"
+    },
+    "ch2_17384": {
+      "chapter": 2,
+      "word_id": "17384",
+      "english": "For the embodied",
+      "transliteration": "ทเอหอินอะหะ"
+    },
+    "ch2_17392": {
+      "chapter": 2,
+      "word_id": "17392",
+      "english": "by the vision",
+      "transliteration": "ทริษฏวอา"
+    },
+    "ch2_16820": {
+      "chapter": 2,
+      "word_id": "16820",
+      "english": "which of these",
+      "transliteration": "เอตอะต กอะตอะรอะต"
+    },
+    "ch2_16887": {
+      "chapter": 2,
+      "word_id": "16887",
+      "english": "for the dead",
+      "transliteration": "คอะตอาสอูน"
+    },
+    "ch2_16808": {
+      "chapter": 2,
+      "word_id": "16808",
+      "english": "by killing our teachers and superiors",
+      "transliteration": "คอุรอูน หอะตวอา"
+    },
+    "ch2_16865": {
+      "chapter": 2,
+      "word_id": "16865",
+      "english": "sense-controlled Arjuna the conqueror of sleep",
+      "transliteration": "คอุฑอากเอศอะหะ"
+    },
+    "ch2_17015": {
+      "chapter": 2,
+      "word_id": "17015",
+      "english": "old and decrepit",
+      "transliteration": "ชอีรณอานอิ"
+    },
+    "ch2_17303": {
+      "chapter": 2,
+      "word_id": "17303",
+      "english": "is the expertise",
+      "transliteration": "กเอาศอะลอะม"
+    },
+    "ch2_17227": {
+      "chapter": 2,
+      "word_id": "17227",
+      "english": "and they advocate the various ceremonies and rituals",
+      "transliteration": "กรอิยอา-วอิศเอษอะ-พอะหอุลอาม"
+    },
+    "ch2_17336": {
+      "chapter": 2,
+      "word_id": "17336",
+      "english": "what is the description",
+      "transliteration": "กอา ภอาษอา"
+    },
+    "ch2_17377": {
+      "chapter": 2,
+      "word_id": "17377",
+      "english": "like the limbs of a tortoise",
+      "transliteration": "กอูรมอะหะ อะงคอานอิ อิวอะ"
+    },
+    "ch2_17175": {
+      "chapter": 2,
+      "word_id": "17175",
+      "english": "being confident of success",
+      "transliteration": "กริตอะ-นอิศฉอะยอะหะ (สอะน"
+    },
+    "ch2_16806": {
+      "chapter": 2,
+      "word_id": "16806",
+      "english": "noble elders and teachers",
+      "transliteration": "มอะหอา-อะนอุภอาวอาน คอุรอูน"
+    },
+    "ch2_17148": {
+      "chapter": 2,
+      "word_id": "17148",
+      "english": "Great warriors like Duryodhan and others",
+      "transliteration": "มอะหอา-รอะถอาหะ"
+    },
+    "ch2_23906": {
+      "chapter": 2,
+      "word_id": "23906",
+      "english": "and for one who is dead",
+      "transliteration": "มริตอะสยอะ ฉอะ"
+    },
+    "ch2_17455": {
+      "chapter": 2,
+      "word_id": "17455",
+      "english": "there is no",
+      "transliteration": "นอะ อะสตอิ"
+    },
+    "ch2_17461": {
+      "chapter": 2,
+      "word_id": "17461",
+      "english": "there is no",
+      "transliteration": "นอะ ฉอะ (อะสตอิ"
+    },
+    "ch2_17201": {
+      "chapter": 2,
+      "word_id": "17201",
+      "english": "and there is no",
+      "transliteration": "นอะ วอิทยอะตเอ"
+    },
+    "ch2_16955": {
+      "chapter": 2,
+      "word_id": "16955",
+      "english": "who is always the same",
+      "transliteration": "นอิตยอะสยอะ"
+    },
+    "ch2_17502": {
+      "chapter": 2,
+      "word_id": "17502",
+      "english": "who sees the futility of mundane endeavours and remains indifferent to the dualities",
+      "transliteration": "ปอะศยอะตอะหะ"
+    },
+    "ch2_17292": {
+      "chapter": 2,
+      "word_id": "17292",
+      "english": "Those motivated by the fruits of their actions",
+      "transliteration": "ผอะลอะ-หเอตอะวอะหะ"
+    },
+    "ch2_17263": {
+      "chapter": 2,
+      "word_id": "17263",
+      "english": "to the results",
+      "transliteration": "ผอะลเอษอุ"
+    },
+    "ch2_17451": {
+      "chapter": 2,
+      "word_id": "17451",
+      "english": "of the peaceful-hearted person",
+      "transliteration": "ปรอะสอะนนอะ-ฉเอตอะสอะหะ"
+    },
+    "ch2_17202": {
+      "chapter": 2,
+      "word_id": "17202",
+      "english": "diminution of results",
+      "transliteration": "ปรอะตยอะวอายอะหะ"
+    },
+    "ch2_17367": {
+      "chapter": 2,
+      "word_id": "17367",
+      "english": "in the event of",
+      "transliteration": "ปรอาปยอะ"
+    },
+    "ch2_17389": {
+      "chapter": 2,
+      "word_id": "17389",
+      "english": "But even the taste",
+      "transliteration": "รอะสอะหะ อะปอิ"
+    },
+    "ch2_17147": {
+      "chapter": 2,
+      "word_id": "17147",
+      "english": "for the respected",
+      "transliteration": "สอะมภอาวอิตอะสยอะ"
+    },
+    "ch2_17277": {
+      "chapter": 2,
+      "word_id": "17277",
+      "english": "in success and failure",
+      "transliteration": "สอิทธอิ-อะสอิทธยโอหะ"
+    },
+    "ch2_17429": {
+      "chapter": 2,
+      "word_id": "17429",
+      "english": "forgetfulness of scriptural morality",
+      "transliteration": "สมริตอิ-วอิภรอะมอะหะ"
+    },
+    "ch2_17297": {
+      "chapter": 2,
+      "word_id": "17297",
+      "english": "pious and sinful actions",
+      "transliteration": "สอุกริตอะ-ทอุษกริตเอ"
+    },
+    "ch2_16853": {
+      "chapter": 2,
+      "word_id": "16853",
+      "english": "over even the demigods",
+      "transliteration": "สอุรอาณอาม อะปอิ"
+    },
+    "ch2_17493": {
+      "chapter": 2,
+      "word_id": "17493",
+      "english": "in that night",
+      "transliteration": "ตอะสยอาม"
+    },
+    "ch2_17079": {
+      "chapter": 2,
+      "word_id": "17079",
+      "english": "in that matter",
+      "transliteration": "ตอะตรอะ"
+    },
+    "ch2_16970": {
+      "chapter": 2,
+      "word_id": "16970",
+      "english": "both of them",
+      "transliteration": "ตเอา อุภเอา"
+    },
+    "ch2_17232": {
+      "chapter": 2,
+      "word_id": "17232",
+      "english": "by those flowery words of the Vedas",
+      "transliteration": "ตะยฺยา"
+    },
+    "ch2_16841": {
+      "chapter": 2,
+      "word_id": "16841",
+      "english": "ready for Your counsel and direction",
+      "transliteration": "ตเอ ศอิษยอะหะ"
+    },
+    "ch2_17346": {
+      "chapter": 2,
+      "word_id": "17346",
+      "english": "and is content",
+      "transliteration": "ตอุษฏอะหะ (ภอะวอะตอิ"
+    },
+    "ch2_16952": {
+      "chapter": 2,
+      "word_id": "16952",
+      "english": "to bring about the destruction",
+      "transliteration": "วอินอาศอะม กอะรตอุม"
+    },
+    "ch2_17400": {
+      "chapter": 2,
+      "word_id": "17400",
+      "english": "of even the wise person",
+      "transliteration": "วอิปอะศฉอิตอะหะ ปอุรอุษอะสยอะ อะปอิ"
+    },
+    "ch2_16878": {
+      "chapter": 2,
+      "word_id": "16878",
+      "english": "to the grief-stricken",
+      "transliteration": "วอิษอีทอะนตอะม"
+    },
+    "ch2_16773": {
+      "chapter": 2,
+      "word_id": "16773",
+      "english": "to the saddened Arjuna",
+      "transliteration": "วอิษอีทอะนตอะม ตอะม"
+    },
+    "ch2_17155": {
+      "chapter": 2,
+      "word_id": "17155",
+      "english": "of those for whom",
+      "transliteration": "ยเอษอาṁ"
+    },
+    "ch2_17507": {
+      "chapter": 2,
+      "word_id": "17507",
+      "english": "which is always full",
+      "transliteration": "อาปอูรยอะมอาณอะม"
+    },
+    "ch2_17328": {
+      "chapter": 2,
+      "word_id": "17328",
+      "english": "by the apparent contradictions of the Vedas",
+      "transliteration": "ศรอุตอิ-วอิปรอะตอิปอะนนอา"
+    },
+    "ch3_17826": {
+      "chapter": 3,
+      "word_id": "17826",
+      "english": "they should encourage the ignorant in their duties",
+      "transliteration": "อะชญอาน) ยโอชอะยเอต"
+    },
+    "ch3_17663": {
+      "chapter": 3,
+      "word_id": "17663",
+      "english": "by means of the five kinds of sacrifices etc",
+      "transliteration": "ปอะญฉอะ-ยอะชญอะ-อาธอิภอิหะ"
+    },
+    "ch3_17661": {
+      "chapter": 3,
+      "word_id": "17661",
+      "english": "via the rain etc",
+      "transliteration": "วริษฏยอาทอิ ทวอารเอณอะ"
+    },
+    "ch3_17875": {
+      "chapter": 3,
+      "word_id": "17875",
+      "english": "out of resentment",
+      "transliteration": "อะภยอะสอูยอะนตอะหะ"
+    },
+    "ch3_17956": {
+      "chapter": 3,
+      "word_id": "17956",
+      "english": "are the seats",
+      "transliteration": "อะธอิษฐอานอะม"
+    },
+    "ch3_17679": {
+      "chapter": 3,
+      "word_id": "17679",
+      "english": "From food transformed into semen and blood",
+      "transliteration": "อะนนอาต"
+    },
+    "ch3_17724": {
+      "chapter": 3,
+      "word_id": "17724",
+      "english": "no piety is gained",
+      "transliteration": "อะรถอะหะ นอะ เอวอะ"
+    },
+    "ch3_17732": {
+      "chapter": 3,
+      "word_id": "17732",
+      "english": "being unattached to the fruits of your actions",
+      "transliteration": "อะสอะกตอะหะ (สอะน"
+    },
+    "ch3_17691": {
+      "chapter": 3,
+      "word_id": "17691",
+      "english": "is born of the Vedas",
+      "transliteration": "พรอะหมอะ-อุทภอะวอะม"
+    },
+    "ch3_17986": {
+      "chapter": 3,
+      "word_id": "17986",
+      "english": "to even the intelligence",
+      "transliteration": "พอุทธเอหะ ตอุ"
+    },
+    "ch3_17794": {
+      "chapter": 3,
+      "word_id": "17794",
+      "english": "the inhabitants of these worlds",
+      "transliteration": "อิมเอ ลโอกอาหะ"
+    },
+    "ch3_17888": {
+      "chapter": 3,
+      "word_id": "17888",
+      "english": "What will be the use of",
+      "transliteration": "กอิม กอะรอิษยอะตอิ"
+    },
+    "ch3_17587": {
+      "chapter": 3,
+      "word_id": "17587",
+      "english": "even for a moment",
+      "transliteration": "กษอะณอะม อะปอิ"
+    },
+    "ch3_23791": {
+      "chapter": 3,
+      "word_id": "23791",
+      "english": "in the consideration of the welfare of the people",
+      "transliteration": "ลโอกอะ-สอะงครอะหอะม สอะมปอะศยอะน เอวอะ"
+    },
+    "ch3_17857": {
+      "chapter": 3,
+      "word_id": "17857",
+      "english": "unto Me",
+      "transliteration": "มอะยอิ"
+    },
+    "ch3_17764": {
+      "chapter": 3,
+      "word_id": "17764",
+      "english": "there is not",
+      "transliteration": "นอะ อะสตอิ"
+    },
+    "ch3_17845": {
+      "chapter": 3,
+      "word_id": "17845",
+      "english": "is not attached to them not absorbed in them",
+      "transliteration": "นอะ สอะชชอะตเอ"
+    },
+    "ch3_17683": {
+      "chapter": 3,
+      "word_id": "17683",
+      "english": "due to rainfall",
+      "transliteration": "ปอะรชอะนยอาต"
+    },
+    "ch3_17846": {
+      "chapter": 3,
+      "word_id": "17846",
+      "english": "Persons bewildered by the modes",
+      "transliteration": "ปรอะกริตเอหะ-คอุณอะ-สอะมมอูฒอาหะ"
+    },
+    "ch3_17759": {
+      "chapter": 3,
+      "word_id": "17759",
+      "english": "as the standard",
+      "transliteration": "ปรอะมอาณอะม"
+    },
+    "ch3_17631": {
+      "chapter": 3,
+      "word_id": "17631",
+      "english": "At the universal manifestation",
+      "transliteration": "ปอุรอา"
+    },
+    "ch3_17570": {
+      "chapter": 3,
+      "word_id": "17570",
+      "english": "of the realised",
+      "transliteration": "สอางขยอานอาม"
+    },
+    "ch3_17660": {
+      "chapter": 3,
+      "word_id": "17660",
+      "english": "food provided by the demigods",
+      "transliteration": "ตไอหะ ทอะตตอาน"
+    },
+    "ch3_17645": {
+      "chapter": 3,
+      "word_id": "17645",
+      "english": "and the demigods being thus pleased",
+      "transliteration": "ตเอ ทเอวอาหะ (อะปอิ"
+    },
+    "ch3_17542": {
+      "chapter": 3,
+      "word_id": "17542",
+      "english": "it is Your opinion that",
+      "transliteration": "ตเอ มอะตอา"
+    },
+    "ch3_17763": {
+      "chapter": 3,
+      "word_id": "17763",
+      "english": "in the three worlds",
+      "transliteration": "ตรอิษอุ ลโอกเอษอุ"
+    },
+    "ch3_17953": {
+      "chapter": 3,
+      "word_id": "17953",
+      "english": "It is said that",
+      "transliteration": "อุฉยอะตเอ"
+    },
+    "ch3_17940": {
+      "chapter": 3,
+      "word_id": "17940",
+      "english": "by the womb",
+      "transliteration": "อุลพเอนอะ"
+    },
+    "ch3_17902": {
+      "chapter": 3,
+      "word_id": "17902",
+      "english": "tinged with faults",
+      "transliteration": "วอิคอุณอะหะ"
+    },
+    "ch3_17611": {
+      "chapter": 3,
+      "word_id": "17611",
+      "english": "is superior to such a hypocrite",
+      "transliteration": "วอิศอิษยอะตเอ"
+    },
+    "ch3_17984": {
+      "chapter": 3,
+      "word_id": "17984",
+      "english": "and that which",
+      "transliteration": "ยอะหะ"
+    },
+    "ch4_18253": {
+      "chapter": 4,
+      "word_id": "18253",
+      "english": "the oblation of ghee etc",
+      "transliteration": "อะรปยอะมอาณอะม) หอะวอิหะ"
+    },
+    "ch4_18259": {
+      "chapter": 4,
+      "word_id": "18259",
+      "english": "Brahma the Absolute",
+      "transliteration": "พรอะหมอะ เอวอะ"
+    },
+    "ch4_18330": {
+      "chapter": 4,
+      "word_id": "18330",
+      "english": "by the mouthpiece of the Vedas",
+      "transliteration": "พรอะหมอะณอะหะ มอุขเอ"
+    },
+    "ch4_18265": {
+      "chapter": 4,
+      "word_id": "18265",
+      "english": "the demigods with sacrifice",
+      "transliteration": "ทไอวอะม ยอะชญอะม เอวอะ"
+    },
+    "ch4_18192": {
+      "chapter": 4,
+      "word_id": "18192",
+      "english": "is very difficult to comprehend",
+      "transliteration": "คอะหอะนอา"
+    },
+    "ch4_18245": {
+      "chapter": 4,
+      "word_id": "18245",
+      "english": "who is realised",
+      "transliteration": "ชญอานอะ-อะวอะสถอิตอะ-ฉเอตอะสอะหะ"
+    },
+    "ch4_18354": {
+      "chapter": 4,
+      "word_id": "18354",
+      "english": "Those learned in the scriptures",
+      "transliteration": "ชญอานอินอะหะ"
+    },
+    "ch4_18143": {
+      "chapter": 4,
+      "word_id": "18143",
+      "english": "Although I am the accomplisher",
+      "transliteration": "กอะรตอารอะม อะปอิ"
+    },
+    "ch4_18178": {
+      "chapter": 4,
+      "word_id": "18178",
+      "english": "even the learned",
+      "transliteration": "กอะวอะยอะหะ อะปอิ"
+    },
+    "ch4_18176": {
+      "chapter": 4,
+      "word_id": "18176",
+      "english": "what is inaction",
+      "transliteration": "กอิม อะกอะรมอะ"
+    },
+    "ch4_18110": {
+      "chapter": 4,
+      "word_id": "18110",
+      "english": "wholeheartedly absorbed in services to Me",
+      "transliteration": "มอะต-มอะยอาหะ"
+    },
+    "ch4_18054": {
+      "chapter": 4,
+      "word_id": "18054",
+      "english": "of Mine and yours",
+      "transliteration": "มเอ ตอะวอะ ฉอะ"
+    },
+    "ch4_18244": {
+      "chapter": 4,
+      "word_id": "18244",
+      "english": "who is liberated",
+      "transliteration": "มอุกตอะสยอะ"
+    },
+    "ch4_18152": {
+      "chapter": 4,
+      "word_id": "18152",
+      "english": "There is no",
+      "transliteration": "นอะ (อะสตอิ"
+    },
+    "ch4_18420": {
+      "chapter": 4,
+      "word_id": "18420",
+      "english": "or the next",
+      "transliteration": "นอะ (ฉอะ) ปอะรอะหะ"
+    },
+    "ch4_18417": {
+      "chapter": 4,
+      "word_id": "18417",
+      "english": "there is no",
+      "transliteration": "นอะ อะสตอิ"
+    },
+    "ch4_18313": {
+      "chapter": 4,
+      "word_id": "18313",
+      "english": "by reducing their intake of food",
+      "transliteration": "นอิยอะตอะ-อาหอารอาหะ"
+    },
+    "ch4_18085": {
+      "chapter": 4,
+      "word_id": "18085",
+      "english": "For the deliverance",
+      "transliteration": "ปอะรอิตรอาณอายอะ"
+    },
+    "ch4_18286": {
+      "chapter": 4,
+      "word_id": "18286",
+      "english": "the functions of the ten vital life-airs",
+      "transliteration": "ปรอาณอะ-กอะรมอาณอิ"
+    },
+    "ch4_18173": {
+      "chapter": 4,
+      "word_id": "18173",
+      "english": "as done in the past",
+      "transliteration": "ปอูรวอะตอะรอะม กริตอะม"
+    },
+    "ch4_18202": {
+      "chapter": 4,
+      "word_id": "18202",
+      "english": "he is wise",
+      "transliteration": "สอะหะ พอุทธอิมอาน"
+    },
+    "ch4_18090": {
+      "chapter": 4,
+      "word_id": "18090",
+      "english": "and for firmly establishing",
+      "transliteration": "สอะṁสถอาปอะนอะ-อะรถอายอะ ฉอะ"
+    },
+    "ch4_18416": {
+      "chapter": 4,
+      "word_id": "18416",
+      "english": "For the doubting person",
+      "transliteration": "สอะṁศอะยอะ-อาตมอะนอะหะ"
+    },
+    "ch4_18299": {
+      "chapter": 4,
+      "word_id": "18299",
+      "english": "performers of unshakeable vows",
+      "transliteration": "สอะṁศอิตอะ-วรอะตอาหะ"
+    },
+    "ch4_18088": {
+      "chapter": 4,
+      "word_id": "18088",
+      "english": "for the vanquishing",
+      "transliteration": "วอินอาศอายอะ"
+    },
+    "ch4_18234": {
+      "chapter": 4,
+      "word_id": "18234",
+      "english": "satisfied with whatever is readily available",
+      "transliteration": "ยอะทริฉฉหอา-ลอาภอะ-สอะนตอุษฏอะหะ"
+    },
+    "ch4_18315": {
+      "chapter": 4,
+      "word_id": "18315",
+      "english": "are knowers of sacrifice",
+      "transliteration": "ยอะชญอา-วอิทอะหะ"
+    },
+    "ch5_18516": {
+      "chapter": 5,
+      "word_id": "18516",
+      "english": "athough engaged in the functions of",
+      "transliteration": "อะปอิ"
+    },
+    "ch5_18559": {
+      "chapter": 5,
+      "word_id": "18559",
+      "english": "by the intelligence",
+      "transliteration": "พอุทธยอา"
+    },
+    "ch5_18473": {
+      "chapter": 5,
+      "word_id": "18473",
+      "english": "The childish the unwise",
+      "transliteration": "พอาลอาหะ"
+    },
+    "ch5_18450": {
+      "chapter": 5,
+      "word_id": "18450",
+      "english": "of the two",
+      "transliteration": "เอตอะยโอหะ"
+    },
+    "ch5_18527": {
+      "chapter": 5,
+      "word_id": "18527",
+      "english": "grasping objects in the hands",
+      "transliteration": "คริหณอะน"
+    },
+    "ch5_18589": {
+      "chapter": 5,
+      "word_id": "18589",
+      "english": "nor their association with the fruits of actions",
+      "transliteration": "นอะ กอะรมอะ-ผอะลอะ-สอะṁยโอคอะม"
+    },
+    "ch5_18581": {
+      "chapter": 5,
+      "word_id": "18581",
+      "english": "in the city of nine gates",
+      "transliteration": "นอะวอะ-ทวอารเอ ปอุรเอ"
+    },
+    "ch5_18719": {
+      "chapter": 5,
+      "word_id": "18719",
+      "english": "flowing through the nostrils",
+      "transliteration": "นอาสอา-อะภยอะนตอะรอะ-ฉอารอิณเอา"
+    },
+    "ch5_18718": {
+      "chapter": 5,
+      "word_id": "18718",
+      "english": "inhalation and exhalation",
+      "transliteration": "ปรอาณอะ-อะปอานเอา"
+    },
+    "ch5_18596": {
+      "chapter": 5,
+      "word_id": "18596",
+      "english": "nor the peity",
+      "transliteration": "สอุกริตอะม ฉอะ นอะ เอวอะ"
+    },
+    "ch5_18618": {
+      "chapter": 5,
+      "word_id": "18618",
+      "english": "and who are devoted to hearing and singing His glories",
+      "transliteration": "ตอะต-ปอะรอายอะณอาหะ"
+    },
+    "ch5_18623": {
+      "chapter": 5,
+      "word_id": "18623",
+      "english": "in a learned and humble",
+      "transliteration": "วอิทยอา-วอินอะยอะ-สอะมปอะนนเอ"
+    },
+    "ch5_18657": {
+      "chapter": 5,
+      "word_id": "18657",
+      "english": "which is experienced in self-realisation",
+      "transliteration": "ยอะต อาตมอะนอิ (อะนอุภอูยอะมอานเอ"
+    },
+    "ch5_18605": {
+      "chapter": 5,
+      "word_id": "18605",
+      "english": "of those for whom",
+      "transliteration": "ยเอษอาม"
+    },
+    "ch6_19188": {
+      "chapter": 6,
+      "word_id": "19188",
+      "english": "this is My",
+      "transliteration": "อิตอิ มเอ"
+    },
+    "ch6_19125": {
+      "chapter": 6,
+      "word_id": "19125",
+      "english": "loss for him he is not denied the chance of the fortune to see the Supersoul",
+      "transliteration": "ตอะสยอะ วอินอาศอะหะ"
+    },
+    "ch6_19183": {
+      "chapter": 6,
+      "word_id": "19183",
+      "english": "and is also superior",
+      "transliteration": "อะธอิกอะหะ อะปอิ"
+    },
+    "ch6_18854": {
+      "chapter": 6,
+      "word_id": "18854",
+      "english": "at the top between the eyes centering the concentration",
+      "transliteration": "อะครอะม"
+    },
+    "ch6_19126": {
+      "chapter": 6,
+      "word_id": "19126",
+      "english": "in the next life i.e",
+      "transliteration": "อะมอุตรอะ"
+    },
+    "ch6_23957": {
+      "chapter": 6,
+      "word_id": "23957",
+      "english": "and a heart that is never discouraged",
+      "transliteration": "อะนอิรวอิณณอะ-ฉเอตอะสอา"
+    },
+    "ch6_19198": {
+      "chapter": 6,
+      "word_id": "19198",
+      "english": "and with heart",
+      "transliteration": "อะนตอะหะ-อาตมอะนอา"
+    },
+    "ch6_18877": {
+      "chapter": 6,
+      "word_id": "18877",
+      "english": "for the overeater",
+      "transliteration": "อะตอิ-อะศนอะตอะหะ ตอุ"
+    },
+    "ch6_23933": {
+      "chapter": 6,
+      "word_id": "23933",
+      "english": "transcendental to the senses",
+      "transliteration": "อะตอิ-อินทรอิยอะม"
+    },
+    "ch6_19095": {
+      "chapter": 6,
+      "word_id": "19095",
+      "english": "yet is not diligent",
+      "transliteration": "อะยอะตอิหะ"
+    },
+    "ch6_19061": {
+      "chapter": 6,
+      "word_id": "19061",
+      "english": "powerful uncontrollable by even the intelligence",
+      "transliteration": "พอะลอะวอะต"
+    },
+    "ch6_18785": {
+      "chapter": 6,
+      "word_id": "18785",
+      "english": "is the friend",
+      "transliteration": "พอะนธอุหะ"
+    },
+    "ch6_19200": {
+      "chapter": 6,
+      "word_id": "19200",
+      "english": "renders service to Me by engaging in the devotional practices based on hearing and chanting My glories",
+      "transliteration": "ภอะชอะตเอ มอาม"
+    },
+    "ch6_19144": {
+      "chapter": 6,
+      "word_id": "19144",
+      "english": "he is born",
+      "transliteration": "ภอะวอะตอิ"
+    },
+    "ch6_18996": {
+      "chapter": 6,
+      "word_id": "18996",
+      "english": "by contact with the divine",
+      "transliteration": "พรอะหมอะ-สอะṁสปอะรศอะม"
+    },
+    "ch6_19103": {
+      "chapter": 6,
+      "word_id": "19103",
+      "english": "on the path of attaining the Absolute",
+      "transliteration": "พรอะหมอะณอะหะ ปอะถอิ"
+    },
+    "ch6_18964": {
+      "chapter": 6,
+      "word_id": "18964",
+      "english": "By means of the intelligence",
+      "transliteration": "พอุทธยอา"
+    },
+    "ch6_19073": {
+      "chapter": 6,
+      "word_id": "19073",
+      "english": "and extremely difficult to control",
+      "transliteration": "ทอุรนอิครอะหอะม"
+    },
+    "ch6_18889": {
+      "chapter": 6,
+      "word_id": "18889",
+      "english": "a dispeller of suffering",
+      "transliteration": "ทอุหะกอะ-หอา"
+    },
+    "ch6_23952": {
+      "chapter": 6,
+      "word_id": "23952",
+      "english": "state within which all association with unhappiness is severed",
+      "transliteration": "ทอุหะขอะ-สอะṁยโอคอะ-วอิยโอคอะม"
+    },
+    "ch6_19081": {
+      "chapter": 6,
+      "word_id": "19081",
+      "english": "is difficult to attain",
+      "transliteration": "ทอุษปรอาปอะหะ"
+    },
+    "ch6_18879": {
+      "chapter": 6,
+      "word_id": "18879",
+      "english": "for the oversleeper",
+      "transliteration": "เอกอานตอะม อะนอะศนอะตอะหะ"
+    },
+    "ch6_19140": {
+      "chapter": 6,
+      "word_id": "19140",
+      "english": "in the home",
+      "transliteration": "คเอหเอ"
+    },
+    "ch6_19076": {
+      "chapter": 6,
+      "word_id": "19076",
+      "english": "it is controlled",
+      "transliteration": "คริหยอะตเอ"
+    },
+    "ch6_18962": {
+      "chapter": 6,
+      "word_id": "18962",
+      "english": "the group of senses",
+      "transliteration": "อินทรอิยอะ-ครอามอะม"
+    },
+    "ch6_19093": {
+      "chapter": 6,
+      "word_id": "19093",
+      "english": "what is the fate of",
+      "transliteration": "กอาม คอะตอิม คอะฉฉหอะตอิ"
+    },
+    "ch6_18769": {
+      "chapter": 6,
+      "word_id": "18769",
+      "english": "as the means",
+      "transliteration": "กอารอะณอะม"
+    },
+    "ch6_18864": {
+      "chapter": 6,
+      "word_id": "18864",
+      "english": "absorbed in thought of Me",
+      "transliteration": "มอะต-ฉอิตตอะหะ"
+    },
+    "ch6_19199": {
+      "chapter": 6,
+      "word_id": "19199",
+      "english": "fully dedicated to Me",
+      "transliteration": "มอะต-คอะตเอนอะ"
+    },
+    "ch6_18862": {
+      "chapter": 6,
+      "word_id": "18862",
+      "english": "devoted to Me",
+      "transliteration": "มอะต-ปอะรอะหะ"
+    },
+    "ch6_19124": {
+      "chapter": 6,
+      "word_id": "19124",
+      "english": "and there is no",
+      "transliteration": "นอะ (วอิทยอะตเอ"
+    },
+    "ch6_19118": {
+      "chapter": 6,
+      "word_id": "19118",
+      "english": "is not to be found",
+      "transliteration": "นอะ หอิ อุปอะปอะทยอะตเอ"
+    },
+    "ch6_23948": {
+      "chapter": 6,
+      "word_id": "23948",
+      "english": "one is not disturbed",
+      "transliteration": "นอะ วอิฉอาลยอะตเอ"
+    },
+    "ch6_19121": {
+      "chapter": 6,
+      "word_id": "19121",
+      "english": "there is no",
+      "transliteration": "นอะ วอิทยอะตเอ"
+    },
+    "ch6_19041": {
+      "chapter": 6,
+      "word_id": "19041",
+      "english": "is the best",
+      "transliteration": "ปอะรอะมอะหะ"
+    },
+    "ch6_19174": {
+      "chapter": 6,
+      "word_id": "19174",
+      "english": "than the previous attempt",
+      "transliteration": "ปรอะยอะตนอาต"
+    },
+    "ch6_18805": {
+      "chapter": 6,
+      "word_id": "18805",
+      "english": "of the peaceful without attraction and aversion",
+      "transliteration": "ปรอะศอานตอะสยอะ"
+    },
+    "ch6_19134": {
+      "chapter": 6,
+      "word_id": "19134",
+      "english": "of the pious",
+      "transliteration": "ปอุณยอะ-กริตอะม"
+    },
+    "ch6_18788": {
+      "chapter": 6,
+      "word_id": "18788",
+      "english": "is the enemy",
+      "transliteration": "รอิปอุหะ"
+    },
+    "ch6_18816": {
+      "chapter": 6,
+      "word_id": "18816",
+      "english": "One of equipoised intelligence",
+      "transliteration": "สอะมอะ-พอุทธอิหะ"
+    },
+    "ch6_18813": {
+      "chapter": 6,
+      "word_id": "18813",
+      "english": "and of equal vision for earth stone and gold",
+      "transliteration": "สอะมอะ-ลโอษฏรอะ-อะศมอะ-กอาญฉอะนอะหะ"
+    },
+    "ch6_18775": {
+      "chapter": 6,
+      "word_id": "18775",
+      "english": "and renounces all thoughts of enjoyment",
+      "transliteration": "สอะรวอะ-สอะงกอะลปอะ-สอะนนยอาสอี (ฉอะ ภอะวอะตอิ"
+    },
+    "ch6_19031": {
+      "chapter": 6,
+      "word_id": "19031",
+      "english": "in all circumstances whether engaged in the execution of scripturally prescribed duties or not",
+      "transliteration": "สอะรวอะถอา"
+    },
+    "ch6_18998": {
+      "chapter": 6,
+      "word_id": "18998",
+      "english": "and is a seer of the same spirituality everywhere",
+      "transliteration": "สอะรวอะตรอะ สอะมอะ-ทอะรศอะนอะหะ"
+    },
+    "ch6_18958": {
+      "chapter": 6,
+      "word_id": "18958",
+      "english": "born of the thoughts",
+      "transliteration": "สอะงกอะลปอะ-ปรอะภอะวอาน"
+    },
+    "ch6_18835": {
+      "chapter": 6,
+      "word_id": "18835",
+      "english": "which is firm",
+      "transliteration": "สฺถิรัม"
+    },
+    "ch6_19158": {
+      "chapter": 6,
+      "word_id": "19158",
+      "english": "that consciousness of the Supersoul",
+      "transliteration": "ตอะม พอุทธอิ-สอะṁยโอคอะม"
+    },
+    "ch6_18803": {
+      "chapter": 6,
+      "word_id": "18803",
+      "english": "and in honour and dishonour",
+      "transliteration": "ตอะถอา มอานอะ-อะปอะมอานอะยโอหะ"
+    },
+    "ch6_19155": {
+      "chapter": 6,
+      "word_id": "19155",
+      "english": "in one of these situations",
+      "transliteration": "ตอะตรอะ"
+    },
+    "ch6_18839": {
+      "chapter": 6,
+      "word_id": "18839",
+      "english": "on that seat",
+      "transliteration": "ตอะตรอะ อาสอะนเอ"
+    },
+    "ch6_19167": {
+      "chapter": 6,
+      "word_id": "19167",
+      "english": "by his practice of the previous life",
+      "transliteration": "ตเอนอะ ปอูรวอะ-อะภยอาสเอนอะ"
+    },
+    "ch6_18922": {
+      "chapter": 6,
+      "word_id": "18922",
+      "english": "one is satisfied",
+      "transliteration": "ตอุษยอะตอิ"
+    },
+    "ch6_18981": {
+      "chapter": 6,
+      "word_id": "18981",
+      "english": "The joy of self-realisation",
+      "transliteration": "อุตตอะมอะม สอุขอะม"
+    },
+    "ch6_23810": {
+      "chapter": 6,
+      "word_id": "23810",
+      "english": "than controlling the wind",
+      "transliteration": "วอะยโอหะ อิวอะ"
+    },
+    "ch6_18840": {
+      "chapter": 6,
+      "word_id": "18840",
+      "english": "subjugating all mental and sensual activity",
+      "transliteration": "ยอะตอะ-ฉอิตตอะ-อินทรอิยอะ-กรอิยอะหะ"
+    },
+    "ch6_18885": {
+      "chapter": 6,
+      "word_id": "18885",
+      "english": "whose effort in works is regulated",
+      "transliteration": "ยอุกตอะ-ฉเอษฏอะสยอะ-กอะรมอะสอุ"
+    },
+    "ch6_18886": {
+      "chapter": 6,
+      "word_id": "18886",
+      "english": "and whose sleeping and waking hours are in proper measure",
+      "transliteration": "ยอุกตอะ-สวอะปนอะ-อะวอะพโอธอะสยอะ"
+    },
+    "ch6_18884": {
+      "chapter": 6,
+      "word_id": "18884",
+      "english": "For the person whose eating and recreation are regulated",
+      "transliteration": "ยอุกตอะ-อาหอารอะ-วอิหอารอะสยอะ"
+    },
+    "ch6_18760": {
+      "chapter": 6,
+      "word_id": "18760",
+      "english": "desirous of ascending",
+      "transliteration": "อารอุรอุกษโอหะ"
+    },
+    "ch6_18846": {
+      "chapter": 6,
+      "word_id": "18846",
+      "english": "for self-purification to attain spiritual realisation",
+      "transliteration": "อาตมอะ-วอิศอุทธอะยเอ"
+    },
+    "ch6_19005": {
+      "chapter": 6,
+      "word_id": "19005",
+      "english": "in the Supersoul",
+      "transliteration": "อาตมอะนอิ"
+    },
+    "ch6_18980": {
+      "chapter": 6,
+      "word_id": "18980",
+      "english": "within the self alone",
+      "transliteration": "อาตมอะนอิ เอวอะ"
+    },
+    "ch6_19034": {
+      "chapter": 6,
+      "word_id": "19034",
+      "english": "in comparison to himself",
+      "transliteration": "อาตมอา-เอาปอะมยเอนอะ"
+    },
+    "ch6_18780": {
+      "chapter": 6,
+      "word_id": "18780",
+      "english": "and the living being",
+      "transliteration": "อาตมอานอะม"
+    },
+    "ch6_18789": {
+      "chapter": 6,
+      "word_id": "18789",
+      "english": "of the living being",
+      "transliteration": "อาตมอานอะหะ"
+    },
+    "ch6_19171": {
+      "chapter": 6,
+      "word_id": "19171",
+      "english": "the fruitive rituals of the Vedas",
+      "transliteration": "ศอะพทอะ-พรอะหมอะ"
+    },
+    "ch6_19142": {
+      "chapter": 6,
+      "word_id": "19142",
+      "english": "given to pure and honest practices",
+      "transliteration": "ศอุฉอีนอาม"
+    },
+    "ch10_20327": {
+      "chapter": 10,
+      "word_id": "20327",
+      "english": "enlightening one another with the nectar of their devotional realisations",
+      "transliteration": "bodhayantaḥ parasparam (santaḥ)"
+    },
+    "ch10_20320": {
+      "chapter": 10,
+      "word_id": "20320",
+      "english": "persons of fine theistic intelligence",
+      "transliteration": "budhāḥ"
+    },
+    "ch10_20611": {
+      "chapter": 10,
+      "word_id": "20611",
+      "english": "(I am) the mantra prayer to Lord Indra",
+      "transliteration": "bṛhat-sāma"
+    },
+    "ch10_20661": {
+      "chapter": 10,
+      "word_id": "20661",
+      "english": "moving and stationary",
+      "transliteration": "chara-acharam"
+    },
+    "ch10_20550": {
+      "chapter": 10,
+      "word_id": "20550",
+      "english": "Of the descendents of Diti",
+      "transliteration": "daityānām"
+    },
+    "ch10_20278": {
+      "chapter": 10,
+      "word_id": "20278",
+      "english": "control of the external senses",
+      "transliteration": "damaḥ"
+    },
+    "ch10_20462": {
+      "chapter": 10,
+      "word_id": "20462",
+      "english": "Of the demigods",
+      "transliteration": "devānām"
+    },
+    "ch10_20589": {
+      "chapter": 10,
+      "word_id": "20589",
+      "english": "(I am) the dual compound word",
+      "transliteration": "dvandvaḥ"
+    },
+    "ch10_20431": {
+      "chapter": 10,
+      "word_id": "20431",
+      "english": "O best of the Kurus",
+      "transliteration": "hanta kuru-śreṣṭha"
+    },
+    "ch10_20465": {
+      "chapter": 10,
+      "word_id": "20465",
+      "english": "Of the senses",
+      "transliteration": "indriyāṇām"
+    },
+    "ch10_20645": {
+      "chapter": 10,
+      "word_id": "20645",
+      "english": "Of those desiring to conquer",
+      "transliteration": "jigīṣatām"
+    },
+    "ch10_20451": {
+      "chapter": 10,
+      "word_id": "20451",
+      "english": "Of the luminaries",
+      "transliteration": "jyotiṣām"
+    },
+    "ch10_20652": {
+      "chapter": 10,
+      "word_id": "20652",
+      "english": "of the learned",
+      "transliteration": "jñāna-vatām"
+    },
+    "ch10_20274": {
+      "chapter": 10,
+      "word_id": "20274",
+      "english": "ability to discriminate between spirit and matter",
+      "transliteration": "jñānam"
+    },
+    "ch10_20553": {
+      "chapter": 10,
+      "word_id": "20553",
+      "english": "and of subduers",
+      "transliteration": "kalayatām cha"
+    },
+    "ch10_20515": {
+      "chapter": 10,
+      "word_id": "20515",
+      "english": "(I am) the sage Kapila",
+      "transliteration": "kapilaḥ muniḥ"
+    },
+    "ch10_20640": {
+      "chapter": 10,
+      "word_id": "20640",
+      "english": "of knowers of the scriptures",
+      "transliteration": "kavīnām"
+    },
+    "ch10_20609": {
+      "chapter": 10,
+      "word_id": "20609",
+      "english": "forgiveness (or the seven wives of Dharma)",
+      "transliteration": "kṣamā"
+    },
+    "ch10_20637": {
+      "chapter": 10,
+      "word_id": "20637",
+      "english": "of the sages",
+      "transliteration": "munīnām"
+    },
+    "ch10_20615": {
+      "chapter": 10,
+      "word_id": "20615",
+      "english": "Of the months",
+      "transliteration": "māsānām"
+    },
+    "ch10_20666": {
+      "chapter": 10,
+      "word_id": "20666",
+      "english": "there is no",
+      "transliteration": "na asti"
+    },
+    "ch10_20379": {
+      "chapter": 10,
+      "word_id": "20379",
+      "english": "neither the demigods nor the demons",
+      "transliteration": "na devāḥ na dānavāḥ"
+    },
+    "ch10_20312": {
+      "chapter": 10,
+      "word_id": "20312",
+      "english": "there is no doubt",
+      "transliteration": "na saṁśayaḥ (asti)"
+    },
+    "ch10_20457": {
+      "chapter": 10,
+      "word_id": "20457",
+      "english": "and of the stars",
+      "transliteration": "nakṣatrāṇām"
+    },
+    "ch10_20524": {
+      "chapter": 10,
+      "word_id": "20524",
+      "english": "(I am) the king",
+      "transliteration": "nara-adhipam"
+    },
+    "ch10_20538": {
+      "chapter": 10,
+      "word_id": "20538",
+      "english": "Of the multi-headed non-poisonous serpents",
+      "transliteration": "nāgānām"
+    },
+    "ch10_20562": {
+      "chapter": 10,
+      "word_id": "20562",
+      "english": "Of sanctifiers or of the rapid",
+      "transliteration": "pavatām"
+    },
+    "ch10_20545": {
+      "chapter": 10,
+      "word_id": "20545",
+      "english": "Of the deified ancestors",
+      "transliteration": "pitṝṇām"
+    },
+    "ch10_20472": {
+      "chapter": 10,
+      "word_id": "20472",
+      "english": "Of the eleven Rudras",
+      "transliteration": "rudrāṇām"
+    },
+    "ch10_20575": {
+      "chapter": 10,
+      "word_id": "20575",
+      "english": "of the manifest",
+      "transliteration": "sargāṇām"
+    },
+    "ch10_20443": {
+      "chapter": 10,
+      "word_id": "20443",
+      "english": "situated within the heart of all beings",
+      "transliteration": "sarva-bhūta-āśaya-sthitaḥ"
+    },
+    "ch10_20596": {
+      "chapter": 10,
+      "word_id": "20596",
+      "english": "the vanquisher of all",
+      "transliteration": "sarva-haraḥ"
+    },
+    "ch10_20315": {
+      "chapter": 10,
+      "word_id": "20315",
+      "english": "All activity in the universe of matter and spirit, and the Vedas and allied scriptures",
+      "transliteration": "sarvam"
+    },
+    "ch10_20631": {
+      "chapter": 10,
+      "word_id": "20631",
+      "english": "of the truthful",
+      "transliteration": "sattva-vatām"
+    },
+    "ch10_20630": {
+      "chapter": 10,
+      "word_id": "20630",
+      "english": "the power of truth",
+      "transliteration": "sattvam"
+    },
+    "ch10_20505": {
+      "chapter": 10,
+      "word_id": "20505",
+      "english": "of the immovable",
+      "transliteration": "sthāvarāṇām"
+    },
+    "ch10_20494": {
+      "chapter": 10,
+      "word_id": "20494",
+      "english": "(I am) the ocean",
+      "transliteration": "sāgaraḥ"
+    },
+    "ch10_20289": {
+      "chapter": 10,
+      "word_id": "20289",
+      "english": "austerity as directed in the Vedas",
+      "transliteration": "tapaḥ"
+    },
+    "ch10_20683": {
+      "chapter": 10,
+      "word_id": "20683",
+      "english": "each of them",
+      "transliteration": "tat tat"
+    },
+    "ch10_20297": {
+      "chapter": 10,
+      "word_id": "20297",
+      "english": "and the fourteen Manus headed by Svayambhuva",
+      "transliteration": "tathā manavaḥ"
+    },
+    "ch10_20688": {
+      "chapter": 10,
+      "word_id": "20688",
+      "english": "what is your need",
+      "transliteration": "tava kim"
+    },
+    "ch10_20623": {
+      "chapter": 10,
+      "word_id": "20623",
+      "english": "Of the splendid",
+      "transliteration": "tejasvinām"
+    },
+    "ch10_20599": {
+      "chapter": 10,
+      "word_id": "20599",
+      "english": "(I am) the first, as birth",
+      "transliteration": "udbhavaḥ"
+    },
+    "ch10_20527": {
+      "chapter": 10,
+      "word_id": "20527",
+      "english": "the thunderbolt, the weapon of Lord Indra",
+      "transliteration": "vajram"
+    },
+    "ch10_20479": {
+      "chapter": 10,
+      "word_id": "20479",
+      "english": "Of the eight Vasus",
+      "transliteration": "vasūnām"
+    },
+    "ch10_20459": {
+      "chapter": 10,
+      "word_id": "20459",
+      "english": "Of the Vedas",
+      "transliteration": "vedānām"
+    },
+    "ch10_20368": {
+      "chapter": 10,
+      "word_id": "20368",
+      "english": "the all-pervading Lord, the fountain-head of all opulences",
+      "transliteration": "vibhum"
+    },
+    "ch10_20440": {
+      "chapter": 10,
+      "word_id": "20440",
+      "english": "to the expanse of My glories",
+      "transliteration": "vistarasya me"
+    },
+    "ch10_20671": {
+      "chapter": 10,
+      "word_id": "20671",
+      "english": "of the expanse",
+      "transliteration": "vistaraḥ"
+    },
+    "ch10_20501": {
+      "chapter": 10,
+      "word_id": "20501",
+      "english": "Of all types of sacrifices",
+      "transliteration": "yajñānām"
+    },
+    "ch10_20675": {
+      "chapter": 10,
+      "word_id": "20675",
+      "english": "Of each and every",
+      "transliteration": "yat yat eva"
+    },
+    "ch10_20310": {
+      "chapter": 10,
+      "word_id": "20310",
+      "english": "knowledge of essential truth",
+      "transliteration": "yogena"
+    },
+    "ch10_20422": {
+      "chapter": 10,
+      "word_id": "20422",
+      "english": "the process of devotional union with You (bhakti-yoga)",
+      "transliteration": "ātmanaḥ yogam"
+    },
+    "ch10_20279": {
+      "chapter": 10,
+      "word_id": "20279",
+      "english": "control of the internal senses",
+      "transliteration": "śamaḥ"
+    },
+    "ch10_20458": {
+      "chapter": 10,
+      "word_id": "20458",
+      "english": "(I am) the moon",
+      "transliteration": "śaśī"
+    },
+    "ch10_20482": {
+      "chapter": 10,
+      "word_id": "20482",
+      "english": "of the mountains",
+      "transliteration": "śikhariṇām"
+    },
+    "ch10_20618": {
+      "chapter": 10,
+      "word_id": "20618",
+      "english": "of the seasons",
+      "transliteration": "ṛtūnām"
+    }
+  }
+}

@@ -1,0 +1,856 @@
+{
+  "vocabulary": {
+    "22489": {
+      "meaning": "bunlar (kirli) özelliklerdir",
+      "transliteration": "ete guṇāḥ bhavanti"
+    },
+    "22459": {
+      "meaning": "bunlar niteliklerdir",
+      "transliteration": "ete guṇāḥ bhavanti"
+    },
+    "22643": {
+      "meaning": "ey Kuntī'nin oğlu",
+      "transliteration": "he kaunteya"
+    },
+    "22488": {
+      "meaning": "ey Pārtha",
+      "transliteration": "he pārtha"
+    },
+    "22503": {
+      "meaning": "ey Pāṇḍava",
+      "transliteration": "he pāṇḍava"
+    },
+    "22490": {
+      "meaning": "kaderle doğan kişinin",
+      "transliteration": "abhijātasya"
+    },
+    "22505": {
+      "meaning": "kaderle doğdun",
+      "transliteration": "abhijātaḥ asi"
+    },
+    "22632": {
+      "meaning": "erdemli kişilerin iyi özelliklerine kusur atfederler",
+      "transliteration": "abhyasūyakāḥ"
+    },
+    "22594": {
+      "meaning": "ben zevk alırım",
+      "transliteration": "aham bhogī"
+    },
+    "22593": {
+      "meaning": "ben efendiyim",
+      "transliteration": "aham īśvaraḥ"
+    },
+    "22478": {
+      "meaning": "açgözlülükten uzaklık",
+      "transliteration": "aloluptvam"
+    },
+    "22606": {
+      "meaning": "zihinleri birçok boş düşünceyle dolu",
+      "transliteration": "aneka-chitta-vibhrāntāḥ"
+    },
+    "22535": {
+      "meaning": "ve her şey erkek ve dişi birleşmesinden doğmuştur",
+      "transliteration": "aparaspara-sambhūtam"
+    },
+    "22555": {
+      "meaning": "dünyevi zevklere olan özlemle",
+      "transliteration": "asat-grāhān gṛhītvā"
+    },
+    "22617": {
+      "meaning": "kutsal yazıların emirlerini görmezden gelerek",
+      "transliteration": "avidhi-pūrvakam"
+    },
+    "22506": {
+      "meaning": "ilahi ve erdemli niteliklerin",
+      "transliteration": "daivīm sampadam"
+    },
+    "22553": {
+      "meaning": "boş gurur, kibir ve küstahlıkla dolu",
+      "transliteration": "dambha-māna-mada-anvitāḥ"
+    },
+    "22493": {
+      "meaning": "kibir (bilgi, servet veya soyluluk nedeniyle)",
+      "transliteration": "darpaḥ"
+    },
+    "22615": {
+      "meaning": "servet ve kibirle sarhoş",
+      "transliteration": "dhana-māna-mada-anvitāḥ"
+    },
+    "22509": {
+      "meaning": "varlıkların bu iki doğası",
+      "transliteration": "dvau eva bhūta-sargau"
+    },
+    "22690": {
+      "meaning": "bu eylem dünyasında",
+      "transliteration": "iha"
+    },
+    "22532": {
+      "meaning": "dünya gerçek değildir",
+      "transliteration": "jagat asatyam"
+    },
+    "22548": {
+      "meaning": "dünyanın",
+      "transliteration": "jagataḥ"
+    },
+    "22537": {
+      "meaning": "bundan ötesi ne var?",
+      "transliteration": "kim anyat"
+    },
+    "22572": {
+      "meaning": "arzularının yerine gelmesi için",
+      "transliteration": "kāma-bhoga-artham"
+    },
+    "22460": {
+      "meaning": "korkusuzluk",
+      "transliteration": "abhayam"
+    },
+    "22461": {
+      "meaning": "kalp saflığı",
+      "transliteration": "sattva-saṁśuddhi"
+    },
+    "22462": {
+      "meaning": "ruhani bilgi",
+      "transliteration": "jñāna-yoga"
+    },
+    "22463": {
+      "meaning": "istikrar ve sebat",
+      "transliteration": "vyavasthiti"
+    },
+    "22464": {
+      "meaning": "cömertlik",
+      "transliteration": "dānam"
+    },
+    "22465": {
+      "meaning": "özdenetim",
+      "transliteration": "damaḥ"
+    },
+    "22466": {
+      "meaning": "kurban",
+      "transliteration": "yajñaḥ"
+    },
+    "22467": {
+      "meaning": "kutsal yazıları inceleme",
+      "transliteration": "svādhyāyaḥ"
+    },
+    "22468": {
+      "meaning": "çilecilik",
+      "transliteration": "tapaḥ"
+    },
+    "22469": {
+      "meaning": "içtenlik",
+      "transliteration": "ārjavam"
+    },
+    "22470": {
+      "meaning": "şiddetsizlik",
+      "transliteration": "ahiṁsā"
+    },
+    "22471": {
+      "meaning": "doğruluk",
+      "transliteration": "satyam"
+    },
+    "22472": {
+      "meaning": "öfkeden uzaklık",
+      "transliteration": "akrodhaḥ"
+    },
+    "22473": {
+      "meaning": "dünyevi bağlardan vazgeçme",
+      "transliteration": "tyāgaḥ"
+    },
+    "22474": {
+      "meaning": "huzur",
+      "transliteration": "śāntiḥ"
+    },
+    "22475": {
+      "meaning": "başkalarında kusur aramama",
+      "transliteration": "apaiśunam"
+    },
+    "22476": {
+      "meaning": "merhamet",
+      "transliteration": "dayā"
+    },
+    "22477": {
+      "meaning": "tüm canlılara",
+      "transliteration": "bhūteṣu"
+    },
+    "22479": {
+      "meaning": "yumuşaklık",
+      "transliteration": "mārdavam"
+    },
+    "22480": {
+      "meaning": "mütevazılık",
+      "transliteration": "hrī"
+    },
+    "22481": {
+      "meaning": "sebat",
+      "transliteration": "acāpalam"
+    },
+    "22482": {
+      "meaning": "enerji",
+      "transliteration": "tejaḥ"
+    },
+    "22483": {
+      "meaning": "affedicilik",
+      "transliteration": "kṣamā"
+    },
+    "22484": {
+      "meaning": "sabır",
+      "transliteration": "dhṛtiḥ"
+    },
+    "22485": {
+      "meaning": "temizlik",
+      "transliteration": "śaucam"
+    },
+    "22486": {
+      "meaning": "nefret etmeme",
+      "transliteration": "adrohaḥ"
+    },
+    "22487": {
+      "meaning": "kibirli olmama",
+      "transliteration": "nātimānitā"
+    },
+    "22491": {
+      "meaning": "ikiyüzlülük",
+      "transliteration": "dambhaḥ"
+    },
+    "22492": {
+      "meaning": "kibir",
+      "transliteration": "darpaḥ"
+    },
+    "22494": {
+      "meaning": "benlik gururu",
+      "transliteration": "abhimānaḥ"
+    },
+    "22495": {
+      "meaning": "öfke",
+      "transliteration": "krodhaḥ"
+    },
+    "22496": {
+      "meaning": "zalimlik",
+      "transliteration": "pāruṣyam"
+    },
+    "22497": {
+      "meaning": "cehalet",
+      "transliteration": "ajñānam"
+    },
+    "22498": {
+      "meaning": "ilahi",
+      "transliteration": "daivī"
+    },
+    "22499": {
+      "meaning": "doğa",
+      "transliteration": "sampad"
+    },
+    "22500": {
+      "meaning": "kurtuluş için",
+      "transliteration": "vimokṣāya"
+    },
+    "22501": {
+      "meaning": "kölelik için",
+      "transliteration": "nibandhāya"
+    },
+    "22502": {
+      "meaning": "şeytani",
+      "transliteration": "āsurī"
+    },
+    "22504": {
+      "meaning": "sayılır",
+      "transliteration": "mātā"
+    },
+    "22507": {
+      "meaning": "üzülme",
+      "transliteration": "mā śucaḥ"
+    },
+    "22508": {
+      "meaning": "iki",
+      "transliteration": "dvau"
+    },
+    "22510": {
+      "meaning": "dünyada",
+      "transliteration": "loke"
+    },
+    "22511": {
+      "meaning": "bu",
+      "transliteration": "asmin"
+    },
+    "22512": {
+      "meaning": "ilahi",
+      "transliteration": "daivaḥ"
+    },
+    "22513": {
+      "meaning": "şeytani",
+      "transliteration": "āsuraḥ"
+    },
+    "22514": {
+      "meaning": "gerçekten",
+      "transliteration": "eva"
+    },
+    "22515": {
+      "meaning": "ve",
+      "transliteration": "ca"
+    },
+    "22516": {
+      "meaning": "ilahi olan",
+      "transliteration": "daivaḥ"
+    },
+    "22517": {
+      "meaning": "ayrıntılı olarak",
+      "transliteration": "vistaraśaḥ"
+    },
+    "22518": {
+      "meaning": "söylendi",
+      "transliteration": "proktaḥ"
+    },
+    "22519": {
+      "meaning": "şeytani olanı",
+      "transliteration": "āsuram"
+    },
+    "22520": {
+      "meaning": "benden",
+      "transliteration": "me"
+    },
+    "22521": {
+      "meaning": "dinle",
+      "transliteration": "śṛṇu"
+    },
+    "22522": {
+      "meaning": "şeytani doğaya sahip olanlar",
+      "transliteration": "āsurīṁ yonim"
+    },
+    "22523": {
+      "meaning": "bilmezler",
+      "transliteration": "na viduḥ"
+    },
+    "22524": {
+      "meaning": "eylem",
+      "transliteration": "pravṛttiṁ"
+    },
+    "22525": {
+      "meaning": "ve de",
+      "transliteration": "na ca"
+    },
+    "22526": {
+      "meaning": "kaçınma",
+      "transliteration": "nivṛttiṁ"
+    },
+    "22527": {
+      "meaning": "yoktur",
+      "transliteration": "na"
+    },
+    "22528": {
+      "meaning": "saflık",
+      "transliteration": "śaucam"
+    },
+    "22529": {
+      "meaning": "ve de",
+      "transliteration": "na api"
+    },
+    "22530": {
+      "meaning": "doğru davranış",
+      "transliteration": "ācāraḥ"
+    },
+    "22531": {
+      "meaning": "doğruluk",
+      "transliteration": "satyam"
+    },
+    "22533": {
+      "meaning": "temelsiz",
+      "transliteration": "apratiṣṭham"
+    },
+    "22534": {
+      "meaning": "Tanrı'sız",
+      "transliteration": "anīśvaram"
+    },
+    "22536": {
+      "meaning": "doğmuştur",
+      "transliteration": "paraspara"
+    },
+    "22538": {
+      "meaning": "hangi nedenle?",
+      "transliteration": "kim hetuḥ"
+    },
+    "22539": {
+      "meaning": "başka",
+      "transliteration": "anyat"
+    },
+    "22540": {
+      "meaning": "sarılıp",
+      "transliteration": "etām"
+    },
+    "22541": {
+      "meaning": "görüşe",
+      "transliteration": "dṛṣṭim"
+    },
+    "22542": {
+      "meaning": "kaybolmuş",
+      "transliteration": "naṣṭātmānaḥ"
+    },
+    "22543": {
+      "meaning": "düşük anlayışlı",
+      "transliteration": "alpa-buddhayaḥ"
+    },
+    "22544": {
+      "meaning": "zalim eylemler",
+      "transliteration": "ugra-karmāṇaḥ"
+    },
+    "22545": {
+      "meaning": "dünya yıkıcıları",
+      "transliteration": "prabhavanti"
+    },
+    "22546": {
+      "meaning": "yıkım için",
+      "transliteration": "jagataḥ hitāya"
+    },
+    "22547": {
+      "meaning": "dünyanın",
+      "transliteration": "jagataḥ"
+    },
+    "22549": {
+      "meaning": "için",
+      "transliteration": "artham"
+    },
+    "22550": {
+      "meaning": "arzu",
+      "transliteration": "kāmam"
+    },
+    "22551": {
+      "meaning": "dayanarak",
+      "transliteration": "āśritya"
+    },
+    "22552": {
+      "meaning": "doyumsuz",
+      "transliteration": "duṣpūram"
+    },
+    "22554": {
+      "meaning": "yanılsamadan",
+      "transliteration": "mohād"
+    },
+    "22556": {
+      "meaning": "kirli inançlar",
+      "transliteration": "asat-grāhān"
+    },
+    "22557": {
+      "meaning": "sarılarak",
+      "transliteration": "gṛhītvā"
+    },
+    "22558": {
+      "meaning": "cehaletten",
+      "transliteration": "avidhi-pūrvakam"
+    },
+    "22559": {
+      "meaning": "kararlı",
+      "transliteration": "pracarita"
+    },
+    "22560": {
+      "meaning": "ölüme kadar",
+      "transliteration": "pralayāntām"
+    },
+    "22561": {
+      "meaning": "kaygılar",
+      "transliteration": "cintām"
+    },
+    "22562": {
+      "meaning": "sayısız",
+      "transliteration": "anekā"
+    },
+    "22563": {
+      "meaning": "kadar",
+      "transliteration": "eva"
+    },
+    "22564": {
+      "meaning": "bu",
+      "transliteration": "etāvad"
+    },
+    "22565": {
+      "meaning": "ikna olmuş",
+      "transliteration": "iti"
+    },
+    "22566": {
+      "meaning": "kapılmış",
+      "transliteration": "āśritya"
+    },
+    "22567": {
+      "meaning": "arzu",
+      "transliteration": "kāmam"
+    },
+    "22568": {
+      "meaning": "ve öfke",
+      "transliteration": "krodhaḥ ca"
+    },
+    "22569": {
+      "meaning": "çabalarlar",
+      "transliteration": "iśnanti"
+    },
+    "22570": {
+      "meaning": "servet",
+      "transliteration": "arthān"
+    },
+    "22571": {
+      "meaning": "haksız",
+      "transliteration": "anyāyena"
+    },
+    "22573": {
+      "meaning": "böyle",
+      "transliteration": "iti"
+    },
+    "22574": {
+      "meaning": "hayal ederler",
+      "transliteration": "kalpayante"
+    },
+    "22575": {
+      "meaning": "yok edilmiş",
+      "transliteration": "hataḥ"
+    },
+    "22576": {
+      "meaning": "düşman",
+      "transliteration": "ari"
+    },
+    "22577": {
+      "meaning": "de",
+      "transliteration": "ca"
+    },
+    "22578": {
+      "meaning": "diğerleri",
+      "transliteration": "anyān"
+    },
+    "22579": {
+      "meaning": "ben",
+      "transliteration": "aham"
+    },
+    "22580": {
+      "meaning": "efendi",
+      "transliteration": "īśvaraḥ"
+    },
+    "22581": {
+      "meaning": "zevk alırım",
+      "transliteration": "aham bhogī"
+    },
+    "22582": {
+      "meaning": "mükemmel",
+      "transliteration": "siddhaḥ"
+    },
+    "22583": {
+      "meaning": "güçlü",
+      "transliteration": "balīvān"
+    },
+    "22584": {
+      "meaning": "mutlu",
+      "transliteration": "sukhī"
+    },
+    "22585": {
+      "meaning": "zengin",
+      "transliteration": "dhanī"
+    },
+    "22586": {
+      "meaning": "soylu doğdum",
+      "transliteration": "abhijānavān"
+    },
+    "22587": {
+      "meaning": "kim var benim gibi?",
+      "transliteration": "kaḥ iyo samānaḥ"
+    },
+    "22588": {
+      "meaning": "bağışta bulunacağım",
+      "transliteration": "yakṣyāmi"
+    },
+    "22589": {
+      "meaning": "zevk alacağım",
+      "transliteration": "modiṣyāmi"
+    },
+    "22590": {
+      "meaning": "sevineceğim",
+      "transliteration": "ramiṣyāmi"
+    },
+    "22591": {
+      "meaning": "böyle",
+      "transliteration": "iti"
+    },
+    "22592": {
+      "meaning": "şaşkın",
+      "transliteration": "ajñāna-vimohitāḥ"
+    },
+    "22595": {
+      "meaning": "birçok",
+      "transliteration": "anekā"
+    },
+    "22596": {
+      "meaning": "kaygı",
+      "transliteration": "cintābhiḥ"
+    },
+    "22597": {
+      "meaning": "vurulmuş",
+      "transliteration": "vyāptāḥ"
+    },
+    "22598": {
+      "meaning": "dalmış",
+      "transliteration": "magnāḥ"
+    },
+    "22599": {
+      "meaning": "duyusal zevklere",
+      "transliteration": "kāma-sukheṣu"
+    },
+    "22600": {
+      "meaning": "düşerler",
+      "transliteration": "pravartante"
+    },
+    "22601": {
+      "meaning": "kirli cehennem",
+      "transliteration": "narake aśucau"
+    },
+    "22602": {
+      "meaning": "benlikleriyle dolu",
+      "transliteration": "ātma-sampaditam"
+    },
+    "22603": {
+      "meaning": "inatçı",
+      "transliteration": "dambha-māna"
+    },
+    "22604": {
+      "meaning": "sarhoş",
+      "transliteration": "mada-anvitam"
+    },
+    "22605": {
+      "meaning": "kurban sunarlar",
+      "transliteration": "yajante"
+    },
+    "22607": {
+      "meaning": "gösteriş için",
+      "transliteration": "nāma-yajñāḥ"
+    },
+    "22608": {
+      "meaning": "ego",
+      "transliteration": "ahaṅkāram"
+    },
+    "22609": {
+      "meaning": "güç",
+      "transliteration": "balam"
+    },
+    "22610": {
+      "meaning": "kibir",
+      "transliteration": "darpam"
+    },
+    "22611": {
+      "meaning": "arzu",
+      "transliteration": "kāmam"
+    },
+    "22612": {
+      "meaning": "ve öfke",
+      "transliteration": "krodhaṁ ca"
+    },
+    "22613": {
+      "meaning": "imrenirler",
+      "transliteration": "abhyasūyantaḥ"
+    },
+    "22614": {
+      "meaning": "bedende oturan",
+      "transliteration": "pratyadehiṣu"
+    },
+    "22616": {
+      "meaning": "nefret ederler",
+      "transliteration": "dviṣantaḥ"
+    },
+    "22618": {
+      "meaning": "ben",
+      "transliteration": "mām"
+    },
+    "22619": {
+      "meaning": "zalim",
+      "transliteration": "tān"
+    },
+    "22620": {
+      "meaning": "en alçak",
+      "transliteration": "nirayān"
+    },
+    "22621": {
+      "meaning": "insanlar arasında",
+      "transliteration": "āsurījānān"
+    },
+    "22622": {
+      "meaning": "atarım",
+      "transliteration": "kṣipāmi"
+    },
+    "22623": {
+      "meaning": "sürekli",
+      "transliteration": "ajasram"
+    },
+    "22624": {
+      "meaning": "döngülere",
+      "transliteration": "yoniṣu"
+    },
+    "22625": {
+      "meaning": "şeytani",
+      "transliteration": "āsurīṣu"
+    },
+    "22626": {
+      "meaning": "girerler",
+      "transliteration": "prāpya"
+    },
+    "22627": {
+      "meaning": "rahim",
+      "transliteration": "yonim"
+    },
+    "22628": {
+      "meaning": "şeytani",
+      "transliteration": "āsurīṣu"
+    },
+    "22629": {
+      "meaning": "mahvolurlar",
+      "transliteration": "cāturvarnyeṣu"
+    },
+    "22630": {
+      "meaning": "her doğumda",
+      "transliteration": "garbhān"
+    },
+    "22631": {
+      "meaning": "ulaşamazlar",
+      "transliteration": "yanti"
+    },
+    "22633": {
+      "meaning": "üç",
+      "transliteration": "trividham"
+    },
+    "22634": {
+      "meaning": "kapı",
+      "transliteration": "narakaḥ"
+    },
+    "22635": {
+      "meaning": "cehennemin",
+      "transliteration": "narakaḥ"
+    },
+    "22636": {
+      "meaning": "kayba götüren",
+      "transliteration": "nāśanam"
+    },
+    "22637": {
+      "meaning": "ruhun",
+      "transliteration": "ātmanaḥ"
+    },
+    "22638": {
+      "meaning": "arzu",
+      "transliteration": "kāmaḥ"
+    },
+    "22639": {
+      "meaning": "öfke",
+      "transliteration": "krodhaḥ"
+    },
+    "22640": {
+      "meaning": "açgözlülük",
+      "transliteration": "tathā"
+    },
+    "22641": {
+      "meaning": "ve",
+      "transliteration": "tathā"
+    },
+    "22642": {
+      "meaning": "bu yüzden",
+      "transliteration": "tasmāt"
+    },
+    "22644": {
+      "meaning": "kurtulan",
+      "transliteration": "vimuktaḥ"
+    },
+    "22645": {
+      "meaning": "insan",
+      "transliteration": "naraḥ"
+    },
+    "22646": {
+      "meaning": "bu",
+      "transliteration": "etairviḥ"
+    },
+    "22647": {
+      "meaning": "karanlık kapıları",
+      "transliteration": "tamairdvibhiḥ"
+    },
+    "22648": {
+      "meaning": "iyilik yapar",
+      "transliteration": "ācaraty"
+    },
+    "22649": {
+      "meaning": "ruhu için",
+      "transliteration": "ātmanaḥ"
+    },
+    "22650": {
+      "meaning": "ve ulaşır",
+      "transliteration": "yāti"
+    },
+    "22651": {
+      "meaning": "en yüce hedefe",
+      "transliteration": "pārāṁ gatim"
+    },
+    "22652": {
+      "meaning": "terk eden",
+      "transliteration": "yaḥ śāstra"
+    },
+    "22653": {
+      "meaning": "kutsal yazıların öğretilerini",
+      "transliteration": "vidhim"
+    },
+    "22654": {
+      "meaning": "hareket eden",
+      "transliteration": "vartate"
+    },
+    "22655": {
+      "meaning": "kendi arzularına göre",
+      "transliteration": "iṣṭa-pūrtim"
+    },
+    "22656": {
+      "meaning": "ulaşamaz",
+      "transliteration": "na sa"
+    },
+    "22657": {
+      "meaning": "mükemmelliğe",
+      "transliteration": "siddhim"
+    },
+    "22658": {
+      "meaning": "ne mutluluğa",
+      "transliteration": "na sukham"
+    },
+    "22659": {
+      "meaning": "ne de en yüce hedefe",
+      "transliteration": "pārāṁ gatim api"
+    },
+    "22660": {
+      "meaning": "bu yüzden",
+      "transliteration": "tasmāt"
+    },
+    "22661": {
+      "meaning": "kutsal yazılar",
+      "transliteration": "śāstram"
+    },
+    "22662": {
+      "meaning": "olsun",
+      "transliteration": "te"
+    },
+    "22663": {
+      "meaning": "yetkin",
+      "transliteration": "pramāṇam"
+    },
+    "22664": {
+      "meaning": "belirlemek için",
+      "transliteration": "kārya"
+    },
+    "22665": {
+      "meaning": "eylemsizlik",
+      "transliteration": "akārya"
+    },
+    "22666": {
+      "meaning": "bilerek",
+      "transliteration": "jñātvā"
+    },
+    "22667": {
+      "meaning": "yazıların söylediği",
+      "transliteration": "śāstra-vidhāna"
+    },
+    "22668": {
+      "meaning": "eylem",
+      "transliteration": "karma"
+    },
+    "22669": {
+      "meaning": "yapmak",
+      "transliteration": "kartum"
+    },
+    "22670": {
+      "meaning": "melisin",
+      "transliteration": "arhasi"
+    }
+  }
+}

@@ -1,0 +1,304 @@
+{
+  "vocabulary": {
+    "(guṇa bhedāt)": {
+      "meaning": "Maddi doğanın üç niteliğine göre",
+      "transliteration": "Guṇa bhedāt"
+    },
+    "(he) bhārata": {
+      "meaning": "Ey Bharata soyundan gelen",
+      "transliteration": "Bhārata"
+    },
+    "(he) pārtha": {
+      "meaning": "Ey Kuntī'nin oğlu",
+      "transliteration": "Pārtha"
+    },
+    "(karśayantaḥ) mām cha eva": {
+      "meaning": "ve ayrıca Beni, parçacığım formunda, ruh ruhu, jīvātman olarak eziyet edersiniz",
+      "transliteration": "Karśayantaḥ mām cha eva"
+    },
+    "adakṣiṇam": {
+      "meaning": "Rahiplere uygun sunular olmadan",
+      "transliteration": "Adakṣiṇam"
+    },
+    "adeśa-kāle": {
+      "meaning": "Uygun olmayan yer ve zamanda",
+      "transliteration": "Adeśa-kāle"
+    },
+    "amedhyam cha": {
+      "meaning": "ve kurban edilemeyen kirli yiyecekler (et, şarap, soğan vb.)",
+      "transliteration": "Amedhyam cha"
+    },
+    "antaḥ śarīra-stham": {
+      "meaning": "Bedenin içinde",
+      "transliteration": "Antaḥ śarīra-stham"
+    },
+    "anupakāriṇe iti": {
+      "meaning": "Karşılık beklemeden",
+      "transliteration": "Anupakāriṇe iti"
+    },
+    "aphala-ākāṅkṣibhiḥ": {
+      "meaning": "Eylemin meyvesini arzulamayanlar tarafından",
+      "transliteration": "Aphala-ākāṅkṣibhiḥ"
+    },
+    "asṛṣṭa-annam": {
+      "meaning": "Yiyecek dağıtımı olmadan vb.",
+      "transliteration": "Asṛṣṭa-annam"
+    },
+    "aśāstra-vihitam": {
+      "meaning": "Kutsal yazılarca onaylanmamış",
+      "transliteration": "Aśāstra-vihitam"
+    },
+    "brahma-vādinām": {
+      "meaning": "Vedaların takipçilerinin",
+      "transliteration": "Brahma-vādinām"
+    },
+    "brahmaṇaḥ": {
+      "meaning": "Brahma, Yüce Ruh",
+      "transliteration": "Brahmaṇaḥ"
+    },
+    "dambha-ahaṅkāra-saṁyuktāḥ": {
+      "meaning": "Kibir ve bencillikle dolu",
+      "transliteration": "Dambha-ahaṅkāra-saṁyuktāḥ"
+    },
+    "dambha-artham api cha eva": {
+      "meaning": "ve gösteriş ve ihtişam için olan",
+      "transliteration": "Dambha-artham api cha eva"
+    },
+    "dambhena cha eva": {
+      "meaning": "ve büyük gururla gerçekleştirilen",
+      "transliteration": "Dambhena cha eva"
+    },
+    "dattam": {
+      "meaning": "Sadaka verilir",
+      "transliteration": "Dattam"
+    },
+    "dehinām": {
+      "meaning": "Canlı varlıkların",
+      "transliteration": "Dehinām"
+    },
+    "deva-dvija-guru-prājña-pūjanam": {
+      "meaning": "Tanrı'ya, brāhmaṇ'a, guru'ya ve aydınlanmış ruha tapınma",
+      "transliteration": "Deva-dvija-guru-prājña-pūjanam"
+    },
+    "devān": {
+      "meaning": "İyilik doğalı yarı tanrılar",
+      "transliteration": "Devān"
+    },
+    "dāna-kriyāḥ cha": {
+      "meaning": "ve sadaka eylemleri",
+      "transliteration": "Dāna-kriyāḥ cha"
+    },
+    "dātavyam cha": {
+      "meaning": "ve verilmesi gerektiği inancıyla",
+      "transliteration": "Dātavyam cha"
+    },
+    "hutam": {
+      "meaning": "Kurban sunulur",
+      "transliteration": "Hutam"
+    },
+    "kaṭu-amla-lavaṇa-ati-uṣṇa-tīkṣṇa-rukṣa-vidāhinaḥ": {
+      "meaning": "çok acı, çok ekşi, çok tuzlu, çok sıcak, çok yakıcı, çok kuru ve ısıtıcı olan",
+      "transliteration": "Kaṭu-amla-lavaṇa-ati-uṣṇa-tīkṣṇa-rukṣa-vidāhinaḥ"
+    },
+    "kāma-rāga-bala-anvitāḥ": {
+      "meaning": "ve arzu, bağlanma ve güçle hareket eden",
+      "transliteration": "Kāma-rāga-bala-anvitāḥ"
+    },
+    "kṛtam": {
+      "meaning": "Eylem gerçekleştirilir",
+      "transliteration": "Kṛtam"
+    },
+    "manaḥ samādhāya": {
+      "meaning": "Sağlam inançla",
+      "transliteration": "Manaḥ samādhāya"
+    },
+    "mokṣa-kāṅkṣibhiḥ": {
+      "meaning": "Kurtuluş için çabalayan kişiler",
+      "transliteration": "Mokṣa-kāṅkṣibhiḥ"
+    },
+    "na cha pretya": {
+      "meaning": "ve sonraki hayatta da değil",
+      "transliteration": "Na cha pretya"
+    },
+    "niṣṭhā": {
+      "meaning": "konumdur",
+      "transliteration": "Niṣṭhā"
+    },
+    "om iti": {
+      "meaning": "Brahma'yı, Mutlak'ı temsil eden Om hecesi",
+      "transliteration": "Om iti"
+    },
+    "phalam": {
+      "meaning": "Meyveler için",
+      "transliteration": "Phalam"
+    },
+    "phalam uddiśya": {
+      "meaning": "Ödül amacıyla",
+      "transliteration": "Phalam uddiśya"
+    },
+    "prati-upakāra-artham": {
+      "meaning": "Karşılık beklentisiyle",
+      "transliteration": "Prati-upakāra-artham"
+    },
+    "pretān bhūta-gaṇān cha": {
+      "meaning": "Cehalet doğalı hayaletler ve ruhlar",
+      "transliteration": "Pretān bhūta-gaṇān cha"
+    },
+    "priya-hitam cha": {
+      "meaning": "ve hoş ama yararlı",
+      "transliteration": "Priya-hitam cha"
+    },
+    "purā": {
+      "meaning": "Antik zamanlarda, evrenin yaratılışında",
+      "transliteration": "Purā"
+    },
+    "rājasam": {
+      "meaning": "tutku niteliğinde olan",
+      "transliteration": "Rājasam"
+    },
+    "rājasasya": {
+      "meaning": "Tutkulu olanlara",
+      "transliteration": "Rājasasya"
+    },
+    "rājasāḥ": {
+      "meaning": "Tutku doğalı inanca sahip olanlar",
+      "transliteration": "Rājasāḥ"
+    },
+    "sat iti": {
+      "meaning": "Brahma'yı, Mutlak'ı temsil eden Sat sözcüğü",
+      "transliteration": "Sat iti"
+    },
+    "sat iti eva": {
+      "meaning": "Sat sözcüğüyle",
+      "transliteration": "Sat iti eva"
+    },
+    "sat-bhāve": {
+      "meaning": "Gerçeği, Brahma'nın doğasını belirtmek için",
+      "transliteration": "Sat-bhāve"
+    },
+    "satkāra-māna-pūja-artham": {
+      "meaning": "Kazanç, tapınma ve şöhret için",
+      "transliteration": "Satkāra-māna-pūja-artham"
+    },
+    "sattva-anurūpā": {
+      "meaning": "Bilinçlerine göre",
+      "transliteration": "Sattva-anurūpā"
+    },
+    "smṛtaḥ": {
+      "meaning": "Kutsal yazılarda şöyle bilinirler",
+      "transliteration": "Smṛtaḥ"
+    },
+    "svabhāva-jā": {
+      "meaning": "Önceki yaşamların izlenimlerinden kazanılan kendi doğalarından doğan",
+      "transliteration": "Svabhāva-jā"
+    },
+    "svādhyāya-abhyasanam cha eva": {
+      "meaning": "ve Vedaların düzenli olarak okunması",
+      "transliteration": "Svādhyāya-abhyasanam cha eva"
+    },
+    "sādhu-bhāve cha": {
+      "meaning": "ve gerçeğe adanmış kişiler, Brahma'yı bilenler",
+      "transliteration": "Sādhu-bhāve cha"
+    },
+    "sāttvika-priyāḥ": {
+      "meaning": "İyilik doğalıların sevgilisi",
+      "transliteration": "Sāttvika-priyāḥ"
+    },
+    "sāttvikam": {
+      "meaning": "iyilik niteliğinde olan",
+      "transliteration": "Sāttvikam"
+    },
+    "sāttvikaḥ": {
+      "meaning": "iyilik doğalı kurban",
+      "transliteration": "Sāttvikaḥ"
+    },
+    "sāttvikāḥ": {
+      "meaning": "İyilik doğalı inanca sahip olanlar",
+      "transliteration": "Sāttvikāḥ"
+    },
+    "tapaḥ taptam": {
+      "meaning": "Çileye katlanılır",
+      "transliteration": "Tapaḥ taptam"
+    },
+    "tat iti": {
+      "meaning": "Brahma'yı, Mutlak'ı temsil eden Tat sözcüğü",
+      "transliteration": "Tat iti"
+    },
+    "tat-arthīyam": {
+      "meaning": "Yüce Rab'bi memnun etmek için",
+      "transliteration": "Tat-arthīyam"
+    },
+    "tri-vidham tapaḥ": {
+      "meaning": "Üçlü çile (bedensel, sözlü ve zihinsel)",
+      "transliteration": "Tri-vidham tapaḥ"
+    },
+    "tri-vidhaḥ āhāraḥ": {
+      "meaning": "Üç çeşit yiyecek",
+      "transliteration": "Tri-vidhaḥ āhāraḥ"
+    },
+    "tām śṛṇu": {
+      "meaning": "Şimdi bunu işit",
+      "transliteration": "Tām śṛṇu"
+    },
+    "tāmasa-priyam": {
+      "meaning": "Cahillerin sevgilisi",
+      "transliteration": "Tāmasa-priyam"
+    },
+    "tāmasam": {
+      "meaning": "cehalet niteliğinde olan",
+      "transliteration": "Tāmasam"
+    },
+    "uchchhiṣṭam api": {
+      "meaning": "Artıklar (tapınılacak kişilerin dışındakiler)",
+      "transliteration": "Uchchhiṣṭam api"
+    },
+    "vidhi-diṣṭaḥ": {
+      "meaning": "Kutsal yazıların emirlerine göre",
+      "transliteration": "Vidhi-diṣṭaḥ"
+    },
+    "vividhāḥ yajña-tapaḥ-kriyāḥ": {
+      "meaning": "Çeşitli kurban ve çile eylemleri",
+      "transliteration": "Vividhāḥ yajña-tapaḥ-kriyāḥ"
+    },
+    "yajña-dāna-tapaḥ-kriyāḥ": {
+      "meaning": "Kurban, sadaka ve çile görevleri",
+      "transliteration": "Yajña-dāna-tapaḥ-kriyāḥ"
+    },
+    "yakṣa-rakṣāṁsi": {
+      "meaning": "Tutku doğalı Yakṣa yarı tanrıları ve Rākṣasa iblisleri",
+      "transliteration": "Yakṣa-rakṣāṁsi"
+    },
+    "yat tu": {
+      "meaning": "ve o ki",
+      "transliteration": "Yat tu"
+    },
+    "yaḥ ijyate": {
+      "meaning": "gerçekleştirilen",
+      "transliteration": "Yaḥ ijyate"
+    },
+    "yuktaiḥ": {
+      "meaning": "Adanmışlar tarafından",
+      "transliteration": "Yuktaiḥ"
+    },
+    "yāta-yāmam": {
+      "meaning": "Pişmiş ama soğuyana kadar bırakılmış",
+      "transliteration": "Yāta-yāmam"
+    },
+    "āsura-niśchayān": {
+      "meaning": "şeytani inançlı olarak",
+      "transliteration": "Āsura-niśchayān"
+    },
+    "āyuḥ-sattva-bala-ārogya-sukha-prīti-vivardhanāḥ": {
+      "meaning": "ömrü, canlılığı, gücü, sağlığı, mutluluğu ve sevgiyi artıran",
+      "transliteration": "Āyuḥ-sattva-bala-ārogya-sukha-prīti-vivardhanāḥ"
+    },
+    "śarīra-stham": {
+      "meaning": "Bedenin içinde",
+      "transliteration": "Śarīra-stham"
+    },
+    "śaucham": {
+      "meaning": "İç ve dış saflık",
+      "transliteration": "Śaucham"
+    }
+  }
+}
