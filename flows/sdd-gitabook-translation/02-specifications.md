@@ -13,9 +13,17 @@
 
 | System | Impact | Notes |
 |--------|--------|-------|
-| `/data/translated/th/` | Create | Новые vocabulary.json, comment.txt |
-| `/data/translated/zh-CN/` | Create | Новые sloka.txt, vocabulary.json, comment.txt |
-| `/translate.sanscrit` skill | Use | Вызывается для каждого батча |
+| `/data/translated/ko/` | Create | Недостающие sloka, translit, vocabulary, comment |
+| `/data/translated/th/` | Create | Недостающие vocabulary, comment |
+| `/data/translated/zh-CN/` | Create | Недостающие sloka, vocabulary, comment |
+| `/data/translated/zh-TW/` | Create | Недостающие vocabulary, comment |
+| `/data/translated/el/` | Create | Недостающие sloka, translit, vocabulary, comment |
+| `/data/translated/ka/` | Create | Недостающие sloka, translit, vocabulary, comment |
+| `/data/translated/hy/` | Create | Недостающие sloka, translit, vocabulary, comment |
+| `/data/translated/ja/` | Create | Недостающие sloka, translit, vocabulary, comment |
+| `/data/translated/he/` | Create | Недостающие vocabulary, comment |
+| `/data/translated/ar/` | Create | Недостающие vocabulary, comment |
+| `/translate.sanscrit` skill | Use | Один вызов на шлоку, все недостающие языки |
 
 ## Architecture
 
@@ -98,27 +106,31 @@
 
 ## Processing Order
 
-### Phase 1: ZH-CN sloka.txt (~367 файлов)
+### Phase 1: Slokas (все недостающие переводы)
 
-Порядок: по главам, внутри главы - по номеру шлоки.
-
-```
-Chapter 01: check each sloka → translate missing
-Chapter 02: check each sloka → translate missing
-...
-Chapter 18: check each sloka → translate missing
-```
-
-### Phase 2: Vocabulary (~35 файлов)
+Для каждой шлоки из Sanskrit:
+1. Проверить какие языки уже переведены
+2. Определить недостающие языки
+3. Если есть недостающие → один вызов `/translate.sanscrit` на ВСЕ недостающие языки
+4. Сохранить результаты
 
 ```
-TH:    chapters 02-18 (17 files)
-ZH-CN: chapters 01-18 (18 files)
+for chapter in 01..18:
+    for sloka in chapter:
+        missing_langs = find_missing(sloka, ALL_TARGET_LANGS)
+        if missing_langs:
+            translations = translate(sloka, missing_langs)
+            save(translations)
 ```
 
-### Phase 3: Comments (~40 файлов)
+### Phase 2: Vocabulary (все недостающие)
 
-Только если существует comment в original.
+Для каждой главы, для каждого языка без vocabulary.json:
+- Перевести vocabulary со всех 5 источников
+
+### Phase 3: Comments (все недостающие)
+
+Только для шлок, где есть comment в original.
 
 ## Interfaces
 
@@ -225,7 +237,8 @@ data/translated/{lang}/chapter-{NN}-{lang}/chapter-{NN}-{X.Y}-{lang}_comment.txt
 | Case | Trigger | Expected Behavior |
 |------|---------|-------------------|
 | Missing source | ru/en/de/es file not found | Skip sloka, log warning |
-| Partial translation | TH exists, ZH-CN missing | Translate only missing lang |
+| Partial translation | Some langs exist, others missing | Translate ONLY missing langs |
+| All langs exist | Sloka fully translated | Skip, no API call |
 | Combined slokas | `7.4-6` instead of `7.4` | Handle as single unit |
 | Agent failure | Translation fails | Retry once, then skip and log |
 
