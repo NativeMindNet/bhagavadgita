@@ -1,0 +1,151 @@
+═══════════════════════════════════════════════════════════════
+CHAPTER 11 TRANSLATION BATCH
+═══════════════════════════════════════════════════════════════
+
+TARGET LANGUAGES: Korean (ko), Thai (th), Chinese Simplified (zh-CN), 
+                  Chinese Traditional (zh-TW), Japanese (ja)
+
+═══════════════════════════════════════════════════════════════
+PART 1: CHAPTER TITLE
+═══════════════════════════════════════════════════════════════
+
+[RU] Созерцание вселенского образа
+[EN] The Vision of the Universal Form
+[DE] ELFTES KAPITEL Viśvarūpa-Darśana-Yoga Die Vision der kosmischen Gestalt
+[ES] Vishva-rupa-darshana-yoga. La forma Universal
+
+Translate title to: ko, th, zh-CN, zh-TW, ja
+
+═══════════════════════════════════════════════════════════════
+PART 2: SLOKAS (52 slokas)
+═══════════════════════════════════════════════════════════════
+
+For each sloka, translate the text to ko, th, zh-CN, zh-TW, ja.
+Use RU/EN as primary sources. DE/ES for additional context.
+
+
+---
+Sloka 11.1:
+[RU] Арджуна сказал: По беспричинной милости Ты открыл мне сокровенные духовные истины, освободив из плена иллюзии.
+[EN] Arjuna said: By Your grace, You have revealed Your hidden treasure to me, and my ignorance of Your Supreme Self has been dispelled.
+
+---
+Sloka 11.2:
+[RU] О лотосоокий Господь! Выслушав Твои подробные объяснения о появлении и исчезновении живых существ, я еще раз познал Твое беспредельное величие.
+[EN] O beautiful lotus-eyed Lord, I have heard Your elaborate description of the manifestation and dissolution of the living beings, and I have also heard Your description of Your inexhaustible glories.
+
+---
+Sloka 11.3:
+[RU] О Владыка! Я принимаю все, что Ты поведал о Себе, как абсолютную истину. О Высшая Личность! Даруй же мне возможность увидеть Твой образ, исполненный могущества и великолепия.
+[EN] O Lord, You have perfectly described Your Supreme Self. Yet, O Puruṣottam, I wish to see this glorious form of Yours.
+
+---
+Sloka 11.4:
+[RU] Господь, если Ты полагаешь, что я способен лицезреть Твой вечный вселенский облик, тогда прошу, яви мне его, о Повелитель мистических сил!
+[EN] O Yogeśvar, I implore Thee, if You consider it possible for me to see it, please reveal Your imperishable form to me.
+
+---
+Sloka 11.5:
+[RU] Всевышний ответил: Сын Притхи, узри же Мое могущество, проявленное в разнообразных, неисчислимых, многоцветных божественных формах!
+[EN] The Supreme Lord said: O Pārtha, behold My innumerable divine forms of many kinds, colours, and shapes.
+
+... (47 more slokas)
+
+═══════════════════════════════════════════════════════════════
+PART 3: VOCABULARY (683 words)
+═══════════════════════════════════════════════════════════════
+
+For each vocabulary word:
+1. Translate meaning to ko, th, zh-CN, zh-TW, ja
+2. Add transliteration in target scripts:
+   - Thai: Thai script transliteration
+   - Chinese: Pinyin
+   - Korean: Hangul transliteration
+   - Japanese: Romaji + Kana
+
+Sample vocabulary:
+
+Word: (bhaktena)
+[RU] 
+[EN] by the pure devotee
+
+Word: (he) ananta
+[RU] 
+[EN] O infinite, embodiment of all
+
+Word: (he) ananta-rūpa
+[RU] 
+[EN] O Lord of infinite forms
+
+Word: (he) ananta-vīrya
+[RU] 
+[EN] O Lord of infinite potency
+
+Word: (he) apratima-prabhāva
+[RU] 
+[EN] O Lord of unrivalled power!
+
+Word: (he) bhārata
+[RU] 
+[EN] O descendant of Bharat
+
+Word: (he) deva-vara
+[RU] 
+[EN] O Lord of lords
+
+Word: (he) deva-īśa
+[RU] 
+[EN] O God of gods
+
+Word: (he) guḍākeśa
+[RU] 
+[EN] O conqueror of sleep
+
+Word: (he) hṛṣīkeśa
+[RU] 
+[EN] O Lord of the senses of all beings
+
+... (673 more words)
+
+═══════════════════════════════════════════════════════════════
+OUTPUT FORMAT:
+
+Return JSON in this format:
+{
+  "chapterTitle": {
+    "ko": "...",
+    "th": "...",
+    "zh-CN": "...",
+    "zh-TW": "...",
+    "ja": "..."
+  },
+  "slokas": {
+    "1.1": {
+      "ko": "...",
+      "th": "...",
+      "zh-CN": "...",
+      "zh-TW": "...",
+      "ja": "..."
+    },
+    ...
+  },
+  "vocabulary": {
+    "1": {
+      "meaning": {
+        "ko": "...",
+        "th": "...",
+        "zh-CN": "...",
+        "zh-TW": "...",
+        "ja": "..."
+      },
+      "transliteration": {
+        "th": "...",
+        "zh-CN": "...",
+        "ko": "...",
+        "ja": "..."
+      }
+    },
+    ...
+  }
+}
+═══════════════════════════════════════════════════════════════

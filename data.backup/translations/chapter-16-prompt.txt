@@ -1,0 +1,152 @@
+═══════════════════════════════════════════════════════════════
+CHAPTER 16 TRANSLATION BATCH
+═══════════════════════════════════════════════════════════════
+
+TARGET LANGUAGES: Korean (ko), Thai (th), Chinese Simplified (zh-CN), 
+                  Chinese Traditional (zh-TW), Japanese (ja)
+
+═══════════════════════════════════════════════════════════════
+PART 1: CHAPTER TITLE
+═══════════════════════════════════════════════════════════════
+
+[RU] Божественные и демонические качества
+[EN] The Godly and Ungodly Natures
+[DE] SECHZEHNTES KAPITEL Daivāsura-Sampad-Vibhāga-Yoga Die Göttlichen und die Gottlosen
+[ES] Daivasura–sampad–vibhaga–yoga. La naturaleza divina y la naturaleza demoníaca.
+
+Translate title to: ko, th, zh-CN, zh-TW, ja
+
+═══════════════════════════════════════════════════════════════
+PART 2: SLOKAS (21 slokas)
+═══════════════════════════════════════════════════════════════
+
+For each sloka, translate the text to ko, th, zh-CN, zh-TW, ja.
+Use RU/EN as primary sources. DE/ES for additional context.
+
+
+---
+Sloka 16.1-3:
+[RU] Всевышний сказал:
+Бхарата! Бесстрашие, добросердечность, целеустремленность в обретении духовного знания, великодушие, самообладание, жертвенность, склонность к изучению священных писаний, аскетизм, и
+[EN] 
+
+---
+Sloka 16.4:
+[RU] Партха! Лживость, высокомерие, самомнение, гневливость, бессердечность и невежество — это качества людей демонической природы.
+[EN] O Pārtha, these are the qualities of a person born of an ungodly nature: pride, conceit, egoism, anger, cruelty, and ignorance.
+
+---
+Sloka 16.5:
+[RU] Божественные качества ведут к освобождению, тогда как демонические — к рабству в мире материи. Но тебе не стоит печалиться, Пандава, ибо ты благочестив от рождения.
+[EN] The godly qualities have been described as the cause of liberation, and the ungodly qualities have been described as the cause of bondage. O Pāṇḍava, do not fear, for you are born of a godly nature.
+
+---
+Sloka 16.6:
+[RU] Партха, живые существа в этом мире обладают либо божественными, либо демоническими качествами. Я подробно описал тебе божественную природу, теперь услышь о демонической.
+[EN] O Pārtha, in this world the living beings are of two natures—the godly and the ungodly. I have elaborately described the godly nature to you, so now hear from Me about the ungodly:
+
+---
+Sloka 16.7:
+[RU] Безбожные, неблагочестивые натуры не способны понять, что хорошо, а что дурно. Они лишены чистоты, правдивости и не способны достойно вести себя.
+[EN] The ungodly cannot distinguish between right and wrong action. No purity, good practices, or truthfulness can be found in them.
+
+... (16 more slokas)
+
+═══════════════════════════════════════════════════════════════
+PART 3: VOCABULARY (320 words)
+═══════════════════════════════════════════════════════════════
+
+For each vocabulary word:
+1. Translate meaning to ko, th, zh-CN, zh-TW, ja
+2. Add transliteration in target scripts:
+   - Thai: Thai script transliteration
+   - Chinese: Pinyin
+   - Korean: Hangul transliteration
+   - Japanese: Romaji + Kana
+
+Sample vocabulary:
+
+Word: (ete guṇāḥ bhavanti)
+[RU] 
+[EN] these are the (impure) characteristics
+
+Word: (ete guṇāḥ) bhavanti
+[RU] 
+[EN] these are the qualities
+
+Word: (he) kaunteya
+[RU] 
+[EN] O son of Kuntī
+
+Word: (he) pārtha
+[RU] 
+[EN] O son of Kuntī
+
+Word: (he) pāṇḍava
+[RU] 
+[EN] O son of Pāṇḍu
+
+Word: abhijātasya
+[RU] 
+[EN] of a person born to a destiny
+
+Word: abhijātaḥ asi
+[RU] 
+[EN] are born to a destiny
+
+Word: abhyasūyakāḥ
+[RU] 
+[EN] and they ascribe faults to the good qualities of the saintly persons
+
+Word: aham bhogī
+[RU] 
+[EN] I am the enjoyer
+
+Word: aham īśvaraḥ
+[RU] 
+[EN] I am the lord
+
+... (310 more words)
+
+═══════════════════════════════════════════════════════════════
+OUTPUT FORMAT:
+
+Return JSON in this format:
+{
+  "chapterTitle": {
+    "ko": "...",
+    "th": "...",
+    "zh-CN": "...",
+    "zh-TW": "...",
+    "ja": "..."
+  },
+  "slokas": {
+    "1.1": {
+      "ko": "...",
+      "th": "...",
+      "zh-CN": "...",
+      "zh-TW": "...",
+      "ja": "..."
+    },
+    ...
+  },
+  "vocabulary": {
+    "1": {
+      "meaning": {
+        "ko": "...",
+        "th": "...",
+        "zh-CN": "...",
+        "zh-TW": "...",
+        "ja": "..."
+      },
+      "transliteration": {
+        "th": "...",
+        "zh-CN": "...",
+        "ko": "...",
+        "ja": "..."
+      }
+    },
+    ...
+  }
+}
+═══════════════════════════════════════════════════════════════

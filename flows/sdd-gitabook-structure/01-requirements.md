@@ -1,7 +1,7 @@
 # Requirements: GitaBook Folder Structure
 
 > Version: 1.1
-> Status: DRAFT
+> Status: APPROVED
 > Last Updated: 2026-03-29
 
 ## Problem Statement
@@ -443,6 +443,6 @@ data/
 
 ## Approval
 
-- [ ] Reviewed by: _pending_
-- [ ] Approved on: _pending_
-- [ ] Notes: Структура согласована. Ожидает финального одобрения.
+- [x] Reviewed by: User
+- [x] Approved on: 2026-03-29
+- [x] Notes: Requirements approved. Proceeding to specifications.

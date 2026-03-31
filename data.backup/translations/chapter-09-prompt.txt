@@ -1,0 +1,151 @@
+═══════════════════════════════════════════════════════════════
+CHAPTER 9 TRANSLATION BATCH
+═══════════════════════════════════════════════════════════════
+
+TARGET LANGUAGES: Korean (ko), Thai (th), Chinese Simplified (zh-CN), 
+                  Chinese Traditional (zh-TW), Japanese (ja)
+
+═══════════════════════════════════════════════════════════════
+PART 1: CHAPTER TITLE
+═══════════════════════════════════════════════════════════════
+
+[RU] Тайное сокровище преданности
+[EN] The Hidden Treasure of Devotion
+[DE] NEUNTES KAPITEL Rāja-Guhya-Yoga Der verborgene Schatz der Hingabe
+[ES] Radzha-guhya-yoga. El tesoro oculto
+
+Translate title to: ko, th, zh-CN, zh-TW, ja
+
+═══════════════════════════════════════════════════════════════
+PART 2: SLOKAS (34 slokas)
+═══════════════════════════════════════════════════════════════
+
+For each sloka, translate the text to ko, th, zh-CN, zh-TW, ja.
+Use RU/EN as primary sources. DE/ES for additional context.
+
+
+---
+Sloka 9.1:
+[RU] Всевышний сказал: Арджуна, поскольку ты свободен от зависти, Я поведаю тебе сокровенное духовное знание, благодаря которому ты освободишься из плена материального мира, избавившись от всех страданий.
+[EN] The Supreme Lord said: I now reveal to you, who are without envy, this most hidden treasure of knowledge of pure devotion, with direct realisation of Me, knowing which you will be liberated from inaus
+
+---
+Sloka 9.2:
+[RU] Это знание — царь всего знания, тайна тайн. Оно очищает сердце от всякой скверны и наделяет духовным опытом. Оно приносит вечные плоды, и постижение его радостно.
+[EN] Know this to be the king of secrets, the king of knowledge, supreme, pure, and imperishable. It is known by direct realisation (by one eager to serve Me), it is the perfection of religion, and very ea
+
+---
+Sloka 9.3:
+[RU] О покоритель врагов, те, кто лишен веры в этот сокровенный путь преданности Мне, обречены на вечное скитание в мире рождений и смертей.
+[EN] O conqueror of the enemy, men who have no faith in this hidden treasure of devotion to Me are unable to reach Me, and so they remain wandering on the path of death in the material world.
+
+---
+Sloka 9.4:
+[RU] Знай, что Я в Своей непроявленной форме пронизываю все творение. Все живые существа пребывают во Мне, но Я — вне всего.
+[EN] This entire universe is pervaded by Me in My unmanifest form, and all beings are situated in Me; yet I am not in them.
+
+---
+Sloka 9.5:
+[RU] Узри же Мое мистическое могущество, благодаря которому Я един со всем сущим и одновременно отличен от него. Пронизывая мироздание, поддерживая жизнь всех существ, Я не смешиваюсь с ними, являясь их Ис
+[EN] Again, they are not in Me. Behold My supreme mystical power of inconceivable oneness and difference (achintya-bhedābheda). I, Myself, am the mainstay and origin of all beings, but I am not in them.
+
+... (29 more slokas)
+
+═══════════════════════════════════════════════════════════════
+PART 3: VOCABULARY (408 words)
+═══════════════════════════════════════════════════════════════
+
+For each vocabulary word:
+1. Translate meaning to ko, th, zh-CN, zh-TW, ja
+2. Add transliteration in target scripts:
+   - Thai: Thai script transliteration
+   - Chinese: Pinyin
+   - Korean: Hangul transliteration
+   - Japanese: Romaji + Kana
+
+Sample vocabulary:
+
+Word: (aham) gatiḥ
+[RU] 
+[EN] I am the fruit of action
+
+Word: (he) kaunteya
+[RU] 
+[EN] O son of Kuntī
+
+Word: (he) parantapa
+[RU] 
+[EN] O conqueror of the enemy
+
+Word: (he) pārtha
+[RU] 
+[EN] O son of Pṛthā, Arjuna
+
+Word: (parāṁ gatiṁ yānti)
+[RU] 
+[EN] will surely attain the supreme destination
+
+Word: (saḥ)
+[RU] 
+[EN] He (who dedicates himself to Me)
+
+Word: (tasya)
+[RU] 
+[EN] of that person
+
+Word: aham agniḥ
+[RU] 
+[EN] I am the fire
+
+Word: aham auṣadham
+[RU] 
+[EN] I am the food
+
+Word: aham hutam eva
+[RU] 
+[EN] I am the act of offering
+
+... (398 more words)
+
+═══════════════════════════════════════════════════════════════
+OUTPUT FORMAT:
+
+Return JSON in this format:
+{
+  "chapterTitle": {
+    "ko": "...",
+    "th": "...",
+    "zh-CN": "...",
+    "zh-TW": "...",
+    "ja": "..."
+  },
+  "slokas": {
+    "1.1": {
+      "ko": "...",
+      "th": "...",
+      "zh-CN": "...",
+      "zh-TW": "...",
+      "ja": "..."
+    },
+    ...
+  },
+  "vocabulary": {
+    "1": {
+      "meaning": {
+        "ko": "...",
+        "th": "...",
+        "zh-CN": "...",
+        "zh-TW": "...",
+        "ja": "..."
+      },
+      "transliteration": {
+        "th": "...",
+        "zh-CN": "...",
+        "ko": "...",
+        "ja": "..."
+      }
+    },
+    ...
+  }
+}
+═══════════════════════════════════════════════════════════════

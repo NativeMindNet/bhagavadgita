@@ -1,0 +1,153 @@
+═══════════════════════════════════════════════════════════════
+CHAPTER 5 TRANSLATION BATCH
+═══════════════════════════════════════════════════════════════
+
+TARGET LANGUAGES: Korean (ko), Thai (th), Chinese Simplified (zh-CN), 
+                  Chinese Traditional (zh-TW), Japanese (ja)
+
+═══════════════════════════════════════════════════════════════
+PART 1: CHAPTER TITLE
+═══════════════════════════════════════════════════════════════
+
+[RU] Деятельность в отречении
+[EN] The Path of Renunciation of Action
+[DE] FÜNFTES KAPITEL Karmasannyāsa-Yoga Der Pfad der Entsagung des Handelns
+[ES] Karma-sannyasa-yoga. El sendero de la Armonía Divina
+
+Translate title to: ko, th, zh-CN, zh-TW, ja
+
+═══════════════════════════════════════════════════════════════
+PART 2: SLOKAS (27 slokas)
+═══════════════════════════════════════════════════════════════
+
+For each sloka, translate the text to ko, th, zh-CN, zh-TW, ja.
+Use RU/EN as primary sources. DE/ES for additional context.
+
+
+---
+Sloka 5.1:
+[RU] Арджуна сказал:
+О Кришна! Сначала Ты превозносил путь отречения от деятельности, а затем — путь бескорыстных деяний. Прошу Тебя, укажи мне ясно, какой из этих путей наиболее благоприятен.
+[EN] Arjuna said: O Kṛṣṇa, you speak of renunciation of actions, and then again, You speak of the path of selfless action. Therefore, please tell me clearly which is superior.
+
+---
+Sloka 5.2:
+[RU] Всевышний ответил:
+Как путь отречения от деятельности, так и путь бескорыстных деяний благоприятны, однако бескорыстная деятельность выше.
+[EN] The Supreme Lord said: Both renunciation of action and the path of selfless action bring great benefit. Yet, of the two, know that the way of selfless action is superior.
+
+---
+Sloka 5.3:
+[RU] Сильнорукий Арджуна! Знай, что тот, кто свободен от влечения или отвращения к чему-либо, тот воистину отречен, хотя и совершает действия. Поскольку он превзошел двойственность этого мира, он легко осв
+[EN] O mighty-armed Arjuna, know that one who is free from attraction and aversion is truly renounced, though performing action; for one who is free from duality easily attains liberation from bondage.
+
+---
+Sloka 5.4:
+[RU] Несведущие люди склонны проводить различия между путем философского познания своего «я», отличного от материи, и путем бескорыстной деятельности. Но мудрецы считают, что те, кто следует совершенным об
+[EN] The path of renunciation (sāṅkhya-yoga) and the path of selfless action (karma-yoga) are considered separate paths by the unwise, but not by the learned. One who perfectly follows either of these path
+
+---
+Sloka 5.5:
+[RU] Кто не делает различия между двумя путями (санкхья-йоги и карма-йоги), тот обладает подлинным знанием.
+[EN] The state achieved by the renunciation of action is also achieved by the performance of selfless action. One who sees these two paths to be one and the same, actually sees.
+
+... (22 more slokas)
+
+═══════════════════════════════════════════════════════════════
+PART 3: VOCABULARY (365 words)
+═══════════════════════════════════════════════════════════════
+
+For each vocabulary word:
+1. Translate meaning to ko, th, zh-CN, zh-TW, ja
+2. Add transliteration in target scripts:
+   - Thai: Thai script transliteration
+   - Chinese: Pinyin
+   - Korean: Hangul transliteration
+   - Japanese: Romaji + Kana
+
+Sample vocabulary:
+
+Word: (he) mahā-bāho
+[RU] 
+[EN] O best of the valiant
+
+Word: (kathyate)
+[RU] 
+[EN] (such seers) are to be known as
+
+Word: (manaḥ praviṣṭān)
+[RU] 
+[EN] which enter the mind
+
+Word: adhigachchhati
+[RU] 
+[EN] is able to attain to
+
+Word: ajñānena
+[RU] 
+[EN] by ignorance – by the Lord’s external potency (avidyā-śakti), to fulfill the living being’s desire to enjoy the material world
+
+Word: antaḥ-jyotiḥ
+[RU] 
+[EN] sees the illumination within
+
+Word: antaḥ-sukhaḥ
+[RU] 
+[EN] experiences the joy of the self within
+
+Word: antaḥ-ārāmaḥ
+[RU] 
+[EN] who delights in the self within
+
+Word: api
+[RU] 
+[EN] athough engaged in the functions of
+
+Word: api indriyaiḥ
+[RU] 
+[EN] and even by the senses
+
+... (355 more words)
+
+═══════════════════════════════════════════════════════════════
+OUTPUT FORMAT:
+
+Return JSON in this format:
+{
+  "chapterTitle": {
+    "ko": "...",
+    "th": "...",
+    "zh-CN": "...",
+    "zh-TW": "...",
+    "ja": "..."
+  },
+  "slokas": {
+    "1.1": {
+      "ko": "...",
+      "th": "...",
+      "zh-CN": "...",
+      "zh-TW": "...",
+      "ja": "..."
+    },
+    ...
+  },
+  "vocabulary": {
+    "1": {
+      "meaning": {
+        "ko": "...",
+        "th": "...",
+        "zh-CN": "...",
+        "zh-TW": "...",
+        "ja": "..."
+      },
+      "transliteration": {
+        "th": "...",
+        "zh-CN": "...",
+        "ko": "...",
+        "ja": "..."
+      }
+    },
+    ...
+  }
+}
+═══════════════════════════════════════════════════════════════

@@ -1,0 +1,78 @@
+{
+  "languages": {
+    "ru": {
+      "name": "Русский",
+      "nativeName": "Русский",
+      "code": "ru",
+      "direction": "ltr",
+      "source": "original",
+      "bookId": 1
+    },
+    "en": {
+      "name": "English",
+      "nativeName": "English",
+      "code": "en",
+      "direction": "ltr",
+      "source": "original",
+      "bookId": 2
+    },
+    "de": {
+      "name": "German",
+      "nativeName": "Deutsch",
+      "code": "de",
+      "direction": "ltr",
+      "source": "original",
+      "bookId": 11
+    },
+    "es": {
+      "name": "Spanish",
+      "nativeName": "Español",
+      "code": "es",
+      "direction": "ltr",
+      "source": "original",
+      "bookId": 14
+    },
+    "ko": {
+      "name": "Korean",
+      "nativeName": "한국어",
+      "code": "ko",
+      "direction": "ltr",
+      "source": "machine-translated",
+      "bookId": null
+    },
+    "th": {
+      "name": "Thai",
+      "nativeName": "ไทย",
+      "code": "th",
+      "direction": "ltr",
+      "source": "machine-translated",
+      "bookId": null
+    },
+    "zh-CN": {
+      "name": "Chinese (Simplified)",
+      "nativeName": "简体中文",
+      "code": "zh-CN",
+      "direction": "ltr",
+      "source": "machine-translated",
+      "bookId": null
+    },
+    "zh-TW": {
+      "name": "Chinese (Traditional)",
+      "nativeName": "繁體中文",
+      "code": "zh-TW",
+      "direction": "ltr",
+      "source": "machine-translated",
+      "bookId": null
+    }
+  },
+  "translationPriority": ["ru", "en", "de", "es"],
+  "author": {
+    "initials": ["SM", "SCSM", "ШМ", "ШЧСМ"],
+    "name": "Sri Chaitanya Saraswat Math",
+    "nameRu": "Шри Чайтанья Сарасват Матх"
+  },
+  "meta": {
+    "version": "1.0",
+    "lastUpdated": "2026-03-26"
+  }
+}

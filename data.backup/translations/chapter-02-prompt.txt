@@ -1,0 +1,154 @@
+═══════════════════════════════════════════════════════════════
+CHAPTER 2 TRANSLATION BATCH
+═══════════════════════════════════════════════════════════════
+
+TARGET LANGUAGES: Korean (ko), Thai (th), Chinese Simplified (zh-CN), 
+                  Chinese Traditional (zh-TW), Japanese (ja)
+
+═══════════════════════════════════════════════════════════════
+PART 1: CHAPTER TITLE
+═══════════════════════════════════════════════════════════════
+
+[RU] Душа в мире материи
+[EN] The Constitution of the Soul
+[DE] ZWEITES KAPITEL Sāṅkhya-Yoga Die beschaffenheit der Seele
+[ES] Sankhya-yoga. La materia y la conciencia
+
+Translate title to: ko, th, zh-CN, zh-TW, ja
+
+═══════════════════════════════════════════════════════════════
+PART 2: SLOKAS (72 slokas)
+═══════════════════════════════════════════════════════════════
+
+For each sloka, translate the text to ko, th, zh-CN, zh-TW, ja.
+Use RU/EN as primary sources. DE/ES for additional context.
+
+
+---
+Sloka 2.1:
+[RU] Санджая сказал:
+Тогда Мадхусудана, Шри Кришна, обратился к опечаленному Арджуне, сердце которого было проникнуто состраданием, а глаза полны слез, с такими словами.
+[EN] Sañjaya said: The Supreme Lord, Madhusūdan, then spoke to the saddened Arjuna whose heart was filled with pity, his eyes brimming with tears.
+
+---
+Sloka 2.2:
+[RU] Господь сказал:
+Арджуна, как подобное заблуждение могло овладеть тобой в столь решающий момент? Это недостойно благородного человека и ведет не к высшим мирам, а к бесчестию.
+[EN] The Supreme Lord said: O Arjuna, how has such illusion overcome you at this crucial moment? This does not befit an Āryan, and it leads not to heaven but to infamy.
+
+---
+Sloka 2.3:
+[RU] Сын Притхи! Не поддавайся унижающему твое достоинство малодушию! Победи слабость сердца, о покоритель врагов, встань и сражайся!
+[EN] O son of Kuntī, give up this cowardice, for it does not befit you. O great hero, cast off this petty weakness of heart and arise for battle!
+
+---
+Sloka 2.4:
+[RU] Арджуна ответил:
+О Мадхусудана, сокрушающий врагов! Могу ли я, сражаясь, направлять стрелы в деда Бхишму и моего наставника Дрону, достойных поклонения?
+[EN] Arjuna said: O Madhusūdan, slayer of the enemy, how can I counterattack, shooting arrows at venerable Bhīṣma and my teacher Droṇa, who are worthy of my worship?
+
+---
+Sloka 2.5:
+[RU] Лучше жить в этом мире на подаяние, чем убивать почитаемых старейшин и учителей, иначе нам придется наслаждаться богатствами, обагренными их кровью!
+[EN] It is better to live in this world and beg, without taking the lives of our noble elders and teachers. Otherwise, by killing them we shall remain in this world only to enjoy their wealth and possessio
+
+... (67 more slokas)
+
+═══════════════════════════════════════════════════════════════
+PART 3: VOCABULARY (858 words)
+═══════════════════════════════════════════════════════════════
+
+For each vocabulary word:
+1. Translate meaning to ko, th, zh-CN, zh-TW, ja
+2. Add transliteration in target scripts:
+   - Thai: Thai script transliteration
+   - Chinese: Pinyin
+   - Korean: Hangul transliteration
+   - Japanese: Romaji + Kana
+
+Sample vocabulary:
+
+Word: (bhagavad ārādhane eva)
+[RU] 
+[EN] by worshipping the Supreme Lord
+
+Word: (he) kaunteya
+[RU] 
+[EN] O Arjuna, son of Kuntī
+
+Word: (he) kuru-nandana
+[RU] 
+[EN] O Arjuna, descendant of the Kuru dynasty
+
+Word: (he) madhusūdana arisūdana
+[RU] 
+[EN] O Madhusūdan, slayer of the enemy
+
+Word: (he) mahā-bāho
+[RU] 
+[EN] O subduer of the enemy
+
+Word: (he) parantapa
+[RU] 
+[EN] O subduer of the enemy
+
+Word: (he) puruṣa-ṛṣabha
+[RU] 
+[EN] O noblest of men
+
+Word: (he) pārtha
+[RU] 
+[EN] O son of Kuntī
+
+Word: (iti na)
+[RU] 
+[EN] nor is it that
+
+Word: (iti na) eva
+[RU] 
+[EN] nor is it that
+
+... (848 more words)
+
+═══════════════════════════════════════════════════════════════
+OUTPUT FORMAT:
+
+Return JSON in this format:
+{
+  "chapterTitle": {
+    "ko": "...",
+    "th": "...",
+    "zh-CN": "...",
+    "zh-TW": "...",
+    "ja": "..."
+  },
+  "slokas": {
+    "1.1": {
+      "ko": "...",
+      "th": "...",
+      "zh-CN": "...",
+      "zh-TW": "...",
+      "ja": "..."
+    },
+    ...
+  },
+  "vocabulary": {
+    "1": {
+      "meaning": {
+        "ko": "...",
+        "th": "...",
+        "zh-CN": "...",
+        "zh-TW": "...",
+        "ja": "..."
+      },
+      "transliteration": {
+        "th": "...",
+        "zh-CN": "...",
+        "ko": "...",
+        "ja": "..."
+      }
+    },
+    ...
+  }
+}
+═══════════════════════════════════════════════════════════════

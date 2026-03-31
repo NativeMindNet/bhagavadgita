@@ -1,0 +1,152 @@
+═══════════════════════════════════════════════════════════════
+CHAPTER 7 TRANSLATION BATCH
+═══════════════════════════════════════════════════════════════
+
+TARGET LANGUAGES: Korean (ko), Thai (th), Chinese Simplified (zh-CN), 
+                  Chinese Traditional (zh-TW), Japanese (ja)
+
+═══════════════════════════════════════════════════════════════
+PART 1: CHAPTER TITLE
+═══════════════════════════════════════════════════════════════
+
+[RU] Постижение Абсолюта и Его энергий
+[EN] Knowledge and Realisation of the Supreme
+[DE] SIEBTES KAPITEL Jñāna-Vijñāna-YogaWissen und Erkenntnis vom Höchsten
+[ES] Guiana-viguiana-yoga. Los conceptos Relativo y Absoluto del Supremo
+
+Translate title to: ko, th, zh-CN, zh-TW, ja
+
+═══════════════════════════════════════════════════════════════
+PART 2: SLOKAS (30 slokas)
+═══════════════════════════════════════════════════════════════
+
+For each sloka, translate the text to ko, th, zh-CN, zh-TW, ja.
+Use RU/EN as primary sources. DE/ES for additional context.
+
+
+---
+Sloka 7.1:
+[RU] Всевышний сказал:
+Партха, теперь услышь, как благодаря практике йоги, устремляя все помыслы ко Мне и принимая прибежище во Мне, ты сможешь постичь Меня, освободившись от всех сомнений.
+[EN] The Lord said: O Pārtha, hear from Me how, with mind attached to Me, the Supreme Lord, linking your consciousness with Me and taking refuge in Me alone, you will without doubt be able to know Me, My h
+
+---
+Sloka 7.2:
+[RU] Сейчас я в подробностях расскажу тебе о Своем несравненном могуществе, проявленном в материальном мире, а также о Своей надмирной природе Личности Бога. Тому, кто постиг это знание, нечего более пости
+[EN] Now I shall reveal to you this knowledge of My absolute power as well as the realisation of My sweetness, knowing which, nothing will remain to be known, here on this supreme path.
+
+---
+Sloka 7.3:
+[RU] Среди великого множества людей лишь немногие стремятся к духовному совершенствованию. Но даже среди тех, кто достиг просветления на духовном пути, лишь единицы способны постичь Меня.
+[EN] Of countless souls, few reach the human form; of thousands of human beings, very few may try to realise the soul and the Supersoul; and of thousands who have attained such realisation, hardly one can 
+
+---
+Sloka 7.4:
+[RU] Земля, вода, огонь, воздух, эфир, ум, разум и ложное эго — все это восемь составляющих Моей материальной энергии.
+[EN] Earth, water, fire, air, ether, mind, intelligence, and ego are the eight divisions of My illusory potency in this world.
+
+---
+Sloka 7.5:
+[RU] Величайший герой! Материальная природа, описанная Мною, ниже по своему положению в сравнении с Моей более высокой энергией, которая включает в себя все индивидуальные души. Души пользуются возможностя
+[EN] O mighty hero, Arjuna, this external, worldly nature is inferior. But know that superior to this nature is My marginal potency, comprised of the individual souls. Worldly existence is adopted by the s
+
+... (25 more slokas)
+
+═══════════════════════════════════════════════════════════════
+PART 3: VOCABULARY (403 words)
+═══════════════════════════════════════════════════════════════
+
+For each vocabulary word:
+1. Translate meaning to ko, th, zh-CN, zh-TW, ja
+2. Add transliteration in target scripts:
+   - Thai: Thai script transliteration
+   - Chinese: Pinyin
+   - Korean: Hangul transliteration
+   - Japanese: Romaji + Kana
+
+Sample vocabulary:
+
+Word: (he) bharatarṣabha
+[RU] 
+[EN] O great scion of Bharat
+
+Word: (he) bhārata (he) parantapa
+[RU] 
+[EN] O Arjuna, chastiser of the enemy
+
+Word: (he) dhanañjaya
+[RU] 
+[EN] O Dhanañjaya, conqueror of riches
+
+Word: (he) kaunteya
+[RU] 
+[EN] O son of Kuntī
+
+Word: (iti) chatuḥ-vidhāḥ janāḥ
+[RU] 
+[EN] these four kinds of persons
+
+Word: (tava) jñātavyam
+[RU] 
+[EN] thing to be known by you
+
+Word: aham
+[RU] 
+[EN] I, as the Supersoul dwelling within his heart
+
+Word: aham prabhavaḥ
+[RU] 
+[EN] I am the source of manifestation
+
+Word: anta-gatam
+[RU] 
+[EN] have been eradicated (by the fortune of association with My pure devotee)
+
+Word: anuttamām
+[RU] 
+[EN] as the supreme
+
+... (393 more words)
+
+═══════════════════════════════════════════════════════════════
+OUTPUT FORMAT:
+
+Return JSON in this format:
+{
+  "chapterTitle": {
+    "ko": "...",
+    "th": "...",
+    "zh-CN": "...",
+    "zh-TW": "...",
+    "ja": "..."
+  },
+  "slokas": {
+    "1.1": {
+      "ko": "...",
+      "th": "...",
+      "zh-CN": "...",
+      "zh-TW": "...",
+      "ja": "..."
+    },
+    ...
+  },
+  "vocabulary": {
+    "1": {
+      "meaning": {
+        "ko": "...",
+        "th": "...",
+        "zh-CN": "...",
+        "zh-TW": "...",
+        "ja": "..."
+      },
+      "transliteration": {
+        "th": "...",
+        "zh-CN": "...",
+        "ko": "...",
+        "ja": "..."
+      }
+    },
+    ...
+  }
+}
+═══════════════════════════════════════════════════════════════

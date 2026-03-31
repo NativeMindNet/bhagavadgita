@@ -1,0 +1,154 @@
+═══════════════════════════════════════════════════════════════
+CHAPTER 4 TRANSLATION BATCH
+═══════════════════════════════════════════════════════════════
+
+TARGET LANGUAGES: Korean (ko), Thai (th), Chinese Simplified (zh-CN), 
+                  Chinese Traditional (zh-TW), Japanese (ja)
+
+═══════════════════════════════════════════════════════════════
+PART 1: CHAPTER TITLE
+═══════════════════════════════════════════════════════════════
+
+[RU] Йога обретения духовного знания
+[EN] The Path of Knowledge
+[DE] VIERTES KAPITEL Jñāna-Yoga Der Pfad des Wissens
+[ES] Guiana-Yoga. El sendero del Conocimiento Divino
+
+Translate title to: ko, th, zh-CN, zh-TW, ja
+
+═══════════════════════════════════════════════════════════════
+PART 2: SLOKAS (42 slokas)
+═══════════════════════════════════════════════════════════════
+
+For each sloka, translate the text to ko, th, zh-CN, zh-TW, ja.
+Use RU/EN as primary sources. DE/ES for additional context.
+
+
+---
+Sloka 4.1:
+[RU] Всевышний сказал:
+На заре творения Я открыл науку йоги, существующую вечно, богу солнца Вивасвану. Он передал ее своему сыну Ману (одному из прародителей человечества), а тот поведал ее своему сыну Ик
+[EN] The Supreme Lord said: I imparted this imperishable yoga of knowledge, achieved by selfless action, to Sūrya, the presiding deity of the sun. Sūrya taught it to his son Vaivasvata Manu, who passed it 
+
+---
+Sloka 4.2:
+[RU] Победитель врагов! Великие раджа-риши (праведные цари) познавали эту йогу, явленную им через духовную преемственность учителей. Но по прошествии времени это знание было утрачено.
+[EN] O conqueror of the enemy, thus the saintly kings such as Nimi, Janaka, and others learned this yoga, which was passed down to them by disciplic succession. But in the course of time, this teaching has
+
+---
+Sloka 4.3:
+[RU] Поскольку ты Мой друг и предан Мне, сейчас Я открою тебе сокровенное знание об этой вечной йоге.
+[EN] As you are my devotee and friend, I now reveal to you this supreme secret—the eternal yoga.
+
+---
+Sloka 4.4:
+[RU] Арджуна спросил:
+Вивасван, бог Солнца, появился на свет задолго до Тебя. Как же тогда понять, что Ты прежде поведал ему это учение?
+[EN] Arjuna said: Vivasvān, the sun-god, was born in ancient times, long before You were. Therefore, how am I to consider that You previously gave these teachings to him?
+
+---
+Sloka 4.5:
+[RU] Всевышний ответил:
+О покоритель врагов! Ты и Я рождались уже множество раз. Я помню все эти жизни, но ты на это не способен.
+[EN] The Supreme Lord said: O chastiser of the enemy, both you and I have passed through many births. I can remember all of them, whereas you, O Arjuna, cannot.
+
+... (37 more slokas)
+
+═══════════════════════════════════════════════════════════════
+PART 3: VOCABULARY (502 words)
+═══════════════════════════════════════════════════════════════
+
+For each vocabulary word:
+1. Translate meaning to ko, th, zh-CN, zh-TW, ja
+2. Add transliteration in target scripts:
+   - Thai: Thai script transliteration
+   - Chinese: Pinyin
+   - Korean: Hangul transliteration
+   - Japanese: Romaji + Kana
+
+Sample vocabulary:
+
+Word: (aham) vijānīyām
+[RU] 
+[EN] am I to understand
+
+Word: (arpyamāṇam) haviḥ
+[RU] 
+[EN] the oblation of ghee, etc
+
+Word: (he) kuru-sattama
+[RU] 
+[EN] O Arjuna, best of the Kurus
+
+Word: (he) parantapa
+[RU] 
+[EN] O Arjuna, subduer of the enemy
+
+Word: (he) parantapa arjuna
+[RU] 
+[EN] O Arjuna, subduer of the enemy
+
+Word: (he) parantapa pārtha
+[RU] 
+[EN] O Arjuna, subduer of the enemy
+
+Word: (he) pāṇḍava
+[RU] 
+[EN] O Arjuna, son of Pāṇḍu
+
+Word: (jīvam iva)
+[RU] 
+[EN] like the living beings
+
+Word: (kim api) na hi vidyate
+[RU] 
+[EN] there is nothing
+
+Word: (pṛthak upādhitvena)
+[RU] 
+[EN] though appearing in the forms of their various material designations
+
+... (492 more words)
+
+═══════════════════════════════════════════════════════════════
+OUTPUT FORMAT:
+
+Return JSON in this format:
+{
+  "chapterTitle": {
+    "ko": "...",
+    "th": "...",
+    "zh-CN": "...",
+    "zh-TW": "...",
+    "ja": "..."
+  },
+  "slokas": {
+    "1.1": {
+      "ko": "...",
+      "th": "...",
+      "zh-CN": "...",
+      "zh-TW": "...",
+      "ja": "..."
+    },
+    ...
+  },
+  "vocabulary": {
+    "1": {
+      "meaning": {
+        "ko": "...",
+        "th": "...",
+        "zh-CN": "...",
+        "zh-TW": "...",
+        "ja": "..."
+      },
+      "transliteration": {
+        "th": "...",
+        "zh-CN": "...",
+        "ko": "...",
+        "ja": "..."
+      }
+    },
+    ...
+  }
+}
+═══════════════════════════════════════════════════════════════

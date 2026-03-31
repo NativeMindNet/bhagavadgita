@@ -1,0 +1,151 @@
+═══════════════════════════════════════════════════════════════
+CHAPTER 12 TRANSLATION BATCH
+═══════════════════════════════════════════════════════════════
+
+TARGET LANGUAGES: Korean (ko), Thai (th), Chinese Simplified (zh-CN), 
+                  Chinese Traditional (zh-TW), Japanese (ja)
+
+═══════════════════════════════════════════════════════════════
+PART 1: CHAPTER TITLE
+═══════════════════════════════════════════════════════════════
+
+[RU] Йога преданности
+[EN] The Path of Devotion
+[DE] ZWÖLFTES KAPITEL Bhakti-Yoga Der Pfad der Hingabe
+[ES] Bhakti-yoga. El sendero de la devoción
+
+Translate title to: ko, th, zh-CN, zh-TW, ja
+
+═══════════════════════════════════════════════════════════════
+PART 2: SLOKAS (16 slokas)
+═══════════════════════════════════════════════════════════════
+
+For each sloka, translate the text to ko, th, zh-CN, zh-TW, ja.
+Use RU/EN as primary sources. DE/ES for additional context.
+
+
+---
+Sloka 12.1:
+[RU] Арджуна спросил: Кто наиболее совершенным образом практикует йогу — те, кто с любовью служит Тебе, или те, кто сосредотачивается на безличном Брахмане, пребывающем за пределами мира материи?
+[EN] Arjuna inquired: Of those devotees who are constantly engaged in worshipping You (as Śyāmasundar, Your original humanlike form) with exclusive devotion, and those who worship the impersonal Brahma, wh
+
+---
+Sloka 12.2:
+[RU] Всевышний ответил: Того, кто устремил все помыслы ко Мне и постоянно с глубокой верой поклоняется Мне, Я признаю лучшим из йогов.
+[EN] The Supreme Lord said: In My opinion, those who with faith in the divine are absorbed in thought of Me, Śyāmasundar, and worship Me constantly with exclusive devotion, are the superior knowers of yoga
+
+---
+Sloka 12.3-4:
+[RU] Те же, кто сосредоточен на Моем аспекте Брахмана, почитают Меня как нетленного, неописуемого, непроявленного, вездесущего, непостижимого, запредельного, неподвижного, незыблемого. Контролируя свои чув
+[EN] 
+
+---
+Sloka 12.5:
+[RU] Великие трудности ожидают тех, чье сознание направлено на Мой безличный аспект, поскольку путь постижения Брахмана очень сложен для души, обусловленной материальным телом.
+[EN] Persons whose minds are attached to the impersonal Brahma must undergo a greater struggle, as the path of attaining the impersonal Brahma is difficult for the embodied soul.
+
+---
+Sloka 12.6-7:
+[RU] Но тех, кто посвящает все свои помыслы и деяния Мне, отрекаясь от всего мирского ради Меня, кто постоянно помнит обо Мне и с безраздельной преданностью поклоняется Мне, — таких предавшихся Мне душ, о 
+[EN] 
+
+... (11 more slokas)
+
+═══════════════════════════════════════════════════════════════
+PART 3: VOCABULARY (235 words)
+═══════════════════════════════════════════════════════════════
+
+For each vocabulary word:
+1. Translate meaning to ko, th, zh-CN, zh-TW, ja
+2. Add transliteration in target scripts:
+   - Thai: Thai script transliteration
+   - Chinese: Pinyin
+   - Korean: Hangul transliteration
+   - Japanese: Romaji + Kana
+
+Sample vocabulary:
+
+Word: (saḥ) me priyaḥ
+[RU] 
+[EN] he is dear to Me
+
+Word: abhyāsa-yogena
+[RU] 
+[EN] by the yoga of constant practice
+
+Word: akṣaram cha
+[RU] 
+[EN] attributeless aspect of Brahma
+
+Word: aniketaḥ
+[RU] 
+[EN] who has no attachment to hearth and home
+
+Word: arpita-mano-buddhiḥ
+[RU] 
+[EN] who has given his mind and intelligence
+
+Word: avyakta-āsakta-chetasām
+[RU] 
+[EN] of minds attached to the unmanifest
+
+Word: avyaktā gatiḥ
+[RU] 
+[EN] the way of attaining the unmanifest, the impersonal Brahma
+
+Word: bhaktimān
+[RU] 
+[EN] and who is endowed with devotion
+
+Word: dehavadbhiḥ
+[RU] 
+[EN] by the embodied soul
+
+Word: harṣa-amarṣa-bhaya-udvegaiḥ
+[RU] 
+[EN] from elation, anger, fear, and grief
+
+... (225 more words)
+
+═══════════════════════════════════════════════════════════════
+OUTPUT FORMAT:
+
+Return JSON in this format:
+{
+  "chapterTitle": {
+    "ko": "...",
+    "th": "...",
+    "zh-CN": "...",
+    "zh-TW": "...",
+    "ja": "..."
+  },
+  "slokas": {
+    "1.1": {
+      "ko": "...",
+      "th": "...",
+      "zh-CN": "...",
+      "zh-TW": "...",
+      "ja": "..."
+    },
+    ...
+  },
+  "vocabulary": {
+    "1": {
+      "meaning": {
+        "ko": "...",
+        "th": "...",
+        "zh-CN": "...",
+        "zh-TW": "...",
+        "ja": "..."
+      },
+      "transliteration": {
+        "th": "...",
+        "zh-CN": "...",
+        "ko": "...",
+        "ja": "..."
+      }
+    },
+    ...
+  }
+}
+═══════════════════════════════════════════════════════════════

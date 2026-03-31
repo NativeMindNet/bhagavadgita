@@ -1,0 +1,152 @@
+═══════════════════════════════════════════════════════════════
+CHAPTER 14 TRANSLATION BATCH
+═══════════════════════════════════════════════════════════════
+
+TARGET LANGUAGES: Korean (ko), Thai (th), Chinese Simplified (zh-CN), 
+                  Chinese Traditional (zh-TW), Japanese (ja)
+
+═══════════════════════════════════════════════════════════════
+PART 1: CHAPTER TITLE
+═══════════════════════════════════════════════════════════════
+
+[RU] Три гуны материального мира
+[EN] The Three Divisions of Material Nature
+[DE] VIERZEHNTES KAPITEL Guṇatraya-Vibhāga-Yoga Die Dreiteilung der materiellen Natur
+[ES] Gunatraya-vibhaga-yoga. La Materia y sus tres estados
+
+Translate title to: ko, th, zh-CN, zh-TW, ja
+
+═══════════════════════════════════════════════════════════════
+PART 2: SLOKAS (24 slokas)
+═══════════════════════════════════════════════════════════════
+
+For each sloka, translate the text to ko, th, zh-CN, zh-TW, ja.
+Use RU/EN as primary sources. DE/ES for additional context.
+
+
+---
+Sloka 14.1:
+[RU] Всевышний сказал:
+Сейчас Я вновь возвещу тебе высшую мудрость, превосходящую все прочие виды знания. Постигая эту науку, мудрецы достигали полноты совершенства и освобождались от власти материи.
+[EN] The Supreme Lord said: Again, I shall describe to you the supreme teaching, the highest of all fields of knowledge, knowing which the sages attained the ultimate perfection beyond this mundane plane.
+
+---
+Sloka 14.2:
+[RU] Приняв прибежище в этом знании, душа обретает духовное тело, подобное Моему, и достигает Моей нетленной обители. После этого она уже не рождается в момент сотворения материальной вселенной и не испыты
+[EN] By taking refuge in this knowledge, the soul attains to My nature. Then he is neither born in the cosmic manifestation, nor does he suffer (death) in the cosmic dissolution.
+
+---
+Sloka 14.3:
+[RU] Бхарата! Мое лоно — первичная материя, в которую Я помещаю души, предоставляя им возможность появиться на свет.
+[EN] O Bhārat, I place the seed within My womb of primordial matter from which all living beings take birth.
+
+---
+Sloka 14.4:
+[RU] Каунтея, всевозможные виды живых существ рождаются из материнского чрева изначальной материи, тогда как Я — отец, дарующий семя.
+[EN] O Kaunteya, primordial matter is the original womb of all life-forms that are born of the wombs of all species, and I am the seed-giving father.
+
+---
+Sloka 14.5:
+[RU] Сильнорукий Арджуна! Существуют три гуны: благость, страсть и невежество, представляющие собой три проявления материальной энергии. Они обуславливают вечную, неизменную душу, воплотившуюся в бренном м
+[EN] O mighty hero, Arjuna, the three modes of goodness, passion, and ignorance, born of material nature, bind the immutable spirit soul within the body.
+
+... (19 more slokas)
+
+═══════════════════════════════════════════════════════════════
+PART 3: VOCABULARY (327 words)
+═══════════════════════════════════════════════════════════════
+
+For each vocabulary word:
+1. Translate meaning to ko, th, zh-CN, zh-TW, ja
+2. Add transliteration in target scripts:
+   - Thai: Thai script transliteration
+   - Chinese: Pinyin
+   - Korean: Hangul transliteration
+   - Japanese: Romaji + Kana
+
+Sample vocabulary:
+
+Word: (he) bharatarṣabha
+[RU] 
+[EN] O most noble of the Bharat dynasty
+
+Word: (he) kaunteya
+[RU] 
+[EN] O son of Kuntī
+
+Word: (he) kuru-nandana
+[RU] 
+[EN] O descendant of Kuru
+
+Word: (he) pāṇḍava
+[RU] 
+[EN] O son of Pāṇḍu
+
+Word: aham pratiṣṭhā
+[RU] 
+[EN] I am the basis
+
+Word: aikāntikasya sukhasya cha
+[RU] 
+[EN] and of the ultimate ecstasy of divine love
+
+Word: ajñāna-jam
+[RU] 
+[EN] born of darkness
+
+Word: ajñānam eva cha
+[RU] 
+[EN] and a lack of knowledge
+
+Word: avyayasya cha
+[RU] 
+[EN] and of the inexhaustible
+
+Word: aśnute
+[RU] 
+[EN] knows the joy of
+
+... (317 more words)
+
+═══════════════════════════════════════════════════════════════
+OUTPUT FORMAT:
+
+Return JSON in this format:
+{
+  "chapterTitle": {
+    "ko": "...",
+    "th": "...",
+    "zh-CN": "...",
+    "zh-TW": "...",
+    "ja": "..."
+  },
+  "slokas": {
+    "1.1": {
+      "ko": "...",
+      "th": "...",
+      "zh-CN": "...",
+      "zh-TW": "...",
+      "ja": "..."
+    },
+    ...
+  },
+  "vocabulary": {
+    "1": {
+      "meaning": {
+        "ko": "...",
+        "th": "...",
+        "zh-CN": "...",
+        "zh-TW": "...",
+        "ja": "..."
+      },
+      "transliteration": {
+        "th": "...",
+        "zh-CN": "...",
+        "ko": "...",
+        "ja": "..."
+      }
+    },
+    ...
+  }
+}
+═══════════════════════════════════════════════════════════════
