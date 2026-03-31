@@ -6,7 +6,7 @@ IMPLEMENTATION
 
 ## Phase Status
 
-IN PROGRESS - Phase 1 Complete
+IN PROGRESS - Phase 1 Complete, Phase 2 Restored from Archive
 
 ## Last Updated
 
@@ -25,40 +25,38 @@ IN PROGRESS - Phase 1 Complete
 - [x] Plan drafted
 - [x] Plan approved
 - [x] Implementation started
-- [ ] Phase 1: Transliterations complete ✅
-- [ ] Phase 2: Slokas (th, zh-CN, zh-TW, ko) pending
-- [ ] Phase 3: Slokas (ja, el, ka, hy, he, ar, tr, sw) pending
+- [x] Phase 1: Transliterations complete ✅ (7,956 files)
+- [x] Phase 2: Slokas (th, zh-CN, zh-TW, ko) restored from archive ✅
+- [x] Phase 2: Slokas (he, ar, tr, sw) restored from archive ✅
+- [ ] Phase 3: Slokas (ja, el, ka, hy) - NEEDS TRANSLATION
 - [ ] Implementation complete
 
 ## Context Notes
 
+**Archive Recovery:**
+- Translations restored from `_archive/data.backup/chapters/`
+- `chapter-asian.json`: ko, th, zh-CN, zh-TW (all 18 chapters)
+- `chapter-other.json`: he, ar, tr, sw (chapters 7-18 only)
+
 **Gap Analysis Summary:**
-- 8 languages completely empty: ar, el, he, hy, ja, ka, sw, tr
-- 4 languages partial (ch 1-6 only): ko, th, zh-CN, zh-TW
-- ALL translits wrong (Cyrillic instead of native scripts)
-- Thai has mixed script errors
-
-**Translation Tool:**
-- Custom Python script using indic-transliteration library
-- Sources: data/sanskrit/ (Devanagari)
-- Targets: data/translated/{lang}/
-
-**Optimized Approach (Вариант C):**
-- Сначала ВСЕ транслитерации (быстрее) ✅ DONE
-- Потом переводы (th, zh-CN, zh-TW, ko сначала)
-
-**Execution Order:**
-1. ✅ Phase 1: Translits ch 1-18 (all 12 langs) — COMPLETE (7,956 files)
-2. Phase 2: Slokas ch 7-18 (th, zh-CN, zh-TW, ko) — 12 calls
-3. Phase 3: Slokas ch 1-18 (ja, el, ka, hy, he, ar, tr, sw) — 18 calls
-
-**Total: 48 calls**
+- ✅ 8 languages have transliterations: ar, el, he, hy, ja, ka, sw, tr
+- ✅ 4 languages have complete translations: ko, th, zh-TW (663 slokas), zh-CN (266 slokas ch 1-6)
+- ✅ 4 languages have partial translations: he, ar, tr, sw (ch 7-18 only)
+- ❌ 4 languages have NO translations: ja, el, ka, hy
 
 **Scripts Created:**
-- `scripts/generate_transliterations.py` - Main transliteration script
-- `scripts/batch_transliterations.py` - Batch processor for all chapters
+- `scripts/generate_transliterations.py` - Transliteration generator
+- `scripts/batch_transliterations.py` - Batch processor
+- `scripts/restore_translations.py` - Archive restoration
+
+**Execution Results:**
+1. ✅ Phase 1: Translits ch 1-18 (all 12 langs) — 7,956 files
+2. ✅ Phase 2: Slokas restored from archive (ko, th, zh-TW, zh-CN, he, ar, tr, sw)
+3. ⏳ Phase 3: Slokas needed for ja, el, ka, hy (ch 1-18) — ~2,900 files
 
 **Next Actions**
 
 1. ✅ Phase 1: Transliterations - COMPLETE
-2. Begin Phase 2: Slokas for th, zh-CN, zh-TW, ko (chapters 7-18)
+2. ✅ Phase 2: Archive restoration - COMPLETE
+3. Translate slokas for ja, el, ka, hy (all 18 chapters)
+4. Translate chapters 1-6 for he, ar, tr, sw
