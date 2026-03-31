@@ -1,7 +1,8 @@
 {
   "permissions": {
     "allow": [
-      "Bash(/translate.sanscrit *)"
+      "Bash(/translate.sanscrit *)",
+      "Bash(pip3 list)"
     ]
   },
   "$version": 3
