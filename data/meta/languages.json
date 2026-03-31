@@ -125,5 +125,13 @@
     "direction": "ltr",
     "type": "translated",
     "transliteration": "iast"
+  },
+  "ja": {
+    "name": "Japanese",
+    "nativeName": "日本語",
+    "script": "kanji-kana",
+    "direction": "ltr",
+    "type": "translated",
+    "transliteration": "katakana"
   }
 }
