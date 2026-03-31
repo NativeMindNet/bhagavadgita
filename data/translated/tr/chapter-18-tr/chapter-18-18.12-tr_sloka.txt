@@ -1,1 +1,0 @@
-Vazgeçmeyenler için ölümden sonra üç tür sonuç gelir: istenen, istenmeyen ve karışık. Vazgeçenler için ise ölümden sonra sonuç yoktur.
