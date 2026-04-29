@@ -14,8 +14,8 @@
 | Phase 1 Snapshot meta + atomic replace | Done | `SnapshotRepository.replaceSnapshot()` атомарно обновляет content-таблицы, user-таблицы не трогает |
 | Phase 2 Legacy API client | Done | `LegacyApiClient` (Dio) + DTOs + envelope parser для `Data/Languages|Books|Chapters|Quotes` |
 | Phase 3 Splash/bootstrap | Done | Splash + `BootstrapCoordinator` (seed install / snapshot check) и быстрый вход в app |
-| Phase 4 Reader MVP | Pending | Contents/Reader |
-| Phase 5 User data | Pending | Bookmarks/notes/search |
+| Phase 4 Reader MVP | Done | Contents (главы из DB) + Chapter/Sloka screens (шлоки/словарь из DB) + минимальный seed контент |
+| Phase 5 User data | In progress | Bookmarks + notes (Drift) подключены в reader; search/settings далее |
 | Phase 6 Sync orchestration | Pending | stale-while-revalidate |
 
 ## Session Log

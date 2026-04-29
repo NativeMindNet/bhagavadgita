@@ -2,6 +2,7 @@ import 'package:drift/drift.dart';
 import 'package:flutter/material.dart';
 
 import '../../data/local/app_database.dart';
+import '../reader/chapter_screen.dart';
 
 class ContentsScreen extends StatelessWidget {
   const ContentsScreen({super.key, required this.db});
@@ -35,7 +36,17 @@ class ContentsScreen extends StatelessWidget {
                 title: Text('Chapter ${c.position}'),
                 subtitle: Text(c.name),
                 trailing: const Icon(Icons.chevron_right),
-                onTap: () {},
+                onTap: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (_) => ChapterScreen(
+                        db: db,
+                        chapterId: c.id,
+                        title: 'Chapter ${c.position}',
+                      ),
+                    ),
+                  );
+                },
               );
             },
           );

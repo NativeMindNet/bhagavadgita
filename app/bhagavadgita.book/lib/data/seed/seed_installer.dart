@@ -24,6 +24,8 @@ class SeedInstaller {
     final languageJson = (json['languages'] as List<Object?>? ?? const []).cast<Map<String, Object?>>();
     final bookJson = (json['books'] as List<Object?>? ?? const []).cast<Map<String, Object?>>();
     final chapterJson = (json['chapters'] as List<Object?>? ?? const []).cast<Map<String, Object?>>();
+    final slokaJson = (json['slokas'] as List<Object?>? ?? const []).cast<Map<String, Object?>>();
+    final vocabularyJson = (json['vocabularies'] as List<Object?>? ?? const []).cast<Map<String, Object?>>();
 
     final languages = languageJson
         .map(
@@ -61,11 +63,42 @@ class SeedInstaller {
         )
         .toList(growable: false);
 
+    final slokas = slokaJson
+        .map(
+          (s) => SlokasCompanion(
+            id: Value((s['id'] as num).toInt()),
+            chapterId: Value((s['chapterId'] as num).toInt()),
+            name: Value(s['name'] as String),
+            slokaText: Value(s['slokaText'] as String?),
+            transcription: Value(s['transcription'] as String?),
+            translation: Value(s['translation'] as String?),
+            comment: Value(s['comment'] as String?),
+            position: Value((s['position'] as num).toInt()),
+            audio: Value(s['audio'] as String?),
+            audioSanskrit: Value(s['audioSanskrit'] as String?),
+          ),
+        )
+        .toList(growable: false);
+
+    final vocabularies = vocabularyJson
+        .map(
+          (v) => VocabulariesCompanion(
+            id: Value((v['id'] as num).toInt()),
+            slokaId: Value((v['slokaId'] as num).toInt()),
+            tokenText: Value(v['tokenText'] as String),
+            translation: Value(v['translation'] as String),
+            position: Value((v['position'] as num?)?.toInt()),
+          ),
+        )
+        .toList(growable: false);
+
     await db.transaction(() async {
       await db.batch((batch) async {
         batch.insertAll(db.languages, languages, mode: InsertMode.insertOrReplace);
         batch.insertAll(db.books, books, mode: InsertMode.insertOrReplace);
         batch.insertAll(db.chapters, chapters, mode: InsertMode.insertOrReplace);
+        batch.insertAll(db.slokas, slokas, mode: InsertMode.insertOrReplace);
+        batch.insertAll(db.vocabularies, vocabularies, mode: InsertMode.insertOrReplace);
 
         batch.insert(
           db.snapshotMeta,

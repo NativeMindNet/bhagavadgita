@@ -39,5 +39,22 @@
     { "id": 116, "bookId": 1, "position": 16, "name": "Chapter 16" },
     { "id": 117, "bookId": 1, "position": 17, "name": "Chapter 17" },
     { "id": 118, "bookId": 1, "position": 18, "name": "Chapter 18" }
+  ],
+  "slokas": [
+    {
+      "id": 1001,
+      "chapterId": 101,
+      "name": "1.1",
+      "slokaText": "dhṛtarāṣṭra uvāca…",
+      "transcription": "dhṛtarāṣṭra uvāca…",
+      "translation": "Dhritarashtra said…",
+      "comment": null,
+      "position": 1,
+      "audio": null,
+      "audioSanskrit": null
+    }
+  ],
+  "vocabularies": [
+    { "id": 2001, "slokaId": 1001, "tokenText": "uvāca", "translation": "said", "position": 1 }
   ]
 }
