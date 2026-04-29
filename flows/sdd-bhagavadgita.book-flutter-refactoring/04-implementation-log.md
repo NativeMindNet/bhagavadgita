@@ -15,8 +15,8 @@
 | Phase 2 Legacy API client | Done | `LegacyApiClient` (Dio) + DTOs + envelope parser для `Data/Languages|Books|Chapters|Quotes` |
 | Phase 3 Splash/bootstrap | Done | Splash + `BootstrapCoordinator` (seed install / snapshot check) и быстрый вход в app |
 | Phase 4 Reader MVP | Done | Contents (главы из DB) + Chapter/Sloka screens (шлоки/словарь из DB) + минимальный seed контент |
-| Phase 5 User data | In progress | Bookmarks + notes (Drift) подключены в reader; search/settings далее |
-| Phase 6 Sync orchestration | Pending | stale-while-revalidate |
+| Phase 5 User data | Done | Bookmarks + notes + local search + reader settings подключены в UI |
+| Phase 6 Sync orchestration | Done | `RefreshPolicy` + `SyncOrchestrator`; bootstrap планирует фоновый startup sync и atomic snapshot replace |
 
 ## Session Log
 

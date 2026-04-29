@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 
 import '../../data/local/app_database.dart';
 import '../reader/chapter_screen.dart';
+import '../search/search_screen.dart';
+import '../settings/settings_screen.dart';
 
 class ContentsScreen extends StatelessWidget {
   const ContentsScreen({super.key, required this.db});
@@ -15,7 +17,29 @@ class ContentsScreen extends StatelessWidget {
       ..orderBy([(t) => OrderingTerm.asc(t.position)]);
 
     return Scaffold(
-      appBar: AppBar(title: const Text('Contents')),
+      appBar: AppBar(
+        title: const Text('Contents'),
+        actions: [
+          IconButton(
+            tooltip: 'Search',
+            icon: const Icon(Icons.search),
+            onPressed: () {
+              Navigator.of(context).push(
+                MaterialPageRoute(builder: (_) => SearchScreen(db: db)),
+              );
+            },
+          ),
+          IconButton(
+            tooltip: 'Reader settings',
+            icon: const Icon(Icons.tune),
+            onPressed: () {
+              Navigator.of(context).push(
+                MaterialPageRoute(builder: (_) => const SettingsScreen()),
+              );
+            },
+          ),
+        ],
+      ),
       body: StreamBuilder<List<Chapter>>(
         stream: chaptersQuery.watch(),
         builder: (context, snap) {

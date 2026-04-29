@@ -6,7 +6,7 @@ IMPLEMENTATION
 
 ## Phase Status
 
-IN_PROGRESS
+COMPLETE
 
 ## Last Updated
 
@@ -25,7 +25,7 @@ IN_PROGRESS
 - [x] Plan drafted
 - [x] Plan approved
 - [x] Implementation started
-- [ ] Implementation complete
+- [x] Implementation complete
 
 ## Context Notes
 
@@ -41,6 +41,5 @@ IN_PROGRESS
 
 ## Next Actions
 
-1. Завершить Phase 1: seed installer + snapshot meta/atomic replace (без затирания user data)
-2. Подключить legacy API client (4 endpoint'а) и sync-orchestrator (startup + stale-while-revalidate)
-3. Довести reader MVP (contents → chapter → shloka) до отображения данных из локальной БД
+1. Провести ручной прогон на устройстве/эмуляторе: offline first launch, startup sync, bookmarks/notes/search/settings
+2. Подготовить release checklist и дописать тест-кейсы для sync failure/timeout сценариев

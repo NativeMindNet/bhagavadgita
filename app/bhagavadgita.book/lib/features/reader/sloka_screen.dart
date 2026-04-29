@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 
 import '../../data/local/app_database.dart';
 import '../../data/local/user_data_repository.dart';
+import '../settings/reader_settings.dart';
 
 class SlokaScreen extends StatefulWidget {
   const SlokaScreen({super.key, required this.db, required this.slokaId});
@@ -71,38 +72,50 @@ class _SlokaScreenState extends State<SlokaScreen> {
             children: [
               Text(sloka.name, style: Theme.of(context).textTheme.headlineSmall),
               const SizedBox(height: 12),
-              if ((sloka.slokaText ?? '').isNotEmpty) ...[
-                Text(sloka.slokaText!, style: Theme.of(context).textTheme.bodyLarge),
-                const SizedBox(height: 12),
-              ],
-              if ((sloka.transcription ?? '').isNotEmpty) ...[
-                Text(sloka.transcription!, style: Theme.of(context).textTheme.bodyMedium),
-                const SizedBox(height: 12),
-              ],
-              if ((sloka.translation ?? '').isNotEmpty) ...[
-                Text(sloka.translation!, style: Theme.of(context).textTheme.titleMedium),
-                const SizedBox(height: 12),
-              ],
-              if ((sloka.comment ?? '').isNotEmpty) ...[
-                Text(sloka.comment!, style: Theme.of(context).textTheme.bodyMedium),
-                const SizedBox(height: 16),
-              ],
-              Text('Vocabulary', style: Theme.of(context).textTheme.titleMedium),
-              const SizedBox(height: 8),
-              StreamBuilder<List<Vocabulary>>(
-                stream: vocabQuery.watch(),
-                builder: (context, vocabSnap) {
-                  final items = vocabSnap.data ?? const [];
-                  if (items.isEmpty) return const Text('No vocabulary yet.');
+              ValueListenableBuilder<ReaderSettings>(
+                valueListenable: readerSettingsController,
+                builder: (context, settings, _) {
                   return Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      for (final v in items)
-                        ListTile(
-                          dense: true,
-                          contentPadding: EdgeInsets.zero,
-                          title: Text(v.tokenText),
-                          subtitle: Text(v.translation),
+                      if (settings.showSanskrit && (sloka.slokaText ?? '').isNotEmpty) ...[
+                        Text(sloka.slokaText!, style: Theme.of(context).textTheme.bodyLarge),
+                        const SizedBox(height: 12),
+                      ],
+                      if (settings.showTransliteration && (sloka.transcription ?? '').isNotEmpty) ...[
+                        Text(sloka.transcription!, style: Theme.of(context).textTheme.bodyMedium),
+                        const SizedBox(height: 12),
+                      ],
+                      if (settings.showTranslation && (sloka.translation ?? '').isNotEmpty) ...[
+                        Text(sloka.translation!, style: Theme.of(context).textTheme.titleMedium),
+                        const SizedBox(height: 12),
+                      ],
+                      if (settings.showComment && (sloka.comment ?? '').isNotEmpty) ...[
+                        Text(sloka.comment!, style: Theme.of(context).textTheme.bodyMedium),
+                        const SizedBox(height: 16),
+                      ],
+                      if (settings.showVocabulary) ...[
+                        Text('Vocabulary', style: Theme.of(context).textTheme.titleMedium),
+                        const SizedBox(height: 8),
+                        StreamBuilder<List<Vocabulary>>(
+                          stream: vocabQuery.watch(),
+                          builder: (context, vocabSnap) {
+                            final items = vocabSnap.data ?? const [];
+                            if (items.isEmpty) return const Text('No vocabulary yet.');
+                            return Column(
+                              children: [
+                                for (final v in items)
+                                  ListTile(
+                                    dense: true,
+                                    contentPadding: EdgeInsets.zero,
+                                    title: Text(v.tokenText),
+                                    subtitle: Text(v.translation),
+                                  ),
+                              ],
+                            );
+                          },
                         ),
+                      ],
                     ],
                   );
                 },
