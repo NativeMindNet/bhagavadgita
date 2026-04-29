@@ -1,4 +1,5 @@
 import 'sloka_dto.dart';
+import 'json_value.dart';
 
 class ChapterDto {
   const ChapterDto({
@@ -14,13 +15,12 @@ class ChapterDto {
   final List<SlokaDto> slokas;
 
   factory ChapterDto.fromJson(Map<String, Object?> json) {
-    final slokaJson = (json['shlokas'] as List<Object?>? ?? const []).cast<Map<String, Object?>>();
+    final slokaJson = asObjectList(json['shlokas']);
     return ChapterDto(
-      id: (json['id'] as num).toInt(),
-      name: json['name'] as String?,
-      order: (json['order'] as num?)?.toInt(),
+      id: asInt(json['id']) ?? 0,
+      name: asString(json['name']),
+      order: asInt(json['order']),
       slokas: slokaJson.map(SlokaDto.fromJson).toList(growable: false),
     );
   }
 }
-

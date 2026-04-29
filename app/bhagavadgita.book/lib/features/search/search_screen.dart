@@ -2,6 +2,7 @@ import 'package:drift/drift.dart' hide Column;
 import 'package:flutter/material.dart';
 
 import '../../data/local/app_database.dart';
+import '../../data/local/user_data_repository.dart';
 import '../reader/sloka_screen.dart';
 
 class SearchScreen extends StatefulWidget {
@@ -27,17 +28,26 @@ class _SearchScreenState extends State<SearchScreen> {
   Widget build(BuildContext context) {
     final q = _query.trim();
     final like = '%${q.replaceAll('%', r'\%').replaceAll('_', r'\_')}%';
+    final userData = UserDataRepository(widget.db);
 
     final query = widget.db.select(widget.db.slokas)
       ..orderBy([(t) => OrderingTerm.asc(t.id)]);
     if (q.isNotEmpty) {
+      final vocabSubquery = widget.db.selectOnly(widget.db.vocabularies)
+        ..addColumns([widget.db.vocabularies.slokaId])
+        ..where(
+          widget.db.vocabularies.tokenText.like(like) |
+              widget.db.vocabularies.translation.like(like),
+        );
+
       query.where(
         (t) =>
             t.name.like(like) |
             t.slokaText.like(like) |
             t.transcription.like(like) |
             t.translation.like(like) |
-            t.comment.like(like),
+            t.comment.like(like) |
+            t.id.isInQuery(vocabSubquery),
       );
     }
 
@@ -61,12 +71,17 @@ class _SearchScreenState extends State<SearchScreen> {
             child: StreamBuilder<List<Sloka>>(
               stream: query.watch(),
               builder: (context, snap) {
-                final items = snap.data ?? const [];
+                final items = snap.data ?? const <Sloka>[];
                 if (snap.connectionState == ConnectionState.waiting) {
                   return const Center(child: CircularProgressIndicator());
                 }
-                if (items.isEmpty) {
+                if (q.isNotEmpty && items.isEmpty) {
                   return const Center(child: Text('Nothing found.'));
+                }
+                if (q.isEmpty && items.isEmpty) {
+                  return const Center(
+                    child: Text('No slokas in local snapshot.'),
+                  );
                 }
                 return ListView.separated(
                   itemCount: items.length,
@@ -80,10 +95,23 @@ class _SearchScreenState extends State<SearchScreen> {
                         maxLines: 2,
                         overflow: TextOverflow.ellipsis,
                       ),
+                      trailing: StreamBuilder<bool>(
+                        stream: userData.watchBookmark(s.id),
+                        builder: (context, bookmarkSnap) {
+                          final isBookmarked = bookmarkSnap.data ?? false;
+                          return Icon(
+                            isBookmarked ? Icons.bookmark : Icons.chevron_right,
+                            color: isBookmarked
+                                ? Theme.of(context).colorScheme.primary
+                                : null,
+                          );
+                        },
+                      ),
                       onTap: () {
                         Navigator.of(context).push(
                           MaterialPageRoute(
-                            builder: (_) => SlokaScreen(db: widget.db, slokaId: s.id),
+                            builder: (_) =>
+                                SlokaScreen(db: widget.db, slokaId: s.id),
                           ),
                         );
                       },
@@ -98,4 +126,3 @@ class _SearchScreenState extends State<SearchScreen> {
     );
   }
 }
-

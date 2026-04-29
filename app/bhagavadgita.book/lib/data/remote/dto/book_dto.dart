@@ -1,3 +1,5 @@
+import 'json_value.dart';
+
 class BookDto {
   const BookDto({
     required this.id,
@@ -15,12 +17,11 @@ class BookDto {
 
   factory BookDto.fromJson(Map<String, Object?> json) {
     return BookDto(
-      id: (json['id'] as num).toInt(),
-      languageId: (json['languageId'] as num).toInt(),
-      name: json['name'] as String?,
-      initials: json['initials'] as String?,
-      chaptersCount: (json['chaptersCount'] as num?)?.toInt(),
+      id: asInt(json['id']) ?? 0,
+      languageId: asInt(json['languageId']) ?? 0,
+      name: asString(json['name']),
+      initials: asString(json['initials']),
+      chaptersCount: asInt(json['chaptersCount']),
     );
   }
 }
-

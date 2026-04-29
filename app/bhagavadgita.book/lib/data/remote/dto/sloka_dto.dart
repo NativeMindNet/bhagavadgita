@@ -1,4 +1,5 @@
 import 'vocabulary_dto.dart';
+import 'json_value.dart';
 
 class SlokaDto {
   const SlokaDto({
@@ -26,19 +27,20 @@ class SlokaDto {
   final List<VocabularyDto> vocabularies;
 
   factory SlokaDto.fromJson(Map<String, Object?> json) {
-    final vocabJson = (json['vocabularies'] as List<Object?>? ?? const []).cast<Map<String, Object?>>();
+    final vocabJson = asObjectList(json['vocabularies']);
     return SlokaDto(
-      id: (json['id'] as num).toInt(),
-      name: json['name'] as String?,
-      text: json['text'] as String?,
-      transcription: json['transcription'] as String?,
-      translation: json['translation'] as String?,
-      comment: json['comment'] as String?,
-      order: (json['order'] as num?)?.toInt(),
-      audio: json['audio'] as String?,
-      audioSanskrit: json['audioSanskrit'] as String?,
-      vocabularies: vocabJson.map(VocabularyDto.fromJson).toList(growable: false),
+      id: asInt(json['id']) ?? 0,
+      name: asString(json['name']),
+      text: asString(json['text']),
+      transcription: asString(json['transcription']),
+      translation: asString(json['translation']),
+      comment: asString(json['comment']),
+      order: asInt(json['order']),
+      audio: asString(json['audio']),
+      audioSanskrit: asString(json['audioSanskrit']),
+      vocabularies: vocabJson
+          .map(VocabularyDto.fromJson)
+          .toList(growable: false),
     );
   }
 }
-

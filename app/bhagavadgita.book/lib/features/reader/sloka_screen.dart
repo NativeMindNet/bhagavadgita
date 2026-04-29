@@ -6,10 +6,18 @@ import '../../data/local/user_data_repository.dart';
 import '../settings/reader_settings.dart';
 
 class SlokaScreen extends StatefulWidget {
-  const SlokaScreen({super.key, required this.db, required this.slokaId});
+  const SlokaScreen({
+    super.key,
+    required this.db,
+    required this.slokaId,
+    this.chapterId,
+    this.position,
+  });
 
   final AppDatabase db;
   final int slokaId;
+  final int? chapterId;
+  final int? position;
 
   @override
   State<SlokaScreen> createState() => _SlokaScreenState();
@@ -34,10 +42,13 @@ class _SlokaScreenState extends State<SlokaScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final slokaQuery =
-        (widget.db.select(widget.db.slokas)..where((t) => t.id.equals(widget.slokaId)))..limit(1);
-    final vocabQuery = (widget.db.select(widget.db.vocabularies)..where((t) => t.slokaId.equals(widget.slokaId)))
-      ..orderBy([(t) => OrderingTerm.asc(t.position)]);
+    final slokaQuery = (widget.db.select(
+      widget.db.slokas,
+    )..where((t) => t.id.equals(widget.slokaId)))..limit(1);
+    final vocabQuery =
+        (widget.db.select(widget.db.vocabularies)
+            ..where((t) => t.slokaId.equals(widget.slokaId)))
+          ..orderBy([(t) => OrderingTerm.asc(t.position)]);
 
     return Scaffold(
       appBar: AppBar(
@@ -49,8 +60,11 @@ class _SlokaScreenState extends State<SlokaScreen> {
               final isBookmarked = snap.data ?? false;
               return IconButton(
                 tooltip: isBookmarked ? 'Remove bookmark' : 'Add bookmark',
-                icon: Icon(isBookmarked ? Icons.bookmark : Icons.bookmark_border),
-                onPressed: () => _userData.setBookmark(widget.slokaId, !isBookmarked),
+                icon: Icon(
+                  isBookmarked ? Icons.bookmark : Icons.bookmark_border,
+                ),
+                onPressed: () =>
+                    _userData.setBookmark(widget.slokaId, !isBookmarked),
               );
             },
           ),
@@ -60,7 +74,8 @@ class _SlokaScreenState extends State<SlokaScreen> {
         stream: slokaQuery.watchSingleOrNull(),
         builder: (context, snap) {
           final sloka = snap.data;
-          if (snap.connectionState == ConnectionState.waiting && sloka == null) {
+          if (snap.connectionState == ConnectionState.waiting &&
+              sloka == null) {
             return const Center(child: CircularProgressIndicator());
           }
           if (sloka == null) {
@@ -70,7 +85,18 @@ class _SlokaScreenState extends State<SlokaScreen> {
           return ListView(
             padding: const EdgeInsets.all(16),
             children: [
-              Text(sloka.name, style: Theme.of(context).textTheme.headlineSmall),
+              if (widget.chapterId != null && widget.position != null) ...[
+                _SlokaNavigator(
+                  db: widget.db,
+                  chapterId: widget.chapterId!,
+                  position: widget.position!,
+                ),
+                const SizedBox(height: 12),
+              ],
+              Text(
+                sloka.name,
+                style: Theme.of(context).textTheme.headlineSmall,
+              ),
               const SizedBox(height: 12),
               ValueListenableBuilder<ReaderSettings>(
                 valueListenable: readerSettingsController,
@@ -78,30 +104,50 @@ class _SlokaScreenState extends State<SlokaScreen> {
                   return Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      if (settings.showSanskrit && (sloka.slokaText ?? '').isNotEmpty) ...[
-                        Text(sloka.slokaText!, style: Theme.of(context).textTheme.bodyLarge),
+                      if (settings.showSanskrit &&
+                          (sloka.slokaText ?? '').isNotEmpty) ...[
+                        Text(
+                          sloka.slokaText!,
+                          style: Theme.of(context).textTheme.bodyLarge,
+                        ),
                         const SizedBox(height: 12),
                       ],
-                      if (settings.showTransliteration && (sloka.transcription ?? '').isNotEmpty) ...[
-                        Text(sloka.transcription!, style: Theme.of(context).textTheme.bodyMedium),
+                      if (settings.showTransliteration &&
+                          (sloka.transcription ?? '').isNotEmpty) ...[
+                        Text(
+                          sloka.transcription!,
+                          style: Theme.of(context).textTheme.bodyMedium,
+                        ),
                         const SizedBox(height: 12),
                       ],
-                      if (settings.showTranslation && (sloka.translation ?? '').isNotEmpty) ...[
-                        Text(sloka.translation!, style: Theme.of(context).textTheme.titleMedium),
+                      if (settings.showTranslation &&
+                          (sloka.translation ?? '').isNotEmpty) ...[
+                        Text(
+                          sloka.translation!,
+                          style: Theme.of(context).textTheme.titleMedium,
+                        ),
                         const SizedBox(height: 12),
                       ],
-                      if (settings.showComment && (sloka.comment ?? '').isNotEmpty) ...[
-                        Text(sloka.comment!, style: Theme.of(context).textTheme.bodyMedium),
+                      if (settings.showComment &&
+                          (sloka.comment ?? '').isNotEmpty) ...[
+                        Text(
+                          sloka.comment!,
+                          style: Theme.of(context).textTheme.bodyMedium,
+                        ),
                         const SizedBox(height: 16),
                       ],
                       if (settings.showVocabulary) ...[
-                        Text('Vocabulary', style: Theme.of(context).textTheme.titleMedium),
+                        Text(
+                          'Vocabulary',
+                          style: Theme.of(context).textTheme.titleMedium,
+                        ),
                         const SizedBox(height: 8),
                         StreamBuilder<List<Vocabulary>>(
                           stream: vocabQuery.watch(),
                           builder: (context, vocabSnap) {
                             final items = vocabSnap.data ?? const [];
-                            if (items.isEmpty) return const Text('No vocabulary yet.');
+                            if (items.isEmpty)
+                              return const Text('No vocabulary yet.');
                             return Column(
                               children: [
                                 for (final v in items)
@@ -129,7 +175,9 @@ class _SlokaScreenState extends State<SlokaScreen> {
                   final note = noteSnap.data ?? '';
                   if (_noteController.text != note) {
                     _noteController.text = note;
-                    _noteController.selection = TextSelection.collapsed(offset: _noteController.text.length);
+                    _noteController.selection = TextSelection.collapsed(
+                      offset: _noteController.text.length,
+                    );
                   }
 
                   return Column(
@@ -145,7 +193,10 @@ class _SlokaScreenState extends State<SlokaScreen> {
                       ),
                       const SizedBox(height: 10),
                       FilledButton(
-                        onPressed: () => _userData.saveNote(widget.slokaId, _noteController.text),
+                        onPressed: () => _userData.saveNote(
+                          widget.slokaId,
+                          _noteController.text,
+                        ),
                         child: const Text('Save note'),
                       ),
                     ],
@@ -160,3 +211,96 @@ class _SlokaScreenState extends State<SlokaScreen> {
   }
 }
 
+class _SlokaNavigator extends StatelessWidget {
+  const _SlokaNavigator({
+    required this.db,
+    required this.chapterId,
+    required this.position,
+  });
+
+  final AppDatabase db;
+  final int chapterId;
+  final int position;
+
+  @override
+  Widget build(BuildContext context) {
+    final previousQuery =
+        (db.select(db.slokas)
+              ..where(
+                (t) =>
+                    t.chapterId.equals(chapterId) &
+                    t.position.isSmallerThanValue(position),
+              )
+              ..orderBy([(t) => OrderingTerm.desc(t.position)])
+              ..limit(1))
+            .watchSingleOrNull();
+    final nextQuery =
+        (db.select(db.slokas)
+              ..where(
+                (t) =>
+                    t.chapterId.equals(chapterId) &
+                    t.position.isBiggerThanValue(position),
+              )
+              ..orderBy([(t) => OrderingTerm.asc(t.position)])
+              ..limit(1))
+            .watchSingleOrNull();
+
+    return StreamBuilder<Sloka?>(
+      stream: previousQuery,
+      builder: (context, prevSnap) {
+        return StreamBuilder<Sloka?>(
+          stream: nextQuery,
+          builder: (context, nextSnap) {
+            final previous = prevSnap.data;
+            final next = nextSnap.data;
+            return Row(
+              children: [
+                Expanded(
+                  child: OutlinedButton.icon(
+                    onPressed: previous == null
+                        ? null
+                        : () {
+                            Navigator.of(context).pushReplacement(
+                              MaterialPageRoute(
+                                builder: (_) => SlokaScreen(
+                                  db: db,
+                                  slokaId: previous.id,
+                                  chapterId: chapterId,
+                                  position: previous.position,
+                                ),
+                              ),
+                            );
+                          },
+                    icon: const Icon(Icons.chevron_left),
+                    label: const Text('Previous'),
+                  ),
+                ),
+                const SizedBox(width: 12),
+                Expanded(
+                  child: OutlinedButton.icon(
+                    onPressed: next == null
+                        ? null
+                        : () {
+                            Navigator.of(context).pushReplacement(
+                              MaterialPageRoute(
+                                builder: (_) => SlokaScreen(
+                                  db: db,
+                                  slokaId: next.id,
+                                  chapterId: chapterId,
+                                  position: next.position,
+                                ),
+                              ),
+                            );
+                          },
+                    icon: const Icon(Icons.chevron_right),
+                    label: const Text('Next'),
+                  ),
+                ),
+              ],
+            );
+          },
+        );
+      },
+    );
+  }
+}

@@ -2,6 +2,7 @@ import 'package:dio/dio.dart';
 
 import 'dto/book_dto.dart';
 import 'dto/chapter_dto.dart';
+import 'dto/json_value.dart';
 import 'dto/language_dto.dart';
 import 'dto/quote_dto.dart';
 import 'legacy_envelope.dart';
@@ -15,11 +16,14 @@ class LegacyApiClient {
   final Dio _dio;
 
   Future<List<LanguageDto>> getLanguages() async {
-    final res = await _dio.post<Map<String, Object?>>('Data/Languages', data: const <String, Object?>{});
+    final res = await _dio.post<Map<String, Object?>>(
+      'Data/Languages',
+      data: const <String, Object?>{},
+    );
     final env = LegacyEnvelope.fromJson<List<LanguageDto>>(
       res.data ?? const <String, Object?>{},
       parseData: (dataJson) {
-        final list = (dataJson as List<Object?>? ?? const []).cast<Map<String, Object?>>();
+        final list = asObjectList(dataJson);
         return list.map(LanguageDto.fromJson).toList(growable: false);
       },
     );
@@ -35,7 +39,7 @@ class LegacyApiClient {
     final env = LegacyEnvelope.fromJson<List<BookDto>>(
       res.data ?? const <String, Object?>{},
       parseData: (dataJson) {
-        final list = (dataJson as List<Object?>? ?? const []).cast<Map<String, Object?>>();
+        final list = asObjectList(dataJson);
         return list.map(BookDto.fromJson).toList(growable: false);
       },
     );
@@ -51,7 +55,7 @@ class LegacyApiClient {
     final env = LegacyEnvelope.fromJson<List<ChapterDto>>(
       res.data ?? const <String, Object?>{},
       parseData: (dataJson) {
-        final list = (dataJson as List<Object?>? ?? const []).cast<Map<String, Object?>>();
+        final list = asObjectList(dataJson);
         return list.map(ChapterDto.fromJson).toList(growable: false);
       },
     );
@@ -60,13 +64,15 @@ class LegacyApiClient {
   }
 
   Future<QuoteDto?> getQuote() async {
-    final res = await _dio.post<Map<String, Object?>>('Data/Quotes', data: const <String, Object?>{});
+    final res = await _dio.post<Map<String, Object?>>(
+      'Data/Quotes',
+      data: const <String, Object?>{},
+    );
     final env = LegacyEnvelope.fromJson<QuoteDto?>(
       res.data ?? const <String, Object?>{},
       parseData: (dataJson) {
-        final obj = dataJson;
-        if (obj == null) return null;
-        return QuoteDto.fromJson(obj as Map<String, Object?>);
+        if (dataJson is! Map) return null;
+        return QuoteDto.fromJson(dataJson.cast<String, Object?>());
       },
     );
     if (!env.isOk) throw LegacyApiException(env.code, env.message);
@@ -83,4 +89,3 @@ class LegacyApiException implements Exception {
   @override
   String toString() => 'LegacyApiException(code=$code, message=$message)';
 }
-

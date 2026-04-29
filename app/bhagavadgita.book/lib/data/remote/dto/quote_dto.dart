@@ -1,3 +1,5 @@
+import 'json_value.dart';
+
 class QuoteDto {
   const QuoteDto({required this.author, required this.text});
 
@@ -6,9 +8,8 @@ class QuoteDto {
 
   factory QuoteDto.fromJson(Map<String, Object?> json) {
     return QuoteDto(
-      author: json['author'] as String?,
-      text: json['text'] as String?,
+      author: asString(json['author']),
+      text: asString(json['text']),
     );
   }
 }
-

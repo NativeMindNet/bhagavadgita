@@ -1,5 +1,11 @@
+import 'json_value.dart';
+
 class VocabularyDto {
-  const VocabularyDto({required this.id, required this.text, required this.translation});
+  const VocabularyDto({
+    required this.id,
+    required this.text,
+    required this.translation,
+  });
 
   final int id;
   final String? text;
@@ -7,10 +13,9 @@ class VocabularyDto {
 
   factory VocabularyDto.fromJson(Map<String, Object?> json) {
     return VocabularyDto(
-      id: (json['id'] as num).toInt(),
-      text: json['text'] as String?,
-      translation: json['translation'] as String?,
+      id: asInt(json['id']) ?? 0,
+      text: asString(json['text']),
+      translation: asString(json['translation']),
     );
   }
 }
-

@@ -2,6 +2,7 @@ import 'package:drift/drift.dart';
 import 'package:flutter/material.dart';
 
 import '../../data/local/app_database.dart';
+import '../../data/local/user_data_repository.dart';
 import 'sloka_screen.dart';
 
 class ChapterScreen extends StatelessWidget {
@@ -18,8 +19,10 @@ class ChapterScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final slokasQuery = (db.select(db.slokas)..where((t) => t.chapterId.equals(chapterId)))
-      ..orderBy([(t) => OrderingTerm.asc(t.position)]);
+    final userData = UserDataRepository(db);
+    final slokasQuery =
+        (db.select(db.slokas)..where((t) => t.chapterId.equals(chapterId)))
+          ..orderBy([(t) => OrderingTerm.asc(t.position)]);
 
     return Scaffold(
       appBar: AppBar(title: Text(title)),
@@ -27,7 +30,8 @@ class ChapterScreen extends StatelessWidget {
         stream: slokasQuery.watch(),
         builder: (context, snap) {
           final slokas = snap.data ?? const [];
-          if (snap.connectionState == ConnectionState.waiting && slokas.isEmpty) {
+          if (snap.connectionState == ConnectionState.waiting &&
+              slokas.isEmpty) {
             return const Center(child: CircularProgressIndicator());
           }
           if (slokas.isEmpty) {
@@ -46,11 +50,27 @@ class ChapterScreen extends StatelessWidget {
                   maxLines: 2,
                   overflow: TextOverflow.ellipsis,
                 ),
-                trailing: const Icon(Icons.chevron_right),
+                trailing: StreamBuilder<bool>(
+                  stream: userData.watchBookmark(s.id),
+                  builder: (context, bookmarkSnap) {
+                    final isBookmarked = bookmarkSnap.data ?? false;
+                    return Icon(
+                      isBookmarked ? Icons.bookmark : Icons.chevron_right,
+                      color: isBookmarked
+                          ? Theme.of(context).colorScheme.primary
+                          : null,
+                    );
+                  },
+                ),
                 onTap: () {
                   Navigator.of(context).push(
                     MaterialPageRoute(
-                      builder: (_) => SlokaScreen(db: db, slokaId: s.id),
+                      builder: (_) => SlokaScreen(
+                        db: db,
+                        slokaId: s.id,
+                        chapterId: chapterId,
+                        position: s.position,
+                      ),
                     ),
                   );
                 },
@@ -62,4 +82,3 @@ class ChapterScreen extends StatelessWidget {
     );
   }
 }
-

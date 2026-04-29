@@ -44,6 +44,7 @@ dependencies:
 
   # Networking (legacy backend endpoints)
   dio: ^5.9.0
+  shared_preferences: ^2.5.5
 
 dev_dependencies:
   flutter_test:

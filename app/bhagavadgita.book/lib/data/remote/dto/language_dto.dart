@@ -1,3 +1,5 @@
+import 'json_value.dart';
+
 class LanguageDto {
   const LanguageDto({required this.id, required this.name, required this.code});
 
@@ -7,10 +9,9 @@ class LanguageDto {
 
   factory LanguageDto.fromJson(Map<String, Object?> json) {
     return LanguageDto(
-      id: (json['id'] as num).toInt(),
-      name: json['name'] as String?,
-      code: json['code'] as String?,
+      id: asInt(json['id']) ?? 0,
+      name: asString(json['name']),
+      code: asString(json['code']),
     );
   }
 }
-
