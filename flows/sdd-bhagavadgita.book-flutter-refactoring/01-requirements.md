@@ -13,7 +13,7 @@
 - Нормализованные данные проекта: `data/`
 - Исторические/промежуточные сборки данных: `bak/`
 
-Новая кодовая база Flutter в `app/bhagavadgita_book` сейчас является пустой заготовкой и не наследует доменную модель, офлайн-поведение и UX-возможности legacy-приложений.
+Новая кодовая база Flutter в `app/bhagavadgita.book` сейчас является пустой заготовкой и не наследует доменную модель, офлайн-поведение и UX-возможности legacy-приложений.
 
 Нужен рефакторинг с переносом продукта в единое Flutter-приложение, которое:
 - покрывает основные пользовательские сценарии из legacy Android/iOS;
@@ -68,7 +68,7 @@
 
 ### Must Have
 
-1. **Given** новый проект Flutter в `app/bhagavadgita_book`  
+1. **Given** новый проект Flutter в `app/bhagavadgita.book`  
    **When** приложение запускается после рефакторинга  
    **Then** пользователь видит рабочий каталог глав и может открыть содержимое книги вместо demo-экрана
 
@@ -129,7 +129,7 @@
 
 ## Constraints
 
-- **Technical**: Новая реализация должна быть построена в `app/bhagavadgita_book` на Flutter/Dart
+- **Technical**: Новая реализация должна быть построена в `app/bhagavadgita.book` на Flutter/Dart
 - **Source of Truth**: Надо использовать и согласовать данные/поведение из `legacy/legacy_bhagavadgita_book_java`, `legacy/legacy_bhagavadgita_book_swift`, `legacy/legacy_bhagavadgitabook_db`
 - **Content Sources**: Для seed snapshot и сверки учитывать `data/` (основной нормализованный слой) и `bak/` (резерв/история, rich JSON с audio refs)
 - **Backend Compatibility**: В первой версии Flutter должен использовать существующие endpoint'ы legacy backend без обязательного изменения серверного API
@@ -162,7 +162,7 @@
 - `legacy/legacy_bhagavadgita_book_java/app/src/main/java/com/ethnoapp/bgita/server/DataService.java`
 - `legacy/legacy_bhagavadgita_book_swift/Gita/Model/DataAccess/GitaRequestManager.swift`
 - `legacy/legacy_bhagavadgita_book_swift/Gita/AppDelegate.swift`
-- `app/bhagavadgita_book`
+- `app/bhagavadgita.book`
 
 ---
 

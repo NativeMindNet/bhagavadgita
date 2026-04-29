@@ -1,3 +1,4 @@
+import 'package:drift/drift.dart';
 import 'package:flutter/material.dart';
 
 import '../../data/local/app_database.dart';
@@ -9,10 +10,36 @@ class ContentsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final chaptersQuery = (db.select(db.chapters)..where((t) => t.bookId.equals(1)))
+      ..orderBy([(t) => OrderingTerm.asc(t.position)]);
+
     return Scaffold(
       appBar: AppBar(title: const Text('Contents')),
-      body: const Center(
-        child: Text('Contents will be loaded from local DB.'),
+      body: StreamBuilder<List<Chapter>>(
+        stream: chaptersQuery.watch(),
+        builder: (context, snap) {
+          final chapters = snap.data ?? const [];
+          if (snap.connectionState == ConnectionState.waiting && chapters.isEmpty) {
+            return const Center(child: CircularProgressIndicator());
+          }
+          if (chapters.isEmpty) {
+            return const Center(child: Text('No chapters found in local snapshot.'));
+          }
+
+          return ListView.separated(
+            itemCount: chapters.length,
+            separatorBuilder: (_, __) => const Divider(height: 1),
+            itemBuilder: (context, index) {
+              final c = chapters[index];
+              return ListTile(
+                title: Text('Chapter ${c.position}'),
+                subtitle: Text(c.name),
+                trailing: const Icon(Icons.chevron_right),
+                onTap: () {},
+              );
+            },
+          );
+        },
       ),
     );
   }

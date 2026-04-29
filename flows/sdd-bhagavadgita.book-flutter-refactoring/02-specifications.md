@@ -7,7 +7,7 @@
 
 ## Overview
 
-Будет построено новое Flutter-приложение в `app/bhagavadgita_book`, которое объединяет legacy-функциональность Android/iOS поверх существующего backend API и локального offline-first слоя.
+Будет построено новое Flutter-приложение в `app/bhagavadgita.book`, которое объединяет legacy-функциональность Android/iOS поверх существующего backend API и локального offline-first слоя.
 
 Ключевая архитектурная идея:
 - UI всегда работает от локального хранилища;
@@ -28,10 +28,10 @@
 
 | System | Impact | Notes |
 |--------|--------|-------|
-| `app/bhagavadgita_book/lib/` | Create / Modify | Новая Flutter-архитектура приложения |
-| `app/bhagavadgita_book/pubspec.yaml` | Modify | Зависимости для local DB, networking, state management, assets |
-| `app/bhagavadgita_book/assets/` | Create | Встроенный seed snapshot, splash assets, локальные метаданные |
-| `app/bhagavadgita_book/test/` | Modify | Unit/widget/integration tests для bootstrap, repositories, sync |
+| `app/bhagavadgita.book/lib/` | Create / Modify | Новая Flutter-архитектура приложения |
+| `app/bhagavadgita.book/pubspec.yaml` | Modify | Зависимости для local DB, networking, state management, assets |
+| `app/bhagavadgita.book/assets/` | Create | Встроенный seed snapshot, splash assets, локальные метаданные |
+| `app/bhagavadgita.book/test/` | Modify | Unit/widget/integration tests для bootstrap, repositories, sync |
 | Existing legacy backend API | Reuse | Совместимость с `Data/Languages`, `Data/Books`, `Data/Chapters`, `Data/Quotes` |
 | Local storage layer | Create | SQLite/Drift/Isar-backed offline snapshot + separate user data tables |
 | App startup flow | Create | Splash/bootstrap orchestration |
@@ -347,7 +347,7 @@ class ShlokaViewModel {
 
 ### Blocks
 
-- Core app implementation in `app/bhagavadgita_book/lib/`
+- Core app implementation in `app/bhagavadgita.book/lib/`
 - Bootstrap and splash implementation
 - Local DB schema design and migration code
 - Repository and sync orchestration implementation

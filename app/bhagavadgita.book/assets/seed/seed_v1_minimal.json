@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "contentHash": "seed-v1-minimal",
+  "languages": [
+    {
+      "id": 1,
+      "code": "en",
+      "name": "English",
+      "nativeName": "English",
+      "script": "Latin",
+      "direction": "ltr",
+      "type": "translated"
+    }
+  ],
+  "books": [
+    {
+      "id": 1,
+      "languageId": 1,
+      "name": "Bhagavad Gita",
+      "initials": "BG"
+    }
+  ],
+  "chapters": [
+    { "id": 101, "bookId": 1, "position": 1, "name": "Chapter 1" },
+    { "id": 102, "bookId": 1, "position": 2, "name": "Chapter 2" },
+    { "id": 103, "bookId": 1, "position": 3, "name": "Chapter 3" },
+    { "id": 104, "bookId": 1, "position": 4, "name": "Chapter 4" },
+    { "id": 105, "bookId": 1, "position": 5, "name": "Chapter 5" },
+    { "id": 106, "bookId": 1, "position": 6, "name": "Chapter 6" },
+    { "id": 107, "bookId": 1, "position": 7, "name": "Chapter 7" },
+    { "id": 108, "bookId": 1, "position": 8, "name": "Chapter 8" },
+    { "id": 109, "bookId": 1, "position": 9, "name": "Chapter 9" },
+    { "id": 110, "bookId": 1, "position": 10, "name": "Chapter 10" },
+    { "id": 111, "bookId": 1, "position": 11, "name": "Chapter 11" },
+    { "id": 112, "bookId": 1, "position": 12, "name": "Chapter 12" },
+    { "id": 113, "bookId": 1, "position": 13, "name": "Chapter 13" },
+    { "id": 114, "bookId": 1, "position": 14, "name": "Chapter 14" },
+    { "id": 115, "bookId": 1, "position": 15, "name": "Chapter 15" },
+    { "id": 116, "bookId": 1, "position": 16, "name": "Chapter 16" },
+    { "id": 117, "bookId": 1, "position": 17, "name": "Chapter 17" },
+    { "id": 118, "bookId": 1, "position": 18, "name": "Chapter 18" }
+  ]
+}

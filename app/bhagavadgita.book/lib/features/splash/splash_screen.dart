@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../../app/bootstrap/bootstrap_coordinator.dart';
 import '../../data/local/app_database.dart';
 import '../contents/contents_screen.dart';
 
@@ -13,7 +14,7 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
-  late final Future<_SplashResult> _future;
+  late final Future<BootstrapResult> _future;
 
   @override
   void initState() {
@@ -21,15 +22,13 @@ class _SplashScreenState extends State<SplashScreen> {
     _future = _bootstrap();
   }
 
-  Future<_SplashResult> _bootstrap() async {
-    final metaCount = await widget.db.select(widget.db.snapshotMeta).get();
-    final hasSnapshot = metaCount.isNotEmpty;
-    return _SplashResult(hasSnapshot: hasSnapshot);
+  Future<BootstrapResult> _bootstrap() async {
+    return BootstrapCoordinator(db: widget.db).run();
   }
 
   @override
   Widget build(BuildContext context) {
-    return FutureBuilder<_SplashResult>(
+    return FutureBuilder<BootstrapResult>(
       future: _future,
       builder: (context, snap) {
         if (snap.connectionState != ConnectionState.done) {
@@ -52,7 +51,7 @@ class _SplashScreenState extends State<SplashScreen> {
         if (!result.hasSnapshot) {
           return const _SplashScaffold(
             title: 'Bhagavad Gita',
-            subtitle: 'No local snapshot installed yet.',
+            subtitle: 'No local snapshot is available.',
             showProgress: false,
           );
         }
@@ -61,11 +60,6 @@ class _SplashScreenState extends State<SplashScreen> {
       },
     );
   }
-}
-
-class _SplashResult {
-  _SplashResult({required this.hasSnapshot});
-  final bool hasSnapshot;
 }
 
 class _SplashScaffold extends StatelessWidget {

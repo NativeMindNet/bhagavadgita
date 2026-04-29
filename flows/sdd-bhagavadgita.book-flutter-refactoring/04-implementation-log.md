@@ -1,7 +1,7 @@
-# Implementation Log: bhagavadgita-book-flutter-refactoring
+# Implementation Log: bhagavadgita.book-flutter-refactoring
 
 > Started: 2026-04-28  
-> Plan: `flows/sdd-bhagavadgita-book-flutter-refactoring/03-plan.md`
+> Plan: `flows/sdd-bhagavadgita.book-flutter-refactoring/03-plan.md`
 
 ## Progress Tracker
 
@@ -9,10 +9,11 @@
 |------|--------|-------|
 | Phase 0.1 Content audit matrix | Done | Скрипт + артефакты `content-matrix.json/.md` |
 | Phase 0.2 v1 language policy doc | Done | `artifacts/v1-language-policy.md` |
-| Phase 1 Storage stack | In progress | `drift` schema + codegen, app стартует через Splash |
-| Phase 1 Seed installer | Pending | Bundled seed snapshot и установка |
-| Phase 2 Legacy API client | Pending | `Data/Languages|Books|Chapters|Quotes` |
-| Phase 3 Splash/bootstrap | Pending | Startup states + быстрый вход |
+| Phase 1 Storage stack | Done | `drift` schema + codegen, app стартует через Splash; `flutter test` проходит |
+| Phase 1 Seed installer | Done | Bundled seed asset + installer, Splash ставит seed при отсутствии snapshot |
+| Phase 1 Snapshot meta + atomic replace | Done | `SnapshotRepository.replaceSnapshot()` атомарно обновляет content-таблицы, user-таблицы не трогает |
+| Phase 2 Legacy API client | Done | `LegacyApiClient` (Dio) + DTOs + envelope parser для `Data/Languages|Books|Chapters|Quotes` |
+| Phase 3 Splash/bootstrap | Done | Splash + `BootstrapCoordinator` (seed install / snapshot check) и быстрый вход в app |
 | Phase 4 Reader MVP | Pending | Contents/Reader |
 | Phase 5 User data | Pending | Bookmarks/notes/search |
 | Phase 6 Sync orchestration | Pending | stale-while-revalidate |
@@ -25,8 +26,8 @@
 
 - Реализован скрипт аудита покрытия данных: `scripts/content_audit_matrix.py`
 - Сгенерированы артефакты:
-  - `flows/sdd-bhagavadgita-book-flutter-refactoring/artifacts/content-matrix.json`
-  - `flows/sdd-bhagavadgita-book-flutter-refactoring/artifacts/content-matrix.md`
+  - `flows/sdd-bhagavadgita.book-flutter-refactoring/artifacts/content-matrix.json`
+  - `flows/sdd-bhagavadgita.book-flutter-refactoring/artifacts/content-matrix.md`
 
 #### Findings (high-signal)
 
