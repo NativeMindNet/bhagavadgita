@@ -80,6 +80,9 @@
 - QA after seed update:
   - `flutter test` passed.
   - macOS smoke-run build succeeded (seed loader path exercised).
+- Release prep:
+  - Bumped `pubspec.yaml` to `1.0.0+2` (Android versionCode).
+  - Built Android release AAB: `app/bhagavadgita.book/build/app/outputs/bundle/release/app-release.aab`.
 
 #### In Progress
 - Continue implementation plan tasks for schema/seed/snapshot and UI parity.

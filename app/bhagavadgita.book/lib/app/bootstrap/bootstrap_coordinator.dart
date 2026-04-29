@@ -17,19 +17,16 @@ class BootstrapCoordinator {
 
   Future<BootstrapResult> run() async {
     final meta = await db.select(db.snapshotMeta).get();
-    if (meta.isNotEmpty) {
-      unawaited(syncOrchestratorFactory(db).startupSync());
-      return const BootstrapResult(hasSnapshot: true, installedSeed: false, syncScheduled: true);
-    }
-
     final installedSeed = await seedInstaller.installIfNeeded(db);
-    if (installedSeed) {
-      unawaited(syncOrchestratorFactory(db).startupSync());
-    }
+
+    // Remote sync is independent from bundled seed install/update:
+    // startupSync() itself decides whether to refresh based on RefreshPolicy.
+    unawaited(syncOrchestratorFactory(db).startupSync());
+
     return BootstrapResult(
-      hasSnapshot: installedSeed,
+      hasSnapshot: meta.isNotEmpty || installedSeed,
       installedSeed: installedSeed,
-      syncScheduled: installedSeed,
+      syncScheduled: true,
     );
   }
 }

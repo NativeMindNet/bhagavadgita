@@ -47,6 +47,6 @@ IN_PROGRESS
 
 ## Next Actions
 
-1. Continue plan execution: release prep (versioning/signing/build artifacts)
+1. Continue plan execution: Android release signing/upload (Google Play) + prepare iOS release once Xcode components are available
 2. Complete iOS device verification after Xcode component install
 3. Prepare release checklist and request explicit publish confirmation (and store credentials) before store submission

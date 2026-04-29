@@ -12,8 +12,8 @@
 
 ## Android (Google Play)
 
-- [ ] Increment `version` / `buildNumber`
-- [ ] Build release artifact (`aab`)
+- [x] Increment `version` / `buildNumber`
+- [x] Build release artifact (`aab`)
 - [ ] Verify signing config
 - [ ] Upload to Play Console internal track
 - [ ] Verify pre-launch report

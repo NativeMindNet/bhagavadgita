@@ -4,6 +4,7 @@ import 'package:drift/drift.dart';
 import 'package:flutter/services.dart';
 
 import '../local/app_database.dart';
+import '../local/snapshot_repository.dart';
 
 class SeedInstaller {
   const SeedInstaller();
@@ -11,14 +12,29 @@ class SeedInstaller {
   static const String _seedAssetPath = 'assets/seed/seed_v1_minimal.json';
 
   Future<bool> installIfNeeded(AppDatabase db) async {
-    final meta = await db.select(db.snapshotMeta).get();
-    if (meta.isNotEmpty) return false;
+    final latestMeta = await (db.select(db.snapshotMeta)
+          ..orderBy([(t) => OrderingTerm.desc(t.fetchedAtMs)])
+          ..limit(1))
+        .getSingleOrNull();
 
+    // We need the seed contentHash to decide whether installing/refreshing is necessary.
+    // Avoid parsing the whole huge JSON when content matches.
     final raw = await rootBundle.loadString(_seedAssetPath);
-    final json = jsonDecode(raw) as Map<String, Object?>;
+    final schemaVersionMatch = RegExp(r'"schemaVersion"\s*:\s*(\d+)').firstMatch(raw);
+    final contentHashMatch = RegExp(r'"contentHash"\s*:\s*"([^"]*)"').firstMatch(raw);
 
-    final schemaVersion = (json['schemaVersion'] as num?)?.toInt() ?? db.schemaVersion;
-    final contentHash = (json['contentHash'] as String?) ?? 'seed-unknown';
+    if (schemaVersionMatch == null || contentHashMatch == null) {
+      throw StateError('Seed asset is missing schemaVersion/contentHash metadata.');
+    }
+
+    final schemaVersion = int.parse(schemaVersionMatch.group(1)!);
+    final contentHash = contentHashMatch.group(1)!;
+
+    if (latestMeta != null && latestMeta.contentHash == contentHash && latestMeta.schemaVersion == schemaVersion) {
+      return false;
+    }
+
+    final json = jsonDecode(raw) as Map<String, Object?>;
     final nowMs = DateTime.now().millisecondsSinceEpoch;
 
     final languageJson = (json['languages'] as List<Object?>? ?? const []).cast<Map<String, Object?>>();
@@ -92,26 +108,19 @@ class SeedInstaller {
         )
         .toList(growable: false);
 
-    await db.transaction(() async {
-      await db.batch((batch) async {
-        batch.insertAll(db.languages, languages, mode: InsertMode.insertOrReplace);
-        batch.insertAll(db.books, books, mode: InsertMode.insertOrReplace);
-        batch.insertAll(db.chapters, chapters, mode: InsertMode.insertOrReplace);
-        batch.insertAll(db.slokas, slokas, mode: InsertMode.insertOrReplace);
-        batch.insertAll(db.vocabularies, vocabularies, mode: InsertMode.insertOrReplace);
-
-        batch.insert(
-          db.snapshotMeta,
-          SnapshotMetaCompanion.insert(
-            contentHash: contentHash,
-            fetchedAtMs: nowMs,
-            source: 'bundled_seed',
-            schemaVersion: schemaVersion,
-          ),
-          mode: InsertMode.insertOrReplace,
-        );
-      });
-    });
+    await SnapshotRepository(db).replaceSnapshot(
+      languages: languages,
+      books: books,
+      chapters: chapters,
+      slokas: slokas,
+      vocabularies: vocabularies,
+      meta: SnapshotMetaCompanion.insert(
+        contentHash: contentHash,
+        fetchedAtMs: nowMs,
+        source: 'bundled_seed',
+        schemaVersion: schemaVersion,
+      ),
+    );
 
     return true;
   }
