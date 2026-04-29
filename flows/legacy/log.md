@@ -2,6 +2,61 @@
 
 ## Session History
 
+### 2026-04-29 - Full Analysis (Swift + Java + DB)
+
+**Command**: `/legacy восстанови flows из legacy/legacy_bhagavadgita.book_swift + legacy/legacy_bhagavadgita.book_java + legacy/legacy_bhagavadgita.book_db`
+
+**Mode**: BFS (breadth-first analysis)
+
+**Sources**:
+- `legacy/legacy_bhagavadgita.book_swift` - iOS Swift application
+- `legacy/legacy_bhagavadgita.book_java` - Android Java application
+- `legacy/legacy_bhagavadgita.book.db` - Database CSV exports
+
+**Swift Files Analyzed**:
+- `Model/DataAccess/DataClasses/Shloka.swift` - Core shloka entity
+- `Model/DataAccess/DataClasses/Book.swift` - Book editions
+- `Model/DataAccess/DataClasses/Chapter.swift` - Chapter structure
+- `Model/DataAccess/DataClasses/Language.swift` - Language support
+- `Model/DataAccess/DataClasses/Vocabulary.swift` - Word definitions
+- `Model/DataAccess/DataClasses/Quote.swift` - Inspirational quotes
+- `Model/DataAccess/DataClasses/Bookmark.swift` - User bookmarks
+- `Model/DataAccess/GitaRequestManager.swift` - API client
+
+**Java Files Analyzed**:
+- `model/Sloka.java` - Same as Swift with note field
+- `model/Book.java` - With STATUS_* constants
+- `model/Chapter.java` - With slokasCount
+- `model/Language.java` - With checked flag
+- `model/Vocabulary.java` - Same as Swift
+- `model/Quote.java` - Same as Swift
+- `server/DataService.java` - API service
+
+**Key Findings**:
+1. Domain model parity between iOS and Android
+2. Same 4 API endpoints used by both platforms
+3. SQLite local storage with different ORM styles
+4. 7 core entities: Language, Book, Chapter, Shloka, Vocabulary, Quote, Bookmark
+
+**Flows Matched**:
+- sdd-bhagavadgita-book-flutter-refactoring (domain model + API)
+- sdd-gitabook-database (CSV schema validation)
+- sdd-gitabook-structure (content hierarchy)
+
+**Flows Updated**:
+- `flows/sdd-bhagavadgita-book-flutter-refactoring/01-requirements.md` - Added Legacy Analysis Additions
+- `flows/sdd-gitabook-database/01-requirements.md` - Added Legacy Analysis Additions
+
+**Files Created/Updated**:
+- `flows/legacy/_traverse.md` - Full traversal state
+- `flows/legacy/understanding/_root.md` - Comprehensive analysis
+- `flows/legacy/_status.md` - Status set to COMPLETE
+- `flows/legacy/log.md` - This log entry
+
+**Result**: COMPLETE - All legacy sources analyzed, existing flows updated.
+
+---
+
 ### 2026-03-26 - Depth 0 (Root)
 
 **Mode**: BFS

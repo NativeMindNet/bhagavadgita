@@ -166,6 +166,62 @@
 
 ---
 
+## Legacy Analysis Additions
+> Added by /legacy on 2026-04-29
+
+### Domain Entities from Legacy Code
+
+| Entity | Swift Location | Java Location | Fields |
+|--------|----------------|---------------|--------|
+| Language | `DataClasses/Language.swift` | `model/Language.java` | id, name, code, isSelected* |
+| Book | `DataClasses/Book.swift` | `model/Book.java` | id, languageId, name, initials, chaptersCount, isDownloaded* |
+| Chapter | `DataClasses/Chapter.swift` | `model/Chapter.java` | id, bookId, name, order, shlokas[] |
+| Shloka | `DataClasses/Shloka.swift` | `model/Sloka.java` | id, chapterId, name, text, transcription, translation, comment, order, audio, audioSanskrit, vocabularies[], isBookmark*, note* |
+| Vocabulary | `DataClasses/Vocabulary.swift` | `model/Vocabulary.java` | shlokaId, text, translation |
+| Quote | `DataClasses/Quote.swift` | `model/Quote.java` | author, text |
+| Bookmark | `DataClasses/Bookmark.swift` | (in Sloka) | chapterOrder, shlokaOrder, isDeleted |
+
+*\* = client-only field, not from API*
+
+### API Contract Details
+
+**Base URL**: `http://app.bhagavadgitaapp.online/api/`
+
+| Endpoint | Method | Request | Response Structure |
+|----------|--------|---------|-------------------|
+| `Data/Languages` | POST | `{}` | `{code: 0, data: [Language]}` |
+| `Data/Books` | POST | `{ids: [int]}` | `{code: 0, data: [Book]}` |
+| `Data/Chapters` | POST | `{bookId: int}` | `{code: 0, data: [Chapter]}` (nested with slokas and vocabularies) |
+| `Data/Quotes` | POST | `{}` | `{code: 0, data: Quote}` |
+
+### Platform Differences to Unify
+
+| Feature | iOS (Swift) | Android (Java) | Flutter Target |
+|---------|-------------|----------------|----------------|
+| Book download | DownloadInfo struct | STATUS_* int constants | Unified state enum |
+| User notes | UserComment entity | note field in Sloka | Separate UserNote entity |
+| Bookmarks | Separate Bookmarks table | isBookmark field + table | Separate Bookmarks table |
+| Local DB | DbConnection/DbCommand | DbContext/DbSet ORM | Drift/SQLite |
+
+### Verified Content Statistics
+
+| Entity | Records | Source |
+|--------|---------|--------|
+| Languages | 4 | en, ru, de, spa |
+| Books | 6 | 3 EN, 1 RU, 1 DE, 1 SPA |
+| Chapters | 143 | 18 per book edition |
+| Slokas | ~700 | All Bhagavad Gita verses |
+| Vocabularies | ~5000 | Word-by-word breakdown |
+| Quotes | ~150 | Multi-language |
+
+### Legacy Source Files Reference
+
+- Swift API: `GitaRequestManager.swift:84-151`
+- Java API: `DataService.java:12-34`
+- Full analysis: `flows/legacy/understanding/_root.md`
+
+---
+
 ## Approval
 
 - [ ] Reviewed by: [name]

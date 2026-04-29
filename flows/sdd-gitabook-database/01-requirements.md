@@ -146,7 +146,57 @@ Q&A (вопросы учеников):
 ## References
 
 - Legacy CSV analysis: `flows/legacy/understanding/_root.md`
-- Original data: `/legacy/csv/`
+- Original data: `/legacy/legacy_bhagavadgita.book.db/`
+
+---
+
+## Legacy Analysis Additions
+> Added by /legacy on 2026-04-29
+
+### Legacy Code Validation
+
+Analyzed iOS Swift and Android Java implementations to validate domain model:
+
+| Entity | Legacy Swift | Legacy Java | DB CSV | Matches Design |
+|--------|--------------|-------------|--------|----------------|
+| Languages | Language.swift | Language.java | db_languages.csv | Yes |
+| Books | Book.swift | Book.java | db_books.csv | Yes (initials confirmed) |
+| Chapters | Chapter.swift | Chapter.java | db_chapters.csv | Yes |
+| Slokas | Shloka.swift | Sloka.java | Gita_Slokas.csv | Yes (comment field confirmed) |
+| Vocabularies | Vocabulary.swift | Vocabulary.java | Gita_Vocabularies.csv | Yes |
+| Quotes | Quote.swift | Quote.java | db_quoutes.csv | Yes |
+| Bookmarks | Bookmark.swift | (in Sloka) | - | Design aligns |
+
+### CSV Schema Confirmation
+
+| File | Delimiter | Columns | Records |
+|------|-----------|---------|---------|
+| db_languages.csv | `,` | Id,Name,Code | 4 |
+| db_books.csv | `,` | Id,LanguageId,Name,Initials | 6 |
+| db_chapters.csv | `,` | Id,BookId,Name,Order | 143 |
+| Gita_Slokas.csv | `;` | Id,ChapterId,Name,Text,Transcription,Translation,Comment,Order,Audio,AudioSanskrit | ~700 |
+| Gita_Vocabularies.csv | `;` | Id,SlokaId,Text,Translation | ~5000 |
+| db_quoutes.csv | `,` | Id,LanguageId,Author,Text,IsDay | ~150 |
+
+### Key Design Decisions Confirmed
+
+1. **Single comment per sloka**: Confirmed in both Swift (`Shloka.comment: String`) and Java (`private String comment`)
+2. **Audio paths only**: Both platforms store paths (`/Files/*.mp3`), not BLOBs
+3. **Initials in books**: Confirmed field in both platforms (`Book.initials`)
+4. **Vocabulary per sloka**: Both platforms use `[Vocabulary]` array in Shloka
+
+### Data Quality Notes
+
+- Language ID=4 missing (gap in sequence)
+- Book IDs have gaps: 1,2,5,8,11,14 (not sequential)
+- German chapters have embedded newlines in names
+- All CSV files use UTF-8 with BOM
+
+### Source Files Reference
+
+- Swift models: `legacy/legacy_bhagavadgita.book_swift/Gita/Model/DataAccess/DataClasses/`
+- Java models: `legacy/legacy_bhagavadgita.book_java/app/src/main/java/com/ethnoapp/bgita/model/`
+- Full analysis: `flows/legacy/understanding/_root.md`
 
 ---
 
