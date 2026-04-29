@@ -83,7 +83,8 @@ Full index with metadata, tags, and relationships: `flows/adr-index.md`
 
 | Name | Status File | Current Phase |
 |------|-------------|---------------|
-| - | No active SDD flows | - |
+| `sdd-bhagavadgita.book-cicd` | `flows/sdd-bhagavadgita.book-cicd/_status.md` | REQUIREMENTS (DRAFTING) |
+| `sdd-bhagavadgita.book-layout-swift` | `flows/sdd-bhagavadgita.book-layout-swift/_status.md` | REQUIREMENTS (DRAFTING) |
 
 ### DDD Flows (Document-Driven)
 
@@ -101,7 +102,7 @@ Full index with metadata, tags, and relationships: `flows/adr-index.md`
 
 | Name | Status File | Current Phase |
 |------|-------------|---------------|
-| - | No active VDD flows | - |
+| `vdd-bhagavadgita.book-layouts` | `flows/vdd-bhagavadgita.book-layouts/_status.md` | REQUIREMENTS (DRAFTING) |
 <!-- FLOWS_INDEX_END -->
 
 ---
