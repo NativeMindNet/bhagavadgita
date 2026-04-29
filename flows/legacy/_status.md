@@ -3,7 +3,7 @@
 ## Mode
 
 - **Current**: COMPLETE
-- **Type**: BFS (breadth-first analysis)
+- **Type**: BFS (breadth-first analysis) + New Flow Creation
 
 ## Sources
 
@@ -30,6 +30,9 @@
 - [x] Platform differences identified
 - [x] Existing flows matched
 - [x] Flows updated with legacy additions
+- [x] **NEW: ADRs created (3)**
+- [x] **NEW: SDDs created (3)**
+- [x] **NEW: TDDs created (2)**
 - [x] Traversal complete
 
 ## Statistics
@@ -43,12 +46,56 @@
   - CSV: 7 data files
 - **Entities discovered**: 7 (Language, Book, Chapter, Shloka, Vocabulary, Quote, Bookmark)
 - **Flows updated**: 2 (sdd-bhagavadgita-book-flutter-refactoring, sdd-gitabook-database)
-- **ADRs created**: 0 (no new architectural decisions - existing flows cover all)
+- **ADRs created**: 3
+- **SDDs created**: 3
+- **TDDs created**: 2
+- **Total new flows**: 8
 - **Pending review**: 0
+
+## New Flows Created (2026-04-29)
+
+### ADRs
+
+| Flow | Title | Status |
+|------|-------|--------|
+| `adr-001-api-contract/` | Backend API Contract Design | DRAFT |
+| `adr-002-local-storage/` | Local Storage Strategy (SQLite + Drift) | DRAFT |
+| `adr-003-offline-first/` | Offline-First Architecture | DRAFT |
+
+### SDDs
+
+| Flow | Title | Status |
+|------|-------|--------|
+| `sdd-legacy-domain-model/` | Domain Model (7 entities, Dart) | DRAFT |
+| `sdd-legacy-api-client/` | API Client (4 endpoints, Dio) | DRAFT |
+| `sdd-legacy-database-schema/` | Database Schema (Drift tables) | DRAFT |
+
+### TDDs
+
+| Flow | Title | Status |
+|------|-------|--------|
+| `tdd-api-parsing/` | API Response Parsing (20+ tests) | TESTS_DEFINED |
+| `tdd-user-data-persistence/` | Bookmark/Note Persistence (20+ tests) | TESTS_DEFINED |
 
 ## Actions Completed
 
-### 2026-04-29: Full Legacy Analysis
+### 2026-04-29 (Session 2): New Flow Creation
+
+1. **Created 3 ADRs**:
+   - ADR-001: API Contract (POST endpoints, response wrapper)
+   - ADR-002: Local Storage (SQLite + Drift, content/user separation)
+   - ADR-003: Offline-First (stale-while-revalidate, bundled seed)
+
+2. **Created 3 SDDs**:
+   - Domain Model: 7 entities with Dart code, JSON serialization
+   - API Client: LegacyApiClient interface, Dio implementation
+   - Database Schema: Full Drift tables, DAOs, migrations
+
+3. **Created 2 TDDs**:
+   - API Parsing: 20+ test cases for JSON parsing, ID generation
+   - User Data: 20+ test cases for bookmarks, notes, soft delete
+
+### 2026-04-29 (Session 1): Full Legacy Analysis
 
 1. **Scanned existing flows**:
    - sdd-gitabook-database
@@ -72,10 +119,9 @@
    - 7 CSV files with production data
    - Validated schema matches code
 
-5. **Updated flows**:
+5. **Updated existing flows**:
    - Added "Legacy Analysis Additions" to sdd-bhagavadgita-book-flutter-refactoring
    - Added "Legacy Analysis Additions" to sdd-gitabook-database
-   - Confirmed sdd-gitabook-structure matches legacy hierarchy
 
 ## Key Findings
 
@@ -90,24 +136,18 @@ Language → Book → Chapter → Shloka → Vocabulary
 
 ### API Endpoints (confirmed)
 
-- `Data/Languages` - GET all languages
-- `Data/Books` - GET books by language IDs
-- `Data/Chapters` - GET chapters with nested slokas and vocabularies
-- `Data/Quotes` - GET random quote
+- `Data/Languages` - POST, returns all languages
+- `Data/Books` - POST, returns books by language IDs
+- `Data/Chapters` - POST, returns chapters with nested slokas and vocabularies
+- `Data/Quotes` - POST, returns random quote
 
-### Platform Parity
+### Key Architectural Decisions
 
-iOS and Android implementations are functionally equivalent with minor differences in:
-- Download status management
-- User notes storage
-- ORM implementation style
-
-## No New Flows Required
-
-All legacy insights map to existing SDD flows:
-- Database design → sdd-gitabook-database
-- Flutter migration → sdd-bhagavadgita-book-flutter-refactoring
-- Content structure → sdd-gitabook-structure
+1. **Maintain legacy API contract** - no backend changes needed
+2. **SQLite + Drift** for local storage
+3. **Separate content vs user tables** - content replaceable, user data preserved
+4. **Client-side ID generation** - deterministic IDs from bookId + order
+5. **Stale-while-revalidate** - local first, background sync
 
 ---
 

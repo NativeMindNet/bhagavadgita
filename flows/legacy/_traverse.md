@@ -27,6 +27,19 @@
 | flows/sdd-gitanjali-flutter-refactoring/ | SDD | gitanjali, xml, audio, bookmarks, flutter migration | Offline reader, bundled content |
 | flows/sdd-bhagavadgita-book-flutter-refactoring/ | SDD | flutter, offline-first, sync, backend API, splash | Existing endpoints, stale-while-revalidate |
 
+### NEW FLOWS CREATED (2026-04-29)
+
+| Flow Path | Type | Topics | Key Decisions |
+|-----------|------|--------|---------------|
+| flows/adr-001-api-contract/ | ADR | API endpoints, POST, response wrapper | Maintain legacy contract |
+| flows/adr-002-local-storage/ | ADR | SQLite, Drift, content/user separation | SQLite + Drift chosen |
+| flows/adr-003-offline-first/ | ADR | offline, sync, stale-while-revalidate | Background sync pattern |
+| flows/sdd-legacy-domain-model/ | SDD | 7 entities, Dart, JSON serialization | Client-side ID generation |
+| flows/sdd-legacy-api-client/ | SDD | Dio, 4 endpoints, error handling | LegacyApiClient interface |
+| flows/sdd-legacy-database-schema/ | SDD | Drift tables, DAOs, migrations | Cascade delete for content |
+| flows/tdd-api-parsing/ | TDD | JSON parsing, nested structures, edge cases | 20+ test cases |
+| flows/tdd-user-data-persistence/ | TDD | bookmarks, notes, soft delete, survival | 20+ test cases |
+
 ## Files Discovered - Swift (iOS)
 
 | File | Domain | Key Entities |

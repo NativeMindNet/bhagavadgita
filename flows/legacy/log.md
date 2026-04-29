@@ -2,6 +2,49 @@
 
 ## Session History
 
+### 2026-04-29 - Create New Dedicated Flows
+
+**Command**: `/legacy Нужно создать именно новые отдельные детализированные ADR,SDD,TDD.`
+
+**Mode**: BFS with new flow creation
+
+**Flows Created**:
+
+#### ADRs (3)
+| Flow | Title | Status |
+|------|-------|--------|
+| `adr-001-api-contract/` | Backend API Contract Design | DRAFT |
+| `adr-002-local-storage/` | Local Storage Strategy | DRAFT |
+| `adr-003-offline-first/` | Offline-First Architecture | DRAFT |
+
+#### SDDs (3)
+| Flow | Title | Status |
+|------|-------|--------|
+| `sdd-legacy-domain-model/` | Legacy Domain Model (7 entities) | DRAFT |
+| `sdd-legacy-api-client/` | Legacy API Client (4 endpoints) | DRAFT |
+| `sdd-legacy-database-schema/` | Legacy Database Schema | DRAFT |
+
+#### TDDs (2)
+| Flow | Title | Status |
+|------|-------|--------|
+| `tdd-api-parsing/` | API Response Parsing | TESTS_DEFINED |
+| `tdd-user-data-persistence/` | Bookmark/Note Persistence | TESTS_DEFINED |
+
+**Key Deliverables**:
+
+1. **ADR-001**: Documents 4 API endpoints, response wrapper format, POST-based contract
+2. **ADR-002**: SQLite + Drift choice, content vs user data separation
+3. **ADR-003**: Stale-while-revalidate pattern, bundled seed strategy
+4. **SDD Domain Model**: 7 entities with Dart code, JSON serialization
+5. **SDD API Client**: LegacyApiClient interface, Dio implementation
+6. **SDD Database**: Full Drift schema, DAOs, migration strategy
+7. **TDD API Parsing**: 20+ test cases for JSON parsing
+8. **TDD User Data**: 20+ test cases for bookmarks/notes
+
+**Result**: 8 new flows created, ready for implementation.
+
+---
+
 ### 2026-04-29 - Full Analysis (Swift + Java + DB)
 
 **Command**: `/legacy восстанови flows из legacy/legacy_bhagavadgita.book_swift + legacy/legacy_bhagavadgita.book_java + legacy/legacy_bhagavadgita.book_db`

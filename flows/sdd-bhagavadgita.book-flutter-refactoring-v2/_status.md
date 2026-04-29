@@ -14,7 +14,7 @@ IN_PROGRESS
 
 ## Blockers
 
-- Android/iOS device run verification still pending in current environment
+- iOS smoke-run blocked: missing iOS 26.4 platform components in local Xcode installation
 - Store publishing requires release credentials and explicit publish confirmation
 
 ## Progress
@@ -41,9 +41,12 @@ IN_PROGRESS
 - Implementation started on 2026-04-29 after explicit `plan approved`
 - Completed first slice: migration matrix artifacts, robust legacy parsing improvements, parser tests, and macOS run smoke
 - Completed second slice: snapshot safety tests, refresh policy tests, and persistent reader settings
+- Completed reader/search parity slice and Android smoke-run verification
+- iOS smoke-run currently blocked by local Xcode component gap
+- Seed offline snapshot updated by user; verified via `flutter test` + macOS smoke-run
 
 ## Next Actions
 
-1. Continue plan execution: schema/seed/snapshot and feature parity tasks
-2. Run Android/iOS device verification
-3. Prepare release checklist and request explicit publish confirmation before store submission
+1. Continue plan execution: release prep (versioning/signing/build artifacts)
+2. Complete iOS device verification after Xcode component install
+3. Prepare release checklist and request explicit publish confirmation (and store credentials) before store submission

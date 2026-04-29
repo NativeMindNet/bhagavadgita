@@ -15,7 +15,7 @@
 | 4.2 Reader settings persistence | Done | Added shared_preferences backed settings state |
 | 4.1 Reader parity improvements | Done | Added chapter bookmark markers and previous/next sloka navigation |
 | 4.2 Search parity improvements | Done | Added vocabulary-aware search and bookmark indicators |
-| 5.2 Platform run verification | In Progress | macOS run successful; Android/iOS pending |
+| 5.2 Platform run verification | In Progress | macOS and Android done; iOS blocked by missing Xcode iOS 26.4 platform |
 | 5.3 Store release handoff | Done | Added `artifacts/release-checklist.md` |
 
 ## Session Log
@@ -75,6 +75,11 @@
 - Task 5.3: Added store handoff checklist.
   - Files changed:
     - `flows/sdd-bhagavadgita.book-flutter-refactoring-v2/artifacts/release-checklist.md`
+- User-provided seed expansion integrated:
+  - `app/bhagavadgita.book/assets/seed/seed_v1_minimal.json` updated (structure verified).
+- QA after seed update:
+  - `flutter test` passed.
+  - macOS smoke-run build succeeded (seed loader path exercised).
 
 #### In Progress
 - Continue implementation plan tasks for schema/seed/snapshot and UI parity.
@@ -157,3 +162,33 @@
 
 **Ended at**: IMPLEMENTATION  
 **Handoff notes**: Continue with Android/iOS verification and release-preparation tasks when target devices and credentials are available.
+
+---
+
+### Session 2026-04-29 - Codex 5.3
+
+**Started at**: IMPLEMENTATION  
+**Context**: User confirmed to continue with mobile smoke-run tasks.
+
+#### Completed
+- Launched iOS and Android emulators and checked device visibility via `flutter devices`.
+- Android smoke-run:
+  - `flutter run -d emulator-5554 --debug` built, installed, and launched successfully.
+- iOS smoke-run attempt:
+  - `flutter run -d 64E37732-F529-4370-9CFD-8708B411DA68 --debug` failed due missing local Xcode iOS 26.4 platform components.
+- Updated release tracking:
+  - `flows/sdd-bhagavadgita.book-flutter-refactoring-v2/artifacts/release-checklist.md`
+
+#### In Progress
+- iOS runtime verification pending until Xcode platform components are installed.
+- Store publishing remains blocked by credentials and explicit release command.
+
+#### Deviations from Plan
+- None.
+
+#### Discoveries
+- Android emulator run is healthy in current environment.
+- iOS build chain requires installing iOS 26.4 platform in Xcode > Settings > Components.
+
+**Ended at**: IMPLEMENTATION  
+**Handoff notes**: After installing iOS 26.4 runtime/components, re-run iOS smoke and then proceed to release execution steps.
