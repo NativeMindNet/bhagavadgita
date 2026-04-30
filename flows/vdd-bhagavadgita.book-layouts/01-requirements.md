@@ -88,6 +88,8 @@ Currently:
 7. Auto-play next sloka option
 8. 3-page onboarding guide with page indicators
 9. Download progress tracking for audio files
+10. Push notifications for quote of the day
+11. Tablet dual-pane layout
 
 ### Won't Have (This Iteration)
 

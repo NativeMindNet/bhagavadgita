@@ -2,7 +2,7 @@
 
 ## Current Phase
 
-REQUIREMENTS
+SPECIFICATIONS
 
 ## Phase Status
 
@@ -19,10 +19,10 @@ DRAFTING
 ## Progress
 
 - [x] Requirements drafted
-- [ ] Requirements approved
-- [ ] Visual mockups drafted
-- [ ] Visual approved
-- [ ] Specifications drafted
+- [x] Requirements approved
+- [x] Visual mockups drafted
+- [x] Visual approved
+- [x] Specifications drafted  ← current
 - [ ] Specifications approved
 - [ ] Plan drafted
 - [ ] Plan approved
@@ -36,21 +36,26 @@ DRAFTING
 Key decisions and context for resuming:
 
 - Flutter app for Bhagavad Gita reading experience
-- Using legacy Swift app as design/UX reference
+- Using legacy Swift + Java apps as design/UX reference
 - Primary color: #FF5252 (red1)
 - Typography: PT Sans for UI, Kohinoor Devanagari for Sanskrit
-- Existing Flutter code has basic screens (Contents, Sloka, Settings, Search)
-- Need to implement full visual design matching iOS legacy app
+- **v1 includes**: Tablet layout + Push notifications
+- Dual-track audio (Sanskrit + Translation)
+- Circular reveal animation for search
+- 9 screens total + tablet variants
+- All visual mockups approved
 
 ## Reference Materials
 
+- Requirements: `flows/vdd-bhagavadgita.book-layouts/01-requirements.md`
+- Visual Mockups: `flows/vdd-bhagavadgita.book-layouts/02-visual.md`
 - Legacy Swift app: `legacy/legacy_bhagavadgita.book_swift/`
-- Style definitions: `legacy/legacy_bhagavadgita.book_swift/Gita/Resources/Style.swift`
-- Assets: `legacy/legacy_bhagavadgita.book_swift/Gita/Assets.xcassets/`
+- Legacy Java app: `legacy/legacy_bhagavadgita.book_java/`
 - Existing Flutter app: `app/bhagavadgita.book/`
 
 ## Next Actions
 
-1. Review requirements document with user
-2. Get requirements approval
-3. Proceed to visual mockups phase
+1. Create technical specifications
+2. Define component architecture
+3. Document data models and interfaces
+4. Get specs approval
