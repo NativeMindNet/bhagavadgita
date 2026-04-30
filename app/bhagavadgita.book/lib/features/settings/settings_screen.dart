@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
 
 import '../../app/theme/gita_colors.dart';
+import '../../l10n/l10n.dart';
+import 'app_language_screen.dart';
+import 'audio_settings_controller.dart';
+import 'content_languages_controller.dart';
+import 'content_languages_screen.dart';
 import 'reader_settings.dart';
 
 class SettingsScreen extends StatelessWidget {
@@ -8,61 +13,272 @@ class SettingsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = context.l10n;
     return Scaffold(
-      appBar: AppBar(title: const Text('Settings')),
-      body: ValueListenableBuilder<ReaderSettings>(
-        valueListenable: readerSettingsController,
-        builder: (context, settings, _) {
-          final headerStyle = Theme.of(context).textTheme.labelSmall?.copyWith(
-            letterSpacing: 1.2,
-            color: GitaColors.gray2,
-          );
+      appBar: AppBar(title: Text(l10n.settingsTitle)),
+      body: AnimatedBuilder(
+        animation: Listenable.merge([
+          readerSettingsController,
+          contentLanguagesController,
+          audioSettingsController,
+        ]),
+        builder: (context, _) {
+          final reader = readerSettingsController.value;
+          final contentLangs = contentLanguagesController.value;
+          final audio = audioSettingsController.value;
+
           return ListView(
             children: [
-              Padding(
-                padding: const EdgeInsets.fromLTRB(16, 18, 16, 8),
-                child: Text('DISPLAY', style: headerStyle),
+              const SizedBox(height: 6),
+              _SectionHeader(text: l10n.settingsSectionLanguages),
+              ListTile(
+                title: Text(l10n.settingsContentLanguagesTitle),
+                subtitle: Text(_contentLanguagesSummary(context, contentLangs)),
+                trailing: const Icon(Icons.chevron_right),
+                onTap: () => Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const ContentLanguagesScreen(),
+                  ),
+                ),
               ),
+              ListTile(
+                title: Text(l10n.settingsAppLanguageTitle),
+                subtitle: Text(_appLanguageSummary(context)),
+                trailing: const Icon(Icons.chevron_right),
+                onTap: () => Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const AppLanguageScreen(),
+                  ),
+                ),
+              ),
+
+              const SizedBox(height: 10),
+              _SectionHeader(text: l10n.settingsSectionDisplay),
               SwitchListTile(
-                title: const Text('Show Sanskrit'),
-                value: settings.showSanskrit,
+                title: Text(l10n.settingsShowSanskrit),
+                value: reader.showSanskrit,
                 onChanged: (v) => readerSettingsController.update(
-                  settings.copyWith(showSanskrit: v),
+                  reader.copyWith(showSanskrit: v),
                 ),
               ),
               SwitchListTile(
-                title: const Text('Show transliteration'),
-                value: settings.showTransliteration,
+                title: Text(l10n.settingsShowTransliteration),
+                value: reader.showTransliteration,
                 onChanged: (v) => readerSettingsController.update(
-                  settings.copyWith(showTransliteration: v),
+                  reader.copyWith(showTransliteration: v),
                 ),
               ),
               SwitchListTile(
-                title: const Text('Show translation'),
-                value: settings.showTranslation,
+                title: Text(l10n.settingsShowTranslation),
+                value: reader.showTranslation,
                 onChanged: (v) => readerSettingsController.update(
-                  settings.copyWith(showTranslation: v),
+                  reader.copyWith(showTranslation: v),
                 ),
               ),
               SwitchListTile(
-                title: const Text('Show comment'),
-                value: settings.showComment,
+                title: Text(l10n.settingsShowComment),
+                value: reader.showComment,
                 onChanged: (v) => readerSettingsController.update(
-                  settings.copyWith(showComment: v),
+                  reader.copyWith(showComment: v),
                 ),
               ),
               SwitchListTile(
-                title: const Text('Show vocabulary'),
-                value: settings.showVocabulary,
+                title: Text(l10n.settingsShowVocabulary),
+                value: reader.showVocabulary,
                 onChanged: (v) => readerSettingsController.update(
-                  settings.copyWith(showVocabulary: v),
+                  reader.copyWith(showVocabulary: v),
                 ),
               ),
+
+              const SizedBox(height: 10),
+              _SectionHeader(text: l10n.settingsSectionAudio),
+              SwitchListTile(
+                title: Text(l10n.settingsAudioTranslation),
+                value: audio.useTranslationAudio,
+                onChanged: (v) async {
+                  final ok = await _confirmAudioToggle(
+                    context,
+                    enable: v,
+                    isSanskrit: false,
+                  );
+                  if (!ok) return;
+                  await audioSettingsController.update(
+                    audio.copyWith(useTranslationAudio: v),
+                  );
+                },
+              ),
+              SwitchListTile(
+                title: Text(l10n.settingsAudioSanskrit),
+                value: audio.useSanskritAudio,
+                onChanged: (v) async {
+                  final ok = await _confirmAudioToggle(
+                    context,
+                    enable: v,
+                    isSanskrit: true,
+                  );
+                  if (!ok) return;
+                  await audioSettingsController.update(
+                    audio.copyWith(useSanskritAudio: v),
+                  );
+                },
+              ),
+              SwitchListTile(
+                title: Text(l10n.settingsAudioAutoPlay),
+                value: audio.autoPlayNext,
+                onChanged: (v) => audioSettingsController.update(
+                  audio.copyWith(autoPlayNext: v),
+                ),
+              ),
+
+              const SizedBox(height: 10),
+              _SectionHeader(text: l10n.settingsSectionInterpretations),
+              ..._placeholderBooks(context, contentLangs),
+
               const SizedBox(height: 20),
             ],
           );
         },
       ),
+    );
+  }
+
+  String _contentLanguagesSummary(
+    BuildContext context,
+    ContentLanguagesSettings settings,
+  ) {
+    final l10n = context.l10n;
+    final labels = settings.selectedCodes
+        .map(
+          (code) => switch (code) {
+            'en' => l10n.languageName_en,
+            'ru' => l10n.languageName_ru,
+            'de' => l10n.languageName_de,
+            'spa' => l10n.languageName_spa,
+            _ => code,
+          },
+        )
+        .toList()
+      ..sort();
+    return labels.join(', ');
+  }
+
+  String _appLanguageSummary(BuildContext context) {
+    final l10n = context.l10n;
+    final code = Localizations.localeOf(context).languageCode;
+    return switch (code) {
+      'en' => l10n.languageName_en,
+      'ru' => l10n.languageName_ru,
+      'de' => l10n.languageName_de,
+      'spa' => l10n.languageName_spa,
+      _ => l10n.settingsAppLanguageSystemDefault,
+    };
+  }
+
+  Future<bool> _confirmAudioToggle(
+    BuildContext context, {
+    required bool enable,
+    required bool isSanskrit,
+  }) async {
+    final l10n = context.l10n;
+    if (enable) {
+      return (await showDialog<bool>(
+            context: context,
+            builder: (context) => AlertDialog(
+              title: Text(l10n.confirmDownloadTitle),
+              content: Text(
+                isSanskrit
+                    ? l10n.confirmDownloadAudioSanskrit
+                    : l10n.confirmDownloadAudioTranslation,
+              ),
+              actions: [
+                TextButton(
+                  onPressed: () => Navigator.pop(context, false),
+                  child: Text(l10n.confirmCancel),
+                ),
+                TextButton(
+                  onPressed: () => Navigator.pop(context, true),
+                  child: Text(l10n.confirmOk),
+                ),
+              ],
+            ),
+          )) ??
+          false;
+    }
+
+    return (await showDialog<bool>(
+          context: context,
+          builder: (context) => AlertDialog(
+            title: Text(l10n.confirmDeleteTitle),
+            content: Text(
+              isSanskrit
+                  ? l10n.confirmDeleteAudioSanskrit
+                  : l10n.confirmDeleteAudioTranslation,
+            ),
+            actions: [
+              TextButton(
+                onPressed: () => Navigator.pop(context, false),
+                child: Text(l10n.confirmCancel),
+              ),
+              TextButton(
+                onPressed: () => Navigator.pop(context, true),
+                child: Text(l10n.confirmYes),
+              ),
+            ],
+          ),
+        )) ??
+        false;
+  }
+
+  List<Widget> _placeholderBooks(
+    BuildContext context,
+    ContentLanguagesSettings contentLangs,
+  ) {
+    final l10n = context.l10n;
+    final items = <({String title, String code, bool downloaded})>[
+      (title: 'Hidden Treasure (SM)', code: 'en', downloaded: true),
+      (title: 'Жемчужина мудрости Востока (ШМ)', code: 'ru', downloaded: true),
+      (title: 'Visvanath Cakravarti (VC)', code: 'en', downloaded: false),
+      (title: 'As It Is (SP)', code: 'en', downloaded: false),
+    ];
+    final filtered =
+        items.where((b) => contentLangs.selectedCodes.contains(b.code)).toList();
+
+    if (filtered.isEmpty) {
+      return [
+        ListTile(
+          title: Text(l10n.loadingEllipsis),
+          subtitle: const Text('No books for selected languages'),
+        ),
+      ];
+    }
+
+    return [
+      for (final b in filtered)
+        ListTile(
+          title: Text(b.title),
+          trailing: Icon(b.downloaded ? Icons.check : Icons.download),
+          onTap: () {},
+        ),
+    ];
+  }
+}
+
+class _SectionHeader extends StatelessWidget {
+  const _SectionHeader({required this.text});
+
+  final String text;
+
+  @override
+  Widget build(BuildContext context) {
+    final style = Theme.of(context).textTheme.labelSmall?.copyWith(
+      letterSpacing: 1.2,
+      color: GitaColors.gray2,
+    );
+    return Padding(
+      padding: const EdgeInsets.fromLTRB(16, 18, 16, 8),
+      child: Text(text, style: style),
     );
   }
 }

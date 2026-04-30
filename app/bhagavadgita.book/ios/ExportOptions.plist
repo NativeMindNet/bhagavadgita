@@ -10,7 +10,7 @@
   <string>__TEAM_ID__</string>
   <key>provisioningProfiles</key>
   <dict>
-    <key>net.nativemind.bhagavadgita.book.bhagavadgitaBook</key>
+    <key>com.ethnoapp.bgita</key>
     <string>__PROFILE_NAME__</string>
   </dict>
   <key>compileBitcode</key>

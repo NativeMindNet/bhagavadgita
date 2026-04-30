@@ -15,25 +15,28 @@ class AppLanguageScreen extends StatelessWidget {
         valueListenable: appLanguageController,
         builder: (context, settings, _) {
           final selected = settings.effectiveLocale?.languageCode;
-          return ListView(
-            children: [
-              RadioListTile<String?>(
-                title: Text(l10n.settingsAppLanguageSystemDefault),
-                value: null,
-                groupValue: selected,
-                onChanged: (_) => appLanguageController.setSystem(),
-              ),
-              for (final locale in AppLanguageController.supported)
+          return RadioGroup<String?>(
+            groupValue: selected,
+            onChanged: (v) {
+              if (v == null) {
+                appLanguageController.setSystem();
+              } else {
+                appLanguageController.setExplicit(v);
+              }
+            },
+            child: ListView(
+              children: [
                 RadioListTile<String?>(
-                  title: Text(_labelFor(context, locale.languageCode)),
-                  value: locale.languageCode,
-                  groupValue: selected,
-                  onChanged: (v) {
-                    if (v == null) return;
-                    appLanguageController.setExplicit(v);
-                  },
+                  title: Text(l10n.settingsAppLanguageSystemDefault),
+                  value: null,
                 ),
-            ],
+                for (final locale in AppLanguageController.supported)
+                  RadioListTile<String?>(
+                    title: Text(_labelFor(context, locale.languageCode)),
+                    value: locale.languageCode,
+                  ),
+              ],
+            ),
           );
         },
       ),
