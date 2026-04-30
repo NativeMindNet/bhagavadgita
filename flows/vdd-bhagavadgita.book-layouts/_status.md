@@ -10,7 +10,7 @@ DRAFTING
 
 ## Last Updated
 
-2026-04-30 by Claude
+2026-04-30 by GPT-5.2 (Cursor)
 
 ## Blockers
 
