@@ -6,7 +6,7 @@ import 'dart:async';
 import '../data/local/app_database.dart';
 import 'audio/audio_controller.dart';
 import 'audio/audio_controller_scope.dart';
-import 'theme/gita_theme.dart';
+import '../ui/theme/app_theme.dart';
 import '../features/splash/splash_screen.dart';
 import '../features/settings/app_language_controller.dart';
 
@@ -43,7 +43,7 @@ class _GitaBookAppState extends State<GitaBookApp> {
         valueListenable: appLanguageController,
         builder: (context, settings, _) => MaterialApp(
           title: 'Bhagavad Gita',
-          theme: GitaTheme.light(),
+          theme: buildAppTheme(),
           locale: settings.effectiveLocale,
           supportedLocales: AppLanguageController.supported,
           localizationsDelegates: const [

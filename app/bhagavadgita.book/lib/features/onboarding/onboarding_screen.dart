@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 
-import '../../ui/theme/app_colors.dart';
+import '../../ui/theme/app_text.dart';
 import '../../data/local/app_database.dart';
 import '../contents/contents_screen.dart';
+import 'app_onboarding_controller.dart';
 
 class _Page {
   const _Page(this.asset, this.title, this.body);
@@ -70,35 +71,28 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                   itemBuilder: (_, i) {
                     final p = _pages[i];
                     return Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 32),
+                      padding: const EdgeInsets.symmetric(horizontal: 40),
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Text(
-                            'OM',
-                            style: Theme.of(context).textTheme.headlineLarge
-                                ?.copyWith(
-                                  color: AppColors.white,
-                                  fontWeight: FontWeight.w700,
-                                ),
+                          Image.asset(
+                            p.asset,
+                            width: 120,
+                            height: 120,
+                            color: AppColors.white,
                           ),
-                          const SizedBox(height: 24),
-                          Text(p.title,
-                              textAlign: TextAlign.center,
-                              style: Theme.of(context)
-                                  .textTheme
-                                  .titleLarge
-                                  ?.copyWith(color: AppColors.white)),
-                          const SizedBox(height: 14),
-                          Text(p.body,
-                              textAlign: TextAlign.center,
-                              style: Theme.of(context)
-                                  .textTheme
-                                  .bodyLarge
-                                  ?.copyWith(
-                                    color:
-                                        AppColors.white.withValues(alpha: 0.92),
-                                  )),
+                          const SizedBox(height: 48),
+                          Text(
+                            p.title,
+                            textAlign: TextAlign.center,
+                            style: AppText.guideTitle(),
+                          ),
+                          const SizedBox(height: 20),
+                          Text(
+                            p.body,
+                            textAlign: TextAlign.center,
+                            style: AppText.guideText(),
+                          ),
                         ],
                       ),
                     );
