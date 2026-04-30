@@ -126,7 +126,6 @@ class _TabletContentsChapterScaffoldState
                         setState(() {
                           _selectedChapterId = c.id;
                           _selectedChapterTitle = 'Chapter ${c.position}';
-                          _selectedChapterName = c.name;
                         });
                         _detailNavKey.currentState?.pushAndRemoveUntil(
                           MaterialPageRoute(

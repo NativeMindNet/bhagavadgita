@@ -84,6 +84,7 @@ Full index with metadata, tags, and relationships: `flows/adr-index.md`
 | Name | Status File | Current Phase |
 |------|-------------|---------------|
 | `sdd-bhagavadgita.book-cicd` | `flows/sdd-bhagavadgita.book-cicd/_status.md` | REQUIREMENTS (DRAFTING) |
+| `sdd-bhagavadgita.book-audioplayer` | `flows/sdd-bhagavadgita.book-audioplayer/_status.md` | REQUIREMENTS (DRAFTING) |
 | `sdd-bhagavadgita.book-layout-swift` | `flows/sdd-bhagavadgita.book-layout-swift/_status.md` | REQUIREMENTS (DRAFTING) |
 
 ### DDD Flows (Document-Driven)

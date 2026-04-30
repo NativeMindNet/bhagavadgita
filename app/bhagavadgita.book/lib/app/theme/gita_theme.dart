@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 import 'gita_colors.dart';
 
@@ -15,8 +14,7 @@ class GitaTheme {
       onSurface: GitaColors.gray1,
     );
 
-    final baseTextTheme = GoogleFonts.ptSansTextTheme();
-    final devanagari = GoogleFonts.notoSansDevanagari();
+    final baseTextTheme = ThemeData.light().textTheme;
 
     return ThemeData(
       useMaterial3: true,
@@ -74,9 +72,6 @@ class GitaTheme {
           fontSize: 12,
           fontWeight: FontWeight.w700,
           color: GitaColors.gray2,
-        ),
-        displayMedium: baseTextTheme.displayMedium?.copyWith(
-          fontFamily: devanagari.fontFamily,
         ),
       ),
     );

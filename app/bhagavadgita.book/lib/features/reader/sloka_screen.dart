@@ -1,6 +1,5 @@
 import 'package:drift/drift.dart' hide Column;
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 import '../../data/local/app_database.dart';
 import '../../data/local/user_data_repository.dart';
@@ -114,8 +113,6 @@ class _SlokaScreenState extends State<SlokaScreen> {
                           textAlign: TextAlign.center,
                           style: theme.textTheme.bodyLarge?.copyWith(
                             height: 1.55,
-                            fontFamily:
-                                GoogleFonts.notoSansDevanagari().fontFamily,
                           ),
                         ),
                         divider,
