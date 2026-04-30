@@ -1,221 +1,107 @@
-# Implementation Plan: Bhagavad Gita Book Layouts (Flutter)
+# Implementation Plan: Bhagavad Gita Book Layouts
 
-> Version: 1.0  
-> Status: APPROVED  
-> Last Updated: 2026-04-30  
-> Specifications: `03-specifications.md`
+This plan details the steps to implement the UI layouts, design system, and responsive structure for the Bhagavad Gita Flutter app, as defined in `03-specifications.md` and `02-visual.md`.
 
-## Summary
+## Phase 1: Design System & Theme Integration
 
-Implement the approved layouts by introducing a small **design system layer** (theme, colors, typography), then refactoring each existing screen to match `02-visual.md`. Keep changes UI-focused and incremental, verifying after each phase with a quick run and a short manual checklist.
+Goal: Establish the core visual identity and fix the broken theme wiring.
 
-Guiding constraints:
-- Preserve existing Drift + repositories behavior.
-- Prefer **new reusable widgets** over copy/paste styles.
-- Keep Material 3 unless it blocks parity (decision recorded as open question).
+- [ ] **Task 1.1: Fix Theme Wiring in `app/app.dart`**
+  - Replace non-existent `import 'theme/gita_theme.dart'` with `import '../ui/theme/app_theme.dart'`.
+  - Update `GitaBookApp` to use `buildAppTheme()` instead of `GitaTheme.light()`.
+  - Verify that the app builds and applies the base red theme.
+- [ ] **Task 1.2: Refine Design System Components**
+  - Verify `app_colors.dart` covers all required colors (#FF5252, #FB9A6A, etc.).
+  - Verify `app_text.dart` includes all required styles (PTSans, Devanagari fallback).
+  - Add missing styles if needed (e.g., `SlokaSectionHeader`, `VariantPill` style).
+- [ ] **Task 1.3: Font Loading Verification**
+  - Ensure `PTSans` is correctly declared in `pubspec.yaml` and assets are present.
+  - Verify `Noto Sans Devanagari` fallback works (bundled or via `google_fonts`).
 
-## Task Breakdown
+## Phase 2: Splash & Onboarding
 
-### Phase 1: Foundation (Design System + primitives)
+Goal: Implement the entry experience.
 
-#### Task 1.1: Add design tokens and theme wiring
-- **Description**: Replace seed theme with explicit color palette and basic typography mapping.
-- **Files**:
-  - `app/bhagavadgita.book/lib/app/app.dart` - Modify
-  - `app/bhagavadgita.book/lib/app/theme/gita_theme.dart` - Create
-  - `app/bhagavadgita.book/lib/app/theme/gita_colors.dart` - Create
-- **Dependencies**: None
-- **Verification**:
-  - App boots; AppBar color/foreground look consistent in Contents/Settings
-- **Complexity**: Medium
+- [ ] **Task 2.1: Update Splash Screen**
+  - Update `lib/features/splash/splash_screen.dart` layout to match `02-visual.md`.
+  - Implement the red gradient background.
+  - Add "OM" logo placeholder and branded title styling.
+  - Add linear progress with percentage text.
+- [ ] **Task 2.2: Implement Onboarding Guide**
+  - Create `lib/features/onboarding/onboarding_screen.dart` (if not fully implemented).
+  - Implement 3-page swiper using `PageView`.
+  - Add page indicators (dots).
+  - Wire "Skip" and "Done" buttons to update `appOnboardingController`.
 
-#### Task 1.2: Add core reusable UI widgets (v1)
-- **Description**: Introduce reusable widgets used across multiple screens.
-- **Files**:
-  - `app/bhagavadgita.book/lib/features/shared/widgets/section_header.dart` - Create
-  - `app/bhagavadgita.book/lib/features/shared/widgets/author_badge.dart` - Create
-  - `app/bhagavadgita.book/lib/features/shared/widgets/quote_card.dart` - Create (optional stub)
-  - `app/bhagavadgita.book/lib/features/shared/widgets/audio_player_bar.dart` - Create (layout shell)
-- **Dependencies**: Task 1.1
-- **Verification**:
-  - Widgets render in isolation when placed in a screen
-- **Complexity**: Low
+## Phase 3: Contents & Navigation
 
-### Phase 2: Screen layout parity (phone)
+Goal: Implement the primary navigation hub.
 
-#### Task 2.1: Splash screen visual parity
-- **Description**: Match gradient background and progress layout from mockups; keep retry behavior.
-- **Files**:
-  - `app/bhagavadgita.book/lib/features/splash/splash_screen.dart` - Modify
-- **Dependencies**: Task 1.1
-- **Verification**:
-  - Launch shows gradient + centered title + progress
-  - Error state still retries on tap
-- **Complexity**: Low
+- [ ] **Task 3.1: Contents Screen UI Refresh**
+  - Update `ContentsScreen` AppBar to use `AppColors.red1`.
+  - Ensure Quote of the Day card matches styling (centered, italic, author badge).
+- [ ] **Task 3.2: Verse Grid in Chapter Tiles**
+  - Modify `lib/features/contents/widgets/chapter_expandable_tile.dart`.
+  - Replace simple `Wrap` with a more structured grid if needed, ensuring `4-6` style ranges (from `Sloka.name`) are handled.
+  - Implement selection highlighting (last read sloka).
+- [ ] **Task 3.3: Search Reveal & Transition**
+  - Verify `CircularRevealPageRoute` in `ContentsScreen`.
+  - Ensure `SearchScreen` uses the white AppBar variant.
 
-#### Task 2.2: Contents screen parity (AppBar, list rows, quote slot, empty state)
-- **Description**: Red AppBar with actions; list styling and empty state aligned to visual.
-- **Files**:
-  - `app/bhagavadgita.book/lib/features/contents/contents_screen.dart` - Modify
-- **Dependencies**: Task 1.1, Task 1.2
-- **Verification**:
-  - Chapters list looks correct
-  - Empty state is readable and aligned (when DB empty)
-- **Complexity**: Medium
+## Phase 4: Sloka Detail & Reader Experience
 
-#### Task 2.3: Chapter screen parity (bookmark indicator)
-- **Description**: Align row layout and bookmark indicator visuals with mockups.
-- **Files**:
-  - `app/bhagavadgita.book/lib/features/reader/chapter_screen.dart` - Modify
-- **Dependencies**: Task 1.1
-- **Verification**:
-  - Bookmarked slokas show filled bookmark icon (and themed color)
-- **Complexity**: Low
+Goal: Implement the core reading experience with multiple layouts.
 
-#### Task 2.4: Sloka detail parity (sections + note + audio bar shell)
-- **Description**: Add section headers, separators, Sanskrit centering/font hook, commentary author badge, and persistent audio bar layout shell.
-- **Files**:
-  - `app/bhagavadgita.book/lib/features/reader/sloka_screen.dart` - Modify
-  - `app/bhagavadgita.book/lib/features/shared/widgets/section_header.dart` - Use
-  - `app/bhagavadgita.book/lib/features/shared/widgets/author_badge.dart` - Use
-  - `app/bhagavadgita.book/lib/features/shared/widgets/audio_player_bar.dart` - Use
-- **Dependencies**: Task 1.2
-- **Verification**:
-  - Toggling reader settings hides/shows sections correctly
-  - Note editor still saves/loads
-  - Bottom audio bar layout is present (even if non-functional)
-- **Complexity**: High
+- [ ] **Task 4.1: Sloka Screen Layout Variants**
+  - Implement conditional layout for `SlokaScreen`:
+    - Red AppBar (Phone/Legacy).
+    - White Topbar (“К оглавлению”) + Actions (Tablet/Compact).
+- [ ] **Task 4.2: Round Navigation Buttons**
+  - Implement `RoundNavButtons` widget.
+  - On tablet/compact, overlay these buttons on the left/right sides of the content.
+- [ ] **Task 4.3: Multi-Variant Sections**
+  - Update `SlokaScreen` to support multiple translations/commentaries if present in the data.
+  - Implement `VariantPill` widget to label these blocks (e.g., `Ru`, `En SP`).
+- [ ] **Task 4.4: Audio Mini-Player**
+  - Implement `MiniPlayerBar` (compact version of `AudioPlayerBar`).
+  - Add to the bottom of `SlokaScreen` when audio is active.
+- [ ] **Task 4.5: Note Editor Styling**
+  - Update the Note section to match the compact design (Gray background, Save button styling).
 
-#### Task 2.5: Settings screen parity (sections, headers, toggle styling)
-- **Description**: Add section headers and align toggles’ visuals to design tokens while preserving behavior.
-- **Files**:
-  - `app/bhagavadgita.book/lib/features/settings/settings_screen.dart` - Modify
-- **Dependencies**: Task 1.1
-- **Verification**:
-  - Toggle changes reflect on Sloka screen
-  - Persist across restart
-- **Complexity**: Medium
+## Phase 5: Settings & Preferences
 
-### Phase 3: Search circular reveal + scrim
+Goal: Implement the compact settings UI.
 
-#### Task 3.1: Search screen structure updates (white appbar, scrim-ready layout)
-- **Description**: Update Search screen UI to match white AppBar style and layout expectations.
-- **Files**:
-  - `app/bhagavadgita.book/lib/features/search/search_screen.dart` - Modify
-- **Dependencies**: Task 1.1
-- **Verification**:
-  - Search UI looks consistent and remains functional
-- **Complexity**: Medium
+- [ ] **Task 5.1: Settings Screen UI Refresh**
+  - Update `SettingsScreen` to use section headers (uppercase, Gray 2).
+  - Use compact toggle rows with red accent.
+- [ ] **Task 5.2: Traktovki Selection**
+  - Implement the "Трактовки" section with multi-select checkmarks.
+  - Add "Скачать" (Download) action placeholder for missing content.
 
-#### Task 3.2: Circular reveal transition for opening/closing search
-- **Description**: Implement a circular reveal route/transition when navigating to Search from Contents.
-- **Files**:
-  - `app/bhagavadgita.book/lib/features/contents/contents_screen.dart` - Modify (use custom route)
-  - `app/bhagavadgita.book/lib/features/search/search_route.dart` - Create
-  - `app/bhagavadgita.book/lib/features/search/widgets/circular_reveal.dart` - Create
-- **Dependencies**: Task 3.1
-- **Verification**:
-  - Transition duration ~300ms
-  - Looks like circular reveal from search icon position (best-effort)
-- **Complexity**: High
+## Phase 6: Tablet & Responsive Scaffolding
 
-### Phase 4: Tablet master-detail scaffolds
+Goal: Finalize the dual-pane experience.
 
-#### Task 4.1: Add breakpoint + tablet navigation scaffolds
-- **Description**: Implement dual-pane layouts for Contents→Chapter and Chapter→Sloka on wide screens.
-- **Files**:
-  - `app/bhagavadgita.book/lib/features/tablet/breakpoints.dart` - Create
-  - `app/bhagavadgita.book/lib/features/tablet/contents_chapter_scaffold.dart` - Create
-  - `app/bhagavadgita.book/lib/features/tablet/chapter_sloka_scaffold.dart` - Create
-  - `app/bhagavadgita.book/lib/features/contents/contents_screen.dart` - Modify (route to tablet scaffold when wide)
-  - `app/bhagavadgita.book/lib/features/reader/chapter_screen.dart` - Modify (support embedding)
-  - `app/bhagavadgita.book/lib/features/reader/sloka_screen.dart` - Modify (support embedding)
-- **Dependencies**: Phase 2 complete
-- **Verification**:
-  - Resizing / running on tablet width shows dual-pane
-  - Selection on left updates right pane without full navigation push (where appropriate)
-- **Complexity**: High
+- [ ] **Task 6.1: Master-Detail Scaffolds**
+  - Verify and refine `lib/features/tablet/contents_chapter_scaffold.dart`.
+  - Implement `TabletBookmarksSlokaScaffold` (split-view for bookmarks).
+- [ ] **Task 6.2: Tablet Split-View Optimizations**
+  - Ensure 40/60 split ratio.
+  - Synchronize selection between master list and detail view.
 
-### Phase 5: Polish + checks
+## Phase 7: Verification & Polishing
 
-#### Task 5.1: Fonts integration decision and implementation
-- **Description**: Implement PT Sans via `google_fonts` and decide Devanagari font approach (licensing).
-- **Files**:
-  - `app/bhagavadgita.book/pubspec.yaml` - Modify (dependency + font assets if needed)
-  - `app/bhagavadgita.book/lib/app/theme/gita_theme.dart` - Modify
-- **Dependencies**: Task 1.1
-- **Verification**:
-  - Typography matches requirements table as closely as possible
-- **Complexity**: Medium
+- [ ] **Task 7.1: Golden Tests / Widget Tests**
+  - Create tests for major layout states (Contents expanded, Sloka phone/tablet).
+- [ ] **Task 7.2: Visual Regression Check**
+  - Manually verify all screens against ASCII mockups in `02-visual.md`.
+- [ ] **Task 7.3: Performance Audit**
+  - Ensure smooth scrolling and transitions on target devices.
 
-#### Task 5.2: Manual QA pass against mockups
-- **Description**: Quick pass across all 9 screens; ensure no regressions in DB-driven flows.
-- **Files**: None (or small fixes in touched screens)
-- **Dependencies**: All phases
-- **Verification**:
-  - Checklist in “Manual Verification” passes
-- **Complexity**: Medium
+## Rollout Strategy
 
-## Dependency Graph
-
-```
-Task 1.1 ─→ Task 1.2 ─→ Task 2.2 ─┬─→ Task 2.4 ─→ Task 4.1
-                │                ├─→ Task 2.3
-                │                └─→ Task 2.5
-Task 2.1 ───────┘
-
-Task 3.1 ─→ Task 3.2
-
-Task 5.1 (can happen anytime after 1.1)
-Task 5.2 (final)
-```
-
-## File Change Summary
-
-| File | Action | Reason |
-|------|--------|--------|
-| `app/bhagavadgita.book/lib/app/theme/gita_colors.dart` | Create | Centralize approved palette |
-| `app/bhagavadgita.book/lib/app/theme/gita_theme.dart` | Create | Centralize ThemeData/typography |
-| `app/bhagavadgita.book/lib/app/app.dart` | Modify | Use explicit theme |
-| `app/bhagavadgita.book/lib/features/shared/widgets/*` | Create | Reuse across screens |
-| `app/bhagavadgita.book/lib/features/search/search_route.dart` | Create | Circular reveal route |
-| `app/bhagavadgita.book/lib/features/tablet/*` | Create | Dual-pane scaffolds |
-| `app/bhagavadgita.book/lib/features/*/*_screen.dart` | Modify | Apply layout parity |
-
-## Risk Assessment
-
-| Risk | Likelihood | Impact | Mitigation |
-|------|------------|--------|------------|
-| Circular reveal feels off | Med | Med | Implement best-effort custom clip; tune duration/curve; fall back to fade if needed |
-| Tablet scaffolds complicate navigation | Med | High | Keep tablet-only code isolated; embed screens with minimal assumptions |
-| Font licensing (Kohinoor) | High | Med | Provide fallback Devanagari font (e.g. Noto Sans Devanagari) if licensing blocks |
-| Styling regressions | Med | Med | Small PR-sized commits; verify after each phase |
-
-## Rollback Strategy
-
-If parity refactor causes issues:
-1. Revert the last phase commit(s) (theme/screens are staged by phases).
-2. Keep design system files; re-apply incrementally.
-
-## Checkpoints
-
-After each phase, verify:
-- [ ] App builds and runs
-- [ ] No crashes during navigation
-- [ ] Contents → Chapter → Sloka path still works
-- [ ] Settings toggles still persist and affect Sloka
-
-## Open Implementation Questions
-
-- [ ] Decide Material 3 vs Material 2 (keep M3 unless blocked)
-- [ ] Confirm tablet breakpoint and exact pane ratio
-- [ ] Decide Devanagari font strategy (Kohinoor vs fallback)
-
----
-
-## Approval
-
-- [x] Reviewed by: Anton
-- [x] Approved on: 2026-04-30
-- [x] Notes: Plan approved
-
+1.  Start with Theme fix and Font verification (Phase 1).
+2.  Implement UI refreshes screen by screen (Contents -> Sloka -> Settings).
+3.  Add Tablet-specific layouts.
+4.  Final polish and testing.

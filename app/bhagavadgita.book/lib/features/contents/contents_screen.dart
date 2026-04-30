@@ -141,9 +141,20 @@ class _PhoneContentsState extends State<_PhoneContents> {
             separatorBuilder: (context, index) => const Divider(height: 1),
             itemBuilder: (context, index) {
               if (index == 0) {
-                return const QuoteCard(
-                  quote: '“You have a right to perform your prescribed duty…”',
-                  author: 'Bhagavad Gita',
+                return FutureBuilder<Sloka?>(
+                  // Simple way to get a "random" sloka for today using bookId=1
+                  future: (widget.db.select(widget.db.slokas)
+                        ..where((t) => t.chapterId.isBetweenValues(1, 18))
+                        ..limit(1, offset: DateTime.now().day * 7 % 700))
+                      .getSingleOrNull(),
+                  builder: (context, snap) {
+                    final s = snap.data;
+                    if (s == null) return const SizedBox.shrink();
+                    return QuoteCard(
+                      quote: s.translation ?? s.slokaText ?? '',
+                      author: 'Гита ${s.name}',
+                    );
+                  },
                 );
               }
               final c = chapters[index - 1];
