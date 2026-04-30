@@ -117,8 +117,8 @@ class _TabletContentsChapterScaffoldState
                     final selected = c.id == _selectedChapterId;
                     return ListTile(
                       selected: selected,
-                      selectedColor: GitaColors.red1,
-                      selectedTileColor: GitaColors.red1.withValues(alpha: 0.06),
+                      selectedColor: AppColors.red1,
+                      selectedTileColor: AppColors.red1.withValues(alpha: 0.06),
                       title: Text('Chapter ${c.position}'),
                       subtitle: Text(c.name),
                       trailing: const Icon(Icons.chevron_right),

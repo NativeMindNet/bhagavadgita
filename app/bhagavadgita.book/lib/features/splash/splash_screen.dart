@@ -86,7 +86,7 @@ class _SplashScaffold extends StatelessWidget {
           width: double.infinity,
           height: double.infinity,
           padding: const EdgeInsets.symmetric(horizontal: 24),
-          decoration: const BoxDecoration(gradient: GitaColors.splashGradient),
+          decoration: const BoxDecoration(gradient: AppColors.splashGradient),
           child: SafeArea(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -94,7 +94,7 @@ class _SplashScaffold extends StatelessWidget {
                 Text(
                   'OM',
                   style: theme.textTheme.headlineLarge?.copyWith(
-                    color: GitaColors.white,
+                    color: AppColors.white,
                     fontWeight: FontWeight.w700,
                     letterSpacing: 1.0,
                   ),
@@ -104,7 +104,7 @@ class _SplashScaffold extends StatelessWidget {
                   title,
                   textAlign: TextAlign.center,
                   style: theme.textTheme.headlineSmall?.copyWith(
-                    color: GitaColors.white,
+                    color: AppColors.white,
                     letterSpacing: 1.2,
                   ),
                 ),
@@ -113,7 +113,7 @@ class _SplashScaffold extends StatelessWidget {
                   subtitle,
                   textAlign: TextAlign.center,
                   style: theme.textTheme.bodyLarge?.copyWith(
-                    color: GitaColors.white.withValues(alpha: 0.92),
+                    color: AppColors.white.withValues(alpha: 0.92),
                   ),
                 ),
                 if (showProgress) ...[
@@ -125,9 +125,9 @@ class _SplashScaffold extends StatelessWidget {
                       child: LinearProgressIndicator(
                         value: null,
                         minHeight: 8,
-                        backgroundColor: GitaColors.white30,
+                        backgroundColor: AppColors.white30,
                         valueColor:
-                            const AlwaysStoppedAnimation(GitaColors.white),
+                            const AlwaysStoppedAnimation(AppColors.white),
                       ),
                     ),
                   ),

@@ -15,7 +15,7 @@ class AuthorBadge extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final textStyle = Theme.of(context).textTheme.labelSmall?.copyWith(
-      color: GitaColors.red1,
+      color: AppColors.red1,
       fontWeight: FontWeight.w700,
     );
 
@@ -25,8 +25,8 @@ class AuthorBadge extends StatelessWidget {
       alignment: Alignment.center,
       decoration: BoxDecoration(
         shape: BoxShape.circle,
-        color: GitaColors.white,
-        border: Border.all(color: GitaColors.red1, width: 1.5),
+        color: AppColors.white,
+        border: Border.all(color: AppColors.red1, width: 1.5),
       ),
       child: Text(initials, style: textStyle),
     );

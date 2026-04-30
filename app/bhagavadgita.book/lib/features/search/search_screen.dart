@@ -55,8 +55,8 @@ class _SearchScreenState extends State<SearchScreen> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Search'),
-        backgroundColor: GitaColors.white,
-        foregroundColor: GitaColors.gray1,
+        backgroundColor: AppColors.white,
+        foregroundColor: AppColors.gray1,
         elevation: 0,
         scrolledUnderElevation: 0,
       ),

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class GitaColors {
+class AppColors {
   // Primary palette (from requirements)
   static const red1 = Color(0xFFFF5252);
   static const red2 = Color(0xFFFB9A6A);

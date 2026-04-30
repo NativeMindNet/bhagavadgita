@@ -19,16 +19,16 @@ class QuoteCard extends StatelessWidget {
       margin: const EdgeInsets.fromLTRB(16, 16, 16, 10),
       padding: const EdgeInsets.all(14),
       decoration: BoxDecoration(
-        color: GitaColors.gray5,
+        color: AppColors.gray5,
         borderRadius: BorderRadius.circular(12),
-        border: Border.all(color: GitaColors.gray4),
+        border: Border.all(color: AppColors.gray4),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
             quote,
-            style: theme.textTheme.bodyMedium?.copyWith(color: GitaColors.gray1),
+            style: theme.textTheme.bodyMedium?.copyWith(color: AppColors.gray1),
           ),
           if (author != null && author!.trim().isNotEmpty) ...[
             const SizedBox(height: 10),
@@ -37,7 +37,7 @@ class QuoteCard extends StatelessWidget {
               child: Text(
                 '- $author',
                 style: theme.textTheme.bodySmall?.copyWith(
-                  color: GitaColors.gray2,
+                  color: AppColors.gray2,
                 ),
               ),
             ),

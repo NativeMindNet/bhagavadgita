@@ -11,7 +11,7 @@ class SectionHeader extends StatelessWidget {
   Widget build(BuildContext context) {
     final style = Theme.of(context).textTheme.labelSmall?.copyWith(
       letterSpacing: 1.2,
-      color: GitaColors.gray2,
+      color: AppColors.gray2,
     );
     return Padding(
       padding: const EdgeInsets.only(top: 10, bottom: 6),

@@ -57,7 +57,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
     final isFirst = _index == 0;
     return Scaffold(
       body: Container(
-        decoration: const BoxDecoration(gradient: GitaColors.splashGradient),
+        decoration: const BoxDecoration(gradient: AppColors.splashGradient),
         child: SafeArea(
           child: Column(
             children: [
@@ -77,7 +77,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                             'OM',
                             style: Theme.of(context).textTheme.headlineLarge
                                 ?.copyWith(
-                                  color: GitaColors.white,
+                                  color: AppColors.white,
                                   fontWeight: FontWeight.w700,
                                 ),
                           ),
@@ -87,7 +87,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                               style: Theme.of(context)
                                   .textTheme
                                   .titleLarge
-                                  ?.copyWith(color: GitaColors.white)),
+                                  ?.copyWith(color: AppColors.white)),
                           const SizedBox(height: 14),
                           Text(p.body,
                               textAlign: TextAlign.center,
@@ -96,7 +96,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                                   .bodyLarge
                                   ?.copyWith(
                                     color:
-                                        GitaColors.white.withValues(alpha: 0.92),
+                                        AppColors.white.withValues(alpha: 0.92),
                                   )),
                         ],
                       ),
@@ -120,14 +120,14 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                                     curve: Curves.easeOut,
                                   ),
                           style: TextButton.styleFrom(
-                            foregroundColor: GitaColors.white,
+                            foregroundColor: AppColors.white,
                           ),
                           child: Text(isFirst ? 'Skip' : '‹ Back'),
                         ),
                         FilledButton(
                           style: FilledButton.styleFrom(
-                            backgroundColor: GitaColors.white,
-                            foregroundColor: GitaColors.red1,
+                            backgroundColor: AppColors.white,
+                            foregroundColor: AppColors.red1,
                           ),
                           onPressed: isLast
                               ? _toContents
@@ -172,8 +172,8 @@ class _Dots extends StatelessWidget {
             decoration: BoxDecoration(
               shape: BoxShape.circle,
               color: i == index
-                  ? GitaColors.white
-                  : GitaColors.white.withValues(alpha: 0.35),
+                  ? AppColors.white
+                  : AppColors.white.withValues(alpha: 0.35),
             ),
           ),
       ],

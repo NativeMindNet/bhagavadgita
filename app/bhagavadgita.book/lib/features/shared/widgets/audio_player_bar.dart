@@ -74,13 +74,13 @@ class AudioPlayerBar extends StatelessWidget {
       top: false,
       child: Material(
         elevation: 8,
-        color: GitaColors.white,
+        color: AppColors.white,
         child: Opacity(
           opacity: enabled ? 1 : 0.55,
           child: Container(
             padding: const EdgeInsets.fromLTRB(12, 10, 12, 10),
             decoration: BoxDecoration(
-              border: Border(top: BorderSide(color: GitaColors.gray4)),
+              border: Border(top: BorderSide(color: AppColors.gray4)),
             ),
             child: Column(
               mainAxisSize: MainAxisSize.min,
@@ -119,15 +119,15 @@ class AudioPlayerBar extends StatelessWidget {
                               autoPlay ? Icons.repeat_one : Icons.repeat,
                               size: 18,
                               color:
-                                  autoPlay ? GitaColors.red1 : GitaColors.gray2,
+                                  autoPlay ? AppColors.red1 : AppColors.gray2,
                             ),
                             const SizedBox(width: 4),
                             Text(
                               'Auto',
                               style: theme.textTheme.bodySmall?.copyWith(
                                 color: autoPlay
-                                    ? GitaColors.red1
-                                    : GitaColors.gray2,
+                                    ? AppColors.red1
+                                    : AppColors.gray2,
                                 fontWeight: FontWeight.w600,
                               ),
                             ),
@@ -143,7 +143,7 @@ class AudioPlayerBar extends StatelessWidget {
                     IconButton(
                       onPressed: enabled ? onPlayPause : null,
                       icon: Icon(isPlaying ? Icons.pause : Icons.play_arrow),
-                      color: GitaColors.gray1,
+                      color: AppColors.gray1,
                     ),
                     Expanded(
                       child: _SeekBar(
@@ -156,7 +156,7 @@ class AudioPlayerBar extends StatelessWidget {
                     Text(
                       positionLabel,
                       style: theme.textTheme.bodySmall?.copyWith(
-                        color: GitaColors.gray2,
+                        color: AppColors.gray2,
                         fontFeatures: const [FontFeature.tabularFigures()],
                       ),
                     ),
@@ -212,8 +212,8 @@ class _SeekBar extends StatelessWidget {
             child: LinearProgressIndicator(
               value: p,
               minHeight: 6,
-              backgroundColor: GitaColors.gray4,
-              valueColor: const AlwaysStoppedAnimation(GitaColors.red1),
+              backgroundColor: AppColors.gray4,
+              valueColor: const AlwaysStoppedAnimation(AppColors.red1),
             ),
           ),
         );
@@ -244,14 +244,14 @@ class _TrackChip extends StatelessWidget {
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(999),
           border: Border.all(
-            color: selected ? GitaColors.red1 : GitaColors.gray3,
+            color: selected ? AppColors.red1 : AppColors.gray3,
           ),
-          color: selected ? GitaColors.red1.withValues(alpha: 0.08) : null,
+          color: selected ? AppColors.red1.withValues(alpha: 0.08) : null,
         ),
         child: Text(
           label,
           style: theme.textTheme.bodySmall?.copyWith(
-            color: selected ? GitaColors.red1 : GitaColors.gray2,
+            color: selected ? AppColors.red1 : AppColors.gray2,
             fontWeight: FontWeight.w600,
           ),
         ),

@@ -63,7 +63,7 @@ class _TabletChapterSlokaScaffoldState extends State<TabletChapterSlokaScaffold>
                     widget.chapterName,
                     overflow: TextOverflow.ellipsis,
                     style: Theme.of(context).textTheme.bodySmall?.copyWith(
-                          color: GitaColors.white.withValues(alpha: 0.92),
+                          color: AppColors.white.withValues(alpha: 0.92),
                         ),
                   ),
                 ],
@@ -124,9 +124,9 @@ class _TabletChapterSlokaScaffoldState extends State<TabletChapterSlokaScaffold>
                     final selected = s.id == _selectedSlokaId;
                     return ListTile(
                       selected: selected,
-                      selectedColor: GitaColors.red1,
+                      selectedColor: AppColors.red1,
                       selectedTileColor:
-                          GitaColors.red1.withValues(alpha: 0.06),
+                          AppColors.red1.withValues(alpha: 0.06),
                       title: Text(s.name),
                       subtitle: Text(
                         s.translation ?? s.slokaText ?? '',

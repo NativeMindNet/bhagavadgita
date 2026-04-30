@@ -203,7 +203,7 @@ class SettingsScreen extends StatelessWidget {
                         Text(
                           dl.currentLabel!,
                           style: Theme.of(context).textTheme.bodySmall?.copyWith(
-                                color: GitaColors.gray2,
+                                color: AppColors.gray2,
                               ),
                         ),
                       ],
@@ -354,7 +354,7 @@ class _SectionHeader extends StatelessWidget {
   Widget build(BuildContext context) {
     final style = Theme.of(context).textTheme.labelSmall?.copyWith(
       letterSpacing: 1.2,
-      color: GitaColors.gray2,
+      color: AppColors.gray2,
     );
     return Padding(
       padding: const EdgeInsets.fromLTRB(16, 18, 16, 8),
