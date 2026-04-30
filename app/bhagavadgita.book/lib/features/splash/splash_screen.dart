@@ -1,6 +1,9 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 
 import '../../app/bootstrap/bootstrap_coordinator.dart';
+import '../../ui/theme/app_colors.dart';
 import '../../ui/theme/app_text.dart';
 import '../../data/local/app_database.dart';
 import '../contents/contents_screen.dart';

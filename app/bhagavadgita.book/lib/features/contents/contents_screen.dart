@@ -1,6 +1,8 @@
 import 'package:drift/drift.dart' hide Column;
 import 'package:flutter/material.dart';
 
+import '../../ui/theme/app_colors.dart';
+import '../../ui/theme/app_text.dart';
 import '../../data/local/app_database.dart';
 import '../shared/widgets/quote_card.dart';
 import '../reader/sloka_screen.dart';
@@ -54,7 +56,7 @@ class _PhoneContentsState extends State<_PhoneContents> {
       appBar: AppBar(
         backgroundColor: AppColors.red1,
         foregroundColor: AppColors.white,
-        title: const Text('Бхагавад Гита', style: AppText.navTitle()),
+        title: Text('Бхагавад Гита', style: AppText.navTitle()),
         actions: [
           IconButton(
             key: _searchKey,

@@ -2,11 +2,11 @@
 
 ## Current Phase
 
-REQUIREMENTS
+PLAN
 
 ## Phase Status
 
-DRAFTING
+DRAFTED
 
 ## Last Updated
 
@@ -14,16 +14,15 @@ DRAFTING
 
 ## Blockers
 
-- Нужно найти/подключить источники `avadhuta`, `legacy-cookbook-swift`, `legacy-gitanjali-swift`, `legacy-sgg-ru-v1-swift` (в текущем репозитории не обнаружены).
-- Не описана схема соответствия «глава/шлока → файл/URL» для полного онлайн‑каталога AudioVeda.
+- Нет (ожидание подтверждения плана).
 
 ## Progress
 
-- [x] Requirements drafted  ← current
-- [ ] Requirements approved
-- [ ] Specifications drafted
-- [ ] Specifications approved
-- [ ] Plan drafted
+- [x] Requirements drafted
+- [x] Requirements approved
+- [x] Specifications drafted
+- [x] Specifications approved
+- [x] Plan drafted  ← current
 - [ ] Plan approved
 - [ ] Implementation started
 - [ ] Implementation complete

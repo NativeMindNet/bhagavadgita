@@ -2,7 +2,10 @@ import 'package:drift/drift.dart';
 import 'package:flutter/material.dart';
 
 import '../../ui/theme/app_colors.dart';
+import '../../ui/theme/app_text.dart';
 import '../../data/local/app_database.dart';
+import '../contents/widgets/chapter_expandable_tile.dart';
+import '../reader/sloka_screen.dart';
 import '../search/search_route.dart';
 import '../search/search_screen.dart';
 import '../settings/settings_screen.dart';
@@ -131,6 +134,7 @@ class _TabletContentsChapterScaffoldState
                           chapter: c,
                           slokas: slokas,
                           isExpanded: isExpanded,
+                          selectedSlokaId: null,
                           onExpansionChanged: (expanded) {
                             setState(() {
                               _selectedChapterId = expanded ? c.id : null;

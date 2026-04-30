@@ -1,6 +1,8 @@
 import 'package:drift/drift.dart' hide Column;
 import 'package:flutter/material.dart';
 
+import '../../ui/theme/app_colors.dart';
+import '../../ui/theme/app_text.dart';
 import '../../app/audio/audio_controller_scope.dart';
 import '../../app/audio/audio_state.dart';
 import '../../app/audio/audio_storage.dart';
@@ -12,6 +14,7 @@ import '../settings/reader_settings.dart';
 import '../shared/widgets/audio_player_bar.dart';
 import '../shared/widgets/author_badge.dart';
 import '../shared/widgets/section_header.dart';
+import 'widgets/mini_player_bar.dart';
 import 'widgets/variant_pill.dart';
 
 class SlokaScreen extends StatefulWidget {
@@ -382,7 +385,7 @@ class _SlokaScreenState extends State<SlokaScreen> {
     return Scaffold(
       appBar: widget.isCompact
           ? AppBar(
-              title: const Text('К оглавлению', style: AppText.navTitle()),
+              title: Text('К оглавлению', style: AppText.navTitle()),
               backgroundColor: AppColors.white,
               foregroundColor: AppColors.gray1,
               elevation: 0,
@@ -409,7 +412,7 @@ class _SlokaScreenState extends State<SlokaScreen> {
               ],
             )
           : AppBar(
-              title: const Text('Sloka', style: AppText.navTitle()),
+              title: Text('Sloka', style: AppText.navTitle()),
               backgroundColor: AppColors.red1,
               foregroundColor: AppColors.white,
               actions: [
@@ -429,9 +432,6 @@ class _SlokaScreenState extends State<SlokaScreen> {
                 ),
               ],
             ),
-import 'widgets/variant_pill.dart';
-import 'widgets/mini_player_bar.dart';
-// ...
       bottomNavigationBar: widget.isCompact
           ? MiniPlayerBar(
               controller: AudioControllerScope.of(context),

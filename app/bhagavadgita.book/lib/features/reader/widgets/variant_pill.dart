@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../../ui/theme/app_colors.dart';
-import '../../ui/theme/app_text.dart';
+import '../../../ui/theme/app_colors.dart';
+import '../../../ui/theme/app_text.dart';
 
 class VariantPill extends StatelessWidget {
   const VariantPill({super.key, required this.label});

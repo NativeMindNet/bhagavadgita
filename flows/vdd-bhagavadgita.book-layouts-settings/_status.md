@@ -6,17 +6,17 @@ IMPLEMENTATION
 
 ## Phase Status
 
-**BLOCKED** (critical compilation errors)
+IN PROGRESS
 
 ## Last Updated
 
-2026-04-30 by Claude Opus 4.5
+2026-05-01 by Claude Opus 4.5
 
 ## Blockers
 
-- **C1**: `settings_screen.dart` — дублирующийся код после строки 370, не компилируется
-- **C2**: `settings_screen.dart` — отсутствует import `AppText`
-- **C3**: `app_language_screen.dart` — использует несуществующий `RadioGroup`
+- ~~**C1**: `settings_screen.dart` — дублирующийся код~~ **FIXED**
+- ~~**C2**: `settings_screen.dart` — отсутствует import `AppText`~~ **FIXED**
+- **C3**: `app_language_screen.dart` — использует несуществующий `RadioGroup` (pending)
 
 ## Progress
 
@@ -27,9 +27,9 @@ IMPLEMENTATION
 - [x] Specifications drafted (v1.1 — добавлен gap analysis)
 - [ ] Specifications approved
 - [x] Plan drafted
-- [ ] Plan approved
+- [x] Plan approved
 - [x] Implementation started
-- [ ] Implementation complete ← **blocked by C1-C3**
+- [ ] Implementation complete ← C1-C2 fixed, C3 pending
 - [ ] Documentation drafted
 - [ ] Documentation approved
 

@@ -2,9 +2,11 @@ import 'package:drift/drift.dart' hide Column;
 import 'package:flutter/material.dart';
 
 import '../../ui/theme/app_colors.dart';
+import '../../ui/theme/app_text.dart';
 import '../../data/local/app_database.dart';
 import '../../data/local/user_data_repository.dart';
 import '../reader/sloka_screen.dart';
+import 'widgets/highlighted_text.dart';
 
 class SearchScreen extends StatefulWidget {
   const SearchScreen({super.key, required this.db});
@@ -18,6 +20,7 @@ class SearchScreen extends StatefulWidget {
 class _SearchScreenState extends State<SearchScreen> {
   final TextEditingController _queryController = TextEditingController();
   String _query = '';
+  bool _onlyBookmarks = false;
 
   @override
   void dispose() {
@@ -54,7 +57,7 @@ class _SearchScreenState extends State<SearchScreen> {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Поиск', style: AppText.navTitle()),
+        title: Text('Поиск', style: AppText.navTitle()),
         backgroundColor: AppColors.white,
         foregroundColor: AppColors.gray1,
         elevation: 0,
