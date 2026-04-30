@@ -114,29 +114,39 @@ class _TabletContentsChapterScaffoldState
                       );
                     }
                     final c = chapters[index - 1];
-                    final selected = c.id == _selectedChapterId;
-                    return ListTile(
-                      selected: selected,
-                      selectedColor: AppColors.red1,
-                      selectedTileColor: AppColors.red1.withValues(alpha: 0.06),
-                      title: Text('Chapter ${c.position}'),
-                      subtitle: Text(c.name),
-                      trailing: const Icon(Icons.chevron_right),
-                      onTap: () {
-                        setState(() {
-                          _selectedChapterId = c.id;
-                          _selectedChapterTitle = 'Chapter ${c.position}';
-                        });
-                        _detailNavKey.currentState?.pushAndRemoveUntil(
-                          MaterialPageRoute(
-                            builder: (context) => _ChapterDetailPane(
-                              db: widget.db,
-                              chapterId: c.id,
-                              chapterTitle: 'Chapter ${c.position}',
-                              chapterName: c.name,
-                            ),
-                          ),
-                          (r) => false,
+                    final isExpanded = c.id == _selectedChapterId;
+
+                    return StreamBuilder<List<Sloka>>(
+                      stream: (widget.db.select(widget.db.slokas)
+                            ..where((t) => t.chapterId.equals(c.id))
+                            ..orderBy([(t) => OrderingTerm.asc(t.position)]))
+                          .watch(),
+                      builder: (context, slokaSnap) {
+                        final slokas = slokaSnap.data ?? const [];
+                        return ChapterExpandableTile(
+                          chapter: c,
+                          slokas: slokas,
+                          isExpanded: isExpanded,
+                          onExpansionChanged: (expanded) {
+                            setState(() {
+                              _selectedChapterId = expanded ? c.id : null;
+                              _selectedChapterTitle = expanded ? 'Chapter ${c.position}' : null;
+                            });
+                          },
+                          onSlokaTap: (s) {
+                            _detailNavKey.currentState?.pushAndRemoveUntil(
+                              MaterialPageRoute(
+                                builder: (context) => SlokaScreen(
+                                  db: widget.db,
+                                  slokaId: s.id,
+                                  chapterId: c.id,
+                                  position: s.position,
+                                  embedded: true,
+                                ),
+                              ),
+                              (r) => false,
+                            );
+                          },
                         );
                       },
                     );

@@ -57,7 +57,15 @@ class _SplashScreenState extends State<SplashScreen> {
           );
         }
 
-        return ContentsScreen(db: widget.db);
+        return ListenableBuilder(
+          listenable: appOnboardingController,
+          builder: (context, _) {
+            if (!appOnboardingController.value) {
+              return OnboardingScreen(db: widget.db);
+            }
+            return ContentsScreen(db: widget.db);
+          },
+        );
       },
     );
   }

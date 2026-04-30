@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../../ui/theme/app_colors.dart';
+import '../../../ui/theme/app_text.dart';
 
 class AuthorBadge extends StatelessWidget {
   const AuthorBadge({
@@ -14,9 +15,8 @@ class AuthorBadge extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final textStyle = Theme.of(context).textTheme.labelSmall?.copyWith(
+    final textStyle = AppText.label().copyWith(
       color: AppColors.red1,
-      fontWeight: FontWeight.w700,
     );
 
     return Container(

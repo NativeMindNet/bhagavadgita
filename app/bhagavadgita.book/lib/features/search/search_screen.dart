@@ -63,15 +63,43 @@ class _SearchScreenState extends State<SearchScreen> {
       body: Column(
         children: [
           Padding(
-            padding: const EdgeInsets.all(12),
+            padding: const EdgeInsets.fromLTRB(12, 12, 12, 0),
             child: TextField(
               controller: _queryController,
-              decoration: const InputDecoration(
-                border: OutlineInputBorder(),
-                prefixIcon: Icon(Icons.search),
+              autofocus: true,
+              decoration: InputDecoration(
+                border: const OutlineInputBorder(),
+                prefixIcon: const Icon(Icons.search),
+                suffixIcon: q.isNotEmpty
+                    ? IconButton(
+                        icon: const Icon(Icons.clear),
+                        onPressed: () {
+                          _queryController.clear();
+                          setState(() => _query = '');
+                        },
+                      )
+                    : null,
                 hintText: 'Search in slokas and translations',
               ),
               onChanged: (value) => setState(() => _query = value),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 12),
+            child: Row(
+              children: [
+                FilterChip(
+                  label: const Text('All'),
+                  selected: !_onlyBookmarks,
+                  onSelected: (v) => setState(() => _onlyBookmarks = !v),
+                ),
+                const SizedBox(width: 8),
+                FilterChip(
+                  label: const Text('Bookmarks'),
+                  selected: _onlyBookmarks,
+                  onSelected: (v) => setState(() => _onlyBookmarks = v),
+                ),
+              ],
             ),
           ),
           Expanded(
@@ -85,9 +113,14 @@ class _SearchScreenState extends State<SearchScreen> {
                 if (q.isNotEmpty && items.isEmpty) {
                   return const Center(child: Text('Nothing found.'));
                 }
-                if (q.isEmpty && items.isEmpty) {
+                if (q.isEmpty && items.isEmpty && !_onlyBookmarks) {
                   return const Center(
                     child: Text('No slokas in local snapshot.'),
+                  );
+                }
+                if (q.isEmpty && items.isEmpty && _onlyBookmarks) {
+                  return const Center(
+                    child: Text('No bookmarks found.'),
                   );
                 }
                 return ListView.separated(
@@ -96,11 +129,24 @@ class _SearchScreenState extends State<SearchScreen> {
                   itemBuilder: (context, index) {
                     final s = items[index];
                     return ListTile(
-                      title: Text(s.name),
-                      subtitle: Text(
-                        s.translation ?? s.slokaText ?? '',
+                      title: HighlightedText(
+                        text: s.name,
+                        query: q,
+                        style: AppText.body().copyWith(fontWeight: FontWeight.w700),
+                        highlightStyle: AppText.body().copyWith(
+                          fontWeight: FontWeight.w700,
+                          backgroundColor: AppColors.red2.withValues(alpha: 0.3),
+                        ),
+                      ),
+                      subtitle: HighlightedText(
+                        text: s.translation ?? s.slokaText ?? '',
+                        query: q,
                         maxLines: 2,
                         overflow: TextOverflow.ellipsis,
+                        style: AppText.body(),
+                        highlightStyle: AppText.body().copyWith(
+                          backgroundColor: AppColors.red2.withValues(alpha: 0.3),
+                        ),
                       ),
                       trailing: StreamBuilder<bool>(
                         stream: userData.watchBookmark(s.id),
@@ -108,9 +154,7 @@ class _SearchScreenState extends State<SearchScreen> {
                           final isBookmarked = bookmarkSnap.data ?? false;
                           return Icon(
                             isBookmarked ? Icons.bookmark : Icons.chevron_right,
-                            color: isBookmarked
-                                ? Theme.of(context).colorScheme.primary
-                                : null,
+                            color: isBookmarked ? AppColors.red1 : null,
                           );
                         },
                       ),

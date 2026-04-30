@@ -352,6 +352,39 @@ class _SectionHeader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final style = AppText.label();
+    return Padding(
+      padding: const EdgeInsets.fromLTRB(16, 18, 16, 8),
+      child: Text(text.toUpperCase(), style: style),
+    );
+  }
+}
+
+title: Text(
+            b.title,
+            style: AppText.body().copyWith(
+              color: b.downloaded ? AppColors.gray1 : AppColors.gray2,
+            ),
+          ),
+          trailing: b.downloaded
+              ? null
+              : TextButton(
+                  onPressed: () {},
+                  child: const Text('Скачать'),
+                ),
+          onTap: b.downloaded ? () {} : null,
+        ),
+    ];
+  }
+}
+
+class _SectionHeader extends StatelessWidget {
+  const _SectionHeader({required this.text});
+
+  final String text;
+
+  @override
+  Widget build(BuildContext context) {
     final style = Theme.of(context).textTheme.labelSmall?.copyWith(
       letterSpacing: 1.2,
       color: AppColors.gray2,

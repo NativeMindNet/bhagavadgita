@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'dart:ui';
 
 import '../../../app/audio/audio_controller.dart';
 import '../../../app/audio/audio_state.dart';
 import '../../../ui/theme/app_colors.dart';
+import '../../../ui/theme/app_text.dart';
 import '../../../app/audio/audio_track.dart';
 
 class AudioPlayerBarWithController extends StatelessWidget {
@@ -34,6 +36,7 @@ class AudioPlayerBarWithController extends StatelessWidget {
           onToggleAutoPlay: onToggleAutoPlay,
           onSeek: controller.seekToFraction,
           enabled: s.activeSource.isPlayable,
+          title: s.activeSource.label ?? 'Sanskrit',
         );
       },
     );
@@ -53,12 +56,14 @@ class AudioPlayerBar extends StatelessWidget {
     this.autoPlay = false,
     this.onSeek,
     this.enabled = true,
+    required this.title,
   });
 
   final AudioTrack track;
   final bool isPlaying;
   final String positionLabel;
   final double progress; // 0..1
+  final String title;
 
   final VoidCallback? onPlayPause;
   final ValueChanged<AudioTrack>? onSelectTrack;
@@ -69,7 +74,6 @@ class AudioPlayerBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final theme = Theme.of(context);
     return SafeArea(
       top: false,
       child: Material(
@@ -77,93 +81,66 @@ class AudioPlayerBar extends StatelessWidget {
         color: AppColors.white,
         child: Opacity(
           opacity: enabled ? 1 : 0.55,
-          child: Container(
-            padding: const EdgeInsets.fromLTRB(12, 10, 12, 10),
-            decoration: BoxDecoration(
-              border: Border(top: BorderSide(color: AppColors.gray4)),
-            ),
-            child: Column(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                Row(
-                  children: [
-                    _TrackChip(
-                      label: 'Sanskrit',
-                      selected: track == AudioTrack.sanskrit,
-                      onTap: (!enabled || onSelectTrack == null)
-                          ? null
-                          : () => onSelectTrack!(AudioTrack.sanskrit),
-                    ),
-                    const SizedBox(width: 8),
-                    _TrackChip(
-                      label: 'Translation',
-                      selected: track == AudioTrack.translation,
-                      onTap: (!enabled || onSelectTrack == null)
-                          ? null
-                          : () => onSelectTrack!(AudioTrack.translation),
-                    ),
-                    const Spacer(),
-                    InkWell(
-                      onTap: (!enabled || onToggleAutoPlay == null)
-                          ? null
-                          : () => onToggleAutoPlay!(!autoPlay),
-                      borderRadius: BorderRadius.circular(12),
-                      child: Padding(
-                        padding: const EdgeInsets.symmetric(
-                          horizontal: 8,
-                          vertical: 6,
-                        ),
-                        child: Row(
-                          children: [
-                            Icon(
-                              autoPlay ? Icons.repeat_one : Icons.repeat,
-                              size: 18,
-                              color:
-                                  autoPlay ? AppColors.red1 : AppColors.gray2,
-                            ),
-                            const SizedBox(width: 4),
-                            Text(
-                              'Auto',
-                              style: theme.textTheme.bodySmall?.copyWith(
-                                color: autoPlay
-                                    ? AppColors.red1
-                                    : AppColors.gray2,
-                                fontWeight: FontWeight.w600,
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                  ],
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              _SeekBar(
+                enabled: enabled,
+                progress: progress,
+                onSeek: onSeek,
+              ),
+              Container(
+                padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                decoration: const BoxDecoration(
+                  border: Border(top: BorderSide(color: AppColors.gray4)),
                 ),
-                const SizedBox(height: 8),
-                Row(
+                child: Row(
                   children: [
                     IconButton(
                       onPressed: enabled ? onPlayPause : null,
                       icon: Icon(isPlaying ? Icons.pause : Icons.play_arrow),
-                      color: AppColors.gray1,
+                      color: AppColors.red1,
+                      iconSize: 32,
                     ),
+                    const SizedBox(width: 8),
                     Expanded(
-                      child: _SeekBar(
-                        enabled: enabled,
-                        progress: progress,
-                        onSeek: onSeek,
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            title,
+                            style: AppText.label().copyWith(color: AppColors.gray1),
+                          ),
+                          Text(
+                            positionLabel,
+                            style: AppText.caption().copyWith(
+                              fontFeatures: const [FontFeature.tabularFigures()],
+                            ),
+                          ),
+                        ],
                       ),
                     ),
-                    const SizedBox(width: 10),
-                    Text(
-                      positionLabel,
-                      style: theme.textTheme.bodySmall?.copyWith(
-                        color: AppColors.gray2,
-                        fontFeatures: const [FontFeature.tabularFigures()],
+                    _TrackToggle(
+                      track: track,
+                      onSelectTrack: onSelectTrack,
+                      enabled: enabled,
+                    ),
+                    const SizedBox(width: 8),
+                    IconButton(
+                      onPressed: (!enabled || onToggleAutoPlay == null)
+                          ? null
+                          : () => onToggleAutoPlay!(!autoPlay),
+                      icon: Icon(
+                        autoPlay ? Icons.repeat_one : Icons.repeat,
+                        size: 20,
                       ),
+                      color: autoPlay ? AppColors.red1 : AppColors.gray2,
+                      tooltip: 'Auto-play Next',
                     ),
                   ],
                 ),
-              ],
-            ),
+              ),
+            ],
           ),
         ),
       ),
@@ -192,29 +169,20 @@ class _SeekBar extends StatelessWidget {
           onTapDown: (!enabled || onSeek == null)
               ? null
               : (d) {
-                  final x =
-                      d.localPosition.dx.clamp(0.0, constraints.maxWidth);
-                  onSeek!(
-                    constraints.maxWidth <= 0 ? 0 : (x / constraints.maxWidth),
-                  );
+                  final x = d.localPosition.dx.clamp(0.0, constraints.maxWidth);
+                  onSeek!(constraints.maxWidth <= 0 ? 0 : (x / constraints.maxWidth));
                 },
           onHorizontalDragUpdate: (!enabled || onSeek == null)
               ? null
               : (d) {
-                  final x =
-                      d.localPosition.dx.clamp(0.0, constraints.maxWidth);
-                  onSeek!(
-                    constraints.maxWidth <= 0 ? 0 : (x / constraints.maxWidth),
-                  );
+                  final x = d.localPosition.dx.clamp(0.0, constraints.maxWidth);
+                  onSeek!(constraints.maxWidth <= 0 ? 0 : (x / constraints.maxWidth));
                 },
-          child: ClipRRect(
-            borderRadius: BorderRadius.circular(999),
-            child: LinearProgressIndicator(
-              value: p,
-              minHeight: 6,
-              backgroundColor: AppColors.gray4,
-              valueColor: const AlwaysStoppedAnimation(AppColors.red1),
-            ),
+          child: LinearProgressIndicator(
+            value: p,
+            minHeight: 4,
+            backgroundColor: AppColors.gray4,
+            valueColor: const AlwaysStoppedAnimation(AppColors.red1),
           ),
         );
       },
@@ -222,41 +190,75 @@ class _SeekBar extends StatelessWidget {
   }
 }
 
-class _TrackChip extends StatelessWidget {
-  const _TrackChip({
+class _TrackToggle extends StatelessWidget {
+  const _TrackToggle({
+    required this.track,
+    required this.onSelectTrack,
+    required this.enabled,
+  });
+
+  final AudioTrack track;
+  final ValueChanged<AudioTrack>? onSelectTrack;
+  final bool enabled;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      decoration: BoxDecoration(
+        color: AppColors.gray5,
+        borderRadius: BorderRadius.circular(8),
+      ),
+      child: Row(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          _TrackToggleButton(
+            label: 'S',
+            selected: track == AudioTrack.sanskrit,
+            onPressed: (!enabled || onSelectTrack == null)
+                ? null
+                : () => onSelectTrack!(AudioTrack.sanskrit),
+          ),
+          _TrackToggleButton(
+            label: 'T',
+            selected: track == AudioTrack.translation,
+            onPressed: (!enabled || onSelectTrack == null)
+                ? null
+                : () => onSelectTrack!(AudioTrack.translation),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class _TrackToggleButton extends StatelessWidget {
+  const _TrackToggleButton({
     required this.label,
     required this.selected,
-    required this.onTap,
+    required this.onPressed,
   });
 
   final String label;
   final bool selected;
-  final VoidCallback? onTap;
+  final VoidCallback? onPressed;
 
   @override
   Widget build(BuildContext context) {
-    final theme = Theme.of(context);
-    return InkWell(
-      onTap: onTap,
-      borderRadius: BorderRadius.circular(999),
+    return GestureDetector(
+      onTap: onPressed,
       child: Container(
-        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
+        padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(999),
-          border: Border.all(
-            color: selected ? AppColors.red1 : AppColors.gray3,
-          ),
-          color: selected ? AppColors.red1.withValues(alpha: 0.08) : null,
+          color: selected ? AppColors.red1 : Colors.transparent,
+          borderRadius: BorderRadius.circular(8),
         ),
         child: Text(
           label,
-          style: theme.textTheme.bodySmall?.copyWith(
-            color: selected ? AppColors.red1 : AppColors.gray2,
-            fontWeight: FontWeight.w600,
+          style: AppText.label().copyWith(
+            color: selected ? AppColors.white : AppColors.gray2,
           ),
         ),
       ),
     );
   }
 }
-

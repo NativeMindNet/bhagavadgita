@@ -1,70 +1,131 @@
 import 'package:drift/drift.dart' hide Column;
 import 'package:flutter/material.dart';
+import 'package:flutter_slidable/flutter_slidable.dart';
 
 import '../../data/local/app_database.dart';
 import '../../data/local/user_data_repository.dart';
 import '../reader/sloka_screen.dart';
+import '../../ui/theme/app_colors.dart';
+import '../../ui/theme/app_text.dart';
+import '../search/widgets/highlighted_text.dart';
 
-class BookmarksScreen extends StatelessWidget {
+class BookmarksScreen extends StatefulWidget {
   const BookmarksScreen({super.key, required this.db});
 
   final AppDatabase db;
 
   @override
+  State<BookmarksScreen> createState() => _BookmarksScreenState();
+}
+
+class _BookmarksScreenState extends State<BookmarksScreen> {
+  final TextEditingController _queryController = TextEditingController();
+  String _query = '';
+
+  @override
+  void dispose() {
+    _queryController.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
-    final userData = UserDataRepository(db);
+    final userData = UserDataRepository(widget.db);
+    final q = _query.trim();
+
     return Scaffold(
       appBar: AppBar(
         title: const Text('Bookmarks'),
       ),
-      body: StreamBuilder<List<(Bookmark, Sloka)>>(
-        stream: _watchBookmarksWithSlokas(db),
-        builder: (context, snap) {
-          final rows = snap.data ?? const [];
-          if (snap.connectionState == ConnectionState.waiting && rows.isEmpty) {
-            return const Center(child: CircularProgressIndicator());
-          }
-          if (rows.isEmpty) return const _EmptyBookmarks();
+      body: Column(
+        children: [
+          Padding(
+            padding: const EdgeInsets.all(12),
+            child: TextField(
+              controller: _queryController,
+              decoration: InputDecoration(
+                border: const OutlineInputBorder(),
+                prefixIcon: const Icon(Icons.search),
+                suffixIcon: q.isNotEmpty
+                    ? IconButton(
+                        icon: const Icon(Icons.clear),
+                        onPressed: () {
+                          _queryController.clear();
+                          setState(() => _query = '');
+                        },
+                      )
+                    : null,
+                hintText: 'Search within bookmarks',
+              ),
+              onChanged: (value) => setState(() => _query = value),
+            ),
+          ),
+          Expanded(
+            child: StreamBuilder<List<(Bookmark, Sloka)>>(
+              stream: _watchBookmarksWithSlokas(widget.db, q),
+              builder: (context, snap) {
+                final rows = snap.data ?? const [];
+                if (snap.connectionState == ConnectionState.waiting && rows.isEmpty) {
+                  return const Center(child: CircularProgressIndicator());
+                }
+                if (rows.isEmpty) return const _EmptyBookmarks();
 
-          return ListView.separated(
-            itemCount: rows.length,
-            separatorBuilder: (context, index) => const Divider(height: 1),
-            itemBuilder: (context, i) {
-              final (bookmark, sloka) = rows[i];
-              return Dismissible(
-                key: ValueKey('bookmark-${bookmark.slokaId}'),
-                background: Container(
-                  color: Theme.of(context).colorScheme.errorContainer,
-                  alignment: Alignment.centerRight,
-                  padding: const EdgeInsets.only(right: 16),
-                  child: Icon(
-                    Icons.delete_outline,
-                    color: Theme.of(context).colorScheme.onErrorContainer,
-                  ),
-                ),
-                direction: DismissDirection.endToStart,
-                onDismissed: (_) => userData.setBookmark(sloka.id, false),
-                child: ListTile(
-                  title: Text(sloka.name),
-                  subtitle: Text(
-                    sloka.translation ?? sloka.slokaText ?? '',
-                    maxLines: 2,
-                    overflow: TextOverflow.ellipsis,
-                  ),
-                  trailing: const Icon(Icons.chevron_right),
-                  onTap: () {
-                    Navigator.of(context).push(
-                      MaterialPageRoute(
-                        builder: (context) =>
-                            SlokaScreen(db: db, slokaId: sloka.id),
+                return ListView.separated(
+                  itemCount: rows.length,
+                  separatorBuilder: (context, index) => const Divider(height: 1),
+                  itemBuilder: (context, i) {
+                    final (bookmark, sloka) = rows[i];
+                    return Slidable(
+                      key: ValueKey('bookmark-${bookmark.slokaId}'),
+                      endActionPane: ActionPane(
+                        motion: const ScrollMotion(),
+                        children: [
+                          SlidableAction(
+                            onPressed: (_) => userData.setBookmark(sloka.id, false),
+                            backgroundColor: AppColors.red1,
+                            foregroundColor: AppColors.white,
+                            icon: Icons.delete,
+                            label: 'Delete',
+                          ),
+                        ],
+                      ),
+                      child: ListTile(
+                        title: HighlightedText(
+                          text: sloka.name,
+                          query: q,
+                          style: AppText.body().copyWith(fontWeight: FontWeight.w700),
+                          highlightStyle: AppText.body().copyWith(
+                            fontWeight: FontWeight.w700,
+                            backgroundColor: AppColors.red2.withValues(alpha: 0.3),
+                          ),
+                        ),
+                        subtitle: HighlightedText(
+                          text: sloka.translation ?? sloka.slokaText ?? '',
+                          query: q,
+                          maxLines: 2,
+                          overflow: TextOverflow.ellipsis,
+                          style: AppText.body(),
+                          highlightStyle: AppText.body().copyWith(
+                            backgroundColor: AppColors.red2.withValues(alpha: 0.3),
+                          ),
+                        ),
+                        trailing: const Icon(Icons.chevron_right),
+                        onTap: () {
+                          Navigator.of(context).push(
+                            MaterialPageRoute(
+                              builder: (context) =>
+                                  SlokaScreen(db: widget.db, slokaId: sloka.id),
+                            ),
+                          );
+                        },
                       ),
                     );
                   },
-                ),
-              );
-            },
-          );
-        },
+                );
+              },
+            ),
+          ),
+        ],
       ),
     );
   }
@@ -83,20 +144,18 @@ class _EmptyBookmarks extends StatelessWidget {
             Icon(
               Icons.bookmark_border,
               size: 76,
-              color: Theme.of(context).colorScheme.primary.withValues(
-                    alpha: 0.4,
-                  ),
+              color: AppColors.red1.withValues(alpha: 0.4),
             ),
             const SizedBox(height: 16),
             Text(
               'No bookmarks yet',
-              style: Theme.of(context).textTheme.titleMedium,
+              style: AppText.heading(),
             ),
             const SizedBox(height: 8),
             Text(
               'Tap the bookmark icon on any sloka to save it here.',
               textAlign: TextAlign.center,
-              style: Theme.of(context).textTheme.bodyMedium,
+              style: AppText.body(),
             ),
           ],
         ),
@@ -105,11 +164,24 @@ class _EmptyBookmarks extends StatelessWidget {
   }
 }
 
-Stream<List<(Bookmark, Sloka)>> _watchBookmarksWithSlokas(AppDatabase db) {
+Stream<List<(Bookmark, Sloka)>> _watchBookmarksWithSlokas(AppDatabase db, String query) {
   final q = db.select(db.bookmarks).join([
     innerJoin(db.slokas, db.slokas.id.equalsExp(db.bookmarks.slokaId)),
-  ])
-    ..orderBy([OrderingTerm.desc(db.bookmarks.createdAtMs)]);
+    leftOuterJoin(db.notes, db.notes.slokaId.equalsExp(db.bookmarks.slokaId)),
+  ]);
+
+  if (query.isNotEmpty) {
+    final like = '%${query.replaceAll('%', r'\%').replaceAll('_', r'\_')}%';
+    q.where(
+      db.slokas.name.like(like) |
+          db.slokas.slokaText.like(like) |
+          db.slokas.translation.like(like) |
+          db.slokas.comment.like(like) |
+          db.notes.note.like(like),
+    );
+  }
+
+  q.orderBy([OrderingTerm.desc(db.bookmarks.createdAtMs)]);
 
   return q.watch().map((rows) {
     return rows.map((r) {

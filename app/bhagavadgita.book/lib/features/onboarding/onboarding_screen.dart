@@ -46,6 +46,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
   ];
 
   void _toContents() {
+    appOnboardingController.markShown();
     Navigator.of(context).pushReplacement(MaterialPageRoute(
       builder: (_) => ContentsScreen(db: widget.db),
     ));

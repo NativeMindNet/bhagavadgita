@@ -200,23 +200,22 @@ class _SlokaScreenState extends State<SlokaScreen> {
               Center(
                 child: Text(
                   sloka.position.toString(),
-                  style: Theme.of(context).textTheme.bodySmall,
+                  style: AppText.caption(),
                 ),
               ),
               const SizedBox(height: 6),
               Text(
                 sloka.name,
                 textAlign: TextAlign.center,
-                style: Theme.of(context).textTheme.titleLarge,
+                style: AppText.heading(),
               ),
               const SizedBox(height: 12),
               ValueListenableBuilder<ReaderSettings>(
                 valueListenable: readerSettingsController,
                 builder: (context, settings, _) {
-                  final theme = Theme.of(context);
-                  final divider = Padding(
-                    padding: const EdgeInsets.symmetric(vertical: 10),
-                    child: Divider(color: theme.dividerColor, height: 1),
+                  final divider = const Padding(
+                    padding: EdgeInsets.symmetric(vertical: 10),
+                    child: Divider(),
                   );
                   return Column(
                     crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -227,9 +226,7 @@ class _SlokaScreenState extends State<SlokaScreen> {
                         Text(
                           sloka.slokaText!,
                           textAlign: TextAlign.center,
-                          style: theme.textTheme.bodyLarge?.copyWith(
-                            height: 1.55,
-                          ),
+                          style: AppText.sanskrit(),
                         ),
                         divider,
                       ],
@@ -238,16 +235,17 @@ class _SlokaScreenState extends State<SlokaScreen> {
                         const SectionHeader('Transcription'),
                         Text(
                           sloka.transcription!,
-                          style: theme.textTheme.bodyMedium?.copyWith(
-                            fontStyle: FontStyle.italic,
-                          ),
+                          style: AppText.bodyItalic(),
                         ),
                         divider,
                       ],
                       if (settings.showTranslation &&
                           (sloka.translation ?? '').isNotEmpty) ...[
                         const SectionHeader('Translation'),
-                        Text(sloka.translation!, style: theme.textTheme.bodyLarge),
+                        Text(
+                          sloka.translation!,
+                          style: AppText.body(),
+                        ),
                         divider,
                       ],
                       if (settings.showComment &&
@@ -261,7 +259,7 @@ class _SlokaScreenState extends State<SlokaScreen> {
                             Expanded(
                               child: Text(
                                 sloka.comment!,
-                                style: theme.textTheme.bodyMedium,
+                                style: AppText.body(),
                               ),
                             ),
                           ],
@@ -277,7 +275,7 @@ class _SlokaScreenState extends State<SlokaScreen> {
                             if (items.isEmpty) {
                               return Text(
                                 'No vocabulary yet.',
-                                style: theme.textTheme.bodySmall,
+                                style: AppText.caption(),
                               );
                             }
                             return Column(
@@ -286,8 +284,16 @@ class _SlokaScreenState extends State<SlokaScreen> {
                                   ListTile(
                                     dense: true,
                                     contentPadding: EdgeInsets.zero,
-                                    title: Text(v.tokenText),
-                                    subtitle: Text(v.translation),
+                                    title: Text(
+                                      v.tokenText,
+                                      style: AppText.body().copyWith(
+                                        fontWeight: FontWeight.w600,
+                                      ),
+                                    ),
+                                    subtitle: Text(
+                                      v.translation,
+                                      style: AppText.body(),
+                                    ),
                                   ),
                               ],
                             );
@@ -422,54 +428,75 @@ class _SlokaNavigator extends StatelessWidget {
           builder: (context, nextSnap) {
             final previous = prevSnap.data;
             final next = nextSnap.data;
-            return Row(
-              children: [
-                Expanded(
-                  child: OutlinedButton.icon(
+            return Padding(
+              padding: const EdgeInsets.symmetric(vertical: 8),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  _NavButton(
+                    icon: Icons.chevron_left,
                     onPressed: previous == null
                         ? null
-                        : () {
-                            Navigator.of(context).pushReplacement(
-                              MaterialPageRoute(
-                                builder: (_) => SlokaScreen(
-                                  db: db,
-                                  slokaId: previous.id,
-                                  chapterId: chapterId,
-                                  position: previous.position,
-                                ),
-                              ),
-                            );
-                          },
-                    icon: const Icon(Icons.chevron_left),
-                    label: const Text('Previous'),
+                        : () => _navigateToSloka(context, previous),
                   ),
-                ),
-                const SizedBox(width: 12),
-                Expanded(
-                  child: OutlinedButton.icon(
+                  _NavButton(
+                    icon: Icons.chevron_right,
                     onPressed: next == null
                         ? null
-                        : () {
-                            Navigator.of(context).pushReplacement(
-                              MaterialPageRoute(
-                                builder: (_) => SlokaScreen(
-                                  db: db,
-                                  slokaId: next.id,
-                                  chapterId: chapterId,
-                                  position: next.position,
-                                ),
-                              ),
-                            );
-                          },
-                    icon: const Icon(Icons.chevron_right),
-                    label: const Text('Next'),
+                        : () => _navigateToSloka(context, next),
                   ),
-                ),
-              ],
+                ],
+              ),
             );
           },
         );
       },
+    );
+  }
+
+  void _navigateToSloka(BuildContext context, Sloka sloka) {
+    Navigator.of(context).pushReplacement(
+      MaterialPageRoute(
+        builder: (_) => SlokaScreen(
+          db: db,
+          slokaId: sloka.id,
+          chapterId: chapterId,
+          position: sloka.position,
+        ),
+      ),
+    );
+  }
+}
+
+class _NavButton extends StatelessWidget {
+  const _NavButton({required this.icon, required this.onPressed});
+
+  final IconData icon;
+  final VoidCallback? onPressed;
+
+  @override
+  Widget build(BuildContext context) {
+    return Material(
+      color: Colors.transparent,
+      child: InkWell(
+        onTap: onPressed,
+        customBorder: const CircleBorder(),
+        child: Container(
+          width: 48,
+          height: 48,
+          decoration: BoxDecoration(
+            shape: BoxShape.circle,
+            border: Border.all(
+              color: onPressed != null ? AppColors.red1 : AppColors.gray3,
+              width: 1.5,
+            ),
+          ),
+          child: Icon(
+            icon,
+            color: onPressed != null ? AppColors.red1 : AppColors.gray3,
+          ),
+        ),
+      ),
     );
   }
 }

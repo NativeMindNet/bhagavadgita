@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../../ui/theme/app_colors.dart';
+import '../../../ui/theme/app_text.dart';
 
 class SectionHeader extends StatelessWidget {
   const SectionHeader(this.text, {super.key});
@@ -9,10 +10,7 @@ class SectionHeader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final style = Theme.of(context).textTheme.labelSmall?.copyWith(
-      letterSpacing: 1.2,
-      color: AppColors.gray2,
-    );
+    final style = AppText.label();
     return Padding(
       padding: const EdgeInsets.only(top: 10, bottom: 6),
       child: Text(text.toUpperCase(), style: style),
