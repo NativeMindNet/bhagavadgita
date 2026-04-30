@@ -103,7 +103,8 @@ Full index with metadata, tags, and relationships: `flows/adr-index.md`
 
 | Name | Status File | Current Phase |
 |------|-------------|---------------|
-| `vdd-bhagavadgita.book-layouts` | `flows/vdd-bhagavadgita.book-layouts/_status.md` | REQUIREMENTS (DRAFTING) |
+| `vdd-bhagavadgita.book-layouts` | `flows/vdd-bhagavadgita.book-layouts/_status.md` | DOCUMENTATION (DRAFTING) |
+| `vdd-bhagavadgita.book-layouts-settings` | `flows/vdd-bhagavadgita.book-layouts-settings/_status.md` | REQUIREMENTS (DRAFTING) |
 <!-- FLOWS_INDEX_END -->
 
 ---
