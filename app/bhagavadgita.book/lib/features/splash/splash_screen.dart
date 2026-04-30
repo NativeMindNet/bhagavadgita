@@ -23,6 +23,8 @@ class _SplashScreenState extends State<SplashScreen> {
   late Future<BootstrapResult> _future;
   double _simulatedProgress = 0.0;
   Timer? _progressTimer;
+  bool _showDownloadDialog = false;
+  bool _downloadDialogDismissed = false;
 
   @override
   void initState() {
@@ -94,6 +96,36 @@ class _SplashScreenState extends State<SplashScreen> {
           );
         }
 
+        // Show download dialog on first successful bootstrap
+        if (!_downloadDialogDismissed && !_showDownloadDialog) {
+          WidgetsBinding.instance.addPostFrameCallback((_) {
+            if (mounted) setState(() => _showDownloadDialog = true);
+          });
+        }
+
+        if (_showDownloadDialog) {
+          return _SplashScaffold(
+            title: 'BHAGAVAD GITA',
+            subtitle: '',
+            showProgress: false,
+            dialog: _AudioDownloadDialog(
+              onYes: () {
+                setState(() {
+                  _showDownloadDialog = false;
+                  _downloadDialogDismissed = true;
+                });
+                // TODO: Trigger audio download via AudioDownloadController
+              },
+              onNo: () {
+                setState(() {
+                  _showDownloadDialog = false;
+                  _downloadDialogDismissed = true;
+                });
+              },
+            ),
+          );
+        }
+
         return ListenableBuilder(
           listenable: appOnboardingController,
           builder: (context, _) {
@@ -115,6 +147,7 @@ class _SplashScaffold extends StatelessWidget {
     required this.showProgress,
     this.progress = 0.0,
     this.onTap,
+    this.dialog,
   });
 
   final String title;
@@ -122,6 +155,7 @@ class _SplashScaffold extends StatelessWidget {
   final bool showProgress;
   final double progress;
   final VoidCallback? onTap;
+  final Widget? dialog;
 
   @override
   Widget build(BuildContext context) {
@@ -185,10 +219,83 @@ class _SplashScaffold extends StatelessWidget {
                     ),
                   ),
                 ],
+                if (dialog != null) ...[
+                  const SizedBox(height: 32),
+                  dialog!,
+                ],
               ],
             ),
           ),
         ),
+      ),
+    );
+  }
+}
+
+class _AudioDownloadDialog extends StatelessWidget {
+  const _AudioDownloadDialog({
+    required this.onYes,
+    required this.onNo,
+  });
+
+  final VoidCallback onYes;
+  final VoidCallback onNo;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      margin: const EdgeInsets.symmetric(horizontal: 16),
+      padding: const EdgeInsets.all(20),
+      decoration: BoxDecoration(
+        color: AppColors.white,
+        borderRadius: BorderRadius.circular(12),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black.withValues(alpha: 0.2),
+            blurRadius: 16,
+            offset: const Offset(0, 4),
+          ),
+        ],
+      ),
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Text(
+            'Download audio files?',
+            style: AppText.heading(),
+          ),
+          const SizedBox(height: 12),
+          Text(
+            'Sanskrit and translation audio (~150 MB)',
+            textAlign: TextAlign.center,
+            style: AppText.body().copyWith(color: AppColors.gray2),
+          ),
+          const SizedBox(height: 20),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              OutlinedButton(
+                onPressed: onNo,
+                style: OutlinedButton.styleFrom(
+                  foregroundColor: AppColors.gray1,
+                  side: const BorderSide(color: AppColors.gray3),
+                  padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
+                ),
+                child: const Text('No'),
+              ),
+              const SizedBox(width: 16),
+              FilledButton(
+                onPressed: onYes,
+                style: FilledButton.styleFrom(
+                  backgroundColor: AppColors.red1,
+                  foregroundColor: AppColors.white,
+                  padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
+                ),
+                child: const Text('Yes'),
+              ),
+            ],
+          ),
+        ],
       ),
     );
   }

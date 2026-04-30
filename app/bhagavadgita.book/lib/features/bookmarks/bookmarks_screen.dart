@@ -61,7 +61,7 @@ class _BookmarksScreenState extends State<BookmarksScreen> {
             ),
           ),
           Expanded(
-            child: StreamBuilder<List<(Bookmark, Sloka)>>(
+            child: StreamBuilder<List<(Bookmark, Sloka, Note?)>>(
               stream: _watchBookmarksWithSlokas(widget.db, q),
               builder: (context, snap) {
                 final rows = snap.data ?? const [];
@@ -74,7 +74,8 @@ class _BookmarksScreenState extends State<BookmarksScreen> {
                   itemCount: rows.length,
                   separatorBuilder: (context, index) => const Divider(height: 1),
                   itemBuilder: (context, i) {
-                    final (bookmark, sloka) = rows[i];
+                    final (bookmark, sloka, note) = rows[i];
+                    final hasNote = note != null && note.note.trim().isNotEmpty;
                     return Slidable(
                       key: ValueKey('bookmark-${bookmark.slokaId}'),
                       endActionPane: ActionPane(
@@ -99,15 +100,40 @@ class _BookmarksScreenState extends State<BookmarksScreen> {
                             backgroundColor: AppColors.red2.withValues(alpha: 0.3),
                           ),
                         ),
-                        subtitle: HighlightedText(
-                          text: sloka.translation ?? sloka.slokaText ?? '',
-                          query: q,
-                          maxLines: 2,
-                          overflow: TextOverflow.ellipsis,
-                          style: AppText.body(),
-                          highlightStyle: AppText.body().copyWith(
-                            backgroundColor: AppColors.red2.withValues(alpha: 0.3),
-                          ),
+                        subtitle: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            HighlightedText(
+                              text: sloka.translation ?? sloka.slokaText ?? '',
+                              query: q,
+                              maxLines: 2,
+                              overflow: TextOverflow.ellipsis,
+                              style: AppText.body(),
+                              highlightStyle: AppText.body().copyWith(
+                                backgroundColor: AppColors.red2.withValues(alpha: 0.3),
+                              ),
+                            ),
+                            if (hasNote) ...[
+                              const SizedBox(height: 4),
+                              Row(
+                                children: [
+                                  Icon(Icons.note, size: 14, color: AppColors.gray2),
+                                  const SizedBox(width: 4),
+                                  Expanded(
+                                    child: Text(
+                                      note.note.trim(),
+                                      maxLines: 1,
+                                      overflow: TextOverflow.ellipsis,
+                                      style: AppText.caption().copyWith(
+                                        fontStyle: FontStyle.italic,
+                                        color: AppColors.gray2,
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ],
+                          ],
                         ),
                         trailing: const Icon(Icons.chevron_right),
                         onTap: () {
@@ -164,7 +190,7 @@ class _EmptyBookmarks extends StatelessWidget {
   }
 }
 
-Stream<List<(Bookmark, Sloka)>> _watchBookmarksWithSlokas(AppDatabase db, String query) {
+Stream<List<(Bookmark, Sloka, Note?)>> _watchBookmarksWithSlokas(AppDatabase db, String query) {
   final q = db.select(db.bookmarks).join([
     innerJoin(db.slokas, db.slokas.id.equalsExp(db.bookmarks.slokaId)),
     leftOuterJoin(db.notes, db.notes.slokaId.equalsExp(db.bookmarks.slokaId)),
@@ -185,7 +211,11 @@ Stream<List<(Bookmark, Sloka)>> _watchBookmarksWithSlokas(AppDatabase db, String
 
   return q.watch().map((rows) {
     return rows.map((r) {
-      return (r.readTable(db.bookmarks), r.readTable(db.slokas));
+      return (
+        r.readTable(db.bookmarks),
+        r.readTable(db.slokas),
+        r.readTableOrNull(db.notes),
+      );
     }).toList(growable: false);
   });
 }
