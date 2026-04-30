@@ -115,8 +115,8 @@ None required for layouts. Bookmarks/notes already exist via `UserDataRepository
 The app should align with the navigation flow defined in `02-visual.md`.
 
 - **Splash → Contents**: after bootstrap completes and snapshot exists
-- **Contents → Chapter**: tap chapter row (slide left)
 - **Contents (expanded)**: tap chapter row expands/collapses to show verse grid; tap verse chip navigates to sloka detail (tablet may keep split-view)
+- **Contents → Chapter (optional)**: if a dedicated chapter sloka-list view is exposed (legacy mode), open it via an explicit affordance (e.g. chevron/action) rather than replacing expand/collapse
 - **Contents → Search**: tap search icon (circular reveal entry target)
 - **Contents → Settings**: tap settings/tune icon (slide left)
 - **Chapter → Sloka**: tap sloka row (slide left)
@@ -249,8 +249,8 @@ Animation implementation detail is deferred to the plan, but specs require:
 ### Manual Verification
 
 - [ ] Launch app: splash renders gradient and progresses to Contents
-- [ ] Contents list: tap chapter opens Chapter screen
-- [ ] Chapter list: tap sloka opens Sloka; Previous/Next works
+- [ ] Contents list: tap chapter expands verse grid; tap verse opens Sloka; Previous/Next works
+- [ ] (Optional legacy) Chapter list: open chapter sloka-list view and tap sloka opens Sloka
 - [ ] Settings toggles affect Sloka sections immediately and persist on restart
 
 ## Migration / Rollout
