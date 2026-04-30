@@ -1,7 +1,7 @@
 import 'package:drift/drift.dart';
 import 'package:flutter/material.dart';
 
-import '../../app/theme/gita_colors.dart';
+import '../../ui/theme/app_colors.dart';
 import '../../data/local/app_database.dart';
 import '../search/search_route.dart';
 import '../search/search_screen.dart';

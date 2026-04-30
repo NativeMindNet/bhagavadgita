@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../app/theme/gita_colors.dart';
+import '../../../ui/theme/app_colors.dart';
 
 class QuoteCard extends StatelessWidget {
   const QuoteCard({

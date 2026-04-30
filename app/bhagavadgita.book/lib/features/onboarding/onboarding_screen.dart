@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../app/theme/gita_colors.dart';
+import '../../ui/theme/app_colors.dart';
 import '../../data/local/app_database.dart';
 import '../contents/contents_screen.dart';
 

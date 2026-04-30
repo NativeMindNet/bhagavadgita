@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../app/audio/audio_download_controller.dart';
 import '../../app/audio/audio_track.dart';
-import '../../app/theme/gita_colors.dart';
+import '../../ui/theme/app_colors.dart';
 import '../../l10n/l10n.dart';
 import 'app_language_screen.dart';
 import 'audio_settings_controller.dart';

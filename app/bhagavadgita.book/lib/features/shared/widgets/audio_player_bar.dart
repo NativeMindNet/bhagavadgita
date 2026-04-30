@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../../app/audio/audio_controller.dart';
 import '../../../app/audio/audio_state.dart';
-import '../../../app/theme/gita_colors.dart';
+import '../../../ui/theme/app_colors.dart';
 import '../../../app/audio/audio_track.dart';
 
 class AudioPlayerBarWithController extends StatelessWidget {

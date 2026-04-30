@@ -2,7 +2,7 @@ import 'package:drift/drift.dart' hide Column;
 import 'package:flutter/material.dart';
 
 import '../../app/audio/audio_controller_scope.dart';
-import '../../app/theme/gita_colors.dart';
+import '../../ui/theme/app_colors.dart';
 import '../../data/local/app_database.dart';
 import '../reader/sloka_screen.dart';
 import '../settings/audio_settings_controller.dart';

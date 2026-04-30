@@ -1,7 +1,7 @@
 import 'package:drift/drift.dart' hide Column;
 import 'package:flutter/material.dart';
 
-import '../../app/theme/gita_colors.dart';
+import '../../ui/theme/app_colors.dart';
 import '../../data/local/app_database.dart';
 import '../../data/local/user_data_repository.dart';
 import '../reader/sloka_screen.dart';
