@@ -3,11 +3,11 @@ import 'package:flutter/material.dart';
 
 import '../../app/theme/gita_colors.dart';
 import '../../data/local/app_database.dart';
-import '../reader/sloka_screen.dart';
 import '../search/search_route.dart';
 import '../search/search_screen.dart';
 import '../settings/settings_screen.dart';
 import '../shared/widgets/quote_card.dart';
+import 'chapter_sloka_scaffold.dart';
 
 class TabletContentsChapterScaffold extends StatefulWidget {
   const TabletContentsChapterScaffold({super.key, required this.db});
@@ -126,12 +126,15 @@ class _TabletContentsChapterScaffoldState
                         setState(() {
                           _selectedChapterId = c.id;
                           _selectedChapterTitle = 'Chapter ${c.position}';
+                          _selectedChapterName = c.name;
                         });
                         _detailNavKey.currentState?.pushAndRemoveUntil(
                           MaterialPageRoute(
                             builder: (context) => _ChapterDetailPane(
                               db: widget.db,
                               chapterId: c.id,
+                              chapterTitle: 'Chapter ${c.position}',
+                              chapterName: c.name,
                             ),
                           ),
                           (r) => false,
@@ -177,10 +180,14 @@ class _ChapterDetailPane extends StatelessWidget {
   const _ChapterDetailPane({
     required this.db,
     required this.chapterId,
+    required this.chapterTitle,
+    required this.chapterName,
   });
 
   final AppDatabase db;
   final int chapterId;
+  final String chapterTitle;
+  final String chapterName;
 
   @override
   Widget build(BuildContext context) {
@@ -214,11 +221,12 @@ class _ChapterDetailPane extends StatelessWidget {
               onTap: () {
                 Navigator.of(context).push(
                   MaterialPageRoute(
-                    builder: (context) => SlokaScreen(
+                    builder: (context) => TabletChapterSlokaScaffold(
                       db: db,
-                      slokaId: s.id,
                       chapterId: chapterId,
-                      position: s.position,
+                      chapterTitle: chapterTitle,
+                      chapterName: chapterName,
+                      initialSlokaId: s.id,
                     ),
                   ),
                 );

@@ -16,12 +16,14 @@ class SlokaScreen extends StatefulWidget {
     required this.slokaId,
     this.chapterId,
     this.position,
+    this.embedded = false,
   });
 
   final AppDatabase db;
   final int slokaId;
   final int? chapterId;
   final int? position;
+  final bool embedded;
 
   @override
   State<SlokaScreen> createState() => _SlokaScreenState();
@@ -57,37 +59,7 @@ class _SlokaScreenState extends State<SlokaScreen> {
             ..where((t) => t.slokaId.equals(widget.slokaId)))
           ..orderBy([(t) => OrderingTerm.asc(t.position)]);
 
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Sloka'),
-        actions: [
-          StreamBuilder<bool>(
-            stream: _userData.watchBookmark(widget.slokaId),
-            builder: (context, snap) {
-              final isBookmarked = snap.data ?? false;
-              return IconButton(
-                tooltip: isBookmarked ? 'Remove bookmark' : 'Add bookmark',
-                icon: Icon(
-                  isBookmarked ? Icons.bookmark : Icons.bookmark_border,
-                ),
-                onPressed: () =>
-                    _userData.setBookmark(widget.slokaId, !isBookmarked),
-              );
-            },
-          ),
-        ],
-      ),
-      bottomNavigationBar: AudioPlayerBar(
-        track: _track,
-        autoPlay: _autoPlay,
-        isPlaying: _isPlaying,
-        progress: 0.42,
-        positionLabel: '2:34',
-        onSelectTrack: (t) => setState(() => _track = t),
-        onToggleAutoPlay: (v) => setState(() => _autoPlay = v),
-        onPlayPause: () => setState(() => _isPlaying = !_isPlaying),
-      ),
-      body: StreamBuilder<Sloka?>(
+    final body = StreamBuilder<Sloka?>(
         stream: slokaQuery.watchSingleOrNull(),
         builder: (context, snap) {
           final sloka = snap.data;
@@ -253,7 +225,41 @@ class _SlokaScreenState extends State<SlokaScreen> {
             ],
           );
         },
+      );
+
+    if (widget.embedded) return body;
+
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Sloka'),
+        actions: [
+          StreamBuilder<bool>(
+            stream: _userData.watchBookmark(widget.slokaId),
+            builder: (context, snap) {
+              final isBookmarked = snap.data ?? false;
+              return IconButton(
+                tooltip: isBookmarked ? 'Remove bookmark' : 'Add bookmark',
+                icon: Icon(
+                  isBookmarked ? Icons.bookmark : Icons.bookmark_border,
+                ),
+                onPressed: () =>
+                    _userData.setBookmark(widget.slokaId, !isBookmarked),
+              );
+            },
+          ),
+        ],
       ),
+      bottomNavigationBar: AudioPlayerBar(
+        track: _track,
+        autoPlay: _autoPlay,
+        isPlaying: _isPlaying,
+        progress: 0.42,
+        positionLabel: '2:34',
+        onSelectTrack: (t) => setState(() => _track = t),
+        onToggleAutoPlay: (v) => setState(() => _autoPlay = v),
+        onPlayPause: () => setState(() => _isPlaying = !_isPlaying),
+      ),
+      body: body,
     );
   }
 }
