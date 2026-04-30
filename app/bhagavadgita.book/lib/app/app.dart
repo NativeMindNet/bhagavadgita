@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../data/local/app_database.dart';
+import 'theme/gita_theme.dart';
 import '../features/splash/splash_screen.dart';
 
 class GitaBookApp extends StatefulWidget {
@@ -29,10 +30,7 @@ class _GitaBookAppState extends State<GitaBookApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Bhagavad Gita',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFFB71C1C)),
-        useMaterial3: true,
-      ),
+      theme: GitaTheme.light(),
       home: SplashScreen(db: _db),
     );
   }

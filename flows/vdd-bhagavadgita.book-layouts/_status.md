@@ -2,7 +2,7 @@
 
 ## Current Phase
 
-SPECIFICATIONS
+PLAN
 
 ## Phase Status
 
@@ -22,9 +22,9 @@ DRAFTING
 - [x] Requirements approved
 - [x] Visual mockups drafted
 - [x] Visual approved
-- [x] Specifications drafted  ← current
-- [ ] Specifications approved
-- [ ] Plan drafted
+- [x] Specifications drafted
+- [x] Specifications approved  ← current
+- [ ] Plan drafted  ← current
 - [ ] Plan approved
 - [ ] Implementation started
 - [ ] Implementation complete
@@ -55,7 +55,6 @@ Key decisions and context for resuming:
 
 ## Next Actions
 
-1. Create technical specifications
-2. Define component architecture
-3. Document data models and interfaces
-4. Get specs approval
+1. Draft `04-plan.md` (tasks, files, checkpoints)
+2. Review plan for sequencing and risk
+3. Get plan approval

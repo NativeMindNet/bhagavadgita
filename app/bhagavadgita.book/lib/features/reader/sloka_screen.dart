@@ -4,6 +4,9 @@ import 'package:flutter/material.dart';
 import '../../data/local/app_database.dart';
 import '../../data/local/user_data_repository.dart';
 import '../settings/reader_settings.dart';
+import '../shared/widgets/audio_player_bar.dart';
+import '../shared/widgets/author_badge.dart';
+import '../shared/widgets/section_header.dart';
 
 class SlokaScreen extends StatefulWidget {
   const SlokaScreen({
@@ -26,6 +29,9 @@ class SlokaScreen extends StatefulWidget {
 class _SlokaScreenState extends State<SlokaScreen> {
   late final UserDataRepository _userData;
   late final TextEditingController _noteController;
+  AudioTrack _track = AudioTrack.sanskrit;
+  bool _autoPlay = false;
+  bool _isPlaying = false;
 
   @override
   void initState() {
@@ -70,6 +76,16 @@ class _SlokaScreenState extends State<SlokaScreen> {
           ),
         ],
       ),
+      bottomNavigationBar: AudioPlayerBar(
+        track: _track,
+        autoPlay: _autoPlay,
+        isPlaying: _isPlaying,
+        progress: 0.42,
+        positionLabel: '2:34',
+        onSelectTrack: (t) => setState(() => _track = t),
+        onToggleAutoPlay: (v) => setState(() => _autoPlay = v),
+        onPlayPause: () => setState(() => _isPlaying = !_isPlaying),
+      ),
       body: StreamBuilder<Sloka?>(
         stream: slokaQuery.watchSingleOrNull(),
         builder: (context, snap) {
@@ -93,61 +109,89 @@ class _SlokaScreenState extends State<SlokaScreen> {
                 ),
                 const SizedBox(height: 12),
               ],
+              Center(
+                child: Text(
+                  sloka.position.toString(),
+                  style: Theme.of(context).textTheme.bodySmall,
+                ),
+              ),
+              const SizedBox(height: 6),
               Text(
                 sloka.name,
-                style: Theme.of(context).textTheme.headlineSmall,
+                textAlign: TextAlign.center,
+                style: Theme.of(context).textTheme.titleLarge,
               ),
               const SizedBox(height: 12),
               ValueListenableBuilder<ReaderSettings>(
                 valueListenable: readerSettingsController,
                 builder: (context, settings, _) {
+                  final theme = Theme.of(context);
+                  final divider = Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 10),
+                    child: Divider(color: theme.dividerColor, height: 1),
+                  );
                   return Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.stretch,
                     children: [
                       if (settings.showSanskrit &&
                           (sloka.slokaText ?? '').isNotEmpty) ...[
+                        const SectionHeader('Sanskrit'),
                         Text(
                           sloka.slokaText!,
-                          style: Theme.of(context).textTheme.bodyLarge,
+                          textAlign: TextAlign.center,
+                          style: theme.textTheme.bodyLarge?.copyWith(
+                            height: 1.55,
+                          ),
                         ),
-                        const SizedBox(height: 12),
+                        divider,
                       ],
                       if (settings.showTransliteration &&
                           (sloka.transcription ?? '').isNotEmpty) ...[
+                        const SectionHeader('Transcription'),
                         Text(
                           sloka.transcription!,
-                          style: Theme.of(context).textTheme.bodyMedium,
+                          style: theme.textTheme.bodyMedium?.copyWith(
+                            fontStyle: FontStyle.italic,
+                          ),
                         ),
-                        const SizedBox(height: 12),
+                        divider,
                       ],
                       if (settings.showTranslation &&
                           (sloka.translation ?? '').isNotEmpty) ...[
-                        Text(
-                          sloka.translation!,
-                          style: Theme.of(context).textTheme.titleMedium,
-                        ),
-                        const SizedBox(height: 12),
+                        const SectionHeader('Translation'),
+                        Text(sloka.translation!, style: theme.textTheme.bodyLarge),
+                        divider,
                       ],
                       if (settings.showComment &&
                           (sloka.comment ?? '').isNotEmpty) ...[
-                        Text(
-                          sloka.comment!,
-                          style: Theme.of(context).textTheme.bodyMedium,
+                        const SectionHeader('Commentary'),
+                        Row(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            const AuthorBadge(initials: 'BG'),
+                            const SizedBox(width: 10),
+                            Expanded(
+                              child: Text(
+                                sloka.comment!,
+                                style: theme.textTheme.bodyMedium,
+                              ),
+                            ),
+                          ],
                         ),
-                        const SizedBox(height: 16),
+                        divider,
                       ],
                       if (settings.showVocabulary) ...[
-                        Text(
-                          'Vocabulary',
-                          style: Theme.of(context).textTheme.titleMedium,
-                        ),
-                        const SizedBox(height: 8),
+                        const SectionHeader('Vocabulary'),
                         StreamBuilder<List<Vocabulary>>(
                           stream: vocabQuery.watch(),
                           builder: (context, vocabSnap) {
                             final items = vocabSnap.data ?? const [];
-                            if (items.isEmpty)
-                              return const Text('No vocabulary yet.');
+                            if (items.isEmpty) {
+                              return Text(
+                                'No vocabulary yet.',
+                                style: theme.textTheme.bodySmall,
+                              );
+                            }
                             return Column(
                               children: [
                                 for (final v in items)
@@ -167,7 +211,7 @@ class _SlokaScreenState extends State<SlokaScreen> {
                 },
               ),
               const SizedBox(height: 20),
-              Text('Note', style: Theme.of(context).textTheme.titleMedium),
+              const SectionHeader('Note'),
               const SizedBox(height: 8),
               StreamBuilder<String?>(
                 stream: _userData.watchNote(widget.slokaId),

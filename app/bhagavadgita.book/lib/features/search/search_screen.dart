@@ -1,6 +1,7 @@
 import 'package:drift/drift.dart' hide Column;
 import 'package:flutter/material.dart';
 
+import '../../app/theme/gita_colors.dart';
 import '../../data/local/app_database.dart';
 import '../../data/local/user_data_repository.dart';
 import '../reader/sloka_screen.dart';
@@ -52,7 +53,13 @@ class _SearchScreenState extends State<SearchScreen> {
     }
 
     return Scaffold(
-      appBar: AppBar(title: const Text('Search')),
+      appBar: AppBar(
+        title: const Text('Search'),
+        backgroundColor: GitaColors.white,
+        foregroundColor: GitaColors.gray1,
+        elevation: 0,
+        scrolledUnderElevation: 0,
+      ),
       body: Column(
         children: [
           Padding(

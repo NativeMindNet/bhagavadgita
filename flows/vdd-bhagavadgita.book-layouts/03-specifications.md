@@ -1,7 +1,7 @@
 # Specifications: Bhagavad Gita Book Layouts (Flutter)
 
 > Version: 1.0  
-> Status: DRAFT  
+> Status: APPROVED  
 > Last Updated: 2026-04-30  
 > Requirements: `01-requirements.md`  
 > Visual: `02-visual.md`
@@ -236,7 +236,7 @@ No data migrations. UI-only changes, safe to roll out behind incremental commits
 
 ## Approval
 
-- [ ] Reviewed by: Anton
-- [ ] Approved on: [date]
-- [ ] Notes: [any conditions or clarifications]
+- [x] Reviewed by: Anton
+- [x] Approved on: 2026-04-30
+- [x] Notes: Specs approved
 
