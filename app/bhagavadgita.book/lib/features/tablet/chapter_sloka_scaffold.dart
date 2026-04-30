@@ -1,6 +1,7 @@
 import 'package:drift/drift.dart' hide Column;
 import 'package:flutter/material.dart';
 
+import '../../app/audio/audio_controller_scope.dart';
 import '../../app/theme/gita_colors.dart';
 import '../../data/local/app_database.dart';
 import '../reader/sloka_screen.dart';
@@ -29,9 +30,7 @@ class TabletChapterSlokaScaffold extends StatefulWidget {
 
 class _TabletChapterSlokaScaffoldState extends State<TabletChapterSlokaScaffold> {
   late int _selectedSlokaId;
-  AudioTrack _track = AudioTrack.sanskrit;
   bool _autoPlay = false;
-  bool _isPlaying = false;
 
   @override
   void initState() {
@@ -89,15 +88,10 @@ class _TabletChapterSlokaScaffoldState extends State<TabletChapterSlokaScaffold>
           ],
         ),
       ),
-      bottomNavigationBar: AudioPlayerBar(
-        track: _track,
+      bottomNavigationBar: AudioPlayerBarWithController(
+        controller: AudioControllerScope.of(context),
         autoPlay: _autoPlay,
-        isPlaying: _isPlaying,
-        progress: 0.42,
-        positionLabel: '2:34',
-        onSelectTrack: (t) => setState(() => _track = t),
         onToggleAutoPlay: (v) => setState(() => _autoPlay = v),
-        onPlayPause: () => setState(() => _isPlaying = !_isPlaying),
       ),
       body: Row(
         children: [

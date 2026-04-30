@@ -1,6 +1,8 @@
 import 'package:drift/drift.dart' hide Column;
 import 'package:flutter/material.dart';
 
+import '../../app/audio/audio_controller_scope.dart';
+import '../../app/audio/audio_state.dart';
 import '../../data/local/app_database.dart';
 import '../../data/local/user_data_repository.dart';
 import '../settings/reader_settings.dart';
@@ -31,9 +33,9 @@ class SlokaScreen extends StatefulWidget {
 class _SlokaScreenState extends State<SlokaScreen> {
   late final UserDataRepository _userData;
   late final TextEditingController _noteController;
-  AudioTrack _track = AudioTrack.sanskrit;
   bool _autoPlay = false;
-  bool _isPlaying = false;
+  int? _boundSlokaId;
+  bool _wiredCompletion = false;
 
   @override
   void initState() {
@@ -43,9 +45,77 @@ class _SlokaScreenState extends State<SlokaScreen> {
   }
 
   @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    if (_wiredCompletion) return;
+    _wiredCompletion = true;
+    AudioControllerScope.of(context).onCompleted = _handleAudioCompleted;
+  }
+
+  @override
   void dispose() {
     _noteController.dispose();
     super.dispose();
+  }
+
+  static const _legacyHost = 'http://app.bhagavadgitaapp.online';
+
+  Uri? _resolveAudioUri(String? raw) {
+    final s = (raw ?? '').trim();
+    if (s.isEmpty) return null;
+    final parsed = Uri.tryParse(s);
+    if (parsed == null) return null;
+    if (parsed.hasScheme) return parsed;
+    return Uri.parse('$_legacyHost$s');
+  }
+
+  void _bindAudioIfNeeded(Sloka sloka) {
+    if (_boundSlokaId == sloka.id) return;
+    _boundSlokaId = sloka.id;
+
+    final audio = AudioControllerScope.of(context);
+    final sanskritUri = _resolveAudioUri(sloka.audioSanskrit);
+    final translationUri = _resolveAudioUri(sloka.audio);
+
+    audio.setSources(
+      sanskrit: sanskritUri == null
+          ? const AudioSourceRef.none()
+          : AudioSourceRef.network(sanskritUri, label: 'Sanskrit'),
+      translation: translationUri == null
+          ? const AudioSourceRef.none()
+          : AudioSourceRef.network(translationUri, label: 'Translation'),
+    );
+  }
+
+  Future<void> _handleAudioCompleted() async {
+    if (!_autoPlay) return;
+    final chapterId = widget.chapterId;
+    final position = widget.position;
+    if (chapterId == null || position == null) return;
+
+    AudioControllerScope.of(context).requestPlayOnNextSourceBind();
+
+    final next = await (widget.db.select(widget.db.slokas)
+          ..where(
+            (t) =>
+                t.chapterId.equals(chapterId) &
+                t.position.isBiggerThanValue(position),
+          )
+          ..orderBy([(t) => OrderingTerm.asc(t.position)])
+          ..limit(1))
+        .getSingleOrNull();
+
+    if (!mounted || next == null) return;
+    Navigator.of(context).pushReplacement(
+      MaterialPageRoute(
+        builder: (_) => SlokaScreen(
+          db: widget.db,
+          slokaId: next.id,
+          chapterId: chapterId,
+          position: next.position,
+        ),
+      ),
+    );
   }
 
   @override
@@ -59,8 +129,8 @@ class _SlokaScreenState extends State<SlokaScreen> {
           ..orderBy([(t) => OrderingTerm.asc(t.position)]);
 
     final body = StreamBuilder<Sloka?>(
-        stream: slokaQuery.watchSingleOrNull(),
-        builder: (context, snap) {
+      stream: slokaQuery.watchSingleOrNull(),
+      builder: (context, snap) {
           final sloka = snap.data;
           if (snap.connectionState == ConnectionState.waiting &&
               sloka == null) {
@@ -69,6 +139,8 @@ class _SlokaScreenState extends State<SlokaScreen> {
           if (sloka == null) {
             return const Center(child: Text('Sloka not found.'));
           }
+
+          _bindAudioIfNeeded(sloka);
 
           return ListView(
             padding: const EdgeInsets.all(16),
@@ -221,8 +293,8 @@ class _SlokaScreenState extends State<SlokaScreen> {
               ),
             ],
           );
-        },
-      );
+      },
+    );
 
     if (widget.embedded) return body;
 
@@ -246,15 +318,10 @@ class _SlokaScreenState extends State<SlokaScreen> {
           ),
         ],
       ),
-      bottomNavigationBar: AudioPlayerBar(
-        track: _track,
+      bottomNavigationBar: AudioPlayerBarWithController(
+        controller: AudioControllerScope.of(context),
         autoPlay: _autoPlay,
-        isPlaying: _isPlaying,
-        progress: 0.42,
-        positionLabel: '2:34',
-        onSelectTrack: (t) => setState(() => _track = t),
         onToggleAutoPlay: (v) => setState(() => _autoPlay = v),
-        onPlayPause: () => setState(() => _isPlaying = !_isPlaying),
       ),
       body: body,
     );
