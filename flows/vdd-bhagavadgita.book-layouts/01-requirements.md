@@ -1,7 +1,7 @@
 # Requirements: Bhagavad Gita Book Layouts (Flutter)
 
-> Version: 1.1
-> Status: APPROVED
+> Version: 1.2
+> Status: DRAFT
 > Last Updated: 2026-04-30
 
 ## Problem Statement
@@ -54,28 +54,32 @@ Currently:
    **Then** show Contents screen with 18 chapters in styled list
 
 2. **Given** I am on Contents screen
-   **When** I tap a chapter
-   **Then** navigate to Chapter screen showing all slokas in that chapter
+   **When** I tap a chapter row
+   **Then** the chapter expands/collapses inline to reveal a verse grid (chips, including grouped ranges like `4-6`)
 
 3. **Given** I am viewing a sloka
    **When** the sloka loads
-   **Then** display Sanskrit text, transliteration, translation, vocabulary, and commentary with proper typography
+   **Then** display the enabled sections with proper typography, including support for multiple translation/commentary variants within the same scroll (labeled by pills)
 
 4. **Given** I am viewing a sloka
    **When** I tap bookmark icon
    **Then** toggle bookmark state with visual feedback
 
-5. **Given** I am on Settings screen
-   **When** I toggle display options
-   **Then** reader view updates to show/hide sections accordingly
+5. **Given** I am viewing a sloka
+   **When** I use the round Previous/Next buttons
+   **Then** navigate to the adjacent sloka and keep the same layout mode (phone/tablet split)
 
 6. **Given** I tap the search icon
    **When** search panel opens
    **Then** show circular reveal animation (Material Design)
 
-7. **Given** I am on audio player
-   **When** I select audio type
-   **Then** can play either Sanskrit pronunciation OR translation audio
+7. **Given** I am on Settings screen
+   **When** I toggle display and audio options
+   **Then** the reader view updates immediately and persists across restarts
+
+8. **Given** I am viewing a sloka
+   **When** audio is available
+   **Then** show a compact mini-player (progress + play) and allow playback from the mini-player
 
 ### Should Have
 
@@ -89,7 +93,11 @@ Currently:
 8. 3-page onboarding guide with page indicators
 9. Download progress tracking for audio files
 10. Push notifications for quote of the day
-11. Tablet dual-pane layout
+11. Tablet dual-pane layout (split-view) with:
+    - chapters + verse grid on the left
+    - sloka detail on the right
+12. Bookmarks split-view on tablet (list left, sloka detail right)
+13. Settings: traktovki selection supports multi-select and per-item download/install action (“Скачать”)
 
 ### Won't Have (This Iteration)
 
@@ -175,12 +183,13 @@ From legacy Assets:
 - Show only on first launch (track via settings)
 
 ### 3. Contents Screen (Main)
-- Red AppBar with title "Contents"
-- Search icon (circular reveal animation), Settings icon
+- Red AppBar with title "Бхагавад Гита" (localized)
+- Actions: Search, Bookmarks, Comments (optional), Settings/More (as available per platform)
 - Optional: Quote of the day card at top
 - 18 chapters in scrollable list
 - Each chapter: position number, name, disclosure chevron
-- Expandable chapters to show slokas inline (optional)
+- Expandable chapters to show a verse number grid inline (chips, including grouped ranges)
+- Selected verse chip highlights current verse (from last read or current selection)
 
 ### 4. Chapter Screen
 - AppBar with chapter title
@@ -189,25 +198,28 @@ From legacy Assets:
 - Tap navigates to Sloka screen
 
 ### 5. Sloka Detail Screen
-- AppBar with "Sloka" title, bookmark button
-- Previous/Next navigation buttons (horizontal row)
+- Supports two topbar variants:
+  - Red AppBar variant (legacy/phone)
+  - White topbar variant with “К оглавлению” and action icons (tablet/compact)
+- Previous/Next navigation uses round overlay buttons on tablet/compact
 - Sloka name heading (bold, 20pt)
 - **Sections (each toggleable via settings):**
   - Sanskrit text (Kohinoor, 18pt, centered)
   - Separator line
   - Transcription (PT Sans Italic, 16pt)
-  - Vocabulary list (word → translation)
+  - Word-by-word / Vocabulary list (word → translation) (aka “Пословный перевод”)
   - Translation (PT Sans, 16pt)
   - Commentary with author badges (circle with initials)
+- **Multi-variant content**: multiple translation/commentary blocks can appear in the same scroll, labeled by pills (e.g. `Ru`, `En SP`, `En VC`)
 - Personal notes section with TextField + Save button
-- **Bottom Audio Player Bar:**
-  - Play/Pause button
-  - Progress bar (horizontal)
-  - Track selector: Sanskrit / Translation
-  - Auto-play toggle
+- **Compact audio controls**:
+  - Mini-player at bottom: progress + current sloka label + play
+  - Full-width audio player bar is optional future enhancement
 
 ### 6. Settings Screen
-- Sections with headers (uppercase, gray2):
+Supports a compact settings layout matching store screenshots.
+
+Sections with headers:
 
 **Display Options:**
 | Option | Type | Default |
@@ -215,21 +227,23 @@ From legacy Assets:
 | Show Sanskrit | Toggle | ON |
 | Show Transcription | Toggle | ON |
 | Show Translation | Toggle | ON |
-| Show Vocabulary | Toggle | ON |
+| Word-by-word (Пословный перевод) | Toggle | ON |
 | Show Commentary | Toggle | ON |
 
 **Audio Options:**
 | Option | Type | Default |
 |--------|------|---------|
-| Download Sanskrit Audio | Toggle + Progress | OFF |
-| Download Translation Audio | Toggle + Progress | OFF |
+| Translation Audio | Toggle | OFF |
+| Sanskrit Audio | Toggle | OFF (may be disabled depending on selection) |
 | Auto-play Next | Toggle | OFF |
 
 **Languages:**
 - Language selector (navigates to Language screen)
 
-**Books/Commentaries:**
-- List of available commentaries with download status
+**Traktovki (Books/Commentaries):**
+- List of available traktovki with:
+  - Multi-select checkmarks (more than one may be enabled)
+  - Per-item download/install action (“Скачать”) when not available locally
 
 ### 7. Search Screen
 - **Circular reveal animation** on open
@@ -242,7 +256,9 @@ From legacy Assets:
 ### 8. Bookmarks Screen
 - List of bookmarked slokas
 - **SwipeLayout** for swipe-to-delete
-- Each item shows: chapter, sloka name, note preview (if exists)
+- Supports two item styles:
+  - Compact list: `4.13 Йога ...` (as in store screenshots)
+  - Rich list: chapter + sloka + optional note preview
 - Search within bookmarks (including notes)
 - Empty state with icon and message
 - Tap navigates to Sloka screen
@@ -294,8 +310,10 @@ From legacy Assets:
 - Bottom sheet for audio player
 
 ### Tablet Layout (sw720dp)
-- **Dual-pane**: Chapters list (left) + Content (right)
-- Master-detail pattern
+- **Dual-pane (split-view)** primary patterns:
+  - Chapters + verse grid (left) + Sloka detail (right)
+  - Bookmarks (left) + Sloka detail (right)
+- Master-detail pattern with persistent selection and highlighted verse chip
 - Dynamic StatusBar color based on active fragment
 - Landscape optimizations
 
@@ -351,6 +369,7 @@ Sloka Audio:
 - [x] Tablet layout priority: implement in v1
 - [x] Push notifications: implement in v1
 - [ ] Font licensing: PT Sans via Google Fonts OK, Kohinoor needs check
+- [ ] Traktovki model: confirm whether multi-select is intended on all platforms (screenshots show multiple checkmarks)
 
 ## References
 
@@ -365,6 +384,6 @@ Sloka Audio:
 
 ## Approval
 
-- [x] Reviewed by: Anton
-- [x] Approved on: 2026-04-30
-- [x] Notes: Tablet layout and push notifications included in v1
+- [ ] Reviewed by: Anton
+- [ ] Approved on: TBD
+- [ ] Notes: Updated to include store screenshots (verse grid, split-view, mini-player, traktovki download)
