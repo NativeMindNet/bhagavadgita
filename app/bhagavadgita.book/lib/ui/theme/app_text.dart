@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 import 'app_colors.dart';
 
@@ -46,11 +45,17 @@ class AppText {
         height: 1.5,
       );
 
-  static TextStyle sanskrit() => GoogleFonts.notoSansDevanagari(
+  static TextStyle sanskrit() => const TextStyle(
         fontSize: 22,
         fontWeight: FontWeight.w400,
         color: AppColors.gray1,
         height: 1.7,
+        fontFamilyFallback: [
+          // Prefer system fonts; avoid runtime fetching on restricted networks.
+          'Noto Sans Devanagari',
+          'Kohinoor Devanagari',
+          'Devanagari Sangam MN',
+        ],
       );
 
   static TextStyle caption() => _pt(size: 14, color: AppColors.gray2);

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../../app/audio/audio_download_controller.dart';
+import '../../app/audio/audio_track.dart';
 import '../../app/theme/gita_colors.dart';
 import '../../l10n/l10n.dart';
 import 'app_language_screen.dart';
@@ -21,11 +23,13 @@ class SettingsScreen extends StatelessWidget {
           readerSettingsController,
           contentLanguagesController,
           audioSettingsController,
+          audioDownloadController,
         ]),
         builder: (context, _) {
           final reader = readerSettingsController.value;
           final contentLangs = contentLanguagesController.value;
           final audio = audioSettingsController.value;
+          final dl = audioDownloadController.value;
 
           return ListView(
             children: [
@@ -129,6 +133,82 @@ class SettingsScreen extends StatelessWidget {
                 value: audio.autoPlayNext,
                 onChanged: (v) => audioSettingsController.update(
                   audio.copyWith(autoPlayNext: v),
+                ),
+              ),
+
+              Padding(
+                padding: const EdgeInsets.fromLTRB(16, 0, 16, 8),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: [
+                    if (dl.errorMessage != null)
+                      Text(
+                        dl.errorMessage!,
+                        style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                              color: Colors.red,
+                            ),
+                      ),
+                    const SizedBox(height: 6),
+                    FilledButton.icon(
+                      onPressed: audioDownloadController.isBusy
+                          ? null
+                          : () async {
+                              await audioDownloadController.downloadAllChapters(
+                                AudioTrack.translation,
+                              );
+                            },
+                      icon: audioDownloadController.isBusy &&
+                              dl.track == AudioTrack.translation
+                          ? const SizedBox(
+                              width: 18,
+                              height: 18,
+                              child: CircularProgressIndicator(strokeWidth: 2),
+                            )
+                          : const Icon(Icons.download),
+                      label: Text(
+                        audioDownloadController.isBusy &&
+                                dl.track == AudioTrack.translation
+                            ? 'Downloading RU…'
+                            : 'Download RU (AudioVeda)',
+                      ),
+                    ),
+                    const SizedBox(height: 8),
+                    FilledButton.icon(
+                      onPressed: audioDownloadController.isBusy
+                          ? null
+                          : () async {
+                              await audioDownloadController.downloadAllChapters(
+                                AudioTrack.sanskrit,
+                              );
+                            },
+                      icon: audioDownloadController.isBusy &&
+                              dl.track == AudioTrack.sanskrit
+                          ? const SizedBox(
+                              width: 18,
+                              height: 18,
+                              child: CircularProgressIndicator(strokeWidth: 2),
+                            )
+                          : const Icon(Icons.download),
+                      label: Text(
+                        audioDownloadController.isBusy && dl.track == AudioTrack.sanskrit
+                            ? 'Downloading Sanskrit…'
+                            : 'Download Sanskrit (AudioVeda)',
+                      ),
+                    ),
+                    if (dl.isDownloading) ...[
+                      const SizedBox(height: 10),
+                      LinearProgressIndicator(value: dl.progress),
+                      if (dl.currentLabel != null) ...[
+                        const SizedBox(height: 6),
+                        Text(
+                          dl.currentLabel!,
+                          style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                                color: GitaColors.gray2,
+                              ),
+                        ),
+                      ],
+                    ],
+                  ],
                 ),
               ),
 

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 import 'app_colors.dart';
 import 'app_text.dart';
@@ -25,7 +24,6 @@ ThemeData buildAppTheme() {
       error: AppColors.red3,
       onError: AppColors.white,
     ),
-    fontFamily: GoogleFonts.ptSans().fontFamily,
     dividerColor: AppColors.gray3,
     canvasColor: AppColors.white,
   );

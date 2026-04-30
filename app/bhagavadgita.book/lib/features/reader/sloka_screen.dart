@@ -3,8 +3,11 @@ import 'package:flutter/material.dart';
 
 import '../../app/audio/audio_controller_scope.dart';
 import '../../app/audio/audio_state.dart';
+import '../../app/audio/audio_storage.dart';
+import '../../app/audio/audio_track.dart';
 import '../../data/local/app_database.dart';
 import '../../data/local/user_data_repository.dart';
+import '../settings/audio_settings_controller.dart';
 import '../settings/reader_settings.dart';
 import '../shared/widgets/audio_player_bar.dart';
 import '../shared/widgets/author_badge.dart';
@@ -33,7 +36,6 @@ class SlokaScreen extends StatefulWidget {
 class _SlokaScreenState extends State<SlokaScreen> {
   late final UserDataRepository _userData;
   late final TextEditingController _noteController;
-  bool _autoPlay = false;
   int? _boundSlokaId;
   bool _wiredCompletion = false;
 
@@ -77,18 +79,60 @@ class _SlokaScreenState extends State<SlokaScreen> {
     final sanskritUri = _resolveAudioUri(sloka.audioSanskrit);
     final translationUri = _resolveAudioUri(sloka.audio);
 
-    audio.setSources(
-      sanskrit: sanskritUri == null
-          ? const AudioSourceRef.none()
-          : AudioSourceRef.network(sanskritUri, label: 'Sanskrit'),
-      translation: translationUri == null
-          ? const AudioSourceRef.none()
-          : AudioSourceRef.network(translationUri, label: 'Translation'),
-    );
+    () async {
+      final audioSettings = audioSettingsController.value;
+      final chapterId = widget.chapterId;
+
+      final sanskrit = await _resolveBestSource(
+        isEnabled: audioSettings.useSanskritAudio,
+        trackLabel: 'Sanskrit',
+        chapterId: chapterId,
+        slokaNetworkUri: sanskritUri,
+        chapter1AssetPath: 'assets/audio/sanskrit/chapter_1_sanskrit.mp3',
+        track: AudioTrack.sanskrit,
+      );
+      final translation = await _resolveBestSource(
+        isEnabled: audioSettings.useTranslationAudio,
+        trackLabel: 'Translation',
+        chapterId: chapterId,
+        slokaNetworkUri: translationUri,
+        chapter1AssetPath: 'assets/audio/ru/chapter_1_ru.mp3',
+        track: AudioTrack.translation,
+      );
+
+      if (!mounted) return;
+      await audio.setSources(sanskrit: sanskrit, translation: translation);
+    }();
+  }
+
+  Future<AudioSourceRef> _resolveBestSource({
+    required bool isEnabled,
+    required String trackLabel,
+    required int? chapterId,
+    required Uri? slokaNetworkUri,
+    required String chapter1AssetPath,
+    required AudioTrack track,
+  }) async {
+    if (!isEnabled) return const AudioSourceRef.none();
+
+    if (chapterId != null) {
+      final local = await audioStorage.chapterLocalUriIfExists(track, chapterId);
+      if (local != null) return AudioSourceRef.file(local, label: trackLabel);
+    }
+
+    if (slokaNetworkUri != null) {
+      return AudioSourceRef.network(slokaNetworkUri, label: trackLabel);
+    }
+
+    if (chapterId == 1) {
+      return AudioSourceRef.asset(chapter1AssetPath, label: trackLabel);
+    }
+
+    return const AudioSourceRef.none();
   }
 
   Future<void> _handleAudioCompleted() async {
-    if (!_autoPlay) return;
+    if (!audioSettingsController.value.autoPlayNext) return;
     final chapterId = widget.chapterId;
     final position = widget.position;
     if (chapterId == null || position == null) return;
@@ -318,10 +362,18 @@ class _SlokaScreenState extends State<SlokaScreen> {
           ),
         ],
       ),
-      bottomNavigationBar: AudioPlayerBarWithController(
-        controller: AudioControllerScope.of(context),
-        autoPlay: _autoPlay,
-        onToggleAutoPlay: (v) => setState(() => _autoPlay = v),
+      bottomNavigationBar: AnimatedBuilder(
+        animation: audioSettingsController,
+        builder: (context, _) {
+          final audioSettings = audioSettingsController.value;
+          return AudioPlayerBarWithController(
+            controller: AudioControllerScope.of(context),
+            autoPlay: audioSettings.autoPlayNext,
+            onToggleAutoPlay: (v) => audioSettingsController.update(
+              audioSettings.copyWith(autoPlayNext: v),
+            ),
+          );
+        },
       ),
       body: body,
     );

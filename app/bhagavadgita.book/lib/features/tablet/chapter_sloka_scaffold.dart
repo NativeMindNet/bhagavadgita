@@ -5,6 +5,7 @@ import '../../app/audio/audio_controller_scope.dart';
 import '../../app/theme/gita_colors.dart';
 import '../../data/local/app_database.dart';
 import '../reader/sloka_screen.dart';
+import '../settings/audio_settings_controller.dart';
 import '../shared/widgets/audio_player_bar.dart';
 
 class TabletChapterSlokaScaffold extends StatefulWidget {
@@ -30,7 +31,6 @@ class TabletChapterSlokaScaffold extends StatefulWidget {
 
 class _TabletChapterSlokaScaffoldState extends State<TabletChapterSlokaScaffold> {
   late int _selectedSlokaId;
-  bool _autoPlay = false;
 
   @override
   void initState() {
@@ -88,10 +88,18 @@ class _TabletChapterSlokaScaffoldState extends State<TabletChapterSlokaScaffold>
           ],
         ),
       ),
-      bottomNavigationBar: AudioPlayerBarWithController(
-        controller: AudioControllerScope.of(context),
-        autoPlay: _autoPlay,
-        onToggleAutoPlay: (v) => setState(() => _autoPlay = v),
+      bottomNavigationBar: AnimatedBuilder(
+        animation: audioSettingsController,
+        builder: (context, _) {
+          final audioSettings = audioSettingsController.value;
+          return AudioPlayerBarWithController(
+            controller: AudioControllerScope.of(context),
+            autoPlay: audioSettings.autoPlayNext,
+            onToggleAutoPlay: (v) => audioSettingsController.update(
+              audioSettings.copyWith(autoPlayNext: v),
+            ),
+          );
+        },
       ),
       body: Row(
         children: [

@@ -1,23 +1,33 @@
 import 'audio_track.dart';
 
-enum AudioSourceType { none, networkUrl, localFile }
+enum AudioSourceType { none, networkUrl, localFile, asset }
 
 class AudioSourceRef {
   const AudioSourceRef.none()
       : type = AudioSourceType.none,
         uri = null,
+        assetPath = null,
         label = null;
 
   const AudioSourceRef.network(this.uri, {this.label})
-      : type = AudioSourceType.networkUrl;
+      : type = AudioSourceType.networkUrl,
+        assetPath = null;
 
-  const AudioSourceRef.file(this.uri, {this.label}) : type = AudioSourceType.localFile;
+  const AudioSourceRef.file(this.uri, {this.label})
+      : type = AudioSourceType.localFile,
+        assetPath = null;
+
+  const AudioSourceRef.asset(this.assetPath, {this.label})
+      : type = AudioSourceType.asset,
+        uri = null;
 
   final AudioSourceType type;
   final Uri? uri;
+  final String? assetPath;
   final String? label;
 
-  bool get isPlayable => type != AudioSourceType.none && uri != null;
+  bool get isPlayable =>
+      type != AudioSourceType.none && (uri != null || assetPath != null);
 }
 
 class AudioState {

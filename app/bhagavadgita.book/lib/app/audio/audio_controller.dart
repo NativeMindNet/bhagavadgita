@@ -117,10 +117,10 @@ class AudioController extends ChangeNotifier {
       return;
     }
 
-    final uri = source.uri!;
     final audioSource = switch (source.type) {
-      AudioSourceType.networkUrl => AudioSource.uri(uri),
-      AudioSourceType.localFile => AudioSource.uri(uri),
+      AudioSourceType.networkUrl => AudioSource.uri(source.uri!),
+      AudioSourceType.localFile => AudioSource.uri(source.uri!),
+      AudioSourceType.asset => AudioSource.asset(source.assetPath!),
       AudioSourceType.none => null,
     };
     if (audioSource == null) return;

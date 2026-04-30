@@ -50,6 +50,7 @@ dependencies:
   google_fonts: ^6.3.0
   intl: ^0.20.2
   just_audio: ^0.10.5
+  flutter_dotenv: ^5.2.1
 
 dev_dependencies:
   flutter_test:
@@ -80,6 +81,8 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/seed/seed_v1_minimal.json
+    - assets/audio/ru/chapter_1_ru.mp3
+    - assets/audio/sanskrit/chapter_1_sanskrit.mp3
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
 
