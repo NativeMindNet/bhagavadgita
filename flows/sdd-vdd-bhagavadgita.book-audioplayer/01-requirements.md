@@ -8,6 +8,17 @@
 
 Нужен «идеальный» аудиоплеер для Bhagavadgita.book: быстрый, надёжный, офлайн‑дружелюбный, эстетичный и одинаково удобный на **телефоне, планшете и десктопе**, учитывающий специфику контента (шлоки, главы, «санскрит / перевод», автопереходы) и привычки пользователей (слушать в фоне, в дороге, во время чтения).
 
+Источники аудио в текущем проекте:
+
+- **Предустановленные статические файлы (offline‑bootstrap)**:
+  - `app/bhagavadgita.book/assets/audio/ru/chapter_1_ru.mp3`
+  - `app/bhagavadgita.book/assets/audio/sanskrit/chapter_1_sanskrit.mp3`
+- **Онлайн‑скачивание всех глав** через параметры в `.env`:
+  - `AUDIOVEDA_RUSSIAN_URL`
+  - `AUDIOVEDA_SANSKRIT_URL`
+  - `AUDIOVEDA_USERNAME`
+  - `AUDIOVEDA_PASSWORD`
+
 Референсы в текущем репозитории показывают прошлые решения:
 
 - iOS (Swift): `AVPlayer` + простой прогресс/детект завершения по таймеру, встраиваемый `ShlokaPlayerView`, настройки «аудио санскрит/перевод + autoplay».
@@ -103,7 +114,7 @@
 77. На всех платформах: уметь восстанавливаться после ошибки декодирования/файла (fallback + сообщение).
 78. Если файл повреждён — предложить «перескачать».
 79. Поддержать несколько качеств (если есть): low/normal/high, с авто‑выбором по сети/месту.
-80. Поддержать стриминг (если сервер предоставляет) как опцию, но офлайн должен быть first‑class.
+80. Поддержать стриминг/онлайн‑источник (если сервер предоставляет) как опцию, но офлайн должен быть first‑class.
 81. Для стрима обеспечить безопасный seek и прогресс (учитывая legacy баг‑фиксы seek/stream).
 82. Ввести единый формат идентификаторов треков (bookId/chapter/shloka/language/voice/version).
 83. Поддержать версии аудио (например новые озвучки) без поломки старых скачиваний.
@@ -131,19 +142,21 @@
 105. Добавить «диагностику» для поддержки: экспорт логов плеера/скачиваний (без персональных данных).
 106. Добавить «режим разработчика» (скрытый): показывать ID трека, источник (offline/stream), буфер.
 107. Обеспечить совместимость UI/UX между платформами: одинаковые иконки, термины, поведения.
-108. Определить «идеальный минимум» (MVP): play/pause, прогресс, автоплей, выбор дорожки, офлайн скачивание, lockscreen/notification controls, tablet+desktop layouts, (desktop tray — если технически возможно).
+108. Определить «идеальный минимум» (MVP): play/pause, прогресс, автоплей, выбор дорожки, офлайн (включая предустановленный Chapter 1) + скачивание всех глав онлайн, lockscreen/notification controls, tablet+desktop layouts, (desktop tray — если технически возможно).
 
 ## Constraints
 
 - **Platform**: iOS/Android обязаны поддерживать фон и системные контролы; desktop (macOS/Windows/Linux) — минимум базовый плеер, расширения (tray) по возможностям Flutter desktop.
 - **Offline-first**: слушать без сети после скачивания.
 - **Content coupling**: треки привязаны к book/chapter/shloka + языку дорожки.
+- **Bootstrap offline**: минимум один пакет аудио должен работать из коробки без сети (предустановленные mp3 для Chapter 1: ru/sanskrit).
+- **Credentials**: учётные данные для AudioVeda берутся только из `.env`, не логируются, не попадают в аналитику и не коммитятся.
 
 ## Open Questions
 
-- [ ] Где физически находятся/как называются аудиофайлы для каждой шлоки (путь/URI/схема именования) в текущем Flutter‑проекте?
+- [ ] Какое соответствие «глава/шлока → файл/URL» для всех глав (схема имён/эндпойнты AudioVeda), помимо предустановленных `chapter_1_*.mp3`?
 - [ ] Есть ли лицензии/ограничения на распространение аудио (качество, share, DRM)?
-- [ ] Нужно ли «стриминг» или только локальные файлы + загрузка?
+- [ ] Нужен ли прямой стриминг из `AUDIOVEDA_*_URL` или только «скачать → играть локально»?
 - [ ] Поддерживаем ли несколько озвучек (голосов) на старте?
 - [ ] Desktop tray: целевые ОС (macOS menubar? Windows tray? Linux appindicator?) и ожидания по функционалу.
 - [ ] Нужно ли синхронизировать прогресс между устройствами (cloud sync)?
@@ -151,6 +164,10 @@
 
 ## References
 
+- Current Flutter:
+  - `app/bhagavadgita.book/lib/app/audio/audio_controller.dart` (источники `localFile`/`networkUrl`, completion через `ProcessingState.completed`)
+  - `app/bhagavadgita.book/assets/audio/ru/chapter_1_ru.mp3`
+  - `app/bhagavadgita.book/assets/audio/sanskrit/chapter_1_sanskrit.mp3`
 - Legacy iOS:
   - `legacy/legacy_bhagavadgita.book_swift/Gita/Libraries/SoundManager/SoundManager.swift`
   - `legacy/legacy_bhagavadgita.book_swift/Gita/Views/ShlokaPlayerView.swift`

@@ -15,6 +15,7 @@ DRAFTING
 ## Blockers
 
 - Нужно найти/подключить источники `avadhuta`, `legacy-cookbook-swift`, `legacy-gitanjali-swift`, `legacy-sgg-ru-v1-swift` (в текущем репозитории не обнаружены).
+- Не описана схема соответствия «глава/шлока → файл/URL» для полного онлайн‑каталога AudioVeda (есть только `.env` параметры доступа).
 
 ## Progress
 
@@ -38,11 +39,16 @@ Key decisions and context for resuming:
   - Android Java: `legacy/legacy_bhagavadgita.book_java/` (`MediaPlayer` + audio focus, скачивание аудио через `DownloadManager` и `AudioState`)
 - Остальные указанные референсы пока отсутствуют в этом репозитории.
 - Требования включают UX для phone/tablet/desktop и вариант desktop tray.
+- В проекте есть предустановленные mp3 для Chapter 1 (ru/sanskrit) и конфиг `.env` для скачивания всех глав через AudioVeda.
 
 ## References
 
 - Legacy iOS audio: `legacy/legacy_bhagavadgita.book_swift/Gita/Libraries/SoundManager/SoundManager.swift`, `.../Model/AudioManager.swift`, `.../Views/ShlokaPlayerView.swift`
 - Legacy Android audio: `legacy/legacy_bhagavadgita.book_java/app/src/main/java/com/ironwaterstudio/utils/SoundManager.java`, `.../model/audio/*`, `.../res/layout/activity_settings.xml`
+- Current Flutter audio: `app/bhagavadgita.book/lib/app/audio/audio_controller.dart`
+- Assets audio bootstrap:
+  - `app/bhagavadgita.book/assets/audio/ru/chapter_1_ru.mp3`
+  - `app/bhagavadgita.book/assets/audio/sanskrit/chapter_1_sanskrit.mp3`
 
 ## Next Actions
 
