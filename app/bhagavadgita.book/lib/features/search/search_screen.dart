@@ -54,32 +54,41 @@ class _SearchScreenState extends State<SearchScreen> {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Search'),
+        title: const Text('Поиск', style: AppText.navTitle()),
         backgroundColor: AppColors.white,
         foregroundColor: AppColors.gray1,
         elevation: 0,
         scrolledUnderElevation: 0,
+        iconTheme: const IconThemeData(color: AppColors.gray1),
       ),
       body: Column(
         children: [
           Padding(
-            padding: const EdgeInsets.fromLTRB(12, 12, 12, 0),
+            padding: const EdgeInsets.fromLTRB(16, 8, 16, 16),
             child: TextField(
               controller: _queryController,
               autofocus: true,
+              style: AppText.body(),
               decoration: InputDecoration(
-                border: const OutlineInputBorder(),
-                prefixIcon: const Icon(Icons.search),
+                filled: true,
+                fillColor: AppColors.gray5,
+                contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+                hintText: 'Поиск по шлокам...',
+                hintStyle: AppText.body().copyWith(color: AppColors.gray2),
+                prefixIcon: const Icon(Icons.search, color: AppColors.gray2),
                 suffixIcon: q.isNotEmpty
                     ? IconButton(
-                        icon: const Icon(Icons.clear),
+                        icon: const Icon(Icons.clear, color: AppColors.gray2),
                         onPressed: () {
                           _queryController.clear();
                           setState(() => _query = '');
                         },
                       )
                     : null,
-                hintText: 'Search in slokas and translations',
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(8),
+                  borderSide: BorderSide.none,
+                ),
               ),
               onChanged: (value) => setState(() => _query = value),
             ),

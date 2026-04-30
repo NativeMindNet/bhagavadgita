@@ -40,6 +40,7 @@ class _PhoneContents extends StatefulWidget {
 
 class _PhoneContentsState extends State<_PhoneContents> {
   int? _expandedChapterId;
+  int? _selectedSlokaId;
 
   static final GlobalKey _searchKey = GlobalKey();
 
@@ -51,7 +52,9 @@ class _PhoneContentsState extends State<_PhoneContents> {
     final theme = Theme.of(context);
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Бхагавад Гита'),
+        backgroundColor: AppColors.red1,
+        foregroundColor: AppColors.white,
+        title: const Text('Бхагавад Гита', style: AppText.navTitle()),
         actions: [
           IconButton(
             key: _searchKey,
@@ -101,21 +104,19 @@ class _PhoneContentsState extends State<_PhoneContents> {
                     Icon(
                       Icons.menu_book_outlined,
                       size: 54,
-                      color: theme.colorScheme.onSurface.withValues(alpha: 0.35),
+                      color: AppColors.gray2.withValues(alpha: 0.5),
                     ),
                     const SizedBox(height: 14),
                     Text(
                       'No chapters found',
-                      style: theme.textTheme.titleMedium,
+                      style: AppText.heading(),
                     ),
                     const SizedBox(height: 6),
                     Text(
                       'Please check your connection and try again.',
                       textAlign: TextAlign.center,
-                      style: theme.textTheme.bodyMedium?.copyWith(
-                        color: theme.colorScheme.onSurface.withValues(
-                          alpha: 0.6,
-                        ),
+                      style: AppText.body().copyWith(
+                        color: AppColors.gray2,
                       ),
                     ),
                     const SizedBox(height: 14),
@@ -171,12 +172,14 @@ class _PhoneContentsState extends State<_PhoneContents> {
                     chapter: c,
                     slokas: slokas,
                     isExpanded: isExpanded,
+                    selectedSlokaId: _selectedSlokaId,
                     onExpansionChanged: (expanded) {
                       setState(() {
                         _expandedChapterId = expanded ? c.id : null;
                       });
                     },
                     onSlokaTap: (s) {
+                      setState(() => _selectedSlokaId = s.id);
                       Navigator.of(context).push(
                         MaterialPageRoute(
                           builder: (context) => SlokaScreen(

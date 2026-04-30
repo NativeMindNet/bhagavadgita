@@ -9,6 +9,7 @@ class ChapterExpandableTile extends StatelessWidget {
     required this.chapter,
     required this.slokas,
     required this.isExpanded,
+    required this.selectedSlokaId,
     required this.onExpansionChanged,
     required this.onSlokaTap,
   });
@@ -16,6 +17,7 @@ class ChapterExpandableTile extends StatelessWidget {
   final Chapter chapter;
   final List<Sloka> slokas;
   final bool isExpanded;
+  final int? selectedSlokaId;
   final ValueChanged<bool> onExpansionChanged;
   final ValueChanged<Sloka> onSlokaTap;
 
@@ -58,25 +60,26 @@ class ChapterExpandableTile extends StatelessWidget {
               spacing: 8,
               runSpacing: 8,
               children: slokas.map((s) {
-                // Strip chapter prefix from name if present, e.g. "1.4" -> "4"
+                // Keep the range string if present, otherwise position
                 final displayTitle = s.name.contains('.') 
                     ? s.name.split('.').last 
-                    : s.name;
+                    : s.position.toString();
                     
+                final isSelected = s.id == selectedSlokaId;
                 return ChoiceChip(
                   label: Text(displayTitle),
-                  selected: false,
+                  selected: isSelected,
                   onSelected: (_) => onSlokaTap(s),
                   labelStyle: AppText.label().copyWith(
-                    color: AppColors.gray1,
-                    fontWeight: FontWeight.w500,
+                    color: isSelected ? AppColors.white : AppColors.gray1,
+                    fontWeight: FontWeight.w600,
                   ),
                   backgroundColor: AppColors.gray5,
                   selectedColor: AppColors.red1,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(8),
+                    side: isSelected ? BorderSide.none : const BorderSide(color: AppColors.gray4),
                   ),
-                  side: BorderSide.none,
                   showCheckmark: false,
                   padding: const EdgeInsets.symmetric(horizontal: 4),
                 );

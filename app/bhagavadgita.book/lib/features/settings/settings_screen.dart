@@ -61,36 +61,41 @@ class SettingsScreen extends StatelessWidget {
               const SizedBox(height: 10),
               _SectionHeader(text: l10n.settingsSectionDisplay),
               SwitchListTile(
-                title: Text(l10n.settingsShowSanskrit),
+                title: Text(l10n.settingsShowSanskrit, style: AppText.body()),
                 value: reader.showSanskrit,
+                activeColor: AppColors.red1,
                 onChanged: (v) => readerSettingsController.update(
                   reader.copyWith(showSanskrit: v),
                 ),
               ),
               SwitchListTile(
-                title: Text(l10n.settingsShowTransliteration),
+                title: Text(l10n.settingsShowTransliteration, style: AppText.body()),
                 value: reader.showTransliteration,
+                activeColor: AppColors.red1,
                 onChanged: (v) => readerSettingsController.update(
                   reader.copyWith(showTransliteration: v),
                 ),
               ),
               SwitchListTile(
-                title: Text(l10n.settingsShowTranslation),
+                title: Text(l10n.settingsShowTranslation, style: AppText.body()),
                 value: reader.showTranslation,
+                activeColor: AppColors.red1,
                 onChanged: (v) => readerSettingsController.update(
                   reader.copyWith(showTranslation: v),
                 ),
               ),
               SwitchListTile(
-                title: Text(l10n.settingsShowComment),
+                title: Text(l10n.settingsShowComment, style: AppText.body()),
                 value: reader.showComment,
+                activeColor: AppColors.red1,
                 onChanged: (v) => readerSettingsController.update(
                   reader.copyWith(showComment: v),
                 ),
               ),
               SwitchListTile(
-                title: Text(l10n.settingsShowVocabulary),
+                title: Text(l10n.settingsShowVocabulary, style: AppText.body()),
                 value: reader.showVocabulary,
+                activeColor: AppColors.red1,
                 onChanged: (v) => readerSettingsController.update(
                   reader.copyWith(showVocabulary: v),
                 ),
@@ -99,8 +104,9 @@ class SettingsScreen extends StatelessWidget {
               const SizedBox(height: 10),
               _SectionHeader(text: l10n.settingsSectionAudio),
               SwitchListTile(
-                title: Text(l10n.settingsAudioTranslation),
+                title: Text(l10n.settingsAudioTranslation, style: AppText.body()),
                 value: audio.useTranslationAudio,
+                activeColor: AppColors.red1,
                 onChanged: (v) async {
                   final ok = await _confirmAudioToggle(
                     context,
@@ -114,8 +120,9 @@ class SettingsScreen extends StatelessWidget {
                 },
               ),
               SwitchListTile(
-                title: Text(l10n.settingsAudioSanskrit),
+                title: Text(l10n.settingsAudioSanskrit, style: AppText.body()),
                 value: audio.useSanskritAudio,
+                activeColor: AppColors.red1,
                 onChanged: (v) async {
                   final ok = await _confirmAudioToggle(
                     context,
@@ -129,8 +136,9 @@ class SettingsScreen extends StatelessWidget {
                 },
               ),
               SwitchListTile(
-                title: Text(l10n.settingsAudioAutoPlay),
+                title: Text(l10n.settingsAudioAutoPlay, style: AppText.body()),
                 value: audio.autoPlayNext,
+                activeColor: AppColors.red1,
                 onChanged: (v) => audioSettingsController.update(
                   audio.copyWith(autoPlayNext: v),
                 ),
@@ -385,13 +393,9 @@ class _SectionHeader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final style = Theme.of(context).textTheme.labelSmall?.copyWith(
-      letterSpacing: 1.2,
-      color: AppColors.gray2,
-    );
     return Padding(
       padding: const EdgeInsets.fromLTRB(16, 18, 16, 8),
-      child: Text(text, style: style),
+      child: Text(text.toUpperCase(), style: AppText.label()),
     );
   }
 }

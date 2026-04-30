@@ -12,6 +12,7 @@ import '../settings/reader_settings.dart';
 import '../shared/widgets/audio_player_bar.dart';
 import '../shared/widgets/author_badge.dart';
 import '../shared/widgets/section_header.dart';
+import 'widgets/variant_pill.dart';
 
 class SlokaScreen extends StatefulWidget {
   const SlokaScreen({
@@ -21,6 +22,7 @@ class SlokaScreen extends StatefulWidget {
     this.chapterId,
     this.position,
     this.embedded = false,
+    this.isCompact = false,
   });
 
   final AppDatabase db;
@@ -28,6 +30,7 @@ class SlokaScreen extends StatefulWidget {
   final int? chapterId;
   final int? position;
   final bool embedded;
+  final bool isCompact;
 
   @override
   State<SlokaScreen> createState() => _SlokaScreenState();
@@ -242,6 +245,8 @@ class _SlokaScreenState extends State<SlokaScreen> {
                       if (settings.showTranslation &&
                           (sloka.translation ?? '').isNotEmpty) ...[
                         const SectionHeader('Translation'),
+                        const VariantPill(label: 'Ru'),
+                        const SizedBox(height: 8),
                         Text(
                           sloka.translation!,
                           style: AppText.body(),
@@ -251,6 +256,8 @@ class _SlokaScreenState extends State<SlokaScreen> {
                       if (settings.showComment &&
                           (sloka.comment ?? '').isNotEmpty) ...[
                         const SectionHeader('Commentary'),
+                        const VariantPill(label: 'BG'),
+                        const SizedBox(height: 8),
                         Row(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
@@ -348,40 +355,123 @@ class _SlokaScreenState extends State<SlokaScreen> {
 
     if (widget.embedded) return body;
 
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Sloka'),
-        actions: [
-          StreamBuilder<bool>(
-            stream: _userData.watchBookmark(widget.slokaId),
-            builder: (context, snap) {
-              final isBookmarked = snap.data ?? false;
-              return IconButton(
-                tooltip: isBookmarked ? 'Remove bookmark' : 'Add bookmark',
-                icon: Icon(
-                  isBookmarked ? Icons.bookmark : Icons.bookmark_border,
+    final content = widget.isCompact
+        ? Stack(
+            children: [
+              body,
+              Positioned(
+                top: MediaQuery.of(context).size.height * 0.45,
+                left: 12,
+                child: _RoundNavButton(
+                  icon: Icons.chevron_left,
+                  onPressed: () {},
                 ),
-                onPressed: () =>
-                    _userData.setBookmark(widget.slokaId, !isBookmarked),
-              );
-            },
-          ),
-        ],
-      ),
-      bottomNavigationBar: AnimatedBuilder(
-        animation: audioSettingsController,
-        builder: (context, _) {
-          final audioSettings = audioSettingsController.value;
-          return AudioPlayerBarWithController(
-            controller: AudioControllerScope.of(context),
-            autoPlay: audioSettings.autoPlayNext,
-            onToggleAutoPlay: (v) => audioSettingsController.update(
-              audioSettings.copyWith(autoPlayNext: v),
+              ),
+              Positioned(
+                top: MediaQuery.of(context).size.height * 0.45,
+                right: 12,
+                child: _RoundNavButton(
+                  icon: Icons.chevron_right,
+                  onPressed: () {},
+                ),
+              ),
+            ],
+          )
+        : body;
+
+    return Scaffold(
+      appBar: widget.isCompact
+          ? AppBar(
+              title: const Text('К оглавлению', style: AppText.navTitle()),
+              backgroundColor: AppColors.white,
+              foregroundColor: AppColors.gray1,
+              elevation: 0,
+              iconTheme: const IconThemeData(color: AppColors.gray1),
+              actions: [
+                IconButton(
+                  icon: const Icon(Icons.mode_comment_outlined),
+                  onPressed: () {},
+                ),
+                StreamBuilder<bool>(
+                  stream: _userData.watchBookmark(widget.slokaId),
+                  builder: (context, snap) {
+                    final isBookmarked = snap.data ?? false;
+                    return IconButton(
+                      icon: Icon(
+                        isBookmarked ? Icons.bookmark : Icons.bookmark_border,
+                        color: isBookmarked ? AppColors.red1 : AppColors.gray1,
+                      ),
+                      onPressed: () =>
+                          _userData.setBookmark(widget.slokaId, !isBookmarked),
+                    );
+                  },
+                ),
+              ],
+            )
+          : AppBar(
+              title: const Text('Sloka', style: AppText.navTitle()),
+              backgroundColor: AppColors.red1,
+              foregroundColor: AppColors.white,
+              actions: [
+                StreamBuilder<bool>(
+                  stream: _userData.watchBookmark(widget.slokaId),
+                  builder: (context, snap) {
+                    final isBookmarked = snap.data ?? false;
+                    return IconButton(
+                      tooltip: isBookmarked ? 'Remove bookmark' : 'Add bookmark',
+                      icon: Icon(
+                        isBookmarked ? Icons.bookmark : Icons.bookmark_border,
+                      ),
+                      onPressed: () =>
+                          _userData.setBookmark(widget.slokaId, !isBookmarked),
+                    );
+                  },
+                ),
+              ],
             ),
-          );
-        },
+import 'widgets/variant_pill.dart';
+import 'widgets/mini_player_bar.dart';
+// ...
+      bottomNavigationBar: widget.isCompact
+          ? MiniPlayerBar(
+              controller: AudioControllerScope.of(context),
+              slokaName: 'Sloka ${widget.position}',
+            )
+          : AnimatedBuilder(
+              animation: audioSettingsController,
+              builder: (context, _) {
+                final audioSettings = audioSettingsController.value;
+                return AudioPlayerBarWithController(
+                  controller: AudioControllerScope.of(context),
+                  autoPlay: audioSettings.autoPlayNext,
+                  onToggleAutoPlay: (v) => audioSettingsController.update(
+                    audioSettings.copyWith(autoPlayNext: v),
+                  ),
+                );
+              },
+            ),
+      body: content,
+    );
+  }
+}
+
+class _RoundNavButton extends StatelessWidget {
+  const _RoundNavButton({required this.icon, required this.onPressed});
+  final IconData icon;
+  final VoidCallback? onPressed;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      decoration: const BoxDecoration(
+        color: AppColors.white,
+        shape: BoxShape.circle,
+        boxShadow: [BoxShadow(color: AppColors.black20, blurRadius: 6)],
       ),
-      body: body,
+      child: IconButton(
+        icon: Icon(icon, color: AppColors.gray1),
+        onPressed: onPressed,
+      ),
     );
   }
 }

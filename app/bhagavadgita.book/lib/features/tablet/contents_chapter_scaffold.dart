@@ -36,17 +36,21 @@ class _TabletContentsChapterScaffoldState
 
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: AppColors.red1,
+        foregroundColor: AppColors.white,
         title: Row(
           children: [
-            const Expanded(
+            Expanded(
               child: Text(
                 'Contents',
+                style: AppText.navTitle(),
                 overflow: TextOverflow.ellipsis,
               ),
             ),
             Expanded(
               child: Text(
                 _selectedChapterTitle ?? 'Chapter',
+                style: AppText.navTitle(),
                 textAlign: TextAlign.end,
                 overflow: TextOverflow.ellipsis,
               ),
@@ -142,6 +146,7 @@ class _TabletContentsChapterScaffoldState
                                   chapterId: c.id,
                                   position: s.position,
                                   embedded: true,
+                                  isCompact: true,
                                 ),
                               ),
                               (r) => false,
