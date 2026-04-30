@@ -1,141 +1,164 @@
 # Implementation Plan: Settings (Languages + Audio) — Bhagavad Gita Flutter
 
-> Version: 1.0  
-> Status: DRAFT  
-> Last Updated: 2026-04-30  
+> Version: 1.1
+> Status: DRAFT
+> Last Updated: 2026-04-30
 > Specifications: `03-specifications.md`
 
 ## Summary
 
-Сделать Settings как в legacy (Android/iOS): секции, подэкраны выбора языков (контент vs UI), базовые аудио-переключатели с UX “confirm download/delete” и прогрессом, и блок “Interpretations/Books” (список книг по выбранным языкам) — с постепенной интеграцией с данными (seed → repository/cache).
+Сделать Settings как в legacy (Android/iOS): секции, подэкраны выбора языков (контент vs UI), базовые аудио-переключатели с UX "confirm download/delete" и прогрессом, и блок "Interpretations/Books" (список книг по выбранным языкам) — с постепенной интеграцией с данными (seed → repository/cache).
+
+---
+
+## Current Status (Post-Sync)
+
+| Phase | Status |
+|-------|--------|
+| Phase 0 | **PENDING** — critical fixes required |
+| Phase 1 | Done (controllers created) |
+| Phase 2 | **BROKEN** — settings_screen.dart + app_language_screen.dart не компилируются |
+| Phase 3 | Placeholder only |
+| Phase 4 | Pending |
+
+---
 
 ## Task Breakdown
 
-### Phase 1: Foundation (state + persistence)
+### Phase 0: Critical Fixes (NEW — код не компилируется)
 
-#### Task 1.1: App language controller + app locale wiring
-- **Description**: Добавить `AppLanguageController` и пробросить `locale` в `MaterialApp` (system vs explicit).
-- **Files**:
-  - `app/bhagavadgita.book/lib/app/app.dart` (или место инициализации `MaterialApp`) — Modify
-  - `app/bhagavadgita.book/lib/features/settings/app_language_controller.dart` — Create
-- **Dependencies**: None
-- **Verification**: смена языка в Settings меняет тексты UI без перезапуска.
-- **Complexity**: Medium
-
-#### Task 1.2: Flutter localization bootstrap (en/ru)
-- **Description**: Подключить `flutter_localizations` и генерацию l10n; создать `app_en.arb` / `app_ru.arb` минимум для Settings.
-- **Files**:
-  - `app/bhagavadgita.book/pubspec.yaml` — Modify
-  - `app/bhagavadgita.book/l10n.yaml` (если используем gen-l10n) — Create
-  - `app/bhagavadgita.book/lib/l10n/*.arb` — Create
-- **Dependencies**: Task 1.1 (желательно, но можно параллельно)
-- **Verification**: `flutter gen-l10n` / build проходит; строки Settings берутся из локализации.
-- **Complexity**: Medium
-
-#### Task 1.3: Content languages controller (multi-select + guard)
-- **Description**: Добавить `ContentLanguagesController` (selected language codes) с правилом “min 1 selected”.
-- **Files**:
-  - `app/bhagavadgita.book/lib/features/settings/content_languages_controller.dart` — Create
-  - `app/bhagavadgita.book/lib/features/settings/models/language_option.dart` — Create (если нужно)
-- **Dependencies**: None
-- **Verification**: unit-test на guard + сохранение/восстановление prefs.
-- **Complexity**: Low/Medium
-
-#### Task 1.4: Audio settings controller (flags only)
-- **Description**: Добавить `AudioSettingsController` (useTranslation/useSanskrit/autoPlayNext) без реальных скачиваний; подготовить UI states (stub).
-- **Files**:
-  - `app/bhagavadgita.book/lib/features/settings/audio_settings_controller.dart` — Create
-- **Dependencies**: None
-- **Verification**: toggles persist; `SlokaScreen` читает флаги (без playback).
+#### Task 0.1: Fix `settings_screen.dart` — remove duplicate code
+- **Description**: Удалить дублирующийся/сломанный код после строки 370
+- **Files**: `settings_screen.dart`
+- **Verification**: `flutter analyze lib/features/settings/settings_screen.dart` — no syntax errors
 - **Complexity**: Low
 
-### Phase 2: Settings UI (screens + widgets)
+#### Task 0.2: Fix `settings_screen.dart` — add missing import
+- **Description**: Добавить `import '../../ui/theme/app_text.dart';`
+- **Files**: `settings_screen.dart`
+- **Verification**: `AppText` resolves
+- **Complexity**: Low
 
-#### Task 2.1: Refactor Settings screen into sections + reusable rows
-- **Description**: Переделать `SettingsScreen` под макет `02-visual.md`.
-- **Files**:
-  - `app/bhagavadgita.book/lib/features/settings/settings_screen.dart` — Modify
-  - `app/bhagavadgita.book/lib/features/settings/widgets/settings_section_header.dart` — Create
-  - `app/bhagavadgita.book/lib/features/settings/widgets/setting_row.dart` — Create
-  - `app/bhagavadgita.book/lib/features/settings/widgets/toggle_row.dart` — Create
-- **Dependencies**: Phase 1 controllers
-- **Verification**: визуально совпадает с ASCII; навигация на sub-screens работает.
+#### Task 0.3: Fix `app_language_screen.dart` — replace RadioGroup
+- **Description**: `RadioGroup<T>` не существует в Flutter; заменить на стандартные `RadioListTile` с `groupValue`/`onChanged`
+- **Files**: `app_language_screen.dart`
+- **Verification**: код компилируется; radio selection работает
+- **Complexity**: Low
+
+#### Task 0.4: Fix deprecated `activeColor`
+- **Description**: Заменить `activeColor` → `activeThumbColor` в SwitchListTile (9 мест)
+- **Files**: `settings_screen.dart`
+- **Verification**: no deprecation warnings
+- **Complexity**: Low
+
+### Phase 1: Foundation (state + persistence) — DONE
+
+#### Task 1.1: App language controller + app locale wiring — DONE
+- **Status**: ✅ Implemented
+- **Files**: `app_language_controller.dart`, `app.dart`
+
+#### Task 1.2: Flutter localization bootstrap (en/ru) — DONE
+- **Status**: ✅ Implemented
+- **Files**: `l10n/app_en.arb`, `l10n/app_ru.arb`, `l10n/l10n.dart`
+
+#### Task 1.3: Content languages controller (multi-select + guard) — DONE
+- **Status**: ✅ Implemented
+- **Files**: `content_languages_controller.dart`
+
+#### Task 1.4: Audio settings controller (flags only) — DONE
+- **Status**: ✅ Implemented
+- **Files**: `audio_settings_controller.dart`
+
+### Phase 2: Settings UI (screens + widgets) — PARTIAL (blocked by Phase 0)
+
+#### Task 2.1: Refactor Settings screen into sections + reusable rows — BROKEN
+- **Status**: ⚠️ Code exists but has syntax errors (see Phase 0)
+- **Files**: `settings_screen.dart`
+- **Remaining**: Fix Phase 0, then verify layout matches `02-visual.md`
+
+#### Task 2.2: Content languages screen (multi-select) — DONE
+- **Status**: ✅ Implemented
+- **Files**: `content_languages_screen.dart`
+
+#### Task 2.3: App language screen (radio list) — BROKEN
+- **Status**: ⚠️ Uses non-existent `RadioGroup` (see Task 0.3)
+- **Files**: `app_language_screen.dart`
+
+#### Task 2.4: Audio toggle UX (confirm dialogs + progress placeholders) — PARTIAL
+- **Status**: ⚠️ Dialogs work, but:
+  - toggle NOT disabled while downloading (Logic Gap G1)
+  - "Not available" state not implemented (Logic Gap G2)
+- **Remaining**: Fix after Phase 0
+
+### Phase 2.5: Logic Gaps (NEW — после Phase 0)
+
+#### Task 2.5.1: Disable audio toggle while downloading
+- **Description**: `onChanged` должен быть `null` когда `audioDownloadController.isBusy`
+- **Files**: `settings_screen.dart`
+- **Verification**: toggle greyed out во время скачивания
+- **Complexity**: Low
+
+#### Task 2.5.2: Audio "Not available" state
+- **Description**: Если `hasAudioTranslation == false` или `hasAudioSanskrit == false`, toggle disabled + показать subtitle "Not available"
+- **Files**: `settings_screen.dart`, возможно `audio_download_controller.dart`
+- **Verification**: toggle недоступен для track без аудио
 - **Complexity**: Medium
 
-#### Task 2.2: Content languages screen (multi-select)
-- **Description**: Реализовать экран выбора языков контента + guard “last language”.
-- **Files**:
-  - `app/bhagavadgita.book/lib/features/settings/content_languages_screen.dart` — Create
-- **Dependencies**: Task 1.3
-- **Verification**: нельзя снять последний язык; summary обновляется.
-- **Complexity**: Medium
+#### Task 2.5.3: Localize download button labels
+- **Description**: Заменить hardcoded "Download RU (AudioVeda)" на l10n ключи
+- **Files**: `settings_screen.dart`, `app_en.arb`, `app_ru.arb`
+- **Verification**: кнопки показывают локализованный текст
+- **Complexity**: Low
 
-#### Task 2.3: App language screen (radio list)
-- **Description**: Экран выбора языка интерфейса (System default / explicit).
-- **Files**:
-  - `app/bhagavadgita.book/lib/features/settings/app_language_screen.dart` — Create
-- **Dependencies**: Task 1.1, 1.2
-- **Verification**: UI меняется сразу при выборе.
-- **Complexity**: Medium
-
-#### Task 2.4: Audio toggle UX (confirm dialogs + progress placeholders)
-- **Description**: Диалоги подтверждения включения/удаления и отображение прогресса (можно stub state).
-- **Files**:
-  - `app/bhagavadgita.book/lib/features/settings/settings_screen.dart` — Modify
-  - `app/bhagavadgita.book/lib/features/settings/widgets/toggle_row.dart` — Modify
-- **Dependencies**: Task 1.4
-- **Verification**: confirm dialogs появляются; toggle блокируется в “downloading” state.
-- **Complexity**: Medium
-
-### Phase 3: Books/Interpretations section (data plumbing)
+### Phase 3: Books/Interpretations section (data plumbing) — PLACEHOLDER
 
 #### Task 3.1: Define books settings contract (UI model + controller)
-- **Description**: Создать `BooksSettingsController` и `BookSummary` модель; пока можно feed из seed/fixtures.
-- **Files**:
-  - `app/bhagavadgita.book/lib/features/settings/books_settings/books_settings_controller.dart` — Create
-  - `app/bhagavadgita.book/lib/features/settings/books_settings/book_summary.dart` — Create
-- **Dependencies**: Task 1.3
-- **Verification**: Settings показывает список книг и состояния (↓/✓/progress).
+- **Status**: ⏸️ Placeholder only — intentionally deferred
+- **Description**: Создать `BooksSettingsController` и `BookSummary` модель
 - **Complexity**: Medium
 
 #### Task 3.2: Integrate with real data source (incremental)
-- **Description**: Подключить реальный репозиторий (seed JSON → позже backend/cache).
-- **Files**:
-  - `app/bhagavadgita.book/lib/data/*` — Modify/Create (по факту архитектуры)
-- **Dependencies**: Task 3.1
-- **Verification**: список совпадает с доступными книгами по языкам.
-- **Complexity**: High (если сразу backend)
+- **Status**: ⏸️ Deferred
+- **Description**: Подключить реальный репозиторий
+- **Complexity**: High
 
-### Phase 4: Testing & Polish
+### Phase 4: Testing & Polish — PENDING
 
 #### Task 4.1: Unit + widget tests for controllers and key UX rules
-- **Description**: Покрыть guard и locale override.
-- **Files**:
-  - `app/bhagavadgita.book/test/features/settings/*` — Create
-- **Dependencies**: Phases 1-2
-- **Verification**: `flutter test` green.
+- **Status**: ⏸️ Pending Phase 0 fix
+- **Description**: Покрыть guard и locale override
 - **Complexity**: Medium
 
-#### Task 4.2: Copy + adapt legacy strings into l10n keys
-- **Description**: Добавить строки Settings из legacy (`Settings.*`) в ARB.
-- **Files**:
-  - `app/bhagavadgita.book/lib/l10n/app_en.arb` — Modify
-  - `app/bhagavadgita.book/lib/l10n/app_ru.arb` — Modify
-- **Dependencies**: Task 1.2
-- **Verification**: нет “hardcoded” строк в Settings.
-- **Complexity**: Low/Medium
+#### Task 4.2: Localization audit
+- **Status**: ⏸️ Pending
+- **Description**: Проверить что все строки Settings локализованы
+- **Complexity**: Low
 
-## Dependency Graph
+## Dependency Graph (Updated)
 
 ```
-Task 1.1 ─┬─→ Task 2.3
-          ├─→ Task 2.1 ─→ Task 2.2
-Task 1.2 ─┘      │
-Task 1.3 ────────┼─→ Task 3.1 ─→ Task 3.2
-Task 1.4 ────────└─→ Task 2.4
-                   ↓
-                Task 4.1, 4.2
+Phase 0 (Critical Fixes)
+   │
+   ├─→ Task 0.1 (remove duplicate code)
+   ├─→ Task 0.2 (add import AppText)
+   ├─→ Task 0.3 (fix RadioGroup)
+   └─→ Task 0.4 (deprecated activeColor)
+         │
+         ▼
+Phase 2.5 (Logic Gaps)
+   │
+   ├─→ Task 2.5.1 (disable toggle while downloading)
+   ├─→ Task 2.5.2 (not available state)
+   └─→ Task 2.5.3 (l10n download buttons)
+         │
+         ▼
+Phase 4 (Testing)
+   │
+   ├─→ Task 4.1 (tests)
+   └─→ Task 4.2 (l10n audit)
 ```
+
+**Note**: Phase 1 ✅ done, Phase 2 partially done, Phase 3 deferred.
 
 ## File Change Summary
 
@@ -163,9 +186,11 @@ Task 1.4 ────────└─→ Task 2.4
 
 ## Checkpoints
 
-- [ ] Phase 1: prefs controllers stable; no crashes on startup
-- [ ] Phase 2: Settings UI matches `02-visual.md`
-- [ ] Phase 3: books list shows correct filtering
+- [x] Phase 1: prefs controllers stable; no crashes on startup — DONE
+- [ ] Phase 0: `flutter analyze lib/features/settings/` — 0 errors
+- [ ] Phase 2: Settings UI matches `02-visual.md` (after Phase 0)
+- [ ] Phase 2.5: Audio toggle disabled while downloading; "Not available" works
+- [ ] Phase 3: books list shows correct filtering — DEFERRED
 - [ ] Phase 4: tests green; strings localized
 
 ## Open Implementation Questions

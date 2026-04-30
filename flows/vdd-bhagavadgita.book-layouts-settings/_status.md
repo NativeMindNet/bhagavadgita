@@ -6,15 +6,17 @@ IMPLEMENTATION
 
 ## Phase Status
 
-DRAFTING
+**BLOCKED** (critical compilation errors)
 
 ## Last Updated
 
-2026-04-30 by GPT-5.2 (Cursor)
+2026-04-30 by Claude Opus 4.5
 
 ## Blockers
 
-- None
+- **C1**: `settings_screen.dart` — дублирующийся код после строки 370, не компилируется
+- **C2**: `settings_screen.dart` — отсутствует import `AppText`
+- **C3**: `app_language_screen.dart` — использует несуществующий `RadioGroup`
 
 ## Progress
 
@@ -22,12 +24,12 @@ DRAFTING
 - [ ] Requirements approved
 - [x] Visual mockups drafted
 - [ ] Visual approved
-- [x] Specifications drafted
+- [x] Specifications drafted (v1.1 — добавлен gap analysis)
 - [ ] Specifications approved
 - [x] Plan drafted
 - [ ] Plan approved
 - [x] Implementation started
-- [x] Implementation complete  ← current
+- [ ] Implementation complete ← **blocked by C1-C3**
 - [ ] Documentation drafted
 - [ ] Documentation approved
 
@@ -37,13 +39,16 @@ Key decisions and context for resuming:
 
 - Settings scope: **languages** (content translations + UI locale), **audio** (Sanskrit/Translation + download/delete + autoplay), and **books/interpretations** (download per selected languages).
 - Legacy UX references:
-  - Android: `legacy/legacy_bhagavadgita.book_java/app/src/main/java/com/ethnoapp/bgita/screens/SettingsActivity.java`
-  - iOS: `legacy/legacy_bhagavadgita.book_swift/Gita/ViewControllers/SettingsViewController.swift`
-- Current Flutter baseline:
-  - Reader toggles exist: `app/bhagavadgita.book/lib/features/settings/settings_screen.dart`
-  - Persistence exists: `app/bhagavadgita.book/lib/features/settings/reader_settings.dart`
-- Languages source of truth (legacy DB export): `legacy/legacy_bhagavadgita.book_db/Books/db_languages.csv`, `db_books.csv`.
-- Implementation note: user invoked `/vdd autoimplement ...` while docs are still DRAFT; code is implemented and builds/tests pass, but REQ/VIS/SPEC/PLAN are not marked approved.
+  - Android: `legacy/legacy_bhagavadgita.book_java/.../SettingsActivity.java`
+  - iOS: `legacy/legacy_bhagavadgita.book_swift/.../SettingsViewController.swift`
+- Current Flutter files:
+  - `settings_screen.dart` — BROKEN
+  - `app_language_screen.dart` — BROKEN (RadioGroup)
+  - `content_languages_*.dart` — OK
+  - `audio_settings_controller.dart` — OK
+  - `app.dart` — OK (locale wired)
+  - `l10n/*.arb` — OK
+- Specs v1.1 содержит полный план исправлений (Phase 1-4)
 
 ## Fork History
 
@@ -51,6 +56,9 @@ Key decisions and context for resuming:
 
 ## Next Actions
 
-1. Decide whether to mark REQ/VIS/SPEC/PLAN as approved (or fork to a “post-implementation” revision).
-2. Replace placeholder “Interpretations/Books” list with real repository-backed data + download states.
-3. Implement real audio download/delete/progress wiring (likely via `sdd-bhagavadgita.book-audioplayer`).
+1. **Fix C1-C3** (Phase 1 в specs) — код должен компилироваться
+2. **Fix W1** (Phase 2) — deprecated `activeColor`
+3. **Fix G1-G3** (Phase 3) — logic gaps (audio disabled while downloading, "Not available", l10n)
+4. Run `flutter analyze` + `flutter test`
+5. Mark Implementation complete
+6. Draft documentation

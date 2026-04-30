@@ -1,10 +1,52 @@
 # Specifications: Settings (Languages + Audio) — Bhagavad Gita Flutter
 
-> Version: 1.0  
-> Status: DRAFT  
-> Last Updated: 2026-04-30  
-> Requirements: `01-requirements.md`  
+> Version: 1.1
+> Status: DRAFT
+> Last Updated: 2026-04-30
+> Requirements: `01-requirements.md`
 > Visual: `02-visual.md`
+
+---
+
+## Implementation Status (Post-Sync)
+
+### Implemented Files
+
+| File | Status | Notes |
+|------|--------|-------|
+| `settings_screen.dart` | **BROKEN** | Код не компилируется — см. Known Issues |
+| `app_language_controller.dart` | OK | Persistence + effectiveLocale работает |
+| `app_language_screen.dart` | **BROKEN** | `RadioGroup` не существует в Flutter |
+| `content_languages_controller.dart` | OK | Multi-select + "at least one" logic |
+| `content_languages_screen.dart` | OK | CheckboxListTile + validation dialog |
+| `audio_settings_controller.dart` | OK | Persistence flags |
+| `app.dart` | OK | `locale = settings.effectiveLocale` подключен |
+| `l10n/app_en.arb`, `app_ru.arb` | OK | Все ключи Settings присутствуют |
+
+### Known Issues (Critical)
+
+| # | Файл | Строки | Проблема |
+|---|------|--------|----------|
+| C1 | `settings_screen.dart` | 371+ | Дублирующийся/сломанный код после класса `_SectionHeader` |
+| C2 | `settings_screen.dart` | all | Отсутствует `import '../../ui/theme/app_text.dart';` |
+| C3 | `app_language_screen.dart` | 18 | `RadioGroup<T>` — не существует; заменить на стандартные `RadioListTile` |
+
+### Known Issues (Warnings)
+
+| # | Файл | Проблема |
+|---|------|----------|
+| W1 | `settings_screen.dart` | `activeColor` deprecated → `activeThumbColor` (9 мест) |
+
+### Logic Gaps (Spec vs Code)
+
+| # | Spec требует | Текущее состояние | Fix |
+|---|--------------|-------------------|-----|
+| G1 | Audio toggle **disabled while downloading** | Toggle остаётся enabled | Добавить `enabled: !audioDownloadController.isBusy` |
+| G2 | Audio "Not available" если `hasAudio == false` | Не проверяется | Добавить `hasAudioTranslation`/`hasAudioSanskrit` в `AudioDownloadController` или отдельный provider |
+| G3 | Download buttons l10n | Hardcoded "Download RU (AudioVeda)" | Добавить ключи в arb |
+| G4 | Books/Interpretations real data | Placeholder list | Intentional — отдельный flow |
+
+---
 
 ## Overview
 
@@ -233,8 +275,66 @@ Legacy has endpoints (`DataService.getLanguages/getBooks`). If reused:
 ## Open Design Questions
 
 - [ ] Default values for audio flags: iOS legacy sets Translation audio default ON; Android seems user-driven — confirm expected default in Flutter v1.
-- [ ] Content languages vs “default book”: do we allow choosing default book in Settings now, or keep fixed to seed?
-- [ ] What is the exact mapping “переводы глав” in current seed JSON and DB schema (where chapter titles are stored per language)?
+- [ ] Content languages vs "default book": do we allow choosing default book in Settings now, or keep fixed to seed?
+- [ ] What is the exact mapping "переводы глав" in current seed JSON and DB schema (where chapter titles are stored per language)?
+
+---
+
+## Implementation Fixes Required
+
+Порядок исправлений (Critical → Warnings → Gaps):
+
+### Phase 1: Critical (код не компилируется)
+
+1. **C2** — `settings_screen.dart`: добавить `import '../../ui/theme/app_text.dart';`
+2. **C1** — `settings_screen.dart`: удалить дублирующийся код после строки 370
+3. **C3** — `app_language_screen.dart`: заменить `RadioGroup` на стандартный паттерн:
+   ```dart
+   ListView(
+     children: [
+       RadioListTile<String?>(
+         title: Text(...),
+         value: null,
+         groupValue: selected,
+         onChanged: (v) => ...,
+       ),
+       for (final locale in AppLanguageController.supported)
+         RadioListTile<String?>(
+           title: Text(_labelFor(context, locale.languageCode)),
+           value: locale.languageCode,
+           groupValue: selected,
+           onChanged: (v) => ...,
+         ),
+     ],
+   )
+   ```
+
+### Phase 2: Warnings (deprecated API)
+
+4. **W1** — `settings_screen.dart`: заменить `activeColor` → `activeThumbColor` (9 мест)
+
+### Phase 3: Logic Gaps
+
+5. **G1** — Audio toggle disabled while downloading:
+   ```dart
+   SwitchListTile(
+     ...
+     onChanged: audioDownloadController.isBusy ? null : (v) async { ... },
+   )
+   ```
+
+6. **G2** — Audio "Not available":
+   - Добавить `hasAudioTranslation` / `hasAudioSanskrit` getter в `AudioDownloadController` (или отдельный provider на основе seed/repository)
+   - В UI: если `!hasAudio` → toggle disabled + subtitle "Not available"
+
+7. **G3** — l10n для download buttons:
+   - Добавить ключи `downloadAudioTranslation`, `downloadAudioSanskrit`, `downloadingEllipsis` в arb
+   - Заменить hardcoded strings
+
+### Phase 4: Polish (optional)
+
+8. Вынести `_SectionHeader` в `lib/features/settings/widgets/section_header.dart`
+9. Вынести confirm dialogs в reusable helper
 
 ---
 

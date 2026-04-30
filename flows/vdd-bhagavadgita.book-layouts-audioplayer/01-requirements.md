@@ -11,13 +11,18 @@
 Источники аудио в текущем проекте:
 
 - **Предустановленные статические файлы (offline‑bootstrap)**:
-  - `app/bhagavadgita.book/assets/audio/ru/chapter_1_ru.mp3`
-  - `app/bhagavadgita.book/assets/audio/sanskrit/chapter_1_sanskrit.mp3`
-- **Онлайн‑скачивание всех глав** через параметры в `.env`:
-  - `AUDIOVEDA_RUSSIAN_URL`
-  - `AUDIOVEDA_SANSKRIT_URL`
-  - `AUDIOVEDA_USERNAME`
-  - `AUDIOVEDA_PASSWORD`
+  - `app/bhagavadgita.book/assets/audio/ru/chapter_1_ru.mp3` (~10 MB)
+  - `app/bhagavadgita.book/assets/audio/sanskrit/chapter_1_sanskrit.mp3` (~25 MB)
+  - Эти файлы включены в bundle и доступны сразу без сети (Chapter 1 only).
+- **Онлайн‑скачивание всех глав (2–18)** через параметры в `.env`:
+  ```
+  AUDIOVEDA_RUSSIAN_URL=https://audioveda.com/unions/21
+  AUDIOVEDA_SANSKRIT_URL=https://audioveda.com/audios/2377
+  AUDIOVEDA_USERNAME=<email>
+  AUDIOVEDA_PASSWORD=<password>
+  ```
+  - Требуется авторизация для доступа к полному каталогу AudioVeda.
+  - Скачанные файлы сохраняются локально для офлайн‑воспроизведения.
 
 Референсы в текущем репозитории показывают прошлые решения:
 
@@ -149,8 +154,11 @@
 - **Platform**: iOS/Android обязаны поддерживать фон и системные контролы; desktop (macOS/Windows/Linux) — минимум базовый плеер, расширения (tray) по возможностям Flutter desktop.
 - **Offline-first**: слушать без сети после скачивания.
 - **Content coupling**: треки привязаны к book/chapter/shloka + языку дорожки.
-- **Bootstrap offline**: минимум один пакет аудио должен работать из коробки без сети (предустановленные mp3 для Chapter 1: ru/sanskrit).
-- **Credentials**: учётные данные для AudioVeda берутся только из `.env`, не логируются, не попадают в аналитику и не коммитятся.
+- **Bootstrap offline**: Chapter 1 работает из коробки без сети:
+  - `assets/audio/ru/chapter_1_ru.mp3` (~10 MB)
+  - `assets/audio/sanskrit/chapter_1_sanskrit.mp3` (~25 MB)
+- **Online download**: Главы 2–18 скачиваются через AudioVeda API (требует авторизации из `.env`).
+- **Credentials**: учётные данные для AudioVeda (`AUDIOVEDA_*`) берутся только из `.env`, не логируются, не попадают в аналитику и не коммитятся.
 
 ## Open Questions
 
@@ -166,8 +174,15 @@
 
 - Current Flutter:
   - `app/bhagavadgita.book/lib/app/audio/audio_controller.dart` (источники `localFile`/`networkUrl`, completion через `ProcessingState.completed`)
-  - `app/bhagavadgita.book/assets/audio/ru/chapter_1_ru.mp3`
-  - `app/bhagavadgita.book/assets/audio/sanskrit/chapter_1_sanskrit.mp3`
+  - `app/bhagavadgita.book/lib/app/audio/audio_download_controller.dart` (скачивание глав)
+  - `app/bhagavadgita.book/lib/app/audio/audioveda_client.dart` (HTTP client для AudioVeda)
+  - **Предустановленные файлы**:
+    - `app/bhagavadgita.book/assets/audio/ru/chapter_1_ru.mp3` (~10 MB)
+    - `app/bhagavadgita.book/assets/audio/sanskrit/chapter_1_sanskrit.mp3` (~25 MB)
+  - **Конфигурация** (`.env` в корне проекта):
+    - `AUDIOVEDA_RUSSIAN_URL` — URL для скачивания русского аудио (все главы)
+    - `AUDIOVEDA_SANSKRIT_URL` — URL для скачивания санскрит аудио
+    - `AUDIOVEDA_USERNAME` / `AUDIOVEDA_PASSWORD` — credentials для AudioVeda
 - Legacy iOS:
   - `legacy/legacy_bhagavadgita.book_swift/Gita/Libraries/SoundManager/SoundManager.swift`
   - `legacy/legacy_bhagavadgita.book_swift/Gita/Views/ShlokaPlayerView.swift`
