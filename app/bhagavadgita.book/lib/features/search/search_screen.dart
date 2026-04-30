@@ -92,7 +92,7 @@ class _SearchScreenState extends State<SearchScreen> {
                 }
                 return ListView.separated(
                   itemCount: items.length,
-                  separatorBuilder: (_, __) => const Divider(height: 1),
+                  separatorBuilder: (context, index) => const Divider(height: 1),
                   itemBuilder: (context, index) {
                     final s = items[index];
                     return ListTile(
@@ -117,7 +117,7 @@ class _SearchScreenState extends State<SearchScreen> {
                       onTap: () {
                         Navigator.of(context).push(
                           MaterialPageRoute(
-                            builder: (_) =>
+                            builder: (context) =>
                                 SlokaScreen(db: widget.db, slokaId: s.id),
                           ),
                         );

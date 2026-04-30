@@ -1,163 +1,142 @@
 import 'package:flutter/material.dart';
 
-import '../../data/mock_content.dart';
-import '../../ui/theme/app_colors.dart';
-import '../../ui/theme/app_text.dart';
-import '../../ui/widgets/om_logo.dart';
-import '../onboarding/onboarding_screen.dart';
+import '../../app/bootstrap/bootstrap_coordinator.dart';
+import '../../app/theme/gita_colors.dart';
+import '../../data/local/app_database.dart';
+import '../contents/contents_screen.dart';
 
-/// Splash screen — red gradient bg, centered Om logo + wordmark, loading
-/// indicator with percentage. Mocked progress for layout work.
 class SplashScreen extends StatefulWidget {
-  const SplashScreen({super.key});
+  const SplashScreen({super.key, required this.db});
+
+  final AppDatabase db;
 
   @override
   State<SplashScreen> createState() => _SplashScreenState();
 }
 
-class _SplashScreenState extends State<SplashScreen>
-    with SingleTickerProviderStateMixin {
-  late final AnimationController _controller;
-  bool _showDownloadDialog = false;
+class _SplashScreenState extends State<SplashScreen> {
+  late Future<BootstrapResult> _future;
 
   @override
   void initState() {
     super.initState();
-    _controller = AnimationController(
-      vsync: this,
-      duration: const Duration(seconds: 5),
-    )..forward();
-    _controller.addListener(() => setState(() {}));
-    _controller.addStatusListener((s) {
-      if (s == AnimationStatus.completed) {
-        setState(() => _showDownloadDialog = true);
-      }
-    });
+    _future = _bootstrap();
   }
 
-  @override
-  void dispose() {
-    _controller.dispose();
-    super.dispose();
-  }
-
-  void _continue() {
-    Navigator.of(context).pushReplacement(MaterialPageRoute(
-      builder: (_) => const OnboardingScreen(),
-    ));
+  Future<BootstrapResult> _bootstrap() async {
+    return BootstrapCoordinator(db: widget.db).run();
   }
 
   @override
   Widget build(BuildContext context) {
-    final pct = (_controller.value * 100).round();
+    return FutureBuilder<BootstrapResult>(
+      future: _future,
+      builder: (context, snap) {
+        if (snap.connectionState != ConnectionState.done) {
+          return const _SplashScaffold(
+            title: 'Bhagavad Gita',
+            subtitle: 'Initializing local storage…',
+            showProgress: true,
+          );
+        }
+        if (snap.hasError) {
+          return _SplashScaffold(
+            title: 'Bhagavad Gita',
+            subtitle: 'Startup failed. Tap to retry.',
+            showProgress: false,
+            onTap: () => setState(() => _future = _bootstrap()),
+          );
+        }
+
+        final result = snap.requireData;
+        if (!result.hasSnapshot) {
+          return const _SplashScaffold(
+            title: 'Bhagavad Gita',
+            subtitle: 'No local snapshot is available.',
+            showProgress: false,
+          );
+        }
+
+        return ContentsScreen(db: widget.db);
+      },
+    );
+  }
+}
+
+class _SplashScaffold extends StatelessWidget {
+  const _SplashScaffold({
+    required this.title,
+    required this.subtitle,
+    required this.showProgress,
+    this.onTap,
+  });
+
+  final String title;
+  final String subtitle;
+  final bool showProgress;
+  final VoidCallback? onTap;
+
+  @override
+  Widget build(BuildContext context) {
+    final theme = Theme.of(context);
     return Scaffold(
-      body: Stack(
-        fit: StackFit.expand,
-        children: [
-          Container(decoration: const BoxDecoration(
-              gradient: AppColors.splashGradient)),
-          SafeArea(
-            child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 24),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  const Spacer(),
-                  const SplashWordmark(),
-                  const Spacer(),
-                  if (!_showDownloadDialog) ...[
-                    Text('Loading data…',
-                        style: AppText.body()
-                            .copyWith(color: AppColors.white)),
-                    const SizedBox(height: 14),
-                    SizedBox(
-                      width: 220,
-                      child: ClipRRect(
-                        borderRadius: BorderRadius.circular(99),
-                        child: LinearProgressIndicator(
-                          value: _controller.value,
-                          minHeight: 6,
-                          backgroundColor:
-                              AppColors.white.withValues(alpha: 0.25),
-                          valueColor: const AlwaysStoppedAnimation(
-                              AppColors.white),
-                        ),
+      body: InkWell(
+        onTap: onTap,
+        child: Container(
+          width: double.infinity,
+          height: double.infinity,
+          padding: const EdgeInsets.symmetric(horizontal: 24),
+          decoration: const BoxDecoration(gradient: GitaColors.splashGradient),
+          child: SafeArea(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  'OM',
+                  style: theme.textTheme.headlineLarge?.copyWith(
+                    color: GitaColors.white,
+                    fontWeight: FontWeight.w700,
+                    letterSpacing: 1.0,
+                  ),
+                ),
+                const SizedBox(height: 16),
+                Text(
+                  title,
+                  textAlign: TextAlign.center,
+                  style: theme.textTheme.headlineSmall?.copyWith(
+                    color: GitaColors.white,
+                    letterSpacing: 1.2,
+                  ),
+                ),
+                const SizedBox(height: 12),
+                Text(
+                  subtitle,
+                  textAlign: TextAlign.center,
+                  style: theme.textTheme.bodyLarge?.copyWith(
+                    color: GitaColors.white.withValues(alpha: 0.92),
+                  ),
+                ),
+                if (showProgress) ...[
+                  const SizedBox(height: 24),
+                  SizedBox(
+                    width: 240,
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(999),
+                      child: LinearProgressIndicator(
+                        value: null,
+                        minHeight: 8,
+                        backgroundColor: GitaColors.white30,
+                        valueColor:
+                            const AlwaysStoppedAnimation(GitaColors.white),
                       ),
                     ),
-                    const SizedBox(height: 10),
-                    Text('$pct%',
-                        style: AppText.caption()
-                            .copyWith(color: AppColors.white)),
-                  ],
-                  const SizedBox(height: 60),
+                  ),
                 ],
-              ),
+              ],
             ),
           ),
-          if (_showDownloadDialog)
-            Center(child: _DownloadDialog(onResult: (_) => _continue())),
-        ],
+        ),
       ),
     );
   }
 }
-
-class _DownloadDialog extends StatelessWidget {
-  const _DownloadDialog({required this.onResult});
-  final ValueChanged<bool> onResult;
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      margin: const EdgeInsets.symmetric(horizontal: 24),
-      padding: const EdgeInsets.fromLTRB(24, 24, 24, 16),
-      decoration: BoxDecoration(
-        color: AppColors.white,
-        borderRadius: BorderRadius.circular(14),
-        boxShadow: const [
-          BoxShadow(
-            color: AppColors.black20,
-            blurRadius: 24,
-            offset: Offset(0, 8),
-          ),
-        ],
-      ),
-      child: Column(
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          Text('Download audio files?',
-              style: AppText.heading(),
-              textAlign: TextAlign.center),
-          const SizedBox(height: 10),
-          Text(
-            'Sanskrit and translation audio (~150 MB). You can also '
-            'download them later from Settings.',
-            style: AppText.body().copyWith(color: AppColors.gray2),
-            textAlign: TextAlign.center,
-          ),
-          const SizedBox(height: 20),
-          Row(
-            children: [
-              Expanded(
-                child: OutlinedButton(
-                  onPressed: () => onResult(false),
-                  child: const Text('No'),
-                ),
-              ),
-              const SizedBox(width: 12),
-              Expanded(
-                child: FilledButton(
-                  onPressed: () => onResult(true),
-                  child: const Text('Yes'),
-                ),
-              ),
-            ],
-          ),
-        ],
-      ),
-    );
-  }
-}
-
-// Sanity check that mock content compiles.
-final _bootSanity = MockContent.chapters.length;

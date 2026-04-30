@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../../ui/theme/app_colors.dart';
-import '../../ui/theme/app_text.dart';
-import '../../ui/widgets/om_logo.dart';
-import '../../ui/widgets/page_dots.dart';
+import '../../app/theme/gita_colors.dart';
+import '../../data/local/app_database.dart';
 import '../contents/contents_screen.dart';
 
 class _Page {
@@ -14,7 +12,9 @@ class _Page {
 }
 
 class OnboardingScreen extends StatefulWidget {
-  const OnboardingScreen({super.key});
+  const OnboardingScreen({super.key, required this.db});
+
+  final AppDatabase db;
 
   @override
   State<OnboardingScreen> createState() => _OnboardingScreenState();
@@ -47,7 +47,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
 
   void _toContents() {
     Navigator.of(context).pushReplacement(MaterialPageRoute(
-      builder: (_) => const ContentsScreen(),
+      builder: (_) => ContentsScreen(db: widget.db),
     ));
   }
 
@@ -57,7 +57,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
     final isFirst = _index == 0;
     return Scaffold(
       body: Container(
-        decoration: const BoxDecoration(gradient: AppColors.splashGradient),
+        decoration: const BoxDecoration(gradient: GitaColors.splashGradient),
         child: SafeArea(
           child: Column(
             children: [
@@ -73,18 +73,31 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          OmLogo(size: 80, dark: i == 0),
-                          const SizedBox(height: 28),
-                          Image.asset(p.asset,
-                              width: 96, height: 96, fit: BoxFit.contain),
-                          const SizedBox(height: 28),
+                          Text(
+                            'OM',
+                            style: Theme.of(context).textTheme.headlineLarge
+                                ?.copyWith(
+                                  color: GitaColors.white,
+                                  fontWeight: FontWeight.w700,
+                                ),
+                          ),
+                          const SizedBox(height: 24),
                           Text(p.title,
                               textAlign: TextAlign.center,
-                              style: AppText.guideTitle()),
+                              style: Theme.of(context)
+                                  .textTheme
+                                  .titleLarge
+                                  ?.copyWith(color: GitaColors.white)),
                           const SizedBox(height: 14),
                           Text(p.body,
                               textAlign: TextAlign.center,
-                              style: AppText.guideText()),
+                              style: Theme.of(context)
+                                  .textTheme
+                                  .bodyLarge
+                                  ?.copyWith(
+                                    color:
+                                        GitaColors.white.withValues(alpha: 0.92),
+                                  )),
                         ],
                       ),
                     );
@@ -107,14 +120,14 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                                     curve: Curves.easeOut,
                                   ),
                           style: TextButton.styleFrom(
-                            foregroundColor: AppColors.white,
+                            foregroundColor: GitaColors.white,
                           ),
                           child: Text(isFirst ? 'Skip' : '‹ Back'),
                         ),
                         FilledButton(
                           style: FilledButton.styleFrom(
-                            backgroundColor: AppColors.white,
-                            foregroundColor: AppColors.red1,
+                            backgroundColor: GitaColors.white,
+                            foregroundColor: GitaColors.red1,
                           ),
                           onPressed: isLast
                               ? _toContents
@@ -128,7 +141,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                       ],
                     ),
                     const SizedBox(height: 18),
-                    PageDots(count: _pages.length, index: _index),
+                    _Dots(count: _pages.length, index: _index),
                   ],
                 ),
               ),
@@ -136,6 +149,34 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
           ),
         ),
       ),
+    );
+  }
+}
+
+class _Dots extends StatelessWidget {
+  const _Dots({required this.count, required this.index});
+
+  final int count;
+  final int index;
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        for (var i = 0; i < count; i++)
+          Container(
+            width: 8,
+            height: 8,
+            margin: const EdgeInsets.symmetric(horizontal: 4),
+            decoration: BoxDecoration(
+              shape: BoxShape.circle,
+              color: i == index
+                  ? GitaColors.white
+                  : GitaColors.white.withValues(alpha: 0.35),
+            ),
+          ),
+      ],
     );
   }
 }

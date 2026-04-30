@@ -6,9 +6,8 @@ class CircularRevealPageRoute<T> extends PageRouteBuilder<T> {
   CircularRevealPageRoute({
     required WidgetBuilder builder,
     required this.center,
-    RouteSettings? settings,
+    super.settings,
   }) : super(
-          settings: settings,
           transitionDuration: const Duration(milliseconds: 300),
           reverseTransitionDuration: const Duration(milliseconds: 300),
           pageBuilder: (context, animation, secondaryAnimation) => builder(

@@ -1,4 +1,4 @@
-import 'package:drift/drift.dart';
+import 'package:drift/drift.dart' hide Column;
 import 'package:flutter/material.dart';
 
 import '../../data/local/app_database.dart';
@@ -7,11 +7,32 @@ import '../reader/chapter_screen.dart';
 import '../search/search_screen.dart';
 import '../search/search_route.dart';
 import '../settings/settings_screen.dart';
+import '../tablet/breakpoints.dart';
+import '../tablet/contents_chapter_scaffold.dart';
 
 class ContentsScreen extends StatelessWidget {
   const ContentsScreen({super.key, required this.db});
 
   final AppDatabase db;
+
+  @override
+  Widget build(BuildContext context) {
+    return LayoutBuilder(
+      builder: (context, constraints) {
+        if (Breakpoints.isTablet(constraints)) {
+          return TabletContentsChapterScaffold(db: db);
+        }
+        return _PhoneContents(db: db);
+      },
+    );
+  }
+}
+
+class _PhoneContents extends StatelessWidget {
+  const _PhoneContents({required this.db});
+
+  final AppDatabase db;
+
   static final GlobalKey _searchKey = GlobalKey();
 
   @override
@@ -39,7 +60,7 @@ class ContentsScreen extends StatelessWidget {
               Navigator.of(context).push(
                 CircularRevealPageRoute(
                   center: center,
-                  builder: (_) => SearchScreen(db: db),
+                  builder: (context) => SearchScreen(db: db),
                 ),
               );
             },
@@ -49,7 +70,7 @@ class ContentsScreen extends StatelessWidget {
             icon: const Icon(Icons.tune),
             onPressed: () {
               Navigator.of(context).push(
-                MaterialPageRoute(builder: (_) => const SettingsScreen()),
+                MaterialPageRoute(builder: (context) => const SettingsScreen()),
               );
             },
           ),
@@ -109,7 +130,7 @@ class ContentsScreen extends StatelessWidget {
           return ListView.separated(
             itemCount: chapters.length + 1,
             padding: const EdgeInsets.only(bottom: 12),
-            separatorBuilder: (_, __) => const Divider(height: 1),
+            separatorBuilder: (context, index) => const Divider(height: 1),
             itemBuilder: (context, index) {
               if (index == 0) {
                 return const QuoteCard(
@@ -125,7 +146,7 @@ class ContentsScreen extends StatelessWidget {
                 onTap: () {
                   Navigator.of(context).push(
                     MaterialPageRoute(
-                      builder: (_) => ChapterScreen(
+                      builder: (context) => ChapterScreen(
                         db: db,
                         chapterId: c.id,
                         title: 'Chapter ${c.position}',

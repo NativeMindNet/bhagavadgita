@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import 'gita_colors.dart';
 
@@ -13,6 +14,9 @@ class GitaTheme {
       surface: GitaColors.white,
       onSurface: GitaColors.gray1,
     );
+
+    final baseTextTheme = GoogleFonts.ptSansTextTheme();
+    final devanagari = GoogleFonts.notoSansDevanagari();
 
     return ThemeData(
       useMaterial3: true,
@@ -40,13 +44,40 @@ class GitaTheme {
         iconColor: GitaColors.gray2,
         textColor: GitaColors.gray1,
       ),
-      textTheme: const TextTheme(
-        titleLarge: TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
-        titleMedium: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
-        bodyLarge: TextStyle(fontSize: 16, height: 1.35),
-        bodyMedium: TextStyle(fontSize: 15, height: 1.35),
-        bodySmall: TextStyle(fontSize: 14, height: 1.35),
-        labelSmall: TextStyle(fontSize: 12, fontWeight: FontWeight.w700),
+      textTheme: baseTextTheme.copyWith(
+        titleLarge: baseTextTheme.titleLarge?.copyWith(
+          fontSize: 18,
+          fontWeight: FontWeight.w600,
+          color: GitaColors.gray1,
+        ),
+        titleMedium: baseTextTheme.titleMedium?.copyWith(
+          fontSize: 16,
+          fontWeight: FontWeight.w600,
+          color: GitaColors.gray1,
+        ),
+        bodyLarge: baseTextTheme.bodyLarge?.copyWith(
+          fontSize: 16,
+          height: 1.35,
+          color: GitaColors.gray1,
+        ),
+        bodyMedium: baseTextTheme.bodyMedium?.copyWith(
+          fontSize: 15,
+          height: 1.35,
+          color: GitaColors.gray1,
+        ),
+        bodySmall: baseTextTheme.bodySmall?.copyWith(
+          fontSize: 14,
+          height: 1.35,
+          color: GitaColors.gray2,
+        ),
+        labelSmall: baseTextTheme.labelSmall?.copyWith(
+          fontSize: 12,
+          fontWeight: FontWeight.w700,
+          color: GitaColors.gray2,
+        ),
+        displayMedium: baseTextTheme.displayMedium?.copyWith(
+          fontFamily: devanagari.fontFamily,
+        ),
       ),
     );
   }

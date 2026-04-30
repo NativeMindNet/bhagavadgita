@@ -40,7 +40,7 @@ class ChapterScreen extends StatelessWidget {
 
           return ListView.separated(
             itemCount: slokas.length,
-            separatorBuilder: (_, __) => const Divider(height: 1),
+            separatorBuilder: (context, index) => const Divider(height: 1),
             itemBuilder: (context, index) {
               final s = slokas[index];
               return ListTile(
@@ -65,7 +65,7 @@ class ChapterScreen extends StatelessWidget {
                 onTap: () {
                   Navigator.of(context).push(
                     MaterialPageRoute(
-                      builder: (_) => SlokaScreen(
+                      builder: (context) => SlokaScreen(
                         db: db,
                         slokaId: s.id,
                         chapterId: chapterId,
