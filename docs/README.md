@@ -4,6 +4,6 @@
 [![English](https://img.shields.io/badge/lang-en-blue.svg)](README_en.md)
 [![Thai](https://img.shields.io/badge/lang-th-green.svg)](README_th.md)
 
-## [Веб версия](/web/)
+## [Веб версия](/bhagavadgita/web/)
 
 [English Version](README_en.md) | [ภาษาไทย](README_th.md)
