@@ -7,10 +7,12 @@ class AuthorBadge extends StatelessWidget {
   const AuthorBadge({
     super.key,
     required this.initials,
+    this.name,
     this.size = 28,
   });
 
   final String initials;
+  final String? name;
   final double size;
 
   @override
@@ -19,7 +21,7 @@ class AuthorBadge extends StatelessWidget {
       color: AppColors.red1,
     );
 
-    return Container(
+    final badge = Container(
       width: size,
       height: size,
       alignment: Alignment.center,
@@ -29,6 +31,23 @@ class AuthorBadge extends StatelessWidget {
         border: Border.all(color: AppColors.red1, width: 1.5),
       ),
       child: Text(initials, style: textStyle),
+    );
+
+    if (name == null) return badge;
+
+    return Row(
+      mainAxisSize: MainAxisSize.min,
+      children: [
+        badge,
+        const SizedBox(width: 8),
+        Text(
+          name!,
+          style: AppText.caption().copyWith(
+            fontWeight: FontWeight.w600,
+            color: AppColors.gray2,
+          ),
+        ),
+      ],
     );
   }
 }

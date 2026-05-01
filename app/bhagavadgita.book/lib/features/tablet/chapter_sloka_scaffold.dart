@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 
 import '../../app/audio/audio_controller_scope.dart';
 import '../../ui/theme/app_colors.dart';
+import '../../ui/theme/app_text.dart';
 import '../../data/local/app_database.dart';
 import '../reader/sloka_screen.dart';
 import '../settings/audio_settings_controller.dart';
@@ -114,7 +115,23 @@ class _TabletChapterSlokaScaffoldState extends State<TabletChapterSlokaScaffold>
                   return const Center(child: CircularProgressIndicator());
                 }
                 if (slokas.isEmpty) {
-                  return const Center(child: Text('No slokas in this chapter yet.'));
+                  return Center(
+                    child: Column(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        Icon(
+                          Icons.article_outlined,
+                          size: 48,
+                          color: AppColors.gray3,
+                        ),
+                        const SizedBox(height: 12),
+                        Text(
+                          'No slokas yet',
+                          style: AppText.body().copyWith(color: AppColors.gray2),
+                        ),
+                      ],
+                    ),
+                  );
                 }
                 return ListView.separated(
                   itemCount: slokas.length,
@@ -122,18 +139,24 @@ class _TabletChapterSlokaScaffoldState extends State<TabletChapterSlokaScaffold>
                   itemBuilder: (context, index) {
                     final s = slokas[index];
                     final selected = s.id == _selectedSlokaId;
-                    return ListTile(
-                      selected: selected,
-                      selectedColor: AppColors.red1,
-                      selectedTileColor:
-                          AppColors.red1.withValues(alpha: 0.06),
-                      title: Text(s.name),
-                      subtitle: Text(
-                        s.translation ?? s.slokaText ?? '',
-                        maxLines: 2,
-                        overflow: TextOverflow.ellipsis,
+                    return Container(
+                      decoration: BoxDecoration(
+                        color: selected ? AppColors.red1.withValues(alpha: 0.06) : null,
+                        border: selected
+                            ? const Border(left: BorderSide(color: AppColors.red1, width: 3))
+                            : null,
                       ),
-                      onTap: () => setState(() => _selectedSlokaId = s.id),
+                      child: ListTile(
+                        selected: selected,
+                        selectedColor: AppColors.red1,
+                        title: Text(s.name),
+                        subtitle: Text(
+                          s.translation ?? s.slokaText ?? '',
+                          maxLines: 2,
+                          overflow: TextOverflow.ellipsis,
+                        ),
+                        onTap: () => setState(() => _selectedSlokaId = s.id),
+                      ),
                     );
                   },
                 );

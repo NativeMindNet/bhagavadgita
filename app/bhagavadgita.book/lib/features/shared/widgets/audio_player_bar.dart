@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'dart:ui';
 
 import '../../../app/audio/audio_controller.dart';
 import '../../../app/audio/audio_state.dart';
@@ -30,6 +29,7 @@ class AudioPlayerBarWithController extends StatelessWidget {
           autoPlay: autoPlay,
           isPlaying: s.isPlaying,
           positionLabel: formatDuration(s.position),
+          durationLabel: formatDuration(s.duration),
           progress: s.progress,
           onPlayPause: () => controller.togglePlayPause(),
           onSelectTrack: (t) => controller.setTrack(t),
@@ -49,6 +49,7 @@ class AudioPlayerBar extends StatelessWidget {
     this.track = AudioTrack.sanskrit,
     this.isPlaying = false,
     this.positionLabel = '0:00',
+    this.durationLabel = '0:00',
     this.progress = 0,
     this.onPlayPause,
     this.onSelectTrack,
@@ -62,6 +63,7 @@ class AudioPlayerBar extends StatelessWidget {
   final AudioTrack track;
   final bool isPlaying;
   final String positionLabel;
+  final String durationLabel;
   final double progress; // 0..1
   final String title;
 
@@ -112,7 +114,7 @@ class AudioPlayerBar extends StatelessWidget {
                             style: AppText.label().copyWith(color: AppColors.gray1),
                           ),
                           Text(
-                            positionLabel,
+                            '$positionLabel / $durationLabel',
                             style: AppText.caption().copyWith(
                               fontFeatures: const [FontFeature.tabularFigures()],
                             ),

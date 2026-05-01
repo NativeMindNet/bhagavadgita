@@ -1,4 +1,4 @@
-import 'package:drift/drift.dart';
+import 'package:drift/drift.dart' hide Column;
 import 'package:flutter/material.dart';
 
 import '../../ui/theme/app_colors.dart';
@@ -10,7 +10,6 @@ import '../search/search_route.dart';
 import '../search/search_screen.dart';
 import '../settings/settings_screen.dart';
 import '../shared/widgets/quote_card.dart';
-import 'chapter_sloka_scaffold.dart';
 
 class TabletContentsChapterScaffold extends StatefulWidget {
   const TabletContentsChapterScaffold({super.key, required this.db});
@@ -130,32 +129,40 @@ class _TabletContentsChapterScaffoldState
                           .watch(),
                       builder: (context, slokaSnap) {
                         final slokas = slokaSnap.data ?? const [];
-                        return ChapterExpandableTile(
-                          chapter: c,
-                          slokas: slokas,
-                          isExpanded: isExpanded,
-                          selectedSlokaId: null,
-                          onExpansionChanged: (expanded) {
-                            setState(() {
-                              _selectedChapterId = expanded ? c.id : null;
-                              _selectedChapterTitle = expanded ? 'Chapter ${c.position}' : null;
-                            });
-                          },
-                          onSlokaTap: (s) {
-                            _detailNavKey.currentState?.pushAndRemoveUntil(
-                              MaterialPageRoute(
-                                builder: (context) => SlokaScreen(
-                                  db: widget.db,
-                                  slokaId: s.id,
-                                  chapterId: c.id,
-                                  position: s.position,
-                                  embedded: true,
-                                  isCompact: true,
+                        return Container(
+                          decoration: BoxDecoration(
+                            color: isExpanded ? AppColors.red1.withValues(alpha: 0.08) : null,
+                            border: isExpanded
+                                ? const Border(left: BorderSide(color: AppColors.red1, width: 3))
+                                : null,
+                          ),
+                          child: ChapterExpandableTile(
+                            chapter: c,
+                            slokas: slokas,
+                            isExpanded: isExpanded,
+                            selectedSlokaId: null,
+                            onExpansionChanged: (expanded) {
+                              setState(() {
+                                _selectedChapterId = expanded ? c.id : null;
+                                _selectedChapterTitle = expanded ? 'Chapter ${c.position}' : null;
+                              });
+                            },
+                            onSlokaTap: (s) {
+                              _detailNavKey.currentState?.pushAndRemoveUntil(
+                                MaterialPageRoute(
+                                  builder: (context) => SlokaScreen(
+                                    db: widget.db,
+                                    slokaId: s.id,
+                                    chapterId: c.id,
+                                    position: s.position,
+                                    embedded: true,
+                                    isCompact: true,
+                                  ),
                                 ),
-                              ),
-                              (r) => false,
-                            );
-                          },
+                                (r) => false,
+                              );
+                            },
+                          ),
                         );
                       },
                     );
@@ -184,76 +191,30 @@ class _EmptyDetailPane extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final theme = Theme.of(context);
     return Center(
-      child: Text(
-        'Select a chapter',
-        style: theme.textTheme.titleMedium,
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Icon(
+            Icons.menu_book_outlined,
+            size: 64,
+            color: AppColors.red1.withValues(alpha: 0.4),
+          ),
+          const SizedBox(height: 16),
+          Text(
+            'Select a verse',
+            style: AppText.heading().copyWith(color: AppColors.gray2),
+          ),
+          const SizedBox(height: 8),
+          Text(
+            'Choose a chapter and tap on a verse\nto view its contents here',
+            textAlign: TextAlign.center,
+            style: AppText.body().copyWith(color: AppColors.gray3),
+          ),
+        ],
       ),
     );
   }
 }
 
-class _ChapterDetailPane extends StatelessWidget {
-  const _ChapterDetailPane({
-    required this.db,
-    required this.chapterId,
-    required this.chapterTitle,
-    required this.chapterName,
-  });
-
-  final AppDatabase db;
-  final int chapterId;
-  final String chapterTitle;
-  final String chapterName;
-
-  @override
-  Widget build(BuildContext context) {
-    final slokasQuery =
-        (db.select(db.slokas)..where((t) => t.chapterId.equals(chapterId)))
-          ..orderBy([(t) => OrderingTerm.asc(t.position)]);
-
-    return StreamBuilder<List<Sloka>>(
-      stream: slokasQuery.watch(),
-      builder: (context, snap) {
-        final slokas = snap.data ?? const [];
-        if (snap.connectionState == ConnectionState.waiting && slokas.isEmpty) {
-          return const Center(child: CircularProgressIndicator());
-        }
-        if (slokas.isEmpty) {
-          return const Center(child: Text('No slokas in this chapter yet.'));
-        }
-        return ListView.separated(
-          itemCount: slokas.length,
-          separatorBuilder: (context, index) => const Divider(height: 1),
-          itemBuilder: (context, index) {
-            final s = slokas[index];
-            return ListTile(
-              title: Text(s.name),
-              subtitle: Text(
-                s.translation ?? s.slokaText ?? '',
-                maxLines: 2,
-                overflow: TextOverflow.ellipsis,
-              ),
-              trailing: const Icon(Icons.chevron_right),
-              onTap: () {
-                Navigator.of(context).push(
-                  MaterialPageRoute(
-                    builder: (context) => TabletChapterSlokaScaffold(
-                      db: db,
-                      chapterId: chapterId,
-                      chapterTitle: chapterTitle,
-                      chapterName: chapterName,
-                      initialSlokaId: s.id,
-                    ),
-                  ),
-                );
-              },
-            );
-          },
-        );
-      },
-    );
-  }
-}
 

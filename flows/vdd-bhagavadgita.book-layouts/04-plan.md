@@ -370,11 +370,11 @@ Sprint 5 (Traktovki) ─── DEFERRED
 
 ## Checkpoints
 
-- [ ] Sprint 1: `flutter analyze` = 0 errors
-- [ ] Sprint 2: All high priority gaps closed
-- [ ] Sprint 3: Visual polish complete
-- [ ] Sprint 4: Tablet layouts refined
-- [ ] Sprint 5: Traktovki functional (optional)
+- [x] Sprint 1: `flutter analyze` = 0 errors ✅
+- [x] Sprint 2: All high priority gaps closed ✅ (GAP-1, GAP-2, GAP-4, GAP-5)
+- [x] Sprint 3: Visual polish complete ✅ (POLISH-1, POLISH-2, POLISH-3, POLISH-4)
+- [x] Sprint 4: Tablet layouts refined ✅ (TABLET-1, TABLET-2)
+- [ ] Sprint 5: Traktovki functional (optional, deferred)
 
 ---
 

@@ -51,7 +51,6 @@ class _PhoneContentsState extends State<_PhoneContents> {
     final chaptersQuery = (widget.db.select(widget.db.chapters)..where((t) => t.bookId.equals(1)))
       ..orderBy([(t) => OrderingTerm.asc(t.position)]);
 
-    final theme = Theme.of(context);
     return Scaffold(
       appBar: AppBar(
         backgroundColor: AppColors.red1,

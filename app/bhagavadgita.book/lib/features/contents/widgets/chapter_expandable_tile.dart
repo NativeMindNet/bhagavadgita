@@ -23,6 +23,8 @@ class ChapterExpandableTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final ranges = _groupSlokaRanges(slokas);
+
     return Column(
       children: [
         ListTile(
@@ -59,17 +61,12 @@ class ChapterExpandableTile extends StatelessWidget {
             child: Wrap(
               spacing: 8,
               runSpacing: 8,
-              children: slokas.map((s) {
-                // Keep the range string if present, otherwise position
-                final displayTitle = s.name.contains('.') 
-                    ? s.name.split('.').last 
-                    : s.position.toString();
-                    
-                final isSelected = s.id == selectedSlokaId;
+              children: ranges.map((range) {
+                final isSelected = range.slokas.any((s) => s.id == selectedSlokaId);
                 return ChoiceChip(
-                  label: Text(displayTitle),
+                  label: Text(range.label),
                   selected: isSelected,
-                  onSelected: (_) => onSlokaTap(s),
+                  onSelected: (_) => onSlokaTap(range.slokas.first),
                   labelStyle: AppText.label().copyWith(
                     color: isSelected ? AppColors.white : AppColors.gray1,
                     fontWeight: FontWeight.w600,
@@ -89,4 +86,42 @@ class ChapterExpandableTile extends StatelessWidget {
       ],
     );
   }
+}
+
+class _SlokaRange {
+  _SlokaRange(this.slokas);
+  final List<Sloka> slokas;
+
+  String get label {
+    if (slokas.length == 1) {
+      final s = slokas.first;
+      return s.name.contains('.') ? s.name.split('.').last : s.position.toString();
+    }
+    final first = slokas.first;
+    final last = slokas.last;
+    final firstNum = first.name.contains('.') ? first.name.split('.').last : first.position.toString();
+    final lastNum = last.name.contains('.') ? last.name.split('.').last : last.position.toString();
+    return '$firstNum-$lastNum';
+  }
+}
+
+List<_SlokaRange> _groupSlokaRanges(List<Sloka> slokas) {
+  if (slokas.isEmpty) return [];
+
+  final ranges = <_SlokaRange>[];
+  var currentGroup = <Sloka>[slokas.first];
+
+  for (var i = 1; i < slokas.length; i++) {
+    final prev = slokas[i - 1];
+    final curr = slokas[i];
+    if (curr.position == prev.position + 1) {
+      currentGroup.add(curr);
+    } else {
+      ranges.add(_SlokaRange(currentGroup));
+      currentGroup = [curr];
+    }
+  }
+  ranges.add(_SlokaRange(currentGroup));
+
+  return ranges;
 }

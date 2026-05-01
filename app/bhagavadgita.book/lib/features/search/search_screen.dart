@@ -115,27 +115,29 @@ class _SearchScreenState extends State<SearchScreen> {
             ),
           ),
           Expanded(
-            child: StreamBuilder<List<Sloka>>(
-              stream: query.watch(),
-              builder: (context, snap) {
-                final items = snap.data ?? const <Sloka>[];
-                if (snap.connectionState == ConnectionState.waiting) {
-                  return const Center(child: CircularProgressIndicator());
-                }
-                if (q.isNotEmpty && items.isEmpty) {
-                  return const Center(child: Text('Nothing found.'));
-                }
-                if (q.isEmpty && items.isEmpty && !_onlyBookmarks) {
-                  return const Center(
-                    child: Text('No slokas in local snapshot.'),
-                  );
-                }
-                if (q.isEmpty && items.isEmpty && _onlyBookmarks) {
-                  return const Center(
-                    child: Text('No bookmarks found.'),
-                  );
-                }
-                return ListView.separated(
+            child: Container(
+              color: AppColors.gray5.withValues(alpha: 0.5),
+              child: StreamBuilder<List<Sloka>>(
+                stream: query.watch(),
+                builder: (context, snap) {
+                  final items = snap.data ?? const <Sloka>[];
+                  if (snap.connectionState == ConnectionState.waiting) {
+                    return const Center(child: CircularProgressIndicator());
+                  }
+                  if (q.isNotEmpty && items.isEmpty) {
+                    return const Center(child: Text('Nothing found.'));
+                  }
+                  if (q.isEmpty && items.isEmpty && !_onlyBookmarks) {
+                    return const Center(
+                      child: Text('No slokas in local snapshot.'),
+                    );
+                  }
+                  if (q.isEmpty && items.isEmpty && _onlyBookmarks) {
+                    return const Center(
+                      child: Text('No bookmarks found.'),
+                    );
+                  }
+                  return ListView.separated(
                   itemCount: items.length,
                   separatorBuilder: (context, index) => const Divider(height: 1),
                   itemBuilder: (context, index) {
@@ -181,7 +183,8 @@ class _SearchScreenState extends State<SearchScreen> {
                     );
                   },
                 );
-              },
+                },
+              ),
             ),
           ),
         ],

@@ -45,6 +45,12 @@ class _SlokaScreenState extends State<SlokaScreen> {
   int? _boundSlokaId;
   bool _wiredCompletion = false;
 
+  int _translationVariant = 0;
+  int _commentaryVariant = 0;
+
+  static const _translationVariants = ['Ru'];
+  static const _commentaryVariants = ['BG'];
+
   @override
   void initState() {
     super.initState();
@@ -248,7 +254,11 @@ class _SlokaScreenState extends State<SlokaScreen> {
                       if (settings.showTranslation &&
                           (sloka.translation ?? '').isNotEmpty) ...[
                         const SectionHeader('Translation'),
-                        const VariantPill(label: 'Ru'),
+                        VariantPillRow(
+                          variants: _translationVariants,
+                          selectedIndex: _translationVariant,
+                          onSelect: (i) => setState(() => _translationVariant = i),
+                        ),
                         const SizedBox(height: 8),
                         Text(
                           sloka.translation!,
@@ -259,12 +269,19 @@ class _SlokaScreenState extends State<SlokaScreen> {
                       if (settings.showComment &&
                           (sloka.comment ?? '').isNotEmpty) ...[
                         const SectionHeader('Commentary'),
-                        const VariantPill(label: 'BG'),
+                        VariantPillRow(
+                          variants: _commentaryVariants,
+                          selectedIndex: _commentaryVariant,
+                          onSelect: (i) => setState(() => _commentaryVariant = i),
+                        ),
                         const SizedBox(height: 8),
                         Row(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            const AuthorBadge(initials: 'BG'),
+                            const AuthorBadge(
+                              initials: 'BG',
+                              name: 'Bhagavad Gita',
+                            ),
                             const SizedBox(width: 10),
                             Expanded(
                               child: Text(
@@ -575,11 +592,15 @@ class _NavButton extends StatelessWidget {
           width: 48,
           height: 48,
           decoration: BoxDecoration(
+            color: AppColors.white,
             shape: BoxShape.circle,
             border: Border.all(
               color: onPressed != null ? AppColors.red1 : AppColors.gray3,
               width: 1.5,
             ),
+            boxShadow: onPressed != null
+                ? [const BoxShadow(color: AppColors.black20, blurRadius: 4, offset: Offset(0, 2))]
+                : null,
           ),
           child: Icon(
             icon,
