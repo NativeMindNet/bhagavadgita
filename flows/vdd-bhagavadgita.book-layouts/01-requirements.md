@@ -55,7 +55,7 @@ Currently:
 
 2. **Given** I am on Contents screen
    **When** I tap a chapter row
-   **Then** the chapter expands/collapses inline to reveal a verse grid (chips, including grouped ranges like `4-6`)
+   **Then** the chapter expands/collapses inline to reveal a verse grid (chips, including grouped ranges like `4-6`; canonical **UVGF:** [`../vdd-verse-grid/03-specifications.md`](../vdd-verse-grid/03-specifications.md))
 
 3. **Given** I am viewing a sloka
    **When** the sloka loads
@@ -94,7 +94,7 @@ Currently:
 9. Download progress tracking for audio files
 10. Push notifications for quote of the day
 11. Tablet dual-pane layout (split-view) with:
-    - chapters + verse grid on the left
+    - chapters + verse grid on the left (see [`../vdd-verse-grid/02-visual.md`](../vdd-verse-grid/02-visual.md))
     - sloka detail on the right
 12. Bookmarks split-view on tablet (list left, sloka detail right)
 13. Settings: traktovki selection supports multi-select and per-item download/install action (“Скачать”)
@@ -188,7 +188,7 @@ From legacy Assets:
 - Optional: Quote of the day card at top
 - 18 chapters in scrollable list
 - Each chapter: position number, name, disclosure chevron
-- Expandable chapters to show a verse number grid inline (chips, including grouped ranges)
+- Expandable chapters to show a verse number grid inline (chips, including grouped ranges; canonical rules: [`../vdd-verse-grid/03-specifications.md`](../vdd-verse-grid/03-specifications.md))
 - Selected verse chip highlights current verse (from last read or current selection)
 
 ### 4. Chapter Screen

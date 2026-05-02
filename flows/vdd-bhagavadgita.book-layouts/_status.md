@@ -105,3 +105,4 @@ Key decisions and context for resuming:
 - Requirements: `01-requirements.md`
 - Visual mockups: `02-visual.md`
 - Specifications: `03-specifications.md`
+- Verse grid (UVGF, extracted): `../vdd-verse-grid/README.md`

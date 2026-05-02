@@ -65,7 +65,7 @@ class _SearchScreenState extends State<SearchScreen> {
 
 #### GAP-1: Verse Range Chips in Contents
 
-**Spec:** `02-visual.md` lines 223-228 show verse ranges like "4-6", "32-34"
+**Spec:** Verse grid mockups and **Universal Verse Grid Format (UVGF)** — [`../vdd-verse-grid/02-visual.md`](../vdd-verse-grid/02-visual.md), [`../vdd-verse-grid/03-specifications.md`](../vdd-verse-grid/03-specifications.md). (Legacy pointer: former `02-visual.md` ASCII block now lives under `vdd-verse-grid`.)
 
 **Current:** Individual position chips only (1, 2, 3, etc.)
 

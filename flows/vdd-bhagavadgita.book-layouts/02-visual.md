@@ -209,38 +209,7 @@ Primary navigation screen with chapters list.
 
 ### Expanded Chapter (Verse Grid)
 
-Chapters can expand in-place to show verse numbers. Some numbers may be grouped as ranges.
-
-```
-+------------------------------------------+
-|########## RED APPBAR #FF5252 ############|
-|=  #sett   Бхагавад Гита      #srch  #bk =|
-+------------------------------------------+
-|  Глава 1                                 |
-|  Осмотр Армий                     ^      |
-|  46 шлок                                  |
-|                                          |
-|   ( 1 )  2   3  4-6  7  8-9  10          |
-|    11   12  13   14  15  16  17-18       |
-|    19   20 21-23 24  25  26   27         |
-|    28   29  30   31 32-34 35  36         |
-|   37-38 39  40   41  42  43  44          |
-|    45   46                               |
-|                                          |
-|  ----------------------------------------|
-|  Глава 2                           v     |
-|  Душа в мире материи                    |
-|  ----------------------------------------|
-|  Глава 3                           v     |
-|  Йога деятельности                       |
-|  ----------------------------------------|
-+------------------------------------------+
-```
-
-Legend:
-- `^` / `v` = expanded / collapsed chevron
-- `( 1 )` = selected verse chip
-- `4-6` = verse range chip
+Chapters expand in-place to show verse chips (single numbers and ranges). **Full ASCII mockups, legend, and the canonical Universal Verse Grid Format (UVGF)** live in the dedicated flow: [`../vdd-verse-grid/02-visual.md`](../vdd-verse-grid/02-visual.md) and [`../vdd-verse-grid/03-specifications.md`](../vdd-verse-grid/03-specifications.md).
 
 ### With Search Open (Circular Reveal)
 
@@ -957,38 +926,7 @@ Choose translation language.
 
 ### Tablet (Landscape): Chapters + Verse Grid + Sloka Detail
 
-Matches store screenshots where chapter list expands to verse chips on the left, while the right pane shows the selected sloka detail.
-
-```
-+--------------------------------------------------------------------------------+
-|########################## RED APPBAR #FF5252 ##################################|
-|=  #sett   Бхагавад Гита                           #srch  #cmt  #bk  #more      =|
-+--------------------------------------------------------------------------------+
-|  CHAPTERS + VERSE GRID (Master)        |  SLOKA DETAIL (Detail)                |
-|                                       |                                       |
-|  Глава 4                               |  (◀)                           (▶)   |
-|  Йога обретения духовного знания   ^   |                                       |
-|  42 шлок                                |                4.19                   |
-|                                        |     Йога обретения духовного знания   |
-|   1  2  3  4  5  6  7                   |                ---                    |
-|   8  9 10 11 12 13 14                   |  Sanskrit / transcription...          |
-|  15 16 17 18 (19) 20 21                 |                ---                    |
-|  22 23 24 25 26 27 28                   |  Word-by-word...                      |
-|  29 30 31 32-34 35 36                   |                ---                    |
-|  37-38 39 40 41 42                      |  [ Ru ] / [ En SM ] / [ En SP ]...    |
-|                                        |  Translation + commentary blocks...   |
-|  ------------------------------------- |                                       |
-|  Глава 5  Деятельность в отречении  v  |                                       |
-|  ------------------------------------- |                                       |
-+--------------------------------------------------------------------------------+
-|############################### MINI PLAYER ####################################|
-|  4.19 Йога обретения духовн...   [▶]    [=====>                         ]     |
-+--------------------------------------------------------------------------------+
-```
-
-Legend:
-- `(19)` = selected verse chip in grid
-- `#more` = overflow menu
+Master-detail with verse chips in the left pane: **mockups and chip legend** are maintained in [`../vdd-verse-grid/02-visual.md`](../vdd-verse-grid/02-visual.md). UVGF semantics: [`../vdd-verse-grid/03-specifications.md`](../vdd-verse-grid/03-specifications.md).
 
 ### Tablet (Landscape): Bookmarks + Sloka Detail (Split)
 

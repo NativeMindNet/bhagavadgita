@@ -10,10 +10,10 @@
 
 Implement the UI layouts and design system (colors, typography, spacing, navigation structure, and responsive behavior) for the Bhagavad Gita reader app in Flutter, based on `02-visual.md` and `01-requirements.md`, including store-screenshot-driven states:
 
-- Contents: expandable chapters with verse grid (chips and ranges)
+- Contents: expandable chapters with verse grid (chips and ranges; **canonical format:** [`../vdd-verse-grid/03-specifications.md`](../vdd-verse-grid/03-specifications.md))
 - Sloka detail: white topbar variant, round prev/next overlay, multi-variant translation/commentary pills, and compact mini-player
 - Settings: compact layout with traktovki multi-select + per-item download action (“Скачать”)
-- Tablet/landscape: split-view patterns (chapters+verse-grid → detail, bookmarks → detail)
+- Tablet/landscape: split-view patterns (chapters+verse-grid → detail per [`../vdd-verse-grid/02-visual.md`](../vdd-verse-grid/02-visual.md), bookmarks → detail)
 
 Scope of this spec is **layouts + theming + navigation + responsive (tablet) structure**, while keeping data access aligned with the existing Drift schema and repositories. Features like audio downloads, push notifications, and quote scheduling are acknowledged but **not implemented as part of this layouts spec unless explicitly included in the implementation plan**.
 
@@ -76,7 +76,7 @@ These are internal widgets (not public API), created to match the mockups and av
 - `SlokaSectionHeader`: uppercase section header styling
 - `SlokaTopbar`: white topbar variant (“К оглавлению”) with action icons (comments, bookmark, overflow)
 - `RoundNavButtons`: overlay previous/next circular buttons for sloka navigation on tablet/compact layouts
-- `VerseGrid`: verse chips with support for grouped ranges (`4-6`) and selected highlight
+- `VerseGrid` / expandable tile grid: implemented per **UVGF** in [`../vdd-verse-grid/03-specifications.md`](../vdd-verse-grid/03-specifications.md) (grouped ranges, selected highlight, tap resolution)
 - `VariantPill`: small pill label for translation/commentary blocks (e.g. `Ru`, `En SP`, `En VC`)
 - `MiniPlayerBar`: compact bottom mini-player (progress + sloka label + play)
 - `TraktovkiList`: list with multi-select checkmarks and per-item download/install CTA
@@ -115,7 +115,7 @@ None required for layouts. Bookmarks/notes already exist via `UserDataRepository
 The app should align with the navigation flow defined in `02-visual.md`.
 
 - **Splash → Contents**: after bootstrap completes and snapshot exists
-- **Contents (expanded)**: tap chapter row expands/collapses to show verse grid; tap verse chip navigates to sloka detail (tablet may keep split-view)
+- **Contents (expanded)**: tap chapter row expands/collapses to show verse grid (UVGF); tap verse chip navigates to sloka detail (tablet may keep split-view)
 - **Contents → Chapter (optional)**: if a dedicated chapter sloka-list view is exposed (legacy mode), open it via an explicit affordance (e.g. chevron/action) rather than replacing expand/collapse
 - **Contents → Search**: tap search icon (circular reveal entry target)
 - **Contents → Settings**: tap settings/tune icon (slide left)
@@ -264,7 +264,7 @@ No data migrations. UI-only changes, safe to roll out behind incremental commits
 - [ ] **Tablet breakpoint**: define concrete breakpoint(s) and pane ratio (mockups imply ~40/60)
 - [ ] **Circular reveal implementation**: decide whether to implement via custom clip animation or use a package (prefer custom to avoid dependency)
 - [ ] **Traktovki selection rules**: confirm if multi-select is intended on all platforms; screenshots show multiple checkmarks
-- [ ] **Verse range tap behavior**: tap opens first verse vs opens chooser (UX decision)
+- [ ] **Verse range tap behavior**: tap opens first verse vs opens chooser (UX decision) — tracked in [`../vdd-verse-grid/01-requirements.md`](../vdd-verse-grid/01-requirements.md)
 
 ---
 
