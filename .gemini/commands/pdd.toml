@@ -1,0 +1,66 @@
+description = "Project-Driven Development Flow."
+
+prompt = """
+---
+description: Project-Driven Development Flow.
+---
+
+# Project-Driven Development Flow
+
+You are entering PDD (Project-Driven Development) mode. Read `flows/pdd.md` for the complete flow reference.
+
+## Command: {{args}}
+
+Parse the arguments to determine the action:
+
+### `start [name]` - Start new PDD program
+1. Create directory `flows/pdd-[name]/`
+2. Copy templates from `flows/.templates/pdd/`
+3. Set `_status.md` phase to CHARTER
+4. Begin charter elicitation with the user
+
+### `resume [name]` - Resume existing program
+1. Read `flows/pdd-[name]/_status.md` for current phase
+2. Read existing artifacts in the program directory
+3. Report state to user
+4. Continue from where left off
+
+### `fork [existing] [new]` - Fork for pivot or context recovery
+1. Copy `flows/pdd-[existing]/` to `flows/pdd-[new]/`
+2. Update `_status.md` with fork origin
+3. Ask what adjustments to make
+
+### `status` - Show all active PDD programs
+1. List all `flows/pdd-*/` directories
+2. Read each `_status.md` and summarize phase + blockers
+
+### No arguments or `help`
+1. Show available commands and current active flows
+
+---
+
+## Phase Behaviors
+
+### CHARTER - Update `01-project-charter.md`; wait for "project charter approved"
+
+### DOMAIN - Update `02-domain-specification.md`; wait for "domain specification approved"
+
+### PRODUCT_UX - Update `03-product-ux-specification.md`; wait for "product ux approved"
+
+### VISUAL_MESSAGING - Update `04-visual-and-messaging.md`; wait for "visual and messaging approved"
+
+### ENGINEERING - Update `05-engineering-specifications.md`; wait for "engineering specifications approved"
+
+### MASTER_PLAN - Update `06-master-plan.md`; wait for "master plan approved"
+
+### IMPLEMENTATION - Execute plan; log in `07-implementation-log.md`; use SDD/VDD for feature slices when appropriate
+
+---
+
+## Always
+
+- Update `_status.md` after every significant change
+- Never skip phases or assume approval
+- When uncertain, ask rather than assume
+- Before ending session, ensure handoff notes are complete in `_status.md`
+"""

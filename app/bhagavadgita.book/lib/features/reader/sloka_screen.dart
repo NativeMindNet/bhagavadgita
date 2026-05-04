@@ -16,6 +16,7 @@ import '../shared/widgets/author_badge.dart';
 import '../shared/widgets/section_header.dart';
 import 'widgets/mini_player_bar.dart';
 import 'widgets/variant_pill.dart';
+import '../../ui/widgets/share_button.dart';
 
 class SlokaScreen extends StatefulWidget {
   const SlokaScreen({
@@ -412,6 +413,7 @@ class _SlokaScreenState extends State<SlokaScreen> {
                   icon: const Icon(Icons.mode_comment_outlined),
                   onPressed: () {},
                 ),
+                ShareButton(chapter: widget.chapterId, verse: widget.slokaId),
                 StreamBuilder<bool>(
                   stream: _userData.watchBookmark(widget.slokaId),
                   builder: (context, snap) {
@@ -433,6 +435,7 @@ class _SlokaScreenState extends State<SlokaScreen> {
               backgroundColor: AppColors.red1,
               foregroundColor: AppColors.white,
               actions: [
+                ShareButton(chapter: widget.chapterId, verse: widget.slokaId),
                 StreamBuilder<bool>(
                   stream: _userData.watchBookmark(widget.slokaId),
                   builder: (context, snap) {

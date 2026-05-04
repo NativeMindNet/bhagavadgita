@@ -1,6 +1,6 @@
 # Legacy - Reverse Engineering Documentation
 
-Analyzes existing code and generates documentation (ADR/SDD/DDD/TDD/VDD flows) automatically.
+Analyzes existing code and generates documentation (ADR/SDD/PDD/DDD/TDD/VDD flows) automatically.
 
 ## Step 0: Scan Existing Flows (BEFORE ANYTHING ELSE)
 
@@ -10,6 +10,7 @@ Analyzes existing code and generates documentation (ADR/SDD/DDD/TDD/VDD flows) a
 1. SCAN all existing flows:
    - flows/adr-*/**/*.md (Architectural Decision Records)
    - flows/sdd-*/**/*.md (Spec-Driven Development)
+   - flows/pdd-*/**/*.md (Project-Driven Development — whole product / program)
    - flows/ddd-*/**/*.md (Document-Driven Development)
    - flows/tdd-*/**/*.md (Tests-Driven Development)
    - flows/vdd-*/**/*.md (Visual-Driven Development)
@@ -18,6 +19,7 @@ Analyzes existing code and generates documentation (ADR/SDD/DDD/TDD/VDD flows) a
    | Flow Path | Type | Topics Covered | Key Decisions |
    |-----------|------|----------------|---------------|
    | flows/sdd-auth/ | SDD | JWT, sessions | Bcrypt hashing |
+   | flows/pdd-acme-app/ | PDD | domain, IA, backend, charter | Program-level baselines |
    | flows/adr-001-jwt/ | ADR | Token format | RS256 chosen |
    | ... | ... | ... | ... |
 
@@ -128,7 +130,7 @@ RECURSIVE-UNDERSTAND(node):
         │                 EXITING                 │
         │                    │                    │
         │                    ▼                    │
-        │         [generate ADR/SDD/DDD/TDD/VDD]  │
+        │         [generate ADR/SDD/PDD/DDD/TDD/VDD]  │
         │                    │                    │
         │                    ▼                    │
         └─────────────── [record state] ──────────┘
@@ -152,6 +154,7 @@ AI reads `_traverse.md` to know exactly where it is and what to do next.
 | Flow Path | Type | Topics | Key Decisions |
 |-----------|------|--------|---------------|
 | flows/sdd-auth/ | SDD | authentication, JWT, sessions | bcrypt, RS256 |
+| flows/pdd-acme-app/ | PDD | product charter, domain, engineering | Cross-stack baseline |
 | flows/adr-001-jwt/ | ADR | token format | RS256 chosen |
 | flows/tdd-crypto/ | TDD | hashing, encryption | AES-256 |
 
@@ -181,7 +184,7 @@ AI reads `_traverse.md` to know exactly where it is and what to do next.
 | SPAWNING | _node.md | Pending children | RECURSE or SYNTH |
 | SYNTHESIZING | Children summaries | _node.md (synthesis) | EXITING |
 | EXITING | _node.md, existing_flows_index | **1. Match flow** | Match/Update |
-| Match/Update | Existing flows | **2. ADR/SDD/DDD/TDD/VDD docs** | Record State |
+| Match/Update | Existing flows | **2. ADR/SDD/PDD/DDD/TDD/VDD docs** | Record State |
 | Record State | All docs | **3. _traverse.md, log.md, index** | Pop stack |
 
 ---
@@ -217,9 +220,18 @@ Flows are per-module, not per-file-type.
 | Purpose | Flow Type |
 |---------|-----------|
 | Internal service logic | SDD |
+| Whole product or program (charter, domain, cross-stack specs, single “source of truth” for the system) | **PDD** (see `flows/pdd.md`) |
 | Stakeholder-facing feature | DDD |
 | Correctness-critical logic | TDD |
 | User experience primary | VDD |
+
+### PDD indicators (program-level)
+
+- Reverse engineering produces a **unified** picture: economy/domain rules, IA, backend, frontend, infra — not one feature slice.
+- User or repo already has (or needs) **`flows/pdd-[name]/`** with numbered docs `01-project-charter.md` … `07-implementation-log.md`.
+- Output would duplicate many SDDs unless rolled up into one **program** document set.
+
+**Prefer SDD/VDD** for a single module or screen family; **prefer PDD** when updating or creating the **single program baseline** after scanning the whole codebase.
 
 ### TDD Indicators (Cases-First)
 - High test coverage (>80%)
@@ -241,12 +253,13 @@ Flows are per-module, not per-file-type.
 1. Find all existing flows in flows/ directory:
    - Glob: flows/adr-*/**/*.md
    - Glob: flows/sdd-*/**/*.md
+   - Glob: flows/pdd-*/**/*.md
    - Glob: flows/ddd-*/**/*.md
    - Glob: flows/tdd-*/**/*.md
    - Glob: flows/vdd-*/**/*.md
 
 2. For each flow, extract metadata:
-   - Flow type (ADR|SDD|DDD|TDD|VDD)
+   - Flow type (ADR|SDD|PDD|DDD|TDD|VDD)
    - Topics covered (from document titles and sections)
    - Key decisions (from ADR context/decision sections)
    - Module boundaries (from specifications)
@@ -339,7 +352,9 @@ Action: APPEND to flows/sdd-auth/
 
 ```
 IF matching_flow exists:
-  1. Read existing 01-requirements.md, 02-specifications.md
+  1. Read existing primary artifacts for that flow type:
+     - **SDD/DDD/TDD/VDD**: `01-requirements.md` (or VDD equivalent), `02-specifications.md` / `02-visual.md` as applicable
+     - **PDD**: `01-project-charter.md`, `02-domain-specification.md`, `03-product-ux-specification.md`, `04-visual-and-messaging.md`, `05-engineering-specifications.md`, `06-master-plan.md`, `07-implementation-log.md` — read only files relevant to the current node (e.g. domain + engineering for a service audit)
   2. Compare analysis with existing content
   3. IF new insights found:
      - APPEND to relevant sections:
@@ -358,10 +373,11 @@ IF matching_flow exists:
 
 ELSE (no matching flow):
   1. Create new flows/[type]-[name]/
-  2. Generate 01-requirements.md from understanding
-  3. Generate 02-specifications.md from code analysis
-  4. Status = DRAFT
-  5. Add to existing_flows_index in _traverse.md
+  2. Generate documents from understanding:
+     - **SDD/DDD/TDD/VDD**: copy from `flows/.templates/[type]/` — typically `01-requirements.md`, then specifications (and VDD `02-visual.md` when type is VDD)
+     - **PDD**: copy from `flows/.templates/pdd/` — full set `01`–`07` per `flows/pdd.md`; fill sections implied by reverse-engineering (often `02`, `03`, `05` first)
+  3. Status = DRAFT
+  4. Add to existing_flows_index in _traverse.md
 ```
 
 ### Step 6: Generate/Update ADRs (Before Recording Iteration)
@@ -390,7 +406,7 @@ For each discovered architectural decision:
 
 ### Step 7: Record Iteration Status (After All Documents)
 
-**ONLY AFTER** ADR/SDD/DDD/TDD/VDD documents are updated or created:
+**ONLY AFTER** ADR/SDD/PDD/DDD/TDD/VDD documents are updated or created:
 ```
 1. Update _traverse.md with new state
 2. Update _node.md with current understanding
@@ -430,7 +446,7 @@ For each discovered module/decision during EXITING phase:
 
 ```
 IF matching flow found:
-  1. READ existing documents (01-requirements.md, 02-specifications.md)
+  1. READ existing documents (for SDD/VDD/…: `01-requirements.md`, `02-specifications.md` / `02-visual.md`; for PDD: the numbered `01`–`07` files that overlap the node topic)
   
   2. COMPARE analysis with existing content:
      - Identify gaps (things not documented)
@@ -459,16 +475,16 @@ IF matching flow found:
 
 ```
 IF no matching flow (score < 2):
-  1. DETERMINE flow type (SDD|DDD|TDD|VDD|ADR)
+  1. DETERMINE flow type (SDD|PDD|DDD|TDD|VDD|ADR)
   2. CREATE flows/[type]-[name]/ directory
   3. GENERATE documents from understanding:
-     - 01-requirements.md
-     - 02-specifications.md (for SDD/DDD/TDD/VDD)
-     - context/decision/consequences (for ADR)
+     - **ADR**: context/decision/consequences
+     - **PDD**: copy `flows/.templates/pdd/*` → populate `01`–`07` per `flows/pdd.md`
+     - **SDD/DDD/TDD/VDD**: `01-requirements.md`, then `02-specifications.md` (and VDD `02-visual.md`, etc. from `flows/.templates/[type]/`)
   4. SET status = DRAFT
   5. ADD to existing_flows_index in _traverse.md
   6. LOG creation in log.md:
-     - "Created flows/sdd-auth/: authentication module"
+     - "Created flows/sdd-auth/: authentication module" (or `flows/pdd-...` when program-level)
 ```
 
 ### Ask Immediately, Don't Defer
@@ -489,7 +505,7 @@ RIGHT:
 
 - Existing flow contradicts analysis
 - Multiple valid module boundaries possible
-- Unclear which flow type (SDD vs DDD vs TDD)
+- Unclear which flow type (SDD vs PDD vs DDD vs TDD vs VDD)
 - Can't determine if code is deprecated or active
 - Architectural decision unclear
 - Match score is borderline (exactly 2, ambiguous)
@@ -599,8 +615,8 @@ Rationale: Internal service, no stakeholder docs
 
 ## Always
 
-- **FIRST**: Scan all existing flows before any analysis
-- **MATCH**: Search for existing matching flows before creating new
+- **FIRST**: Scan all existing flows before any analysis (including **`flows/pdd-*/`**)
+- **MATCH**: Search for existing matching flows before creating new (PDD = program-level match; do not split one product across many SDDs unless intentional)
 - **APPEND**: Update existing flows with "Legacy Additions" sections only
 - **ASK**: Stop immediately on conflicts, don't defer
 - **CREATE**: New flows only when match score < 2

@@ -11,6 +11,7 @@ This project uses structured development workflows. Each flow has documentation 
 | Flow | Purpose | Documentation | Templates |
 |------|---------|---------------|-----------|
 | **SDD** | Spec-Driven Development | `flows/sdd.md` | `flows/.templates/sdd/` |
+| **PDD** | Project-Driven Development | `flows/pdd.md` | `flows/.templates/pdd/` |
 | **DDD** | Document-Driven Development | `flows/ddd.md` | `flows/.templates/ddd/` |
 | **TDD** | Tests-Driven Development | `flows/tdd.md` | `flows/.templates/tdd/` |
 | **VDD** | Visual-Driven Development | `flows/vdd.md` | `flows/.templates/vdd/` |
@@ -36,8 +37,8 @@ This project uses structured development workflows. Each flow has documentation 
 
 ### Quick Reference
 
-- **Start flow**: `/sdd start [name]`, `/ddd start [name]`, etc.
-- **Resume flow**: `/sdd resume [name]`, `/ddd resume [name]`, etc.
+- **Start flow**: `/sdd start [name]`, `/pdd start [name]`, `/ddd start [name]`, etc.
+- **Resume flow**: `/sdd resume [name]`, `/pdd resume [name]`, `/ddd resume [name]`, etc.
 - **Start ADR**: `/adr start [name]`
 - **List ADRs**: `/adr list`
 - **Full project (BFS)**: `/waterfall`
@@ -107,6 +108,12 @@ Full index with metadata, tags, and relationships: `flows/adr-index.md`
 | `vdd-bhagavadgita.book-layouts` | `flows/vdd-bhagavadgita.book-layouts/_status.md` | DOCUMENTATION (DRAFTING) |
 | `vdd-bhagavadgita.book-layouts-settings` | `flows/vdd-bhagavadgita.book-layouts-settings/_status.md` | REQUIREMENTS (DRAFTING) |
 | `vdd-verse-grid` | `flows/vdd-verse-grid/_status.md` | REQUIREMENTS (DRAFTING) |
+
+### PDD Flows (Project-Driven)
+
+| Name | Status File | Current Phase |
+|------|-------------|---------------|
+| - | No active PDD programs | - |
 <!-- FLOWS_INDEX_END -->
 
 ---
@@ -129,6 +136,7 @@ Full index with metadata, tags, and relationships: `flows/adr-index.md`
 ### When to Read More
 
 - **Starting new feature**: Read flow documentation (`flows/[flow].md`)
+- **Starting whole-product documentation**: Read `flows/pdd.md`, use `/pdd start [name]`
 - **Resuming work**: Read `_status.md` in the feature directory
 - **Making architectural decision**: Read `flows/adr.md`, check existing ADRs
 - **Understanding past decisions**: Check ADR index and specific ADR files
@@ -141,6 +149,7 @@ Full index with metadata, tags, and relationships: `flows/adr-index.md`
 
 ```
 flows/sdd-[feature-name]/    # SDD flows
+flows/pdd-[project-name]/    # PDD flows (whole product / program)
 flows/ddd-[feature-name]/    # DDD flows
 flows/tdd-[feature-name]/    # TDD flows
 flows/vdd-[feature-name]/    # VDD flows
@@ -164,6 +173,7 @@ All phase transitions require explicit user approval:
 - "requirements approved"
 - "specs approved"
 - "plan approved"
+- PDD program: see approval phrases in `flows/pdd.md` (e.g. "project charter approved", "domain specification approved", …)
 - "ready for review" (ADR)
 - "ADR approved" / "ADR rejected"
 
