@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_versegrid/flutter_versegrid.dart';
+
 import '../../../data/local/app_database.dart';
 import '../../../ui/theme/app_colors.dart';
 import '../../../ui/theme/app_text.dart';
@@ -21,9 +23,21 @@ class ChapterExpandableTile extends StatelessWidget {
   final ValueChanged<bool> onExpansionChanged;
   final ValueChanged<Sloka> onSlokaTap;
 
+  static String _slokaChipLabel(Sloka s) {
+    return s.name.contains('.') ? s.name.split('.').last : s.position.toString();
+  }
+
   @override
   Widget build(BuildContext context) {
-    final ranges = _groupSlokaRanges(slokas);
+    final items = [
+      for (final s in slokas)
+        VerseNumberGridItem<Sloka>(
+          value: s,
+          label: _slokaChipLabel(s),
+          semanticsLabel:
+              'Chapter ${chapter.position}, verse ${_slokaChipLabel(s)}',
+        ),
+    ];
 
     return Column(
       children: [
@@ -58,70 +72,49 @@ class ChapterExpandableTile extends StatelessWidget {
         if (isExpanded)
           Padding(
             padding: const EdgeInsets.fromLTRB(16, 0, 16, 16),
-            child: Wrap(
-              spacing: 8,
-              runSpacing: 8,
-              children: ranges.map((range) {
-                final isSelected = range.slokas.any((s) => s.id == selectedSlokaId);
-                return ChoiceChip(
-                  label: Text(range.label),
-                  selected: isSelected,
-                  onSelected: (_) => onSlokaTap(range.slokas.first),
-                  labelStyle: AppText.label().copyWith(
-                    color: isSelected ? AppColors.white : AppColors.gray1,
-                    fontWeight: FontWeight.w600,
+            child: VerseNumberGrid<Sloka>(
+              items: items,
+              columns: 7,
+              maxRows: 4,
+              spacing: 6,
+              runSpacing: 6,
+              isSelected: (item) =>
+                  selectedSlokaId != null && item.value.id == selectedSlokaId,
+              onItemTap: (item) => onSlokaTap(item.value),
+              cellBuilder: (context, item, selected, size, onTap) {
+                return SizedBox(
+                  width: size,
+                  height: size,
+                  child: Material(
+                    color: Colors.transparent,
+                    child: InkWell(
+                      onTap: onTap,
+                      borderRadius: BorderRadius.circular(size / 2),
+                      child: Container(
+                        decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                          color: selected ? AppColors.red1 : AppColors.gray5,
+                          border: selected
+                              ? null
+                              : Border.all(color: AppColors.gray4),
+                        ),
+                        alignment: Alignment.center,
+                        child: Text(
+                          item.label,
+                          style: AppText.label().copyWith(
+                            color:
+                                selected ? AppColors.white : AppColors.gray1,
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
+                      ),
+                    ),
                   ),
-                  backgroundColor: AppColors.gray5,
-                  selectedColor: AppColors.red1,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(8),
-                    side: isSelected ? BorderSide.none : const BorderSide(color: AppColors.gray4),
-                  ),
-                  showCheckmark: false,
-                  padding: const EdgeInsets.symmetric(horizontal: 4),
                 );
-              }).toList(),
+              },
             ),
           ),
       ],
     );
   }
-}
-
-class _SlokaRange {
-  _SlokaRange(this.slokas);
-  final List<Sloka> slokas;
-
-  String get label {
-    if (slokas.length == 1) {
-      final s = slokas.first;
-      return s.name.contains('.') ? s.name.split('.').last : s.position.toString();
-    }
-    final first = slokas.first;
-    final last = slokas.last;
-    final firstNum = first.name.contains('.') ? first.name.split('.').last : first.position.toString();
-    final lastNum = last.name.contains('.') ? last.name.split('.').last : last.position.toString();
-    return '$firstNum-$lastNum';
-  }
-}
-
-List<_SlokaRange> _groupSlokaRanges(List<Sloka> slokas) {
-  if (slokas.isEmpty) return [];
-
-  final ranges = <_SlokaRange>[];
-  var currentGroup = <Sloka>[slokas.first];
-
-  for (var i = 1; i < slokas.length; i++) {
-    final prev = slokas[i - 1];
-    final curr = slokas[i];
-    if (curr.position == prev.position + 1) {
-      currentGroup.add(curr);
-    } else {
-      ranges.add(_SlokaRange(currentGroup));
-      currentGroup = [curr];
-    }
-  }
-  ranges.add(_SlokaRange(currentGroup));
-
-  return ranges;
 }

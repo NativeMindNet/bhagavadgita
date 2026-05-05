@@ -2,7 +2,7 @@
 
 ## Current Phase
 
-ENGINEERING (drafts restored from legacy; awaiting product review)
+CHARTER (revised v2 — Flutter single codebase; superseding native-as-target)
 
 ## Phase Status
 
@@ -10,7 +10,7 @@ DRAFTING
 
 ## Last Updated
 
-2026-05-04 (restored from legacy Swift + Java via /legacy-style reconstruction)
+2026-05-04 — PDD rework: Flutter-only product, legacy Swift/Java = archive reference
 
 ## Blockers
 
@@ -18,19 +18,19 @@ DRAFTING
 
 ## Progress
 
-- [x] 01 Project charter drafted
+- [x] 01 Project charter drafted (v2.0 Flutter-first)
 - [ ] Project charter approved
-- [x] 02 Domain specification drafted
+- [x] 02 Domain specification drafted (v2.0)
 - [ ] Domain specification approved
-- [x] 03 Product UX specification drafted
+- [x] 03 Product UX specification drafted (v2.0 Flutter IA)
 - [ ] Product UX approved
-- [x] 04 Visual and messaging drafted
+- [x] 04 Visual and messaging drafted (v2.0)
 - [ ] Visual and messaging approved
-- [x] 05 Engineering specifications drafted
+- [x] 05 Engineering specifications drafted (v2.0)
 - [ ] Engineering specifications approved
-- [x] 06 Master plan drafted
+- [x] 06 Master plan drafted (v2.0)
 - [ ] Master plan approved
-- [ ] 07 Implementation started
+- [ ] 07 Implementation started (Flutter milestones M1+)
 - [ ] Implementation complete (program milestone)
 
 ## Linked feature flows (SDD / VDD)
@@ -45,15 +45,12 @@ DRAFTING
 
 ## Context Notes
 
-- Program baseline reconstructed from **native** apps, not from Flutter `app/bhagavadgita.book`.
-- Live API host (both codebases): `http://app.bhagavadgitaapp.online` + path `/api/`.
-- JSON envelope: `code` (0 = success), `data`, `message`.
-
-## Fork History
-
-- Not forked.
+- **Canonical codebase**: `app/bhagavadgita.book/` (Dart/Flutter) for all platforms.
+- **Deprecated as product**: `legacy/legacy_bhagavadgita.book_swift/`, `legacy/legacy_bhagavadgita.book_java/` — parity / dispute resolution only.
+- API envelope unchanged: `code`, `data`, `message`.
 
 ## Next Actions
 
-1. Stakeholder review: approve charter + domain + UX sections or mark gaps.
-2. Align Flutter implementation (`app/bhagavadgita.book`) with `05-engineering-specifications.md` and linked SDDs.
+1. Stakeholder: “project charter approved” on v2.0 if strategy is final.
+2. Drive M1–M2 in Flutter; update SDDs when API or schema contracts change.
+3. After M4: remove native apps from release checklist entirely.

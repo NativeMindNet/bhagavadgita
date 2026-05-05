@@ -54,6 +54,14 @@ Rules that **every** surface must follow (examples — replace with project-spec
 |------------|----------------|
 | [Capability] | [logged in / wallet / asset / …] |
 
+## 5.1 Business gating (why we gate)
+
+Document the **business reason** for each gate (anti-abuse, monetization, safety, integrity):
+
+| Capability | Gate | Business reason |
+|------------|------|-----------------|
+| [Withdraw] | [Requires X] | [Protect economy / reduce fraud / compliance] |
+
 ---
 
 ## 6. Critical states (empty, loading, error)

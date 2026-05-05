@@ -1,6 +1,6 @@
 # Domain specification: Bhagavad Gita Book
 
-> Version: 1.0 (restored from legacy)  
+> Version: 2.0 (Flutter canonical client)  
 > Status: DRAFT  
 > Last updated: 2026-05-04
 
@@ -8,81 +8,69 @@
 
 | Term | Definition |
 |------|------------|
-| **Book** | A translation/edition within a **Language**; has `id`, `languageId`, `name`, `initials`, `chaptersCount`. |
-| **Chapter** | Ordered section of a book; linked by `bookId`. |
-| **Shloka / Sloka** | Verse unit; Android uses `SlokasFragment`, Swift `ShlokaViewController`. |
-| **Quote** | Daily (or promotional) quote object from `Data/Quotes`. |
-| **Device token** | Opaque string sent as `Authorization: Gita <token>` on Android when present (`Settings.deviceToken`). |
-| **Api envelope** | Server returns JSON wrapper: success when `code == 0` and `data` populated; otherwise `message` describes failure. |
+| **Book** | Translation/edition within a **Language**; `id`, `languageId`, `name`, `initials`, `chaptersCount` (see DTOs under `lib/data/remote/dto/`). |
+| **Chapter** | Ordered section of a book; `bookId`. |
+| **Shloka** | Verse unit; primary reader surface in Flutter: **`sloka_screen`** (`lib/features/reader/sloka_screen.dart`). |
+| **Quote** | Object from `Data/Quotes`; DTO `quote_dto.dart`. |
+| **Device token** | Optional `Authorization: Gita <token>` header (legacy Android); Flutter client should preserve header contract if backend still expects it. |
+| **Api envelope** | JSON: `code == 0` + `data` = success; see `lib/data/remote/legacy_envelope.dart`. |
+| **Legacy apps** | Swift + Java trees under `legacy/` — **not** part of the runtime domain; reference material only. |
 
 ## 2. Core entities and relationships
 
 ```
-Language 1──* Book 1──* Chapter 1──* Shloka (stored in SQLite; text/commentary/blob fields per schema)
-                    └── download state + audio files (per-book, per-translation in legacy Swift)
-Settings: languageId, bookId, selected shloka id, app state (e.g. download vs ready), serialized AppSettings
-Bookmarks / Notes: attached to shloka identity (implementation in local DB + UI)
+Language 1──* Book 1──* Chapter 1──* Shloka (local DB + optional downloaded assets)
+                    └── audio / files via Flutter audio controllers
+Bookmarks / Notes / user progress: local persistence (`user_data_repository`, Drift tables)
 ```
 
 ## 3. Remote API (domain contract)
 
-**Base URL** (production in both codebases):
+Unchanged contract for backend compatibility:
 
-- `http://app.bhagavadgitaapp.online/api/`  
-- Android **dev** flavor: `http://gita.dev.ironwaterstudio.com` (see `app/build.gradle`).
+**Base path**: `{HOST}/api/` (production must move to **HTTPS** in Flutter configs).
 
-**Transport**: POST to `{base}{Action}` with JSON body. Swift `GitaRequestManager` wraps params as `["params": …]` for actions that need a body; `Data/Languages` and `Data/Quotes` use empty params object.
+**Transport**: POST, JSON body; params shape as legacy (`Data/Books` expects `ids`, etc.) — implemented in **`legacy_api_client.dart`**.
 
-**Envelope** (Swift `processReceivedData`, Android `ApiResult`):
+**Actions** (authoritative list for MVP parity):
 
-| Field | Meaning |
-|-------|---------|
-| `code` | `0` = success (Swift unwraps `data`); Android `ApiResult.SUCCESS = 0` |
-| `data` | Payload (object or array) |
-| `message` | Human-readable error |
+| Action | Params | Result |
+|--------|--------|--------|
+| `Data/Languages` | empty | `Language` list |
+| `Data/Books` | `ids` | `Book` list |
+| `Data/Chapters` | `bookId` | `Chapter` list |
+| `Data/Quotes` | empty | `Quote` |
 
-**Documented actions** (both platforms aligned):
+**Headers**: `accept-language`; optional `Authorization: Gita <token>` when device token exists.
 
-| Action | Params | Result shape |
-|--------|--------|----------------|
-| `Data/Languages` | (empty) | Array of **Language** |
-| `Data/Books` | `ids`: int[] | Array of **Book** |
-| `Data/Chapters` | `bookId`: int | Array of **Chapter** (Swift sets `bookId` on each item) |
-| `Data/Quotes` | (empty) | Single **Quote** object |
+**Evidence in repo**: `lib/data/remote/legacy_api_client.dart`, DTOs alongside; legacy Swift `GitaRequestManager.swift` / Android `DataService.java` for dispute resolution only.
 
-**Headers**:
+## 4. Local persistence domain (Flutter)
 
-- Android `GitaRequest`: `accept-language` = device default language code; optional `Authorization: Gita <deviceToken>`.
+- Implementation: **`lib/data/local/`** — `app_database.dart`, `tables.dart`, `snapshot_repository.dart`, `seed_installer.dart`, platform connections (`app_database_connection_*.dart`).
+- **Migrations**: explicit Drift/schema migrations; avoid wholesale DB delete unless explicitly approved (legacy Swift replaced file on `user_version` bump).
 
-**iOS reference**: `Gita/Model/DataAccess/GitaRequestManager.swift` (inline API help URL historically pointed at `http://gita.dev.ironwaterstudio.com/help/api/`).
+## 5. Client rules — legacy vs Flutter
 
-## 4. Local persistence domain
+| Topic | Legacy behavior | Flutter stance |
+|-------|-----------------|----------------|
+| Incomplete downloads on cold start | Swift cleared `DownloadInfo` | Define in sync/bootstrap policy (`bootstrap_coordinator`, download controllers) |
+| Selected shloka on launch | Swift reset daily | **Product decision** — default: persist last position (better UX); document if diverging |
+| Search panel lifecycle | Android saved state keys | Flutter: preserve search state in `SearchRoute` / controller pattern |
 
-- **SQLite** database file name: `bhagavad-gita.sqlite` (Swift `DbHelper`).
-- **Initialization**: copy bundled DB to Documents if missing; exclude from backup where implemented.
-- **Upgrade**: compare `PRAGMA user_version` between user DB and bundled resource DB; if bundle newer, **replace** user DB file (Swift behavior — strong operational semantics for migrations).
+## 6. Third-party (consolidation target)
 
-## 5. Client-only domain rules
-
-| Rule | Source |
-|------|--------|
-| Incomplete downloads cleared on launch | Swift `DownloadInfo.clearAll()` in `AppDelegate` |
-| Selected shloka reset on launch (legacy Swift) | `Settings.shared.selectedShloka` reset in `AppDelegate` — product choice to revisit in Flutter |
-| Search panel closes on fragment lifecycle | Android `MainActivity` + `SearchPanelView` |
-
-## 6. Third-party domain touchpoints
-
-- **Google Analytics**: iOS tracking id in `AppDelegate`; Android `play-services-analytics` + `GaUtils`.
-- **Firebase**: Android project `bhagavad-gita-a3e05` (FCM-capable dependencies in Gradle).
-- **Facebook SDK**: present on Android (`facebook-android-sdk`); treat as integration surface, not core reader domain.
+- Replace siloed **GA iOS** + **Play Analytics Java** with a **single** analytics approach from Flutter (e.g. Firebase Analytics for both platforms, subject to SDD).
+- **Firebase**: one project strategy for push if still required.
+- **Facebook SDK** (legacy Android): re-evaluate; do not port blindly unless product requires.
 
 ## 7. Traceability to charter
 
 | Charter goal | Supported by |
 |--------------|----------------|
+| Single codebase | §1 Glossary + §4 Flutter paths |
 | Offline read | §4 Local persistence |
-| Catalog correctness | §3 API entities |
-| Multi-language | `Data/Languages` + `languageId` on books |
+| API stability | §3 |
 
 ## Approvals
 

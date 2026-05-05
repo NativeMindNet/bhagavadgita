@@ -1,4 +1,4 @@
-# Project-Driven Development Flow
+# Project-Driven Development Flow (Business-first)
 
 You are entering PDD (Project-Driven Development) mode. Read `flows/pdd.md` for the complete flow reference.
 
@@ -60,12 +60,12 @@ Show subcommands above and summarize any active `flows/pdd-*/` from `_status.md`
 ### VISUAL_MESSAGING (`04-visual-and-messaging.md`)
 
 - Visual principles, prompts for mockup generators, hero and product copy
-- Wait for explicit: **“visual and messaging approved”** before ENGINEERING
+- Wait for explicit: **“visual and messaging approved”** before BUSINESS_MODEL_GROWTH
 
-### ENGINEERING (`05-engineering-specifications.md`)
+### BUSINESS_MODEL_GROWTH (`05-business-model-and-growth.md`)
 
-- Backend, frontend, on-chain, cross-cutting programs; NFRs; SDD/VDD delegation table
-- Wait for explicit: **“engineering specifications approved”** before MASTER_PLAN
+- Monetization map, growth loops, metrics, guardrails, ops policies
+- Wait for explicit: **“business model approved”** before MASTER_PLAN
 
 ### MASTER_PLAN (`06-master-plan.md`)
 

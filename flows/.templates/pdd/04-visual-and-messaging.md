@@ -69,6 +69,14 @@ Copy-paste blocks for image/UI generators. Replace placeholders with project nam
 - **Tone**: [formal / friendly / …]
 - **Forbidden claims**: [list]
 
+### 4.5 Marketing assets checklist (business)
+
+| Asset | Where used | Owner | Ready |
+|------|------------|-------|-------|
+| Store screenshots | iOS/Android stores | | [ ] |
+| Short video | socials/ads | | [ ] |
+| Landing hero | web/Telegram | | [ ] |
+
 ---
 
 ## 5. Traceability to UX rules

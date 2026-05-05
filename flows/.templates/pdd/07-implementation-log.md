@@ -4,8 +4,8 @@
 
 ## How to use
 
-- Log **cross-cutting** deliveries: releases, contract deploys, env changes, program pivots
-- For **single feature** work, prefer `flows/sdd-*/04-implementation-log.md` or `flows/vdd-*/05-implementation-log.md` and link here
+- Log **cross-cutting** business deliveries: launches, pricing/fee changes, program pivots, policy updates, marketing asset drops
+- For **single feature** implementation, prefer `flows/sdd-*/04-implementation-log.md` or `flows/vdd-*/05-implementation-log.md` and link here
 
 ---
 
@@ -15,7 +15,7 @@
 
 **What changed**:  
 **Why**:  
-**Links**: PRs, commits, tx hashes, docs updated  
+**Links**: docs updated, PRs (if any), release notes, policy references  
 **Deviations from master plan**: [none / describe]
 
 ---

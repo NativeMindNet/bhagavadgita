@@ -1,43 +1,41 @@
 # Visual and messaging: Bhagavad Gita Book
 
-> Version: 1.0 (restored from legacy)  
+> Version: 2.0 (Flutter design system)  
 > Status: DRAFT  
 > Last updated: 2026-05-04
 
-## 1. Visual principles (legacy Android + iOS)
+## 1. Visual principles
 
-- **Palette (Android reader emphasis)**: Strong **red** toolbar brand (`R.color.red_1`, `red_3`) with **white** text on primary chrome; **black_20** status bar overlay on shloka screen (phone).
-- **iOS**: Asset-driven chrome (`Assets.xcassets`: bookmarks, audio controls, dividers, guide illustrations `icn_guide*`).
-- **Typography**: System defaults on iOS; Android `support` design era — prefer **readable serif/sans** for verse body in future Flutter; legacy mixes custom list cells (`item_sloka.xml`, `ShlokaChapterContentsTableViewCell`).
-- **Iconography**: Distinct icons for bookmarked vs not, comment vs commented, audio transport (legacy asset sets).
+- **Single design system**: `lib/ui/theme/app_theme.dart`, `app_colors.dart`, `app_text.dart` — one place for light/dark, spacing, verse styles.
+- **Legacy as moodboard only**: Android red toolbar / iOS asset chrome informed early Flutter choices; **not** pixel-compatibility requirement across three codebases.
+- **Typography**: Readable verse body first; support dynamic type; RU/EN via `lib/l10n/`.
+- **Iconography**: Prefer Material symbols or bundled SVGs consistent across iOS/Android from same widget set.
 
-## 2. Motion and density
+## 2. Platform polish
 
-- Legacy: standard push transitions (UIKit `pushViewController`); fragment transactions on Android.
-- **Flutter target**: keep motion subtle; respect Material + Cupertino platform norms.
+- **Material 3** on Android and as default where appropriate.
+- **Cupertino** touches on iOS where it improves feel (navigation patterns), without forking business logic.
+- **Desktop / web**: density breakpoints, mouse/keyboard where applicable.
 
-## 3. Messaging themes (product copy)
+## 3. Messaging
 
-- **Tone**: Respectful, neutral instructional (guide screens), error strings via Android `R.string.error_*`.
-- **Onboarding**: Guide flow explains gestures / reading model before dropping into contents (exact strings in legacy storyboards / `strings.xml` — extract when localizing Flutter).
+- **Tone**: Calm, respectful; errors user-facing via l10n strings (replace hardcoded legacy `strings.xml` over time).
+- **Onboarding**: Single copy set in ARB / gen-l10n, not duplicated per platform codebase.
 
-## 4. Generative prompts (optional, for redesign)
-
-Use when regenerating UI for Flutter without copying legacy pixels:
+## 4. Generative prompts (optional)
 
 ```
-Mobile reading app for Bhagavad Gita, clean spiritual aesthetic, warm off-white reading surface,
-deep red accents for toolbar and primary actions, high contrast verse typography,
-chapter list with circular book initials, minimal chrome, support light/dark in modern version.
-Russian and English UI labels acceptable. No decorative deities in generic chrome.
+Flutter reading app UI for Bhagavad Gita, Material 3, deep red accents on toolbar and FABs,
+warm paper-like reading background, large verse typography, chapter list with circular initials,
+tablet master-detail, Russian + English labels, subtle motion, accessible contrast, light and dark theme.
 ```
 
-## 5. Traceability to UX
+## 5. Traceability
 
-| UX rule | Visual expression |
-|---------|-------------------|
-| Reader focus | Full-screen verse area; toolbar recedes or adapts (legacy Android color flip) |
-| Bookmark state | Distinct filled/outline bookmark icons (both platforms) |
+| UX rule (doc 03) | Flutter expression |
+|------------------|-------------------|
+| Reader focus | `sloka_screen` layout + theme verse styles |
+| Bookmark clarity | Icon buttons consistent on reader + bookmarks list |
 
 ## Approvals
 

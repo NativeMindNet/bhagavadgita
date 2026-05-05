@@ -113,7 +113,7 @@ Full index with metadata, tags, and relationships: `flows/adr-index.md`
 
 | Name | Status File | Current Phase |
 |------|-------------|---------------|
-| - | No active PDD programs | - |
+| `pdd-bhagavadgita.book` | `flows/pdd-bhagavadgita.book/_status.md` | CHARTER (DRAFTING) |
 <!-- FLOWS_INDEX_END -->
 
 ---

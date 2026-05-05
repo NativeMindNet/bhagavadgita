@@ -1,112 +1,85 @@
 # Engineering specifications: Bhagavad Gita Book
 
-> Version: 1.0 (restored from legacy)  
+> Version: 2.0 (Flutter canonical)  
 > Status: DRAFT  
 > Last updated: 2026-05-04
 
 ## 1. System context
 
 ```
-┌─────────────┐     HTTPS/HTTP      ┌──────────────────────────────┐
-│ iOS Gita    │ ──────────────────► │ app.bhagavadgitaapp.online   │
-│ Swift       │   POST /api/Data/*  │ (JSON envelope)              │
-└─────────────┘                     └──────────────────────────────┘
-┌─────────────┐                     ▲
-│ Android     │ ────────────────────┘
-│ Java        │
-└─────────────┘
-       │
-       ▼
-┌─────────────┐
-│ SQLite      │  bhagavad-gita.sqlite (Documents / app storage)
-│ + assets    │  bundled seed DB + downloaded audio/files
-└─────────────┘
+                    ┌──────────────────────────────┐
+                    │  Backend API (unchanged)    │
+                    │  POST /api/Data/*            │
+                    │  JSON envelope               │
+                    └───────────────▲──────────────┘
+                                    │
+┌───────────────────────────────────┴───────────────────────────────────┐
+│  Flutter app — SINGLE codebase (`app/bhagavadgita.book`)               │
+│  iOS | Android | web | desktop                                          │
+│  `lib/data/remote/legacy_api_client.dart` + `legacy_envelope.dart`      │
+│  `lib/data/local/*` (Drift) + `lib/app/sync/*`                          │
+│  `lib/features/*` (UI)                                                   │
+└─────────────────────────────────────────────────────────────────────────┘
+
+Legacy Swift / Java apps: OUT OF PRODUCT PATH (reference under `legacy/` only)
 ```
 
-**Forward implementation**: `app/bhagavadgita.book` (Flutter) should treat this document + linked SDDs as parity reference.
+---
+
+## 2. Flutter application structure (authoritative)
+
+| Layer | Path | Responsibility |
+|-------|------|------------------|
+| Entry | `lib/main.dart`, `lib/app/app.dart` | RunApp, theme, routing shell |
+| Remote API | `lib/data/remote/legacy_api_client.dart`, `legacy_envelope.dart`, `dto/*.dart` | HTTP, parsing, envelope |
+| Local DB | `lib/data/local/app_database.dart`, `tables.dart`, `*.g.dart` | Schema, queries |
+| Sync / bootstrap | `lib/app/bootstrap/bootstrap_coordinator.dart`, `lib/app/sync/sync_orchestrator.dart`, `refresh_policy.dart` | Initial load, refresh |
+| Reader | `lib/features/reader/` | Chapter + shloka UI |
+| Contents / bookmarks / search / settings | `lib/features/*/` | Feature modules |
+| Tablet | `lib/features/tablet/` | Responsive scaffolds |
+| Audio | `lib/app/audio/` | Controllers, storage, download |
+| Theme / widgets | `lib/ui/theme/`, `lib/ui/widgets/` | Shared visuals |
 
 ---
 
-## 2. Backend (remote API) — contract only
+## 3. Remote API contract
 
-| Concern | Detail |
-|---------|--------|
-| Base path | `{HOST}/api/` |
-| Methods | POST (Swift `GitaRequestManager.performRequest` method `"POST"` for all listed actions) |
-| Success | `code == 0`, use `data` |
-| Errors | Non-zero `code`, human `message` |
+Same as domain doc §3. Implementation lives in **`LegacyApiClient`**; timeouts/retries should be centralized (do not depend on Swift `RequestManagerConfiguration` defaults).
 
-**Android request builder**: `com.ethnoapp.bgita.server.GitaRequest` extends `HttpRequest`, URL = `BuildConfig.HOST + "/api/" + action`.
-
-**Swift request builder**: `GitaRequestManager.kServerUrl` + action string; unwraps envelope in `processReceivedData`.
+**Production transport**: HTTPS (configure per flavor/env — do not ship cleartext if store policy forbids).
 
 ---
 
-## 3. iOS client (Swift)
+## 4. Legacy native code (archive reference)
 
-| Area | Location / notes |
-|------|------------------|
-| App entry | `Gita/AppDelegate.swift` — DB init, `DownloadInfo.clearAll()`, GA init, request timeout 120s |
-| Networking | `Gita/Model/DataAccess/GitaRequestManager.swift`, `Gita/Libraries/RequestManager/*` |
-| Persistence | `Gita/Libraries/DbLibrary/DbHelper.swift`, `DbConnection`, generated / hand models under `Model/` |
-| UI | `Gita/ViewControllers/*.swift`, `Gita/Views/*.swift` |
-| Analytics | `GAHelper` — property id `UA-91314625-2` |
+| Tree | Use |
+|------|-----|
+| `legacy/legacy_bhagavadgita.book_swift/` | Difficult parity questions: iOS-specific API usage, old DB migration behavior |
+| `legacy/legacy_bhagavadgita.book_java/` | Same for Android (e.g. `GitaRequest`, `DataService`) |
 
-**Host constants** (`GitaRequestManager.swift`):
-
-- Production: `http://app.bhagavadgitaapp.online`
-- Commented dev: `http://gita.dev.ironwaterstudio.com`
+**Do not** add product features here. Optional: one-off scripts to extract strings/assets.
 
 ---
 
-## 4. Android client (Java)
+## 5. Non-functional targets (Flutter)
 
-| Area | Location / notes |
-|------|------------------|
-| Application class | `com.ethnoapp.bgita.ApplicationEx` |
-| HTTP stack | `com.ironwaterstudio.server.http.HttpHelper`, `HttpRequest`, `ServiceCallTask` |
-| API wrapper | `com.ethnoapp.bgita.server.DataService` |
-| Models | `com.ethnoapp.bgita.model.*` (`Settings`, `Books`, `Chapters`, `Languages`, `Quote`, …) |
-| UI | `com.ethnoapp.bgita.screens.*`, `fragments.*`, `adapters.*` |
-| Build flavors | `dev` / `live` — `HOST` string in `app/build.gradle` |
-
-**Dependencies** (Gradle): AppCompat/Design/RecyclerView/CardView, Gson, ViewPagerIndicator, Play Services Analytics, Firebase Messaging, Facebook SDK.
+| Topic | Direction |
+|-------|-----------|
+| Build | `flutter build apk/ipa/...` from `app/bhagavadgita.book` |
+| State | Prefer `Controller` / `ChangeNotifier` / small Riverpod or existing pattern — follow repo conventions |
+| NFR | Single set of tests for logic; golden tests optional for reader UI |
 
 ---
 
-## 5. Data serialization
-
-- **Android**: Gson + `ApiResult` / `Serializer` abstraction (`com.ironwaterstudio.server.serializers`).
-- **Swift**: `NSDictionary` / `[String:Any]` parsing in model `getFromDictionary` extensions.
-
----
-
-## 6. Local database
-
-- File: `bhagavad-gita.sqlite`
-- Swift upgrade: delete + recopy from bundle when `user_version` in bundle > user copy (see `DbHelper.updateIfNeeded()`).
-- **Flutter implication**: implement explicit migration policy; do not silently rely on iOS legacy wipe semantics without product sign-off.
-
----
-
-## 7. Non-functional (observed defaults)
-
-| Topic | Value / behavior |
-|-------|------------------|
-| Swift request timeout | Config default 240s in `RequestManagerConfiguration`; app sets 120s in `AppDelegate` |
-| Android connection timeout | `HttpHelper.CONNECTION_TIMEOUT` = 30000 ms |
-| Retries | Swift `RequestManagerConfiguration.retriesCount` default 3 |
-
----
-
-## 8. SDD / VDD delegation
+## 6. SDD / VDD delegation
 
 | Topic | Flow |
 |-------|------|
-| Flutter API client parity | `flows/sdd-bhagavadgita.book-api-client/` |
-| Content matrix / quotes | `flows/sdd-bhagavadgita.book-content/` |
-| Local DB schema | `flows/sdd-bhagavadgita.book-database/`, `sdd-bhagavadgita.book-database-schema/` |
+| API client | `flows/sdd-bhagavadgita.book-api-client/` |
+| Content / quotes | `flows/sdd-bhagavadgita.book-content/` |
+| Database | `flows/sdd-bhagavadgita.book-database/`, `sdd-bhagavadgita.book-database-schema/` |
 | Audio | `flows/sdd-bhagavadgita.book-audioplayer/` |
+| CI/CD | `flows/sdd-bhagavadgita.book-cicd*` |
 
 ---
 

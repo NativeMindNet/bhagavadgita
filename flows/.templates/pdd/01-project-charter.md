@@ -46,6 +46,14 @@
 
 **Guardrails** (legal, brand, safety, financial): [list]
 
+## Business assumptions (make explicit)
+
+List assumptions that will drive decisions in Domain and Business Model phases:
+
+- [Assumption about user acquisition]
+- [Assumption about pricing/fees/treasury]
+- [Assumption about retention loops]
+
 ## High-level user journeys
 
 Summarize primary journeys in prose. Link detailed diagrams:

@@ -1,8 +1,10 @@
-# Project-Driven Development (PDD) Flow
+# Project-Driven Development (PDD) Flow — Business-first
 
 ## Overview
 
-**PDD** documents the **entire product or program** end to end: vision, domain (economy and mechanics), product UX, visual language, engineering across surfaces, and a cross-team master plan. It complements **SDD** and **VDD**, which focus on **individual features** within a codebase.
+**PDD** documents the **entire product or program** end to end — **from the business perspective**: vision, domain rules (economy and mechanics), product UX, visual language, pricing/monetization, growth loops, risk/compliance, and a cross-team master plan.
+
+PDD is intentionally **not** a technical spec. Technical implementation is documented in **SDD** / **VDD** flows (and ADRs for architectural decisions). PDD links to those flows where a capability is delivered as a separate slice.
 
 Use PDD when you need a single source of truth for:
 
@@ -10,7 +12,7 @@ Use PDD when you need a single source of truth for:
 - **What** the system is in business terms: tokens, assets, rules, protections (**domain specification**)
 - **How** users move through the product: IA, screens, states, journeys (**product UX**)
 - **How it looks and sounds**: design system, prompts, hero and narrative (**visual & messaging**)
-- **How it is built**: backend, frontend, chain, integrations (**engineering specifications**)
+- **How it makes money and grows**: pricing, fees, sinks, programs (referrals), distribution (**business model & growth**)
 - **When and in what order**: milestones, dependencies, risks (**master plan**)
 
 Feature-level work still uses `flows/sdd.md` or `flows/vdd.md`; PDD links to those flows where a capability is delivered as a separate SDD/VDD slice.
@@ -18,7 +20,7 @@ Feature-level work still uses `flows/sdd.md` or `flows/vdd.md`; PDD links to tho
 ## Flow Phases
 
 ```
-CHARTER → DOMAIN → PRODUCT_UX → VISUAL_MESSAGING → ENGINEERING → MASTER_PLAN → IMPLEMENTATION
+CHARTER → DOMAIN → PRODUCT_UX → VISUAL_MESSAGING → BUSINESS_MODEL_GROWTH → MASTER_PLAN → IMPLEMENTATION
     ↑        ↑          ↑              ↑               ↑              ↑               ↑
     └────────┴──────────┴──────────────┴───────────────┴──────────────┴───────────────┘
                               (iterate at any phase)
@@ -77,23 +79,24 @@ Aligns **look, feel, and words** before detailed engineering:
 - **Hero / landing / in-app narrative** blocks (value prop, “why us”, onboarding copy)
 - Traceability: which UX rules from phase 3 each visual rule supports
 
-### Phase 5: Engineering specifications
+### Phase 5: Business model & growth
 
 **Input**: Approved visual & messaging (or parallel drafts with explicit sync points)  
-**Output**: `flows/pdd-[name]/05-engineering-specifications.md`
+**Output**: `flows/pdd-[name]/05-business-model-and-growth.md`
 
-One file with **standard top-level sections** (split into linked docs only if the project is huge):
+One file with **business-critical “how this works as a company/product” sections**:
 
-1. **Backend** — modules, domain model in tech terms, APIs, jobs, idempotency, security
-2. **Frontend / clients** — platforms, navigation binding to IA, state, telemetry, error handling
-3. **On-chain / infrastructure** — contracts, indexers, workers, deployment notes
-4. **Cross-cutting programs** — e.g. referrals, growth, support tooling (subsections)
+1. **Monetization map** — fees, pricing, sinks, treasury allocation, buyback, promotions
+2. **Growth loops** — referrals, invitations, virality surfaces, retention mechanics
+3. **Funnel and metrics** — activation, conversion, retention cohorts, guardrails
+4. **Risk & compliance** — what we can/can’t promise, anti-abuse, limitations
+5. **Ops policies** — customer support flows, admin powers, “emergency brakes” (business view)
 
-Non-functional requirements (performance, SLOs, observability) live here.
+Technical NFRs (SLOs, observability, security implementation) live in SDD/ADR; here we capture the **business requirement** (e.g. “withdraw must be pausable”) and link to the technical spec.
 
 ### Phase 6: Master plan
 
-**Input**: Approved engineering specifications  
+**Input**: Approved business model & growth  
 **Output**: `flows/pdd-[name]/06-master-plan.md`
 
 **Program plan** (not a single-feature plan):
@@ -127,10 +130,10 @@ When splitting drafts, use these names so the team and agents map files consiste
 | Final mechanics / balance (tables, caps) | `02-domain-specification.md` — *Mechanics & balance* |
 | Screen map, onboarding, flows | `03-product-ux-specification.md` |
 | Style + GenAI prompts | `04-visual-and-messaging.md` — *Visual system & prompts* |
-| Backend API & jobs | `05-engineering-specifications.md` — *Backend* |
-| Client / Mini App | `05-engineering-specifications.md` — *Frontend* |
-| NFT / contracts | `05-engineering-specifications.md` — *On-chain* |
-| Referral / growth rules | `05-engineering-specifications.md` — *Programs* |
+| Pricing / fees / treasury logic | `05-business-model-and-growth.md` — *Monetization map* |
+| Referral / growth rules | `05-business-model-and-growth.md` — *Growth loops* |
+| Compliance / risk limits | `05-business-model-and-growth.md` — *Risk & compliance* |
+| “Emergency brakes” policy | `05-business-model-and-growth.md` — *Ops policies* |
 | Landing / hero copy | `04-visual-and-messaging.md` — *Messaging* |
 | User flow diagram (image) | `03-product-ux-specification.md` or `artifacts/` + link |
 
@@ -147,7 +150,7 @@ flows/
 │   ├── 02-domain-specification.md
 │   ├── 03-product-ux-specification.md
 │   ├── 04-visual-and-messaging.md
-│   ├── 05-engineering-specifications.md
+│   ├── 05-business-model-and-growth.md
 │   ├── 06-master-plan.md
 │   └── 07-implementation-log.md
 └── pdd-[project-name]/
@@ -155,7 +158,7 @@ flows/
     ├── 02-domain-specification.md
     ├── 03-product-ux-specification.md
     ├── 04-visual-and-messaging.md
-    ├── 05-engineering-specifications.md
+    ├── 05-business-model-and-growth.md
     ├── 06-master-plan.md
     ├── 07-implementation-log.md
     ├── _status.md
@@ -224,11 +227,11 @@ Lists all `flows/pdd-*/` directories and summarizes phase and blockers from each
 - [ ] Visual principles and key copy directions set
 - [ ] User explicitly approves: **“visual and messaging approved”**
 
-### Engineering → Master plan
+### Business model & growth → Master plan
 
-- [ ] Major systems and interfaces described
-- [ ] NFRs captured
-- [ ] User explicitly approves: **“engineering specifications approved”**
+- [ ] Monetization, growth loops, and policies are coherent with domain + UX
+- [ ] Key metrics and guardrails agreed
+- [ ] User explicitly approves: **“business model approved”**
 
 ### Master plan → Implementation
 

@@ -1,5 +1,6 @@
 import 'package:drift/drift.dart' hide Column;
 import 'package:flutter/material.dart';
+import 'package:flutter_versegrid/flutter_versegrid.dart';
 
 import '../../ui/theme/app_colors.dart';
 import '../../ui/theme/app_text.dart';
@@ -236,19 +237,22 @@ class _SlokaScreenState extends State<SlokaScreen> {
                       if (settings.showSanskrit &&
                           (sloka.slokaText ?? '').isNotEmpty) ...[
                         const SectionHeader('Sanskrit'),
-                        Text(
-                          sloka.slokaText!,
-                          textAlign: TextAlign.center,
-                          style: AppText.sanskrit(),
+                        VersePassage(
+                          layout: VersePassageLayout.columnCenter,
+                          primary: sloka.slokaText!,
+                          primaryStyle: AppText.sanskrit(),
+                          primaryTextAlign: TextAlign.center,
                         ),
                         divider,
                       ],
                       if (settings.showTransliteration &&
                           (sloka.transcription ?? '').isNotEmpty) ...[
                         const SectionHeader('Transcription'),
-                        Text(
-                          sloka.transcription!,
-                          style: AppText.bodyItalic(),
+                        VersePassage(
+                          layout: VersePassageLayout.columnStretch,
+                          primary: sloka.transcription!,
+                          primaryStyle: AppText.bodyItalic(),
+                          primaryTextAlign: TextAlign.start,
                         ),
                         divider,
                       ],
@@ -261,9 +265,11 @@ class _SlokaScreenState extends State<SlokaScreen> {
                           onSelect: (i) => setState(() => _translationVariant = i),
                         ),
                         const SizedBox(height: 8),
-                        Text(
-                          sloka.translation!,
-                          style: AppText.body(),
+                        VersePassage(
+                          layout: VersePassageLayout.columnStretch,
+                          primary: sloka.translation!,
+                          primaryStyle: AppText.body(),
+                          primaryTextAlign: TextAlign.start,
                         ),
                         divider,
                       ],
@@ -285,9 +291,11 @@ class _SlokaScreenState extends State<SlokaScreen> {
                             ),
                             const SizedBox(width: 10),
                             Expanded(
-                              child: Text(
-                                sloka.comment!,
-                                style: AppText.body(),
+                              child: VersePassage(
+                                layout: VersePassageLayout.columnStretch,
+                                primary: sloka.comment!,
+                                primaryStyle: AppText.body(),
+                                primaryTextAlign: TextAlign.start,
                               ),
                             ),
                           ],

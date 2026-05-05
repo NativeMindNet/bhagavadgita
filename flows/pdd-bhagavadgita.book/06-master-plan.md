@@ -1,50 +1,51 @@
 # Master plan: Bhagavad Gita Book
 
-> Version: 1.0  
+> Version: 2.0 (Flutter replacement)  
 > Status: DRAFT  
 > Last updated: 2026-05-04
 
-## 1. Milestones
+## 1. Strategic decision
+
+| Decision | Status |
+|----------|--------|
+| **Replace** dual native apps (Swift + Java) with **one Flutter codebase** | **Adopted** |
+| Legacy repos in `legacy/` | **Read-only reference** for parity and archaeology |
+
+## 2. Milestones
 
 | Milestone | Outcome |
 |-----------|---------|
-| **M0 — Program baseline** | This PDD directory + `_status.md` (this delivery) |
-| **M1 — Contract lock** | Flutter `LegacyApiClient` + models match §API in `02`/`05` |
-| **M2 — Reader parity** | Chapters → shloka, bookmarks, notes, search |
-| **M3 — Media** | Audio download/play aligned with `sdd-bhagavadgita.book-audioplayer` |
-| **M4 — Hardening** | HTTPS-only endpoints, telemetry refresh, target SDK / iOS min bump |
+| **M0** | PDD v2.0 (this set) + charter alignment on Flutter-only |
+| **M1** | API + envelope + sync path production-ready in Flutter (`legacy_api_client`, orchestrators) |
+| **M2** | Reader parity: contents → shloka, bookmarks, notes, search, settings |
+| **M3** | Audio parity per `sdd-bhagavadgita.book-audioplayer` |
+| **M4** | Store releases **only** Flutter artifacts; legacy apps **removed from roadmap** (optional: archive tags on old native repos if they live elsewhere) |
+| **M5** | Telemetry unification (single analytics approach from Flutter) |
 
-## 2. Workstreams
+## 3. Workstreams
 
-| Stream | Deliverable | Depends on |
+| Stream | Owner focus | Depends on |
 |--------|-------------|------------|
-| **Documentation** | PDD + SDDs updated when parity gaps found | M0 |
-| **Flutter app** | `app/bhagavadgita.book` features | M1 |
-| **Content / DB** | SQLite migrations, asset packs | `sdd-bhagavadgita.book-database*` |
-| **Release** | CI/CD per `sdd-bhagavadgita.book-cicd*` | Stores policy |
-
-## 3. Legacy code position
-
-| Path | Role going forward |
-|------|---------------------|
-| `legacy/legacy_bhagavadgita.book_swift/` | Reference for iOS behavior and API usage |
-| `legacy/legacy_bhagavadgita.book_java/` | Reference for Android behavior and API usage |
-
-No requirement to modify legacy repos for new features; changes target Flutter unless doing hotfix archaeology.
+| **Flutter product** | `app/bhagavadgita.book` features & UX | M1 |
+| **Data / schema** | Drift migrations, seed, snapshots | SDD database |
+| **Release / CI** | Build matrices for iOS+Android from one project | SDD cicd |
+| **Legacy sunset** | Stop treating Swift/Java as “second implementation” to fix | M4 |
 
 ## 4. Risks
 
 | Risk | Mitigation |
 |------|------------|
-| Undocumented API actions beyond `Data/*` | Grep both legacies + capture in `02-domain-specification.md` |
-| SQLite schema drift vs Flutter | Single schema source in `sdd-bhagavadgita.book-database-schema` |
+| “Fix it in native” habit | Code review + PDD §1; bugs filed against Flutter modules |
+| Parity arguments | Parity map in `03-product-ux-specification.md` + acceptance in SDD |
+| Web/desktop scope creep | Gate in charter if unsupported in v1 |
 
 ## 5. Open decisions
 
 | ID | Decision |
 |----|----------|
-| D1 | Whether Flutter preserves “reset selected shloka on every cold start” from Swift `AppDelegate` |
-| D2 | HTTPS base URL mapping for production |
+| D1 | Last-read persistence (recommended) vs legacy Swift cold-start reset |
+| D2 | Official HTTPS base URL + env matrix (dev/staging/prod) |
+| D3 | Whether to keep Facebook SDK equivalent in Flutter |
 
 ## Approvals
 

@@ -79,3 +79,12 @@ Single source of truth for **business and game domain**: entities, economy, prog
 ## Approvals
 
 **Approval phrase to advance**: “domain specification approved”
+
+---
+
+## Appendix: Business invariants (copy-paste guardrails)
+
+Write the invariants as simple “must always be true” statements:
+
+- [Invariant 1]
+- [Invariant 2]

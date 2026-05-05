@@ -6,7 +6,7 @@
 
 ## Purpose
 
-Cross-team **roadmap**: milestones, dependencies, environments, and risks. Individual feature execution still uses SDD/VDD plans inside each flow directory.
+Cross-team **roadmap** (business-first): milestones, dependencies, risks, and release readiness. Technical implementation details live in linked SDD/VDD/ADR flows; this plan focuses on **outcomes, sequencing, and go-to-market readiness**.
 
 ---
 
@@ -45,6 +45,13 @@ flowchart LR
 | Environment | Purpose | Branch / tag policy |
 |-------------|---------|---------------------|
 | | | |
+
+Add business release readiness items (examples):
+
+- Store listings / screenshots / copy readiness
+- Pricing / fees / promotions toggles prepared
+- Support playbooks and moderation policies ready
+- Compliance review done (claims, refunds, KYC if applicable, Telegram policies)
 
 ---
 

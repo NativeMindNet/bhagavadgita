@@ -1,6 +1,6 @@
 # Product UX specification: Bhagavad Gita Book
 
-> Version: 1.0 (restored from legacy)  
+> Version: 2.0 (Flutter IA primary)  
 > Status: DRAFT  
 > Last updated: 2026-05-04
 
@@ -8,71 +8,72 @@
 
 | Surface | Notes |
 |---------|--------|
-| **iOS** | UIKit, storyboards/nibs mix; `CustomNavigationController`; iPhone + iPad behaviors differ for split/detail |
-| **Android** | API 18–26 era; `MainActivity` + fragments; `values-sw720dp` / `is_tablet` for two-pane |
+| **Flutter (canonical)** | One codebase: `app/bhagavadgita.book` — Material/Cupertino adaptations, `lib/features/tablet/` for wide layouts |
+| **Web / desktop** | Same codebase; connectivity and storage differ — use `app_database_connection_web.dart` and platform guards |
+| **Legacy native** | **Not** a target platform; see §4 for parity mapping only |
 
-## 2. Navigation model
+## 2. Navigation model (Flutter)
 
-### 2.1 iOS (Swift) — primary screens
+| Route / feature module | Primary widgets / entry | User goal |
+|------------------------|-------------------------|-----------|
+| Splash | `features/splash/splash_screen.dart` | Init, policy, navigate to bootstrap |
+| Onboarding | `features/onboarding/onboarding_screen.dart`, `app_onboarding_controller.dart` | First-run education |
+| Contents | `features/contents/contents_screen.dart` | Chapter list, enter reader |
+| Chapter | `features/reader/chapter_screen.dart` | Chapter-level navigation |
+| Shloka reader | `features/reader/sloka_screen.dart` | Read verse, bookmark, share, audio chrome |
+| Bookmarks | `features/bookmarks/bookmarks_screen.dart` | Saved verses |
+| Search | `features/search/search_screen.dart`, `search_route.dart` | Full-text / highlighted results |
+| Settings hub | `features/settings/settings_screen.dart` | App language, content languages, reader, audio |
+| Content languages | `features/settings/content_languages_screen.dart` | Pick translation language |
+| App language | `features/settings/app_language_screen.dart` | UI locale |
+| Tablet | `contents_chapter_scaffold.dart`, `chapter_sloka_scaffold.dart`, `breakpoints.dart` | Master/detail without duplicating business logic |
 
-| Screen (ViewController) | Role |
-|-------------------------|------|
-| `SplashViewController` | First run / data init gate |
-| `GuideViewController` / `GuideNotesViewController` / `GuideItemViewController` | Onboarding / help |
-| `ContentsViewController` | Hub: chapters, navigation to shloka, quote, bookmarks, search results |
-| `ShlokaViewController` | Primary reader |
-| `BookmarksViewController` | Saved verses |
-| `CommentViewController` | Commentary UI for shloka context |
-| `QuoteViewController` | Daily quote presentation |
-| `SettingsViewController` / `SettingsLanguageViewController` | Language, book, interpretation-related options |
-| `ContentsSearchResultViewController` | Global search hits |
+**App shell / coordination**: `lib/app/app.dart`, `bootstrap_coordinator.dart`, `sync/sync_orchestrator.dart`.
 
-### 2.2 Android (Java) — primary screens
+## 3. Screen inventory (Flutter — product truth)
 
-| Screen | Role |
-|--------|------|
-| `SplashActivity` | Launch / init |
-| `GuideActivity` | Onboarding |
-| `MainActivity` | Host: `ChaptersFragment` default; `SlokasFragment`; `BookmarksFragment`; `NoteFragment` |
-| `LanguagesActivity` | Language selection flow |
-| `SettingsActivity` | Settings entry from toolbar home on root back stack |
-| `QuoteActivity` | Quote display |
+| # | User goal | Primary CTA | Flutter location |
+|---|-----------|---------------|------------------|
+| 1 | Pick content language | Continue | `content_languages_screen.dart` |
+| 2 | Browse chapters | Open shloka | `contents_screen.dart` / `chapter_screen.dart` |
+| 3 | Read verse | Bookmark / share / audio | `sloka_screen.dart` |
+| 4 | Daily quote | Open / dismiss | Shared `quote_card.dart` + contents flow |
+| 5 | Bookmarks | Open verse | `bookmarks_screen.dart` |
+| 6 | Configure app | Save | `settings_screen.dart` + sub-screens |
+| 7 | Find text | Select hit | `search_screen.dart` |
 
-### 2.3 Android fragment graph (simplified)
+## 4. Legacy parity map (reference only)
 
-- `MainActivity` container → starts with **ChaptersFragment**.
-- **SlokasFragment** opened via `SlokasFragment.show(...)` (also from bookmark intent extra).
-- Toolbar: **bookmarks** action changes title and nav icon; **search** opens `SearchPanelView`.
-- Tablet: optional simultaneous **NoteFragment** / detail rules in `fragmentLifecycleCallbacks`.
+Use when auditing “did we miss a screen?” — **not** for new IA.
 
-## 3. Screen inventory (consolidated)
+| User goal | Flutter (target) | Legacy iOS | Legacy Android |
+|-----------|------------------|------------|----------------|
+| Splash / init | `splash_screen.dart` | `SplashViewController` | `SplashActivity` |
+| Guide | `onboarding_screen.dart` | `GuideViewController` (+ variants) | `GuideActivity` |
+| Chapter hub | `contents_screen.dart` | `ContentsViewController` | `ChaptersFragment` in `MainActivity` |
+| Reader | `sloka_screen.dart` | `ShlokaViewController` | `SlokasFragment` |
+| Bookmarks | `bookmarks_screen.dart` | `BookmarksViewController` | `BookmarksFragment` |
+| Quote | quote in contents / cards | `QuoteViewController` | `QuoteActivity` |
+| Settings | `settings_screen.dart` | `SettingsViewController` | `SettingsActivity` |
+| Search | `search_screen.dart` | `ContentsSearchResultViewController` | `SearchPanelView` + results |
 
-| # | User goal | Primary CTA | iOS | Android |
-|---|-----------|-------------|-----|---------|
-| 1 | Pick language | Continue | Settings language VC | `LanguagesActivity` |
-| 2 | Browse chapters | Open shloka | `ContentsViewController` | `ChaptersFragment` |
-| 3 | Read verse | Bookmark / note / audio | `ShlokaViewController` | `SlokasFragment` |
-| 4 | See daily quote | Dismiss / share (if any) | `QuoteViewController` | `QuoteActivity` |
-| 5 | Manage bookmarks | Open verse | `BookmarksViewController` | `BookmarksFragment` |
-| 6 | Configure app | Save | `SettingsViewController` | `SettingsActivity` |
-| 7 | Find text | Select result | Search results VC | Search panel + results |
+## 5. Global UX rules (Flutter)
 
-## 4. Global UX rules
+- **Reader focus**: verse typography and spacing per `ui/theme/app_text.dart` / theme; minimize chrome on small phones.
+- **Brand accents**: red family from `app_colors.dart` where aligned with legacy Android reader chrome (tune per Material 3).
+- **Tablet**: one implementation of split layout via scaffolds — no separate Swift/Java tablet forks.
+- **Accessibility**: Flutter semantics + platform text scale.
 
-- **Toolbar / navigation**: Android uses red/white status bar theming when `SlokasFragment` visible on phone (see `MainActivity` lifecycle).
-- **Search**: Global search panel can restore open state across rotation (`UiConstants.KEY_SEARCH_*`).
-- **Tablet**: Master/detail conventions — toolbar icon flips between settings and back when note fragment destroys on tablet (`NoteFragment` branch).
-
-## 5. Access and gating
+## 6. Access and gating
 
 | Capability | Required state |
 |------------|----------------|
-| Read downloaded book | Book marked downloaded + DB populated |
-| API catalog fetch | Network; first-run may block on splash until `dataInitialized` (Swift `Settings`) |
+| Read cached content | Snapshot/DB populated (`snapshot_repository`, sync) |
+| Network bootstrap | Online for initial catalog sync |
 
-## 6. User journey attachments
+## 7. User journey attachments
 
-Add flowchart under `flows/pdd-bhagavadgita.book/artifacts/` and reference here, e.g. `artifacts/user-flow.png`.
+Add Flutter-specific flow diagrams under `artifacts/` and link here.
 
 ## Approvals
 

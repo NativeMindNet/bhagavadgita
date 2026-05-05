@@ -2,7 +2,7 @@
 
 ## Current Phase
 
-CHARTER | DOMAIN | PRODUCT_UX | VISUAL_MESSAGING | ENGINEERING | MASTER_PLAN | IMPLEMENTATION
+CHARTER | DOMAIN | PRODUCT_UX | VISUAL_MESSAGING | BUSINESS_MODEL_GROWTH | MASTER_PLAN | IMPLEMENTATION
 
 ## Phase Status
 
@@ -26,8 +26,8 @@ DRAFTING | REVIEW | APPROVED | BLOCKED
 - [ ] Product UX approved
 - [ ] 04 Visual and messaging drafted
 - [ ] Visual and messaging approved
-- [ ] 05 Engineering specifications drafted
-- [ ] Engineering specifications approved
+- [ ] 05 Business model & growth drafted
+- [ ] Business model approved
 - [ ] 06 Master plan drafted
 - [ ] Master plan approved
 - [ ] 07 Implementation started

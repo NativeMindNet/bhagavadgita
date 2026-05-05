@@ -1,11 +1,11 @@
-description = "Project-Driven Development Flow."
+description = "Project-Driven Development Flow (business-first)."
 
 prompt = """
 ---
 description: Project-Driven Development Flow.
 ---
 
-# Project-Driven Development Flow
+# Project-Driven Development Flow (Business-first)
 
 You are entering PDD (Project-Driven Development) mode. Read `flows/pdd.md` for the complete flow reference.
 
@@ -49,7 +49,7 @@ Parse the arguments to determine the action:
 
 ### VISUAL_MESSAGING - Update `04-visual-and-messaging.md`; wait for "visual and messaging approved"
 
-### ENGINEERING - Update `05-engineering-specifications.md`; wait for "engineering specifications approved"
+### BUSINESS_MODEL_GROWTH - Update `05-business-model-and-growth.md`; wait for "business model approved"
 
 ### MASTER_PLAN - Update `06-master-plan.md`; wait for "master plan approved"
 
